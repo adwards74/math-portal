@@ -1,4 +1,5 @@
 @echo off
+cd /d %~dp0
 echo ======================================================
 echo   SABRINA'S MATH PORTAL - GITHUB DEPLOYER
 echo ======================================================
