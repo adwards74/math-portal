@@ -5,6 +5,11 @@ window.CHAPTER_DATA["ch13"] = {
         subtitle: "Periodic Functions & Amplitude",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-wave-square"></i> The Engine of Energy</h3>
+                    <p>Trigonometric waves are the **Vibrations of the Universe**. From the light hitting your eyes to the AC power in your walls, everything that oscillates follows the circular path of Sine and Cosine.</p>
+                </div>
+
                 <h2>I. The Heartbeat of Math</h2>
                 <p>A function is **Periodic** if it repeats its output exactly every $P$ units: $f(x + P) = f(x)$. This $P$ is the <strong>Period</strong>.</p>
                 

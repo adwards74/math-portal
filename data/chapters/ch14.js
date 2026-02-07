@@ -5,6 +5,11 @@ window.CHAPTER_DATA["ch14"] = {
         subtitle: "The Basic Units of Oscillation",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-tools"></i> The Refactoring Toolkit</h3>
+                    <p>Identities are the **Logical Equivalent** of things. They allow you to swap a complex, expensive calculation for a simple, efficient one without changing the outcome. It is the ultimate optimization tool in geometry.</p>
+                </div>
+
                 <h2>I. The Pythagorean Engine</h2>
                 <p>The unit circle identity $x^2 + y^2 = 1$ is the parent of all trigonometric identities. By dividing through, we generate the entire family of relations.</p>
                 

@@ -807,10 +807,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "Under what condition does an infinite geometric series converge to a finite number?",
-                        options: ["When r > 1", "When r = 1", "When |r| < 1", "When a1 = 0"],
-                        answer: "When |r| < 1",
-                        explanation: "An infinite geometric series converges if and only if the absolute value of the common ratio is strictly less than 1, meaning the terms get progressively smaller."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "Under what condition does an infinite geometric series converge to a finite number?",
+                                options: ["When r > 1", "When r = 1", "When |r| < 1", "When a1 = 0"],
+                                answer: "When |r| < 1",
+                                explanation: "An infinite geometric series converges if and only if the absolute value of the common ratio is strictly less than 1, meaning the terms get progressively smaller."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "Find the 5th term of a geometric sequence where $a_1 = 3$ and $r = -2$.",
+                                options: ["48", "-48", "96", "-32"],
+                                answer: "48",
+                                explanation: "$a_5 = 3 \cdot (-2)^4 = 3 \cdot 16 = 48$."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain why an infinite *Arithmetic* series with $d \ne 0$ never converges.",
+                                answer: "Because the terms themselves do not approach zero; they either grow to positive or negative infinity, making the running total unbounded.",
+                                template: "For a series to converge, its terms must... In an arithmetic sequence... which means the sum..."
+                            }
+                        ]
                     }
                 },
                 {
@@ -861,10 +880,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "What does the 'Empirical Rule' state about data within 2 standard deviations of the mean in a normal distribution?",
-                        options: ["68% of data", "95% of data", "99.7% of data", "50% of data"],
-                        answer: "95% of data",
-                        explanation: "The empirical rule (68-95-99.7) states that approximately 95% of observations in a normal distribution fall within two standard deviations of the mean."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "What does the 'Empirical Rule' state about data within 2 standard deviations of the mean in a normal distribution?",
+                                options: ["68% of data", "95% of data", "99.7% of data", "50% of data"],
+                                answer: "95% of data",
+                                explanation: "The empirical rule (68-95-99.7) states that approximately 95% of observations in a normal distribution fall within two standard deviations of the mean."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "A value has a Z-score of -1.5. If the mean is 10 and standard deviation is 2, what is the value?",
+                                options: ["8.5", "7", "11.5", "13"],
+                                answer: "7",
+                                explanation: "$x = \mu + z\sigma = 10 + (-1.5)(2) = 10 - 3 = 7$."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain why a 'Self-Selected' sample often leads to selection bias.",
+                                answer: "Because individuals with strong opinions are more likely to volunteer, making the sample unrepresentative of the neutral general population.",
+                                template: "In a self-selected sample... this creates bias because... therefore the results..."
+                            }
+                        ]
                     }
                 },
                 {
@@ -922,10 +960,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "If two identical sine waves are $180^{\\circ}$ ($\pi$ radians) out of phase, what happens when they are added together?",
-                        options: ["They double in amplitude", "They cancel each other out", "The frequency doubles", "Nothing changes"],
-                        answer: "They cancel each other out",
-                        explanation: "Destructive interference occurs when two waves are 180 degrees out of phase, as the peak of one aligns with the trough of the other."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "If two identical sine waves are $180^{\\circ}$ ($\pi$ radians) out of phase, what happens when they are added together?",
+                                options: ["They double in amplitude", "They cancel each other out", "The frequency doubles", "Nothing changes"],
+                                answer: "They cancel each other out",
+                                explanation: "Destructive interference occurs when two waves are 180 degrees out of phase, as the peak of one aligns with the trough of the other."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "Convert $5\pi/6$ radians to degrees.",
+                                options: ["120°", "150°", "210°", "300°"],
+                                answer: "150°",
+                                explanation: "$(5\pi/6) \cdot (180/\pi) = 150°$."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain why the Period of $y = \tan(x)$ is $\pi$ instead of $2\pi$.",
+                                answer: "Because slopes of terminal rays repeat exactly every 180 degrees (half a circle) as they mirror in opposite quadrants.",
+                                template: "The tangent function represents the ratio... which geometrically is... since these ratios repeat when..."
+                            }
+                        ]
                     }
                 },
                 {
@@ -977,10 +1034,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "Which identity is a direct consequence of dividing the primary Pythagorean identity (sin²θ + cos²θ = 1) by cos²θ?",
-                        options: ["1 + cot²θ = csc²θ", "1 + tan²θ = sec²θ", "sin(2θ) = 2sinθcosθ", "cos(2θ) = 1 - 2sin²θ"],
-                        answer: "1 + tan²θ = sec²θ",
-                        explanation: "Dividing sin²θ + cos²θ = 1 by cos²θ yields (sin²θ/cos²θ) + (cos²θ/cos²θ) = 1/cos²θ, which simplifies to tan²θ + 1 = sec²θ."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "Which identity is a direct consequence of dividing the primary Pythagorean identity (sin²θ + cos²θ = 1) by cos²θ?",
+                                options: ["1 + cot²θ = csc²θ", "1 + tan²θ = sec²θ", "sin(2θ) = 2sinθcosθ", "cos(2θ) = 1 - 2sin²θ"],
+                                answer: "1 + tan²θ = sec²θ",
+                                explanation: "Dividing sin²θ + cos²θ = 1 by cos²θ yields (sin²θ/cos²θ) + (cos²θ/cos²θ) = 1/cos²θ, which simplifies to tan²θ + 1 = sec²θ."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "Simplify $(1 - \cos^2 \theta) / \sin \theta$.",
+                                options: ["1", "sin θ", "cos θ", "tan θ"],
+                                answer: "sin θ",
+                                explanation: "$(1 - \cos^2 \theta) = \sin^2 \theta$. So $\sin^2 \theta / \sin \theta = \sin \theta$."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain the 'Refactoring' strategy in proving a complex trigonometric identity.",
+                                answer: "It involves substituting primary units (sin/cos) and simplifying common denominators until both sides converge to the same logical state.",
+                                template: "When proving an identity, we treat one side as... and the other as... through a series of substitutions like..."
+                            }
+                        ]
                     }
                 },
                 {
@@ -1009,10 +1085,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "If a polynomial $x^3 - 7x^2 + 14x - 8 = 0$ has roots $a, b, c$, what is the sum of its roots?",
-                        options: ["7", "-7", "14", "8"],
-                        answer: "7",
-                        explanation: "According to Vieta's Formulas, for a cubic $ax^3 + bx^2 + \\dots$, the sum of roots is $-b/a$. Here, $-(-7)/1 = 7$."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "If a polynomial $x^3 - 7x^2 + 14x - 8 = 0$ has roots $a, b, c$, what is the sum of its roots?",
+                                options: ["7", "-7", "14", "8"],
+                                answer: "7",
+                                explanation: "According to Vieta's Formulas, for a cubic $ax^3 + bx^2 + \dots$, the sum of roots is $-b/a$. Here, $-(-7)/1 = 7$."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "Find the product of the roots for $x^2 - 10x + 24 = 0$.",
+                                options: ["10", "-10", "24", "-24"],
+                                answer: "24",
+                                explanation: "Vieta's Formula: Product of roots = $c/a = 24/1 = 24$."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain the Pigeonhole Principle using a real-world server analogy.",
+                                answer: "If you have $n$ servers and $n+1$ requests, at least one server MUST handle more than one request.",
+                                template: "The principle states that if... objects are placed in... containers... then it is mathematically certain that..."
+                            }
+                        ]
                     }
                 },
                 {
@@ -1040,10 +1135,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "What does the limit $\\\\lim_{x \\\\to \\\\infty} \\\\frac{1}{x}$ equal?",
-                        options: ["1", "$\\infty$", "0", "Undefined"],
-                        answer: "0",
-                        explanation: "As the denominator gets infinitely large, the value of the fraction gets infinitely small, approaching 0."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "What does the limit $\lim_{x \to \infty} \frac{1}{x}$ equal?",
+                                options: ["1", "$\infty$", "0", "Undefined"],
+                                answer: "0",
+                                explanation: "As the denominator gets infinitely large, the value of the fraction gets infinitely small, approaching 0."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "Evaluate $\lim_{h \to 0} (6 + h)$.",
+                                options: ["0", "6", "h", "Undefined"],
+                                answer: "6",
+                                explanation: "Direct substitution: $6 + 0 = 6$."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain the 'Paradox of the Tangent' and how limits resolve it.",
+                                answer: "Calculating slope at a single point yields $0/0$ (undefined). Limits allow us to find the value the slope *approaches* as the interval becomes infinitely small.",
+                                template: "Normally, slope requires... points. At a single point... but by using limits... we find..."
+                            }
+                        ]
                     }
                 },
                 {
@@ -1057,6 +1171,31 @@ const MATH_DATA = {
                         { name: "15.5: 2025 Predictive Master Test", url: "lesson:final:final-u15-5" },
                         { name: "🏆 2025 Regents Mastery Pack (Part 1)", url: "curriculum/algebra2/algtwo-82025-exam.pdf", type: "pdf" }
                     ],
+                    quiz: {
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "What is the primary goal of modeling data with a regression function in Algebra 2?",
+                                options: ["To find exact answers", "To find the line or curve of best fit", "To simplify the math", "To ignore outliers"],
+                                answer: "To find the line or curve of best fit",
+                                explanation: "Regression modeling aims to find the mathematical function that most accurately describes the trend in a real-world dataset."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "Which value of the correlation coefficient (r) indicates the strongest linear relationship?",
+                                options: ["0.5", "-0.1", "-0.92", "0.85"],
+                                answer: "-0.92",
+                                explanation: "The strength of a relationship is determined by the absolute value of r. $|-0.92| = 0.92$, which is the highest."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain why 'Elite Mastery' requires understanding both the mechanics and the intuition behind a mathematical model.",
+                                answer: "Because mechanics allow for precision, while intuition allows for the application of those mechanics to complex, novel problems in engineering and science.",
+                                template: "In the Elite 4.0 standard, understanding the 'why'... is essential because... whereas simply following steps..."
+                            }
+                        ]
+                    },
                     examples: [
                         {
                             title: "Mock FRQ 1: Transcendental Intersections",
@@ -1070,13 +1209,7 @@ const MATH_DATA = {
                             steps: ["Construct matrix $A = \\begin{pmatrix} 3 & -4 \\\\ 4 & 3 \\end{pmatrix}$.", "Calculate determinant: $(3)(3) - (-4)(4) = 9 + 16 = 25$.", "Result: Area is scaled by 25x."],
                             intuition: "Matrices are the 'lenses' of geometry. The determinant tells you if the lens enlarges or shrinks the view."
                         }
-                    ],
-                    quiz: {
-                        question: "What differentiates a TJ-level Algebra 2 problem from standard ones?",
-                        options: ["Longer numbers", "Multiple concepts combined", "More homework", "Different formulas"],
-                        answer: "Multiple concepts combined",
-                        explanation: "Rigor comes from synthesis—e.g., using Logarithms to solve a Geometric Series physics problem."
-                    }
+                    ]
                 }
             ]
         },

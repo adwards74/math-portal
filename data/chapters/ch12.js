@@ -5,6 +5,11 @@ window.CHAPTER_DATA["ch12"] = {
         subtitle: "Permutations & Combinations",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-dice"></i> The Global Monitor</h3>
+                    <p>Statistics is the **Overhead View** of chaos. Individual events (like a coin flip) are unpredictable, but the collective behavior of millions of events follows a perfect, rigid pattern. It is the math of finding order in noise.</p>
+                </div>
+
                 <h2>I. Counting the Universe</h2>
                 <p>Before calculating probability, you must learn to count the possibilities. This follows two distinct paths:</p>
                 
