@@ -6,7 +6,7 @@ window.CHAPTER_DATA["ch2"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Formal Definition of a Function</h2>
-                <p>A <strong>Function</strong> $f: A \\\\rightarrow B$ is a relation that assigns to each element in set $A$ (the Domain) exactly one element in set $B$ (the Codomain).</p>
+                <p>A <strong>Function</strong> $f: A \\rightarrow B$ is a relation that assigns to each element in set $A$ (the Domain) exactly one element in set $B$ (the Codomain).</p>
                 
                 <div class="paradigm-shift" style="border-left-color:var(--accent-blue);">
                     <h4>The "Horizontal Line Test" Logic</h4>
@@ -15,6 +15,20 @@ window.CHAPTER_DATA["ch2"] = {
                         <li><strong>Surjective (Onto):</strong> Every element in the codomain has at least one matching input.</li>
                         <li><strong>Bijective:</strong> Both Injective and Surjective. This is required for an <strong>Inverse</strong> to exist.</li>
                     </ul>
+                </div>
+            </div>
+
+            <div class="lesson-section">
+                <h2>II. Domain & Range: The Permission Map</h2>
+                <p><strong>Domain:</strong> Every possible input $x$ that doesn't break the math (e.g., no division by zero, no negatives under even roots).<br>
+                <strong>Range:</strong> Every possible output $f(x)$ that the function can reach.</p>
+                
+                <div class="proof-box glass">
+                    <h4>Interval Notation Mastery</h4>
+                    <p>$[a, b]$ means "inclusive" (includes endpoints).<br>
+                    $(a, b)$ means "exclusive" (up to but not including).</p>
+                    <p style="margin-top:10px;">Example: Domain of $f(x) = \\frac{1}{x}$ is $(-\\infty, 0) \\cup (0, \\infty)$.</p>
+                    <p>Example: Domain of $f(x) = \\sqrt{x}$ is $[0, \\infty)$.</p>
                 </div>
             </div>
 
@@ -30,7 +44,7 @@ window.CHAPTER_DATA["ch2"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. Proportionality: $y = kx$</h2>
-                <p>Direct variation represents the simplest linear relationship. The ratio $\\\\frac{y}{x}$ is always a constant $k$.</p>
+                <p>Direct variation represents the simplest linear relationship. The ratio $\\frac{y}{x}$ is always a constant $k$.</p>
                 
                 <div class="proof-box glass">
                     <h4>The Origin Constraint</h4>
@@ -48,8 +62,8 @@ window.CHAPTER_DATA["ch2"] = {
                 <p>Slope ($m$) is more than just "rise over run". It is the <strong>Constant Rate of Change</strong>. In Physics, the slope of a Position-Time graph is your <strong>Velocity</strong>.</p>
                 
                 <div class="glass-card" style="padding: 25px; border-left: 4px solid var(--accent-green);">
-                    \\\\[m = \\\\frac{\\\\Delta y}{\\\\Delta x} = \\\\frac{f(x_2) - f(x_1)}{x_2 - x_1}\\\\]
-                    <p style="margin-top:10px; font-size:0.9rem; opacity:0.8;">This formula is the precursor to the <strong>Difference Quotient</strong> in Calculus. When you make $\\\\Delta x$ infinitely small, slope becomes the <em>Derivative</em>.</p>
+                    \\[m = \\frac{\\Delta y}{\\Delta x} = \\frac{f(x_2) - f(x_1)}{x_2 - x_1}\\]
+                    <p style="margin-top:10px; font-size:0.9rem; opacity:0.8;">This formula is the precursor to the <strong>Difference Quotient</strong> in Calculus. When you make $\\Delta x$ infinitely small, slope becomes the <em>Derivative</em>.</p>
                 </div>
 
                 <div class="special-note glass" style="margin-top:20px;">

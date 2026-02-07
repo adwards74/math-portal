@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabrina's Math Portal | TJHSST Prep</title>
-    <link rel="stylesheet" href="styles.css?v=2.0.1">
+    <link rel="stylesheet" href="styles.css">
     <!-- MathJax for Beautiful Formula Rendering -->
     <script>
         window.MathJax = {
@@ -25,6 +25,8 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Desmos API for Interactive Lab v3.0 -->
+    <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc2697240224c48"></script>
 </head>
 
 <body>
@@ -64,8 +66,15 @@
                 <a href="#" class="nav-item" data-view="knowledge">
                     <i class="fas fa-project-diagram"></i> <span>Knowledge Tree</span>
                 </a>
+                <a href="#" class="nav-item" data-view="drill">
+                    <i class="fas fa-bolt"></i> <span>Speed Drill</span>
+                </a>
                 <a href="https://ocw.mit.edu/search/?d=Mathematics&q=Math" target="_blank" class="nav-item nav-gateway">
                     <i class="fas fa-university"></i> <span>MIT OCW</span>
+                </a>
+                <a href="https://www.youtube.com/@shsatreview6318" target="_blank" class="nav-item nav-gateway"
+                    style="border-top: 1px solid rgba(255,255,255,0.05); margin-top:5px; padding-top:10px;">
+                    <i class="fab fa-youtube"></i> <span>SHSAT Review</span>
                 </a>
             </div>
 
@@ -150,6 +159,36 @@
                         <svg id="knowledge-svg" width="100%" height="100%" style="cursor:grab;"></svg>
                     </div>
                 </section>
+
+                <!-- Speed Drill View (Elite 3.0) -->
+                <section class="view" id="drill-view">
+                    <div class="hero">
+                        <h1>Elite <span class="gradient-text">Speed Drill</span></h1>
+                        <p>Sharpen your mental matrix. Solve as many as you can in 60 seconds.</p>
+                    </div>
+                    <div id="drill-container" class="glass-card fadeIn"
+                        style="max-width:600px; margin:30px auto; padding:40px; text-align:center;">
+                        <div id="drill-start-screen">
+                            <i class="fas fa-bolt"
+                                style="font-size:3rem; color:var(--accent-cyan); margin-bottom:20px;"></i>
+                            <h2>System Calibration Ready</h2>
+                            <p style="opacity:0.7; margin-bottom:30px;">Topics: Mental Arithmetic, Matrix Elements, Log
+                                Estimation.</p>
+                            <button class="glass-btn next-btn" onclick="window.startDrill()"
+                                style="padding:15px 40px; font-size:1.1rem;">INITIALIZE DRILL</button>
+                        </div>
+                        <div id="drill-active-screen" style="display:none;">
+                            <div
+                                style="display:flex; justify-content:space-between; margin-bottom:20px; font-family:monospace; color:var(--accent-cyan);">
+                                <span>TIME: <span id="drill-timer">60</span>s</span>
+                                <span>SCORE: <span id="drill-score">0</span></span>
+                            </div>
+                            <div id="drill-question" style="font-size:2.5rem; font-weight:700; margin:40px 0;"></div>
+                            <input type="text" id="drill-input" class="glass-input" placeholder="?" autocomplete="off"
+                                style="font-size:2rem; width:150px; text-align:center; padding:15px; border-bottom:2px solid var(--accent-cyan);">
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
 
@@ -199,7 +238,10 @@
     <!-- Scripts -->
     <script src="lessons.js"></script>
     <script src="data.js"></script>
-    <script src="app.js?v=2.0.1"></script>
+    <script src="router.js"></script>
+    <script src="ui-render.js"></script>
+    <script src="tutor-engine.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

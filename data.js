@@ -15,14 +15,15 @@ const MATH_DATA = {
             units: [
                 {
                     title: "Ch 1: Tools of Algebra",
+                    insight: "Foundations: Mastery of axioms allows you to manipulate any expression without fear. Focus on the 'Why' behind the distributive rule.",
                     topics: ["1.1-1.3 Real Numbers", "1.4-1.6 Equations", "1.7 Absolute Value"],
                     lectures: [
-                        { name: "1.1: Real Numbers & Operations", url: "lesson:algebra2:ch1-1" },
+                        { name: "1.1: Real Numbers & Operations", url: "lesson:algebra2:ch1-1", insight: "Real Numbers: Irrational numbers like $\\pi$ never repeat or terminate. Think of them as infinite unique data streams." },
                         { name: "1.2: Algebraic Expressions", url: "lesson:algebra2:ch1-2" },
                         { name: "1.3: Solving Linear Equations", url: "lesson:algebra2:ch1-3" },
                         { name: "1.4: Rewriting Formulas", url: "lesson:algebra2:ch1-4" },
                         { name: "1.5/1.6: Word Problems & Models", url: "lesson:algebra2:ch1-5" },
-                        { name: "1.7: Absolute Value Equations", url: "lesson:algebra2:ch1-7" },
+                        { name: "1.7: Absolute Value Equations", url: "lesson:algebra2:ch1-7", insight: "Absolute Value: $|x-a| < d$ means the 'distance' between x and a is less than d. It's a range, not just a number!" },
                         { name: "1.8: Chapter 1 Review Challenge", url: "lesson:algebra2:ch1-rev" }
                     ],
                     examples: [
@@ -82,7 +83,7 @@ const MATH_DATA = {
                     examples: [
                         {
                             title: "Example 1: The One-to-One Challenge",
-                            problem: "Given $f(x) = x^2$ with domain $\\\\mathbb{R}$, does it have an inverse? If not, how do we restrict the domain to make it invertible?",
+                            problem: "Given $f(x) = x^2$ with domain $\\mathbb{R}$, does it have an inverse? If not, how do we restrict the domain to make it invertible?",
                             steps: [
                                 "Apply Horizontal Line Test: A horizontal line like $y=4$ hits the graph at $x=2$ and $x=-2$. It FAILS.",
                                 "Conclusion: $f(x)=x^2$ is not one-to-one on $\\mathbb{R}$, so it has no unique inverse.",
@@ -173,12 +174,13 @@ const MATH_DATA = {
                 },
                 {
                     title: "Ch 4: Matrices",
+                    insight: "Matrices: You are manipulating whole spatial dimensions here. Visualize matrices as vectors moving around.",
                     intuition: "Matrices are the data structures of the modern world. They bridge the gap between simple variables and high-dimensional AI architecture.",
                     topics: ["4.1 Data Organization", "4.2 Matrix Operations", "4.3 Multiplication", "4.4 Geometric Transformations", "4.5 Determinants", "4.6 Inverses", "4.7 Systems Solving"],
                     lectures: [
-                        { name: "4.1: Organising Data into Matrices", url: "lesson:algebra2:ch4-1" },
-                        { name: "4.2: Matrix Multiplication", url: "lesson:algebra2:ch4-2" },
-                        { name: "4.3: Determinants & Cramer's Rule", url: "lesson:algebra2:ch4-3" },
+                        { name: "4.1: Organising Data into Matrices", url: "lesson:algebra2:ch4-1", insight: "Matrix Addition: Only matrices of the SAME dimensions can be added. It's like adding arrays element-by-element in code." },
+                        { name: "4.2: Matrix Multiplication", url: "lesson:algebra2:ch4-2", insight: "$A \cdot B$ is NOT the same as $B \cdot A$. Order matters deeply in linear transformations!" },
+                        { name: "4.3: Determinants & Cramer's Rule", url: "lesson:algebra2:ch4-3", insight: "Determinants: If $det(A) = 0$, you've lost information. The transformation is destructive/singular." },
                         { name: "4.4: Visualizing Linear Transformations", url: "lesson:algebra2:ch4-4" },
                         { name: "4.5: Inverse Matrices", url: "lesson:algebra2:ch4-5" },
                         { name: "4.6: Identity & Inverse Matrices", url: "lesson:algebra2:ch4-6" },
@@ -188,7 +190,7 @@ const MATH_DATA = {
                     examples: [
                         {
                             title: "Example 1: The Matrix Multiplier",
-                            problem: "Compute $AB$ where $A = \\\\begin{pmatrix} 1 & 2 \\\\\\\\ 3 & 4 \\\\end{pmatrix}$ and $B = \\\\begin{pmatrix} 5 & 6 \\\\\\\\ 7 & 8 \\\\end{pmatrix}$. Show the dot products.",
+                            problem: "Compute $AB$ where $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ and $B = \\begin{pmatrix} 5 & 6 \\\\ 7 & 8 \\end{pmatrix}$. Show the dot products.",
                             steps: [
                                 "Row 1 &times; Col 1: $(1)(5) + (2)(7) = 5 + 14 = 19$.",
                                 "Row 1 &times; Col 2: $(1)(6) + (2)(8) = 6 + 16 = 22$.",
@@ -200,7 +202,7 @@ const MATH_DATA = {
                         },
                         {
                             title: "Example 2: Inverting Space",
-                            problem: "Find the inverse of Matrix $M = \\\\begin{pmatrix} 3 & 1 \\\\\\\\ 5 & 2 \\\\end{pmatrix}$. Check if det $\\\\neq$ 0.",
+                            problem: "Find the inverse of Matrix $M = \\begin{pmatrix} 3 & 1 \\\\ 5 & 2 \\end{pmatrix}$. Check if det $\\neq$ 0.",
                             steps: [
                                 "Calculate Determinant: $\\det M = (3)(2) - (1)(5) = 6 - 5 = 1$. Since $det \\neq 0$, the inverse exists.",
                                 "Swap $a$ and $d$: $\\begin{pmatrix} 2 & \\dots \\\\ \\dots & 3 \\end{pmatrix}$.",
@@ -211,11 +213,12 @@ const MATH_DATA = {
                         },
                         {
                             title: "Example 3: Determinants as Scaling",
-                            problem: "How does the matrix $\\\\begin{pmatrix} 2 & 0 \\\\\\\\ 0 & 3 \\\\end{pmatrix}$ transform a unit square $(1 \\times 1)$?",
+                            problem: "How does the matrix $\\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}$ transform a unit square $(1 \\times 1)$?",
                             steps: [
                                 "Calculate Determinant: $\\det = (2)(3) - (0)(0) = 6$.",
                                 "Physical result: The square's width is doubled (2) and its height is tripled (3).",
-                                "Area change: The new area is $2 \times 3 = 6$ square units. The determinant correctly predicted the 6-fold scaling of area."
+                                "Area change: The new area is $2 \times 3 = 6$ square units. The determinant correctly predicted the 6-fold scaling of area.",
+                                "Final Matrix: $\\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}$."
                             ],
                             intuition: "A matrix is a physical distortion of space. The determinant is the 'Magnification' factor of that distortion."
                         }
@@ -230,6 +233,10 @@ const MATH_DATA = {
                 {
                     title: "Ch 5: Quadratic Equations",
                     intuition: "Curves govern the physical world. From gravity to growth, quadratics provide the parabolic logic for modeling motion and optimization.",
+                    vizConfig: {
+                        expressions: ["y = a(x - h)^2 + k", "a = 1", "h = 0", "k = 0"],
+                        bounds: { left: -10, right: 10, bottom: -10, top: 10 }
+                    },
                     topics: ["5.1 Parabolas", "5.3 Factoring", "5.4 Complex Numbers", "5.5 Completing Square", "5.6 Quadratic Formula", "5.8 Systems"],
                     lectures: [
                         { name: "5.1/5.2: Vertex & Intercept Form", url: "lesson:algebra2:ch5-1" },
@@ -285,12 +292,13 @@ const MATH_DATA = {
                 },
                 {
                     title: "Ch 6: Polynomials",
+                    insight: "Polynomials: Every root $(x-r)$ is a factor. The Fundamental Theorem guarantees N roots for degree N. No exceptions!",
                     intuition: "Polynomials are the DNA of functional analysis. From the behavior of global temperatures to the trajectory of satellites, understanding roots and degree is essential for predicting complex systems.",
                     topics: ["6.1 Degree & End Behavior", "6.2 Remainder Theorem", "6.3 Synthetic Division", "6.4 Advanced Factoring", "6.6 Rational Root Theorem", "6.7 Fundamental Theorem"],
                     lectures: [
                         { name: "6.1: Polynomial Essentials", url: "lesson:algebra2:ch6-1" },
                         { name: "6.2: Polynomials & Linear Factors", url: "lesson:algebra2:ch6-2" },
-                        { name: "6.3: Synthetic Division", url: "lesson:algebra2:ch6-3" },
+                        { name: "6.3: Synthetic Division", url: "lesson:algebra2:ch6-3", insight: "Synthetic Division: This is a specialized optimization of Long Division. It works ONLY for divisors like $(x - c)$." },
                         { name: "6.4: Factoring Polynomials", url: "lesson:algebra2:ch6-4" },
                         { name: "6.5/6.6: Roots & Rational Root Theorem", url: "lesson:algebra2:ch6-5" },
                         { name: "6.7: Fundamental Theorem of Algebra", url: "lesson:algebra2:ch6-7" },
@@ -667,6 +675,10 @@ const MATH_DATA = {
                 {
                     title: "Ch 13: Periodic Functions & Trigonometry",
                     intuition: "Periodic functions are the heartbeat of the universe. They model everything that repeats, from sound waves and light to the cycles of the economy and the rotation of engines.",
+                    vizConfig: {
+                        expressions: ["y = a \\sin(b(x - h)) + k", "a = 1", "b = 1", "h = 0", "k = 0"],
+                        bounds: { left: -6.28, right: 6.28, bottom: -5, top: 5 }
+                    },
                     topics: ["13.1 Exploring Periodic Data", "13.2 Angles & Rotation", "13.3 Radian Measure", "13.4 The Sine Function", "13.5 The Cosine Function", "13.6 The Tangent Function", "13.7 Translating Sine/Cosine", "13.8 Reciprocal Functions"],
                     lectures: [
                         { name: "13.1: Periodic Functions", url: "lesson:algebra2:ch13-1" },
@@ -805,11 +817,12 @@ const MATH_DATA = {
                         question: "If a polynomial $x^3 - 7x^2 + 14x - 8 = 0$ has roots $a, b, c$, what is the sum of its roots?",
                         options: ["7", "-7", "14", "8"],
                         answer: "7",
-                        explanation: "According to Vieta's Formulas, for a cubic $ax^3 + bx^2 + \dots$, the sum of roots is $-b/a$. Here, $-(-7)/1 = 7$."
+                        explanation: "According to Vieta's Formulas, for a cubic $ax^3 + bx^2 + \\dots$, the sum of roots is $-b/a$. Here, $-(-7)/1 = 7$."
                     }
                 },
                 {
                     title: "Sneak Peek: Calculus Zero",
+                    insight: "Calculus: Every great derivative starts with a humble limit. Visualize the gap closing until it vanishes.",
                     intuition: "Before we measure static shapes (Geometry), we must learn to measure change itself. Welcome to the edge of infinity.",
                     topics: ["The Tangent Problem", "The Area Problem", "Limits at Infinity", "Derivative Intuition"],
                     lectures: [
@@ -822,20 +835,629 @@ const MATH_DATA = {
                             title: "Visualizing the Derivative",
                             problem: "Find the slope of the tangent line to $f(x) = x^2$ at $x = 3$.",
                             steps: [
-                                "Set up the difference quotient: $\lim_{h \to 0} \frac{(3+h)^2 - 3^2}{h}$.",
-                                "Expand: $\lim_{h \to 0} \frac{9 + 6h + h^2 - 9}{h}$.",
-                                "Simplify: $\lim_{h \to 0} \frac{6h + h^2}{h} = \lim_{h \to 0} (6 + h)$.",
-                                "Evaluate the limit: As $h \to 0$, $6+h = 6$.",
+                                "Set up the difference quotient: $\\lim_{h \\to 0} \\frac{(3+h)^2 - 3^2}{h}$.",
+                                "Expand: $\\lim_{h \\to 0} \\frac{9 + 6h + h^2 - 9}{h}$.",
+                                "Simplify: $\\lim_{h \\to 0} \\frac{6h + h^2}{h} = \\lim_{h \\to 0} (6 + h)$.",
+                                "Evaluate the limit: As $h \\to 0$, $6+h = 6$.",
                                 "The slope is exactly 6."
                             ],
                             intuition: "You aren't calculating $0/0$. You are calculating the value the fraction APPROACHES as $h$ becomes infinitely small. This is the 'Speedometer' of the function at that exact moment."
                         }
                     ],
                     quiz: {
-                        question: "What does the limit $\lim_{x \to \infty} \frac{1}{x}$ equal?",
-                        options: ["1", "$\infty$", "0", "Undefined"],
+                        question: "What does the limit $\\\\lim_{x \\\\to \\\\infty} \\\\frac{1}{x}$ equal?",
+                        options: ["1", "$\\infty$", "0", "Undefined"],
                         answer: "0",
                         explanation: "As the denominator gets infinitely large, the value of the fraction gets infinitely small, approaching 0."
+                    }
+                },
+                {
+                    title: "Unit 15: TJ Elite Master Challenge",
+                    topics: ["Non-linear Systems", "Signal Modeling", "AMC Logic Bridge"],
+                    lectures: [
+                        { name: "15.1: TJ EOC (End of Course) Replica", url: "lesson:final:final-u15-1" },
+                        { name: "15.2: Elite Modeling Archive", url: "lesson:final:final-u15-2" },
+                        { name: "15.3: Competition Logic (AMC/AIME)", url: "lesson:final:final-u15-3" },
+                        { name: "15.4: 2024 Algebra 2 Mock Exam A", url: "lesson:final:final-u15-4" },
+                        { name: "15.5: 2025 Predictive Master Test", url: "lesson:final:final-u15-5" }
+                    ],
+                    examples: [
+                        {
+                            title: "Mock FRQ 1: Transcendental Intersections",
+                            problem: "Solve $3^x = e^{2x} + 5$ and justify the number of solutions.",
+                            steps: ["Analyze growth rates: $3 > e^2$ for large $x$?", "Calculate $e^2 \\approx 7.39$.", "Since $3 < 7.39$, the exponential $e^{2x}$ will eventually dominate.", "Graphical analysis: Left side grows slower than right.", "Conclusion: Intersections occur where the gap closes."],
+                            intuition: "TJ exams test your ability to look past the symbols and evaluate the relative 'power' of functions."
+                        },
+                        {
+                            title: "Mock FRQ 2: Matrix Transformation Rigor",
+                            problem: "A transformation $A$ maps $(1, 0)$ to $(3, 4)$ and $(0, 1)$ to $(-4, 3)$. Does $A$ preserve area?",
+                            steps: ["Construct matrix $A = \\begin{pmatrix} 3 & -4 \\\\ 4 & 3 \\end{pmatrix}$.", "Calculate determinant: $(3)(3) - (-4)(4) = 9 + 16 = 25$.", "Result: Area is scaled by 25x."],
+                            intuition: "Matrices are the 'lenses' of geometry. The determinant tells you if the lens enlarges or shrinks the view."
+                        }
+                    ],
+                    quiz: {
+                        question: "What differentiates a TJ-level Algebra 2 problem from standard ones?",
+                        options: ["Longer numbers", "Multiple concepts combined", "More homework", "Different formulas"],
+                        answer: "Multiple concepts combined",
+                        explanation: "Rigor comes from synthesis—e.g., using Logarithms to solve a Geometric Series physics problem."
+                    }
+                }
+            ]
+        },
+        {
+            id: "precalc_ab",
+            title: "AP Precalculus (The Bridge)",
+            code: "MA3164",
+            description: "Advanced functions, modeling, and trigonometry. The essential bridge that unifies Algebra 2 mechanics with Calculus concepts.",
+            color: "#00d2ff",
+            icon: "fas fa-project-diagram",
+            insight: "AP Marathon: Justify every claim. On the AP Precalc exam, your argument is as important as your answer.",
+            intuition: "Precalculus is not just 'Pre-Calculus'. It is the study of Change and Rate. It is where we stop studying static numbers and start studying dynamic systems.",
+            local_resources: [],
+            units: [
+                {
+                    title: "Unit 1: Polynomial & Rational (Change & Scale)",
+                    insight: "Numerical Analysis: AP Precalculus prioritizes tables over graphs. If the rate of change is decreasing while y is increasing, the system is Concave Down. This is the seed of Calculus acceleration.",
+                    topics: ["Rate of Change & Concavity", "Asymptotic Dominance", "Rational Singularities", "3-Step Continuity Protocol"],
+                    lectures: [
+                        { name: "1.1: Change & Concavity (Numerical)", url: "lesson:precalc:precalc-u1-1" },
+                        { name: "1.2: The Battle of Scale (Big-O)", url: "lesson:precalc:precalc-u1-2" },
+                        { name: "1.3: Rational Dynamics (Holes)", url: "lesson:precalc:precalc-u1-3" },
+                        { name: "1.4: AP Continuity Mastery", url: "lesson:precalc:precalc-u1-4" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: Scale Intuition",
+                            problem: "In f(x) = 5x^3 - 1000x^2, which term determines the end behavior?",
+                            steps: [
+                                "Identify the leading term: $5x^3$.",
+                                "Rule: The highest power dictates the limit as $x \\to \\infty$.",
+                                "Conclude: $5x^3$ wins."
+                            ],
+                            intuition: "The 'Dictator' always wins at scale."
+                        },
+                        {
+                            title: "Level 2: The Drill Bit",
+                            problem: "Given f(2)=10, f(4)=15, f(6)=22. Is the function concave up or down?",
+                            steps: [
+                                "ROC [2,4]: (15-10)/2 = 2.5",
+                                "ROC [4,6]: (22-15)/2 = 3.5",
+                                "Compare: 3.5 > 2.5 (Increasing ROC)",
+                                "Conclusion: Level 2 Mastery -> Concave Up."
+                            ],
+                            intuition: "Numerical verification is faster than graphing."
+                        },
+                        {
+                            title: "Practice FRQ (Level 3): The Mastery Justification",
+                            problem: "Given a table: (0, 10), (2, 18), (4, 24). Justify the concavity of f(x) on [0, 4].",
+                            steps: [
+                                "Calculate ROC [0,2]: (18-10)/(2-0) = 4.",
+                                "Calculate ROC [2,4]: (24-18)/(4-2) = 3.",
+                                "Compare: Since the ROC is decreasing (4 > 3) on the interval, f(x) is Concave Down.",
+                                "Justification: 'The average rate of change is decreasing, therefore the function is concave down.'"
+                            ],
+                            intuition: "Math in AP Precalc is an argument. Use the 'Because... Therefore' structure."
+                        }
+                    ],
+                    quiz: {
+                        question: "Level 3 Mastery: As x approachs infinity, a degree 6 polynomial with a negative leading coefficient will...",
+                        options: ["Approach infinity", "Approach negative infinity", "Approach zero", "Oscillate"],
+                        answer: "Approach negative infinity",
+                        explanation: "Even degree means arms point the same way. Negative leading coefficient means both arms point DOWN."
+                    }
+                },
+                {
+                    title: "Unit 2: Exponential & Logarithmic (Mastery)",
+                    insight: "Semi-logplots: Logs are magnitude compressors. If data looks like a curve in Cartesian but a line in Semi-log, it is exponential. Use residual plots to validate your claim.",
+                    topics: ["Logistic Inflection Points", "Semi-Log Linearization", "Residual Plot Validation", "Inverse Composition"],
+                    lectures: [
+                        { name: "2.1: The Magnitude Compressor", url: "lesson:precalc:precalc-u2-1" },
+                        { name: "2.2: Logistic Dynamics (L/2)", url: "lesson:precalc:precalc-u2-2" },
+                        { name: "2.3: Semi-Log Analysis", url: "lesson:precalc:precalc-u2-3" },
+                        { name: "2.4: Model Validation (Residuals)", url: "lesson:precalc:precalc-u2-4" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: Logistic Capacity",
+                            problem: "In f(t) = 5000 / (1 + 4e^-0.2t), what is the Carrying Capacity?",
+                            steps: [
+                                "Identify the numerator $L$.",
+                                "Conclude: L = 5000.",
+                                "Meaning: The population will never exceed 5000."
+                            ],
+                            intuition: "The numerator is the 'ceiling' of the system."
+                        },
+                        {
+                            title: "Level 2: The Inflection Point",
+                            problem: "For the same model (L=5000), at what population value is the growth rate maximized?",
+                            steps: [
+                                "Mastery Rule: Fastest growth occurs at $y = L/2$.",
+                                "Calculate: $5000 / 2 = 2500$.",
+                                "Conclude: Growth is fastest when 2500 people are infected/aware."
+                            ],
+                            intuition: "Halfway to the ceiling is where the 'S-curve' is steepest."
+                        },
+                        {
+                            title: "Practice FRQ (Level 3): Residual Verdict",
+                            problem: "A student transforms data and sees a U-shaped pattern in the residual plot. Justify if the model is appropriate.",
+                            steps: [
+                                "Observation: The residuals show a non-random pattern (a curve).",
+                                "Rule: A good model MUST have random scatter.",
+                                "Justification: 'Since the residual plot shows a clear curved pattern, the chosen model is NOT appropriate for the data.'"
+                            ],
+                            intuition: "Patterns in residuals mean you missed something in the original data."
+                        }
+                    ],
+                    quiz: {
+                        question: "Level 3 Mastery: If log(y) = 2x + 1, what is the base 'b' of the original exponential model y = a*b^x?",
+                        options: ["b = 1", "b = 2", "b = 10^2", "b = e^2"],
+                        answer: "b = 10^2",
+                        explanation: "When log(y) is base 10 (common log), the slope of the linear form is log(b). So log(b) = 2 -> b = 10^2 = 100."
+                    }
+                },
+                {
+                    title: "Unit 3: Trigonometric & Polar (Mastery)",
+                    insight: "Harmonic Dynamics: Trig is not about triangles; it's about circular motion. Polar coordinates allow us to model spirals and orbits where x-y grids fail.",
+                    topics: ["Radian Logic", "Harmonic Modeling", "Inverse Trig Prisons", "Polar Rate of Change"],
+                    lectures: [
+                        { name: "3.1: The Rotation Generator", url: "lesson:precalc:precalc-u3-1" },
+                        { name: "3.2: Inverse Trig (Domains)", url: "lesson:precalc:precalc-u3-2" },
+                        { name: "3.3: Polar Dynamics", url: "lesson:precalc:precalc-u3-3" },
+                        { name: "3.4: Trig Refactoring", url: "lesson:precalc:precalc-u3-4" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: Midline Mastery",
+                            problem: "A tide heights oscillate between 2m and 10m. Find the amplitude and midline.",
+                            steps: [
+                                "Midline (d) = (Max + Min)/2 = (10+2)/2 = 6.",
+                                "Amplitude (a) = Max - d = 10 - 6 = 4.",
+                                "Conclude: d=6, a=4."
+                            ],
+                            intuition: "The midline is the 'average' sea level."
+                        },
+                        {
+                            title: "Level 2: Polar Shift",
+                            problem: "Convert the polar point (4, 2pi/3) to Cartesian (x, y).",
+                            steps: [
+                                "x = r*cos(theta) = 4*cos(2pi/3) = 4*(-0.5) = -2.",
+                                "y = r*sin(theta) = 4*sin(2pi/3) = 4*(sqrt(3)/2) = 2sqrt(3).",
+                                "Conclude: (-2, 2sqrt(3))."
+                            ],
+                            intuition: "2pi/3 is in Quadrant II, so x must be negative."
+                        },
+                        {
+                            title: "Practice FRQ (Level 3): Polar Direction",
+                            problem: "If r = 3 - 2sin(theta), is the curve moving toward or away from the pole at theta = pi/2?",
+                            steps: [
+                                "Calculate dr/d(theta): derivative of -2sin(theta) is -2cos(theta).",
+                                "Evaluate at pi/2: -2cos(pi/2) = 0.",
+                                "Analyze: At exactly pi/2, the distance is momentarily constant.",
+                                "Further Check: If we approach pi/2, r decreases from 3 to 1. Since r is decreasing, it is moving TOWARD the pole."
+                            ],
+                            intuition: "Distance change in Polar is always about the pole (0,0)."
+                        }
+                    ],
+                    quiz: {
+                        question: "Level 3 Mastery: What is the value of arcsin(sin(5pi/4))?",
+                        options: ["5pi/4", "pi/4", "-pi/4", "-5pi/4"],
+                        answer: "-pi/4",
+                        explanation: "sin(5pi/4) = -sqrt(2)/2. However, arcsin is restricted to [-pi/2, pi/2]. The equivalent angle in that range is -pi/4."
+                    }
+                },
+                {
+                    title: "Unit 4: Parameters, Vectors & Matrices (Mastery)",
+                    insight: "Calculus-Lite: This unit bridges the gap between geometry and motion. Parametrics allow us to decouple x and y, which is the heart of multi-variable calculus.",
+                    topics: ["Parametric Motion", "Vector Decomposition", "Matrix Transformations", "Linear Systems"],
+                    lectures: [
+                        { name: "4.1: Parametric Mastery", url: "lesson:precalc:precalc-u4-1" },
+                        { name: "4.2: Vector Mastery", url: "lesson:precalc:precalc-u4-2" },
+                        { name: "4.3: Matrix Mastery", url: "lesson:precalc:precalc-u4-3" },
+                        { name: "4.4: The Linear Bridge", url: "lesson:precalc:precalc-u4-4" }
+                    ],
+                    examples: [
+                        {
+                            title: "Practice FRQ: Orthogonal Forces",
+                            problem: "Calculate the dot product of $\\langle 3, 2 \\rangle$ and $\\langle -2, 3 \\rangle$. What does this imply?",
+                            steps: [
+                                "Dot product: $(3)(-2) + (2)(3) = -6 + 6 = 0$.",
+                                "Conclusion: The vectors are Orthogonal (90 degrees apart).",
+                                "In Physics terms: They are completely independent forces."
+                            ],
+                            intuition: "Zero dot product = zero influence of one vector on the other."
+                        },
+                        {
+                            title: "Level 1: Parametric Time",
+                            problem: "If x = 2t + 1 and y = t^2 - 1, find the position at t = 3.",
+                            steps: [
+                                "Substitute t=3 into x: x = 2(3) + 1 = 7.",
+                                "Substitute t=3 into y: y = (3)^2 - 1 = 8.",
+                                "Conclude: (7, 8)."
+                            ],
+                            intuition: "Think of t as a slider that determines where the particle lands."
+                        },
+                        {
+                            title: "Level 2: The Path Equation",
+                            problem: "Eliminate the parameter for x = cos(t), y = sin(t).",
+                            steps: [
+                                "Use identity: x^2 + y^2 = (cos t)^2 + (sin t)^2.",
+                                "Apply identity: x^2 + y^2 = 1.",
+                                "Conclude: The path is a circle with radius 1."
+                            ],
+                            intuition: "Collapsing time reveals the 'footprint' of the motion."
+                        },
+                        {
+                            title: "Practice FRQ (Level 3): Transformation Mastery",
+                            problem: "A matrix transforms vector v = [1, 2] to v' = [2, 4]. What is the determinant if the matrix squashes space into the line y=2x?",
+                            steps: [
+                                "Identify the squash: Since all outputs land on one line, space is collapsed.",
+                                "Det Rule: A collapsed space has a determinant of 0.",
+                                "Conclude: det(A) = 0.",
+                                "Justification: 'Because the transformation is not one-to-one and maps R^2 to a line, the matrix is singular (det=0).'"
+                            ],
+                            intuition: "Squashed space = Zero Determinant = No Inverse."
+                        }
+                    ],
+                    quiz: {
+                        question: "Level 3 Mastery: If vector u = [2, 3] and v = [-3, 2], what is their dot product?",
+                        options: ["0 (Orthogonal)", "1", "12", "13"],
+                        answer: "0 (Orthogonal)",
+                        explanation: "Dot Product = (2*-3) + (3*2) = -6 + 6 = 0. This means the vectors are perfectly perpendicular."
+                    }
+                },
+                {
+                    title: "Unit 5: Calculus Prerequisites (The Limit Bridge)",
+                    insight: "Limits & Bridge: We are approaching the edge of Calculus. A limit is a destination, even if the bridge is broken (hole).",
+                    topics: ["Continuity", "Rates of Change", "Limit Notation"],
+                    lectures: [
+                        { name: "5.1: The Limit Concept", url: "lesson:precalc:precalc-u5-1" },
+                        { name: "5.2: Continuity Defined", url: "lesson:precalc:precalc-u5-2" },
+                        { name: "5.3: Instantaneous Rate of Change", url: "lesson:precalc:precalc-u5-3" }
+                    ],
+                    examples: [
+                        {
+                            title: "Ex 1: Removable Discontinuity",
+                            problem: "Evaluate $\\lim_{x\\to 2} \\frac{x^2-4}{x-2}$.",
+                            steps: ["Factor: $(x-2)(x+2)/(x-2)$.", "Cancel $(x-2)$.", "Eval $2+2 = 4$."],
+                            intuition: "We repair the road to see where it *should* go."
+                        }
+                    ],
+                    quiz: {
+                        question: "If left limit $\\neq$ right limit, what happens?",
+                        options: ["Limit DNE", "Limit is 0", "Limit is Infinity", "Function is continuous"],
+                        answer: "Limit DNE",
+                        explanation: "For a limit to exist, both sides must agree on the destination."
+                    }
+                },
+                {
+                    title: "Unit 6: AP Exam Archives (2023-2025)",
+                    topics: ["2023 Sample Logic", "2024 Released FRQs", "2025 Prediction", "Scoring Guidelines"],
+                    lectures: [
+                        { name: "6.1: 2023 Official Sample (Foundry)", url: "lesson:precalc:precalc-u6-1" },
+                        { name: "6.2: 2024 Official Exam (Actual)", url: "lesson:precalc:precalc-u6-2" },
+                        { name: "6.3: 2025 Elite Prediction (Hard Mode)", url: "lesson:precalc:precalc-u6-3" }
+                    ],
+                    examples: [
+                        {
+                            title: "Ex 1: Point Economy",
+                            problem: "How are points distributed in a 9-point FRQ?",
+                            steps: ["1-2 pts: Correct setup/formula.", "3-4 pts: Algebraic work.", "1 pt: Final answer with units.", "1-2 pts: Justification ('Because...')."],
+                            intuition: "Math is an argument. Even if your answer is wrong, your logic can earn 8/9 points."
+                        }
+                    ],
+                    quiz: {
+                        question: "Which exam year represents the first actual administration of AP Precalculus?",
+                        options: ["2022", "2023", "2024", "2025"],
+                        answer: "2024",
+                        explanation: "2024 was the historic 'Inaugural' year for this AP course."
+                    }
+                }
+            ]
+        },
+        {
+            id: "calc-ab",
+            title: "AP Calculus AB",
+            code: "MA3176",
+            description: "The foundations of limits, derivatives, and integrals. Focused on single-variable dynamics and real-world applications.",
+            color: "#6e45e2",
+            icon: "fas fa-calculus",
+            units: [
+                {
+                    title: "Unit 1: Limits & Continuity (Mastery)",
+                    insight: "Calculus starts where Algebra gives up. A limit is the mathematical 'spyglass' that lets us see what happens when denominator becomes zero.",
+                    topics: ["Limit Laws", "Squeeze Theorem", "IVT", "Infinite Behavior"],
+                    lectures: [
+                        { name: "1.1: Essence of Calculus", url: "lesson:calc:calc-u1-1" },
+                        { name: "1.2: Formal Limits (Rigor)", url: "lesson:calc:calc-u1-2" },
+                        { name: "1.3: Algebraic Refactoring", url: "lesson:calc:calc-u1-3" },
+                        { name: "1.4: Asymptotic Logic", url: "lesson:calc:calc-u1-4" },
+                        { name: "1.5: Continuity Protocol", url: "lesson:calc:calc-u1-5" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: Substitution Logic",
+                            problem: "Evaluate lim (x->3) (x^2 - 9) / (x - 3).",
+                            steps: [
+                                "Direct sub gives 0/0 (Indeterminate).",
+                                "Refactor: (x-3)(x+3) / (x-3).",
+                                "Cancel (x-3) and evaluate x+3 at 3: 3+3=6.",
+                                "Conclude: 6."
+                            ],
+                            intuition: "We are repairing a 'hole' in the graph to find where it would have been."
+                        },
+                        {
+                            title: "Practice FRQ (Level 3): IVT Justification",
+                            problem: "Given a continuous function f(x) where f(1)=-2 and f(5)=4. Justify why there must be a 'c' in [1,5] such that f(c)=0.",
+                            steps: [
+                                "Protocol Step 1: State continuity. 'Since f is continuous on [1,5]...'",
+                                "Protocol Step 2: Compare values. 'And since f(1)=-2 < 0 < 4=f(5)...'",
+                                "Protocol Step 3: Invoke the theorem. 'By the Intermediate Value Theorem (IVT), there must exist at least one c...'"
+                            ],
+                            intuition: "You can't go from negative to positive heights without crossing the x-axis!"
+                        }
+                    ],
+                    quiz: {
+                        question: "If left-hand limit is 5 and right-hand limit is 5, but f(c) is 10, is f(x) continuous?",
+                        options: ["Yes", "No", "Only if c=0", "DNE"],
+                        answer: "No",
+                        explanation: "Limit must equal function value. Here, 5 equals 5 (limit exists), but it doesn't equal 10 (function value)."
+                    }
+                },
+                {
+                    title: "Unit 2: Differentiation Mastery",
+                    insight: "Slope at a Point: Derivatives turn curves into collections of infinitely many small lines. This is the heart of prediction.",
+                    topics: ["Power Rule", "Product/Quotient Rules", "High-Order Derivs", "Differentiability"],
+                    lectures: [
+                        { name: "2.1: The Tangent Engine", url: "lesson:calc:calc-u2-1" },
+                        { name: "2.2: Differentiation Rules", url: "lesson:calc:calc-u2-2" },
+                        { name: "2.3: Product/Quotient Protocols", url: "lesson:calc:calc-u2-3" },
+                        { name: "2.4: Trigonometric Derivatives", url: "lesson:calc:calc-u2-4" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: Rule Application",
+                            problem: "Find the derivative of f(x) = 5x^4 - 3x^2 + 7.",
+                            steps: [
+                                "Use Power Rule: d/dx(x^n) = nx^(n-1).",
+                                "Apply: 5(4)x^3 - 3(2)x^1 + 0.",
+                                "Conclude: f'(x) = 20x^3 - 6x."
+                            ],
+                            intuition: "Every power term 'kicks' its exponent down and loses one degree."
+                        },
+                        {
+                            title: "Level 2: Quotient Trap",
+                            problem: "Differentiate f(x) = (x^2) / (sin x).",
+                            steps: [
+                                "Rule: (Low D-High - High D-Low) / (Low^2).",
+                                "Setup: (sin x * 2x - x^2 * cos x) / (sin x)^2.",
+                                "Conclude: (2x sin x - x^2 cos x) / sin^2 x."
+                            ],
+                            intuition: "Low d-High minus High d-Low, square the bottom and off you go!"
+                        }
+                    ],
+                    quiz: {
+                        question: "If a function has a sharp 'corner', is it differentiable?",
+                        options: ["Yes", "No", "Always", "Only if it's positive"],
+                        answer: "No",
+                        explanation: "Differentiation requires 'smoothness'. At a sharp corner, the slope changes instantly, so the limit of the slope from the left doesn't equal the right."
+                    }
+                },
+                {
+                    title: "Unit 3: Chain Rule & Implicit Mastery",
+                    insight: "Nested Mechanics: Most real-world functions are layers inside layers. The Chain Rule is our tool for peeling them back.",
+                    topics: ["Chain Rule", "Implicit Differentiation", "Inverse Functions", "Logarithmic Differentiation"],
+                    lectures: [
+                        { name: "3.1: The Chain Rule Protocol", url: "lesson:calc:calc-u3-1" },
+                        { name: "3.2: Implicit Differentiation", url: "lesson:calc:calc-u3-2" },
+                        { name: "3.3: Derivatives of Inverses", url: "lesson:calc:calc-u3-3" },
+                        { name: "3.4: Function Layering", url: "lesson:calc:calc-u3-4" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: Chain Rule Drill",
+                            problem: "Differentiate f(x) = sin(x^3).",
+                            steps: [
+                                "Identify Outer: sin(u), Inner: x^3.",
+                                "Deriv Outer: cos(x^3).",
+                                "Deriv Inner: 3x^2.",
+                                "Multiply: 3x^2 * cos(x^3)."
+                            ],
+                            intuition: "Differentiate the wrapper, then the candy inside."
+                        },
+                        {
+                            title: "Practice FRQ (Level 3): Implicit Justification",
+                            problem: "Find dy/dx for x^2 + y^2 = 25 at (3,4).",
+                            steps: [
+                                "Diff both sides: 2x + 2y(dy/dx) = 0.",
+                                "Solve for dy/dx: 2y(dy/dx) = -2x -> dy/dx = -x/y.",
+                                "Evaluate at (3,4): dy/dx = -3/4.",
+                                "Interpretation: The tangent line is decreasing at this point."
+                            ],
+                            intuition: "y is a function of x, so every time you diff y, you must multiply by its 'shadow' dy/dx."
+                        }
+                    ],
+                    quiz: {
+                        question: "What is the derivative of e^(2x)?",
+                        options: ["e^(2x)", "2e^(x)", "2e^(2x)", "e^(2)"],
+                        answer: "2e^(2x)",
+                        explanation: "Derivative of e^u is e^u * u'. Here u=2x and u'=2."
+                    }
+                },
+                {
+                    title: "Unit 4: Contextual Apps of Differentiation",
+                    insight: "Connecting to the World: Related rates and linearization show us that calculus isn't just on paper—it's how we model expanding ripples and falling ladders.",
+                    topics: ["Related Rates", "Linearization", "L'Hospital's Rule", "Differentials"],
+                    lectures: [
+                        { name: "4.1: Related Rates Strategy", url: "lesson:calc:calc-u4-1" },
+                        { name: "4.2: Linearization & Error", url: "lesson:calc:calc-u4-2" },
+                        { name: "4.3: L'Hospital's Rule", url: "lesson:calc:calc-u4-3" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: Related Rates Setup",
+                            problem: "A circle's radius expands at 2 cm/s. Find the rate of area change when r = 10.",
+                            steps: [
+                                "Equation: A = pi * r^2.",
+                                "Diff w.r.t time: dA/dt = 2 * pi * r * (dr/dt).",
+                                "Plug in: dA/dt = 2 * pi * (10) * (2) = 40pi.",
+                                "Conclude: 40pi cm^2/s."
+                            ],
+                            intuition: "As the radius grows, the 'new layer' of area we add depends on the current circumference."
+                        },
+                        {
+                            title: "Practice FRQ (Level 3): L'Hospital's Precision",
+                            problem: "Evaluate lim (x->0) (e^x - 1 - x) / (x^2).",
+                            steps: [
+                                "Sub x=0: (1-1-0)/0 = 0/0.",
+                                "L'Hospital 1: lim (e^x - 1) / (2x). Still 0/0.",
+                                "L'Hospital 2: lim (e^x) / 2.",
+                                "Eval: e^0 / 2 = 1/2."
+                            ],
+                            intuition: "When top and bottom both vanish, we compare their 'speeds' (derivatives) to see who wins."
+                        }
+                    ],
+                    quiz: {
+                        question: "Can you use L'Hospital's Rule on 0/infinity?",
+                        options: ["Yes", "No", "Only on Tuesdays", "Only if it's negative"],
+                        answer: "No",
+                        explanation: "L'Hospital's Rule only applies to indeterminate forms 0/0 or infinity/infinity. Other forms must be refactored into these first."
+                    }
+                },
+                {
+                    title: "Unit 5: Analytical Apps (Curve Sketching)",
+                    insight: "DNA of a Function: MVT and the Second Derivative Test allow us to reconstruct the entire 'personality' of a graph from just its formulas.",
+                    topics: ["Mean Value Theorem", "Optimization", "Concavity", "Candidate Test"],
+                    lectures: [
+                        { name: "5.1: MVT & Rolle's", url: "lesson:calc:calc-u5-1" },
+                        { name: "5.2: The First Derivative Test", url: "lesson:calc:calc-u5-2" },
+                        { name: "5.3: Concavity & Points of Inflection", url: "lesson:calc:calc-u5-3" },
+                        { name: "5.4: Optimization Masterclass", url: "lesson:calc:calc-u5-4" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: Critical Points",
+                            problem: "Find the critical points of f(x) = x^3 - 3x^2.",
+                            steps: [
+                                "Diff: f'(x) = 3x^2 - 6x.",
+                                "Set to 0: 3x(x - 2) = 0.",
+                                "Conclude: x = 0, x = 2."
+                            ],
+                            intuition: "Critical points are where the graph 'takes a breath' before switching direction."
+                        },
+                        {
+                            title: "Practice FRQ (Level 3): MVT Justification",
+                            problem: "If f(0)=0 and f(2)=10, justify why there must be a 'c' where f'(c)=5.",
+                            steps: [
+                                "State Differentiability: 'Since f is differentiable (and thus continuous)...'",
+                                "Calculate avg ROC: (10-0)/(2-0) = 5.",
+                                "Invoke MVT: 'By the Mean Value Theorem, there must exist c in (0,2) such that f'(c)=5.'"
+                            ],
+                            intuition: "If your average speed for a trip was 60mph, you must have hit exactly 60mph at least once!"
+                        }
+                    ],
+                    quiz: {
+                        question: "If f''(x) > 0, what is the 'shape' of the graph?",
+                        options: ["Increasing", "Decreasing", "Concave Up (Cup)", "Concave Down (Frown)"],
+                        answer: "Concave Up (Cup)",
+                        explanation: "Positive second derivative means the 'slope is increasing', creating a cup-like shape."
+                    }
+                },
+                {
+                    title: "Unit 6: Integration Mastery (AB)",
+                    insight: "The accumulation engine: If differentiation is 'shredding', integration is 'weaving'. We use Riemann sums to approximate real-world accumulation.",
+                    topics: ["Riemann Sums", "Fundamental Theorem", "U-Substitution", "Average Value"],
+                    lectures: [
+                        { name: "6.1: Riemann Sums & Sigma", url: "lesson:calc:calc-u6-1" },
+                        { name: "6.2: Definite Integrals & FTC", url: "lesson:calc:calc-u6-2" },
+                        { name: "6.3: Integration by Substitution", url: "lesson:calc:calc-u6-3" },
+                        { name: "6.4: Numerical Integration", url: "lesson:calc:calc-u6-4" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: FTC Part 2",
+                            problem: "Evaluate integral [1 to 3] (3x^2) dx.",
+                            steps: [
+                                "Anti-deriv: x^3.",
+                                "Upper bound: 3^3 = 27.",
+                                "Lower bound: 1^3 = 1.",
+                                "Subtract: 27 - 1 = 26."
+                            ],
+                            intuition: "The total accumulation is simply the 'net change' in the anti-derivative."
+                        },
+                        {
+                            title: "Practice FRQ (Level 3): U-Sub Decoupling",
+                            problem: "Evaluate integral [0 to 1] x * e^(x^2) dx.",
+                            steps: [
+                                "Let u = x^2, then du = 2x dx -> x dx = 1/2 du.",
+                                "Change bounds: x=0 -> u=0; x=1 -> u=1.",
+                                "Integral: 1/2 * integral [0 to 1] e^u du = 1/2(e^1 - e^0).",
+                                "Conclude: 1/2(e - 1)."
+                            ],
+                            intuition: "U-Substitution is 'reverse chain rule'—we adjust for the inner derivative's multiplier."
+                        }
+                    ],
+                    quiz: {
+                        question: "What does FTC Part 1 say about d/dx [integral from a to x of f(t) dt]?",
+                        options: ["F(x)", "f(x)", "f'(x)", "0"],
+                        answer: "f(x)",
+                        explanation: "Diff and Int are inverse operations. Starting with f, integrating, then differentiating brings you back to f(x)."
+                    }
+                },
+                {
+                    title: "Unit 7: Differential Equations (AB)",
+                    insight: "Modeling Change: Differential equations are the 'laws of nature'. They tell us how a system evolves based on its current state.",
+                    topics: ["Slope Fields", "Separable Equations", "Exponential Growth"],
+                    lectures: [
+                        { name: "7.1: Slope Field Logic", url: "lesson:calc:calc-u7-1" },
+                        { name: "7.2: Separation of Variables", url: "lesson:calc:calc-u7-2" },
+                        { name: "7.3: Exponential Modeling", url: "lesson:calc:calc-u7-3" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: Slope Field Matching",
+                            problem: "If dy/dx = x, describe the slopes along the y-axis.",
+                            steps: [
+                                "On y-axis, x = 0.",
+                                "dy/dx = 0.",
+                                "Conclude: All slope segments are horizontal along the y-axis."
+                            ],
+                            intuition: "The slope is purely determined by the x-coordinate here."
+                        }
+                    ],
+                    quiz: {
+                        question: "If dy/dx = ky, what is the general solution?",
+                        options: ["y = kx + C", "y = Ce^(kx)", "y = x^k", "y = sin(kx)"],
+                        answer: "y = Ce^(kx)",
+                        explanation: "This is the 'Natural Growth' equation where the rate of change is proportional to the amount present."
+                    }
+                },
+                {
+                    title: "Unit 8: App of Integration (Area & Volume)",
+                    insight: "Building Worlds: We can find the area between complex curves and even the volume of 3D shapes turned on a lathe.",
+                    topics: ["Area between Curves", "Disk/Washer Method", "Cross-Sections", "Average Value"],
+                    lectures: [
+                        { name: "8.1: Areas between Curves", url: "lesson:calc:calc-u8-1" },
+                        { name: "8.2: Disk & Washer Methods", url: "lesson:calc:calc-u8-2" },
+                        { name: "8.3: Known Cross-Sections", url: "lesson:calc:calc-u8-3" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: Area Between Curves",
+                            problem: "Find the area between y = x and y = x^2 from x=0 to x=1.",
+                            steps: [
+                                "Identify Top: x, Bottom: x^2.",
+                                "Integral: integral [0 to 1] (x - x^2) dx.",
+                                "Anti-deriv: x^2/2 - x^3/3.",
+                                "Eval: (1/2 - 1/3) - (0) = 1/6."
+                            ],
+                            intuition: "Subtracting the lower area from the upper area leaves the 'slice' in between."
+                        }
+                    ],
+                    quiz: {
+                        question: "Which method is used for a solid of revolution with a 'hole' in the middle?",
+                        options: ["Disk Method", "Was cowl Method", "Washer Method", "Riemann Method"],
+                        answer: "Washer Method",
+                        explanation: "A washer is a disk with a smaller disk removed from the center, modeling the 'hole'."
                     }
                 }
             ]
@@ -849,66 +1471,118 @@ const MATH_DATA = {
             icon: "fas fa-infinity",
             units: [
                 {
-                    title: "Unit 1: Limits & Continuity",
-                    topics: ["Limit Laws", "Squeeze Theorem", "IVT", "Infinite Limits", "Formal Definition"],
-                    intuition: "Calculus is the art of measuring change. Limits are the 'bridge' to understanding instantaneous movement.",
+                    title: "Unit 1: Limits & Continuity (Elite 4.0)",
+                    insight: "Limits: The bridge to infinity. Mastering the $\epsilon-\delta$ definition is what separates a student from a mathematical architect.",
+                    topics: ["Formal Limits", "Squeeze Theorem", "Continuity Rigor", "Intermediate Value Theorem"],
                     lectures: [
-                        { name: "1.1: Essence of Calculus", url: "lesson:calc-bc:calc-u1-1" },
-                        { name: "1.2: Formal $\epsilon-\delta$ Definition", url: "lesson:calc-bc:calc-u1-2" },
-                        { name: "1.3: Limit Laws & Algebraic Manipulations", url: "lesson:calc-bc:calc-u1-3" },
-                        { name: "1.4: Infinite Limits & Asymptotes", url: "lesson:calc-bc:calc-u1-4" },
-                        { name: "1.5: Continuity & IVT Logic", url: "lesson:calc-bc:calc-u1-5" }
+                        { name: "1.1: The Calculus Essence", url: "lesson:calc:calc-u1-1" },
+                        { name: "1.2: Rigorous Limits", url: "lesson:calc:calc-u1-2" },
+                        { name: "1.3: Algebraic Refactoring", url: "lesson:calc:calc-u1-3" },
+                        { name: "1.4: Asymptotic Logic", url: "lesson:calc:calc-u1-4" },
+                        { name: "1.5: Continuity Protocol", url: "lesson:calc:calc-u1-5" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: The Squeeze Logic",
+                            problem: "Solve lim (x->0) x^2 * sin(1/x).",
+                            steps: [
+                                "Bound: -1 <= sin(1/x) <= 1.",
+                                "Multiply: -x^2 <= x^2 * sin(1/x) <= x^2.",
+                                "Limits: lim -x^2 = 0 and lim x^2 = 0.",
+                                "Conclude: By Squeeze Theorem, the limit is 0."
+                            ],
+                            intuition: "Even if sin(1/x) oscilliates wildly, x^2 'squashes' it to zero at the origin."
+                        },
+                        {
+                            title: "Practice FRQ (Level 3): Epsilon-Delta Mastery",
+                            problem: "Prove lim (x->3) (2x - 1) = 5.",
+                            steps: [
+                                "Target: |(2x-1) - 5| < eps -> |2x-6| < eps.",
+                                "Factoring: 2|x-3| < eps -> |x-3| < eps/2.",
+                                "Choice: Set delta = eps/2.",
+                                "Justification: 'For every eps > 0, choosing delta = eps/2 ensures the target range.'"
+                            ],
+                            intuition: "You tell me how close you want to be to 5 (eps), and I'll tell you how close x must be to 3 (delta)."
+                        }
                     ],
                     quiz: {
-                        question: "Use the Squeeze Theorem: If $\cos(x) \le f(x) \le 1$ near $x=0$, what is $\lim_{x \to 0} f(x)$?",
-                        options: ["0", "1", "Undefined", "$\pi/2$"],
-                        answer: "1",
-                        explanation: "Since both $\cos(0)=1$ and the upper bound is 1, $f(x)$ is forced to 1 as $x \to 0$."
+                        question: "If f(x) is continuous, does f(c) always exist for any c in the domain?",
+                        options: ["Yes", "No", "Only if differentiable", "Only if positive"],
+                        answer: "Yes",
+                        explanation: "By definition, a function is continuous at c only if f(c) is defined and equal to the limit."
                     }
                 },
                 {
-                    title: "Unit 2: Differentiation",
-                    topics: ["Definition of Derivative", "Power Rule", "Product/Quotient Rules", "High-Order Derivatives"],
+                    title: "Unit 2: Differentiation (Elite 4.0)",
+                    insight: "Linearization: Every smooth function is just a collection of microscopic straight lines. Differentiation is the 'zoom' tool.",
+                    topics: ["Definition of Derivative", "Power/Product/Quotient", "High-Order Logic", "Smoothness"],
                     lectures: [
-                        { name: "2.1: The Tangent Problem", url: "lesson:calc-bc:calc-u2-1" },
-                        { name: "2.2: Differentiability & Smoothness", url: "lesson:calc-bc:calc-u2-2" },
-                        { name: "2.3: Basic Rules (Power, Sum, Difference)", url: "lesson:calc-bc:calc-u2-3" },
-                        { name: "2.4: Product & Quotient Rules", url: "lesson:calc-bc:calc-u2-4" },
-                        { name: "2.5: Derivatives of Trig Functions", url: "lesson:calc-bc:calc-u2-5" }
+                        { name: "2.1: The Tangent Engine", url: "lesson:calc:calc-u2-1" },
+                        { name: "2.2: Differentiation Rules", url: "lesson:calc:calc-u2-2" },
+                        { name: "2.3: Product/Quotient Protocols", url: "lesson:calc:calc-u2-3" },
+                        { name: "2.4: Trigonometric Derivatives", url: "lesson:calc:calc-u2-4" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 2: High-Order Pattern",
+                            problem: "Find the 50th derivative of sin(x).",
+                            steps: [
+                                "Pattern: sin -> cos -> -sin -> -cos -> sin.",
+                                "Cycle: Recurs every 4 derivatives.",
+                                "Divide: 50 / 4 = 12 remainder 2.",
+                                "Conclude: Same as 2nd derivative -> -sin(x)."
+                            ],
+                            intuition: "Trig derivatives are a 4-chord loop in a song!"
+                        }
                     ]
                 },
                 {
-                    title: "Unit 3: Implicit & Inverse",
-                    topics: ["Chain Rule", "Implicit Differentiation", "Inverse Trig", "Logarithmic Diff"],
+                    title: "Unit 3: Implicit & Chain Mastery (BC)",
+                    insight: "Deep Layers: In BC, we apply the chain rule to multi-variable relations. Implicit differentiation is the key to decoupling x and y.",
+                    topics: ["Advanced Chain Rule", "Implicit Logic", "Inverse Trig Rigor", "Logarithmic Diff"],
                     lectures: [
-                        { name: "3.1: The Chain Rule Protocol", url: "lesson:calc-bc:calc-u3-1" },
-                        { name: "3.2: Implicit Differentiation", url: "lesson:calc-bc:calc-u3-2" },
-                        { name: "3.3: Derivatives of Inverses", url: "lesson:calc-bc:calc-u3-3" },
-                        { name: "3.4: Inverse Trig Masterclass", url: "lesson:calc-bc:calc-u3-4" }
+                        { name: "3.1: Chain Rule Protocol", url: "lesson:calc:calc-u3-1" },
+                        { name: "3.2: Implicit Differentiation", url: "lesson:calc:calc-u3-2" },
+                        { name: "3.3: Derivatives of Inverses", url: "lesson:calc:calc-u3-3" },
+                        { name: "3.4: Inverse Trig Masterclass", url: "lesson:calc:calc-u3-4" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 3: Logarithmic Differentiation",
+                            problem: "Differentiate y = x^x.",
+                            steps: [
+                                "Take ln: ln y = x ln x.",
+                                "Diff: (1/y) y' = ln x + x(1/x) = ln x + 1.",
+                                "Multiply: y' = y(ln x + 1).",
+                                "Conclude: y' = x^x(ln x + 1)."
+                            ],
+                            intuition: "When both base and exponent are moving, take a log to bring the exponent down to earth."
+                        }
                     ]
                 },
                 {
-                    title: "Unit 4: Contextual Apps",
-                    topics: ["Related Rates", "Linearization", "L'Hospital's Rule", "Differential Error"],
+                    title: "Unit 4: Advanced Differentiation Apps",
+                    topics: ["Related Rates", "Linearization", "L'Hospital's Rule (Indeterminant Forms)"],
                     lectures: [
-                        { name: "4.1: Related Rates Strategies", url: "lesson:calc-bc:calc-u4-1" },
+                        { name: "4.1: Related Rates Strategy", url: "lesson:calc-bc:calc-u4-1" },
                         { name: "4.2: Linearization & Differentials", url: "lesson:calc-bc:calc-u4-2" },
-                        { name: "4.3: L'Hospital's Rule & Indeterminants", url: "lesson:calc-bc:calc-u4-3" }
+                        { name: "4.3: L'Hospital's Mastery", url: "lesson:calc-bc:calc-u4-3" }
                     ]
                 },
                 {
-                    title: "Unit 5: Analytical Apps",
-                    topics: ["Mean Value Theorem", "Optimization", "Curve Sketching", "Concavity"],
+                    title: "Unit 5: Analytical Apps (BC Depth)",
+                    topics: ["MVT", "Optimization", "Curve Analysis", "Concavity Logic"],
                     lectures: [
                         { name: "5.1: Extreme Values & Rolle's", url: "lesson:calc-bc:calc-u5-1" },
                         { name: "5.2: Mean Value Theorem", url: "lesson:calc-bc:calc-u5-2" },
-                        { name: "5.3: Concavity & Second Deriv Test", url: "lesson:calc-bc:calc-u5-3" },
+                        { name: "5.3: Concavity & Points of Inflection", url: "lesson:calc-bc:calc-u5-3" },
                         { name: "5.4: Optimization Problems", url: "lesson:calc-bc:calc-u5-4" }
                     ]
                 },
                 {
-                    title: "Unit 6: Integration",
-                    topics: ["Riemann Sums", "Fundamental Theorem", "U-Substitution", "Integration by Parts"],
+                    title: "Unit 6: Integration (BC Rigor)",
+                    insight: "Foundations of Area: Calculus is the study of accumulation. Riemann sums are the bricks; the Fundamental Theorem is the mortar.",
+                    topics: ["FTC", "Riemann Limits", "U-Substitution", "Advanced Integration (Parts/Fractions)"],
                     lectures: [
                         { name: "6.1: Sigma Notation & Riemann Sums", url: "lesson:calc-bc:calc-u6-1" },
                         { name: "6.2: Definite Integrals & FTC", url: "lesson:calc-bc:calc-u6-2" },
@@ -918,61 +1592,127 @@ const MATH_DATA = {
                     ]
                 },
                 {
-                    title: "Unit 7: Diff Eqs",
-                    topics: ["Slope Fields", "Separable Equations", "Euler's Method", "Logistic Models"],
+                    title: "Unit 7: Differential Equations (Elite 4.0)",
+                    insight: "Predicting the Future: Differential equations are the 'laws of motion'. Euler's method gives us a numerical bridge when analytic paths are blocked.",
+                    topics: ["Slope Fields", "Separable Equations", "Euler's Method (BC)", "Logistic Growth"],
                     lectures: [
-                        { name: "7.1: Slope Fields & General Solutions", url: "lesson:calc-bc:calc-u7-1" },
-                        { name: "7.2: Euler's Method (BC)", url: "lesson:calc-bc:calc-u7-2" },
-                        { name: "7.3: Separation of Variables", url: "lesson:calc-bc:calc-u7-3" },
-                        { name: "7.4: Logistic Growth Models (BC)", url: "lesson:calc-bc:calc-u7-4" }
+                        { name: "7.1: Slope Field Analysis", url: "lesson:calc:calc-u7-1" },
+                        { name: "7.2: Euler's Method (BC Expansion)", url: "lesson:calc:calc-u7-2" },
+                        { name: "7.3: Separation of Variables", url: "lesson:calc:calc-u7-3" },
+                        { name: "7.4: Logistic Modeling (BC Depth)", url: "lesson:calc:calc-u7-4" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: Logistic Capacity",
+                            problem: "For dP/dt = 0.2P(1 - P/500), find the carrying capacity.",
+                            steps: [
+                                "Identify L in (1 - P/L).",
+                                "Conclude: L = 500.",
+                                "Meaning: The population limit is 500."
+                            ],
+                            intuition: "The environment has exactly 500 'seats' available."
+                        },
+                        {
+                            title: "Practice FRQ (Level 3): Euler's Step Justification",
+                            problem: "Use Euler's method with 2 steps of h=0.5 to approx f(1) if dy/dx=x+y and f(0)=1.",
+                            steps: [
+                                "Step 1: (0,1), slope=1. Next y = 1 + 1(0.5) = 1.5.",
+                                "Step 2: (0.5, 1.5), slope=2. Next y = 1.5 + 2(0.5) = 2.5.",
+                                "Conclude: f(1) approx 2.5."
+                            ],
+                            intuition: "We are walking along the fog, following the local compass (slope) for a short distance before re-checking."
+                        }
                     ]
                 },
                 {
-                    title: "Unit 8: App of Integration",
-                    topics: ["Average Value", "Volume (Disk/Washer/Shell)", "Arc Length"],
+                    title: "Unit 8: App of Integration (BC Rigor)",
+                    insight: "Geometric Complexity: Beyond area, we master arc length and surface area. Calculus lets us measure the 'un-measurable'.",
+                    topics: ["Area between Curves", "Volumes (Disk/Washer/Shell)", "Arc Length (BC)", "Average Value"],
                     lectures: [
-                        { name: "8.1: Areas between Curves", url: "lesson:calc-bc:calc-u8-1" },
-                        { name: "8.2: Volumes of Revolution", url: "lesson:calc-bc:calc-u8-2" },
-                        { name: "8.3: Arc Length & Surface Area (BC)", url: "lesson:calc-bc:calc-u8-3" }
+                        { name: "8.1: Areas between Curves", url: "lesson:calc:calc-u8-1" },
+                        { name: "8.2: Volumes of Revolution", url: "lesson:calc:calc-u8-2" },
+                        { name: "8.3: Known Cross-Sections", url: "lesson:calc:calc-u8-3" },
+                        { name: "8.4: Arc Length & Surfaces (BC)", url: "lesson:calc:calc-u8-4" }
                     ]
                 },
                 {
-                    title: "Unit 9: Parametric & Polar",
-                    topics: ["Vector Motion", "Polar Areas", "Parametric Derivatives"],
+                    title: "Unit 9: Parametric, Vector, & Polar (BC Only)",
+                    insight: "Pathways in Space: In BC, motion isn't just left-right. We follow particles in the plane and calculate areas 'swept out' by polar rays.",
+                    topics: ["Parametric Calc", "Vector Motion", "Polar Area", "Polar Arc Length"],
                     lectures: [
-                        { name: "9.1: Parametric Curves & Calc", url: "lesson:calc-bc:calc-u9-1" },
-                        { name: "9.2: Vectors in the Plane", url: "lesson:calc-bc:calc-u9-2" },
-                        { name: "9.3: Polar Coordinates & Graphs", url: "lesson:calc-bc:calc-u9-3" },
-                        { name: "9.4: Area & Arc Length in Polar (BC)", url: "lesson:calc-bc:calc-u9-4" }
+                        { name: "9.1: Parametric Calculus", url: "lesson:calc:calc-u9-1" },
+                        { name: "9.2: Vectors in the Plane", url: "lesson:calc:calc-u9-2" },
+                        { name: "9.3: Polar Coordinates & Graphs", url: "lesson:calc:calc-u9-3" },
+                        { name: "9.4: Polar Area Mastery", url: "lesson:calc:calc-u9-4" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 1: Polar Area Setup",
+                            problem: "Find the area of r = 3sin(theta).",
+                            steps: [
+                                "Formula: integral [0 to pi] 1/2 * r^2 dtheta.",
+                                "Setup: integral 1/2 * (3sin(theta))^2 dtheta.",
+                                "Integrate: 9/2 * integral sin^2(theta) dtheta.",
+                                "Conclude: 9pi/4."
+                            ],
+                            intuition: "We are adding up infinitely many small 'pizza slices' (sectors)."
+                        }
                     ]
                 },
                 {
-                    title: "Unit 10: Sequences & Series",
-                    topics: ["Convergence Tests", "Taylor Series", "Lagrange Error"],
+                    title: "Unit 10: Sequences & Infinite Series (BC Only)",
+                    insight: "The Final Boss: Series allow us to turn any complex function into a simple polynomial. Taylor is the architect of this conversion.",
+                    topics: ["Convergence Tests", "Power Series", "Taylor/Maclaurin", "Error Bounds"],
                     lectures: [
-                        { name: "10.1: Sequences & Convergence", url: "lesson:calc-bc:calc-u10-1" },
-                        { name: "10.2: Convergence Tests Masterlist", url: "lesson:calc-bc:calc-u10-2" },
-                        { name: "10.3: Power Series & Radius", url: "lesson:calc-bc:calc-u10-3" },
-                        { name: "10.4: Taylor & Maclaurin Series", url: "lesson:calc-bc:calc-u10-4" },
-                        { name: "10.5: Lagrange Error Bound (BC)", url: "lesson:calc-bc:calc-u10-5" }
+                        { name: "10.1: Sequences & Convergence", url: "lesson:calc:calc-u10-1" },
+                        { name: "10.2: Convergence Tests Masterlist", url: "lesson:calc:calc-u10-2" },
+                        { name: "10.3: Power Series & Radius", url: "lesson:calc:calc-u10-3" },
+                        { name: "10.4: Taylor Series Mastery", url: "lesson:calc:calc-u10-4" },
+                        { name: "10.5: Lagrange Error Bound", url: "lesson:calc:calc-u10-5" }
+                    ],
+                    examples: [
+                        {
+                            title: "Level 2: Common Taylor Series",
+                            problem: "Write the Maclaurin series for f(x) = sin(x).",
+                            steps: [
+                                "Pattern: Alternating odd powers.",
+                                "Term: x - x^3/3! + x^5/5! - ...",
+                                "Conclude: Sigma (-1)^n * x^(2n+1) / (2n+1)!"
+                            ],
+                            intuition: "Every function has a 'polynomial personality' if you zoom in enough at the center."
+                        },
+                        {
+                            title: "Practice FRQ (Level 3): Radius of Convergence",
+                            problem: "Find the interval of convergence for Sigma (n(x-2)^n) / 3^n.",
+                            steps: [
+                                "Ratio Test: lim |(n+1)(x-2) / 3n | < 1.",
+                                "Radius: |x-2|/3 < 1 -> |x-2| < 3.",
+                                "Interval: -1 < x < 5.",
+                                "Test endpoints: Both fail (diverge).",
+                                "Conclude: (-1, 5)."
+                            ],
+                            intuition: "Outside this 'safety zone', the series explodes to infinity."
+                        }
                     ]
                 },
                 {
-                    title: "Infinity Marathon: Final Synthesis",
-                    topics: ["AP Style FRQs", "Cross-Unit Integration", "Theoretical Proofs"],
+                    title: "Unit 11: Infinity Marathon & Archives",
+                    insight: "Final Synthesis: You are now a math athlete. We combine Series, Polar, and Integration into unified challenges.",
+                    topics: ["Cross-Unit FRQs", "MIT 18.01 Synthesis", "Exam Archive (2023-2025)"],
                     lectures: [
-                        { name: "M.1: The Grand Synthesis (All Units)", url: "lesson:calc-bc:calc-marathon-1" },
-                        { name: "M.2: Theoretical Edge (MIT 18.01 Review)", url: "lesson:calc-bc:calc-marathon-2" }
+                        { name: "11.1: The Grand Synthesis", url: "lesson:calc:calc-u11-1" },
+                        { name: "11.2: Theoretical Depth (MIT Review)", url: "lesson:calc:calc-u11-2" },
+                        { name: "11.3: 2025 Elite Prediction", url: "lesson:calc:calc-u11-3" }
                     ],
                     quiz: {
-                        question: "If $y(x)$ is represented by a Taylor Series centered at 0, and $y' = y$ with $y(0)=1$, which function is it?",
-                        options: ["$\ln(x)$", "$e^x$", "$\sin(x)$", "$x^2$"],
-                        answer: "$e^x$",
-                        explanation: "$e^x$ is the unique function where the derivative is equal to the function itself and $e^0=1$."
+                        question: "Final Mastery: Which convergence test is your 'first line of defense'?",
+                        options: ["Ratio Test", "Integral Test", "nth Term Test for Divergence", "P-Series Test"],
+                        answer: "nth Term Term Test for Divergence",
+                        explanation: "If the limit of terms is not zero, the series diverges IMMEDIATELY. Save time by checking this first!"
                     }
                 }
             ]
-        }
+        },
     ],
     strategy: {
         title: "TJ 9th Grade Prep Strategy",
@@ -989,6 +1729,7 @@ const MATH_DATA = {
         { name: "OmegaLearn", desc: "Best AMC 10/12 Free PDF Books", url: "https://www.omegalearn.org/mastering-amc1012", icon: "fas fa-book" },
         { name: "3Blue1Brown", desc: "Intuition Building Animations", url: "https://www.youtube.com/@3blue1brown", icon: "fab fa-youtube" },
         { name: "Paul's Notes", desc: "Legendary Math Cheat Sheets", url: "https://tutorial.math.lamar.edu/", icon: "fas fa-file-pdf" },
+        { name: "SHSAT Review YouTube", desc: "Elite Algebra 2 & Math Problem Solving breakdowns", url: "https://www.youtube.com/@shsatreview6318", icon: "fab fa-youtube" },
         { name: "Art of Problem Solving", desc: "The competitive math gold standard", url: "https://artofproblemsolving.com/", icon: "fas fa-brain" }
     ]
 };

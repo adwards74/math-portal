@@ -27,88 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.updateStabilityUI) window.updateStabilityUI();
     }
 
-    // --- Neo 2.0 Brain: Advanced Math Advisor ---
-    const TUTOR_BRAIN = {
-        // Essential Unit-level Insights
-        "ch1-1": "Real Numbers: Irrational numbers like $\\pi$ never repeat or terminate. Think of them as infinite unique data streams.",
-        "ch1-7": "Absolute Value: $|x-a| < d$ means the 'distance' between x and a is less than d. It's a range, not just a number!",
-        "ch4-1": "Matrix Addition: Only matrices of the SAME dimensions can be added. It's like adding arrays element-by-element in code.",
-        "ch4-2": "Matrix Multiplication: $A \cdot B$ is NOT the same as $B \cdot A$. Order matters deeply in linear transformations!",
-        "ch4-3": "Determinants: If $det(A) = 0$, you've lost information. The transformation is destructive/singular.",
-        "ch6-3": "Synthetic Division: This is a specialized optimization of Long Division. It works ONLY for divisors like $(x - c)$.",
-        "ch8-3": "Logarithms: A logarithm is just an exponent. $\\log_10(100) = 2$ because $10^2 = 100$. Focus on the POWER.",
-        "ch13-1": "Radians: One radian is about $57.3^{\circ}$. We use them in Calculus because they make the derivative of $\sin(x)$ stay simple.",
-
-        // Chapter fallbacks
-        "ch1": "Foundations: Mastery of axioms allows you to manipulate any expression without fear. Focus on the 'Why' behind the distributive rule.",
-        "ch4": "Matrices: You are manipulating whole spatial dimensions here. Visualize matrices as vectors moving around.",
-        "ch6": "Polynomials: Every root $(x-r)$ is a factor. The Fundamental Theorem guarantees N roots for degree N. No exceptions!",
-        "ch14": "Trig Identities: These aren't just formulas; they are 'Math Refactoring'. Use $\sin^2\theta + \cos^2\theta = 1$ to simplify your code.",
-        "ch_amc": "Competition: AMC prep is about finding the 'Symmetry' or 'Invariance' in a problem. Look for what DOESN'T change.",
-        "ch_limits": "Calculus: Every great derivative starts with a humble limit. Visualize the gap closing until it vanishes.",
-        "calc-u1": "Limits: Mastering the $\epsilon-\delta$ definition is the difference between a student and a mathematician. Stay rigorous.",
-        "calc-u7": "Diff Eqs: When analytic solutions fail, trust Euler's method. It's the numerical ghost in the machine.",
-        "calc-u10": "Series: Test for convergence first! A divergent series is like a black hole; don't get trapped in its infinite sum.",
-        "calc-marathon": "Infinity Marathon: You are now synthesizing all of human calculus knowledge. Maintain structural integrity."
-    };
-
-    // --- Neo 3.0: Terminal Typing Effect ---
-    window.typeTerminalMessage = (html, delay = 20) => {
-        const bubble = document.getElementById('tutor-message');
-        if (!bubble) return;
-
-        bubble.innerHTML = '<span class="terminal-prefix">></span> ';
-        let i = 0;
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = html;
-        const plainText = tempDiv.innerText;
-
-        function type() {
-            if (i < plainText.length) {
-                bubble.innerText = '> ' + plainText.substring(0, i + 1);
-                i++;
-                setTimeout(type, delay);
-            } else {
-                bubble.innerHTML = `<span class="terminal-prefix">></span> ${html}<span class="terminal-cursor"></span>`;
-                if (window.MathJax) MathJax.typesetPromise();
-            }
-        }
-        type();
-    };
-
-    // --- Neo 3.0: Stability Analytics ---
-    window.updateStabilityUI = () => {
-        const history = getQuizHistory();
-        const canvas = document.getElementById('stability-graph');
-        const percentLabel = document.getElementById('stability-percent');
-        if (!canvas) return;
-
-        const ctx = canvas.getContext('2d');
-        const last5 = history.slice(0, 5).reverse();
-        const score = last5.length > 0 ? (last5.filter(h => h.correct).length / last5.length) * 100 : 98;
-
-        if (percentLabel) percentLabel.innerText = `${Math.round(score)}%`;
-
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.strokeStyle = score > 70 ? '#00d2ff' : '#f5576c';
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-
-        const step = canvas.width / 5;
-        last5.forEach((h, idx) => {
-            const x = idx * step + 10;
-            const y = h.correct ? 10 : 40;
-            if (idx === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
-
-            // Draw point
-            ctx.fillStyle = h.correct ? '#38ef7d' : '#f5576c';
-            ctx.fillRect(x - 2, y - 2, 4, 4);
-        });
-        if (last5.length === 0) {
-            ctx.moveTo(0, 25); ctx.lineTo(canvas.width, 25);
-        }
-        ctx.stroke();
-    };
+    // Kernel Initialization: Link Modules
+    if (window.AppRouter) window.AppRouter.initialize();
 
     window.askTutorTip = () => {
         const bubble = document.getElementById('tutor-message');
@@ -119,20 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
             const lessonKey = window.currentLessonKey || "";
-            const contentText = document.querySelector('.content-area')?.innerText || "";
-            let rawMessage = "";
-
-            if (TUTOR_BRAIN[lessonKey]) {
-                rawMessage = TUTOR_BRAIN[lessonKey];
-            } else {
-                const chapterKey = lessonKey.split('-')[0];
-                if (TUTOR_BRAIN[chapterKey]) rawMessage = TUTOR_BRAIN[chapterKey];
-                else if (contentText.toLowerCase().includes("determinant")) rawMessage = "Determinant detected. If $det(A)=0$, the inverse is undefined. This is a critical failure point in linear systems.";
-                else rawMessage = "Scanning standard structures... Maintain focus on variable isolation. Stability is within normal parameters.";
-            }
+            const subjectId = window.currentSubjectId || "algebra2";
+            const rawMessage = window.getSocraticAdvice ? window.getSocraticAdvice(lessonKey, subjectId) : "Manual override required.";
 
             bubble.style.borderColor = "var(--accent-magenta)";
-            window.typeTerminalMessage(rawMessage);
+            if (window.typeTerminalMessage) window.typeTerminalMessage(rawMessage);
         }, 800);
     };
 
@@ -235,6 +146,10 @@ document.addEventListener('DOMContentLoaded', () => {
             badgeName = "Grand Architect of Infinity";
             icon = "fa-crown";
             style = "border-color: #e5e5e5; box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);";
+        } else if (chapterTitle.toLowerCase().includes("precalc") || chapterTitle.includes("Unit 4: Vectors")) {
+            badgeName = "Grand Precalculator";
+            icon = "fa-project-diagram";
+            style = "border-color: var(--accent-blue); box-shadow: 0 0 30px rgba(0, 210, 255, 0.4);";
         }
 
         if (!badgeName) return;
@@ -253,107 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showDashboard() {
-        const main = document.getElementById('dashboard-view');
-        if (!main) return;
-        main.innerHTML = `
-            <div class="hero">
-                <h1>Your Mathematical <span class="gradient-text">Journey</span> Starts Here.</h1>
-                <p>Welcome to your customized TJHSST preparation hub. Let's master the foundations of advanced mathematics together.</p>
-            </div>
-
-            <div class="stats-row">
-                <div class="stat-card glass">
-                    <i class="fas fa-graduation-cap"></i>
-                    <div class="stat-info"><h3>AP Calculus BC</h3><p>Next Milestone</p></div>
-                </div>
-                <div class="stat-card glass">
-                    <i class="fas fa-award"></i>
-                    <div class="stat-info"><h3>AMC 10/12</h3><p>Competitive Math</p></div>
-                </div>
-                <div class="stat-card glass">
-                    <i class="fas fa-brain"></i>
-                    <div class="stat-info"><h3>Linear Algebra</h3><p>AI Foundation</p></div>
-                </div>
-            </div>
-
-            <div class="search-bar glass" style="margin-bottom: 30px; display:flex; align-items:center; gap:12px; padding:15px 25px; border-radius:15px;">
-                <i class="fas fa-search" style="color:var(--accent-blue);"></i>
-                <input type="text" id="dashboard-search" placeholder="Search topics (e.g. matrices, logs, limits)..." style="background:none; border:none; color:white; width:100%; outline:none; font-size:1rem;">
-            </div>
-
-            <h2 class="section-title">Enrolled Curriculum</h2>
-            <div id="subject-cards-container" class="subject-grid"></div>
-
-            <div class="top-header" style="display:flex; justify-content: space-between; align-items: center; margin-top: 60px; border-top: 1px solid var(--glass-border); padding-top: 30px;">
-                <div class="hero" style="margin-bottom:0;">
-                    <h2 style="font-size:1.2rem; opacity:0.6;">Admin <span class="gradient-text">Settings</span></h2>
-                </div>
-                <div style="display:flex; gap:15px;">
-                    <button class="glass" onclick="window.downloadCurriculum()" style="padding: 10px 20px; border-radius: 12px; color: var(--accent-cyan); cursor: pointer; font-size: 0.85rem; font-weight: 600;">
-                        <i class="fas fa-download"></i> Download Syllabus
-                    </button>
-                    <button class="glass reset-btn" id="master-reset-btn" style="padding: 10px 20px; border-radius: 12px; color: var(--accent-magenta); cursor: pointer; font-size: 0.85rem; font-weight: 600;">
-                        <i class="fas fa-redo"></i> Reset Progress
-                    </button>
-                </div>
-            </div>
-        `;
-
-        document.getElementById('master-reset-btn')?.addEventListener('click', () => {
-            if (confirm("Reset all progress?")) {
-                localStorage.removeItem(PROGRESS_KEY);
-                showDashboard();
-            }
-        });
-
-        window.downloadCurriculum = () => {
-            let text = "SABRINA'S MATH PORTAL - FULL CURRICULUM\nGenerated on: " + new Date().toLocaleDateString() + "\n\n";
-            MATH_DATA.subjects.forEach(sub => {
-                text += `=== ${sub.title} (${sub.code}) ===\n`;
-                text += `${sub.description}\n\n`;
-                sub.units.forEach(unit => {
-                    text += `  [${unit.title}]\n`;
-                    if (unit.intuition) text += `  Intuition: ${unit.intuition}\n`;
-                    if (unit.topics) text += `  Topics: ${unit.topics.join(', ')}\n`;
-                    unit.lectures.forEach(l => {
-                        text += `    - ${l.name} (${l.url.includes('lesson:') ? 'Internal Module' : 'External Link'})\n`;
-                    });
-                    text += "\n";
-                });
-                text += "\n============================================\n\n";
-            });
-
-            const blob = new Blob([text], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Sabrina_Math_Curriculum.txt';
-            document.body.appendChild(a); // Required for Firefox
-            a.click();
-            document.body.removeChild(a);
-        };
-
-        const container = document.getElementById('subject-cards-container');
-        renderSubjectGrid(MATH_DATA.subjects, container);
-
-        // Reset Handler
-        document.getElementById('master-reset-btn').onclick = () => {
-            if (confirm("Reset all progress?")) {
-                localStorage.removeItem(PROGRESS_KEY);
-                showDashboard();
-            }
-        };
-
-        // Search Handler
-        document.getElementById('dashboard-search').oninput = (e) => {
-            const query = e.target.value.toLowerCase();
-            const filtered = MATH_DATA.subjects.filter(s => {
-                return s.title.toLowerCase().includes(query) ||
-                    s.code.toLowerCase().includes(query) ||
-                    s.units.some(u => u.title.toLowerCase().includes(query));
-            });
-            renderSubjectGrid(filtered, container);
-        };
+        if (window.UIEngine) window.UIEngine.showDashboard();
     }
 
     function showSubjects() {
@@ -439,26 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function switchView(viewName) {
-        // Update Sidebar UI
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.classList.toggle('active', item.dataset.view === viewName);
-        });
-
-        // Toggle Sections
-        document.querySelectorAll('.view').forEach(section => {
-            section.classList.toggle('active', section.id === `${viewName}-view`);
-        });
-
-        // Trigger Renderers
-        if (viewName === 'dashboard') showDashboard();
-        if (viewName === 'subjects') showSubjects();
-        if (viewName === 'strategy') showStrategy();
-        if (viewName === 'resources') showResources();
-        if (viewName === 'review') showReviewHub();
-        if (viewName === 'knowledge') showKnowledgeTree();
-
-        // Fix: Scroll the actual content container to top, not the window
-        document.querySelector('.content-area')?.scrollTo(0, 0);
+        if (window.AppRouter) window.AppRouter.switchView(viewName);
     }
 
     // Nav Item Click Handlers
@@ -491,94 +287,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function renderSubjectGrid(subjects, container) {
-        if (!container) return;
-        container.innerHTML = subjects.map((sub, idx) => `
-            <div class="subject-card glass" style="animation-delay: ${idx * 0.1}s" onclick="window.showSubjectDetail('${sub.id}')">
-                <div class="card-icon" style="background: ${sub.color}20; color: ${sub.color}"><i class="${sub.icon}"></i></div>
-                <div class="card-content">
-                    <span class="code">${sub.code}</span>
-                    <h3>${sub.title}</h3>
-                    <p>${sub.description}</p>
-                </div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 10%; background: ${sub.color};"></div></div>
-                <div class="card-footer"><span style="font-size:0.8rem; color:var(--text-secondary)">Explore Syllabus</span><i class="fas fa-arrow-right" style="color:${sub.color}"></i></div>
-            </div>
-        `).join('');
-    }
+    // Note: renderSubjectGrid moved to ui-render.js
 
     window.showDashboard = showDashboard;
+    window.showSubjects = showSubjects;
+    window.showStrategy = showStrategy;
+    window.showResources = showResources;
+    window.showReviewHub = showReviewHub;
+    window.showKnowledgeTree = showKnowledgeTree;
 
-    window.showSubjectDetail = (subjectId) => {
-        const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
-        if (!subject) return;
+    window.getProgress = getProgress;
+    window.saveProgress = saveProgress;
 
-        const main = document.getElementById('dashboard-view');
-        main.innerHTML = `
-            <div class="back-link" style="cursor:pointer; margin-bottom:30px; color:${subject.color}; display:flex; align-items:center; gap:8px;" onclick="window.showDashboard()">
-                <i class="fas fa-arrow-left"></i> Back to Dashboard
-            </div>
-            <div class="hero">
-                <span class="code" style="color:${subject.color}">${subject.code}</span>
-                <h1 style="color:${subject.color}; font-size:3rem;">${subject.title}</h1>
-                <p>${subject.description}</p>
-            </div>
-            <div class="syllabus-grid" style="display:grid; gap:25px; margin-top:40px;">
-                ${subject.units.map((unit, uIdx) => `
-                    <div class="unit-card glass" style="padding:30px; border-radius:20px;">
-                        <h3 style="margin-bottom:15px; border-left:4px solid ${subject.color}; padding-left:15px;">${unit.title}</h3>
-                        ${unit.intuition ? `<p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:15px;">${unit.intuition}</p>` : ''}
-                        <div class="lectures" style="display:grid; gap:10px;">
-                            ${unit.lectures.map(l => {
-            const id = l.url.includes('lesson:') ? l.url.split(':').pop() : null;
-            const prog = id ? getProgress()[id] : null;
-            return `
-                                    <div class="lecture-link glass ${prog ? 'completed' : ''}" style="cursor:pointer; display:flex; justify-content:space-between; padding:15px 20px; border-radius:12px;" onclick="window.showLessonHandler('${l.url}', '${subject.id}')">
-                                        <div style="display:flex; align-items:center; gap:12px;">
-                                            <i class="fas fa-book-open" style="color:${prog ? 'var(--accent-green)' : subject.color}"></i>
-                                            <span>${l.name}</span>
-                                        </div>
-                                        <i class="fas fa-chevron-right" style="opacity:0.3;"></i>
-                                    </div>
-                                `;
-        }).join('')}
-                        </div>
+    // Unified Detail Switcher
+    window.showSubjectDetail = (subjectId, unitIdx = null) => {
+        window.currentSubjectId = subjectId;
+        if (window.AppRouter) window.AppRouter.switchView('dashboard');
+        if (window.UIEngine) window.UIEngine.showSubjectDetail(subjectId);
 
-                        ${unit.examples ? `
-                            <div class="examples-section" style="margin-top:25px;">
-                                <h4 style="color:${subject.color}; margin-bottom:15px;"><i class="fas fa-chalkboard-teacher"></i> Worked Examples</h4>
-                                ${unit.examples.map((ex, exIdx) => `
-                                    <div class="example-card glass" style="padding:20px; border-radius:12px; margin-bottom:15px; border-left:3px solid ${subject.color};">
-                                        <h5 style="margin-bottom:8px; color:white;">${ex.title}</h5>
-                                        <p style="font-size:0.95rem; margin-bottom:12px; font-family:'JetBrains Mono', monospace; background:rgba(0,0,0,0.2); padding:10px; border-radius:8px;">${ex.problem}</p>
-                                        <details style="cursor:pointer;">
-                                            <summary style="font-size:0.85rem; color:${subject.color}; font-weight:600;">View Step-by-Step Solution</summary>
-                                            <div style="margin-top:10px; padding-left:15px; border-left:1px solid rgba(255,255,255,0.1);">
-                                                ${ex.steps.map(step => `<div style="font-size:0.9rem; margin-bottom:6px; color:#cbd5e1;"><i class="fas fa-arrow-right" style="font-size:0.7rem; opacity:0.5;"></i> ${step}</div>`).join('')}
-                                                <div style="margin-top:12px; font-size:0.85rem; color:var(--accent-cyan); font-style:italic;">
-                                                    <strong>Intuition:</strong> ${ex.intuition}
-                                                </div>
-                                            </div>
-                                        </details>
-                                    </div>
-                                `).join('')}
-                            </div>
-                        ` : ''}
-
-                        ${unit.quiz ? `
-                            <div class="quiz-box glass" style="margin-top:15px; padding:20px; border-radius:12px;">
-                                <h4>Concept Check</h4>
-                                <p style="margin-bottom:15px;">${unit.quiz.question}</p>
-                                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-                                    ${unit.quiz.options.map(opt => `<button class="glass" onclick="window.checkQuizAnswer(${uIdx}, '${opt.replace(/'/g, "\\'")}', '${unit.quiz.answer.replace(/'/g, "\\'")}', '${unit.quiz.explanation.replace(/'/g, "\\'")}', '${unit.title.replace(/'/g, "\\'")}', '${unit.quiz.question.replace(/'/g, "\\'")}')">${opt}</button>`).join('')}
-                                </div>
-                                <div id="feedback-${uIdx}" style="margin-top:10px; display:none;"></div>
-                            </div>
-                        ` : ''}
-                    </div>
-                `).join('')}
-            </div>
-        `;
+        // If a unit is specified, we could scroll to it here if needed
+        if (unitIdx !== null) {
+            setTimeout(() => {
+                const unitCards = document.querySelectorAll('.unit-card');
+                if (unitCards[unitIdx]) {
+                    unitCards[unitIdx].scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
+        }
     };
 
     window.showLessonHandler = (url, subjectId) => {
@@ -595,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return new Promise((resolve, reject) => {
             const script = document.createElement('script');
-            script.src = `./data/chapters/${chapterId}.js`;
+            script.src = `data/chapters/${chapterId}.js`;
             script.onload = () => resolve();
             script.onerror = () => reject(new Error(`Failed to load chapter: ${chapterId}`));
             document.head.appendChild(script);
@@ -715,7 +450,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 MathJax.typesetPromise();
             }
 
-            // --- Interactive Engine Triggers ---
+            // --- Elite 3.0: Interactive Graphics Lab (Desmos) ---
+            if (lessonData.vizConfig) {
+                window.initDesmosLab(lessonData.vizConfig);
+            }
+
+            // --- Legacy Triggers (Keep for compatibility) ---
             if (lessonKey === 'ch3-4') setTimeout(renderLPViz, 500);
             if (lessonKey === 'ch4-2') setTimeout(renderMatrixViz, 500);
             if (lessonKey === 'ch4-3') setTimeout(renderMatrixViz, 500);
@@ -1332,30 +1072,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Knowledge Tree Implementation ---
+    let treeState = { scale: 1 };
+
     function showKnowledgeTree() {
         const svg = document.getElementById('knowledge-svg');
         if (!svg) return;
         svg.innerHTML = ''; // Clear
 
-        const nodes = [
-            { id: 'ch1', x: 100, y: 300, label: 'Foundations', color: '#00d2ff' },
-            { id: 'ch2', x: 250, y: 150, label: 'Functions', color: '#9d50bb' },
-            { id: 'ch3', x: 250, y: 450, label: 'Systems', color: '#ff9d00' },
-            { id: 'ch4', x: 400, y: 450, label: 'Matrices', color: '#38ef7d' },
-            { id: 'ch5', x: 400, y: 150, label: 'Quadratics', color: '#f5576c' },
-            { id: 'ch6', x: 550, y: 150, label: 'Polynomials', color: '#f093fb' },
-            { id: 'ch7', x: 700, y: 100, label: 'Radicals', color: '#00d2ff' },
-            { id: 'ch8', x: 700, y: 200, label: 'Logs', color: '#9d50bb' },
-            { id: 'ch13', x: 550, y: 350, label: 'Trig Basics', color: '#ff9d00' },
-            { id: 'ch14', x: 700, y: 350, label: 'Trig Identities', color: '#38ef7d' },
-            { id: 'bc', x: 900, y: 250, label: 'AP Calculus BC', color: '#fff', size: 40 }
-        ];
+        const subjects = MATH_DATA.subjects;
+        const nodes = [];
+        const edges = [];
 
-        const edges = [
-            ['ch1', 'ch2'], ['ch1', 'ch3'], ['ch2', 'ch5'], ['ch3', 'ch4'],
-            ['ch5', 'ch6'], ['ch6', 'ch7'], ['ch6', 'ch8'], ['ch6', 'ch13'],
-            ['ch13', 'ch14'], ['ch7', 'bc'], ['ch8', 'bc'], ['ch14', 'bc']
-        ];
+        // Dynamic Layout Algorithm
+        subjects.forEach((sub, sIdx) => {
+            const subjectNodeId = `sub_${sub.id}`;
+            const sx = 200 + (sIdx * 400); // Increased spacing for clarity
+            const sy = 300;
+
+            nodes.push({ id: subjectNodeId, x: sx, y: sy, label: sub.title, color: sub.color || '#fff', size: 45, type: 'subject', subjectId: sub.id });
+
+            sub.units.forEach((unit, uIdx) => {
+                const unitNodeId = `unit_${sub.id}_${uIdx}`;
+                const ux = sx + (Math.cos(uIdx * 0.8) * 140);
+                const uy = sy + (Math.sin(uIdx * 0.8) * 140);
+
+                nodes.push({
+                    id: unitNodeId,
+                    x: ux, y: uy,
+                    label: unit.title.split(':')[0],
+                    color: sub.color,
+                    size: 22,
+                    type: 'unit',
+                    subjectId: sub.id,
+                    unitIdx: uIdx
+                });
+                edges.push([subjectNodeId, unitNodeId]);
+            });
+
+            // Connect subjects in sequence
+            if (sIdx > 0) {
+                edges.push([`sub_${subjects[sIdx - 1].id}`, subjectNodeId]);
+            }
+        });
+
+        const gContainer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        svg.appendChild(gContainer);
 
         // Draw Edges
         edges.forEach(edge => {
@@ -1364,40 +1125,111 @@ document.addEventListener('DOMContentLoaded', () => {
             const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
             line.setAttribute('x1', start.x); line.setAttribute('y1', start.y);
             line.setAttribute('x2', end.x); line.setAttribute('y2', end.y);
-            line.setAttribute('stroke', 'rgba(255,255,255,0.1)');
+            line.setAttribute('stroke', 'rgba(255,255,255,0.12)');
             line.setAttribute('stroke-width', '2');
-            svg.appendChild(line);
+            gContainer.appendChild(line);
         });
 
         // Draw Nodes
         nodes.forEach(node => {
             const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
             g.style.cursor = 'pointer';
-            g.onclick = () => {
-                if (node.id === 'bc') switchView('subjects');
-                else window.showSubjectDetail('algebra2');
+            g.onclick = (e) => {
+                e.stopPropagation();
+                if (node.unitIdx !== undefined) {
+                    window.showSubjectDetail(node.subjectId, node.unitIdx);
+                } else {
+                    window.showSubjectDetail(node.subjectId);
+                }
             };
 
             const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             circle.setAttribute('cx', node.x); circle.setAttribute('cy', node.y);
             circle.setAttribute('r', node.size || 25);
-            circle.setAttribute('fill', 'rgba(0,0,0,0.8)');
+            circle.setAttribute('fill', 'rgba(0,0,0,0.9)');
             circle.setAttribute('stroke', node.color);
             circle.setAttribute('stroke-width', '3');
-            circle.style.filter = `drop-shadow(0 0 10px ${node.color})`;
+            circle.style.transition = "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)";
+            circle.style.filter = `drop-shadow(0 0 15px ${node.color}66)`;
 
             const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-            text.setAttribute('x', node.x); text.setAttribute('y', node.y + (node.size ? 50 : 45));
+            text.setAttribute('x', node.x); text.setAttribute('y', node.y + (node.size ? node.size + 25 : 50));
             text.setAttribute('text-anchor', 'middle');
             text.setAttribute('fill', '#fff');
             text.style.fontSize = '12px';
             text.style.fontWeight = '600';
+            text.style.pointerEvents = 'none';
+            text.style.opacity = '0.8';
             text.textContent = node.label;
+
+            g.onmouseenter = () => {
+                circle.setAttribute('r', (node.size || 25) * 1.2);
+                circle.setAttribute('stroke-width', '5');
+                circle.style.filter = `drop-shadow(0 0 25px ${node.color})`;
+                text.style.opacity = '1';
+            };
+            g.onmouseleave = () => {
+                circle.setAttribute('r', node.size || 25);
+                circle.setAttribute('stroke-width', '3');
+                circle.style.filter = `drop-shadow(0 0 15px ${node.color}66)`;
+                text.style.opacity = '0.8';
+            };
 
             g.appendChild(circle);
             g.appendChild(text);
-            svg.appendChild(g);
+            gContainer.appendChild(g);
         });
+
+        // --- Interaction Logic ---
+        let isDragging = false;
+        let startPos = { x: 0, y: 0 };
+        let viewPos = { x: 0, y: 0 };
+
+        const updateView = () => {
+            gContainer.setAttribute('transform', `translate(${viewPos.x}, ${viewPos.y}) scale(${treeState.scale})`);
+        };
+
+        svg.onmousedown = (e) => {
+            isDragging = true;
+            startPos = { x: e.clientX - viewPos.x, y: e.clientY - viewPos.y };
+            svg.style.cursor = 'grabbing';
+        };
+
+        window.onmousemove = (e) => {
+            if (!isDragging) return;
+            viewPos.x = e.clientX - startPos.x;
+            viewPos.y = e.clientY - startPos.y;
+            updateView();
+        };
+
+        window.onmouseup = () => {
+            if (!isDragging) return;
+            isDragging = false;
+            if (svg) svg.style.cursor = 'grab';
+        };
+
+        svg.onwheel = (e) => {
+            e.preventDefault();
+            const delta = e.deltaY;
+            const zoomFact = delta > 0 ? 0.9 : 1.1;
+
+            // Zoom toward mouse pointer logic (simplified)
+            treeState.scale *= zoomFact;
+            treeState.scale = Math.max(0.1, Math.min(3, treeState.scale));
+            updateView();
+        };
+
+        // Initial Auto-Centering
+        setTimeout(() => {
+            const bbox = gContainer.getBBox();
+            const svgWidth = svg.clientWidth || 800;
+            const svgHeight = svg.clientHeight || 600;
+
+            viewPos.x = (svgWidth / 2) - (bbox.x + bbox.width / 2) * treeState.scale;
+            viewPos.y = (svgHeight / 2) - (bbox.y + bbox.height / 2) * treeState.scale;
+
+            updateView();
+        }, 50);
     }
 
     window.toggleLessonTool = () => {
@@ -1422,6 +1254,121 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    window.updateStabilityUI(); // Initial draw
+    // --- Elite 3.0: Desmos Interactive Lab ---
+    window.initDesmosLab = (config) => {
+        const panel = document.getElementById('lesson-tool-panel');
+        if (!panel) return;
+
+        // Show panel
+        panel.style.display = 'block';
+        panel.innerHTML = '<div id="desmos-calculator" style="width: 100%; height: 100%;"></div>';
+
+        const elt = document.getElementById('desmos-calculator');
+        const calculator = Desmos.GraphingCalculator(elt, {
+            keypad: false,
+            expressions: true,
+            settingsMenu: false,
+            zoomButtons: true,
+            expressionsTopbar: false,
+            capExpressionSize: true
+        });
+
+        if (config.expressions) {
+            config.expressions.forEach((exp, idx) => {
+                calculator.setExpression({ id: `exp${idx}`, latex: exp });
+            });
+        }
+
+        if (config.bounds) {
+            calculator.setMathBounds(config.bounds);
+        }
+
+        window.typeTerminalMessage("INTERACTIVE LAB ACTIVE: Mathematical visualization engine synchronized.");
+    };
+
+    // --- Elite 3.0: Speed Drill Engine ---
+    let drillTimer = null;
+    let drillScore = 0;
+    let currentDrillAnswer = null;
+
+    window.showDrill = () => {
+        document.getElementById('drill-start-screen').style.display = 'block';
+        document.getElementById('drill-active-screen').style.display = 'none';
+    };
+
+    window.startDrill = () => {
+        drillScore = 0;
+        document.getElementById('drill-score').innerText = '0';
+        window.scrollTo(0, 0);
+        document.getElementById('drill-start-screen').style.display = 'none';
+        document.getElementById('drill-active-screen').style.display = 'block';
+        document.getElementById('drill-input').value = '';
+        document.getElementById('drill-input').focus();
+
+        generateDrillQuestion();
+
+        let timeLeft = 60;
+        document.getElementById('drill-timer').innerText = timeLeft;
+
+        if (drillTimer) clearInterval(drillTimer);
+        drillTimer = setInterval(() => {
+            timeLeft--;
+            document.getElementById('drill-timer').innerText = timeLeft;
+            if (timeLeft <= 0) {
+                endDrill();
+            }
+        }, 1000);
+    };
+
+    const generateDrillQuestion = () => {
+        const types = ['arithmetic', 'matrix', 'log'];
+        const type = types[Math.floor(Math.random() * types.length)];
+        let qText = "";
+
+        if (type === 'arithmetic') {
+            const a = Math.floor(Math.random() * 20) + 5;
+            const b = Math.floor(Math.random() * 15) + 2;
+            const op = Math.random() > 0.5 ? '*' : '+';
+            qText = `${a} ${op} ${b}`;
+            currentDrillAnswer = op === '*' ? a * b : a + b;
+        } else if (type === 'matrix') {
+            const val = Math.floor(Math.random() * 9) + 1;
+            qText = `det([[${val}, 0], [0, ${val}]])`;
+            currentDrillAnswer = val * val;
+        } else {
+            const p = Math.floor(Math.random() * 5) + 1;
+            qText = `log2(${Math.pow(2, p)})`;
+            currentDrillAnswer = p;
+        }
+
+        document.getElementById('drill-question').innerText = qText;
+    };
+
+    document.getElementById('drill-input').addEventListener('input', (e) => {
+        if (e.target.value == currentDrillAnswer) {
+            drillScore += 10;
+            document.getElementById('drill-score').innerText = drillScore;
+            e.target.value = '';
+            generateDrillQuestion();
+
+            // Visual feedback
+            const q = document.getElementById('drill-question');
+            q.style.color = 'var(--accent-cyan)';
+            setTimeout(() => q.style.color = 'white', 100);
+        }
+    });
+
+    const endDrill = () => {
+        clearInterval(drillTimer);
+        document.getElementById('drill-active-screen').style.display = 'none';
+        document.getElementById('drill-start-screen').style.display = 'block';
+
+        const startMsg = document.querySelector('#drill-start-screen h2');
+        startMsg.innerHTML = `Drill Complete: <span class="gradient-text">${drillScore} Points</span>`;
+
+        window.typeTerminalMessage(`DRILL TERMINATED. Final Score: ${drillScore}. ${drillScore > 100 ? "Excellent algorithmic speed detected." : "Precision is high, but throughput needs optimization. Continue recalibrating."}`);
+    };
+
+    if (window.updateStabilityUI) window.updateStabilityUI(); // Initial draw
     showDashboard();
 });

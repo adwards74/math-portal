@@ -38,16 +38,16 @@ window.CHAPTER_DATA["ch13"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. Pure Geometry</h2>
-                <p>Degrees are arbitrary (why 360?). **Radians** are natural; they define an angle by the ratio of arc length to radius ($\theta = s/r$).</p>
+                <p>Degrees are arbitrary (why 360?). **Radians** are natural; they define an angle by the ratio of arc length to radius ($\\theta = s/r$).</p>
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-blue);">
-                    <p><strong>The Limit Insight:</strong> In Calculus, using radians allows for the elegant approximation $\sin x \approx x$ for small angles. Using degrees would require a messy multiplier of $\pi/180$.</p>
+                    <p><strong>The Limit Insight:</strong> In Calculus, using radians allows for the elegant approximation $\\sin x \\approx x$ for small angles. Using degrees would require a messy multiplier of $\\pi/180$.</p>
                 </div>
             </div>
 
             <div class="tj-edge glass" style="margin-top:20px;">
                 <h4><i class="fas fa-code"></i> CS: Performance Optimization</h4>
-                <p>In high-performance gaming engines, computing $\sin(\theta)$ is expensive. Developers often replace the function with a **Polynomial Approximation** (Taylor Series) that only works if $\theta$ is in radians. This optimization is why modern VR can run at 120Hz!</p>
+                <p>In high-performance gaming engines, computing $\\sin(\\theta)$ is expensive. Developers often replace the function with a **Polynomial Approximation** (Taylor Series) that only works if $\\theta$ is in radians. This optimization is why modern VR can run at 120Hz!</p>
             </div>
         `
     },
@@ -76,7 +76,7 @@ window.CHAPTER_DATA["ch13"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The $x$-Coordinate Wave</h2>
-                <p>Cosine tracks the horizontal displacement on the unit circle. It is identical to Sine but "leads" by 90 degrees ($ \\pi/2 $).</p>
+                <p>Cosine tracks the horizontal displacement on the unit circle. It is identical to Sine but "leads" by 90 degrees ($\pi/2$).</p>
                 
                 <div class="proof-box glass">
                     <p>$\\cos(x) = \\sin(x + \\pi/2)$</p>
@@ -87,11 +87,11 @@ window.CHAPTER_DATA["ch13"] = {
     },
     "ch13-6": {
         title: "13.6 Tangent & Asymptotes",
-        subtitle: "The Slope Function",
+        subtitle: "Slope Function",
         content: `
             <div class="lesson-section">
                 <h2>I. Ratio Paradoxes</h2>
-                <p>Tangent represents the slope ($\frac{y}{x}$) of the terminal ray. Every time the ray points straight up or down ($x=0$), the slope explodes to infinity.</p>
+                <p>Tangent represents the slope ($\\frac{y}{x}$) of the terminal ray. Every time the ray points straight up or down ($x=0$), the slope explodes to infinity.</p>
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-orange);">
                     <h4>Asymptotic Pattern</h4>
@@ -132,10 +132,10 @@ window.CHAPTER_DATA["ch13"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Inversion Rule</h2>
-                <p>$\csc(x)$, $\sec(x)$, and $\cot(x)$ are the reciprocals of the primary three. They undefined where the primary functions are zero.</p>
+                <p>$\\csc(x)$, $\\sec(x)$, and $\\cot(x)$ are the reciprocals of the primary three. They undefined where the primary functions are zero.</p>
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-red);">
-                    <p><strong>Cosecant:</strong> $\frac{1}{\sin(x)}$. As Sine approaches 0, Cosecant approaches $\infty$. This inverse relationship is the key to calculating light refraction and lens focal lengths.</p>
+                    <p><strong>Cosecant:</strong> $\\frac{1}{\\sin(x)}$. As Sine approaches 0, Cosecant approaches $\\infty$. This inverse relationship is the key to calculating light refraction and lens focal lengths.</p>
                 </div>
             </div>
         `

@@ -14,21 +14,21 @@ window.CHAPTER_DATA["ch1"] = {
                         <tr><th>Axiom</th><th>Addition</th><th>Multiplication</th></tr>
                         <tr><td>Commutative</td><td>$a+b = b+a$</td><td>$ab = ba$</td></tr>
                         <tr><td>Associative</td><td>$(a+b)+c = a+(b+c)$</td><td>$(ab)c = a(bc)$</td></tr>
-                        <tr><td>Identity</td><td>$a+0=a$</td><td>$a \cdot 1 = a$</td></tr>
-                        <tr><td>Inverse</td><td>$a+(-a)=0$</td><td>$a(1/a)=1$ ($a \neq 0$)</td></tr>
+                        <tr><td>Identity</td><td>$a+0=a$</td><td>$a \\cdot 1 = a$</td></tr>
+                        <tr><td>Inverse</td><td>$a+(-a)=0$</td><td>$a(1/a)=1$ ($a \\neq 0$)</td></tr>
                     </table>
                 </div>
 
                 <div class="proof-box glass" style="border: 1px solid var(--accent-blue); padding: 25px;">
-                    <h4 style="color:var(--accent-blue); margin-bottom:15px;"><i class="fas fa-scroll"></i> Deep Dive: Proving $a \cdot 0 = 0$</h4>
+                    <h4 style="color:var(--accent-blue); margin-bottom:15px;"><i class="fas fa-scroll"></i> Deep Dive: Proving $a \\cdot 0 = 0$</h4>
                     <p>Why is anything times zero always zero? It's not just a 'rule'; it's a consequence of the <strong>Distributive Property</strong>.</p>
                     <ol style="margin-top:10px; line-height:1.8;">
-                        <li>$a \cdot 0 = a(0 + 0)$ <span style="opacity:0.6;">(Additive Identity: $0+0=0$)</span></li>
-                        <li>$a \cdot 0 = a \cdot 0 + a \cdot 0$ <span style="opacity:0.6;">(Distributive Property)</span></li>
-                        <li>$- (a \cdot 0) + a \cdot 0 = - (a \cdot 0) + (a \cdot 0 + a \cdot 0)$ <span style="opacity:0.6;">(Add Inverse to both sides)</span></li>
-                        <li>$0 = (- a \cdot 0 + a \cdot 0) + a \cdot 0$ <span style="opacity:0.6;">(Associative Property)</span></li>
-                        <li>$0 = 0 + a \cdot 0$ <span style="opacity:0.6;">(Inverse Property)</span></li>
-                        <li>$0 = a \cdot 0$ <span style="opacity:0.6;">(Identity Property)</span></li>
+                        <li>$a \\cdot 0 = a(0 + 0)$ <span style="opacity:0.6;">(Additive Identity: $0+0=0$)</span></li>
+                        <li>$a \\cdot 0 = a \\cdot 0 + a \\cdot 0$ <span style="opacity:0.6;">(Distributive Property)</span></li>
+                        <li>$- (a \\cdot 0) + a \\cdot 0 = - (a \\cdot 0) + (a \\cdot 0 + a \\cdot 0)$ <span style="opacity:0.6;">(Add Inverse to both sides)</span></li>
+                        <li>$0 = (- a \\cdot 0 + a \\cdot 0) + a \\cdot 0$ <span style="opacity:0.6;">(Associative Property)</span></li>
+                        <li>$0 = 0 + a \\cdot 0$ <span style="opacity:0.6;">(Inverse Property)</span></li>
+                        <li>$0 = a \\cdot 0$ <span style="opacity:0.6;">(Identity Property)</span></li>
                     </ol>
                     <p style="margin-top:10px; font-weight:bold; color:var(--accent-green);">Q.E.D. — The logic is ironclad.</p>
                 </div>
@@ -52,20 +52,20 @@ window.CHAPTER_DATA["ch1"] = {
                     <h4 style="color:var(--accent-cyan);"><i class="fas fa-layer-group"></i> The Venn Diagram of Reality</h4>
                     <p>Imagine a series of nesting boxes:</p>
                     <ul class="glass-list" style="text-align:left;">
-                        <li><strong>Natural ($\\\\mathbb{N}$):</strong> Counting numbers {1, 2, 3...}.</li>
-                        <li><strong>Whole ($\\\\mathbb{W}$):</strong> Naturals + {0}.</li>
-                        <li><strong>Integers ($\\\\mathbb{Z}$):</strong> Wholes + Negatives.</li>
-                        <li><strong>Rational ($\\\\mathbb{Q}$):</strong> Anything that can be a fraction (Repeating/Terminating decimals).</li>
-                        <li><strong>Irrational ($\\\\mathbb{I}$):</strong> Infinite, non-repeating (like $\\\\pi$ or $\\\\sqrt{2}$).</li>
-                        <li><strong>Real ($\\\\mathbb{R}$):</strong> All of them combined.</li>
+                        <li><strong>Natural ($\mathbb{N}$):</strong> Counting numbers {1, 2, 3...}.</li>
+                        <li><strong>Whole ($\mathbb{W}$):</strong> Naturals + {0}.</li>
+                        <li><strong>Integers ($\mathbb{Z}$):</strong> Wholes + Negatives.</li>
+                        <li><strong>Rational ($\mathbb{Q}$):</strong> Anything that can be a fraction (Repeating/Terminating decimals).</li>
+                        <li><strong>Irrational ($\mathbb{I}$):</strong> Infinite, non-repeating (like $\\pi$ or $\\sqrt{2}$).</li>
+                        <li><strong>Real ($\mathbb{R}$):</strong> All of them combined.</li>
                     </ul>
                 </div>
 
                 <table class="glass-table" style="width:100%; margin-top:20px;">
                     <tr><th>Math Set</th><th>Definition</th><th>CS Data Type</th></tr>
-                    <tr><td>$\\\\mathbb{Z}$ (Integers)</td><td>Whole numbers and opposites</td><td><code>int</code> / <code>Long</code></td></tr>
-                    <tr><td>$\\\\mathbb{Q}$ (Rationals)</td><td>Quotient of two integers</td><td><code>BigDecimal</code></td></tr>
-                    <tr><td>$\\\\mathbb{R}$ (Reals)</td><td>The complete number line</td><td><code>double</code> / <code>Float</code></td></tr>
+                    <tr><td>$\mathbb{Z}$ (Integers)</td><td>Whole numbers and opposites</td><td><code>int</code> / <code>Long</code></td></tr>
+                    <tr><td>$\mathbb{Q}$ (Rationals)</td><td>Quotient of two integers</td><td><code>BigDecimal</code></td></tr>
+                    <tr><td>$\mathbb{R}$ (Reals)</td><td>The complete number line</td><td><code>double</code> / <code>Float</code></td></tr>
                 </table>
             </div>
 
@@ -74,7 +74,7 @@ window.CHAPTER_DATA["ch1"] = {
                 <p>The set of Real numbers is <strong>dense</strong>. Between any two rational numbers, there is another rational number. In fact, between any two reals, there are <em>infinitely many</em> more.</p>
                 <div class="paradigm-shift" style="border-left-color:var(--accent-green);">
                     <h4>Key Intuition</h4>
-                    <p>Floating-point errors in programming (like 0.1 + 0.2 != 0.3) happen becausecomputers try to represent a 'dense' infinite system ($\\\\mathbb{R}$) using a 'discrete' finite system (Binary Bits). Algebra is where we learn to handle the pure, infinite versions.</p>
+                    <p>Floating-point errors in programming (like 0.1 + 0.2 != 0.3) happen because computers try to represent a 'dense' infinite system ($\mathbb{R}$) using a 'discrete' finite system (Binary Bits). Algebra is where we learn to handle the pure, infinite versions.</p>
                 </div>
             </div>
         `
@@ -98,120 +98,125 @@ window.CHAPTER_DATA["ch1"] = {
                 </div>
             </div>
 
-            <div class="proof-box glass">
-                <h4 style="color:var(--accent-cyan);">The Optimization Workflow</h4>
-                <ol style="line-height:1.8;">
-                    <li><strong>Simplify:</strong> Use the Distributive Property to clear parentheses.</li>
-                    <li><strong>Collect:</strong> Combine like terms on each side.</li>
-                    <li><strong>Isolate:</strong> Move all variable terms to one side and constants to the other.</li>
-                    <li><strong>Solve:</strong> Perform the final inverse operation to find $x$.</li>
-                </ol>
-            </div>
-
-            <div class="tj-edge glass">
-                <h4><i class="fas fa-bug"></i> Debugging Tip: The Checksum</h4>
-                <p>Always perform a 'unit test' on your solution. Substitute your value back into the original equation. If both sides match, your logic is verified. If not, re-trace your steps for a sign error—the most common bug in math!</p>
+            <div class="intuition-box glass" style="margin-top:20px;">
+                <h3><i class="fas fa-brain"></i> Socratic Tension</h3>
+                <p>If $2x = 10$, you divide by 2. But why do we only divide? Because division is the <strong>inverse</strong> of the multiplication that is 'locking' your $x$.</p>
             </div>
         `
     },
     "ch1-4": {
         title: "1.4 Literal Equations & Formulas",
-        subtitle: "Abstract Variable Manipulation",
+        subtitle: "The Interface of Algebra",
         content: `
             <div class="lesson-section">
-                <h2>I. Symbolic Logic</h2>
-                <p>In advanced science and engineering, we rarely deal with pure numbers. We solve for <strong>Literal Equations</strong>—formulas where most terms are variables (letters).</p>
+                <h2>I. The Art of Rewriting</h2>
+                <p>In many real-world scenarios, we don't just solve for a number; we solve for a <strong>variable</strong>. A literal equation is an equation that consists mainly of letters.</p>
                 
-                <div class="paradigm-shift" style="border-left-color:var(--accent-purple);">
-                    <h4>Why it matters?</h4>
-                    <p>In computer graphics (like rendering a shadow), a single formula might be reused millions of times. By 'pre-solving' the formula for our target variable ($x$, $y$, or $z$), we drastically reduce the computational load. We are effectively refactoring the math for performance.</p>
+                <div class="glass-card elite-border">
+                    <h4>Isolating the Target Interface</h4>
+                    <p>Think of a formula like $V = lwh$ (Volume of a prism). If you know $V, l,$ and $w$, and you need $h$, you rewrite the formula by isolating $h$.</p>
+                    <div class="formula-box glass" style="margin-top:15px; text-align:center; font-size:1.2rem;">
+                        $h = \\frac{V}{lw}$
+                    </div>
                 </div>
 
-                <div class="example-box" style="background:rgba(255,157,0,0.05); border-color:var(--accent-orange);">
-                    <h4 style="color:var(--accent-orange);"><i class="fas fa-flask"></i> Physics Case Study: Ideal Gas Law</h4>
-                    <p>Original: $PV = nRT$ (Pressure, Volume, Amount, Constant, Temp)</p>
-                    <p>If we need to calculate Pressure ($P$) based on varying Volume ($V$), we transform it to:</p>
-                    <p style="text-align:center; font-size:1.5rem; margin:15px 0;">$P = \\\\frac{nRT}{V}$</p>
-                    <p>Now, we have a clear <strong>input/output function</strong> for $P$.</p>
+                <div class="proof-box glass" style="margin-top:20px;">
+                    <h4 style="color:var(--accent-orange);">Example: Surface Area to Height</h4>
+                    <p>Solve $S = 2\\pi r^2 + 2\\pi rh$ for $h$:</p>
+                    <ol style="line-height:2; margin-top:10px;">
+                        <li>Subtract $2\\pi r^2$: $S - 2\\pi r^2 = 2\\pi rh$</li>
+                        <li>Divide by $2\\pi r$: $\\frac{S - 2\\pi r^2}{2\\pi r} = h$</li>
+                        <li>Final Interface: $h = \\frac{S}{2\\pi r} - r$</li>
+                    </ol>
                 </div>
+            </div>
+
+            <div class="tj-edge glass" style="border-left-color: var(--accent-cyan);">
+                <h4><i class="fas fa-terminal"></i> CS Analogy: Refactoring</h4>
+                <p>Rewriting a formula is exactly like <strong>Refactoring Code</strong>. You aren't changing the relationship between variables (the logic); you are just changing which variable is the primary "Return Value" (the isolated variable).</p>
             </div>
         `
     },
     "ch1-5": {
         title: "1.5/1.6 Word Problems & Models",
-        subtitle: "Translating Real World to Code",
+        subtitle: "Translating Reality into Code",
         content: `
             <div class="lesson-section">
-                <h2>I. Modeling Reality</h2>
-                <p>Word problems are just "Client Requirements" that need to be translated into code (equations). </p>
-                <ul class="glass-list">
-                    <li>"Sum of" $\\\\rightarrow +$</li>
-                    <li>"Product of" $\\\\rightarrow \\\\times$</li>
-                    <li>"Is" $\\\\rightarrow =$ (Assignment)</li>
-                </ul>
+                <h2>I. The Syntax of Translation</h2>
+                <p>Most students fear word problems, but they are simply "Requirements Engineering". You take a messy, human-language description and translate it into a clean algebraic model.</p>
+                
+                <div class="paradigm-shift" style="border-left-color:var(--accent-green);">
+                    <h4>The Dictionary of Algebra</h4>
+                    <ul class="glass-list">
+                        <li><strong>"Sum", "More than", "Increased by":</strong> Addition ($+$)</li>
+                        <li><strong>"Difference", "Less than", "Decreased by":</strong> Subtraction ($-$)</li>
+                        <li><strong>"Product", "Of", "Twice":</strong> Multiplication ($\\cdot$)</li>
+                        <li><strong>"Quotient", "Ratio", "Per":</strong> Division ($/$)</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card" style="margin-top:20px;">
+                    <h4>Case Study: Mixture Modeling</h4>
+                    <p>How many liters of 20% solution ($x$) must be added to 30 liters of 50% solution to get a 30% mixture?</p>
+                    <p style="margin-top:10px; font-family:monospace; background:rgba(0,0,0,0.3); padding:10px;">
+                        0.20x + 0.50(30) = 0.30(x + 30)
+                    </p>
+                    <p style="margin-top:5px; opacity:0.8; font-size:0.9rem;">Solving this "Balance of Concentrations" allows us to predict the final chemical state exactly.</p>
+                </div>
             </div>
         `
     },
     "ch1-7": {
         title: "1.7 Absolute Value Equations",
-        subtitle: "Dealing with Distance and Magnitude",
+        subtitle: "The Geometry of Distance",
         content: `
             <div class="lesson-section">
-                <h2>I. The Geometric Interpretation</h2>
-                <p>The <strong>Absolute Value</strong> of a number $|x|$ is its distance from zero on the number line. Distance is never negative, which is why $|x| \\\\ge 0$ always.</p>
+                <h2>I. Distance from Zero</h2>
+                <p>The absolute value of a number $|x|$ is its distance from zero on the number line. Because distance is always non-negative, the output of an absolute value is always $\\ge 0$.</p>
                 
-                <div class="glass-card" style="border-left: 4px solid var(--accent-orange); padding:20px;">
-                    <h4 style="color:var(--accent-orange);"><i class="fas fa-arrows-alt-h"></i> Distance Logic</h4>
-                    <p>When solving $|ax + b| = c$:</p>
+                <div class="glass-card elite-border">
+                    <h4>Solving $|ax + b| = c$</h4>
+                    <p>To solve an absolute value equation, you must consider two cases: the case where the expression is positive and the case where it is negative.</p>
+                    <div class="formula-box glass" style="margin-top:10px;">
+                        If $|u| = a$, then $u = a$ OR $u = -a$.
+                    </div>
+                </div>
+
+                <div class="proof-box glass" style="margin-top:20px;">
+                    <h4 style="color:var(--accent-blue);">Example: $|2x - 3| = 7$</h4>
+                    <p>Split into two logical branches:</p>
                     <ul class="glass-list">
-                        <li><strong>Scenario 1:</strong> $ax + b = c$ (Distance in positive direction)</li>
-                        <li><strong>Scenario 2:</strong> $ax + b = -c$ (Distance in negative direction)</li>
+                        <li><strong>Case 1:</strong> $2x - 3 = 7 \\rightarrow 2x = 10 \\rightarrow x = 5$</li>
+                        <li><strong>Case 2:</strong> $2x - 3 = -7 \\rightarrow 2x = -4 \\rightarrow x = -2$</li>
                     </ul>
-                    <p style="margin-top:10px;"><strong>Constraint:</strong> If $c < 0$, the equation has <u>No Solution</u>. You cannot have a negative distance.</p>
+                    <p style="margin-top:10px; opacity:0.8;">Solution Set: $\\{5, -2\\}$</p>
                 </div>
             </div>
 
-            <div class="lesson-section">
-                <h2>II. Extraneous Solutions</h2>
-                <p>When an equation has variables on both sides, like $|x - 1| = 2x$, you must <strong>Verify</strong> your answers. Some solutions might satisfy the algebraic cases but fail the geometric definition (making the distance negative).</p>
+            <div class="tj-edge glass" style="border-left-color: var(--accent-magenta);">
+                <h4><i class="fas fa-microchip"></i> Error Handling: The $|x| = -1$ Paradox</h4>
+                <p>If you see an equation like $|x + 5| = -2$, do not calculate. Distance cannot be negative. This is a <strong>Null State</strong> (No Solution). Always check the RHS before starting your algorithm.</p>
             </div>
         `
     },
     "ch1-rev": {
-        title: "1.8 Chapter 1 Review Challenge",
-        subtitle: "Unit Test Your Knowledge",
+        title: "Chapter 1 Review Challenge",
+        subtitle: "The Algebra Architect",
         content: `
             <div class="lesson-section">
-                <h2>I. The Big Picture</h2>
-                <p>Chapter 1 wasn't just about arithmetic; it was about the <strong>Logical Guardrails</strong> of Algebra. Before moving to Functions, ensure you can:</p>
+                <h2>I. Synthesis: The Code of Math</h2>
+                <p>You have mastered the basic syntax of the universe. In the next chapter, we move into linear dynamics—how variables change together.</p>
                 
                 <div class="summary-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px;">
                     <div class="glass-card" style="padding:15px;">
-                        <h5 style="color:var(--accent-blue);">Structural Integrity</h5>
-                        <p style="font-size:0.85rem; opacity:0.8;">Recognize and apply Axioms to justify algebraic steps.</p>
+                        <h5 style="color:var(--accent-blue);">The Axioms</h5>
+                        <p style="font-size:0.85rem; opacity:0.8;">The legal system for numbers.</p>
                     </div>
                     <div class="glass-card" style="padding:15px;">
-                        <h5 style="color:var(--accent-cyan);">Isolation Skill</h5>
-                        <p style="font-size:0.85rem; opacity:0.8;">Solve multi-step linear and literal equations with precision.</p>
-                    </div>
-                    <div class="glass-card" style="padding:15px;">
-                        <h5 style="color:var(--accent-orange);">Absolute Clarity</h5>
-                        <p style="font-size:0.85rem; opacity:0.8;">Handle distance-based equations and check for extraneous roots.</p>
-                    </div>
-                    <div class="glass-card" style="padding:15px;">
-                        <h5 style="color:var(--accent-green);">Modeling Mastery</h5>
-                        <p style="font-size:0.85rem; opacity:0.8;">Translate complex word problems into solvable models.</p>
+                        <h5 style="color:var(--accent-magenta);">Isolation</h5>
+                        <p style="font-size:0.85rem; opacity:0.8;">The strategy of variable separation.</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="metacognition glass" style="margin-top:25px; border-left-color:var(--accent-cyan);">
-                <h4><i class="fas fa-brain"></i> Metacognition: Review Questions</h4>
-                <ol style="font-size:0.9rem; line-height:1.6; margin-top:10px;">
-                    <li>Can I explain <em>why</em> the distributive property is used to clear fractions?</li>
-                    <li>Do I see the difference between a Rational and an Irrational number in terms of decimal behavior?</li>
-                    <li>If I encounter a negative distance in an absolute value problem, what is my immediate conclusion?</li>
-                </ol>
             </div>
         `
     }
