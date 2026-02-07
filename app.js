@@ -468,8 +468,28 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const view = item.dataset.view;
             if (view) switchView(view);
+
+            // Auto-close sidebar on mobile
+            document.querySelector('.sidebar')?.classList.remove('open');
         });
     });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    if (menuToggle && sidebar) {
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+            }
+        });
+    }
 
     function renderSubjectGrid(subjects, container) {
         if (!container) return;
