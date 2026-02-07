@@ -44,7 +44,7 @@ window.CHAPTER_DATA["final"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The 2024 Synthesis Challenge</h2>
-                <p><strong>Part A (No Calculator):</strong> Solve for the intersection of $y = \log_2(x)$ and $y = 3 - x$.</p>
+                <p><strong>Part A (No Calculator):</strong> Solve for the intersection of $y = \\log_2(x)$ and $y = 3 - x$.</p>
                 <div class="example-box glass">
                     <p><strong>Step-by-Step Logic:</strong> Test integer values. If $x=2$, $\log_2(2)=1$ and $3-2=1$. Intersection found at $(2, 1)$.</p>
                 </div>
