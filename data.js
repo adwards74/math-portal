@@ -10,7 +10,9 @@ const MATH_DATA = {
             intuition: "Algebra 2 is the foundation for ALL future STEM courses. It's where the 'Rules of the Universe' are written in variables.",
             local_resources: [
                 { name: "TJ3 Algebra 2 Syllabus", path: "curriculum/algebra2/syllabus.pdf" },
-                { name: "Chapter 1-5 Formula Sheet", path: "curriculum/algebra2/formulas.pdf" }
+                { name: "Chapter 1-5 Formula Sheet", path: "curriculum/algebra2/formulas.pdf" },
+                { name: "Exam: Functions Introduction", path: "curriculum/algebra2/Alg2 - Functions Introduction.pdf" },
+                { name: "Exam: Functions Composition", path: "curriculum/algebra2/Algbera Two - Functions Composition.pdf" }
             ],
             units: [
                 {
@@ -78,7 +80,9 @@ const MATH_DATA = {
                         { name: "2.5B: Piecewise Modeling", url: "lesson:algebra2:ch2-pc" },
                         { name: "2.6/2.7: Family of Functions & Shifts", url: "lesson:algebra2:ch2-6" },
                         { name: "2.8: Intro to Inverse Functions", url: "lesson:algebra2:ch2-inv" },
-                        { name: "2.9: Chapter 2 Review Challenge", url: "lesson:algebra2:ch2-rev" }
+                        { name: "2.9: Chapter 2 Review Challenge", url: "lesson:algebra2:ch2-rev" },
+                        { name: "📝 Exam Prep: Functions Intro", url: "curriculum/algebra2/Alg2 - Functions Introduction.pdf", type: "pdf" },
+                        { name: "📝 Exam Prep: Composition Mastery", url: "curriculum/algebra2/Algbera Two - Functions Composition.pdf", type: "pdf" }
                     ],
                     examples: [
                         {
