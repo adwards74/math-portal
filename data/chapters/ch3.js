@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["ch3"] = {
     "ch3-1": {
         title: "3.1 & 3.2 Solving Systems",
@@ -141,3 +141,5 @@ window.CHAPTER_DATA["ch3"] = {
         `
     }
 };
+
+

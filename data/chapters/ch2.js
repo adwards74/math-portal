@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["ch2"] = {
     "ch2-1": {
         title: "2.1 Relations & Functions",
@@ -124,7 +124,7 @@ window.CHAPTER_DATA["ch2"] = {
                 
                 <div class="glass-card" style="border-left: 4px solid var(--accent-magenta);">
                     <p><strong>Example: Step Functions</strong></p>
-                    <p>Often used in shipping costs where the price jumps at specific weight thresholds. There is no 'smooth transition'—the output is discrete.</p>
+                    <p>Often used in shipping costs where the price jumps at specific weight thresholds. There is no 'smooth transition'?봳he output is discrete.</p>
                 </div>
             </div>
         `
@@ -139,7 +139,7 @@ window.CHAPTER_DATA["ch2"] = {
                 
                 <table class="glass-table" style="width:100%; margin-top:15px;">
                     <tr><th>Constant</th><th>Operation</th><th>Effect</th></tr>
-                    <tr><td>$a$</td><td>$a \cdot f(x)$</td><td>Vertical Stretch/Compression</td></tr>
+                    <tr><td>$a$</td><td>$a \\cdot f(x)$</td><td>Vertical Stretch/Compression</td></tr>
                     <tr><td>$h$</td><td>$f(x - h)$</td><td>Horizontal Shift (Opposite Direction)</td></tr>
                     <tr><td>$k$</td><td>$f(x) + k$</td><td>Vertical Shift</td></tr>
                 </table>
@@ -209,3 +209,5 @@ window.CHAPTER_DATA["ch2"] = {
         `
     }
 };
+
+

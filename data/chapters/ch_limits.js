@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["ch_limits"] = {
     "ch_limits-1": {
         title: "Calc Intro: The Paradox of Zeno",
@@ -54,3 +54,5 @@ window.CHAPTER_DATA["ch_limits"] = {
         `
     }
 };
+
+

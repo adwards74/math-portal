@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["ch12"] = {
     "ch12-1": {
         title: "12.1 The Logic of Chance",
@@ -23,7 +23,7 @@ window.CHAPTER_DATA["ch12"] = {
 
             <div class="tj-edge glass" style="margin-top:20px;">
                 <h4><i class="fas fa-key"></i> CS: Password Entropy</h4>
-                <p>The security of an encryption key is measured in **Bits of Entropy**. If a password has $n$ possible characters and a length of $k$, it has $n^k$ permutations. Every extra character exponentially scales the difficulty of a brute-force attack—this is combinatorial security.</p>
+                <p>The security of an encryption key is measured in **Bits of Entropy**. If a password has $n$ possible characters and a length of $k$, it has $n^k$ permutations. Every extra character exponentially scales the difficulty of a brute-force attack?봳his is combinatorial security.</p>
             </div>
         `
     },
@@ -63,7 +63,7 @@ window.CHAPTER_DATA["ch12"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Gaussian Distribution</h2>
-                <p>In a **Normal Distribution**, data clusters symmetrically around the mean ($\mu$). The spread is controlled by the **Standard Deviation ($\sigma$)**.</p>
+                <p>In a **Normal Distribution**, data clusters symmetrically around the mean ($\\mu$). The spread is controlled by the **Standard Deviation ($\\sigma$)**.</p>
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-blue);">
                     <h4>The Empirical Rule (68-95-99.7)</h4>
@@ -140,3 +140,5 @@ window.CHAPTER_DATA["ch12"] = {
         `
     }
 };
+
+

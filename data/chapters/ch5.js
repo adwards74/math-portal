@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["ch5"] = {
     "ch5-1": {
         title: "5.1 & 5.2 Parabolas & Vertex Form",
@@ -43,8 +43,8 @@ window.CHAPTER_DATA["ch5"] = {
                 </div>
 
                 <div class="glass-card" style="border-left: 4px solid var(--accent-green); padding:20px;">
-                    <p><strong>Sum of Roots:</strong> $r_1 + r_2 = -\frac{b}{a}$</p>
-                    <p><strong>Product of Roots:</strong> $r_1 \cdot r_2 = \frac{c}{a}$</p>
+                    <p><strong>Sum of Roots:</strong> $r_1 + r_2 = -\\frac{b}{a}$</p>
+                    <p><strong>Product of Roots:</strong> $r_1 \\cdot r_2 = \\frac{c}{a}$</p>
                 </div>
 
                 <div class="paradigm-shift" style="margin-top:20px;">
@@ -183,3 +183,5 @@ window.CHAPTER_DATA["ch5"] = {
         `
     }
 };
+
+

@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["ch_amc"] = {
     "ch_amc-1": {
         title: "AMC: Prime Factorization Secrets",
@@ -82,3 +82,5 @@ window.CHAPTER_DATA["ch_amc"] = {
         `
     }
 };
+
+

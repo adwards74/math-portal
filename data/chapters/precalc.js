@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["precalc"] = {
     // ==========================================================
     // UNIT 1: POLYNOMIAL & RATIONAL DYNAMICS
@@ -37,7 +37,7 @@ window.CHAPTER_DATA["precalc"] = {
                     <div style="width: 20px; height: 90%; background: var(--accent-magenta); border-radius: 4px 4px 0 0;"></div>
                     <div style="width: 20px; height: 95%; background: var(--accent-magenta); border-radius: 4px 4px 0 0; opacity: 0.8;"></div>
                 </div>
-                <p style="font-size: 0.9rem; margin-top: 10px;">Notice: The "jumps" are getting smaller ($30\% \to 20\% \to 10\% \to 5\%$). <br>The growth is <strong>Slowing Down</strong> = Concave Down.</p>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Notice: The "jumps" are getting smaller ($30\\% \\to 20\\% \\to 10\\% \\to 5\\%$). <br>The growth is <strong>Slowing Down</strong> = Concave Down.</p>
             </div>
 
             <div class="example-card glass" style="margin-top:20px;">
@@ -70,7 +70,7 @@ window.CHAPTER_DATA["precalc"] = {
                     <div style="font-size:1.5rem;"><i class="fas fa-arrow-right"></i></div>
                     <div style="text-align:center;">
                         <span style="font-size:0.8rem; color:var(--accent-cyan);">At $x=100$</span><br>
-                        <div style="font-weight:bold;">$300M - 5M + 1K \approx 300M$</div>
+                        <div style="font-weight:bold;">$300M - 5M + 1K \\approx 300M$</div>
                         <small style="color:var(--accent-green);">(Quartic dominates!)</small>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ window.CHAPTER_DATA["precalc"] = {
             <h3>1. End Behavior Mastery</h3>
             <p>To identify end behavior, only look at the leading term $ax^n$:</p>
             <ul>
-                <li><strong>Even Degree ($n$), Positive $a$:</strong> $\lim_{x \to \pm\infty} f(x) = \infty$ (Touchdown arms)</li>
+                <li><strong>Even Degree ($n$), Positive $a$:</strong> $\\lim_{x \\to \\pm\\infty} f(x) = \\infty$ (Touchdown arms)</li>
                 <li><strong>Odd Degree ($n$), Positive $a$:</strong> Same as $y=x$ (Dancing style)</li>
             </ul>
         `
@@ -91,8 +91,8 @@ window.CHAPTER_DATA["precalc"] = {
                 <h4 style="color:var(--accent-magenta);"><i class="fas fa-microscope"></i> The 2-Step Analysis Protocol</h4>
                 <ol>
                     <li>Factor both $N(x)$ and $D(x)$.</li>
-                    <li><strong>Match Found?</strong> $\to$ <strong>Hole</strong> (Removable).</li>
-                    <li><strong>Mismatch in Denominator?</strong> $\to$ <strong>Vertical Asymptote</strong> (Pole).</li>
+                    <li><strong>Match Found?</strong> $\\to$ <strong>Hole</strong> (Removable).</li>
+                    <li><strong>Mismatch in Denominator?</strong> $\\to$ <strong>Vertical Asymptote</strong> (Pole).</li>
                 </ol>
             </div>
 
@@ -104,7 +104,7 @@ window.CHAPTER_DATA["precalc"] = {
                 </div>
                 <div class="glass" style="padding:15px; border-top:3px solid var(--accent-red);">
                     <h4 style="color:var(--accent-red);">The "VA" Logic</h4>
-                    <p>If $(x-c)$ remains in $D(x)$, the values explode. <strong>Limit is $\pm\infty$</strong>.</p>
+                    <p>If $(x-c)$ remains in $D(x)$, the values explode. <strong>Limit is $\\pm\\infty$</strong>.</p>
                 </div>
             </div>
             
@@ -122,8 +122,8 @@ window.CHAPTER_DATA["precalc"] = {
                 <p>For a function to be continuous at $x=c$, you must satisfy ALL THREE:</p>
                 <div class="logic-box" style="margin:10px 0; background:rgba(0,0,0,0.2); border-radius:10px; padding:15px;">
                     1. $f(c)$ is defined.<br>
-                    2. $\lim_{x \\to c} f(x)$ exists ($L = R$).<br>
-                    3. $\lim_{x \\to c} f(x) = f(c)$.
+                    2. $\\lim_{x \\to c} f(x)$ exists ($L = R$).<br>
+                    3. $\\lim_{x \\to c} f(x) = f(c)$.
                 </div>
             </div>
 
@@ -131,7 +131,7 @@ window.CHAPTER_DATA["precalc"] = {
                 <h4 style="color:var(--accent-magenta);"><i class="fas fa-fingerprint"></i> FRQ Justification Protocol</h4>
                 <p>Standard response for proving continuity:</p>
                 <div style="background:rgba(0,0,0,0.4); padding:10px; border-radius:5px; font-style:italic;">
-                    "The function $f(x)$ is continuous at $x=c$ because $f(c)$ is defined as [value], $\lim_{x \\to c^-} f(x) = \lim_{x \\to c^+} f(x) = [value]$, and the limit equals the function value."
+                    "The function $f(x)$ is continuous at $x=c$ because $f(c)$ is defined as [value], $\\lim_{x \\to c^-} f(x) = \\lim_{x \\to c^+} f(x) = [value]$, and the limit equals the function value."
                 </div>
             </div>
 
@@ -184,8 +184,8 @@ window.CHAPTER_DATA["precalc"] = {
                     <div style="width:10px; height:20px; background:var(--accent-cyan);"></div>
                     <div style="width:10px; height:50px; background:var(--accent-magenta);"></div>
                 </div>
-                <p style="font-size:0.8rem; margin-top:10px;">Linear Scale: $1 \to 10 \to 100$ (Impossible to graph together)<br>
-                <strong>Log Scale: $0 \to 1 \to 2$ (Perfect for data analysis)</strong></p>
+                <p style="font-size:0.8rem; margin-top:10px;">Linear Scale: $1 \\to 10 \\to 100$ (Impossible to graph together)<br>
+                <strong>Log Scale: $0 \\to 1 \\to 2$ (Perfect for data analysis)</strong></p>
             </div>
 
             <h3>1. The Master Property</h3>
@@ -272,7 +272,7 @@ window.CHAPTER_DATA["precalc"] = {
         content: `
             <div class="intuition-box glass">
                 <h3><i class="fas fa-redo"></i> Radian Logic</h3>
-                <p>A radian is the angle where the arc length equals the radius. It is a "pure" number, unlike degrees. This is why we use it in Calculus—to keep our units "natural."</p>
+                <p>A radian is the angle where the arc length equals the radius. It is a "pure" number, unlike degrees. This is why we use it in Calculus?봳o keep our units "natural."</p>
             </div>
 
             <div class="visual-dynamics glass" style="margin:20px 0; padding:20px; text-align:center; background:radial-gradient(circle, rgba(0,210,255,0.1), rgba(0,0,0,0.5));">
@@ -282,16 +282,16 @@ window.CHAPTER_DATA["precalc"] = {
                     <div style="position:absolute; width:100%; height:1px; background:rgba(255,255,255,0.2); top:50%;"></div>
                     <div style="position:absolute; width:1px; height:100%; background:rgba(255,255,255,0.2); left:50%;"></div>
                 </div>
-                <p style="font-size:0.8rem;">Angle $\theta \implies$ Point $(\cos\theta, \sin\theta)$</p>
+                <p style="font-size:0.8rem;">Angle $\\theta \implies$ Point $(\\cos\\theta, \\sin\\theta)$</p>
             </div>
 
             <div class="mastery-box glass" style="border-left:4px solid var(--accent-cyan); padding:15px;">
                 <h4 style="color:var(--accent-cyan);"><i class="fas fa-wave-square"></i> Periodic Modeling Protocol</h4>
-                <p>Standard Equation: $f(t) = a\sin(b(t-h)) + d$</p>
+                <p>Standard Equation: $f(t) = a\\sin(b(t-h)) + d$</p>
                 <ul>
                     <li>$|a|$: Amplitude (half the range).</li>
                     <li>$d$: Midline (average value).</li>
-                    <li>$period$: $2\pi/|b|$.</li>
+                    <li>$period$: $2\\pi/|b|$.</li>
                 </ul>
             </div>
         `
@@ -303,15 +303,15 @@ window.CHAPTER_DATA["precalc"] = {
                 <h3><i class="fas fa-lock"></i> The Domain Prison</h3>
                 <p>To make trig functions invertible, we must restrict them to a <strong>Principal Branch</strong> where they are One-to-One.</p>
                 <ul style="font-size:0.9rem;">
-                    <li>$\arcsin(x)$: $[-\pi/2, \pi/2]$ (Quadrants I & IV)</li>
-                    <li>$\arccos(x)$: $[0, \pi]$ (Quadrants I & II)</li>
-                    <li>$\arctan(x)$: $(-\pi/2, \pi/2)$ (Quadrants I & IV)</li>
+                    <li>$\\arcsin(x)$: $[-\\pi/2, \\pi/2]$ (Quadrants I & IV)</li>
+                    <li>$\\arccos(x)$: $[0, \\pi]$ (Quadrants I & II)</li>
+                    <li>$\\arctan(x)$: $(-\\pi/2, \\pi/2)$ (Quadrants I & IV)</li>
                 </ul>
             </div>
 
             <div class="tj-edge glass" style="margin-top:20px;">
                 <h4><i class="fas fa-exclamation-triangle"></i> AP Mastery Trap</h4>
-                <p>The equation $\sin(x) = 0.5$ has INFINITE solutions. However, $\arcsin(0.5)$ has only ONE: $\pi/6$. <strong>Never provide multiple answers for an inverse trig function.</strong></p>
+                <p>The equation $\\sin(x) = 0.5$ has INFINITE solutions. However, $\\arcsin(0.5)$ has only ONE: $\\pi/6$. <strong>Never provide multiple answers for an inverse trig function.</strong></p>
             </div>
         `
     },
@@ -321,15 +321,15 @@ window.CHAPTER_DATA["precalc"] = {
             <div class="mastery-box glass" style="border-top:3px solid var(--accent-cyan); padding:15px;">
                 <h4 style="color:var(--accent-cyan);"><i class="fas fa-compass"></i> Mapping the Shift</h4>
                 <div class="math-block">
-                    $$ x = r\cos\theta, \quad y = r\sin\theta, \quad r^2 = x^2+y^2, \quad \tan\theta = y/x $$
+                    $$ x = r\\cos\\theta, \quad y = r\\sin\\theta, \quad r^2 = x^2+y^2, \quad \\tan\\theta = y/x $$
                 </div>
             </div>
 
             <h3>1. Analyzing Polar Rate of Change</h3>
-            <p>This is the most "Calculus" part of Unit 3. We look at $dr/d\theta$:</p>
+            <p>This is the most "Calculus" part of Unit 3. We look at $dr/d\\theta$:</p>
             <ul>
-                <li>$dr/d\theta > 0$: Curve is moving <strong>away from the pole</strong>.</li>
-                <li>$dr/d\theta < 0$: Curve is moving <strong>toward the pole</strong>.</li>
+                <li>$dr/d\\theta > 0$: Curve is moving <strong>away from the pole</strong>.</li>
+                <li>$dr/d\\theta < 0$: Curve is moving <strong>toward the pole</strong>.</li>
             </ul>
             
             <div class="visual-dynamics glass" style="margin:20px 0; padding:15px; text-align:center;">
@@ -348,7 +348,7 @@ window.CHAPTER_DATA["precalc"] = {
             <h3>1. The Pythagorean Trinity</h3>
             <p>The identity $\\sin^2\\theta + \\cos^2\\theta = 1$ is just the Pythagorean theorem applied to the unit circle. From this, we derive the identities for $\\sec, \\tan, \\csc, \\text{ and } \\cot$.</p>
             <h3>2. Sum & Difference Formulas</h3>
-            <p>These allow us to calculate exact values like $\\sin(15^\\circ)$ by breaking them into $(45^\\circ - 30^\\circ)$. These formulas are the "bit-shifting" equivalent of trig—manipulating components for precise results.</p>
+            <p>These allow us to calculate exact values like $\\sin(15^\\circ)$ by breaking them into $(45^\\circ - 30^\\circ)$. These formulas are the "bit-shifting" equivalent of trig?봫anipulating components for precise results.</p>
             <div class="math-block">
                 $$ \\cos(A \\pm B) = \\cos A \\cos B \\mp \\sin A \\sin B $$
             </div>
@@ -388,12 +388,12 @@ window.CHAPTER_DATA["precalc"] = {
             <div class="mastery-box glass" style="border-left:4px solid var(--accent-magenta); padding:15px;">
                 <h4 style="color:var(--accent-magenta);"><i class="fas fa-arrows-alt"></i> Component Decomposition</h4>
                 <div class="math-block">
-                    $$ \vec{v} = |v|\cos\theta, |v|\sin\theta $$
+                    $$ \\vec{v} = |v|\\cos\\theta, |v|\\sin\\theta $$
                 </div>
             </div>
 
             <h3>1. Dot Product: The "Collaboration" Metric</h3>
-            <p>The dot product tells you how much two vectors are working together. If $\vec{u} \cdot \vec{v} = 0$, they are <strong>orthogonal</strong> (perpendicular).</p>
+            <p>The dot product tells you how much two vectors are working together. If $\\vec{u} \\cdot \\vec{v} = 0$, they are <strong>orthogonal</strong> (perpendicular).</p>
             
             <div class="tj-edge glass">
                 <h4><i class="fas fa-bolt"></i> Physics Link</h4>
@@ -410,7 +410,7 @@ window.CHAPTER_DATA["precalc"] = {
             </div>
 
             <div class="visual-dynamics glass" style="margin:20px 0; padding:15px; border:1px solid rgba(255,255,255,0.2);">
-                <h4 style="font-size:0.9rem;">Identity $\to$ Rotation</h4>
+                <h4 style="font-size:0.9rem;">Identity $\\to$ Rotation</h4>
                 <div style="display:flex; justify-content:center; gap:20px;">
                     <div style="width:40px; height:40px; border:1px solid #fff;"></div>
                     <i class="fas fa-arrow-right" style="align-self:center;"></i>
@@ -419,7 +419,7 @@ window.CHAPTER_DATA["precalc"] = {
             </div>
 
             <h3>1. The Determinant Verdict</h3>
-            <p>If $\det(A) = 0$, the matrix squashes the entire space into a lower dimension (a line or a point). This means the transformation is <strong>not invertible</strong> (you can't "un-squash" it).</p>
+            <p>If $\\det(A) = 0$, the matrix squashes the entire space into a lower dimension (a line or a point). This means the transformation is <strong>not invertible</strong> (you can't "un-squash" it).</p>
         `
     },
     "precalc-u4-4": {
@@ -452,7 +452,7 @@ window.CHAPTER_DATA["precalc"] = {
         title: "5.2: Continuity Defined (Formal)",
         content: `
             <h3>1. The Connected Path</h3>
-            <p>Formal definitions of continuity lead to the Intermediate Value Theorem—the proof that you cannot teleport through a range of values.</p>
+            <p>Formal definitions of continuity lead to the Intermediate Value Theorem?봳he proof that you cannot teleport through a range of values.</p>
         `
     },
     "precalc-u5-3": {
@@ -488,3 +488,5 @@ window.CHAPTER_DATA["precalc"] = {
         `
     }
 };
+
+

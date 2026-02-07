@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["ch4"] = {
     "ch4-1": {
         title: "4.1 Organising Data into Matrices",
@@ -52,7 +52,7 @@ for (int i = 0; i &lt; n; i++) {
                 
                 <div class="paradigm-shift" style="border-left-color: var(--accent-red);">
                     <h4>Non-Commutativity ($AB \\\\neq BA$)</h4>
-                    <p>In normal arithmetic, $3 \times 5 = 5 \times 3$. In Matrix land, <strong>Order Matters</strong>. Changing the order of multiplication usually results in a completely different matrix or is mathematically impossible.</p>
+                    <p>In normal arithmetic, $3 \\times 5 = 5 \\times 3$. In Matrix land, <strong>Order Matters</strong>. Changing the order of multiplication usually results in a completely different matrix or is mathematically impossible.</p>
                 </div>
 
                 <div class="proof-box glass" style="margin-top:20px;">
@@ -68,7 +68,7 @@ for (int i = 0; i &lt; n; i++) {
             <div class="lesson-section">
                 <div class="intuition-box glass">
                     <h3><i class="fas fa-compress-arrows-alt"></i> The Magnitude of Space</h3>
-                    <p>The **Determinant** is the "Volume Multiplier" of a matrix. If you have a box of volume 1, and you transform it with Matrix $A$, its new volume will be exactly $\det A$.</p>
+                    <p>The **Determinant** is the "Volume Multiplier" of a matrix. If you have a box of volume 1, and you transform it with Matrix $A$, its new volume will be exactly $\\det A$.</p>
                 </div>
 
                 <h2>I. What is a Determinant?</h2>
@@ -120,7 +120,7 @@ for (int i = 0; i &lt; n; i++) {
                 <div class="proof-box glass">
                     <h4>The Shortcut (2x2)</h4>
                     <p>$$ \\text{If } A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}, \\text{ then } A^{-1} = \\frac{1}{ad-bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix} $$</p>
-                    <p style="margin-top:10px;">If $\\det A = 0$, you cannot divide by zero—hence, No Inverse exists.</p>
+                    <p style="margin-top:10px;">If $\\det A = 0$, you cannot divide by zero?봦ence, No Inverse exists.</p>
                 </div>
             </div>
         `
@@ -179,3 +179,5 @@ for (int i = 0; i &lt; n; i++) {
         `
     }
 };
+
+

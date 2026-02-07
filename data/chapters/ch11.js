@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["ch11"] = {
     "ch11-1": {
         title: "11.1 Pattern Intelligence",
@@ -68,7 +68,7 @@ window.CHAPTER_DATA["ch11"] = {
                     <h4>Linearity Properties</h4>
                     <ul class="glass-list">
                         <li><strong>Sum Rule:</strong> $\\sum (a_i + b_i) = \\sum a_i + \\sum b_i$</li>
-                        <li><strong>Constant Rule:</strong> $\\sum (c \cdot a_i) = c \cdot \\sum a_i$</li>
+                        <li><strong>Constant Rule:</strong> $\\sum (c \\cdot a_i) = c \\cdot \\sum a_i$</li>
                     </ul>
                 </div>
             </div>
@@ -133,3 +133,5 @@ window.CHAPTER_DATA["ch11"] = {
         `
     }
 };
+
+

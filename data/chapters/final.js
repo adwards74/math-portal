@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["final"] = {
     // ==========================================================
     // UNIT 15: TJ ELITE MASTER CHALLENGE
@@ -46,7 +46,7 @@ window.CHAPTER_DATA["final"] = {
                 <h2>I. The 2024 Synthesis Challenge</h2>
                 <p><strong>Part A (No Calculator):</strong> Solve for the intersection of $y = \\log_2(x)$ and $y = 3 - x$.</p>
                 <div class="example-box glass">
-                    <p><strong>Step-by-Step Logic:</strong> Test integer values. If $x=2$, $\log_2(2)=1$ and $3-2=1$. Intersection found at $(2, 1)$.</p>
+                    <p><strong>Step-by-Step Logic:</strong> Test integer values. If $x=2$, $\\log_2(2)=1$ and $3-2=1$. Intersection found at $(2, 1)$.</p>
                 </div>
                 
                 <div class="video-section elite-border" style="margin-top:40px; padding:25px; background:rgba(0,0,0,0.3); border-radius:15px;">
@@ -68,9 +68,11 @@ window.CHAPTER_DATA["final"] = {
                 <p>This module covers the "Beyond-Algebra" connections found in modern TJ curricula.</p>
                 <div class="glass-card" style="border-left: 4px solid var(--accent-magenta);">
                     <h4>Matrix Determinants & Volume</h4>
-                    <p>Remember that the determinant of a $3 \times 3$ matrix represents the <strong>Volume Scaling</strong> of the space. If $det(A) = 0$, the volume collapses into a plane, meaning the system is dependent.</p>
+                    <p>Remember that the determinant of a $3 \\times 3$ matrix represents the <strong>Volume Scaling</strong> of the space. If $det(A) = 0$, the volume collapses into a plane, meaning the system is dependent.</p>
                 </div>
             </div>
         `
     }
 };
+
+

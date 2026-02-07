@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["ch7"] = {
     "ch7-1": {
         title: "7.1 n-th Roots & Radicals",
@@ -72,7 +72,7 @@ window.CHAPTER_DATA["ch7"] = {
                 <p>All integer exponent laws apply to rational exponents. This provides a unified algebra for all real powers.</p>
                 <div class="tj-edge glass" style="border-left-color: var(--accent-magenta);">
                     <h4><i class="fas fa-compress-arrows-alt"></i> CS: Companding & Log-Scaling</h4>
-                    <p>In data compression (like G.711 for phone calls), we use <strong>Companding</strong> (Compressing-Expanding). Power laws $y = x^{\gamma}$ are used to prioritize precision in small signals while allowing large range—optimizing the bit-rate of the signal!</p>
+                    <p>In data compression (like G.711 for phone calls), we use <strong>Companding</strong> (Compressing-Expanding). Power laws $y = x^{\\gamma}$ are used to prioritize precision in small signals while allowing large range?봮ptimizing the bit-rate of the signal!</p>
                 </div>
             </div>
         `
@@ -171,3 +171,5 @@ window.CHAPTER_DATA["ch7"] = {
         `
     }
 };
+
+

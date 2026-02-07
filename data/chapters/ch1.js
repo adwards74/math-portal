@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["ch1"] = {
     "ch1-1": {
         title: "1.1 The Axioms of Algebra",
@@ -11,7 +11,7 @@ window.CHAPTER_DATA["ch1"] = {
                 </div>
 
                 <h2>I. The Foundation of Reality</h2>
-                <p>Algebra isn't just about $x$; it's about the **Axioms**—the immutable laws that govern how numbers interact. In formal mathematics, we don't assume anything is true unless it's an axiom or proven from one.</p>
+                <p>Algebra isn't just about $x$; it's about the **Axioms**?봳he immutable laws that govern how numbers interact. In formal mathematics, we don't assume anything is true unless it's an axiom or proven from one.</p>
                 
                 <div class="paradigm-shift">
                     <h4>The Axiom Table</h4>
@@ -35,7 +35,7 @@ window.CHAPTER_DATA["ch1"] = {
                         <li>$0 = 0 + a \\cdot 0$ <span style="opacity:0.6;">(Inverse Property)</span></li>
                         <li>$0 = a \\cdot 0$ <span style="opacity:0.6;">(Identity Property)</span></li>
                     </ol>
-                    <p style="margin-top:10px; font-weight:bold; color:var(--accent-green);">Q.E.D. — The logic is ironclad.</p>
+                    <p style="margin-top:10px; font-weight:bold; color:var(--accent-green);">Q.E.D. ??The logic is ironclad.</p>
                 </div>
             </div>
 
@@ -52,7 +52,7 @@ window.CHAPTER_DATA["ch1"] = {
             <div class="lesson-section">
                 <div class="intuition-box glass">
                     <h3><i class="fas fa-microscope"></i> The Resolution of Numbers</h3>
-                    <p>Standard mathematics uses <strong>Real Numbers</strong>, which are like high-definition video—infinitely smooth. Computer science uses <strong>Binary</strong>, which is like pixelated video. Understanding how we 'simplify' reality into numbers is the goal of this section.</p>
+                    <p>Standard mathematics uses <strong>Real Numbers</strong>, which are like high-definition video?봧nfinitely smooth. Computer science uses <strong>Binary</strong>, which is like pixelated video. Understanding how we 'simplify' reality into numbers is the goal of this section.</p>
                 </div>
 
                 <h2>I. The Hierarchy of Numbers</h2>
@@ -62,20 +62,20 @@ window.CHAPTER_DATA["ch1"] = {
                     <h4 style="color:var(--accent-cyan);"><i class="fas fa-layer-group"></i> The Venn Diagram of Reality</h4>
                     <p>Imagine a series of nesting boxes:</p>
                     <ul class="glass-list" style="text-align:left;">
-                        <li><strong>Natural ($\mathbb{N}$):</strong> Counting numbers {1, 2, 3...}.</li>
-                        <li><strong>Whole ($\mathbb{W}$):</strong> Naturals + {0}.</li>
-                        <li><strong>Integers ($\mathbb{Z}$):</strong> Wholes + Negatives.</li>
-                        <li><strong>Rational ($\mathbb{Q}$):</strong> Anything that can be a fraction (Repeating/Terminating decimals).</li>
-                        <li><strong>Irrational ($\mathbb{I}$):</strong> Infinite, non-repeating (like $\\pi$ or $\\sqrt{2}$).</li>
-                        <li><strong>Real ($\mathbb{R}$):</strong> All of them combined.</li>
+                        <li><strong>Natural ($\\mathbb{N}$):</strong> Counting numbers {1, 2, 3...}.</li>
+                        <li><strong>Whole ($\\mathbb{W}$):</strong> Naturals + {0}.</li>
+                        <li><strong>Integers ($\\mathbb{Z}$):</strong> Wholes + Negatives.</li>
+                        <li><strong>Rational ($\\mathbb{Q}$):</strong> Anything that can be a fraction (Repeating/Terminating decimals).</li>
+                        <li><strong>Irrational ($\\mathbb{I}$):</strong> Infinite, non-repeating (like $\\pi$ or $\\sqrt{2}$).</li>
+                        <li><strong>Real ($\\mathbb{R}$):</strong> All of them combined.</li>
                     </ul>
                 </div>
 
                 <table class="glass-table" style="width:100%; margin-top:20px;">
                     <tr><th>Math Set</th><th>Definition</th><th>CS Data Type</th></tr>
-                    <tr><td>$\mathbb{Z}$ (Integers)</td><td>Whole numbers and opposites</td><td><code>int</code> / <code>Long</code></td></tr>
-                    <tr><td>$\mathbb{Q}$ (Rationals)</td><td>Quotient of two integers</td><td><code>BigDecimal</code></td></tr>
-                    <tr><td>$\mathbb{R}$ (Reals)</td><td>The complete number line</td><td><code>double</code> / <code>Float</code></td></tr>
+                    <tr><td>$\\mathbb{Z}$ (Integers)</td><td>Whole numbers and opposites</td><td><code>int</code> / <code>Long</code></td></tr>
+                    <tr><td>$\\mathbb{Q}$ (Rationals)</td><td>Quotient of two integers</td><td><code>BigDecimal</code></td></tr>
+                    <tr><td>$\\mathbb{R}$ (Reals)</td><td>The complete number line</td><td><code>double</code> / <code>Float</code></td></tr>
                 </table>
             </div>
 
@@ -84,7 +84,7 @@ window.CHAPTER_DATA["ch1"] = {
                 <p>The set of Real numbers is <strong>dense</strong>. Between any two rational numbers, there is another rational number. In fact, between any two reals, there are <em>infinitely many</em> more.</p>
                 <div class="paradigm-shift" style="border-left-color:var(--accent-green);">
                     <h4>Key Intuition</h4>
-                    <p>Floating-point errors in programming (like 0.1 + 0.2 != 0.3) happen because computers try to represent a 'dense' infinite system ($\mathbb{R}$) using a 'discrete' finite system (Binary Bits). Algebra is where we learn to handle the pure, infinite versions.</p>
+                    <p>Floating-point errors in programming (like 0.1 + 0.2 != 0.3) happen because computers try to represent a 'dense' infinite system ($\\mathbb{R}$) using a 'discrete' finite system (Binary Bits). Algebra is where we learn to handle the pure, infinite versions.</p>
                 </div>
             </div>
         `
@@ -220,7 +220,7 @@ window.CHAPTER_DATA["ch1"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. Synthesis: The Code of Math</h2>
-                <p>You have mastered the basic syntax of the universe. In the next chapter, we move into linear dynamics—how variables change together.</p>
+                <p>You have mastered the basic syntax of the universe. In the next chapter, we move into linear dynamics?봦ow variables change together.</p>
                 
                 <div class="summary-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px;">
                     <div class="glass-card" style="padding:15px;">
@@ -236,3 +236,5 @@ window.CHAPTER_DATA["ch1"] = {
         `
     }
 };
+
+

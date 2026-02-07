@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["calc"] = {
     // UNIT 1: Limits & Continuity (Mapped to differentiation/part-a)
     "calc-u1-1": {
@@ -21,13 +21,13 @@ window.CHAPTER_DATA["calc"] = {
                             <line x1="50" y1="95" x2="150" y2="65" stroke="var(--accent-magenta)" stroke-width="2"/>
                         </svg>
                     </div>
-                    <p style="font-size:0.8rem; margin-top:10px;">As the distance between points $\to 0$, the dashed Secant line becomes the solid Tangent line.</p>
+                    <p style="font-size:0.8rem; margin-top:10px;">As the distance between points $\\to 0$, the dashed Secant line becomes the solid Tangent line.</p>
                 </div>
 
                 <h2>I. The Paradox of the Instant</h2>
                 <p>Calculus was born from a crisis in logic: How do you measure the slope of a curve at a <em>single point</em>? A point has no width ($\\Delta x = 0$), and a slope requires two points.</p>
                 <div class="glass-card elite-border" style="padding: 20px;">
-                    <p><strong>The "Leibniz" Perspective:</strong> We imagine $dx$ and $dy$ as "infinitesimals"—numbers so small they are practically zero but not quite. This allowed them to calculate $dy/dx$ without the universe collapsing.</p>
+                    <p><strong>The "Leibniz" Perspective:</strong> We imagine $dx$ and $dy$ as "infinitesimals"?봭umbers so small they are practically zero but not quite. This allowed them to calculate $dy/dx$ without the universe collapsing.</p>
                 </div>
                 <div class="tj-edge glass">
                     <h4><i class="fas fa-microchip"></i> CS Connection: Precision Bottlenecks</h4>
@@ -47,7 +47,7 @@ window.CHAPTER_DATA["calc"] = {
             <div class="lesson-section">
                 <div class="mastery-box glass" style="border-left:4px solid var(--accent-magenta);">
                     <h4 style="color:var(--accent-magenta);"><i class="fas fa-key"></i> The Challenge-Response Protocol</h4>
-                    <p>When someone gives you an $\epsilon$ (how close $f(x)$ must be to $L$), you must provide a $\delta$ (how close $x$ must be to $c$).</p>
+                    <p>When someone gives you an $\epsilon$ (how close $f(x)$ must be to $L$), you must provide a $\\Delta$ (how close $x$ must be to $c$).</p>
                 </div>
 
                 <h2>I. Beyond "Approaching"</h2>
@@ -62,9 +62,9 @@ window.CHAPTER_DATA["calc"] = {
                         <div style="position:absolute; top:20px; bottom:20px; left:0; right:0; background:rgba(255,0,255,0.1); border-top:1px dashed var(--accent-magenta); border-bottom:1px dashed var(--accent-magenta);"></div>
                         <div style="position:absolute; left:60px; right:60px; top:0; bottom:0; background:rgba(0,210,255,0.1); border-left:1px dashed var(--accent-cyan); border-right:1px dashed var(--accent-cyan);"></div>
                         <span style="position:absolute; right:-40px; top:30px; font-size:0.7rem; color:var(--accent-magenta);">$2\epsilon$ window</span>
-                        <span style="position:absolute; bottom:-20px; left:50px; font-size:0.7rem; color:var(--accent-cyan);">$2\delta$ window</span>
+                        <span style="position:absolute; bottom:-20px; left:50px; font-size:0.7rem; color:var(--accent-cyan);">$2\\Delta$ window</span>
                     </div>
-                    <p style="font-size:0.8rem; margin-top:25px;">$\delta$ is the "safety gate" that keeps the output inside the $\epsilon$ "target zone."</p>
+                    <p style="font-size:0.8rem; margin-top:25px;">$\\Delta$ is the "safety gate" that keeps the output inside the $\epsilon$ "target zone."</p>
                 </div>
                 <div class="tj-edge glass">
                     <h4><i class="fas fa-shield-alt"></i> Security Analogy</h4>
@@ -196,8 +196,8 @@ window.CHAPTER_DATA["calc"] = {
                 </div>
 
                 <ul class="glass-list">
-                    <li><strong>Corners:</strong> Sharp turns where left-slope $\neq$ right-slope.</li>
-                    <li><strong>Cusps:</strong> "Spikes" where the slope goes to $\pm \\infty$ instantly.</li>
+                    <li><strong>Corners:</strong> Sharp turns where left-slope $\\neq$ right-slope.</li>
+                    <li><strong>Cusps:</strong> "Spikes" where the slope goes to $\\pm \\infty$ instantly.</li>
                     <li><strong>Vertical Tangents:</strong> Where the graph becomes perfectly vertical (infinite slope).</li>
                 </ul>
             </div>
@@ -438,7 +438,7 @@ window.CHAPTER_DATA["calc"] = {
             <div class="lesson-section">
                 <div class="intuition-box glass">
                     <h3><i class="fas fa-th"></i> The Pixelation of Area</h3>
-                    <p>Riemann sums are like "low-res" versions of an area. As the number of rectangles ($n$) goes to $\infty$, the resolution becomes perfect, and the sum becomes an <strong>Integral</strong>.</p>
+                    <p>Riemann sums are like "low-res" versions of an area. As the number of rectangles ($n$) goes to $\\infty$, the resolution becomes perfect, and the sum becomes an <strong>Integral</strong>.</p>
                 </div>
 
                 <h2>I. Accumulation</h2>
@@ -543,7 +543,7 @@ window.CHAPTER_DATA["calc"] = {
                 <h2>I. Step-by-Step Evolution</h2>
                 <p>When an analytic solution is impossible, we "walk" along tangent line segments.</p>
                 <div class="math-block">
-                    \\[y_{new} = y_{old} + f'(x_{old}, y_{old}) \cdot \Delta x\\]
+                    \\[y_{new} = y_{old} + f'(x_{old}, y_{old}) \\cdot \\Delta x\\]
                 </div>
 
                 <div class="visual-dynamics glass" style="margin:20px 0; padding:20px; text-align:center;">
@@ -633,9 +633,9 @@ window.CHAPTER_DATA["calc"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Distance Formula Integral</h2>
-                <p>For a function $y=f(x)$, the length is: $L = \int_a^b \sqrt{1 + [f'(x)]^{2}} dx$.</p>
+                <p>For a function $y=f(x)$, the length is: $L = \int_a^b \\sqrt{1 + [f'(x)]^{2}} dx$.</p>
                 <div class="glass-card elite-border">
-                    <p><strong>Elite Trick:</strong> In BC, we often use the version for parametric curves: $\int_a^b \sqrt{(x')^2 + (y')^2} dt$. This is just the integral of the <em>speed</em> vector's magnitude!</p>
+                    <p><strong>Elite Trick:</strong> In BC, we often use the version for parametric curves: $\int_a^b \\sqrt{(x')^2 + (y')^2} dt$. This is just the integral of the <em>speed</em> vector's magnitude!</p>
                 </div>
             </div>
         `
@@ -651,8 +651,8 @@ window.CHAPTER_DATA["calc"] = {
                 <p>Regular functions $y=f(x)$ fail if they loop. Parametric equations $x(t), y(t)$ allow us to model ANY path.</p>
                 \\[\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt}\\]
                 <div class="tj-edge glass">
-                    <h4><i class="fas fa-bezier-curve"></i> Computer Graphics: Bézier Curves</h4>
-                    <p>Typography and vector art (SVG) use parametric equations called Bézier Curves. Adjusting the "control points" changes the $t$ parameter flow to create smooth, scalable fonts.</p>
+                    <h4><i class="fas fa-bezier-curve"></i> Computer Graphics: B챕zier Curves</h4>
+                    <p>Typography and vector art (SVG) use parametric equations called B챕zier Curves. Adjusting the "control points" changes the $t$ parameter flow to create smooth, scalable fonts.</p>
                 </div>
             </div>
         `
@@ -699,7 +699,7 @@ window.CHAPTER_DATA["calc"] = {
                         <path d="M 50 50 L 80 20 A 45 45 0 0 1 100 50 Z" fill="rgba(0,210,255,0.3)" stroke="var(--accent-cyan)"/>
                         <circle cx="50" cy="50" r="2" fill="#fff"/>
                     </svg>
-                    <p style="font-size:0.8rem; margin-top:5px;">Area is the "swept" region $\int \frac{1}{2}r^2 d\theta$.</p>
+                    <p style="font-size:0.8rem; margin-top:5px;">Area is the "swept" region $\int \\frac{1}{2}r^2 d\\theta$.</p>
                 </div>
             </div>
         `
@@ -712,7 +712,7 @@ window.CHAPTER_DATA["calc"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Limit of a Sequence</h2>
-                <p>A sequence $\{a_n\}$ converges to $L$ if $\\lim_{n \\to \\infty} a_n = L$. In BC, we distinguish between a sequence (the numbers) and a series (the sum).</p>
+                <p>A sequence $\\\{a_n\\\}$ converges to $L$ if $\\lim_{n \\to \\infty} a_n = L$. In BC, we distinguish between a sequence (the numbers) and a series (the sum).</p>
             </div>
         `
     },
@@ -766,7 +766,7 @@ window.CHAPTER_DATA["calc"] = {
                 </div>
 
                 <h2>I. Universal Proximity</h2>
-                \\[f(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \dots\\]
+                \\[f(x) = f(a) + f'(a)(x-a) + \\frac{f''(a)}{2!}(x-a)^2 + \dots\\]
 
                 <div class="visual-dynamics glass" style="margin:20px 0; padding:20px; text-align:center;">
                     <h4><i class="fas fa-layer-group"></i> Layered Approximation</h4>
@@ -777,7 +777,7 @@ window.CHAPTER_DATA["calc"] = {
                             <path d="M 60 25 Q 100 10 140 25" stroke="var(--accent-cyan)" fill="transparent" stroke-width="2"/>
                         </svg>
                     </div>
-                    <p style="font-size:0.8rem; margin-top:10px;">Blue (Linear) $\to$ Cyan (Quadratic) $\to$ White (Actual Function). More terms = Better "Cling".</p>
+                    <p style="font-size:0.8rem; margin-top:10px;">Blue (Linear) $\\to$ Cyan (Quadratic) $\\to$ White (Actual Function). More terms = Better "Cling".</p>
                 </div>
             </div>
         `
@@ -794,7 +794,7 @@ window.CHAPTER_DATA["calc"] = {
 
                 <h2>I. The Remainder Term</h2>
                 <p>The error $|R_n(x)|$ is bounded by the "Next Term" but using the maximum possible value ($M$) of the $(n+1)$-th derivative:</p>
-                \\[|R_n(x)| \le \frac{M}{(n+1)!}|x-a|^{n+1}\\]
+                \\[|R_n(x)| \\le \\frac{M}{(n+1)!}|x-a|^{n+1}\\]
 
                 <div class="tj-edge glass" style="margin-top:20px;">
                     <h4><i class="fas fa-shield-alt"></i> Safety Standards</h4>
@@ -868,7 +868,7 @@ window.CHAPTER_DATA["calc"] = {
         content: `
             <div class="intuition-box glass">
                 <h3><i class="fas fa-bolt" style="color:#ff5e62"></i> 2025 Hard Mode</h3>
-                <p>Expect 2025 to increase rigor in <strong>Differential Equation Justification</strong>—specifically Slope Fields with Euler's Method error analysis.</p>
+                <p>Expect 2025 to increase rigor in <strong>Differential Equation Justification</strong>?봲pecifically Slope Fields with Euler's Method error analysis.</p>
             </div>
             <h3>Mock FRQ: Euler vs. Reality</h3>
             <p><strong>Problem:</strong> If $dy/dx = x+y$ and $y(0)=1$, use Euler's method with $\\Delta x = 0.5$ to estimate $y(1)$. Is it an over/under estimate?</p>
@@ -876,3 +876,5 @@ window.CHAPTER_DATA["calc"] = {
         `
     }
 };
+
+

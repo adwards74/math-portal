@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["ch9"] = {
     "ch9-1": {
         title: "9.1 Variation Theory",
@@ -69,7 +69,7 @@ window.CHAPTER_DATA["ch9"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. Removable Discontinuities (Holes)</h2>
-                <p>When a factor is present in both the numerator and denominator, it doesn't create an asymptote—it creates a **Hole**.</p>
+                <p>When a factor is present in both the numerator and denominator, it doesn't create an asymptote?봧t creates a **Hole**.</p>
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-orange);">
                     <p>Example: $f(x) = \\\\frac{(x-2)(x+3)}{x-2}$</p>
@@ -152,3 +152,5 @@ window.CHAPTER_DATA["ch9"] = {
         `
     }
 };
+
+

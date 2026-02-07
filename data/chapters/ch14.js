@@ -1,4 +1,4 @@
-window.CHAPTER_DATA = window.CHAPTER_DATA || {};
+﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["ch14"] = {
     "ch14-1": {
         title: "14.1 Fundamental Identities",
@@ -145,3 +145,5 @@ window.CHAPTER_DATA["ch14"] = {
         `
     }
 };
+
+
