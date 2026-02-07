@@ -5,6 +5,11 @@ window.CHAPTER_DATA["ch10"] = {
         subtitle: "The Slices of Reality",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-eye"></i> The Perspective Warp</h3>
+                    <p>Conics are the result of **Slicing 3D Reality**. Depending on the angle of your 'blade' (the intersection plane), you get a circle, ellipse, parabola, or hyperbola. It is the same data, just viewed from different perspectives.</p>
+                </div>
+
                 <h2>I. The Universal Identifier</h2>
                 <p>Every conic section follows the general second-degree equation: $Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0$. By looking at the coefficients, we can predict the shape before graphing.</p>
                 
@@ -29,6 +34,11 @@ window.CHAPTER_DATA["ch10"] = {
         subtitle: "The Locus of Equality",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-puzzle-piece"></i> The Completion Pattern</h3>
+                    <p>Completing the Square is not just a trick; it's **Reconstructing the Center**. By forcing the equation into a perfect square, you reveal the 'Gravity Center' ($h, k$) of the shape. It is the algebraic equivalent of 'centering the camera'.</p>
+                </div>
+
                 <h2>I. Standard Form vs. General Form</h2>
                 <p>A circle is rarely given in its clean $(x-h)^2 + (y-k)^2 = r^2$ form. Usually, you encounter the **General Form**: $x^2 + y^2 + Dx + Ey + F = 0$.</p>
                 

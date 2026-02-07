@@ -5,6 +5,11 @@ window.CHAPTER_DATA["ch9"] = {
         subtitle: "Direct vs. Inverse Scaling",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-balance-scale"></i> The Resource Cap</h3>
+                    <p>Inverse variation is about **Sharing**. If you have a fixed slice of pizza ($k$), the more people ($x$) you share it with, the smaller each slice ($y$) becomes. It is the math of finite resources and load balancing.</p>
+                </div>
+
                 <h2>I. Inverse Variation: $y = k/x$</h2>
                 <p>In an **Inverse Variation**, the product of two variables remains constant: $xy = k$. As one variable grows, the other must shrink to maintain the balance.</p>
                 
@@ -96,9 +101,14 @@ window.CHAPTER_DATA["ch9"] = {
                 <h2>I. The Domain Guard Protocol</h2>
                 <p>Solving rational equations is straightforward: multiply by LCD to clear fractions. But you MUST check your answers against the <strong>Excluded Values</strong>.</p>
                 
-                <div class="tj-edge glass" style="border-left-color: var(--accent-green);">
-                    <h4><i class="fas fa-shield-alt"></i> CS: Null Pointer Prevention</h4>
-                    <p>Dividing by zero in math is like a <code>NullPointerException</code> in Java. If your solution $x=3$ makes a denominator $(x-3)$ zero, your program will crash. Always validate that your solution doesn't violate the fundamental "No Zero Denominator" rule.</p>
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-heartbeat"></i> The Pulse Check</h3>
+                    <p>Solving rational equations is like monitoring a patient's pulse. Most of the time it's steady, but a zero-denominator ($NullPointer$) is a fatal heart attack. Always audit your solutions against the 'Dead Zones' of the domain.</p>
+                </div>
+
+                <div class="mastery-protocol glass">
+                    <h4><i class="fas fa-check-double"></i> Mastery Protocol: Domain Exclusion Audit</h4>
+                    <p>Before any algebra, list every $x$ that makes any denominator zero. These are your **Exclusion Zones**. If your final 'solution' lands in an exclusion zone, it is a false positive.</p>
                 </div>
             </div>
         `

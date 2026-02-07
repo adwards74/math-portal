@@ -5,6 +5,11 @@ window.CHAPTER_DATA["ch7"] = {
         subtitle: "The Inverse of Growth & Exception Handling",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-history"></i> The Time-Traveler's Trace</h3>
+                    <p>An $n$-th root is the **Inverse Operation** of growth. If a population grows by $x^3$, the cube root tells you where it started. It is the algebraic 'Undo' button for exponential scaling.</p>
+                </div>
+
                 <h2>I. The nth Root Operator</h2>
                 <p>The expression $\\\\sqrt[n]{b}$ is a number $a$ such that $a^n = b$. The behavior of this radical depends critically on the <strong>Index ($n$)</strong>.</p>
                 
@@ -80,9 +85,14 @@ window.CHAPTER_DATA["ch7"] = {
                 <h2>I. The Squaring Protocol</h2>
                 <p>To solve $\\\\sqrt{x + 2} = x$, we must isolate the radical and raise both sides to the appropriate power. However, this process often introduces **Extraneous Solutions**.</p>
                 
-                <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-orange);">
-                    <h4>The Logic Gap</h4>
-                    <p>Squaring both sides ignores the sign of the original expression ($1^2 = (-1)^2$). This is why you might get a result that solves the squared equation but fails the original.</p>
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-mask"></i> The Ghost in the Machine</h3>
+                    <p>An **Extraneous Solution** is a ghost created by the algebra. When you square both sides, you lose the 'sign' information, allowing an impossible answer to sneak through. Always audit your solutions in the original context.</p>
+                </div>
+
+                <div class="mastery-protocol glass">
+                    <h4><i class="fas fa-check-double"></i> Mastery Protocol: The Verification Audit</h4>
+                    <p>In high-rigor math, a solution is not 'correct' until it is verified. Always plug your answers back into the <strong>Original Radical Expression</strong> to prune false positives.</p>
                 </div>
 
                 <div class="tj-edge glass" style="border-left-color: var(--accent-green); margin-top:20px;">

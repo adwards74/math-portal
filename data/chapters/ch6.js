@@ -5,6 +5,11 @@ window.CHAPTER_DATA["ch6"] = {
         subtitle: "Degrees, Coefficients & End Behavior",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-mountain"></i> The Horizon Rule</h3>
+                    <p>End behavior is like looking at a mountain range from a distance. The smaller hills (lower-degree terms) vanish, and only the highest peak (leading term) defines the shape of the horizon. In calculus, this is why we focus on 'Growth Rates'.</p>
+                </div>
+
                 <h2>I. The Dominant Term Rule</h2>
                 <p>The **End Behavior** of a polynomial is determined solely by its leading term $a_n x^n$. As $|x|$ becomes very large, the other terms become insignificant.</p>
                 
@@ -78,6 +83,11 @@ window.CHAPTER_DATA["ch6"] = {
         subtitle: "Conjugate Pairs & Descartes' Rule",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-yin-yang"></i> The Conjugate Balance</h3>
+                    <p>Complex roots always come in pairs—like matter and anti-matter. If $2 + 3i$ exists, $2 - 3i$ must also exist to ensure the polynomial's 'Real' structure remains stable. This is the **Law of Symmetry** in Algebra.</p>
+                </div>
+
                 <h2>I. Symmetry of the Solution Space</h2>
                 <p>If a polynomial has real coefficients, the <strong>Complex Conjugate Root Theorem</strong> states that if $a + bi$ is a root, $a - bi$ must also be a root.</p>
                 

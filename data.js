@@ -365,10 +365,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "What is the nature of roots if the discriminant (D) is less than zero?",
-                        options: ["Two Real Roots", "One Real Root", "Two Complex Roots", "No Roots whatsoever"],
-                        answer: "Two Complex Roots",
-                        explanation: "When \\(b^2 - 4ac < 0\\), the square root yields an imaginary component, resulting in two complex conjugate roots."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "What physical property ensures that all parallel light rays reflect through the Focus of a parabola?",
+                                options: ["Linear Reflection", "Parabolic Optical Property", "Symmetry Principle", "Inverse Square Law"],
+                                answer: "Parabolic Optical Property",
+                                explanation: "The geometry of a parabola forces all parallel incoming lines to converge at a single point, the focus."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "If the discriminant $D = b^2 - 4ac$ is negative, what is the nature of the roots?",
+                                options: ["One Real Root", "Two Real Roots", "Two Complex Roots", "No Roots"],
+                                answer: "Two Complex Roots",
+                                explanation: "A negative discriminant means the parabola never touches the X-axis, resulting in complex solutions."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Using Vieta's Formulas, explain why the product of roots for $3x^2 - 12x + 15 = 0$ is $5$.",
+                                answer: "The product of roots is $c/a = 15/3 = 5$.",
+                                template: "According to Vieta's Formulas, the product is... By substituting... we get..."
+                            }
+                        ]
                     }
                 },
                 {
@@ -420,10 +439,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "If (x - 3) is a factor of a polynomial P(x), what must P(3) be equal to?",
-                        options: ["-3", "0", "3", "Unknown"],
-                        answer: "0",
-                        explanation: "The Factor Theorem states that (x - c) is a factor of P(x) if and only if P(c) = 0."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "As $x \to \infty$, which term in $f(x) = 3x^4 - 2x^3 + 10x$ determines the end behavior?",
+                                options: ["3x^4", "-2x^3", "10x", "All of them"],
+                                answer: "3x^4",
+                                explanation: "The leading term dominates as x becomes large; all other terms become insignificant in comparison."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "If $f(2) = 0$ for a polynomial $f(x)$, what does the Factor Theorem guarantee?",
+                                options: ["(x+2) is a factor", "(x-2) is a factor", "x=0 is a root", "f(x) has no real roots"],
+                                answer: "(x-2) is a factor",
+                                explanation: "If substituting $c$ results in zero, then $(x-c)$ MUST be a linear factor of the polynomial."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain why complex roots of polynomials with real coefficients must occur in conjugate pairs.",
+                                answer: "To maintain real coefficients, the 'i' terms must cancel out during expansion $(x-(a+bi))(x-(a-bi))$.",
+                                template: "Because the coefficients are real... the product of... must result in... which only happens if..."
+                            }
+                        ]
                     }
                 },
                 {
@@ -477,10 +515,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "Why do we check for extraneous solutions in radical equations?",
-                        options: ["To find more answers", "Because squaring can create false results", "To simplify the math", "It's not actually necessary"],
-                        answer: "Because squaring can create false results",
-                        explanation: "When you square both sides, you lose the sign information, which can lead to values that solve the squared equation but not the original radical one."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "Why must we verify solutions after squaring both sides of a radical equation?",
+                                options: ["To find more answers", "Because squaring can create false results", "To simplify the math", "It's not actually necessary"],
+                                answer: "Because squaring can create false results",
+                                explanation: "Squaring can create 'false positives' that solve the squared equation but fail the original radical's domain."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "Rewrite $\sqrt[3]{x^6}$ using rational exponents.",
+                                options: ["x^2", "x^3", "x^18", "x^0.5"],
+                                answer: "x^2",
+                                explanation: "$x^{6/3} = x^2$."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain the condition required for a function $f(x)$ to have an inverse function $f^{-1}(x)$.",
+                                answer: "It must be one-to-one, passing the Horizontal Line Test, ensuring each output has a unique input.",
+                                template: "For an inverse to exist as a function... it must satisfy... which means that..."
+                            }
+                        ]
                     }
                 },
                 {
@@ -532,10 +589,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "What does the Natural Log (ln) have as its base?",
-                        options: ["10", "2", "e (~2.718)", "0"],
-                        answer: "e (~2.718)",
-                        explanation: "The natural logarithm, ln(x), is defined as the logarithm with base e."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "What does the Natural Log (ln) have as its base?",
+                                options: ["10", "2", "e (~2.718)", "0"],
+                                answer: "e (~2.718)",
+                                explanation: "The natural logarithm, ln(x), is defined as the logarithm with base e."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "Using the Rule of 72, if an investment grows at 6% annually, how long does it take to double?",
+                                options: ["6 years", "12 years", "10 years", "72 years"],
+                                answer: "12 years",
+                                explanation: "$72 / 6 = 12$ years. This is a common heuristic for exponential growth."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain why $\log_b(x)$ is undefined for $x \le 0$ using its relationship to exponents.",
+                                answer: "Since $b^y$ is always positive for any real $y$, there is no $y$ such that $b^y \le 0$.",
+                                template: "A logarithm is the inverse of... Since an exponential function with base $b > 0$... it follows that..."
+                            }
+                        ]
                     }
                 },
                 {
@@ -586,10 +662,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "What happens to the graph of a rational function when a factor cancels out from both the numerator and denominator?",
-                        options: ["A Vertical Asymptote is created", "A Horizontal Asymptote is created", "A Hole (Removable Discontinuity) is created", "The graph becomes a straight line with no gaps"],
-                        answer: "A Hole (Removable Discontinuity) is created",
-                        explanation: "When a factor cancels out, the function is still undefined at that point, but the graph doesn't approach infinity; it simply has a missing point called a hole."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "What happens to the graph of a rational function when a factor cancels out from both the numerator and denominator?",
+                                options: ["A Vertical Asymptote is created", "A Horizontal Asymptote is created", "A Hole (Removable Discontinuity) is created", "The graph becomes a straight line with no gaps"],
+                                answer: "A Hole (Removable Discontinuity) is created",
+                                explanation: "When a factor cancels out, the function is still undefined at that point, but the graph doesn't approach infinity; it simply has a missing point called a hole."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "Find the Horizontal Asymptote of $f(x) = \frac{4x^2 + 1}{2x^2 - 3}$.",
+                                options: ["y = 0", "y = 2", "y = 4", "None"],
+                                answer: "y = 2",
+                                explanation: "The degrees are equal; divide leading coefficients: $4/2 = 2$."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain the logical difference between a Hole and a Vertical Asymptote.",
+                                answer: "A hole is a removable point discontinuity, while an asymptote is a fundamental limit where the function values explode to infinity.",
+                                template: "Algebraically, a hole is caused by... while a vertical asymptote is caused by... geometrically, this means..."
+                            }
+                        ]
                     }
                 },
                 {
@@ -639,10 +734,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "In Kepler's Laws, what geometric shape do planets follow for their orbits around the Sun?",
-                        options: ["Perfect Circles", "Parabolas", "Ellipses", "Hyperbolas"],
-                        answer: "Ellipses",
-                        explanation: "Kepler's First Law states that planets move in elliptical orbits with the Sun at one of the two foci."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "In Kepler's Laws, what geometric shape do planets follow for their orbits around the Sun?",
+                                options: ["Perfect Circles", "Parabolas", "Ellipses", "Hyperbolas"],
+                                answer: "Ellipses",
+                                explanation: "Kepler's First Law states that planets move in elliptical orbits with the Sun at one of the two foci."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "What type of conic is represented by $x^2 - 4y^2 + 10x = 0$?",
+                                options: ["Circle", "Ellipse", "Parabola", "Hyperbola"],
+                                answer: "Hyperbola",
+                                explanation: "The minus sign between squared terms ($A=1, C=-4$) indicates a hyperbola."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain how a spacecraft uses a Hyperbolic trajectory for a 'Slingshot' maneuver.",
+                                answer: "The open curve of the hyperbola allowed the craft to enter a planet's gravity well, gain kinetic energy, and 'escape' with higher velocity.",
+                                template: "Because a hyperbola is an open curve... the spacecraft is not captured by gravity... instead, it..."
+                            }
+                        ]
                     }
                 },
                 {

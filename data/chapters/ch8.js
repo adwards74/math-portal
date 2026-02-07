@@ -5,6 +5,11 @@ window.CHAPTER_DATA["ch8"] = {
         subtitle: "The Explosion of Complexity",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-bolt"></i> The Kinetic Engine</h3>
+                    <p>Exponential growth is like a snowball rolling down a mountain. The bigger it gets, the faster it grows. It is the default state of biological systems, viral memes, and interest-bearing debt.</p>
+                </div>
+
                 <h2>I. The Dynamics of Compounding</h2>
                 <p>Exponential growth occurs when the rate of change is proportional to the current value. This leads to the fundamental formula:</p>
                 
@@ -44,6 +49,11 @@ window.CHAPTER_DATA["ch8"] = {
         subtitle: "The Reversibility Architecture",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-compress-alt"></i> The Scale-Down Lens</h3>
+                    <p>Logarithms are the **Opposite of Growth**. They tell you "How many times do I need to divide until I reach the beginning?". They turn multiplication into addition, making impossible scales manageable.</p>
+                </div>
+
                 <h2>I. Information Compression</h2>
                 <p>Logarithms translate Exponential growth back into Linear scale. If $y = b^x$, then $x = \\\\log_b(y)$.</p>
                 
@@ -85,9 +95,14 @@ window.CHAPTER_DATA["ch8"] = {
                 <h2>I. The Exponentiation Protocol</h2>
                 <p>To solve $\\\\log_b(x) = c$, we convert to exponential form: $b^c = x$. But we must be careful with the <strong>Domain</strong>.</p>
                 
-                <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-yellow);">
-                    <h4>Domain Guarding</h4>
-                    <p>The argument of a logarithm MUST be strictly positive ($x > 0$). Any solution that makes the argument zero or negative is **Extraneous**.</p>
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-ban"></i> The Negative Void</h3>
+                    <p>Logs are asymmetrically guarded. You can grow to infinity, but you can never reach zero or become negative. It is an **Algebraic Firewall**—trying to log a negative number is like asking 'At what time was I before I existed?'.</p>
+                </div>
+
+                <div class="mastery-protocol glass">
+                    <h4><i class="fas fa-check-double"></i> Mastery Protocol: Domain Validation</h4>
+                    <p>Always solve the inner argument inequality ($Argument > 0$) BEFORE solving the equation. This defines your **Valid State Space**.</p>
                 </div>
             </div>
         `

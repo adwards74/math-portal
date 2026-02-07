@@ -5,6 +5,11 @@ window.CHAPTER_DATA["ch5"] = {
         subtitle: "The Geometry of Perfection & Optics",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-bullseye"></i> The Signal Path</h3>
+                    <p>A parabola is a **Logic Mirror**. Every beam of light or radio wave hitting its surface is forced to a single, perfect point (the Focus). In calculus, this shape is the result of a constant acceleration (gravity).</p>
+                </div>
+
                 <h2>I. The Geometric Locus</h2>
                 <p>A <strong>Parabola</strong> is defined as the set of all points $(x, y)$ that are equidistant from a fixed point (the <strong>Focus</strong>) and a fixed line (the <strong>Directrix</strong>).</p>
                 
@@ -32,9 +37,14 @@ window.CHAPTER_DATA["ch5"] = {
                 <h2>I. Vieta's Formulas</h2>
                 <p>For any quadratic $ax^2 + bx + c = 0$ with roots $r_1, r_2$, there is a beautiful relationship between the coefficients and the roots:</p>
                 
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-dna"></i> The Algebraic DNA</h3>
+                    <p>Vieta's Formulas show that the coefficients of a quadratic are **encodings** of its roots. You don't need to solve the equation to know how the roots sum up or multiply.</p>
+                </div>
+
                 <div class="glass-card" style="border-left: 4px solid var(--accent-green); padding:20px;">
-                    <p><strong>Sum of Roots:</strong> $r_1 + r_2 = -\\\\frac{b}{a}$</p>
-                    <p><strong>Product of Roots:</strong> $r_1 \\\\cdot r_2 = \\\\frac{c}{a}$</p>
+                    <p><strong>Sum of Roots:</strong> $r_1 + r_2 = -\frac{b}{a}$</p>
+                    <p><strong>Product of Roots:</strong> $r_1 \cdot r_2 = \frac{c}{a}$</p>
                 </div>
 
                 <div class="paradigm-shift" style="margin-top:20px;">
@@ -122,8 +132,14 @@ window.CHAPTER_DATA["ch5"] = {
                 <h2>I. System Collisions</h2>
                 <p>Finding where $y = mx + b$ and $y = ax^2 + bx + c$ intersect is a <strong>Collision Detection</strong> problem. By setting them equal, we form a new quadratic.</p>
                 
-                <div class="proof-box glass">
-                    <p>If the resulting $D = 0$, the line is <strong>Tangent</strong> to the parabola—it touches exactly at one point without crossing.</p>
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-shield-alt"></i> The Collision Map</h3>
+                    <p>In game development, checking if a bullet (line) hits an enemy's shield (parabola) uses this exact quadratic system. The **Discriminant** is your collision detector: $D > 0$ mean two hits, $D = 0$ is a graze, $D < 0$ is a miss.</p>
+                </div>
+
+                <div class="mastery-protocol glass">
+                    <h4><i class="fas fa-check-double"></i> Mastery Protocol: Tangency Proof</h4>
+                    <p>If $D = 0$ for a Linear-Quadratic system, the line is <strong>Tangent</strong>. This is the foundation of finding 'Instantaneous Velocity' in Calculus.</p>
                 </div>
             </div>
         `
