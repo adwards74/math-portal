@@ -5,6 +5,11 @@ window.CHAPTER_DATA["ch1"] = {
         subtitle: "The Mathematical Laws of Physics",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-gavel"></i> The Supreme Court of Math</h3>
+                    <p>Axioms are like the Constitution. They aren't "facts" we discovered; they are the <strong>agreed-upon rules</strong> that make the entire system of logic possible.</p>
+                </div>
+
                 <h2>I. The Foundation of Reality</h2>
                 <p>Algebra isn't just about $x$; it's about the **Axioms**—the immutable laws that govern how numbers interact. In formal mathematics, we don't assume anything is true unless it's an axiom or proven from one.</p>
                 
@@ -45,6 +50,11 @@ window.CHAPTER_DATA["ch1"] = {
         subtitle: "The Classification of Data",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-microscope"></i> The Resolution of Numbers</h3>
+                    <p>Standard mathematics uses <strong>Real Numbers</strong>, which are like high-definition video—infinitely smooth. Computer science uses <strong>Binary</strong>, which is like pixelated video. Understanding how we 'simplify' reality into numbers is the goal of this section.</p>
+                </div>
+
                 <h2>I. The Hierarchy of Numbers</h2>
                 <p>Mathematical objects are organized into sets based on their properties. This classification allows us to predict how equations will behave before we even solve them.</p>
                 
@@ -84,23 +94,23 @@ window.CHAPTER_DATA["ch1"] = {
         subtitle: "Algorithmic thinking for variable isolation",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-key"></i> The Variable's Prison</h3>
+                    <p>Solving for $x$ is like <strong>Prison Break</strong>. The variable is locked behind layers of operations (Additions, Powers, Divisions). Your job is to pick those locks in REVERSE order of how they were applied.</p>
+                </div>
+
                 <h2>I. The Algorithm of Isolation</h2>
                 <p>Solving for $x$ is not magic; it's a deterministic <strong>algorithm</strong>. Your goal is to simplify the entropy of the equation until only the target variable remains.</p>
                 
                 <div class="glass-card" style="padding: 25px; border-left: 4px solid var(--accent-cyan);">
                     <h4 style="color:var(--accent-cyan);"><i class="fas fa-balance-scale"></i> The Golden Rule of Balance</h4>
                     <p>An equation is a balanced scale. To maintain the <strong>Equality State</strong>, any operation applied to the Left-Hand Side (LHS) must be applied to the Right-Hand Side (RHS).</p>
-                    <p style="margin-top:10px;"><strong>The Inverse Protocol:</strong></p>
-                    <ul class="glass-list">
-                        <li>To undo Addition ($+$), use <strong>Subtraction</strong> ($-$).</li>
-                        <li>To undo Multiplication ($\cdot$), use <strong>Division</strong> ($/$).</li>
-                    </ul>
                 </div>
-            </div>
 
-            <div class="intuition-box glass" style="margin-top:20px;">
-                <h3><i class="fas fa-brain"></i> Socratic Tension</h3>
-                <p>If $2x = 10$, you divide by 2. But why do we only divide? Because division is the <strong>inverse</strong> of the multiplication that is 'locking' your $x$.</p>
+                <div class="mastery-protocol glass">
+                    <h4><i class="fas fa-check-double"></i> Mastery Protocol: The Inverse Audit</h4>
+                    <p>When you solve an equation, check your work by substituting the value back into the <strong>Original Equation</strong>. If the LHS does not equal the RHS, your algorithm had a bug.</p>
+                </div>
             </div>
         `
     },
@@ -112,11 +122,16 @@ window.CHAPTER_DATA["ch1"] = {
                 <h2>I. The Art of Rewriting</h2>
                 <p>In many real-world scenarios, we don't just solve for a number; we solve for a <strong>variable</strong>. A literal equation is an equation that consists mainly of letters.</p>
                 
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-exchange-alt"></i> The Algebra Interface</h3>
+                    <p>A formula is like an **API**. You provide certain inputs, and you get an output. Literal equations allow you to 'rewrite' the API so that a different variable becomes the output.</p>
+                </div>
+
                 <div class="glass-card elite-border">
                     <h4>Isolating the Target Interface</h4>
                     <p>Think of a formula like $V = lwh$ (Volume of a prism). If you know $V, l,$ and $w$, and you need $h$, you rewrite the formula by isolating $h$.</p>
                     <div class="formula-box glass" style="margin-top:15px; text-align:center; font-size:1.2rem;">
-                        $h = \\frac{V}{lw}$
+                        $h = \frac{V}{lw}$
                     </div>
                 </div>
 

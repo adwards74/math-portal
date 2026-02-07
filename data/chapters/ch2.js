@@ -5,6 +5,11 @@ window.CHAPTER_DATA["ch2"] = {
         subtitle: "Mapping the Inputs of the Universe",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-microchip"></i> The Deterministic Machine</h3>
+                    <p>A function is like a **Program**. For a given input, you must get exactly one predictable output. If you get different outputs for the same input, your code (relation) is 'broken' as a function.</p>
+                </div>
+
                 <h2>I. The Formal Definition of a Function</h2>
                 <p>A <strong>Function</strong> $f: A \\rightarrow B$ is a relation that assigns to each element in set $A$ (the Domain) exactly one element in set $B$ (the Codomain).</p>
                 
@@ -61,9 +66,14 @@ window.CHAPTER_DATA["ch2"] = {
                 <h2>I. Slope as an Instantaneous Rate</h2>
                 <p>Slope ($m$) is more than just "rise over run". It is the <strong>Constant Rate of Change</strong>. In Physics, the slope of a Position-Time graph is your <strong>Velocity</strong>.</p>
                 
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-chart-line"></i> The Velocity of Variable</h3>
+                    <p>Slope is the **Speedometer** of a function. It tells you not just where you are, but how fast you are moving towards the next point. If the slope is constant, you are on a predictable path.</p>
+                </div>
+
                 <div class="glass-card" style="padding: 25px; border-left: 4px solid var(--accent-green);">
                     \\[m = \\frac{\\Delta y}{\\Delta x} = \\frac{f(x_2) - f(x_1)}{x_2 - x_1}\\]
-                    <p style="margin-top:10px; font-size:0.9rem; opacity:0.8;">This formula is the precursor to the <strong>Difference Quotient</strong> in Calculus. When you make $\\Delta x$ infinitely small, slope becomes the <em>Derivative</em>.</p>
+                    <p style="margin-top:10px; font-size:0.9rem; opacity:0.8;">This formula is the precursor to the <strong>Difference Quotient</strong> in Calculus.</p>
                 </div>
 
                 <div class="special-note glass" style="margin-top:20px;">

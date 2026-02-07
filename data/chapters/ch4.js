@@ -8,9 +8,14 @@ window.CHAPTER_DATA["ch4"] = {
                 <h2>I. The Anatomy of a Matrix</h2>
                 <p>A <strong>Matrix</strong> $A_{m \\\\times n}$ is a grid of $m$ rows and $n$ columns. We use double-subscript notation $a_{i,j}$ to locate an element at row $i$ and column $j$.</p>
                 
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-layer-group"></i> The Unified Data Block</h3>
+                    <p>A matrix is not just a list of numbers; it's a **State Container**. In AI, a row might be a user's preferences, and a column might be a product's features. A matrix is where these two dimensions of reality meet.</p>
+                </div>
+
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-blue);">
                     <h4 style="color:var(--accent-blue);"><i class="fas fa-th"></i> Matrix Dimension</h4>
-                    <p>Two matrices are <strong>Equal</strong> only if they have the same dimensions and identical corresponding elements. Adding or subtracting matrices is done element-wise, requiring identical dimensions.</p>
+                    <p>Two matrices are <strong>Equal</strong> only if they have the same dimensions and identical corresponding elements.</p>
                 </div>
             </div>
 
@@ -61,6 +66,11 @@ for (int i = 0; i &lt; n; i++) {
         subtitle: "The Scaling Factor of Space",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-compress-arrows-alt"></i> The Magnitude of Space</h3>
+                    <p>The **Determinant** is the "Volume Multiplier" of a matrix. If you have a box of volume 1, and you transform it with Matrix $A$, its new volume will be exactly $\det A$.</p>
+                </div>
+
                 <h2>I. What is a Determinant?</h2>
                 <p>The <strong>Determinant</strong> ($\\\\det A$) is a scalar value that captures the scaling property of a linear transformation.</p>
                 

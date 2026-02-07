@@ -63,10 +63,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "Prove why \\(a \\times 0 = 0\\) using axioms. What is the key property used to split \\(a(0 + 0)\\)?",
-                        options: ["Commutative", "Associative", "Distributive", "Transitive"],
-                        answer: "Distributive",
-                        explanation: "The Distributive Property allows you to say \\(a(0+0) = a\\cdot 0 + a\\cdot 0\\), which is the first step in the formal proof."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "Why is $a \cdot 0 = 0$ in the formal system of Algebra?",
+                                options: ["It's just a definition", "Consequence of Distributive Property", "Inverse Identity", "Associative Law"],
+                                answer: "Consequence of Distributive Property",
+                                explanation: "Formal proofs show that multiplying by zero is a result of distributing across an identity ($0+0$)."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "Solve for $x$: $3(x - 5) = 2x + 4$.",
+                                options: ["x = 19", "x = 9", "x = 1", "x = 11"],
+                                answer: "x = 19",
+                                explanation: "$3x - 15 = 2x + 4 \rightarrow x = 19$."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Identify the error in this sequence: $|x + 5| = -2 \rightarrow x + 5 = -2$ or $x + 5 = 2$.",
+                                answer: "The equation has no solution because the absolute value (distance) cannot be negative.",
+                                template: "The error is... Therefore, the solution set is..."
+                            }
+                        ]
                     }
                 },
                 {
@@ -119,10 +138,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "In the transformation \\(y = a \\cdot f(x - h) + k\\), which parameter handles the horizontal shift?",
-                        options: ["a", "h", "k", "f"],
-                        answer: "h",
-                        explanation: "The value \\(h\\) inside the function argument shifts the graph left or right. Remember: it's \\(x - h\\), so if \\(h=3\\), it shifts RIGHT by 3."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "If $f(x)$ is a function, how many unique outputs can it have for a single input $x$?",
+                                options: ["Zero", "Exactly One", "At least One", "Infinite"],
+                                answer: "Exactly One",
+                                explanation: "Determinism is the core of functions. One input must map to exactly one output."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "Describe the shift in $y = |x - 4| + 5$.",
+                                options: ["Left 4, Up 5", "Right 4, Up 5", "Right 4, Down 5", "Left 4, Down 5"],
+                                answer: "Right 4, Up 5",
+                                explanation: "Horizontal shifts are opposite ($x-h$), vertical shifts are direct ($+k$)."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain why $f(x) = x^2$ is not invertible on the domain of all real numbers.",
+                                answer: "It fails the horizontal line test; multiple inputs (like 2 and -2) map to the same output (4).",
+                                template: "Because the function maps... to... it is not... and thus preserves no inverse."
+                            }
+                        ]
                     }
                 },
                 {
@@ -171,10 +209,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "In Linear Programming, where does the maximum or minimum value of the objective function always occur?",
-                        options: ["Center of the region", "Origin (0,0)", "Vertices of feasible region", "Y-intercept"],
-                        answer: "Vertices of feasible region",
-                        explanation: "The Vertex Principle states that optimization occurs at the corners of the feasible region shaded by the inequalities."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "If a system of two lines is 'Consistent and Dependent', what does this mean geometrically?",
+                                options: ["Lines are parallel", "Lines intersect at one point", "Lines are identical/overlap", "Lines are perpendicular"],
+                                answer: "Lines are identical/overlap",
+                                explanation: "Dependent systems mean the equations are redundant, representing the same line."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "In Linear Programming, why do we only check the vertices of the feasible region?",
+                                options: ["Because it's easier", "Maximum/Minimum always occurs at a corner", "Inside points are not allowed", "Boundaries don't matter"],
+                                answer: "Maximum/Minimum always occurs at a corner",
+                                explanation: "The Vertex Principle states that optimization occurs at the boundaries/corners of constraints."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain what an 'Inconsistent' system represents in terms of real-world constraints.",
+                                answer: "It represents contradictory constraints (e.g., $x>10$ and $x<5$) that can never be satisfied simultaneously.",
+                                template: "An inconsistent system implies... which means that the constraints... therefore..."
+                            }
+                        ]
                     }
                 },
                 {
@@ -229,10 +286,29 @@ const MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "If the determinant of a matrix is 0, what does this tell us about its inverse?",
-                        options: ["Inverse is also 0", "Inverse is twice as large", "No inverse exists", "Inverse is its transpose"],
-                        answer: "No inverse exists",
-                        explanation: "A matrix with det=0 is 'singular' and has collapsed space into a lower dimension, making the transformation irreversible."
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "If the determinant of a matrix is 0, what does this tell us about its inverse?",
+                                options: ["Inverse is zero", "Determinant is irrelevant", "No unique inverse exists", "Inverse is its transpose"],
+                                answer: "No unique inverse exists",
+                                explanation: "A zero determinant means the transformation has collapsed space, making it irreversible."
+                            },
+                            {
+                                title: "Level 2: Drill",
+                                question: "Compute the determinant of $M = \\begin{pmatrix} 3 & 2 \\\\ 1 & 4 \\end{pmatrix}$.",
+                                options: ["10", "14", "12", "7"],
+                                answer: "10",
+                                explanation: "$(3)(4) - (2)(1) = 12 - 2 = 10$."
+                            },
+                            {
+                                title: "Level 3: Mastery",
+                                type: "justification",
+                                question: "Explain why matrix multiplication $AB$ is not equal to $BA$ using the concept of transformations.",
+                                answer: "Transformations like rotating then shifting produce different results than shifting then rotating.",
+                                template: "Since matrices represent... changing the order... results in... just like in..."
+                            }
+                        ]
                     }
                 },
                 {

@@ -8,6 +8,11 @@ window.CHAPTER_DATA["ch3"] = {
                 <h2>I. The Classification of Systems</h2>
                 <p>A system of linear equations doesn't always have one solution. We classify systems based on the **Existence** and **Uniqueness** of their intersection.</p>
                 
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-crosshairs"></i> The Uniqueness of State</h3>
+                    <p>A system of equations is a set of <strong>logical constraints</strong>. If only one solution exists, your system is perfectly defined. If none exist, your constraints are contradictory. If infinite exist, your code is redundant.</p>
+                </div>
+
                 <table class="glass-table" style="width:100%; margin-top:15px;">
                     <tr><th>Classification</th><th>Geometry</th><th>Solutions</th></tr>
                     <tr><td><strong>Consistent Independent</strong></td><td>Lines Intersect</td><td>One Unique Solution</td></tr>
@@ -54,9 +59,14 @@ window.CHAPTER_DATA["ch3"] = {
                 <h2>I. Maximizing under Constraints</h2>
                 <p><strong>Linear Programming</strong> is a method used to find the optimal value (maximum or minimum) of an objective function, subject to a set of linear inequalities known as <strong>Constraints</strong>.</p>
                 
+                <div class="intuition-box glass">
+                    <h3><i class="fas fa-mountain"></i> The Peak Principle</h3>
+                    <p>Optimization is like finding the highest point on a mountain range, but you are only allowed to walk in a fenced-in yard (Feasible Region). The math proves that the 'highest peak' will always be one of the fence's corners.</p>
+                </div>
+
                 <div class="proof-box glass" style="border-left-color: var(--accent-green);">
                     <h4>The Vertex Principle</h4>
-                    <p>The **Fundamental Theorem of Linear Programming** states that if an optimal solution exists, it MUST occur at one of the **Vertices** (corners) of the feasible region. This drastically reduces our search area from an infinite plane to just a few points.</p>
+                    <p>The **Fundamental Theorem of Linear Programming** states that if an optimal solution exists, it MUST occur at one of the **Vertices** (corners) of the feasible region.</p>
                 </div>
 
                 <div class="example-box glass" style="margin-top:20px;">
