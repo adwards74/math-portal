@@ -41,7 +41,7 @@ window.CHAPTER_DATA["ch14"] = {
                     <ol class="glass-list">
                         <li><strong>Sine/Cosine Reduction:</strong> Convert Tangent, Secant, etc. into their S/C components.</li>
                         <li><strong>Algebraic Unification:</strong> Use common denominators to combine fractions.</li>
-                        <li><strong>Pattern Matching:</strong> Look for $a^2 - b^2$ or $1 - \sin^2 \theta$ to substitute identities.</li>
+                        <li><strong>Pattern Matching:</strong> Look for $a^2 - b^2$ or $1 - \\sin^2 \\theta$ to substitute identities.</li>
                     </ol>
                 </div>
             </div>
