@@ -110,17 +110,43 @@ window.UIEngine = (function () {
     }
 
     function renderQuizBox(quiz, subject, unitIdx, unitTitle) {
-        return `
-            <div class="quiz-box glass" style="margin-top:15px; padding:20px; border-radius:12px;">
-                <h4 style="color:${subject.color}; margin-bottom:10px;"><i class="fas fa-question-circle"></i> Concept Check</h4>
-                <p style="margin-bottom:15px; font-size:0.95rem;">${quiz.question}</p>
-                <div class="quiz-options" style="display:grid; gap:8px;">
-                    ${quiz.options.map(opt => `
-                        <button class="glass quiz-opt" style="text-align:left; padding:10px 15px; font-size:0.9rem;" 
-                                onclick="window.checkQuizAnswer(${unitIdx}, '${opt.replace(/'/g, "\\'")}', '${quiz.answer.replace(/'/g, "\\'")}', '${quiz.explanation.replace(/'/g, "\\'")}', '${unitTitle.replace(/'/g, "\\'")}', '${quiz.question.replace(/'/g, "\\'")}')">
-                            ${opt}
+        // Detect if this is a multi-level quiz (Elite 4.0) or legacy
+        const isMultiLevel = quiz.levels && Array.isArray(quiz.levels);
+        const currentLevel = isMultiLevel ? quiz.levels[0] : quiz;
+        
+        let levelSelectorHtml = '';
+        if (isMultiLevel) {
+            levelSelectorHtml = `
+                <div class="level-selector" style="display:flex; gap:10px; margin-bottom:15px;">
+                    ${quiz.levels.map((lvl, lIdx) => `
+                        <button class="glass level-btn ${lIdx === 0 ? 'active' : ''}" 
+                                style="padding:5px 12px; font-size:0.75rem; border-radius:30px; border-color:${subject.color}40;"
+                                onclick="window.switchQuizLevel(${unitIdx}, ${lIdx}, '${subject.id}')">
+                            ${lvl.title}
                         </button>
                     `).join('')}
+                </div>
+            `;
+        }
+
+        return `
+            <div class="quiz-box glass" id="quiz-container-${unitIdx}" style="margin-top:15px; padding:20px; border-radius:12px;">
+                <h4 style="color:${subject.color}; margin-bottom:10px;"><i class="fas fa-question-circle"></i> Concept Check</h4>
+                ${levelSelectorHtml}
+                <div class="quiz-content" id="quiz-content-${unitIdx}">
+                    <p style="margin-bottom:15px; font-size:0.95rem;">${currentLevel.question}</p>
+                    <div class="quiz-options" style="display:grid; gap:8px;">
+                        ${currentLevel.options ? currentLevel.options.map(opt => `
+                            <button class="glass quiz-opt" style="text-align:left; padding:10px 15px; font-size:0.9rem;" 
+                                    onclick="window.checkQuizAnswer(${unitIdx}, '${opt.replace(/'/g, "\\'")}', '${currentLevel.answer.replace(/'/g, "\\'")}', '${currentLevel.explanation.replace(/'/g, "\\'")}', '${unitTitle.replace(/'/g, "\\'")}', '${currentLevel.question.replace(/'/g, "\\'")}')">
+                                ${opt}
+                            </button>
+                        `).join('') : `
+                            <div class="glass" style="padding:15px; font-size:0.9rem; font-style:italic; opacity:0.7;">
+                                This level requires a manual justification in the Graduation Challenge.
+                            </div>
+                        `}
+                    </div>
                 </div>
                 <div id="feedback-${unitIdx}" style="margin-top:15px; display:none;"></div>
             </div>
@@ -146,6 +172,43 @@ window.UIEngine = (function () {
     window.renderSubjectGrid = renderSubjectGrid;
     window.showSubjectDetail = showSubjectDetail;
     window.showDashboard = showDashboard;
+    
+    window.switchQuizLevel = function(unitIdx, levelIdx, subjectId) {
+        const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
+        const unit = subject.units[unitIdx];
+        const quiz = unit.quiz;
+        const level = quiz.levels[levelIdx];
+        
+        const container = document.getElementById(`quiz-content-${unitIdx}`);
+        const feedback = document.getElementById(`feedback-${unitIdx}`);
+        
+        // Update active button state
+        const buttons = document.querySelectorAll(`#quiz-container-${unitIdx} .level-btn`);
+        buttons.forEach((btn, idx) => {
+            if (idx === levelIdx) btn.classList.add('active');
+            else btn.classList.remove('active');
+        });
+
+        feedback.style.display = 'none';
+        
+        container.innerHTML = `
+            <p style="margin-bottom:15px; font-size:0.95rem;">${level.question}</p>
+            <div class="quiz-options" style="display:grid; gap:8px;">
+                ${level.options ? level.options.map(opt => `
+                    <button class="glass quiz-opt" style="text-align:left; padding:10px 15px; font-size:0.9rem;" 
+                            onclick="window.checkQuizAnswer(${unitIdx}, '${opt.replace(/'/g, "\\'")}', '${level.answer.replace(/'/g, "\\'")}', '${level.explanation.replace(/'/g, "\\'")}', '${unit.title.replace(/'/g, "\\'")}', '${level.question.replace(/'/g, "\\'")}')">
+                        ${opt}
+                    </button>
+                `).join('') : `
+                    <div class="glass" style="padding:15px; font-size:0.9rem; font-style:italic; opacity:0.7;">
+                        This level requires a manual justification in the Graduation Challenge.
+                    </div>
+                `}
+            </div>
+        `;
+        
+        if (window.MathJax) window.MathJax.typesetPromise();
+    };
 
     return {
         renderSubjectGrid,

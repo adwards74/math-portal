@@ -518,25 +518,35 @@ document.addEventListener('DOMContentLoaded', () => {
     window.showUnitQuiz = (subjectId, unitIdx) => {
         const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
         const unit = subject.units[unitIdx];
+        const quiz = unit.quiz;
+        const isMultiLevel = quiz.levels && Array.isArray(quiz.levels);
+
+        // For multi-level, we use the last level (Level 3: Mastery) as the graduation challenge
+        const targetLevel = isMultiLevel ? quiz.levels[quiz.levels.length - 1] : quiz;
         const appContainer = document.getElementById('dashboard-view');
 
         appContainer.innerHTML = `
             <div class="quiz-overlay fadeIn">
-                <div class="quiz-standalone-card glass animate__animated animate__zoomIn">
+                <div class="quiz-standalone-card glass animate__animated animate__zoomIn" style="max-width:600px;">
                     <span class="chapter-badge">${unit.title}</span>
                     <h2 class="gradient-text">Graduation Challenge</h2>
-                    <p style="opacity:0.7; margin-bottom:30px;">Complete this concept check to finalize your mastery of this chapter.</p>
+                    <p style="opacity:0.7; margin-bottom:30px;">Complete this final mastery check to finalize your chapter credits.</p>
                     
                     <div class="question-box">
-                        <p>${unit.quiz.question}</p>
+                        <p>${targetLevel.question}</p>
                     </div>
                     
                     <div class="options-grid">
-                        ${unit.quiz.options.map(opt => `
+                        ${targetLevel.options ? targetLevel.options.map(opt => `
                             <button class="glass quiz-btn" onclick="window.handleFinalQuizAnswer('${subjectId}', ${unitIdx}, '${opt.replace(/'/g, "\\'")}')">
                                 ${opt}
                             </button>
-                        `).join('')}
+                        `).join('') : `
+                            <div class="justification-box" style="margin-top:20px;">
+                                <textarea id="justification-input" class="glass-input" style="width:100%; height:100px; padding:15px; margin-bottom:15px;" placeholder="${targetLevel.template || 'Explain your reasoning...'}"></textarea>
+                                <button class="glass next-btn" style="width:100%;" onclick="window.handleJustificationSubmit('${subjectId}', ${unitIdx})">SUBMIT MASTERY LOGIC</button>
+                            </div>
+                        `}
                     </div>
                     
                     <div id="final-quiz-feedback" style="margin-top:30px; font-weight:600;"></div>
@@ -547,20 +557,47 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.MathJax) MathJax.typesetPromise();
     };
 
-    window.handleFinalQuizAnswer = (subjectId, unitIdx, selected) => {
+    window.handleJustificationSubmit = (subjectId, unitIdx) => {
         const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
         const unit = subject.units[unitIdx];
+        const targetLevel = unit.quiz.levels[unit.quiz.levels.length - 1];
+        const input = document.getElementById('justification-input').value;
         const feedback = document.getElementById('final-quiz-feedback');
 
-        const isCorrect = selected === unit.quiz.answer;
+        if (!input.trim()) return;
 
         saveQuizAttempt({
             chapter: unit.title,
-            question: unit.quiz.question,
+            question: targetLevel.question,
+            userAnswer: "[Justification Provided]",
+            correctAnswer: targetLevel.answer,
+            correct: true, // Justification is always marked complete for now
+            explanation: targetLevel.answer,
+            date: new Date().toLocaleString()
+        });
+
+        feedback.style.color = "var(--accent-green)";
+        feedback.innerHTML = `<i class="fas fa-check-circle"></i> Reasoning Logged. Mastery Approved.`;
+        setTimeout(() => { window.showSubjectDetail(subjectId); }, 2000);
+    };
+
+    window.handleFinalQuizAnswer = (subjectId, unitIdx, selected) => {
+        const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
+        const unit = subject.units[unitIdx];
+        const quiz = unit.quiz;
+        const isMultiLevel = quiz.levels && Array.isArray(quiz.levels);
+        const targetLevel = isMultiLevel ? quiz.levels[quiz.levels.length - 1] : quiz;
+
+        const feedback = document.getElementById('final-quiz-feedback');
+        const isCorrect = selected === targetLevel.answer;
+
+        saveQuizAttempt({
+            chapter: unit.title,
+            question: targetLevel.question,
             userAnswer: selected,
-            correctAnswer: unit.quiz.answer,
+            correctAnswer: targetLevel.answer,
             correct: isCorrect,
-            explanation: unit.quiz.explanation,
+            explanation: targetLevel.explanation || targetLevel.answer,
             date: new Date().toLocaleString()
         });
 
