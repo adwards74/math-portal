@@ -12,7 +12,8 @@ const MATH_DATA = {
                 { name: "TJ3 Algebra 2 Syllabus", path: "curriculum/algebra2/syllabus.pdf" },
                 { name: "Chapter 1-5 Formula Sheet", path: "curriculum/algebra2/formulas.pdf" },
                 { name: "Exam: Functions Introduction", path: "curriculum/algebra2/Alg2 - Functions Introduction.pdf" },
-                { name: "Exam: Functions Composition", path: "curriculum/algebra2/Algbera Two - Functions Composition.pdf" }
+                { name: "Exam: Functions Composition", path: "curriculum/algebra2/Algbera Two - Functions Composition.pdf" },
+                { name: "Regents 2025: Part 1 (Q1-24) Mastery", path: "curriculum/algebra2/algtwo-82025-exam.pdf" }
             ],
             units: [
                 {
@@ -863,7 +864,8 @@ const MATH_DATA = {
                         { name: "15.2: Elite Modeling Archive", url: "lesson:final:final-u15-2" },
                         { name: "15.3: Competition Logic (AMC/AIME)", url: "lesson:final:final-u15-3" },
                         { name: "15.4: 2024 Algebra 2 Mock Exam A", url: "lesson:final:final-u15-4" },
-                        { name: "15.5: 2025 Predictive Master Test", url: "lesson:final:final-u15-5" }
+                        { name: "15.5: 2025 Predictive Master Test", url: "lesson:final:final-u15-5" },
+                        { name: "🏆 2025 Regents Mastery Pack (Part 1)", url: "curriculum/algebra2/algtwo-82025-exam.pdf", type: "pdf" }
                     ],
                     examples: [
                         {
