@@ -131,7 +131,7 @@ window.CHAPTER_DATA["ch1"] = {
                     <h4>Isolating the Target Interface</h4>
                     <p>Think of a formula like $V = lwh$ (Volume of a prism). If you know $V, l,$ and $w$, and you need $h$, you rewrite the formula by isolating $h$.</p>
                     <div class="formula-box glass" style="margin-top:15px; text-align:center; font-size:1.2rem;">
-                        $h = \frac{V}{lw}$
+                        $h = \\frac{V}{lw}$
                     </div>
                 </div>
 

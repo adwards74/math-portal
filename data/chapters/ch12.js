@@ -63,7 +63,7 @@ window.CHAPTER_DATA["ch12"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Gaussian Distribution</h2>
-                <p>In a **Normal Distribution**, data clusters symmetrically around the mean ($\\\\mu$). The spread is controlled by the **Standard Deviation ($\\\\sigma$)**.</p>
+                <p>In a **Normal Distribution**, data clusters symmetrically around the mean ($\mu$). The spread is controlled by the **Standard Deviation ($\sigma$)**.</p>
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-blue);">
                     <h4>The Empirical Rule (68-95-99.7)</h4>

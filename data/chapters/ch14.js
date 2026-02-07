@@ -15,16 +15,16 @@ window.CHAPTER_DATA["ch14"] = {
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-orange);">
                     <ul class="glass-list">
-                        <li><strong>Primary:</strong> $\sin^2 \theta + \cos^2 \theta = 1$</li>
-                        <li><strong>Tangent-Secant:</strong> $1 + \tan^2 \theta = \sec^2 \theta$</li>
-                        <li><strong>Cotangent-Cosecant:</strong> $1 + \cot^2 \theta = \csc^2 \theta$</li>
+                        <li><strong>Primary:</strong> $\\sin^2 \\theta + \\cos^2 \\theta = 1$</li>
+                        <li><strong>Tangent-Secant:</strong> $1 + \\tan^2 \\theta = \\sec^2 \\theta$</li>
+                        <li><strong>Cotangent-Cosecant:</strong> $1 + \\cot^2 \\theta = \\csc^2 \\theta$</li>
                     </ul>
                 </div>
             </div>
 
             <div class="tj-edge glass" style="margin-top:20px;">
                 <h4><i class="fas fa-microchip"></i> CS: Computational Reduction</h4>
-                <p>In low-level graphics code, calculating two trig functions is twice as slow as one. Using these identities, we can compute $\cos \theta$ using only the stored value of $\sin \theta$ through a simple square root and subtraction. This <strong>Algebraic Bypass</strong> is a staple of efficient engine design.</p>
+                <p>In low-level graphics code, calculating two trig functions is twice as slow as one. Using these identities, we can compute $\\cos \\theta$ using only the stored value of $\\sin \\theta$ through a simple square root and subtraction. This <strong>Algebraic Bypass</strong> is a staple of efficient engine design.</p>
             </div>
         `
     },
@@ -53,13 +53,13 @@ window.CHAPTER_DATA["ch14"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. Sum & Difference Architecture</h2>
-                \[\sin(A \pm B) = \sin A \cos B \pm \cos A \sin B\]
-                \[\cos(A \pm B) = \cos A \cos B \mp \sin A \sin B\]
+                \\[\\sin(A \\pm B) = \\sin A \\cos B \\pm \\cos A \\sin B\\]
+                \\[\\cos(A \\pm B) = \\cos A \\cos B \\mp \\sin A \\sin B\\]
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-magenta);">
                     <h4>The Double Angle Shortcut</h4>
-                    <p>$\sin(2\theta) = 2 \sin \theta \cos \theta$</p>
-                    <p>$\cos(2\theta) = \cos^2 \theta - \sin^2 \theta$</p>
+                    <p>$\\sin(2\\theta) = 2 \\sin \\theta \\cos \\theta$</p>
+                    <p>$\\cos(2\\theta) = \\cos^2 \\theta - \\sin^2 \\theta$</p>
                 </div>
             </div>
         `
@@ -70,12 +70,12 @@ window.CHAPTER_DATA["ch14"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Infinite Solution Space</h2>
-                <p>Because trig functions are periodic, one equation usually has infinite solutions. We must distinguish between solutions in a **Specific Interval** ($[0, 2\pi)$) and the **General Solution**.</p>
+                <p>Because trig functions are periodic, one equation usually has infinite solutions. We must distinguish between solutions in a **Specific Interval** ($[0, 2\\pi)$) and the **General Solution**.</p>
                 
                 <div class="proof-box glass">
                     <h4>The Periodicity Factor</h4>
-                    <p>If $\sin x = 1/2$, the primary solutions are $x = \pi/6$ and $x = 5\pi/6$.</p>
-                    <p style="margin-top:10px;">The <strong>General Solution</strong> adds the "loop" factor: $x = \pi/6 + 2n\pi$ and $5\pi/6 + 2n\pi$ (where $n$ is any integer).</p>
+                    <p>If $\\sin x = 1/2$, the primary solutions are $x = \\pi/6$ and $x = 5\\pi/6$.</p>
+                    <p style="margin-top:10px;">The <strong>General Solution</strong> adds the "loop" factor: $x = \\pi/6 + 2n\\pi$ and $5\\pi/6 + 2n\\pi$ (where $n$ is any integer).</p>
                 </div>
             </div>
         `
@@ -95,7 +95,7 @@ window.CHAPTER_DATA["ch14"] = {
                     </div>
                     <div class="glass-card" style="padding:15px;">
                         <h5 style="color:var(--accent-blue);">Law of Cosines</h5>
-                        <p style="font-size:0.85rem; opacity:0.8;">Best for SAS or SSS. A generalization of Pythagoras ($c^2 = a^2 + b^2 - 2ab \cos C$).</p>
+                        <p style="font-size:0.85rem; opacity:0.8;">Best for SAS or SSS. A generalization of Pythagoras ($c^2 = a^2 + b^2 - 2ab \\cos C$).</p>
                     </div>
                 </div>
             </div>
