@@ -16,7 +16,7 @@ window.CHAPTER_DATA["ch11"] = {
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-magenta);">
                     <h4>The Fibonacci Evolution</h4>
                     <p>$a_n = a_{n-1} + a_{n-2}$, with $a_1=1, a_2=1$.</p>
-                    <p style="margin-top:10px;">As $n \\\\to \\\\infty$, the ratio of consecutive terms converges to the **Golden Ratio ($\\\\phi \\\\approx 1.618$)**. This pattern appears in everything from nautilus shells to stock market wave analysis.</p>
+                    <p style="margin-top:10px;">As $n \\to \\infty$, the ratio of consecutive terms converges to the **Golden Ratio ($\\phi \\approx 1.618$)**. This pattern appears in everything from nautilus shells to stock market wave analysis.</p>
                 </div>
             </div>
 
