@@ -869,3 +869,97 @@ em {
         opacity: 0.8;
     }
 }
+
+/* Mobile & Tablet Responsive */
+.mobile-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 200;
+}
+
+.mobile-header .logo {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+#menu-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        position: fixed;
+        left: -280px;
+        top: 0;
+        bottom: 0;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        background: rgba(13, 17, 23, 0.95);
+        backdrop-filter: blur(20px);
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .mobile-header {
+        display: flex;
+    }
+
+    .app-container {
+        padding-top: 60px;
+    }
+
+    .content-area {
+        padding: 20px;
+    }
+
+    .top-header {
+        display: none;
+    }
+
+    .subject-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .subject-card {
+        padding: 20px;
+    }
+
+    .lesson-nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .quiz-standalone-card {
+        padding: 30px 20px;
+    }
+
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+}
