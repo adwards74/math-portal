@@ -643,6 +643,7 @@ window.TutorEngine = (function () {
     window.triggerCelebration = triggerCelebration;
     window.buildNeuralMap = () => KnowledgeMap.build();
     window.summarizeContent = (key) => KnowledgeMap.summarize(key);
+    window.getConceptMatrix = (topic) => KnowledgeMap.getConceptMatrix(topic);
 
     return {
         getSocraticAdvice,
@@ -656,6 +657,7 @@ window.TutorEngine = (function () {
         getWeakTopics,
         triggerCelebration,
         buildNeuralMap: () => KnowledgeMap.build(),
-        summarizeContent: (key) => KnowledgeMap.summarize(key)
+        summarizeContent: (key) => KnowledgeMap.summarize(key),
+        getConceptMatrix: (topic) => KnowledgeMap.getConceptMatrix(topic)
     };
 })();
