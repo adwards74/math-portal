@@ -1190,14 +1190,14 @@ const MATH_DATA = {
                         levels: [
                             {
                                 title: "Level 1: Intuition",
-                                question: "What does the limit $\lim_{x \to \infty} \frac{1}{x}$ equal?",
-                                options: ["1", "$\infty$", "0", "Undefined"],
+                                question: "What does the limit $\\\\lim_{x \\\\to \\\\infty} \\\\frac{1}{x}$ equal?",
+                                options: ["1", "$\\\\infty$", "0", "Undefined"],
                                 answer: "0",
                                 explanation: "As the denominator gets infinitely large, the value of the fraction gets infinitely small, approaching 0."
                             },
                             {
                                 title: "Level 2: Drill",
-                                question: "Evaluate $\lim_{h \to 0} (6 + h)$.",
+                                question: "Evaluate $\\\\lim_{h \\\\to 0} (6 + h)$.",
                                 options: ["0", "6", "h", "Undefined"],
                                 answer: "6",
                                 explanation: "Direct substitution: $6 + 0 = 6$."
