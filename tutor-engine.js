@@ -11,6 +11,16 @@ window.TutorEngine = (function () {
     const KnowledgeMap = {
         index: {},
         isMapped: false,
+        conversationBuffer: [], // Neo 5.1: Context Buffer
+
+        addToBuffer(query, response) {
+            this.conversationBuffer.push({ query, response });
+            if (this.conversationBuffer.length > 3) this.conversationBuffer.shift();
+        },
+
+        getBufferContext() {
+            return this.conversationBuffer.map(b => b.query).join(" ");
+        },
 
         build() {
             if (this.isMapped) return;
@@ -78,13 +88,21 @@ window.TutorEngine = (function () {
             const lowerQuery = query.toLowerCase().trim();
             const results = [];
 
-            // Exact or Partial Keyword Match
+            // Neo 5.1: Weighted Search Logic
             for (const [key, items] of Object.entries(this.index)) {
-                if (key.includes(lowerQuery) || lowerQuery.includes(key)) {
-                    results.push(...items);
+                let score = 0;
+                if (key === lowerQuery) score = 10; // Exact match
+                else if (key.includes(lowerQuery) || lowerQuery.includes(key)) score = 5; // Partial match
+
+                if (score > 0) {
+                    items.forEach(item => {
+                        results.push({ ...item, score });
+                    });
                 }
             }
-            return results;
+
+            // Sort by score descending
+            return results.sort((a, b) => b.score - a.score);
         },
 
         summarize(lessonKey) {
@@ -150,6 +168,16 @@ window.TutorEngine = (function () {
         "shsat": "The Specialized High Schools Admissions Test (SHSAT) is the portal to NYC's elite schools. Focus on Math precision and Reading speed. Check the 'SHSAT Review' link in the sidebar for my targeted YouTube strategies!",
         "tj": "Thomas Jefferson High School for Science and Technology (TJHSST) prep requires mastery of Algebra 2 and strong problem-solving 'intuition'. Use our 'TJ Strategy' dashboard for the full elite roadmap.",
         "test": "Standardized tests aren't just about math; they're about 'Mental Endurance'. Practice with a timer and always audit your mistakes in the Review Hub!"
+    };
+
+    // Neo 5.1: Prerequisite Roadmap
+    const PREREQUISITE_MAP = {
+        "quadratic": ["linear", "axiom"],
+        "polynomial": ["quadratic", "factor"],
+        "logarithm": ["exponential"],
+        "trig": ["radian", "geometry"],
+        "calculus": ["limit", "function"],
+        "complex": ["radical", "number-line"]
     };
 
     // ========================================
@@ -236,13 +264,20 @@ window.TutorEngine = (function () {
         }
 
         const lowerQuery = query.toLowerCase().trim();
+        const context = KnowledgeMap.getBufferContext ? KnowledgeMap.getBufferContext() : "";
 
-        // Neo 5.0 Neural Search
-        const neuralMatches = KnowledgeMap.search(lowerQuery);
+        // Neo 5.1 Contextual follow-up check
+        let followUpQuery = lowerQuery;
+        if (lowerQuery.includes("more") || lowerQuery.includes("explain") || lowerQuery.includes("example")) {
+            followUpQuery = (context + " " + lowerQuery).trim();
+        }
 
+        // Neo 5.0/5.1 Neural Search
+        const neuralMatches = KnowledgeMap.search ? KnowledgeMap.search(followUpQuery) : [];
+
+        let response = "";
         if (neuralMatches.length > 0) {
             const bestMatch = neuralMatches[0];
-            let response = "";
 
             // Layer 1: Intuition
             if (bestMatch.insight) {
@@ -251,7 +286,7 @@ window.TutorEngine = (function () {
                 response += `💡 **Intuition:** ${HINT_DATABASE[lowerQuery]}\n\n`;
             }
 
-            // Layer 2: Mechanism (pull from content if available)
+            // Layer 2: Mechanism
             if (bestMatch.type === 'content' && bestMatch.subtitle) {
                 response += `⚙️ **Mechanism:** This relates to *${bestMatch.subtitle}*. `;
                 if (bestMatch.title.includes("&")) {
@@ -261,7 +296,13 @@ window.TutorEngine = (function () {
                 response += `⚙️ **Mechanism:** This is a major unit covering: ${bestMatch.topics.join(', ')}. `;
             }
 
-            // Layer 3: Edge Cases / Socratic Inquiry
+            // Neo 5.1: Prerequisite Intelligence
+            const prereqs = PREREQUISITE_MAP[lowerQuery] || [];
+            if (prereqs.length > 0) {
+                response += `\n\n🛡️ **Foundation Check:** To master this, ensure you are comfortable with *${prereqs.join(' and ')}*. Would you like a quick review?`;
+            }
+
+            // Layer 3: Socratic Inquiry
             const inquiries = [
                 "How does this relate to your previous mental model?",
                 "What happens if we break the symmetry of this expression?",
@@ -271,6 +312,7 @@ window.TutorEngine = (function () {
             ];
             response += `\n\n🤔 **Neo's Inquiry:** ${inquiries[Math.floor(Math.random() * inquiries.length)]}`;
 
+            if (KnowledgeMap.addToBuffer) KnowledgeMap.addToBuffer(lowerQuery, response);
             return response;
         }
 
