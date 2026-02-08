@@ -251,7 +251,7 @@
             </div>
 
             <!-- Chat Input (Phase 3) -->
-            <div class="tutor-chat-input" style="margin-top:auto; padding-top:15px;">
+            <div class="tutor-chat-input" style="padding-top:10px; border-top: 1px solid rgba(255,255,255,0.05);">
                 <div style="display:flex; gap:8px;">
                     <input type="text" id="tutor-chat-input" class="glass" placeholder="Ask about any topic..."
                         style="flex:1; padding:10px 15px; border-radius:12px; background:rgba(0,0,0,0.3); border:1px solid rgba(0,210,255,0.2); color:white; font-size:0.85rem;"
@@ -268,15 +268,17 @@
                 </div>
             </div>
 
-            <div class="tutor-footer" style="margin-top:15px; display:flex; gap:10px; flex-wrap:wrap;">
-                <button class="glass tutor-btn" onclick="window.askTutorTip()" style="flex:1; min-width:80px;">
+            <div class="tutor-footer" style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+                <button class="glass tutor-btn" onclick="window.askTutorTip()"
+                    style="flex:1; min-width:80px; padding: 10px; font-size: 0.8rem;">
                     <i class="fas fa-lightbulb"></i> Get Trick
                 </button>
-                <button class="glass tutor-btn" onclick="window.summarizeLesson()" style="flex:1; min-width:80px;">
+                <button class="glass tutor-btn" onclick="window.summarizeLesson()"
+                    style="flex:1; min-width:80px; padding: 10px; font-size: 0.8rem;">
                     <i class="fas fa-list-ul"></i> Summarize
                 </button>
                 <button class="glass tutor-btn" onclick="window.showNeuralMap()"
-                    style="flex:100%; margin-top:5px; border-color:var(--accent-magenta);">
+                    style="flex:100%; margin-top:5px; border-color:var(--accent-magenta); padding: 10px; font-size: 0.8rem;">
                     <i class="fas fa-project-diagram"></i> Neural Logic Map
                 </button>
             </div>
