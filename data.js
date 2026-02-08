@@ -1,6 +1,57 @@
 const MATH_DATA = {
     subjects: [
         {
+            id: "foundation",
+            title: "Ch0: Foundation Bridge",
+            code: "PRE-ALG",
+            description: "8학년 기초 수학 복습 - 분수, 연산 순서, 기초 방정식, 좌표평면. Algebra 2로 가기 전 필수 기초!",
+            color: "#38ef7d",
+            icon: "fas fa-bridge",
+            intuition: "기초가 튼튼해야 높이 쌓아 올릴 수 있습니다. 이 챕터를 먼저 완료하세요!",
+            local_resources: [],
+            difficulty: "basic",
+            units: [
+                {
+                    title: "Ch 0: Pre-Algebra Foundations",
+                    insight: "Algebra 2에 들어가기 전 반드시 마스터해야 할 기초 개념들입니다.",
+                    topics: ["분수 연산", "PEMDAS", "기초 방정식", "좌표평면"],
+                    lectures: [
+                        { name: "0.1: 분수와 숫자 감각", url: "lesson:foundation:ch0-1", insight: "분수는 비율, 확률, 비례의 언어입니다!" },
+                        { name: "0.2: PEMDAS 연산 순서", url: "lesson:foundation:ch0-2" },
+                        { name: "0.3: 미지수와 방정식 기초", url: "lesson:foundation:ch0-3" },
+                        { name: "0.4: 좌표평면과 그래프", url: "lesson:foundation:ch0-4" },
+                        { name: "📝 Ch0 복습 도전", url: "lesson:foundation:ch0-rev" }
+                    ],
+                    examples: [],
+                    quiz: {
+                        levels: [
+                            {
+                                title: "Level 1: 분수 연산",
+                                question: "$\\frac{1}{2} + \\frac{1}{3}$의 값은?",
+                                options: ["$\\frac{2}{5}$", "$\\frac{5}{6}$", "$\\frac{1}{6}$", "$\\frac{2}{6}$"],
+                                answer: "$\\frac{5}{6}$",
+                                explanation: "통분: $\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}$"
+                            },
+                            {
+                                title: "Level 2: PEMDAS",
+                                question: "$3 + 2 \\times 4^2$ = ?",
+                                options: ["80", "35", "44", "100"],
+                                answer: "35",
+                                explanation: "지수 먼저: $4^2=16$, 그 다음 곱셈: $2 \\times 16=32$, 마지막 덧셈: $3+32=35$"
+                            },
+                            {
+                                title: "Level 3: 방정식",
+                                question: "$2x + 5 = 13$일 때 $x$의 값은?",
+                                options: ["x = 4", "x = 9", "x = 6", "x = 3"],
+                                answer: "x = 4",
+                                explanation: "$2x = 8 \\rightarrow x = 4$"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
             id: "algebra2",
             title: "Algebra 2 (TJ3)",
             code: "MA3113",
@@ -16,6 +67,7 @@ const MATH_DATA = {
                 { name: "Regents 2025: Part 1 (Q1-24) Mastery", path: "curriculum/algebra2/algtwo-82025-exam.pdf" }
             ],
             units: [
+
                 {
                     title: "Ch 1: Tools of Algebra",
                     insight: "Foundations: Mastery of axioms allows you to manipulate any expression without fear. Focus on the 'Why' behind the distributive rule.",

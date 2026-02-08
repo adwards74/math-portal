@@ -12,11 +12,21 @@ window.UIEngine = (function () {
 
         if (!container) return;
 
+        // Difficulty badge helper
+        const getDifficultyBadge = (diff) => {
+            switch (diff) {
+                case 'basic': return '<span class="difficulty-badge basic" style="background:#38ef7d22; color:#38ef7d; padding:3px 8px; border-radius:8px; font-size:0.7rem; margin-left:8px;">🟢 기초</span>';
+                case 'intermediate': return '<span class="difficulty-badge intermediate" style="background:#f9d42322; color:#f9d423; padding:3px 8px; border-radius:8px; font-size:0.7rem; margin-left:8px;">🟡 중급</span>';
+                case 'advanced': return '<span class="difficulty-badge advanced" style="background:#ff416c22; color:#ff416c; padding:3px 8px; border-radius:8px; font-size:0.7rem; margin-left:8px;">🔴 고급</span>';
+                default: return '';
+            }
+        };
+
         container.innerHTML = subjects.map((sub, idx) => `
             <div class="subject-card glass" style="animation-delay: ${idx * 0.1}s" onclick="window.showSubjectDetail('${sub.id}')">
                 <div class="card-icon" style="background: ${sub.color}20; color: ${sub.color}"><i class="${sub.icon}"></i></div>
                 <div class="card-content">
-                    <span class="code">${sub.code}</span>
+                    <span class="code">${sub.code}${getDifficultyBadge(sub.difficulty)}</span>
                     <h3>${sub.title}</h3>
                     <p>${sub.description}</p>
                 </div>
@@ -25,6 +35,7 @@ window.UIEngine = (function () {
             </div>
         `).join('');
     }
+
 
     function showSubjectDetail(subjectId) {
         const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
@@ -113,7 +124,7 @@ window.UIEngine = (function () {
         // Detect if this is a multi-level quiz (Elite 4.0) or legacy
         const isMultiLevel = quiz.levels && Array.isArray(quiz.levels);
         const currentLevel = isMultiLevel ? quiz.levels[0] : quiz;
-        
+
         let levelSelectorHtml = '';
         if (isMultiLevel) {
             levelSelectorHtml = `
@@ -172,16 +183,16 @@ window.UIEngine = (function () {
     window.renderSubjectGrid = renderSubjectGrid;
     window.showSubjectDetail = showSubjectDetail;
     window.showDashboard = showDashboard;
-    
-    window.switchQuizLevel = function(unitIdx, levelIdx, subjectId) {
+
+    window.switchQuizLevel = function (unitIdx, levelIdx, subjectId) {
         const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
         const unit = subject.units[unitIdx];
         const quiz = unit.quiz;
         const level = quiz.levels[levelIdx];
-        
+
         const container = document.getElementById(`quiz-content-${unitIdx}`);
         const feedback = document.getElementById(`feedback-${unitIdx}`);
-        
+
         // Update active button state
         const buttons = document.querySelectorAll(`#quiz-container-${unitIdx} .level-btn`);
         buttons.forEach((btn, idx) => {
@@ -190,7 +201,7 @@ window.UIEngine = (function () {
         });
 
         feedback.style.display = 'none';
-        
+
         container.innerHTML = `
             <p style="margin-bottom:15px; font-size:0.95rem;">${level.question}</p>
             <div class="quiz-options" style="display:grid; gap:8px;">
@@ -206,7 +217,7 @@ window.UIEngine = (function () {
                 `}
             </div>
         `;
-        
+
         if (window.MathJax) window.MathJax.typesetPromise();
     };
 

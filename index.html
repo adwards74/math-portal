@@ -206,7 +206,8 @@
             </div>
 
             <!-- Stats Display (Phase 2 & 4) -->
-            <div id="tutor-stats-display" class="glass" style="padding:12px; border-radius:12px; margin-top:15px; background:rgba(0,0,0,0.3); border:1px solid rgba(0,210,255,0.2);">
+            <div id="tutor-stats-display" class="glass"
+                style="padding:12px; border-radius:12px; margin-top:15px; background:rgba(0,0,0,0.3); border:1px solid rgba(0,210,255,0.2);">
                 <div style="display:flex; justify-content:space-between; font-size:0.75rem; margin-bottom:8px;">
                     <span>Streak: 0</span>
                     <span>Accuracy: --</span>
@@ -217,7 +218,9 @@
                 </div>
                 <div style="margin-top:8px;">
                     <div style="height:4px; background:rgba(255,255,255,0.1); border-radius:2px;">
-                        <div style="height:100%; width:0%; background:linear-gradient(90deg, var(--accent-cyan), var(--accent-green)); border-radius:2px;"></div>
+                        <div
+                            style="height:100%; width:0%; background:linear-gradient(90deg, var(--accent-cyan), var(--accent-green)); border-radius:2px;">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -230,7 +233,8 @@
                 <!-- Stability Tracker -->
                 <div class="stability-tracker glass" id="stability-section"
                     style="margin-top:15px; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.05);">
-                    <div style="display:flex; justify-content:space-between; font-size:0.65rem; margin-bottom:8px; opacity:0.6;">
+                    <div
+                        style="display:flex; justify-content:space-between; font-size:0.65rem; margin-bottom:8px; opacity:0.6;">
                         <span>NEURAL STABILITY</span>
                         <span id="stability-percent">98%</span>
                     </div>
@@ -238,7 +242,8 @@
                 </div>
 
                 <!-- Next Recommendation (Phase 5) -->
-                <div id="tutor-recommendation" class="glass" style="margin-top:15px; padding:12px; border-radius:12px; border-left:3px solid var(--accent-green); font-size:0.8rem; display:none;">
+                <div id="tutor-recommendation" class="glass"
+                    style="margin-top:15px; padding:12px; border-radius:12px; border-left:3px solid var(--accent-green); font-size:0.8rem; display:none;">
                     <div style="font-size:0.65rem; opacity:0.6; margin-bottom:5px;">NEXT UP</div>
                     <div id="recommendation-content"></div>
                 </div>
@@ -247,10 +252,11 @@
             <!-- Chat Input (Phase 3) -->
             <div class="tutor-chat-input" style="margin-top:auto; padding-top:15px;">
                 <div style="display:flex; gap:8px;">
-                    <input type="text" id="tutor-chat-input" class="glass" placeholder="Ask about any topic..." 
+                    <input type="text" id="tutor-chat-input" class="glass" placeholder="Ask about any topic..."
                         style="flex:1; padding:10px 15px; border-radius:12px; background:rgba(0,0,0,0.3); border:1px solid rgba(0,210,255,0.2); color:white; font-size:0.85rem;"
                         onkeypress="if(event.key==='Enter')window.submitTutorChat()">
-                    <button class="glass" onclick="window.submitTutorChat()" style="padding:10px 15px; border-radius:12px; color:var(--accent-cyan); cursor:pointer;">
+                    <button class="glass" onclick="window.submitTutorChat()"
+                        style="padding:10px 15px; border-radius:12px; color:var(--accent-cyan); cursor:pointer;">
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
@@ -271,6 +277,7 @@
 
     <!-- Scripts -->
     <script src="lessons.js"></script>
+    <script src="data/chapters/ch0.js"></script>
     <script src="data.js"></script>
     <script src="router.js"></script>
     <script src="ui-render.js"></script>
