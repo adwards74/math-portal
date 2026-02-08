@@ -41,7 +41,11 @@ window.TutorEngine = (function () {
         "asymptote": "Horizontal asymptotes: compare degrees. Vertical asymptotes: where denominator = 0 (after canceling).",
         "polar": "Polar coordinates: (r, θ). Convert with x = r·cos(θ), y = r·sin(θ), r² = x² + y².",
         "parametric": "Parametric equations describe motion over time. Eliminate t to see the path shape.",
-        "vector": "Vectors have magnitude and direction. Add component-wise: <a,b> + <c,d> = <a+c, b+d>."
+        "vector": "Vectors have magnitude and direction. Add component-wise: <a,b> + <c,d> = <a+c, b+d>.",
+        // Competition & Prep
+        "shsat": "The Specialized High Schools Admissions Test (SHSAT) is the portal to NYC's elite schools. Focus on Math precision and Reading speed. Check the 'SHSAT Review' link in the sidebar for my targeted YouTube strategies!",
+        "tj": "Thomas Jefferson High School for Science and Technology (TJHSST) prep requires mastery of Algebra 2 and strong problem-solving 'intuition'. Use our 'TJ Strategy' dashboard for the full elite roadmap.",
+        "test": "Standardized tests aren't just about math; they're about 'Mental Endurance'. Practice with a timer and always audit your mistakes in the Review Hub!"
     };
 
     // ========================================
