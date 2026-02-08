@@ -52,6 +52,57 @@ window.CHAPTER_DATA["ch0"] = {
                     <h4><i class="fas fa-star" style="color:#ffd700;"></i> Growth Mindset</h4>
                     <p>"It's okay if fractions feel tricky at first! Once you master them, you've already conquered 50% of algebra."</p>
                 </div>
+
+                <h2>III. Practice Problems</h2>
+                <div class="practice-section glass" style="margin-top:20px; padding:20px;">
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 1:</strong> Calculate $\\frac{2}{5} + \\frac{1}{3}$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Find the LCD (Least Common Denominator). What's the smallest number both 5 and 3 divide into?</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">LCD = 15. $\\frac{6}{15} + \\frac{5}{15} = \\frac{11}{15}$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 2:</strong> Simplify $\\frac{3}{4} \\times \\frac{8}{9}$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Multiply straight across, then simplify. Can you cancel before multiplying?</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$\\frac{3 \\times 8}{4 \\times 9} = \\frac{24}{36} = \\frac{2}{3}$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 3:</strong> Divide $\\frac{5}{6} \\div \\frac{2}{3}$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Remember: "Keep, Change, Flip!" Keep the first, change ÷ to ×, flip the second.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$\\frac{5}{6} \\times \\frac{3}{2} = \\frac{15}{12} = \\frac{5}{4} = 1\\frac{1}{4}$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 4:</strong> Convert $\\frac{7}{8}$ to a percentage.</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Divide 7 by 8, then multiply by 100.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$7 \\div 8 = 0.875 \\times 100 = 87.5\\%$</p>
+                        </details>
+                    </div>
+                </div>
             </div>
         `
     },
@@ -91,6 +142,57 @@ window.CHAPTER_DATA["ch0"] = {
                 <div class="tj-edge glass" style="margin-top:20px;">
                     <h4><i class="fas fa-code"></i> Coding Connection</h4>
                     <p>Python and Java follow the same rules! <code>print(3 + 2 * 4)</code> outputs 11. Computers also obey PEMDAS.</p>
+                </div>
+
+                <h2>II. Practice Problems</h2>
+                <div class="practice-section glass" style="margin-top:20px; padding:20px;">
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 1:</strong> Evaluate $5 + 3 \\times 2^3$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Exponents first: What is $2^3$? Then multiply, then add.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$2^3 = 8$, then $3 \\times 8 = 24$, then $5 + 24 = 29$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 2:</strong> Calculate $(8 - 2) \\times 3 + 4^2$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Parentheses and exponents first (they're at the same priority level in separate parts).</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$(8-2)=6$, $4^2=16$, then $6 \\times 3 = 18$, finally $18 + 16 = 34$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 3:</strong> Simplify $20 \\div 4 + 6 \\times 3 - 2$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Division and multiplication have equal priority—work left to right for those, then add/subtract.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$20 \\div 4 = 5$, $6 \\times 3 = 18$, then $5 + 18 - 2 = 21$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 4:</strong> What is $2 \\times (3 + 4)^2 \\div 7$?</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Parentheses first, then the exponent on the result.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$(3+4)=7$, $7^2=49$, then $2 \\times 49 = 98$, finally $98 \\div 7 = 14$</p>
+                        </details>
+                    </div>
                 </div>
             </div>
         `
