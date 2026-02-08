@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.TutorEngine.buildNeuralMap();
     }
 
-    // Neo 5.2: Enhanced Tutor Tip
+    // Neo 5.3: Enhanced Tutor Tip
     window.askTutorTip = () => {
         const bubble = document.getElementById('tutor-message');
         if (!bubble) return;
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Neo 5.2: Voice Input Support
+    // Neo 5.3: Voice Input Support
     window.startVoiceInput = () => {
         const btn = document.getElementById('voice-btn');
         const input = document.getElementById('tutor-chat-input');
@@ -122,7 +122,83 @@ document.addEventListener('DOMContentLoaded', () => {
         recognition.start();
     };
 
-    // Neo 5.2: Chat Input Handler
+    // Neo 5.3: Neural Map Visualization
+    window.showNeuralMap = () => {
+        const modal = document.getElementById('neural-map-modal');
+        const container = document.getElementById('neural-map-canvas-container');
+        if (!modal || !container) return;
+
+        modal.style.display = 'block';
+        container.innerHTML = '';
+
+        // Determine current focus
+        const currentLesson = window.location.hash.split('/')[1] || "general";
+        const matrix = window.TutorEngine.getConceptMatrix(currentLesson);
+
+        const createNode = (text, type) => {
+            const div = document.createElement('div');
+            div.className = 'glass';
+            div.style.cssText = `
+                padding: 12px 20px;
+                border-radius: 12px;
+                font-size: 0.9rem;
+                border: 1px solid ${type === 'current' ? 'var(--accent-magenta)' : 'rgba(255,255,255,0.1)'};
+                background: ${type === 'current' ? 'rgba(255,0,255,0.1)' : 'rgba(255,255,255,0.05)'};
+                box-shadow: ${type === 'current' ? '0 0 15px rgba(255,0,255,0.2)' : 'none'};
+                color: ${type === 'current' ? 'white' : 'rgba(255,255,255,0.7)'};
+                text-align: center;
+                min-width: 120px;
+                z-index: 2;
+                transition: transform 0.3s;
+                cursor: pointer;
+            `;
+            div.innerHTML = `<strong>${text.toUpperCase()}</strong>`;
+            div.onmouseover = () => div.style.transform = 'scale(1.1)';
+            div.onmouseout = () => div.style.transform = 'scale(1)';
+            return div;
+        };
+
+        const createArrow = (direction) => {
+            const arrow = document.createElement('div');
+            arrow.style.cssText = `
+                width: 2px;
+                height: 30px;
+                background: linear-gradient(to bottom, transparent, var(--accent-magenta), transparent);
+                position: relative;
+            `;
+            return arrow;
+        };
+
+        // Render Columnar Flow
+        if (matrix.parents.length > 0) {
+            const parentRow = document.createElement('div');
+            parentRow.style.display = 'flex';
+            parentRow.style.gap = '15px';
+            matrix.parents.forEach(p => parentRow.appendChild(createNode(p, 'parent')));
+            container.appendChild(parentRow);
+            container.appendChild(createArrow());
+        }
+
+        container.appendChild(createNode(matrix.current, 'current'));
+
+        if (matrix.children.length > 0) {
+            container.appendChild(createArrow());
+            const childRow = document.createElement('div');
+            childRow.style.display = 'flex';
+            childRow.style.gap = '15px';
+            matrix.children.forEach(c => childRow.appendChild(createNode(c, 'child')));
+            container.appendChild(childRow);
+        } else if (matrix.current === "general") {
+            container.innerHTML = `<div style="opacity:0.6; font-size:0.9rem;">Navigate to a specific lesson to see the Neural Map connections!</div>`;
+        } else {
+            const endNode = document.createElement('div');
+            endNode.style.cssText = "font-size:0.7rem; opacity:0.4; margin-top:10px;";
+            endNode.innerText = "NO DISCOVERED DESCENDANTS";
+            container.appendChild(endNode);
+        }
+    };
+
+    // Neo 5.3: Chat Input Handler
     window.submitTutorChat = () => {
         const input = document.getElementById('tutor-chat-input');
         if (!input) return;
@@ -144,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
     };
 
-    // Neo 5.2: Show Recommendation
+    // Neo 5.3: Show Recommendation
     function showRecommendation() {
         const recPanel = document.getElementById('tutor-recommendation');
         const recContent = document.getElementById('recommendation-content');

@@ -1,6 +1,6 @@
 /**
- * Neo Tutor 5.2 - Advanced Neural Link (Elite AI)
- * Features: Neural Mapping, Fuzzy Search, Voice Link, Session Memory, Prerequisite Roadmap
+ * Neo Tutor 5.3 - Advanced Neural Link (Elite AI)
+ * Features: Neural Mapping, Logic Map Visualization, Fuzzy Search, Voice Link, Session Memory
  */
 
 window.TutorEngine = (function () {
@@ -134,6 +134,26 @@ window.TutorEngine = (function () {
             };
         },
 
+        // Neo 5.3: Neural Concept Mapping
+        getConceptMatrix(topic) {
+            const normalized = topic.toLowerCase().trim();
+            const parents = PREREQUISITE_MAP[normalized] || [];
+            const children = [];
+
+            // Find topics that list this as a prerequisite
+            for (const [key, prereqs] of Object.entries(PREREQUISITE_MAP)) {
+                if (prereqs.includes(normalized)) {
+                    children.push(key);
+                }
+            }
+
+            return {
+                current: normalized,
+                parents: parents,
+                children: children
+            };
+        },
+
         // Neo 5.2: Fuzzy Logic Engine (Levenshtein)
         getLevenshtein(s1, s2) {
             const m = s1.length, n = s2.length;
@@ -191,7 +211,7 @@ window.TutorEngine = (function () {
         "shsat": "The Specialized High Schools Admissions Test (SHSAT) is the portal to NYC's elite schools. Focus on Math precision and Reading speed. Check the 'SHSAT Review' link in the sidebar for my targeted YouTube strategies!",
         "tj": "Thomas Jefferson High School for Science and Technology (TJHSST) prep requires mastery of Algebra 2 and strong problem-solving 'intuition'. Use our 'TJ Strategy' dashboard for the full elite roadmap.",
         "test": "Standardized tests aren't just about math; they're about 'Mental Endurance'. Practice with a timer and always audit your mistakes in the Review Hub!",
-        "version": "I am Neo Tutor 5.2 Elite. My current upgrades include Fuzzy Neural Search, Voice Input Integration, and Contextual Intelligence. I am running on the local deterministic logic kernel v5.2."
+        "version": "I am Neo Tutor 5.3 Elite. My current upgrades include Neural Logic Map Visualization, Fuzzy Neural Search, Voice Input Integration, and Contextual Intelligence. I am running on the local deterministic logic kernel v5.3."
     };
 
     // Neo 5.1: Prerequisite Roadmap
@@ -346,7 +366,7 @@ window.TutorEngine = (function () {
             return response;
         }
 
-        // Search hint database for matching keywords (Neo 5.2 Fallback)
+        // Search hint database for matching keywords (Neo 5.3 Fallback)
         for (const [keyword, hint] of Object.entries(HINT_DATABASE)) {
             if (lowerQuery.includes(keyword) || keyword.includes(lowerQuery)) {
                 return hint;
