@@ -4,44 +4,44 @@ const MATH_DATA = {
             id: "foundation",
             title: "Ch0: Foundation Bridge",
             code: "PRE-ALG",
-            description: "8학년 기초 수학 복습 - 분수, 연산 순서, 기초 방정식, 좌표평면. Algebra 2로 가기 전 필수 기초!",
+            description: "Pre-Algebra review: fractions, order of operations, basic equations, and the coordinate plane. Master these before Algebra 2!",
             color: "#38ef7d",
             icon: "fas fa-bridge",
-            intuition: "기초가 튼튼해야 높이 쌓아 올릴 수 있습니다. 이 챕터를 먼저 완료하세요!",
+            intuition: "A strong foundation lets you build higher. Complete this chapter first!",
             local_resources: [],
             difficulty: "basic",
             units: [
                 {
                     title: "Ch 0: Pre-Algebra Foundations",
-                    insight: "Algebra 2에 들어가기 전 반드시 마스터해야 할 기초 개념들입니다.",
-                    topics: ["분수 연산", "PEMDAS", "기초 방정식", "좌표평면"],
+                    insight: "Essential concepts you must master before diving into Algebra 2.",
+                    topics: ["Fractions", "PEMDAS", "Basic Equations", "Coordinate Plane"],
                     lectures: [
-                        { name: "0.1: 분수와 숫자 감각", url: "lesson:foundation:ch0-1", insight: "분수는 비율, 확률, 비례의 언어입니다!" },
-                        { name: "0.2: PEMDAS 연산 순서", url: "lesson:foundation:ch0-2" },
-                        { name: "0.3: 미지수와 방정식 기초", url: "lesson:foundation:ch0-3" },
-                        { name: "0.4: 좌표평면과 그래프", url: "lesson:foundation:ch0-4" },
-                        { name: "📝 Ch0 복습 도전", url: "lesson:foundation:ch0-rev" }
+                        { name: "0.1: Number Sense & Fractions", url: "lesson:foundation:ch0-1", insight: "Fractions are the language of ratios and probability!" },
+                        { name: "0.2: PEMDAS Order of Operations", url: "lesson:foundation:ch0-2" },
+                        { name: "0.3: Variables & Basic Equations", url: "lesson:foundation:ch0-3" },
+                        { name: "0.4: The Coordinate Plane", url: "lesson:foundation:ch0-4" },
+                        { name: "📝 Ch0 Review Challenge", url: "lesson:foundation:ch0-rev" }
                     ],
                     examples: [],
                     quiz: {
                         levels: [
                             {
-                                title: "Level 1: 분수 연산",
-                                question: "$\\frac{1}{2} + \\frac{1}{3}$의 값은?",
+                                title: "Level 1: Fractions",
+                                question: "What is $\\frac{1}{2} + \\frac{1}{3}$?",
                                 options: ["$\\frac{2}{5}$", "$\\frac{5}{6}$", "$\\frac{1}{6}$", "$\\frac{2}{6}$"],
                                 answer: "$\\frac{5}{6}$",
-                                explanation: "통분: $\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}$"
+                                explanation: "Find common denominator: $\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}$"
                             },
                             {
                                 title: "Level 2: PEMDAS",
                                 question: "$3 + 2 \\times 4^2$ = ?",
                                 options: ["80", "35", "44", "100"],
                                 answer: "35",
-                                explanation: "지수 먼저: $4^2=16$, 그 다음 곱셈: $2 \\times 16=32$, 마지막 덧셈: $3+32=35$"
+                                explanation: "Exponents first: $4^2=16$, then multiply: $2 \\times 16=32$, finally add: $3+32=35$"
                             },
                             {
-                                title: "Level 3: 방정식",
-                                question: "$2x + 5 = 13$일 때 $x$의 값은?",
+                                title: "Level 3: Equations",
+                                question: "If $2x + 5 = 13$, what is $x$?",
                                 options: ["x = 4", "x = 9", "x = 6", "x = 3"],
                                 answer: "x = 4",
                                 explanation: "$2x = 8 \\rightarrow x = 4$"
