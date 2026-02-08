@@ -111,6 +111,57 @@ window.CHAPTER_DATA["ch1"] = {
                     <h4><i class="fas fa-check-double"></i> Mastery Protocol: The Inverse Audit</h4>
                     <p>When you solve an equation, check your work by substituting the value back into the <strong>Original Equation</strong>. If the LHS does not equal the RHS, your algorithm had a bug.</p>
                 </div>
+
+                <h2>II. Practice Problems</h2>
+                <div class="practice-section glass" style="margin-top:20px; padding:20px;">
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 1:</strong> Solve $5x + 3 = 28$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">First subtract 3 from both sides, then divide by 5.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$5x = 25 \\rightarrow x = 5$. Check: $5(5)+3 = 28$ ✓</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 2:</strong> Solve $3(x - 4) = 2(x + 1) + 5$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Distribute first: $3x - 12 = 2x + 2 + 5$. Then combine like terms.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$3x - 12 = 2x + 7 \\rightarrow x = 19$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 3:</strong> Solve $\\frac{x}{4} + 7 = 10$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Subtract 7 first, then multiply both sides by 4.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$\\frac{x}{4} = 3 \\rightarrow x = 12$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 4:</strong> Solve $2(3x + 1) - 4 = 5x + 7$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Expand left side: $6x + 2 - 4 = 5x + 7$, then solve for x.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$6x - 2 = 5x + 7 \\rightarrow x = 9$</p>
+                        </details>
+                    </div>
+                </div>
             </div>
         `
     },
