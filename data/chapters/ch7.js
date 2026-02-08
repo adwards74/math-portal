@@ -99,6 +99,57 @@ window.CHAPTER_DATA["ch7"] = {
                     <h4><i class="fas fa-check-double"></i> Mandatory Verification</h4>
                     <p>In software engineering, this is synonymous with a **False Positive**. Your algorithm might terminate successfully, but the data is invalid. Always "plug back in" to verify your result in the original radical context.</p>
                 </div>
+
+                <h2>II. Practice Problems</h2>
+                <div class="practice-section glass" style="margin-top:20px; padding:20px;">
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 1:</strong> Simplify $\\sqrt{72}$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Find the largest perfect square factor of 72. $72 = 36 \\times 2$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$\\sqrt{72} = \\sqrt{36 \\cdot 2} = 6\\sqrt{2}$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 2:</strong> Solve $\\sqrt{x + 3} = 5$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Square both sides to eliminate the radical.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$x + 3 = 25 \\rightarrow x = 22$. Verify: $\\sqrt{25} = 5$ ✓</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 3:</strong> Rewrite $\\sqrt[3]{x^5}$ using fractional exponents.</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$\\sqrt[n]{x^m} = x^{m/n}$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$x^{5/3}$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 4:</strong> Solve $\\sqrt{2x - 1} = x - 2$. Check for extraneous solutions!</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Square both sides: $2x - 1 = (x-2)^2$. Solve and TEST both solutions!</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$x = 1$ fails (RHS = -1 ≠ LHS), $x = 5$ works. <strong>Only $x = 5$</strong>.</p>
+                        </details>
+                    </div>
+                </div>
             </div>
         `
     },

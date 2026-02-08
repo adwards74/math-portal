@@ -80,6 +80,57 @@ window.CHAPTER_DATA["ch2"] = {
                     <h5 style="color:var(--accent-green);"><i class="fas fa-microscope"></i> The Point-Slope Form: $y - y_1 = m(x - x_1)$</h5>
                     <p>This is the most powerful form for high-level math. It allows you to build a function knowing only one "state" (point) and the "rule" (slope).</p>
                 </div>
+
+                <h2>II. Practice Problems</h2>
+                <div class="practice-section glass" style="margin-top:20px; padding:20px;">
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 1:</strong> Find the slope between $(2, 5)$ and $(6, 13)$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Use $m = \\frac{y_2 - y_1}{x_2 - x_1}$. Subtract the y-values and divide by the x-difference.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$m = \\frac{13-5}{6-2} = \\frac{8}{4} = 2$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 2:</strong> Write the equation of a line with slope $3$ passing through $(1, 7)$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Use point-slope form: $y - y_1 = m(x - x_1)$, then simplify to slope-intercept.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$y - 7 = 3(x - 1) \\rightarrow y = 3x + 4$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 3:</strong> Are the lines $y = 2x + 3$ and $y = 2x - 5$ parallel, perpendicular, or neither?</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Compare their slopes. Same slopes = parallel. Product of slopes = -1 means perpendicular.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">Both have slope $m = 2$, so they are <strong>parallel</strong>.</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 4:</strong> Find the equation of a line perpendicular to $y = 4x - 1$ passing through $(0, 3)$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Perpendicular slope is the negative reciprocal. If original slope is 4, perpendicular slope is $-\\frac{1}{4}$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$y = -\\frac{1}{4}x + 3$</p>
+                        </details>
+                    </div>
+                </div>
             </div>
         `
     },

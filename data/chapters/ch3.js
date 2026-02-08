@@ -26,6 +26,57 @@ window.CHAPTER_DATA["ch3"] = {
                 <p><strong>Substitution:</strong> Best for 'Sparse' systems where one equation is simple. <br>
                 <strong>Elimination (Addition Method):</strong> The standard for 'Dense' systems. It is the core logic behind <strong>Gaussian Elimination</strong> in Linear Algebra.</p>
             </div>
+
+            <h2>II. Practice Problems</h2>
+            <div class="practice-section glass" style="margin-top:20px; padding:20px;">
+                <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                    <p><strong>Problem 1:</strong> Solve using substitution: $y = 2x + 1$ and $3x + y = 11$</p>
+                    <details style="margin-top:10px;">
+                        <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                        <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Substitute $2x + 1$ for $y$ in the second equation.</p>
+                    </details>
+                    <details style="margin-top:8px;">
+                        <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                        <p style="margin-top:8px;">$3x + (2x+1) = 11 \\rightarrow 5x = 10 \\rightarrow x = 2, y = 5$</p>
+                    </details>
+                </div>
+
+                <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                    <p><strong>Problem 2:</strong> Solve using elimination: $2x + 3y = 12$ and $4x - 3y = 6$</p>
+                    <details style="margin-top:10px;">
+                        <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                        <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Add the equations to eliminate $y$.</p>
+                    </details>
+                    <details style="margin-top:8px;">
+                        <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                        <p style="margin-top:8px;">$6x = 18 \\rightarrow x = 3$, then $y = 2$. Solution: $(3, 2)$</p>
+                    </details>
+                </div>
+
+                <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                    <p><strong>Problem 3:</strong> Classify: $y = 2x + 3$ and $y = 2x - 1$. Consistent or Inconsistent?</p>
+                    <details style="margin-top:10px;">
+                        <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                        <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Compare the slopes and y-intercepts. Same slope, different intercept = parallel lines.</p>
+                    </details>
+                    <details style="margin-top:8px;">
+                        <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                        <p style="margin-top:8px;"><strong>Inconsistent</strong> - Parallel lines, no intersection.</p>
+                    </details>
+                </div>
+
+                <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                    <p><strong>Problem 4:</strong> Find the intersection of $x + y = 7$ and $x - y = 1$</p>
+                    <details style="margin-top:10px;">
+                        <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                        <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Add the equations to find $x$, then substitute back.</p>
+                    </details>
+                    <details style="margin-top:8px;">
+                        <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                        <p style="margin-top:8px;">$2x = 8 \\rightarrow x = 4, y = 3$. Intersection: $(4, 3)$</p>
+                    </details>
+                </div>
+            </div>
         `
     },
     "ch3-3": {

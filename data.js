@@ -66,6 +66,7 @@ const MATH_DATA = {
                 { name: "Exam: Functions Composition", path: "curriculum/algebra2/Algbera Two - Functions Composition.pdf" },
                 { name: "Regents 2025: Part 1 (Q1-24) Mastery", path: "curriculum/algebra2/algtwo-82025-exam.pdf" }
             ],
+            difficulty: "intermediate",
             units: [
 
                 {
