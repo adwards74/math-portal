@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.TutorEngine.buildNeuralMap();
     }
 
-    // Neo 4.0: Enhanced Tutor Tip
+    // Neo 5.1: Enhanced Tutor Tip
     window.askTutorTip = () => {
         const bubble = document.getElementById('tutor-message');
         if (!bubble) return;
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Neo 4.0: Chat Input Handler
+    // Neo 5.1: Chat Input Handler
     window.submitTutorChat = () => {
         const input = document.getElementById('tutor-chat-input');
         if (!input) return;
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
     };
 
-    // Neo 4.0: Show Recommendation
+    // Neo 5.1: Show Recommendation
     function showRecommendation() {
         const recPanel = document.getElementById('tutor-recommendation');
         const recContent = document.getElementById('recommendation-content');
@@ -915,7 +915,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ${hint ? `<div style="margin-top:10px; padding:10px; background:rgba(0,210,255,0.1); border-radius:8px; font-size:0.85rem;">${hint}</div>` : ''}`;
         }
 
-        // Record to Neo 4.0 stats tracker
+        // Record to Neo 5.1 stats tracker
         const topic = chapterTitle ? chapterTitle.split(' ').slice(0, 2).join(' ') : 'general';
         if (window.recordQuizResult) {
             window.recordQuizResult(topic, isCorrect);

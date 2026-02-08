@@ -1,6 +1,6 @@
 /**
- * Neo Tutor 4.0 - Elite AI Learning Companion
- * Features: Context-Aware Hints, Progress Tracking, Interactive Chat, Motivation System, Predictive Recommendations
+ * Neo Tutor 5.1 - Advanced Neural Link (Elite AI)
+ * Features: Neural Knowledge Mapping, Weighted Search, Session Memory, Prerequisite Roadmap
  */
 
 window.TutorEngine = (function () {
@@ -316,7 +316,7 @@ window.TutorEngine = (function () {
             return response;
         }
 
-        // Search hint database for matching keywords (Neo 4.0 Fallback)
+        // Search hint database for matching keywords (Neo 5.1 Fallback)
         for (const [keyword, hint] of Object.entries(HINT_DATABASE)) {
             if (lowerQuery.includes(keyword) || keyword.includes(lowerQuery)) {
                 return hint;
