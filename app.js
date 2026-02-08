@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.TutorEngine.buildNeuralMap();
     }
 
-    // Neo 5.1: Enhanced Tutor Tip
+    // Neo 5.2: Enhanced Tutor Tip
     window.askTutorTip = () => {
         const bubble = document.getElementById('tutor-message');
         if (!bubble) return;
@@ -83,7 +83,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Neo 5.1: Chat Input Handler
+    // Neo 5.2: Voice Input Support
+    window.startVoiceInput = () => {
+        const btn = document.getElementById('voice-btn');
+        const input = document.getElementById('tutor-chat-input');
+
+        if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+            window.typeTerminalMessage("Speech recognition not supported in this browser.");
+            return;
+        }
+
+        const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const recognition = new Recognition();
+
+        recognition.lang = 'en-US';
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+
+        btn.style.color = "var(--accent-red)";
+        btn.querySelector('i').className = "fas fa-circle-notch fa-spin";
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            input.value = transcript;
+            window.submitTutorChat();
+        };
+
+        recognition.onend = () => {
+            btn.style.color = "var(--accent-magenta)";
+            btn.querySelector('i').className = "fas fa-microphone";
+        };
+
+        recognition.onerror = () => {
+            btn.style.color = "var(--accent-magenta)";
+            btn.querySelector('i').className = "fas fa-microphone";
+        };
+
+        recognition.start();
+    };
+
+    // Neo 5.2: Chat Input Handler
     window.submitTutorChat = () => {
         const input = document.getElementById('tutor-chat-input');
         if (!input) return;
@@ -105,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
     };
 
-    // Neo 5.1: Show Recommendation
+    // Neo 5.2: Show Recommendation
     function showRecommendation() {
         const recPanel = document.getElementById('tutor-recommendation');
         const recContent = document.getElementById('recommendation-content');

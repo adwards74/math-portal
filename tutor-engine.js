@@ -1,6 +1,6 @@
 /**
- * Neo Tutor 5.1 - Advanced Neural Link (Elite AI)
- * Features: Neural Knowledge Mapping, Weighted Search, Session Memory, Prerequisite Roadmap
+ * Neo Tutor 5.2 - Advanced Neural Link (Elite AI)
+ * Features: Neural Mapping, Fuzzy Search, Voice Link, Session Memory, Prerequisite Roadmap
  */
 
 window.TutorEngine = (function () {
@@ -88,11 +88,19 @@ window.TutorEngine = (function () {
             const lowerQuery = query.toLowerCase().trim();
             const results = [];
 
-            // Neo 5.1: Weighted Search Logic
+            // Neo 5.1/5.2: Weighted + Fuzzy Search Logic
             for (const [key, items] of Object.entries(this.index)) {
                 let score = 0;
-                if (key === lowerQuery) score = 10; // Exact match
-                else if (key.includes(lowerQuery) || lowerQuery.includes(key)) score = 5; // Partial match
+                if (key === lowerQuery) score = 15; // Exact
+                else if (key.includes(lowerQuery) || lowerQuery.includes(key)) score = 8; // Partial
+                else {
+                    // Neo 5.2: Fuzzy Match
+                    const distance = this.getLevenshtein(key, lowerQuery);
+                    const threshold = Math.max(2, Math.floor(key.length * 0.3));
+                    if (distance <= threshold) {
+                        score = 5 - distance; // Higher score for lower distance
+                    }
+                }
 
                 if (score > 0) {
                     items.forEach(item => {
@@ -124,6 +132,21 @@ window.TutorEngine = (function () {
                 points: headings,
                 intuition: intuition
             };
+        },
+
+        // Neo 5.2: Fuzzy Logic Engine (Levenshtein)
+        getLevenshtein(s1, s2) {
+            const m = s1.length, n = s2.length;
+            const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+            for (let i = 0; i <= m; i++) dp[i][0] = i;
+            for (let j = 0; j <= n; j++) dp[0][j] = j;
+            for (let i = 1; i <= m; i++) {
+                for (let j = 1; j <= n; j++) {
+                    const cost = s1[i - 1] === s2[j - 1] ? 0 : 1;
+                    dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + cost);
+                }
+            }
+            return dp[m][n];
         }
     };
 
@@ -168,7 +191,7 @@ window.TutorEngine = (function () {
         "shsat": "The Specialized High Schools Admissions Test (SHSAT) is the portal to NYC's elite schools. Focus on Math precision and Reading speed. Check the 'SHSAT Review' link in the sidebar for my targeted YouTube strategies!",
         "tj": "Thomas Jefferson High School for Science and Technology (TJHSST) prep requires mastery of Algebra 2 and strong problem-solving 'intuition'. Use our 'TJ Strategy' dashboard for the full elite roadmap.",
         "test": "Standardized tests aren't just about math; they're about 'Mental Endurance'. Practice with a timer and always audit your mistakes in the Review Hub!",
-        "version": "I am Neo Tutor 5.1 Elite. My current upgrades include Site-Wide Neural Mapping, Weighted Scored Search, and Session Conversation Memory. I am running on the local deterministic logic kernel v5.1."
+        "version": "I am Neo Tutor 5.2 Elite. My current upgrades include Fuzzy Neural Search, Voice Input Integration, and Contextual Intelligence. I am running on the local deterministic logic kernel v5.2."
     };
 
     // Neo 5.1: Prerequisite Roadmap
@@ -311,13 +334,19 @@ window.TutorEngine = (function () {
                 "What's the 'zero-cost' intuition here?",
                 "How does this connect to the SHSAT or TJ Prep roadmap?"
             ];
+
+            // Neo 5.2: Simplicity Filter
+            if (lowerQuery.includes("simple") || lowerQuery.includes("easy") || lowerQuery.includes("kid")) {
+                response = `🧒 **Simpler View:** Think of this as ${bestMatch.title} but explained like a story. ${bestMatch.insight || "It's a fundamental bridge between concepts."}\n\n` + response;
+            }
+
             response += `\n\n🤔 **Neo's Inquiry:** ${inquiries[Math.floor(Math.random() * inquiries.length)]}`;
 
             if (KnowledgeMap.addToBuffer) KnowledgeMap.addToBuffer(lowerQuery, response);
             return response;
         }
 
-        // Search hint database for matching keywords (Neo 5.1 Fallback)
+        // Search hint database for matching keywords (Neo 5.2 Fallback)
         for (const [keyword, hint] of Object.entries(HINT_DATABASE)) {
             if (lowerQuery.includes(keyword) || keyword.includes(lowerQuery)) {
                 return hint;
