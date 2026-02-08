@@ -6,6 +6,110 @@
 window.TutorEngine = (function () {
 
     // ========================================
+    // NEURAL KNOWLEDGE MAPPER (Neo 5.0)
+    // ========================================
+    const KnowledgeMap = {
+        index: {},
+        isMapped: false,
+
+        build() {
+            if (this.isMapped) return;
+            console.log("🧠 Neo Neural Link: Mapping Curriculum...");
+
+            // 1. Map Subject Level
+            if (window.MATH_DATA) {
+                window.MATH_DATA.subjects.forEach(sub => {
+                    this.addtoIndex(sub.id, {
+                        type: 'subject',
+                        title: sub.title,
+                        description: sub.description,
+                        color: sub.color,
+                        insight: sub.intuition
+                    });
+
+                    // 2. Map Units
+                    sub.units.forEach(unit => {
+                        this.addtoIndex(unit.title, {
+                            type: 'unit',
+                            subjectId: sub.id,
+                            insight: unit.insight,
+                            topics: unit.topics
+                        });
+
+                        // 3. Map Lectures
+                        unit.lectures.forEach(lecture => {
+                            const lessonKey = lecture.url.split(':').pop();
+                            this.addtoIndex(lessonKey, {
+                                type: 'lecture',
+                                name: lecture.name,
+                                subjectId: sub.id,
+                                insight: lecture.insight
+                            });
+                        });
+                    });
+                });
+            }
+
+            // 4. Map Deep Content (CHAPTER_DATA)
+            if (window.CHAPTER_DATA) {
+                for (const [chId, lessons] of Object.entries(window.CHAPTER_DATA)) {
+                    for (const [lessonId, lesson] of Object.entries(lessons)) {
+                        this.addtoIndex(lessonId, {
+                            type: 'content',
+                            title: lesson.title,
+                            subtitle: lesson.subtitle,
+                            content: lesson.content // We will parse this for keywords on demand
+                        });
+                    }
+                }
+            }
+
+            this.isMapped = true;
+            console.log("✅ Neo Neural Link: Mapping Complete.");
+        },
+
+        addtoIndex(key, data) {
+            const normalizedKey = key.toLowerCase().trim();
+            if (!this.index[normalizedKey]) this.index[normalizedKey] = [];
+            this.index[normalizedKey].push(data);
+        },
+
+        search(query) {
+            const lowerQuery = query.toLowerCase().trim();
+            const results = [];
+
+            // Exact or Partial Keyword Match
+            for (const [key, items] of Object.entries(this.index)) {
+                if (key.includes(lowerQuery) || lowerQuery.includes(key)) {
+                    results.push(...items);
+                }
+            }
+            return results;
+        },
+
+        summarize(lessonKey) {
+            const data = this.index[lessonKey.toLowerCase()];
+            if (!data) return "Neo-Sense: No local data for summarization.";
+
+            const contentItem = data.find(i => i.type === 'content');
+            if (!contentItem) return "Neo-Sense: Content stream too fragmented for summary.";
+
+            // Basic extraction logic: identify h2 tags or pull from intuition-box
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = contentItem.content;
+
+            const headings = Array.from(tempDiv.querySelectorAll('h2')).map(h => h.innerText);
+            const intuition = tempDiv.querySelector('.intuition-box p')?.innerText;
+
+            return {
+                title: contentItem.title,
+                points: headings,
+                intuition: intuition
+            };
+        }
+    };
+
+    // ========================================
     // PHASE 1: CONTEXT-AWARE HINT DATABASE
     // ========================================
     const HINT_DATABASE = {
@@ -133,7 +237,44 @@ window.TutorEngine = (function () {
 
         const lowerQuery = query.toLowerCase().trim();
 
-        // Search hint database for matching keywords
+        // Neo 5.0 Neural Search
+        const neuralMatches = KnowledgeMap.search(lowerQuery);
+
+        if (neuralMatches.length > 0) {
+            const bestMatch = neuralMatches[0];
+            let response = "";
+
+            // Layer 1: Intuition
+            if (bestMatch.insight) {
+                response += `💡 **Intuition:** ${bestMatch.insight}\n\n`;
+            } else if (HINT_DATABASE[lowerQuery]) {
+                response += `💡 **Intuition:** ${HINT_DATABASE[lowerQuery]}\n\n`;
+            }
+
+            // Layer 2: Mechanism (pull from content if available)
+            if (bestMatch.type === 'content' && bestMatch.subtitle) {
+                response += `⚙️ **Mechanism:** This relates to *${bestMatch.subtitle}*. `;
+                if (bestMatch.title.includes("&")) {
+                    response += `It is a core junction in ${bestMatch.title}. `;
+                }
+            } else if (bestMatch.type === 'unit') {
+                response += `⚙️ **Mechanism:** This is a major unit covering: ${bestMatch.topics.join(', ')}. `;
+            }
+
+            // Layer 3: Edge Cases / Socratic Inquiry
+            const inquiries = [
+                "How does this relate to your previous mental model?",
+                "What happens if we break the symmetry of this expression?",
+                "Could this be modeled as a linear transformation?",
+                "What's the 'zero-cost' intuition here?",
+                "How does this connect to the SHSAT or TJ Prep roadmap?"
+            ];
+            response += `\n\n🤔 **Neo's Inquiry:** ${inquiries[Math.floor(Math.random() * inquiries.length)]}`;
+
+            return response;
+        }
+
+        // Search hint database for matching keywords (Neo 4.0 Fallback)
         for (const [keyword, hint] of Object.entries(HINT_DATABASE)) {
             if (lowerQuery.includes(keyword) || keyword.includes(lowerQuery)) {
                 return hint;
@@ -408,6 +549,8 @@ window.TutorEngine = (function () {
     window.getTutorStats = getStats;
     window.getWeakTopics = getWeakTopics;
     window.triggerCelebration = triggerCelebration;
+    window.buildNeuralMap = () => KnowledgeMap.build();
+    window.summarizeContent = (key) => KnowledgeMap.summarize(key);
 
     return {
         getSocraticAdvice,
@@ -418,6 +561,9 @@ window.TutorEngine = (function () {
         getWrongAnswerHint,
         getNextRecommendation,
         getStats,
-        getWeakTopics
+        getWeakTopics,
+        triggerCelebration,
+        buildNeuralMap: () => KnowledgeMap.build(),
+        summarizeContent: (key) => KnowledgeMap.summarize(key)
     };
 })();

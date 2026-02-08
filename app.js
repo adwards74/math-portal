@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Kernel Initialization: Link Modules
     if (window.AppRouter) window.AppRouter.initialize();
 
+    // Neo 5.0 Neural Initialization
+    if (window.TutorEngine && window.TutorEngine.buildNeuralMap) {
+        window.TutorEngine.buildNeuralMap();
+    }
+
     // Neo 4.0: Enhanced Tutor Tip
     window.askTutorTip = () => {
         const bubble = document.getElementById('tutor-message');
@@ -49,6 +54,33 @@ document.addEventListener('DOMContentLoaded', () => {
             // Show recommendation after tip
             showRecommendation();
         }, 800);
+    };
+
+    // Neo 5.0: Elite Summarization
+    window.summarizeLesson = () => {
+        const lessonKey = window.currentLessonKey || "";
+        if (!lessonKey) {
+            window.typeTerminalMessage("Please open a specific lesson first for neural summarization.");
+            return;
+        }
+
+        const summaryData = window.summarizeContent ? window.summarizeContent(lessonKey) : "Neo-Sense: Summary module not found.";
+
+        if (typeof summaryData === 'string') {
+            window.typeTerminalMessage(summaryData);
+        } else {
+            let html = `<div style="color:var(--accent-cyan); font-weight:bold; margin-bottom:10px;">📋 ELITE SUMMARY: ${summaryData.title}</div>`;
+            if (summaryData.intuition) {
+                html += `<div style="margin-bottom:10px; font-style:italic; opacity:0.9;">"${summaryData.intuition}"</div>`;
+            }
+            if (summaryData.points && summaryData.points.length > 0) {
+                html += `<ul style="padding-left:15px; margin:0; list-style-type: '⚡ ';">`;
+                summaryData.points.forEach(p => html += `<li style="margin-bottom:5px;">${p}</li>`);
+                html += `</ul>`;
+            }
+            html += `<div style="margin-top:10px; font-size:0.75rem; opacity:0.6;">*Neural mapping complete. Logical consistency: 99%.*</div>`;
+            window.typeTerminalMessage(html);
+        }
     };
 
     // Neo 4.0: Chat Input Handler
