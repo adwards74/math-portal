@@ -167,7 +167,8 @@ window.TutorEngine = (function () {
         // Competition & Prep
         "shsat": "The Specialized High Schools Admissions Test (SHSAT) is the portal to NYC's elite schools. Focus on Math precision and Reading speed. Check the 'SHSAT Review' link in the sidebar for my targeted YouTube strategies!",
         "tj": "Thomas Jefferson High School for Science and Technology (TJHSST) prep requires mastery of Algebra 2 and strong problem-solving 'intuition'. Use our 'TJ Strategy' dashboard for the full elite roadmap.",
-        "test": "Standardized tests aren't just about math; they're about 'Mental Endurance'. Practice with a timer and always audit your mistakes in the Review Hub!"
+        "test": "Standardized tests aren't just about math; they're about 'Mental Endurance'. Practice with a timer and always audit your mistakes in the Review Hub!",
+        "version": "I am Neo Tutor 5.1 Elite. My current upgrades include Site-Wide Neural Mapping, Weighted Scored Search, and Session Conversation Memory. I am running on the local deterministic logic kernel v5.1."
     };
 
     // Neo 5.1: Prerequisite Roadmap
