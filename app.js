@@ -15,6 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
     }
 
+    // Expose globally for UIEngine
+    window.getProgress = getProgress;
+    window.resetProgress = () => {
+        if (confirm("Neo-Sense: Are you sure you want to reset all neural progress? This action cannot be undone.")) {
+            localStorage.removeItem(PROGRESS_KEY);
+            localStorage.removeItem(QUIZ_HISTORY_KEY);
+            location.reload();
+        }
+    };
+
     function getQuizHistory() {
         const saved = localStorage.getItem(QUIZ_HISTORY_KEY);
         return saved ? JSON.parse(saved) : [];

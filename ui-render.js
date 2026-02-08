@@ -12,6 +12,8 @@ window.UIEngine = (function () {
 
         if (!container) return;
 
+        const progress = (window.getProgress) ? window.getProgress() : {};
+
         // Difficulty badge helper
         const getDifficultyBadge = (diff) => {
             switch (diff) {
@@ -22,18 +24,39 @@ window.UIEngine = (function () {
             }
         };
 
-        container.innerHTML = subjects.map((sub, idx) => `
-            <div class="subject-card glass" style="animation-delay: ${idx * 0.1}s" onclick="window.showSubjectDetail('${sub.id}')">
-                <div class="card-icon" style="background: ${sub.color}20; color: ${sub.color}"><i class="${sub.icon}"></i></div>
-                <div class="card-content">
-                    <span class="code">${sub.code}${getDifficultyBadge(sub.difficulty)}</span>
-                    <h3>${sub.title}</h3>
-                    <p>${sub.description}</p>
+        container.innerHTML = subjects.map((sub, idx) => {
+            // Calculate actual progress %
+            let totalLectures = 0;
+            let completedLectures = 0;
+            sub.units.forEach(unit => {
+                unit.lectures.forEach(lecture => {
+                    totalLectures++;
+                    const id = lecture.url.split(':').pop();
+                    if (progress[id] && progress[id].completed) {
+                        completedLectures++;
+                    }
+                });
+            });
+            const percent = totalLectures > 0 ? Math.round((completedLectures / totalLectures) * 100) : 0;
+
+            return `
+                <div class="subject-card glass" style="animation-delay: ${idx * 0.1}s" onclick="window.showSubjectDetail('${sub.id}')">
+                    <div class="card-icon" style="background: ${sub.color}20; color: ${sub.color}"><i class="${sub.icon}"></i></div>
+                    <div class="card-content">
+                        <span class="code">${sub.code}${getDifficultyBadge(sub.difficulty)}</span>
+                        <h3>${sub.title}</h3>
+                        <p>${sub.description}</p>
+                    </div>
+                    <div class="progress-bar" title="${percent}% Complete">
+                        <div class="progress-fill" style="width: ${percent}%; background: ${sub.color};"></div>
+                    </div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:var(--text-secondary)">${percent}% Mastered</span>
+                        <i class="fas fa-arrow-right" style="color:${sub.color}"></i>
+                    </div>
                 </div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 10%; background: ${sub.color};"></div></div>
-                <div class="card-footer"><span style="font-size:0.8rem; color:var(--text-secondary)">Explore Syllabus</span><i class="fas fa-arrow-right" style="color:${sub.color}"></i></div>
-            </div>
-        `).join('');
+            `;
+        }).join('');
     }
 
 
@@ -171,8 +194,13 @@ window.UIEngine = (function () {
 
         main.innerHTML = `
             <div class="hero">
-                <h1>Sabrina <span class="gradient-text">Elite 3.0</span></h1>
+                <h1>Sabrina <span class="gradient-text">Elite 3.5</span></h1>
                 <p>Advanced Mathematical Training Architecture for TJHSST & Beyond.</p>
+                <div style="margin-top:20px;">
+                    <button class="glass-btn reset-btn" onclick="window.resetProgress()" style="padding:10px 20px; font-size:0.8rem; border-color:rgba(245,87,108,0.3); color:#f5576c;">
+                        <i class="fas fa-sync-alt"></i> Reset Neural Link
+                    </button>
+                </div>
             </div>
             <div id="subject-cards-container" class="subject-grid"></div>
         `;
