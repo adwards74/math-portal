@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Kernel Initialization: Link Modules
     if (window.AppRouter) window.AppRouter.initialize();
 
+    // Neo 4.0: Enhanced Tutor Tip
     window.askTutorTip = () => {
         const bubble = document.getElementById('tutor-message');
         if (!bubble) return;
@@ -44,8 +45,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
             bubble.style.borderColor = "var(--accent-magenta)";
             if (window.typeTerminalMessage) window.typeTerminalMessage(rawMessage);
+
+            // Show recommendation after tip
+            showRecommendation();
         }, 800);
     };
+
+    // Neo 4.0: Chat Input Handler
+    window.submitTutorChat = () => {
+        const input = document.getElementById('tutor-chat-input');
+        if (!input) return;
+
+        const query = input.value.trim();
+        if (!query) return;
+
+        input.value = '';
+
+        const bubble = document.getElementById('tutor-message');
+        if (bubble) {
+            bubble.style.borderColor = "var(--accent-cyan)";
+            bubble.innerHTML = `<span class="terminal-prefix">></span> <span style="opacity:0.6;">Processing: "${query}"...</span>`;
+        }
+
+        setTimeout(() => {
+            const response = window.handleChatInput ? window.handleChatInput(query) : "I'm still learning. Try asking about 'quadratic' or 'factor'!";
+            if (window.typeTerminalMessage) window.typeTerminalMessage(response);
+        }, 500);
+    };
+
+    // Neo 4.0: Show Recommendation
+    function showRecommendation() {
+        const recPanel = document.getElementById('tutor-recommendation');
+        const recContent = document.getElementById('recommendation-content');
+        if (!recPanel || !recContent || !window.getNextRecommendation) return;
+
+        const progress = getProgress();
+        const subjectId = window.currentSubjectId || 'algebra2';
+        const rec = window.getNextRecommendation(subjectId, progress);
+
+        if (rec && rec.message) {
+            recContent.innerHTML = rec.message;
+            recPanel.style.display = 'block';
+        }
+    }
 
     // --- Neo 3.0: Proactive Neo-Sense ---
     let lessonStartTime = Date.now();
@@ -831,7 +873,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const isCorrect = sel === corr;
         const f = document.getElementById(`feedback-${uIdx}`);
         f.style.display = 'block';
-        f.innerHTML = isCorrect ? `<p style="color:var(--accent-green)">Correct! ${expl}</p>` : `<p style="color:var(--accent-orange)">Incorrect. ${expl}</p>`;
+
+        // Enhanced feedback with hints for wrong answers
+        if (isCorrect) {
+            f.innerHTML = `<p style="color:var(--accent-green)"><i class="fas fa-check-circle"></i> Correct! ${expl}</p>`;
+        } else {
+            const hint = window.getWrongAnswerHint ? window.getWrongAnswerHint(questionText, sel, corr) : '';
+            f.innerHTML = `<p style="color:var(--accent-orange)"><i class="fas fa-times-circle"></i> Incorrect. ${expl}</p>
+                ${hint ? `<div style="margin-top:10px; padding:10px; background:rgba(0,210,255,0.1); border-radius:8px; font-size:0.85rem;">${hint}</div>` : ''}`;
+        }
+
+        // Record to Neo 4.0 stats tracker
+        const topic = chapterTitle ? chapterTitle.split(' ').slice(0, 2).join(' ') : 'general';
+        if (window.recordQuizResult) {
+            window.recordQuizResult(topic, isCorrect);
+        }
 
         saveQuizAttempt({
             chapter: chapterTitle || "Unknown Chapter",
@@ -842,6 +898,9 @@ document.addEventListener('DOMContentLoaded', () => {
             explanation: expl,
             date: new Date().toLocaleString()
         });
+
+        // Trigger MathJax re-render
+        if (window.MathJax) MathJax.typesetPromise();
     };
 
     window.startDecryptionMission = () => {

@@ -192,7 +192,7 @@
             </div>
         </main>
 
-        <!-- AI Tutor Sidebar -->
+        <!-- AI Tutor Sidebar (Neo 4.0) -->
         <aside class="tutor-sidebar glass" id="ai-tutor-sidebar">
             <div class="tutor-header">
                 <div class="tutor-avatar">
@@ -200,29 +200,63 @@
                     <i class="fas fa-brain"></i>
                 </div>
                 <div class="tutor-info">
-                    <h3>Neo Tutor</h3>
-                    <span class="status-pulse"></span> <span class="status-text">Matrix Logic Active</span>
+                    <h3>Neo Tutor <span style="font-size:0.6rem; color:var(--accent-cyan);">4.0</span></h3>
+                    <span class="status-pulse"></span> <span class="status-text">Elite Mode Active</span>
+                </div>
+            </div>
+
+            <!-- Stats Display (Phase 2 & 4) -->
+            <div id="tutor-stats-display" class="glass" style="padding:12px; border-radius:12px; margin-top:15px; background:rgba(0,0,0,0.3); border:1px solid rgba(0,210,255,0.2);">
+                <div style="display:flex; justify-content:space-between; font-size:0.75rem; margin-bottom:8px;">
+                    <span>Streak: 0</span>
+                    <span>Accuracy: --</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:0.7rem; opacity:0.7;">
+                    <span>Best: 0</span>
+                    <span>Today: 0/5</span>
+                </div>
+                <div style="margin-top:8px;">
+                    <div style="height:4px; background:rgba(255,255,255,0.1); border-radius:2px;">
+                        <div style="height:100%; width:0%; background:linear-gradient(90deg, var(--accent-cyan), var(--accent-green)); border-radius:2px;"></div>
+                    </div>
                 </div>
             </div>
 
             <div class="tutor-content">
                 <div class="chat-bubble glass" id="tutor-message">
-                    <span class="terminal-prefix">></span> Initializing Omni-Brain...
+                    <span class="terminal-prefix">></span> Neo 4.0 initialized. Ready to accelerate your learning!
                 </div>
 
-                <!-- Neo 3.0: Stability Tracker -->
+                <!-- Stability Tracker -->
                 <div class="stability-tracker glass" id="stability-section"
-                    style="margin-top:20px; padding:15px; border-radius:15px; border:1px solid rgba(255,255,255,0.05);">
-                    <div
-                        style="display:flex; justify-content:space-between; font-size:0.7rem; margin-bottom:10px; opacity:0.6;">
+                    style="margin-top:15px; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.05);">
+                    <div style="display:flex; justify-content:space-between; font-size:0.65rem; margin-bottom:8px; opacity:0.6;">
                         <span>NEURAL STABILITY</span>
                         <span id="stability-percent">98%</span>
                     </div>
-                    <canvas id="stability-graph" width="230" height="50" style="width:100%; height:50px;"></canvas>
+                    <canvas id="stability-graph" width="230" height="40" style="width:100%; height:40px;"></canvas>
+                </div>
+
+                <!-- Next Recommendation (Phase 5) -->
+                <div id="tutor-recommendation" class="glass" style="margin-top:15px; padding:12px; border-radius:12px; border-left:3px solid var(--accent-green); font-size:0.8rem; display:none;">
+                    <div style="font-size:0.65rem; opacity:0.6; margin-bottom:5px;">NEXT UP</div>
+                    <div id="recommendation-content"></div>
                 </div>
             </div>
 
-            <div class="tutor-footer">
+            <!-- Chat Input (Phase 3) -->
+            <div class="tutor-chat-input" style="margin-top:auto; padding-top:15px;">
+                <div style="display:flex; gap:8px;">
+                    <input type="text" id="tutor-chat-input" class="glass" placeholder="Ask about any topic..." 
+                        style="flex:1; padding:10px 15px; border-radius:12px; background:rgba(0,0,0,0.3); border:1px solid rgba(0,210,255,0.2); color:white; font-size:0.85rem;"
+                        onkeypress="if(event.key==='Enter')window.submitTutorChat()">
+                    <button class="glass" onclick="window.submitTutorChat()" style="padding:10px 15px; border-radius:12px; color:var(--accent-cyan); cursor:pointer;">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="tutor-footer" style="margin-top:15px;">
                 <button class="glass tutor-btn" onclick="window.askTutorTip()">
                     <i class="fas fa-lightbulb"></i> Get Concept Trick
                 </button>
