@@ -1465,6 +1465,69 @@ document.addEventListener('DOMContentLoaded', () => {
         window.typeTerminalMessage(`DRILL TERMINATED. Final Score: ${drillScore}. ${drillScore > 100 ? "Excellent algorithmic speed detected." : "Precision is high, but throughput needs optimization. Continue recalibrating."}`);
     };
 
+    // --- Global Search Implementation ---
+    const globalSearch = document.getElementById('global-search');
+    if (globalSearch) {
+        globalSearch.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            if (!query) {
+                // If empty, show dashboard
+                showDashboard();
+                return;
+            }
+
+            // Filter logic
+            const results = [];
+            MATH_DATA.subjects.forEach(sub => {
+                let match = false;
+                if (sub.title.toLowerCase().includes(query) || sub.description.toLowerCase().includes(query) || sub.code.toLowerCase().includes(query)) {
+                    match = true;
+                }
+
+                // Check units and lectures
+                const unitMatches = sub.units.filter(unit =>
+                    unit.title.toLowerCase().includes(query) ||
+                    unit.topics.some(t => t.toLowerCase().includes(query)) ||
+                    unit.lectures.some(l => l.name.toLowerCase().includes(query))
+                );
+
+                if (match || unitMatches.length > 0) {
+                    results.push({
+                        ...sub,
+                        matchedUnits: unitMatches.length // Optional: can be used to highlight
+                    });
+                }
+            });
+
+            // Switch to dashboard view and render filtered grid
+            if (window.AppRouter) window.AppRouter.switchView('dashboard');
+
+            const dashboardView = document.getElementById('dashboard-view');
+            if (dashboardView) {
+                if (results.length > 0) {
+                    // Update the title to "Search Results"
+                    dashboardView.innerHTML = `
+                        <div class="hero">
+                            <h1>Search <span class="gradient-text">Results</span></h1>
+                            <p>Found ${results.length} subject(s) matching "${query}"</p>
+                        </div>
+                        <div id="subject-grid" class="subject-grid"></div>
+                    `;
+                    if (window.UIEngine && window.UIEngine.renderSubjectGrid) {
+                        window.UIEngine.renderSubjectGrid(results, 'subject-grid');
+                    }
+                } else {
+                    dashboardView.innerHTML = `
+                        <div class="hero">
+                            <h1>No <span class="gradient-text">Matches</span></h1>
+                            <p>We couldn't find anything for "${query}". Try different keywords.</p>
+                        </div>
+                    `;
+                }
+            }
+        });
+    }
+
     if (window.updateStabilityUI) window.updateStabilityUI(); // Initial draw
     showDashboard();
 });

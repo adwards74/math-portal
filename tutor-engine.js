@@ -284,7 +284,7 @@ window.TutorEngine = (function () {
                     if (l.insight) insight = l.insight;
                     // Get context hints based on lesson content
                     for (const [keyword, hint] of Object.entries(HINT_DATABASE)) {
-                        if (l.title.toLowerCase().includes(keyword) || lessonKey.includes(keyword)) {
+                        if ((l.name && l.name.toLowerCase().includes(keyword)) || lessonKey.includes(keyword)) {
                             contextHint = hint;
                             break;
                         }
