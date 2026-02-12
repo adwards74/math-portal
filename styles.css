@@ -9,7 +9,12 @@
     --text-primary: #ffffff;
     --accent-magenta: #f5576c;
     --accent-orange: #ff9d00;
+    --accent-cyan: #00d2ff;
     --neon-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+    --neon-magenta: 0 0 15px rgba(245, 87, 108, 0.3);
+    --neon-blue-glow: 0 0 20px rgba(0, 210, 255, 0.4);
+    --neon-magenta-glow: 0 0 20px rgba(245, 87, 108, 0.4);
+    --standard-radius: 20px;
 }
 
 * {
@@ -100,7 +105,7 @@ h3,
     padding: 12px 15px;
     text-decoration: none;
     color: var(--text-secondary);
-    border-radius: 10px;
+    border-radius: var(--standard-radius);
     transition: all 0.3s ease;
 }
 
@@ -124,7 +129,7 @@ h3,
 
 .paradigm-shift {
     background: linear-gradient(135deg, rgba(157, 80, 187, 0.1), rgba(0, 210, 255, 0.1));
-    border-radius: 20px;
+    border-radius: var(--standard-radius);
     padding: 30px;
     margin: 30px 0;
     border-left: 5px solid var(--accent-purple);
@@ -141,7 +146,7 @@ h3,
     text-align: center;
     padding: 40px;
     background: rgba(255, 255, 255, 0.02);
-    border-radius: 20px;
+    border-radius: var(--standard-radius);
     margin: 30px 0;
     border: 1px dashed rgba(255, 255, 255, 0.1);
 }
@@ -167,7 +172,7 @@ em {
 
 .glass-card {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
-    border-radius: 24px;
+    border-radius: var(--standard-radius);
     padding: 25px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.02);
@@ -183,13 +188,13 @@ em {
 .example-box {
     background: rgba(56, 239, 125, 0.05);
     border: 1px solid rgba(56, 239, 125, 0.2);
-    border-radius: 12px;
+    border-radius: var(--standard-radius);
     padding: 20px;
     margin: 20px 0;
 }
 
 .proof-box {
-    border-radius: 12px;
+    border-radius: var(--standard-radius);
     padding: 20px;
     margin: 25px 0;
     font-family: 'JetBrains Mono', monospace;
@@ -218,7 +223,7 @@ em {
     background: linear-gradient(135deg, rgba(157, 80, 187, 0.1), rgba(0, 210, 255, 0.1));
     border: 1px solid var(--accent-purple);
     border-left: 5px solid var(--accent-blue);
-    border-radius: 15px;
+    border-radius: var(--standard-radius);
     padding: 25px;
     margin: 30px 0;
     box-shadow: 0 0 20px rgba(157, 80, 187, 0.1);
@@ -271,7 +276,7 @@ em {
     gap: 12px;
     padding: 15px;
     background: rgba(255, 255, 255, 0.03);
-    border-radius: 12px;
+    border-radius: var(--standard-radius);
 }
 
 .avatar {
@@ -300,6 +305,45 @@ em {
     color: var(--text-secondary);
 }
 
+/* Elite 4.0 Content Components */
+.intuition-box {
+    background: rgba(0, 210, 255, 0.05);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: var(--standard-radius);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.intuition-box h3 {
+    color: var(--accent-blue);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.metacognition {
+    background: rgba(157, 80, 187, 0.05);
+    border-left: 4px solid var(--accent-purple);
+    border-radius: var(--standard-radius);
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.metacognition h4 {
+    color: var(--accent-purple);
+    margin-bottom: 10px;
+}
+
 /* Main Content */
 .content-area {
     flex: 1;
@@ -321,7 +365,7 @@ em {
     gap: 10px;
     padding: 10px 20px;
     width: 400px;
-    border-radius: 20px;
+    border-radius: var(--standard-radius);
 }
 
 .search-bar input {
@@ -334,7 +378,7 @@ em {
 
 .badge {
     padding: 6px 15px;
-    border-radius: 20px;
+    border-radius: var(--standard-radius);
     font-size: 0.85rem;
     font-weight: 600;
 }
@@ -384,7 +428,7 @@ em {
     align-items: center;
     gap: 20px;
     padding: 25px;
-    border-radius: 16px;
+    border-radius: var(--standard-radius);
     transition: transform 0.3s ease;
 }
 
@@ -421,7 +465,7 @@ em {
 
 .subject-card {
     padding: 30px;
-    border-radius: 20px;
+    border-radius: var(--standard-radius);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -552,7 +596,7 @@ em {
     text-align: center;
     padding: 60px;
     max-width: 500px;
-    border-radius: 40px;
+    border-radius: var(--standard-radius);
     border: 2px solid var(--accent-blue);
     box-shadow: 0 0 50px rgba(0, 210, 255, 0.3);
     position: relative;
@@ -586,7 +630,7 @@ em {
     width: 100%;
     height: 450px;
     background: rgba(255, 255, 255, 0.03);
-    border-radius: 20px;
+    border-radius: var(--standard-radius);
     border: 1px dashed rgba(255, 255, 255, 0.2);
     margin: 30px 0;
     display: flex;
@@ -603,7 +647,7 @@ em {
     transform: translateY(-50%);
     width: 320px;
     height: 85vh;
-    border-radius: 20px 0 0 20px;
+    border-radius: var(--standard-radius) 0 0 var(--standard-radius);
     padding: 20px;
     z-index: 1000;
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -821,7 +865,7 @@ em {
     max-width: 600px;
     width: 90%;
     padding: 50px;
-    border-radius: 30px;
+    border-radius: var(--standard-radius);
     text-align: center;
     border: 1px solid var(--accent-magenta);
     box-shadow: 0 0 50px rgba(245, 87, 108, 0.2);
@@ -858,7 +902,7 @@ em {
 
 .quiz-btn {
     padding: 20px;
-    border-radius: 20px;
+    border-radius: var(--standard-radius);
     font-weight: 600;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.03);
@@ -1011,7 +1055,7 @@ em {
 .celebration-badge {
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 210, 255, 0.1));
     border: 2px solid #ffd700;
-    border-radius: 30px;
+    border-radius: var(--standard-radius);
     padding: 40px 60px;
     box-shadow: 0 0 50px rgba(255, 215, 0, 0.3);
 }
@@ -1100,4 +1144,5 @@ em {
 #tutor-recommendation:hover {
     border-color: var(--accent-cyan);
     background: rgba(0, 210, 255, 0.05);
+    border-radius: var(--standard-radius);
 }

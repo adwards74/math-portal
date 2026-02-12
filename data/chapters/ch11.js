@@ -51,7 +51,7 @@ window.CHAPTER_DATA["ch11"] = {
                 
                 <div class="proof-box glass">
                     \\[S_n = \\frac{a_1(1 - r^n)}{1 - r}\\]
-                    <p style="margin-top:10px;">By pairing the first and last terms, then second and second-to-last, we find that every pair sums to the same value. Summing becomes simple multiplication.</p>
+                    <p style="margin-top:10px;">Unlike arithmetic sums, geometric sums depend on the power of the ratio. As $n$ increases, $r^n$ either vanishes (convergence) or explodes (divergence). This formula captures the total state of that growth.</p>
                 </div>
             </div>
         `

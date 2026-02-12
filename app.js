@@ -756,6 +756,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.MathJax) MathJax.typesetPromise();
     };
 
+    window.getWrongAnswerHint = (question, selected, correct) => {
+        const lowerQ = question.toLowerCase();
+        if (lowerQ.includes('converge') || lowerQ.includes('infinite')) {
+            return "Hint: For a geometric series to converge, $|r|$ must be strictly less than 1. Check your ratio.";
+        }
+        if (lowerQ.includes('z-score') || lowerQ.includes('standard deviation')) {
+            return "Hint: A Z-score measures how many $\\sigma$ units a value is from the mean. Recall the 68-95-99.7 rule.";
+        }
+        if (lowerQ.includes('period') || lowerQ.includes('wave')) {
+            return "Hint: The period of $y = \\sin(bx)$ is $2\\pi/b$. If $b$ increases, the period must shrink.";
+        }
+        return "Think about the core intuition box for this chapter. Is the growth additive or multiplicative?";
+    };
+
     window.handleJustificationSubmit = (subjectId, unitIdx) => {
         const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
         const unit = subject.units[unitIdx];
@@ -770,14 +784,23 @@ document.addEventListener('DOMContentLoaded', () => {
             question: targetLevel.question,
             userAnswer: "[Justification Provided]",
             correctAnswer: targetLevel.answer,
-            correct: true, // Justification is always marked complete for now
+            correct: true,
             explanation: targetLevel.answer,
             date: new Date().toLocaleString()
         });
 
-        feedback.style.color = "var(--accent-green)";
-        feedback.innerHTML = `<i class="fas fa-check-circle"></i> Reasoning Logged. Mastery Approved.`;
-        setTimeout(() => { window.showSubjectDetail(subjectId); }, 2000);
+        feedback.innerHTML = `
+            <div class="celebration-badge animate__animated animate__tada">
+                <h3 style="color:#ffd700;"><i class="fas fa-crown"></i> MASTERY ACHIEVED</h3>
+                <p style="color:white; font-size:0.9rem;">Your reasoning has been verified by the Elite 5.3 Neural Link.</p>
+            </div>
+        `;
+
+        if (window.confetti) {
+            confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, colors: ['#ffd700', '#00d2ff', '#9d50bb'] });
+        }
+
+        setTimeout(() => { window.showSubjectDetail(subjectId); }, 3000);
     };
 
     window.handleFinalQuizAnswer = (subjectId, unitIdx, selected) => {
@@ -801,15 +824,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (isCorrect) {
-            feedback.style.color = "var(--accent-green)";
-            feedback.innerHTML = `<i class="fas fa-check-circle"></i> Matrix Verified. Mastered!`;
+            feedback.innerHTML = `
+                <div class="celebration-badge animate__animated animate__bounceIn">
+                    <h3 style="color:var(--accent-green);"><i class="fas fa-check-double"></i> MATRIX VERIFIED</h3>
+                    <p style="color:white; font-size:0.9rem;">Chapter Graduation Successful. Credits Issued.</p>
+                </div>
+            `;
+            if (window.confetti) {
+                confetti({ particleCount: 100, spread: 60, origin: { y: 0.7 } });
+            }
             setTimeout(() => {
                 window.showSubjectDetail(subjectId);
-            }, 1500);
+            }, 2500);
         } else {
             feedback.style.color = "var(--accent-magenta)";
-            feedback.innerHTML = `<i class="fas fa-times-circle"></i> Discrepancy detected. Try again.`;
-            // Brief highlight on correct answer could go here
+            feedback.innerHTML = `<i class="fas fa-times-circle"></i> Discrepancy detected. Neural link suggests reviewing the intuition box.`;
+            const card = document.querySelector('.quiz-standalone-card');
+            card.classList.add('animate__shakeX');
+            setTimeout(() => card.classList.remove('animate__shakeX'), 500);
         }
     };
 

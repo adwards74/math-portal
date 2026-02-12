@@ -17,9 +17,9 @@ window.UIEngine = (function () {
         // Difficulty badge helper
         const getDifficultyBadge = (diff) => {
             switch (diff) {
-                case 'basic': return '<span class="difficulty-badge basic" style="background:#38ef7d22; color:#38ef7d; padding:3px 8px; border-radius:8px; font-size:0.7rem; margin-left:8px;">🟢 기초</span>';
-                case 'intermediate': return '<span class="difficulty-badge intermediate" style="background:#f9d42322; color:#f9d423; padding:3px 8px; border-radius:8px; font-size:0.7rem; margin-left:8px;">🟡 중급</span>';
-                case 'advanced': return '<span class="difficulty-badge advanced" style="background:#ff416c22; color:#ff416c; padding:3px 8px; border-radius:8px; font-size:0.7rem; margin-left:8px;">🔴 고급</span>';
+                case 'basic': return '<span class="difficulty-badge neon-blue">🟢 기초</span>';
+                case 'intermediate': return '<span class="difficulty-badge" style="background:#f9d42322; color:#f9d423; padding:3px 8px; border-radius:8px; font-size:0.7rem; margin-left:8px;">🟡 중급</span>';
+                case 'advanced': return '<span class="difficulty-badge" style="background:#ff416c22; color:#ff416c; padding:3px 8px; border-radius:8px; font-size:0.7rem; margin-left:8px;">🔴 고급</span>';
                 default: return '';
             }
         };
@@ -94,7 +94,7 @@ window.UIEngine = (function () {
 
     function renderUnitCard(unit, subject, uIdx) {
         return `
-            <div class="unit-card glass" style="padding:30px; border-radius:20px;">
+            <div class="unit-card glass" style="padding:30px; border-radius:var(--standard-radius);">
                 <h3 style="margin-bottom:15px; border-left:4px solid ${subject.color}; padding-left:15px;">${unit.title}</h3>
                 ${unit.intuition ? `<p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:15px;">${unit.intuition}</p>` : ''}
                 <div class="lectures" style="display:grid; gap:10px;">
@@ -110,7 +110,7 @@ window.UIEngine = (function () {
         const id = l.url.includes('lesson:') ? l.url.split(':').pop() : null;
         const prog = (id && window.getProgress) ? window.getProgress()[id] : null;
         return `
-            <div class="lecture-link glass ${prog ? 'completed' : ''}" style="cursor:pointer; display:flex; justify-content:space-between; padding:15px 20px; border-radius:12px;" onclick="window.showLessonHandler('${l.url}', '${subject.id}')">
+            <div class="lecture-link glass ${prog ? 'completed' : ''}" style="cursor:pointer; display:flex; justify-content:space-between; padding:15px 20px; border-radius:var(--standard-radius);" onclick="window.showLessonHandler('${l.url}', '${subject.id}')">
                 <div style="display:flex; align-items:center; gap:12px;">
                     <i class="fas fa-book-open" style="color:${prog ? 'var(--accent-green)' : subject.color}"></i>
                     <span>${l.name}</span>
@@ -125,9 +125,9 @@ window.UIEngine = (function () {
             <div class="examples-section" style="margin-top:25px;">
                 <h4 style="color:${subject.color}; margin-bottom:15px;"><i class="fas fa-chalkboard-teacher"></i> Worked Examples</h4>
                 ${examples.map(ex => `
-                    <div class="example-card glass" style="padding:20px; border-radius:12px; margin-bottom:15px; border-left:3px solid ${subject.color};">
+                    <div class="example-card glass" style="padding:20px; border-radius:var(--standard-radius); margin-bottom:15px; border-left:3px solid ${subject.color};">
                         <h5 style="margin-bottom:8px; color:white;">${ex.title}</h5>
-                        <p style="font-size:0.95rem; margin-bottom:12px; font-family:'JetBrains Mono', monospace; background:rgba(0,0,0,0.2); padding:10px; border-radius:8px;">${ex.problem}</p>
+                        <p style="font-size:0.95rem; margin-bottom:12px; font-family:'JetBrains Mono', monospace; background:rgba(0,0,0,0.2); padding:10px; border-radius:var(--standard-radius);">${ex.problem}</p>
                         <details style="cursor:pointer;">
                             <summary style="font-size:0.85rem; color:${subject.color}; font-weight:600;">View Step-by-Step Solution</summary>
                             <div style="margin-top:10px; padding-left:15px; border-left:1px solid rgba(255,255,255,0.1);">
@@ -164,7 +164,7 @@ window.UIEngine = (function () {
         }
 
         return `
-            <div class="quiz-box glass" id="quiz-container-${unitIdx}" style="margin-top:15px; padding:20px; border-radius:12px;">
+            <div class="quiz-box glass" id="quiz-container-${unitIdx}" style="margin-top:15px; padding:20px; border-radius:var(--standard-radius);">
                 <h4 style="color:${subject.color}; margin-bottom:10px;"><i class="fas fa-question-circle"></i> Concept Check</h4>
                 ${levelSelectorHtml}
                 <div class="quiz-content" id="quiz-content-${unitIdx}">

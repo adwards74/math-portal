@@ -815,6 +815,10 @@ const MATH_DATA = {
                 {
                     title: "Ch 11: Sequences & Series",
                     intuition: "Nature is built on patterns. From the Fibonacci sequence to compound interest, sequences define how discrete steps build into continuous structures.",
+                    vizConfig: {
+                        expressions: ["y = a_1 + (x-1)d", "a_1 = 1", "d = 1", "y = a_1(r)^{(x-1)}", "r = 1.2"],
+                        bounds: { left: 0, right: 10, bottom: 0, top: 20 }
+                    },
                     topics: ["11.1 Pattern Logic", "11.2 Arithmetic", "11.3 Geometric", "11.4 Series Summations", "11.5 Infinite Series"],
                     lectures: [
                         { name: "11.1: Pattern Intelligence", url: "lesson:algebra2:ch11-1" },
@@ -888,6 +892,10 @@ const MATH_DATA = {
                 {
                     title: "Ch 12: Probability & Statistics",
                     intuition: "Probability is the logic of uncertainty. It is the engine of Artificial Intelligence, governing how machines learn from data (Bayesian Logic) and how we make decisions under risk.",
+                    vizConfig: {
+                        expressions: ["y = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{1}{2}(\\frac{x-\\mu}{\\sigma})^2}", "\\mu = 0", "\\sigma = 1"],
+                        bounds: { left: -5, right: 5, bottom: 0, top: 1 }
+                    },
                     topics: ["12.1 Probability Rules", "12.2 Conditional Probability", "12.3 Discrete Events", "12.4 Normal Distribution", "12.5 Sampling Methods"],
                     lectures: [
                         { name: "12.1: The Logic of Chance", url: "lesson:algebra2:ch12-1" },
@@ -1215,6 +1223,10 @@ const MATH_DATA = {
                 },
                 {
                     title: "Unit 15: TJ Elite Master Challenge",
+                    vizConfig: {
+                        expressions: ["y = 2^{x+1}", "y = x^2 + 4"],
+                        bounds: { left: -5, right: 10, bottom: -5, top: 20 }
+                    },
                     topics: ["Non-linear Systems", "Signal Modeling", "AMC Logic Bridge"],
                     lectures: [
                         { name: "15.1: TJ EOC (End of Course) Replica", url: "lesson:final:final-u15-1" },
