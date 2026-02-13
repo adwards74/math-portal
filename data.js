@@ -300,7 +300,8 @@ const MATH_DATA = {
                         { name: "4.5: Inverse Matrices", url: "lesson:algebra2:ch4-5" },
                         { name: "4.6: Identity & Inverse Matrices", url: "lesson:algebra2:ch4-6" },
                         { name: "4.7: 3x3 Determinants & Volume", url: "lesson:algebra2:ch4-7" },
-                        { name: "4.8: Review Challenge", url: "lesson:algebra2:ch4-rev" }
+                        { name: "4.8: Review Challenge", url: "lesson:algebra2:ch4-rev" },
+                        { name: "💡 Competition Tip: Cramer's Rule", url: "#", insight: "For a system $AX=B$, if $det(A) \neq 0$, the unique solution is $x_i = det(A_i)/det(A)$. It's the most efficient way to solve specific variables in high-speed competitions!" }
                     ],
                     examples: [
                         {
