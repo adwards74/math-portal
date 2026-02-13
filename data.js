@@ -119,7 +119,7 @@ const MATH_DATA = {
                         levels: [
                             {
                                 title: "Level 1: Intuition",
-                                question: "Why is $a \cdot 0 = 0$ in the formal system of Algebra?",
+                                question: "Why is $a \\cdot 0 = 0$ in the formal system of Algebra?",
                                 options: ["It's just a definition", "Consequence of Distributive Property", "Inverse Identity", "Associative Law"],
                                 answer: "Consequence of Distributive Property",
                                 explanation: "Formal proofs show that multiplying by zero is a result of distributing across an identity ($0+0$)."
@@ -129,12 +129,12 @@ const MATH_DATA = {
                                 question: "Solve for $x$: $3(x - 5) = 2x + 4$.",
                                 options: ["x = 19", "x = 9", "x = 1", "x = 11"],
                                 answer: "x = 19",
-                                explanation: "$3x - 15 = 2x + 4 \rightarrow x = 19$."
+                                explanation: "$3x - 15 = 2x + 4 \\rightarrow x = 19$."
                             },
                             {
                                 title: "Level 3: Mastery",
                                 type: "justification",
-                                question: "Identify the error in this sequence: $|x + 5| = -2 \rightarrow x + 5 = -2$ or $x + 5 = 2$.",
+                                question: "Identify the error in this sequence: $|x + 5| = -2 \\rightarrow x + 5 = -2$ or $x + 5 = 2$.",
                                 answer: "The equation has no solution because the absolute value (distance) cannot be negative.",
                                 template: "The error is... Therefore, the solution set is..."
                             }
@@ -294,7 +294,7 @@ const MATH_DATA = {
                     topics: ["4.1 Data Organization", "4.2 Matrix Operations", "4.3 Multiplication", "4.4 Geometric Transformations", "4.5 Determinants", "4.6 Inverses", "4.7 Systems Solving"],
                     lectures: [
                         { name: "4.1: Organising Data into Matrices", url: "lesson:algebra2:ch4-1", insight: "Matrix Addition: Only matrices of the SAME dimensions can be added. It's like adding arrays element-by-element in code." },
-                        { name: "4.2: Matrix Multiplication", url: "lesson:algebra2:ch4-2", insight: "$A \cdot B$ is NOT the same as $B \cdot A$. Order matters deeply in linear transformations!" },
+                        { name: "4.2: Matrix Multiplication", url: "lesson:algebra2:ch4-2", insight: "$A \\cdot B$ is NOT the same as $B \\cdot A$. Order matters deeply in linear transformations!" },
                         { name: "4.3: Determinants & Cramer's Rule", url: "lesson:algebra2:ch4-3", insight: "Determinants: If $det(A) = 0$, you've lost information. The transformation is destructive/singular." },
                         { name: "4.4: Visualizing Linear Transformations", url: "lesson:algebra2:ch4-4" },
                         { name: "4.5: Inverse Matrices", url: "lesson:algebra2:ch4-5" },
@@ -332,7 +332,7 @@ const MATH_DATA = {
                             steps: [
                                 "Calculate Determinant: $\\det = (2)(3) - (0)(0) = 6$.",
                                 "Physical result: The square's width is doubled (2) and its height is tripled (3).",
-                                "Area change: The new area is $2 \times 3 = 6$ square units. The determinant correctly predicted the 6-fold scaling of area.",
+                                "Area change: The new area is $2 \\times 3 = 6$ square units. The determinant correctly predicted the 6-fold scaling of area.",
                                 "Final Matrix: $\\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}$."
                             ],
                             intuition: "A matrix is a physical distortion of space. The determinant is the 'Magnification' factor of that distortion."
@@ -389,7 +389,7 @@ const MATH_DATA = {
                             steps: [
                                 "Identify parameters: $(h, k) = (0,0)$. Focus is $p=2$ units above vertex.",
                                 "Use the geometric formula: $y = a(x - h)^2 + k$.",
-                                "Find $a$: Since $p = 1/(4a)$, we have $2 = 1/(4a) \rightarrow 8a = 1 \rightarrow a = 1/8$.",
+                                "Find $a$: Since $p = 1/(4a)$, we have $2 = 1/(4a) \\rightarrow 8a = 1 \\rightarrow a = 1/8$.",
                                 "Final Equation: $y = \\frac{1}{8}x^2$."
                             ],
                             intuition: "The 'shallower' the dish (smaller $a$), the further away its focus is. This determines the signal gain of the antenna."
@@ -410,7 +410,7 @@ const MATH_DATA = {
                             problem: "Find the roots of $x^2 - 4x + 13 = 0$. Plot them in the complex plane.",
                             steps: [
                                 "Discriminant: $D = (-4)^2 - 4(1)(13) = 16 - 52 = -36$.",
-                                "Apply formula: $x = \\frac{4 \pm \sqrt{-36}}{2} = \\frac{4 \pm 6i}{2}$.",
+                                "Apply formula: $x = \\frac{4 \\pm \\sqrt{-36}}{2} = \\frac{4 \\pm 6i}{2}$.",
                                 "Roots: $2 + 3i$ and $2 - 3i$.",
                                 "Geometry: These points are symmetric reflections across the Real (X) axis."
                             ],
@@ -495,7 +495,7 @@ const MATH_DATA = {
                         levels: [
                             {
                                 title: "Level 1: Intuition",
-                                question: "As $x \to \infty$, which term in $f(x) = 3x^4 - 2x^3 + 10x$ determines the end behavior?",
+                                question: "As $x \\to \\infty$, which term in $f(x) = 3x^4 - 2x^3 + 10x$ determines the end behavior?",
                                 options: ["3x^4", "-2x^3", "10x", "All of them"],
                                 answer: "3x^4",
                                 explanation: "The leading term dominates as x becomes large; all other terms become insignificant in comparison."
@@ -578,7 +578,7 @@ const MATH_DATA = {
                             },
                             {
                                 title: "Level 2: Drill",
-                                question: "Rewrite $\sqrt[3]{x^6}$ using rational exponents.",
+                                question: "Rewrite $\\sqrt[3]{x^6}$ using rational exponents.",
                                 options: ["x^2", "x^3", "x^18", "x^0.5"],
                                 answer: "x^2",
                                 explanation: "$x^{6/3} = x^2$."
@@ -660,8 +660,8 @@ const MATH_DATA = {
                             {
                                 title: "Level 3: Mastery",
                                 type: "justification",
-                                question: "Explain why $\log_b(x)$ is undefined for $x \le 0$ using its relationship to exponents.",
-                                answer: "Since $b^y$ is always positive for any real $y$, there is no $y$ such that $b^y \le 0$.",
+                                question: "Explain why $\\log_b(x)$ is undefined for $x \\le 0$ using its relationship to exponents.",
+                                answer: "Since $b^y$ is always positive for any real $y$, there is no $y$ such that $b^y \\le 0$.",
                                 template: "A logarithm is the inverse of... Since an exponential function with base $b > 0$... it follows that..."
                             }
                         ]
@@ -725,7 +725,7 @@ const MATH_DATA = {
                             },
                             {
                                 title: "Level 2: Drill",
-                                question: "Find the Horizontal Asymptote of $f(x) = \frac{4x^2 + 1}{2x^2 - 3}$.",
+                                question: "Find the Horizontal Asymptote of $f(x) = \\frac{4x^2 + 1}{2x^2 - 3}$.",
                                 options: ["y = 0", "y = 2", "y = 4", "None"],
                                 answer: "y = 2",
                                 explanation: "The degrees are equal; divide leading coefficients: $4/2 = 2$."
@@ -835,14 +835,14 @@ const MATH_DATA = {
                             steps: [
                                 "Identify parameters: $a_1 = 1, a_{100} = 100, n = 100$.",
                                 "Use Arithmetic Sum: $S = \\frac{n(a_1 + a_n)}{2}$.",
-                                "Substitute: $S = \\frac{100(1 + 100)}{2} = 50 \cdot 101$.",
+                                "Substitute: $S = \\frac{100(1 + 100)}{2} = 50 \\cdot 101$.",
                                 "Result: 5,050."
                             ],
                             intuition: "Arithmetic sequences are the 'Linear Functions' of the discrete world. By pairing terms, we reduce a complex addition problem into a single multiplication."
                         },
                         {
                             title: "Example 2: Geometric Growth",
-                            problem: "Find the 10th term of the sequence $3, 6, 12, \dots$.",
+                            problem: "Find the 10th term of the sequence $3, 6, 12, \\dots$.",
                             steps: [
                                 "Identify common ratio $r = 6/3 = 2$.",
                                 "Use explicit formula: $a_n = a_1 \\\\cdot r^{n-1}$.",
@@ -853,7 +853,7 @@ const MATH_DATA = {
                         },
                         {
                             title: "Example 3: Infinite Convergence",
-                            problem: "Find the sum of the infinite series $10 + 5 + 2.5 + \dots$.",
+                            problem: "Find the sum of the infinite series $10 + 5 + 2.5 + \\dots$.",
                             steps: [
                                 "Identify $a_1 = 10$ and $r = 5/10 = 0.5$.",
                                 "Since $|0.5| < 1$, the series converges.",
@@ -877,12 +877,12 @@ const MATH_DATA = {
                                 question: "Find the 5th term of a geometric sequence where $a_1 = 3$ and $r = -2$.",
                                 options: ["48", "-48", "96", "-32"],
                                 answer: "48",
-                                explanation: "$a_5 = 3 \cdot (-2)^4 = 3 \cdot 16 = 48$."
+                                explanation: "$a_5 = 3 \\cdot (-2)^4 = 3 \\cdot 16 = 48$."
                             },
                             {
                                 title: "Level 3: Mastery",
                                 type: "justification",
-                                question: "Explain why an infinite *Arithmetic* series with $d \ne 0$ never converges.",
+                                question: "Explain why an infinite *Arithmetic* series with $d \\ne 0$ never converges.",
                                 answer: "Because the terms themselves do not approach zero; they either grow to positive or negative infinity, making the running total unbounded.",
                                 template: "For a series to converge, its terms must... In an arithmetic sequence... which means the sum..."
                             }
@@ -954,7 +954,7 @@ const MATH_DATA = {
                                 question: "A value has a Z-score of -1.5. If the mean is 10 and standard deviation is 2, what is the value?",
                                 options: ["8.5", "7", "11.5", "13"],
                                 answer: "7",
-                                explanation: "$x = \mu + z\sigma = 10 + (-1.5)(2) = 10 - 3 = 7$."
+                                explanation: "$x = \\mu + z\\sigma = 10 + (-1.5)(2) = 10 - 3 = 7$."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -1001,10 +1001,10 @@ const MATH_DATA = {
                             title: "Example 2: Arc Length & Radians",
                             problem: "How far does a point travel on a circle with radius 10cm if it rotates through $3\\\\pi/2$ radians?",
                             steps: [
-                                "Use the formula: $s = r \theta$.",
-                                "Identify $r = 10$ and $\theta = 3\pi/2$.",
-                                "Calculate: $s = 10 \cdot (3\pi/2) = 15\pi$.",
-                                "Result: $\approx 47.12$ cm."
+                                "Use the formula: $s = r \\theta$.",
+                                "Identify $r = 10$ and $\\theta = 3\\pi/2$.",
+                                "Calculate: $s = 10 \\cdot (3\\pi/2) = 15\\pi$.",
+                                "Result: $\\approx 47.12$ cm."
                             ],
                             intuition: "Radians are the bridge between the 'Angle' (rotation) and 'Distance' (travel). If $r=1$, the angle is the distance."
                         },
@@ -1024,22 +1024,22 @@ const MATH_DATA = {
                         levels: [
                             {
                                 title: "Level 1: Intuition",
-                                question: "If two identical sine waves are $180^{\\circ}$ ($\pi$ radians) out of phase, what happens when they are added together?",
+                                question: "If two identical sine waves are $180^{\\circ}$ ($\\pi$ radians) out of phase, what happens when they are added together?",
                                 options: ["They double in amplitude", "They cancel each other out", "The frequency doubles", "Nothing changes"],
                                 answer: "They cancel each other out",
                                 explanation: "Destructive interference occurs when two waves are 180 degrees out of phase, as the peak of one aligns with the trough of the other."
                             },
                             {
                                 title: "Level 2: Drill",
-                                question: "Convert $5\pi/6$ radians to degrees.",
+                                question: "Convert $5\\pi/6$ radians to degrees.",
                                 options: ["120°", "150°", "210°", "300°"],
                                 answer: "150°",
-                                explanation: "$(5\pi/6) \cdot (180/\pi) = 150°$."
+                                explanation: "$(5\\pi/6) \\cdot (180/\\pi) = 150°$."
                             },
                             {
                                 title: "Level 3: Mastery",
                                 type: "justification",
-                                question: "Explain why the Period of $y = \tan(x)$ is $\pi$ instead of $2\pi$.",
+                                question: "Explain why the Period of $y = \\tan(x)$ is $\\pi$ instead of $2\\pi$.",
                                 answer: "Because slopes of terminal rays repeat exactly every 180 degrees (half a circle) as they mirror in opposite quadrants.",
                                 template: "The tangent function represents the ratio... which geometrically is... since these ratios repeat when..."
                             }
@@ -1105,10 +1105,10 @@ const MATH_DATA = {
                             },
                             {
                                 title: "Level 2: Drill",
-                                question: "Simplify $(1 - \cos^2 \theta) / \sin \theta$.",
+                                question: "Simplify $(1 - \\cos^2 \\theta) / \\sin \\theta$.",
                                 options: ["1", "sin θ", "cos θ", "tan θ"],
                                 answer: "sin θ",
-                                explanation: "$(1 - \cos^2 \theta) = \sin^2 \theta$. So $\sin^2 \theta / \sin \theta = \sin \theta$."
+                                explanation: "$(1 - \\cos^2 \\theta) = \\sin^2 \\theta$. So $\\sin^2 \\theta / \\sin \\theta = \\sin \\theta$."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -1135,12 +1135,12 @@ const MATH_DATA = {
                             title: "AMC Challenge: Divisor Counting",
                             problem: "How many positive divisors does $12!$ have?",
                             steps: [
-                                "Find the prime factorization of 12! using Legendre's Formula for each prime $p \le 12$ ($2, 3, 5, 7, 11$).",
-                                "For $p=2$: $\lfloor 12/2 \rfloor + \lfloor 12/4 \rfloor + \lfloor 12/8 \rfloor = 6+3+1 = 10$. Exponent is 10.",
-                                "For $p=3$: $\lfloor 12/3 \rfloor + \lfloor 12/9 \rfloor = 4+1 = 5$. Exponent is 5.",
+                                "Find the prime factorization of 12! using Legendre's Formula for each prime $p \\le 12$ ($2, 3, 5, 7, 11$).",
+                                "For $p=2$: $\\lfloor 12/2 \\rfloor + \\lfloor 12/4 \\rfloor + \\lfloor 12/8 \\rfloor = 6+3+1 = 10$. Exponent is 10.",
+                                "For $p=3$: $\\lfloor 12/3 \\rfloor + \\lfloor 12/9 \\rfloor = 4+1 = 5$. Exponent is 5.",
                                 "Repeat for 5 (exp 2), 7 (exp 1), 11 (exp 1).",
-                                "$12! = 2^{10} \cdot 3^{5} \cdot 5^{2} \cdot 7^{1} \cdot 11^{1}$.",
-                                "Calculate $\tau(12!)$: $(10+1)(5+1)(2+1)(1+1)(1+1) = 11 \cdot 6 \cdot 3 \cdot 2 \cdot 2 = 792$."
+                                "$12! = 2^{10} \\cdot 3^{5} \\cdot 5^{2} \\cdot 7^{1} \\cdot 11^{1}$.",
+                                "Calculate $\\tau(12!)$: $(10+1)(5+1)(2+1)(1+1)(1+1) = 11 \\cdot 6 \\cdot 3 \\cdot 2 \\cdot 2 = 792$."
                             ],
                             intuition: "Legendre's Formula is the 'Prime Decompiler'. It tells you exactly how many times a prime is 'invoked' inside a factorial."
                         }
@@ -1152,7 +1152,7 @@ const MATH_DATA = {
                                 question: "If a polynomial $x^3 - 7x^2 + 14x - 8 = 0$ has roots $a, b, c$, what is the sum of its roots?",
                                 options: ["7", "-7", "14", "8"],
                                 answer: "7",
-                                explanation: "According to Vieta's Formulas, for a cubic $ax^3 + bx^2 + \dots$, the sum of roots is $-b/a$. Here, $-(-7)/1 = 7$."
+                                explanation: "According to Vieta's Formulas, for a cubic $ax^3 + bx^2 + \\dots$, the sum of roots is $-b/a$. Here, $-(-7)/1 = 7$."
                             },
                             {
                                 title: "Level 2: Drill",
@@ -1866,7 +1866,7 @@ const MATH_DATA = {
             units: [
                 {
                     title: "Unit 1: Limits & Continuity (Elite 4.0)",
-                    insight: "Limits: The bridge to infinity. Mastering the $\epsilon-\delta$ definition is what separates a student from a mathematical architect.",
+                    insight: "Limits: The bridge to infinity. Mastering the $\\epsilon-\\delta$ definition is what separates a student from a mathematical architect.",
                     topics: ["Formal Limits", "Squeeze Theorem", "Continuity Rigor", "Intermediate Value Theorem"],
                     lectures: [
                         { name: "1.1: The Calculus Essence", url: "lesson:calc:calc-u1-1" },
@@ -2101,12 +2101,148 @@ const MATH_DATA = {
                     quiz: {
                         question: "Final Mastery: Which convergence test is your 'first line of defense'?",
                         options: ["Ratio Test", "Integral Test", "nth Term Test for Divergence", "P-Series Test"],
-                        answer: "nth Term Term Test for Divergence",
+                        answer: "nth Term Test for Divergence",
                         explanation: "If the limit of terms is not zero, the series diverges IMMEDIATELY. Save time by checking this first!"
                     }
                 }
             ]
         },
+        {
+            id: "adv-math",
+            title: "Advanced Mathematical Systems",
+            code: "MA4000",
+            description: "Deep dive into Multivariable Calculus and Linear Algebra. The frontier of modern engineering and AI research.",
+            color: "#6366f1",
+            icon: "fas fa-wave-square",
+            units: [
+                {
+                    title: "Unit 1: Multivariable Calculus (Concepts)",
+                    insight: "Beyond the Flatline: In the real world, systems have multiple inputs. Multivariable calculus lets us model the 'topography' of change in 3D space.",
+                    topics: ["Partial Derivatives", "Gradient Vectors", "Multiple Integrals", "Lagrange Multipliers"],
+                    lectures: [
+                        { name: "1.1: Partial Derivatives & Rates", url: "lesson:adv-math:ch_adv-1" },
+                        { name: "1.2: The Gradient Vector FIELD", url: "lesson:adv-math:ch_adv-2" },
+                        { name: "1.3: Optimization in Higher D", url: "lesson:adv-math:ch_adv-3" }
+                    ],
+                    examples: [
+                        {
+                            title: "The Gradient Descent Intuition",
+                            problem: "How does an AI minimize error in 100 dimensions?",
+                            steps: ["Calculate the Gradient $\\nabla f$.", "The gradient points in the direction of steepest increase.", "Move in the OPPOSITE direction $(- \\nabla f)$.", "Repeat until reaching the local minimum."],
+                            intuition: "Gradient descent is like walking down a mountain in a thick fog; you just step in the direction where the ground falls away fastest."
+                        }
+                    ],
+                    quiz: {
+                        levels: [
+                            {
+                                title: "L1: Conceptual Intuition",
+                                question: "Geometrically, what does $f_x$ represent for a function $f(x, y)$?",
+                                answer: "Slope parallel to x-axis",
+                                options: ["Total volume", "Slope parallel to x-axis", "Slope parallel to y-axis", "Area of tangent plane"],
+                                explanation: "Partial derivative represents the rate of change in one specific dimension while others are held constant."
+                            },
+                            {
+                                title: "L2: Applied Analysis",
+                                question: "For $f(x, y) = x^2 y$, what is the gradient $\\nabla f$ at point $(1, 2)$?",
+                                answer: "(4, 1)",
+                                options: ["(2, 1)", "(4, 1)", "(1, 2)", "(4, 2)"],
+                                explanation: "$f_x = 2xy, f_y = x^2$. Substituting $(1,2)$ gives $f_x=4, f_y=1$."
+                            },
+                            {
+                                title: "L3: Elite Mastery",
+                                question: "What is the relationship between the gradient vector and level curves?",
+                                answer: "They are always orthogonal",
+                                options: ["They are parallel", "They are always orthogonal", "They form a 45-degree angle", "No relationship"],
+                                explanation: "Since change along a level curve is zero, the gradient (direction of max change) must be perpendicular to it."
+                            }
+                        ]
+                    }
+                },
+                {
+                    title: "Unit 2: Linear Algebra & Vector Spaces",
+                    insight: "The Matrix Engine: Linear Algebra is the language of transformations. It is how computers rotate 3D objects and how GPT-4 processes embeddings.",
+                    topics: ["Vector Spaces", "Basis & Dimension", "Eigenvalues & Eigenvectors", "Singular Value Decomposition"],
+                    lectures: [
+                        { name: "2.1: Vector Space Foundations", url: "lesson:adv-math:ch_adv-4" },
+                        { name: "2.2: Transformations & Matrices", url: "lesson:adv-math:ch_adv-5" },
+                        { name: "2.3: The Power of Eigenvalues", url: "lesson:adv-math:ch_adv-6" }
+                    ],
+                    quiz: {
+                        levels: [
+                            {
+                                title: "L1: Core Logic",
+                                question: "What is the minimum number of basis vectors needed to span a 2D plane?",
+                                answer: "2",
+                                options: ["1", "2", "3", "Infinite"],
+                                explanation: "The number of basis vectors equals the dimension of the space."
+                            },
+                            {
+                                title: "L2: Transformations",
+                                question: "What does it mean if a transformation matrix has a determinant of 0?",
+                                answer: "Space lost dimensions",
+                                options: ["Area is preserved", "Only rotation occurred", "Space lost dimensions", "Inverse matrix exists"],
+                                explanation: "A zero determinant means the mapping is 'singular', squeezing higher-dimensional space into a lower one."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            id: "comp-math",
+            title: "Competition Strategy (Elite)",
+            code: "CP5000",
+            description: "Advanced heuristics for AMC 10/12, AIME, and beyond. Mastering the art of the 'elegant shortcut'.",
+            color: "#ec4899",
+            icon: "fas fa-trophy",
+            units: [
+                {
+                    title: "Unit 1: Number Theory (Mastery)",
+                    topics: ["Modular Arithmetic", "Chinese Remainder Theorem", "Euler's Totient Function", "Orders & Primitive Roots"],
+                    lectures: [
+                        { name: "1.1: Modular Powerhouses", url: "lesson:competition:ch_comp-1" },
+                        { name: "1.2: Totients & Cycles", url: "lesson:competition:ch_comp-2" }
+                    ],
+                    quiz: {
+                        levels: [
+                            {
+                                title: "L1: Congruence Basics",
+                                question: "What is $3^{2024} \\pmod{10}$?",
+                                answer: "1",
+                                options: ["1", "3", "7", "9"],
+                                explanation: "The powers of 3 mod 10 follow the cycle (3, 9, 7, 1) with length 4. 2024 is a multiple of 4."
+                            },
+                            {
+                                title: "L3: Competition Challenge",
+                                question: "What is the primary condition for applying the Chinese Remainder Theorem?",
+                                answer: "Moduli must be coprime",
+                                options: ["Moduli must be prime", "Moduli must be coprime", "Moduli must be even", "Always applicable"],
+                                explanation: "A unique solution mod $mn$ is guaranteed only when $\\gcd(m, n)=1$."
+                            }
+                        ]
+                    }
+                },
+                {
+                    title: "Unit 2: Combinatorics & Logic Maps",
+                    topics: ["Principle of Inclusion-Exclusion", "Recursion in Counting", "Generating Functions", "Graph Theory Intuition"],
+                    lectures: [
+                        { name: "2.1: Advanced PIE", url: "lesson:competition:ch_comp-3" },
+                        { name: "2.2: Recursive Logic", url: "lesson:competition:ch_comp-4" }
+                    ],
+                    quiz: {
+                        levels: [
+                            {
+                                title: "L2: PIE Applications",
+                                question: "How many ways can 5 people take home a hat such that nobody gets their own (Derangements)?",
+                                answer: "44",
+                                options: ["44", "120", "24", "9"],
+                                explanation: "$D_5 = 44$. Calculated via PIE as $120 - 60 + 20 - 5 + 1 = 44$."
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
     ],
     strategy: {
         title: "TJ 9th Grade Prep Strategy",

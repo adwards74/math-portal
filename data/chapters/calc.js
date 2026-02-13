@@ -47,7 +47,7 @@ window.CHAPTER_DATA["calc"] = {
             <div class="lesson-section">
                 <div class="mastery-box glass" style="border-left:4px solid var(--accent-magenta);">
                     <h4 style="color:var(--accent-magenta);"><i class="fas fa-key"></i> The Challenge-Response Protocol</h4>
-                    <p>When someone gives you an $\epsilon$ (how close $f(x)$ must be to $L$), you must provide a $\\Delta$ (how close $x$ must be to $c$).</p>
+                    <p>When someone gives you an $\\epsilon$ (how close $f(x)$ must be to $L$), you must provide a $\\Delta$ (how close $x$ must be to $c$).</p>
                 </div>
 
                 <h2>I. Beyond "Approaching"</h2>
@@ -61,10 +61,10 @@ window.CHAPTER_DATA["calc"] = {
                     <div style="display:inline-block; position:relative; width:150px; height:80px; border:1px solid rgba(255,255,255,0.2);">
                         <div style="position:absolute; top:20px; bottom:20px; left:0; right:0; background:rgba(255,0,255,0.1); border-top:1px dashed var(--accent-magenta); border-bottom:1px dashed var(--accent-magenta);"></div>
                         <div style="position:absolute; left:60px; right:60px; top:0; bottom:0; background:rgba(0,210,255,0.1); border-left:1px dashed var(--accent-cyan); border-right:1px dashed var(--accent-cyan);"></div>
-                        <span style="position:absolute; right:-40px; top:30px; font-size:0.7rem; color:var(--accent-magenta);">$2\epsilon$ window</span>
+                        <span style="position:absolute; right:-40px; top:30px; font-size:0.7rem; color:var(--accent-magenta);">$2\\epsilon$ window</span>
                         <span style="position:absolute; bottom:-20px; left:50px; font-size:0.7rem; color:var(--accent-cyan);">$2\\Delta$ window</span>
                     </div>
-                    <p style="font-size:0.8rem; margin-top:25px;">$\\Delta$ is the "safety gate" that keeps the output inside the $\epsilon$ "target zone."</p>
+                    <p style="font-size:0.8rem; margin-top:25px;">$\\Delta$ is the "safety gate" that keeps the output inside the $\\epsilon$ "target zone."</p>
                 </div>
                 <div class="tj-edge glass">
                     <h4><i class="fas fa-shield-alt"></i> Security Analogy</h4>
@@ -479,7 +479,7 @@ window.CHAPTER_DATA["calc"] = {
                     <h4 style="color:var(--accent-blue);"><i class="fas fa-scroll"></i> FRQ Justification: Net Change</h4>
                     <p>When asked for the <strong>total accumulation</strong>, always use:</p>
                     <div class="math-block">
-                        $$Final Value = Initial Value + \int_{start}^{end} Rate(t) dt$$
+                        $$Final Value = Initial Value + \\int_{start}^{end} Rate(t) dt$$
                     </div>
                     <p style="font-size:0.8rem;">This is the most common use of FTC on the AP exam.</p>
                 </div>
@@ -633,9 +633,9 @@ window.CHAPTER_DATA["calc"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Distance Formula Integral</h2>
-                <p>For a function $y=f(x)$, the length is: $L = \int_a^b \\sqrt{1 + [f'(x)]^{2}} dx$.</p>
+                <p>For a function $y=f(x)$, the length is: $L = \\int_a^b \\sqrt{1 + [f'(x)]^{2}} dx$.</p>
                 <div class="glass-card elite-border">
-                    <p><strong>Elite Trick:</strong> In BC, we often use the version for parametric curves: $\int_a^b \\sqrt{(x')^2 + (y')^2} dt$. This is just the integral of the <em>speed</em> vector's magnitude!</p>
+                    <p><strong>Elite Trick:</strong> In BC, we often use the version for parametric curves: $\\int_a^b \\sqrt{(x')^2 + (y')^2} dt$. This is just the integral of the <em>speed</em> vector's magnitude!</p>
                 </div>
             </div>
         `
@@ -699,7 +699,7 @@ window.CHAPTER_DATA["calc"] = {
                         <path d="M 50 50 L 80 20 A 45 45 0 0 1 100 50 Z" fill="rgba(0,210,255,0.3)" stroke="var(--accent-cyan)"/>
                         <circle cx="50" cy="50" r="2" fill="#fff"/>
                     </svg>
-                    <p style="font-size:0.8rem; margin-top:5px;">Area is the "swept" region $\int \\frac{1}{2}r^2 d\\theta$.</p>
+                    <p style="font-size:0.8rem; margin-top:5px;">Area is the "swept" region $\\int \\frac{1}{2}r^2 d\\theta$.</p>
                 </div>
             </div>
         `

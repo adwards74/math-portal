@@ -211,7 +211,13 @@ window.TutorEngine = (function () {
         "shsat": "The Specialized High Schools Admissions Test (SHSAT) is the portal to NYC's elite schools. Focus on Math precision and Reading speed. Check the 'SHSAT Review' link in the sidebar for my targeted YouTube strategies!",
         "tj": "Thomas Jefferson High School for Science and Technology (TJHSST) prep requires mastery of Algebra 2 and strong problem-solving 'intuition'. Use our 'TJ Strategy' dashboard for the full elite roadmap.",
         "test": "Standardized tests aren't just about math; they're about 'Mental Endurance'. Practice with a timer and always audit your mistakes in the Review Hub!",
-        "version": "I am Neo Tutor 5.3 Elite. My current upgrades include Neural Logic Map Visualization, Fuzzy Neural Search, Voice Input Integration, and Contextual Intelligence. I am running on the local deterministic logic kernel v5.3."
+        "version": "I am Neo Tutor 5.3 Elite. My current upgrades include Neural Logic Map Visualization, Fuzzy Neural Search, Voice Input Integration, and Contextual Intelligence. I am running on the local deterministic logic kernel v5.3.",
+        // 2028 Elite Expansion: Math
+        "partial": "편미분은 다른 변수를 '상수'로 고정하고 하나의 변수에 대해서만 변화율을 측정하는 것입니다. 다차원 지형에서 한 방향으로만 걸어갈 때의 경사라고 생각하세요.",
+        "gradient": "그래디언트(∇f)는 가장 가파른 오르막길 방향을 가리키는 벡터입니다. AI의 경사하강법(Gradient Descent)은 이 그래디언트의 반대 방향으로 이동하여 오차를 최소화합니다.",
+        "basis": "기저는 공간의 모든 점을 중복 없이 표현할 수 있는 최소한의 벡터 세트입니다. 공간의 '뼈대'라고 이해하면 쉽습니다.",
+        "modular": "합동식은 숫자를 '나머지'로 분류하는 체계입니다. 커다란 숫자의 패턴을 파악할 때 매우 강력한 도구가 됩니다.",
+        "pie": "포함-배제의 원리는 중복되는 부분을 정확히 처리하여 전체 개수를 세는 논리입니다. '더하고 뺌'의 리듬을 기억하세요."
     };
 
     // Neo 5.1: Prerequisite Roadmap
@@ -221,7 +227,11 @@ window.TutorEngine = (function () {
         "logarithm": ["exponential"],
         "trig": ["radian", "geometry"],
         "calculus": ["limit", "function"],
-        "complex": ["radical", "number-line"]
+        "complex": ["radical", "number-line"],
+        "gradient": ["partial", "vector"],
+        "partial": ["limit", "calculus"],
+        "basis": ["vector", "matrix"],
+        "modular": ["axiom", "integer"]
     };
 
     // ========================================
@@ -325,7 +335,7 @@ window.TutorEngine = (function () {
 
             // Layer 1: Intuition
             if (bestMatch.insight) {
-                response += `💡 **Intuition:** ${bestMatch.insight}\n\n`;
+                response += `💡 **Intuition:** ${bestMatch.insight}\\n\\n`;
             } else if (HINT_DATABASE[lowerQuery]) {
                 response += `💡 **Intuition:** ${HINT_DATABASE[lowerQuery]}\n\n`;
             }
@@ -343,7 +353,7 @@ window.TutorEngine = (function () {
             // Neo 5.1: Prerequisite Intelligence
             const prereqs = PREREQUISITE_MAP[lowerQuery] || [];
             if (prereqs.length > 0) {
-                response += `\n\n🛡️ **Foundation Check:** To master this, ensure you are comfortable with *${prereqs.join(' and ')}*. Would you like a quick review?`;
+                response += `\\n\\n🛡️ **Foundation Check:** To master this, ensure you are comfortable with *${prereqs.join(' and ')}*. Would you like a quick review?`;
             }
 
             // Layer 3: Socratic Inquiry
@@ -542,7 +552,7 @@ window.TutorEngine = (function () {
             "How would you explain this to someone who only knows Algebra 1?"
         ];
 
-        let response = `${insight}\n\n**Neo's Inquiry:** ${inquiries[Math.floor(Math.random() * inquiries.length)]}`;
+        let response = `${insight}\\n\\n**Neo's Inquiry:** ${inquiries[Math.floor(Math.random() * inquiries.length)]}`;
 
         if (contextHint) {
             response += `\n\n💡 **Quick Tip:** ${contextHint}`;
@@ -644,6 +654,39 @@ window.TutorEngine = (function () {
     window.buildNeuralMap = () => KnowledgeMap.build();
     window.summarizeContent = (key) => KnowledgeMap.summarize(key);
     window.getConceptMatrix = (topic) => KnowledgeMap.getConceptMatrix(topic);
+
+    // Neo 5.4: Pattern Analysis & Logic Maps
+    window.analyzePattern = (userInput) => {
+        const stats = getStats();
+        const weak = getWeakTopics();
+
+        let analysis = "🎨 **Neural Pattern Analysis:**\n";
+        if (weak.length > 0) {
+            analysis += `You seem to have a recurring challenge with **${weak[0].topic}**. `;
+            const needed = PREREQUISITE_MAP[weak[0].topic] || [];
+            if (needed.length > 0) {
+                analysis += `This often stems from a slight gap in **${needed[0]}**. Let's bridge that.`;
+            }
+        } else {
+            analysis += "Your logical consistency is remarkably high across all modules. Ready for Elite challenges.";
+        }
+        return analysis;
+    };
+
+    window.renderLogicMap = (topic) => {
+        const matrix = KnowledgeMap.getConceptMatrix(topic);
+        let mapHtml = `<div class="logic-map-viz glass" style="padding:20px; border:1px solid var(--accent-cyan); border-radius:15px; margin-top:15px;">
+            <h5 style="color:var(--accent-cyan); margin-bottom:15px;"><i class="fas fa-project-diagram"></i> Logic Map: ${topic}</h5>
+            <div style="display:flex; justify-content:center; align-items:center; gap:20px;">
+                ${matrix.parents.map(p => `<div class="node glass" style="font-size:0.7rem; padding:5px 10px;">${p}</div>`).join('')}
+                ${matrix.parents.length > 0 ? '<i class="fas fa-arrow-right" style="opacity:0.3;"></i>' : ''}
+                <div class="node glass active" style="border-color:var(--accent-magenta); font-weight:bold; padding:10px 15px;">${topic}</div>
+                ${matrix.children.length > 0 ? '<i class="fas fa-arrow-right" style="opacity:0.3;"></i>' : ''}
+                ${matrix.children.map(c => `<div class="node glass" style="font-size:0.7rem; padding:5px 10px;">${c}</div>`).join('')}
+            </div>
+        </div>`;
+        return mapHtml;
+    };
 
     return {
         getSocraticAdvice,

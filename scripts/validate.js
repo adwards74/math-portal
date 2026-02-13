@@ -37,7 +37,7 @@ chapterFiles.forEach(file => {
 });
 
 // 2. Check main JS files
-console.log('\n📁 Checking Core JavaScript Files...\n');
+console.log('\\n📁 Checking Core JavaScript Files...\\n');
 
 const coreFiles = ['data.js', 'app.js', 'router.js', 'ui-render.js', 'tutor-engine.js', 'lessons.js'];
 
@@ -58,7 +58,7 @@ coreFiles.forEach(file => {
 });
 
 // 3. Check for common LaTeX escaping issues
-console.log('\n🔬 Checking for LaTeX Escaping Issues...\n');
+console.log('\\n🔬 Checking for LaTeX Escaping Issues...\\n');
 
 const latexPatterns = [
     { pattern: /\\(?!\\)frac/g, issue: 'Single backslash in \\frac (should be \\\\frac in JS strings)' },

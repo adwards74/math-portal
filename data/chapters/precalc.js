@@ -47,7 +47,7 @@ window.CHAPTER_DATA["precalc"] = {
                     <tr><th>f(x)</th><td>10</td><td>15</td><td>18</td><td>20</td></tr>
                     <tr style="color:var(--accent-cyan);"><th>$\\Delta f$</th><td></td><td>+5</td><td>+3</td><td>+2</td></tr>
                 </table>
-                <p><strong>Analysis:</strong> As $x$ increases by 2, the changes in $f(x)$ are $5 \\to 3 \\to 2$. Since the rate of increase is dropping, the acceleration is negative $\implies$ <strong>Concave Down</strong>.</p>
+                <p><strong>Analysis:</strong> As $x$ increases by 2, the changes in $f(x)$ are $5 \\to 3 \\to 2$. Since the rate of increase is dropping, the acceleration is negative $\\implies$ <strong>Concave Down</strong>.</p>
             </div>
         `
     },
@@ -282,7 +282,7 @@ window.CHAPTER_DATA["precalc"] = {
                     <div style="position:absolute; width:100%; height:1px; background:rgba(255,255,255,0.2); top:50%;"></div>
                     <div style="position:absolute; width:1px; height:100%; background:rgba(255,255,255,0.2); left:50%;"></div>
                 </div>
-                <p style="font-size:0.8rem;">Angle $\\theta \implies$ Point $(\\cos\\theta, \\sin\\theta)$</p>
+                <p style="font-size:0.8rem;">Angle $\\theta \\implies$ Point $(\\cos\\theta, \\sin\\theta)$</p>
             </div>
 
             <div class="mastery-box glass" style="border-left:4px solid var(--accent-cyan); padding:15px;">
@@ -321,7 +321,7 @@ window.CHAPTER_DATA["precalc"] = {
             <div class="mastery-box glass" style="border-top:3px solid var(--accent-cyan); padding:15px;">
                 <h4 style="color:var(--accent-cyan);"><i class="fas fa-compass"></i> Mapping the Shift</h4>
                 <div class="math-block">
-                    $$ x = r\\cos\\theta, \quad y = r\\sin\\theta, \quad r^2 = x^2+y^2, \quad \\tan\\theta = y/x $$
+                    $$ x = r\\cos\\theta, \\quad y = r\\sin\\theta, \\quad r^2 = x^2+y^2, \\quad \\tan\\theta = y/x $$
                 </div>
             </div>
 
