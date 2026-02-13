@@ -474,16 +474,70 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.querySelector('.sidebar');
 
     if (menuToggle && sidebar) {
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('open');
-        });
-
         // Close when clicking outside
         document.addEventListener('click', (e) => {
             if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && sidebar.classList.contains('open')) {
                 sidebar.classList.remove('open');
             }
         });
+    }
+
+    // --- Neo 5.5: Theme Engine ---
+    const initTheme = () => {
+        const savedTheme = localStorage.getItem('genius_math_theme') || 'dark';
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            const icon = document.querySelector('#theme-toggle i');
+            if (icon) icon.className = 'fas fa-sun';
+        }
+    };
+
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem('genius_math_theme', isLight ? 'light' : 'dark');
+            const icon = themeToggle.querySelector('i');
+            if (icon) icon.className = isLight ? 'fas fa-sun' : 'fas fa-moon';
+        });
+    }
+    initTheme();
+
+    // --- Neo 5.5: Global Search Engine ---
+    const searchInput = document.getElementById('global-search');
+
+
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase().trim();
+            if (!term) {
+                if (window.AppRouter.currentView === 'dashboard') window.showDashboard();
+                else if (window.AppRouter.currentView === 'subjects') window.showSubjects();
+                return;
+            }
+            handleGlobalSearch(term);
+        });
+    }
+
+    function handleGlobalSearch(term) {
+        const filteredSubjects = MATH_DATA.subjects.filter(s =>
+            s.title.toLowerCase().includes(term) ||
+            s.description.toLowerCase().includes(term) ||
+            s.code.toLowerCase().includes(term) ||
+            s.units.some(u => u.title.toLowerCase().includes(term) || u.topics?.some(t => t.toLowerCase().includes(term)))
+        );
+
+        const container = document.getElementById('subject-cards-container') || document.getElementById('subjects-grid-full');
+        if (container) {
+            if (filteredSubjects.length > 0) {
+                window.renderSubjectGrid(filteredSubjects, container);
+            } else {
+                container.innerHTML = `<div class="glass-card fadeIn" style="grid-column: 1/-1; text-align:center; padding:50px; border: 1px dashed var(--glass-border);">
+                    <i class="fas fa-search-minus" style="font-size:3rem; opacity:0.1; margin-bottom:20px;"></i>
+                    <p style="opacity:0.6;">No neural matches found for "${term}". Try another focus.</p>
+                </div>`;
+            }
+        }
     }
 
     // Note: renderSubjectGrid moved to ui-render.js
@@ -562,6 +616,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Expose globally for Next buttons
     window.showLesson = showLesson;
 
+    window.toggleLessonTool = () => {
+        if (window.UIEngine && window.UIEngine.toggleCalculator) {
+            window.UIEngine.toggleCalculator();
+        } else {
+            // Fallback to legacy iframe logic if UIEngine not ready
+            const panel = document.getElementById('lesson-tool-panel');
+            if (panel) {
+                panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+            }
+        }
+    };
+
     async function showLesson(lessonKey, subjectId) {
         window.currentLessonKey = lessonKey;
         if (typeof lessonStartTime !== 'undefined') lessonStartTime = Date.now();
@@ -625,7 +691,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="subtitle">${lessonData.subtitle}</p>
                     </header>
                     <article class="lesson-content">
-                        ${lessonData.content}
+                        ${lessonData.content.replace(/<neo-graph type="(.*)"><\/neo-graph>/g, (match, type) => {
+                return window.UIEngine && window.UIEngine.renderDynamicGraph ? window.UIEngine.renderDynamicGraph({ type: type }) : '';
+            })}
                     </article>
                     <div class="lesson-footer" style="margin-top: 50px; text-align: right; padding-bottom: 60px;">
                         ${nextButtonHtml ?

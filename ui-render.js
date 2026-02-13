@@ -249,9 +249,99 @@ window.UIEngine = (function () {
         if (window.MathJax) window.MathJax.typesetPromise();
     };
 
+    function renderCalculator(type = 'derivative') {
+        return `
+            <div class="calculator-module glass">
+                <div class="calc-header">
+                    <h4><i class="fas fa-calculator"></i> Neo-Solver: ${type.toUpperCase()}</h4>
+                    <button class="glass" onclick="window.UIEngine.toggleCalculator()"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="calc-body">
+                    <div class="input-group">
+                        <label>Function $f(x)$:</label>
+                        <input type="text" id="calc-input" class="glass" placeholder="e.g. x^2 + 3*x + 5" value="x^2">
+                    </div>
+                    <div id="calc-result" class="calc-result glass">
+                        <div class="result-label">Result:</div>
+                        <div id="result-output" class="result-output">$2x$</div>
+                    </div>
+                    <button class="glass solve-btn" onclick="window.UIEngine.solveEquation('${type}')">ANALYZE DERIVATIVE</button>
+                </div>
+            </div>
+        `;
+    }
+
+    function toggleCalculator() {
+        const panel = document.getElementById('lesson-tool-panel');
+        if (!panel) return;
+
+        if (panel.style.display === 'none' || !panel.style.display) {
+            panel.style.display = 'block';
+            panel.innerHTML = renderCalculator();
+            if (window.MathJax) window.MathJax.typesetPromise();
+        } else {
+            panel.style.display = 'none';
+        }
+    }
+
+    function solveEquation(type) {
+        const input = document.getElementById('calc-input').value;
+        const output = document.getElementById('result-output');
+
+        // Simple mock logic for demonstration (Phase 5 prototype)
+        // In a real implementation, we'd use a math library like mathjs
+        let result = "Processing...";
+        if (input.trim() === "x^2") result = "$2x$";
+        else if (input.trim() === "sin(x)") result = "$\\cos(x)$";
+        else if (input.trim() === "x^3") result = "$3x^2$";
+        else result = "Complexity exceeded. Use WolframAlpha for advanced analysis.";
+
+        output.innerHTML = result;
+        if (window.MathJax) window.MathJax.typesetPromise();
+    }
+
+    function renderDynamicGraph(config = {}) {
+        const width = config.width || 400;
+        const height = config.height || 200;
+        const type = config.type || 'sine';
+
+        let pathData = "";
+        if (type === 'sine') {
+            pathData = "M 0 " + (height / 2);
+            for (let x = 0; x <= width; x++) {
+                const y = (height / 2) - Math.sin((x / width) * Math.PI * 4) * (height / 3);
+                pathData += ` L ${x} ${y}`;
+            }
+        } else if (type === 'parabola') {
+            pathData = "M 0 " + height;
+            for (let x = 0; x <= width; x++) {
+                const normalizedX = (x / width) * 2 - 1; // -1 to 1
+                const y = height - (normalizedX * normalizedX) * (height * 0.8);
+                pathData += ` L ${x} ${y}`;
+            }
+        }
+
+        return `
+            <div class="dynamic-graph-container glass" style="padding:20px; text-align:center; margin:20px 0;">
+                <h5 style="color:var(--accent-blue); margin-bottom:15px;">Visual Dynamics: ${type.toUpperCase()}</h5>
+                <svg width="${width}" height="${height}" style="background:rgba(0,0,0,0.3); border-radius:10px; border:1px solid var(--glass-border);">
+                    <!-- Grid Lines -->
+                    <line x1="0" y1="${height / 2}" x2="${width}" y2="${height / 2}" stroke="rgba(255,255,255,0.1)" />
+                    <line x1="${width / 2}" y1="0" x2="${width / 2}" y2="${height}" stroke="rgba(255,255,255,0.1)" />
+                    <!-- Function Path -->
+                    <path d="${pathData}" fill="none" stroke="var(--accent-blue)" stroke-width="3" />
+                </svg>
+                <p style="font-size:0.8rem; opacity:0.6; margin-top:10px;">Generated via Neo-Graph Engine 5.5</p>
+            </div>
+        `;
+    }
+
     return {
         renderSubjectGrid,
         showSubjectDetail,
-        showDashboard
+        showDashboard,
+        toggleCalculator,
+        solveEquation,
+        renderDynamicGraph
     };
 })();

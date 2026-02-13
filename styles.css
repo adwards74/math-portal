@@ -1,20 +1,43 @@
 :root {
+    /* Constants */
+    --accent-blue: #00d2ff;
+    --accent-purple: #9d50bb;
+    --accent-green: #38ef7d;
+    --accent-magenta: #f5576c;
+    --accent-orange: #ff9d00;
+    --accent-cyan: #00d2ff;
+    --standard-radius: 20px;
+
+    /* Dark Mode Defaults */
     --bg-dark: #05070a;
     --sidebar-bg: rgba(13, 17, 23, 0.7);
     --glass-bg: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.08);
-    --accent-blue: #00d2ff;
-    --accent-purple: #9d50bb;
-    --accent-green: #38ef7d;
     --text-primary: #ffffff;
-    --accent-magenta: #f5576c;
-    --accent-orange: #ff9d00;
-    --accent-cyan: #00d2ff;
-    --neon-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
-    --neon-magenta: 0 0 15px rgba(245, 87, 108, 0.3);
-    --neon-blue-glow: 0 0 20px rgba(0, 210, 255, 0.4);
-    --neon-magenta-glow: 0 0 20px rgba(245, 87, 108, 0.4);
-    --standard-radius: 20px;
+    --text-secondary: #94a3b8;
+    --header-bg: rgba(5, 7, 10, 0.8);
+
+    --neon-blue: rgba(0, 210, 255, 0.3);
+    --neon-magenta: rgba(245, 87, 108, 0.3);
+    --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+body.light-mode {
+    --bg-dark: #f1f5f9;
+    --sidebar-bg: rgba(255, 255, 255, 0.8);
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --header-bg: rgba(241, 245, 249, 0.8);
+
+    --accent-blue: #0284c7;
+    --accent-purple: #7c3aed;
+    --accent-magenta: #e11d48;
+
+    --neon-blue: rgba(2, 132, 199, 0.1);
+    --neon-magenta: rgba(225, 29, 72, 0.1);
+    --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -347,16 +370,29 @@ em {
 /* Main Content */
 .content-area {
     flex: 1;
-    padding: 30px 40px;
     overflow-y: auto;
     background: radial-gradient(circle at top right, rgba(157, 80, 187, 0.05), transparent 600px);
+    display: flex;
+    flex-direction: column;
+}
+
+#view-container {
+    padding: 0 40px 40px 40px;
 }
 
 .top-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--header-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass-border);
+    margin-bottom: 20px;
 }
 
 .search-bar {
@@ -1145,4 +1181,86 @@ em {
     border-color: var(--accent-cyan);
     background: rgba(0, 210, 255, 0.05);
     border-radius: var(--standard-radius);
+}
+/* --- Interactive Calculator Module --- */
+.calculator-module {
+    padding: 30px;
+    background: var(--sidebar-bg);
+    border-radius: var(--standard-radius);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.calc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calc-header h4 {
+    color: var(--accent-blue);
+    margin: 0;
+}
+
+.calc-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group input {
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.calc-result {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    border: 1px dashed var(--accent-blue);
+}
+
+.result-label {
+    font-size: 0.8rem;
+    color: var(--accent-blue);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.result-output {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.solve-btn {
+    padding: 15px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.solve-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 20px rgba(0, 210, 255, 0.4);
 }

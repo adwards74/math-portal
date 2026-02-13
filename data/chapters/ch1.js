@@ -10,6 +10,13 @@ window.CHAPTER_DATA["ch1"] = {
                     <p>Axioms are like the Constitution. They aren't "facts" we discovered; they are the <strong>agreed-upon rules</strong> that make the entire system of logic possible.</p>
                 </div>
 
+                <neo-graph type="sine"></neo-graph>
+
+                <div class="glass-card" style="margin: 20px 0; border-left: 4px solid var(--accent-blue);">
+                    <h4><i class="fas fa-microchip"></i> Neo-Solver Integrated</h4>
+                    <p>For complex symbolic manipulation, use the <strong>Neo-Solver</strong> (Calculator icon in the header) to verify your isolation algorithms.</p>
+                </div>
+
                 <h2>I. The Foundation of Reality</h2>
                 <p>Algebra isn't just about $x$; it's about the **Axioms**?봳he immutable laws that govern how numbers interact. In formal mathematics, we don't assume anything is true unless it's an axiom or proven from one.</p>
                 
