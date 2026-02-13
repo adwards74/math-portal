@@ -137,6 +137,13 @@ const MATH_DATA = {
                                 question: "Identify the error in this sequence: $|x + 5| = -2 \\rightarrow x + 5 = -2$ or $x + 5 = 2$.",
                                 answer: "The equation has no solution because the absolute value (distance) cannot be negative.",
                                 template: "The error is... Therefore, the solution set is..."
+                            },
+                            {
+                                title: "Level 4: Advanced Analysis",
+                                question: "What is the inverse of $f(x) = 2x + 3$?",
+                                answer: "$f^{-1}(x) = (x-3)/2$",
+                                options: ["$f^{-1}(x) = (x-3)/2$", "$f^{-1}(x) = 2x - 3$", "$f^{-1}(x) = x/2 - 3$"],
+                                explanation: "Swap $x$ and $y$: $x = 2y + 3 \\rightarrow y = (x-3)/2$."
                             }
                         ]
                     }
@@ -2262,5 +2269,20 @@ const MATH_DATA = {
         { name: "Paul's Notes", desc: "Legendary Math Cheat Sheets", url: "https://tutorial.math.lamar.edu/", icon: "fas fa-file-pdf" },
         { name: "SHSAT Review YouTube", desc: "Elite Algebra 2 & Math Problem Solving breakdowns", url: "https://www.youtube.com/@shsatreview6318", icon: "fab fa-youtube" },
         { name: "Art of Problem Solving", desc: "The competitive math gold standard", url: "https://artofproblemsolving.com/", icon: "fas fa-brain" }
-    ]
+    ],
+    glossary: {
+        "Axiom": "A statement or proposition that is regarded as being established, accepted, or self-evidently true.",
+        "Matrix": "A rectangular array of numbers, symbols, or expressions, arranged in rows and columns.",
+        "Determinant": "A scalar value that encodes properties of a linear transformation. If zero, the transformation is destructive.",
+        "Logarithm": "The inverse of exponentiation. It maps multiplication to addition, powering the Richter and Decibel scales.",
+        "Partial Derivative": "A derivative where only one variable changes while others are held constant. Denoted as $\partial f / \partial x$.",
+        "Gradient": "A vector ($\nabla f$) pointing in the direction of the steepest ascent on a high-dimensional surface.",
+        "Basis": "The 'skeleton' of a vector space; a set of linearly independent vectors that span the entire space.",
+        "Modular Arithmetic": "A system where numbers 'wrap around' like a clock (e.g., $15 \\equiv 3 \\pmod{12}$).",
+        "Chinese Remainder Theorem": "A theorem used to determine a unique integer $x$ that satisfies multiple congruences with coprime moduli.",
+        "Vieta's Formulas": "Formulas relating polynomial coefficients to the sums and products of its roots ($r_1+r_2 = -b/a$).",
+        "Linear Programming": "Optimization of linear functions subject to linear constraints, governed by the Vertex Principle.",
+        "Complex Conjugate": "For $z = a + bi$, the conjugate is $\bar{z} = a - bi$. Vital for ensuring real-world coefficients in wave equations.",
+        "Differential": "A measure of an infinitely small change in a variable, the fundamental atom of Calculus."
+    }
 };
