@@ -247,7 +247,12 @@ window.TutorEngine = (function () {
         "gradient": "그래디언트(∇f)는 가장 가파른 오르막길 방향을 가리키는 벡터입니다. AI의 경사하강법(Gradient Descent)은 이 그래디언트의 반대 방향으로 이동하여 오차를 최소화합니다.",
         "basis": "기저는 공간의 모든 점을 중복 없이 표현할 수 있는 최소한의 벡터 세트입니다. 공간의 '뼈대'라고 이해하면 쉽습니다.",
         "modular": "합동식은 숫자를 '나머지'로 분류하는 체계입니다. 커다란 숫자의 패턴을 파악할 때 매우 강력한 도구가 됩니다.",
-        "pie": "포함-배제의 원리는 중복되는 부분을 정확히 처리하여 전체 개수를 세는 논리입니다. '더하고 뺌'의 리듬을 기억하세요."
+        "pie": "포함-배제의 원리는 중복되는 부분을 정확히 처리하여 전체 개수를 세는 논리입니다. '더하고 뺌'의 리듬을 기억하세요.",
+        "differential": "The differential represents an infinitely small change in a quantity. It's the building block of Calculus!",
+        "integral": "Integration is the 'accumulation' process. Area under a curve, volume of solids, or total change over time—it all comes down to the Integral.",
+        "derivative": "The derivative measures instantaneous rate of change. It's the slope of the tangent line at any specific point.",
+        "topology": "Topology is 'rubber-sheet geometry'. We study properties that don't change through stretching or bending, only tearing.",
+        "optimization": "Optimization is finding the 'Best' solution. Usually, it involves setting a derivative to zero and checking for Max/Min.",
     };
 
     // Neo 5.1: Prerequisite Roadmap
