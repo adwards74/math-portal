@@ -70,7 +70,18 @@ window.TutorEngine = (function () {
                             subtitle: lesson.subtitle,
                             content: lesson.content // We will parse this for keywords on demand
                         });
+                        this.addtoIndex(lesson.title, { type: 'content_ref', id: lessonId });
                     }
+                }
+            }
+
+            // NEW: Automatically integrate Glossary into Knowledge Map
+            if (window.MATH_DATA && window.MATH_DATA.glossary) {
+                for (const [term, def] of Object.entries(window.MATH_DATA.glossary)) {
+                    this.addtoIndex(term, {
+                        type: 'glossary',
+                        definition: def
+                    });
                 }
             }
 
@@ -106,6 +117,25 @@ window.TutorEngine = (function () {
                     items.forEach(item => {
                         results.push({ ...item, score });
                     });
+                }
+            }
+
+            // NEW: Deep Content Scanning (Elite 5.5 Feature)
+            // If no high-quality match (score < 10), scan inner lesson strings
+            if (results.length === 0 || results[0].score < 10) {
+                for (const [chId, lessons] of Object.entries(window.CHAPTER_DATA || {})) {
+                    for (const [lessonId, lesson] of Object.entries(lessons)) {
+                        const plainContent = lesson.content.replace(/<[^>]*>/g, ' ').toLowerCase();
+                        if (plainContent.includes(lowerQuery)) {
+                            results.push({
+                                type: 'content',
+                                title: lesson.title,
+                                subtitle: lesson.subtitle,
+                                content: lesson.content,
+                                score: 7 // Medium score for deep content discovery
+                            });
+                        }
+                    }
                 }
             }
 
@@ -336,6 +366,8 @@ window.TutorEngine = (function () {
             // Layer 1: Intuition
             if (bestMatch.insight) {
                 response += `💡 **Intuition:** ${bestMatch.insight}\\n\\n`;
+            } else if (bestMatch.type === 'glossary') {
+                response += `📖 **Definition:** ${bestMatch.definition}\\n\\n`;
             } else if (HINT_DATABASE[lowerQuery]) {
                 response += `💡 **Intuition:** ${HINT_DATABASE[lowerQuery]}\n\n`;
             }
@@ -348,6 +380,8 @@ window.TutorEngine = (function () {
                 }
             } else if (bestMatch.type === 'unit') {
                 response += `⚙️ **Mechanism:** This is a major unit covering: ${bestMatch.topics.join(', ')}. `;
+            } else if (bestMatch.type === 'glossary') {
+                response += `⚙️ **Mechanism:** This is a vital term in our mathematical framework. `;
             }
 
             // Neo 5.1: Prerequisite Intelligence
