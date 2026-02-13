@@ -740,6 +740,7 @@ window.TutorEngine = (function () {
         triggerCelebration,
         buildNeuralMap: () => KnowledgeMap.build(),
         summarizeContent: (key) => KnowledgeMap.summarize(key),
-        getConceptMatrix: (topic) => KnowledgeMap.getConceptMatrix(topic)
+        getConceptMatrix: (topic) => KnowledgeMap.getConceptMatrix(topic),
+        fuzzyMatch: (s1, s2) => KnowledgeMap.getLevenshtein(s1, s2)
     };
 })();
