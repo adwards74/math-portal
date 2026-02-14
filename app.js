@@ -15,6 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
     }
 
+    // NEW: LaTeX Copy Functionality
+    window.copyLaTeX = (text, btn) => {
+        navigator.clipboard.writeText(text).then(() => {
+            const originalIcon = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check" style="color:var(--accent-green)"></i>';
+            setTimeout(() => {
+                btn.innerHTML = originalIcon;
+            }, 2000);
+        });
+    };
+
     // Expose globally for UIEngine
     window.getProgress = getProgress;
     window.resetProgress = () => {
@@ -649,11 +660,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Expose globally for Next buttons
     window.showLesson = showLesson;
 
-    window.toggleLessonTool = () => {
+    window.toggleLessonTool = (type) => {
         if (window.UIEngine && window.UIEngine.toggleCalculator) {
-            window.UIEngine.toggleCalculator();
+            window.UIEngine.toggleCalculator(type);
         } else {
-            // Fallback to legacy iframe logic if UIEngine not ready
             const panel = document.getElementById('lesson-tool-panel');
             if (panel) {
                 panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
@@ -716,8 +726,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         <button class="glass complete-btn" onclick="window.finishLesson('${lessonKey}', '${subjectId}')" style="padding:10px 20px;"><i class="fas fa-check"></i> Done</button>
                     </div>
                 </nav>
-                <div id="lesson-tool-panel" class="glass fadeIn" style="display:none; height:400px; margin: 0 25px; border-radius:15px; overflow:hidden; border:1px solid var(--accent-blue);">
-                    <iframe src="https://www.desmos.com/calculator" width="100%" height="100%" style="border:none;"></iframe>
+                <div id="lesson-tool-panel" class="glass fadeIn" style="display:none; height:450px; margin: 15px 25px; border-radius:15px; overflow:hidden; border:2px solid var(--accent-blue); background: rgba(5, 7, 10, 0.95);">
+                    <div id="calculator-internal-loading" style="display:flex; align-items:center; justify-content:center; height:100%; color:var(--accent-blue);">
+                        <i class="fas fa-circle-notch fa-spin"></i>
+                    </div>
                 </div>
                 <div class="lesson-body-wrapper">
                     <header class="lesson-header">
@@ -1620,12 +1632,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 50);
     }
 
-    window.toggleLessonTool = () => {
-        const panel = document.getElementById('lesson-tool-panel');
-        if (panel) {
-            panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
-        }
-    };
+    // window.toggleLessonTool is now defined earlier to use UIEngine
 
     // --- Neo 3.0: Desmos Scripting Integration ---
     window.plotSolution = (equation) => {
@@ -1647,7 +1654,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const panel = document.getElementById('lesson-tool-panel');
         if (!panel) return;
 
-        // Show panel
+        // Note: Desmos is now optional; if we want it to be the default, we set it.
+        // But we want to let the custom calculator be an option too.
         panel.style.display = 'block';
         panel.innerHTML = '<div id="desmos-calculator" style="width: 100%; height: 100%;"></div>';
 
