@@ -1,0 +1,1158 @@
+{
+  "lessons": {
+    "calc-u1-1": {
+      "title": "1.1 The Essence of Calculus",
+      "path": "data/content/math/misc/calc-u1-1.md",
+      "viz": null
+    },
+    "calc-u1-2": {
+      "title": "1.2 Formal $\\epsilon-\\delta$ Definition",
+      "path": "data/content/math/misc/calc-u1-2.md",
+      "viz": null
+    },
+    "calc-u1-3": {
+      "title": "1.3 Limit Laws & Manipulations",
+      "path": "data/content/math/misc/calc-u1-3.md",
+      "viz": null
+    },
+    "calc-u1-4": {
+      "title": "1.4 Infinite Limits & Asymptotes",
+      "path": "data/content/math/misc/calc-u1-4.md",
+      "viz": null
+    },
+    "calc-u1-5": {
+      "title": "1.5 Continuity & IVT Logic",
+      "path": "data/content/math/misc/calc-u1-5.md",
+      "viz": null
+    },
+    "calc-u2-1": {
+      "title": "2.1 The Tangent Problem",
+      "path": "data/content/math/misc/calc-u2-1.md",
+      "viz": null
+    },
+    "calc-u2-2": {
+      "title": "2.2 Differentiability & Smoothness",
+      "path": "data/content/math/misc/calc-u2-2.md",
+      "viz": null
+    },
+    "calc-u2-3": {
+      "title": "2.3 Basic Rules & Power Law",
+      "path": "data/content/math/misc/calc-u2-3.md",
+      "viz": null
+    },
+    "calc-u2-4": {
+      "title": "2.4 Product & Quotient Rules",
+      "path": "data/content/math/misc/calc-u2-4.md",
+      "viz": null
+    },
+    "calc-u2-5": {
+      "title": "2.5 Trig Derivatives",
+      "path": "data/content/math/misc/calc-u2-5.md",
+      "viz": null
+    },
+    "calc-u3-1": {
+      "title": "3.1 The Chain Rule Protocol",
+      "path": "data/content/math/misc/calc-u3-1.md",
+      "viz": null
+    },
+    "calc-u3-2": {
+      "title": "3.2 Implicit Differentiation",
+      "path": "data/content/math/misc/calc-u3-2.md",
+      "viz": null
+    },
+    "calc-u3-3": {
+      "title": "3.3 Derivatives of Inverses",
+      "path": "data/content/math/misc/calc-u3-3.md",
+      "viz": null
+    },
+    "calc-u3-4": {
+      "title": "3.4 Inverse Trig Masterclass",
+      "path": "data/content/math/misc/calc-u3-4.md",
+      "viz": null
+    },
+    "calc-u4-1": {
+      "title": "4.1 Related Rates Strategies",
+      "path": "data/content/math/misc/calc-u4-1.md",
+      "viz": null
+    },
+    "calc-u4-2": {
+      "title": "4.2 Linearization & Differentials",
+      "path": "data/content/math/misc/calc-u4-2.md",
+      "viz": null
+    },
+    "calc-u4-3": {
+      "title": "4.3 L'Hospital's Rule & Indeterminants",
+      "path": "data/content/math/misc/calc-u4-3.md",
+      "viz": null
+    },
+    "calc-u5-1": {
+      "title": "5.1 Extreme Values & Rolle's",
+      "path": "data/content/math/misc/calc-u5-1.md",
+      "viz": null
+    },
+    "calc-u5-2": {
+      "title": "5.2 Mean Value Theorem",
+      "path": "data/content/math/misc/calc-u5-2.md",
+      "viz": null
+    },
+    "calc-u5-3": {
+      "title": "5.3 Concavity & Second Deriv Test",
+      "path": "data/content/math/misc/calc-u5-3.md",
+      "viz": null
+    },
+    "calc-u5-4": {
+      "title": "5.4 Optimization Problems",
+      "path": "data/content/math/misc/calc-u5-4.md",
+      "viz": null
+    },
+    "calc-u6-1": {
+      "title": "6.1 Sigma Notation & Riemann Sums",
+      "path": "data/content/math/misc/calc-u6-1.md",
+      "viz": null
+    },
+    "calc-u6-2": {
+      "title": "6.2 Definite Integrals & FTC",
+      "path": "data/content/math/misc/calc-u6-2.md",
+      "viz": null
+    },
+    "calc-u6-3": {
+      "title": "6.3 Integration by Substitution",
+      "path": "data/content/math/misc/calc-u6-3.md",
+      "viz": null
+    },
+    "calc-u6-4": {
+      "title": "6.4 Integration by Parts (BC)",
+      "path": "data/content/math/misc/calc-u6-4.md",
+      "viz": null
+    },
+    "calc-u6-5": {
+      "title": "6.5 Partial Fractions (BC)",
+      "path": "data/content/math/misc/calc-u6-5.md",
+      "viz": null
+    },
+    "calc-u7-1": {
+      "title": "7.1 Slope Fields & General Solutions",
+      "path": "data/content/math/misc/calc-u7-1.md",
+      "viz": null
+    },
+    "calc-u7-2": {
+      "title": "7.2 Euler's Method (BC)",
+      "path": "data/content/math/misc/calc-u7-2.md",
+      "viz": null
+    },
+    "calc-u7-3": {
+      "title": "7.3 Separation of Variables",
+      "path": "data/content/math/misc/calc-u7-3.md",
+      "viz": null
+    },
+    "calc-u7-4": {
+      "title": "7.4 Logistic Growth Models (BC)",
+      "path": "data/content/math/misc/calc-u7-4.md",
+      "viz": null
+    },
+    "calc-u8-1": {
+      "title": "8.1 Areas between Curves",
+      "path": "data/content/math/misc/calc-u8-1.md",
+      "viz": null
+    },
+    "calc-u8-2": {
+      "title": "8.2 Volumes of Revolution",
+      "path": "data/content/math/misc/calc-u8-2.md",
+      "viz": null
+    },
+    "calc-u8-3": {
+      "title": "8.3 Known Cross-Sections",
+      "path": "data/content/math/misc/calc-u8-3.md",
+      "viz": null
+    },
+    "calc-u8-4": {
+      "title": "8.4 Arc Length & Surface Area (BC)",
+      "path": "data/content/math/misc/calc-u8-4.md",
+      "viz": null
+    },
+    "calc-u9-1": {
+      "title": "9.1 Parametric Curves & Calc",
+      "path": "data/content/math/misc/calc-u9-1.md",
+      "viz": null
+    },
+    "calc-u9-2": {
+      "title": "9.2 Vectors in the Plane",
+      "path": "data/content/math/misc/calc-u9-2.md",
+      "viz": null
+    },
+    "calc-u9-3": {
+      "title": "9.3 Polar Coordinates & Graphs",
+      "path": "data/content/math/misc/calc-u9-3.md",
+      "viz": null
+    },
+    "calc-u9-4": {
+      "title": "9.4 Area & Arc Length in Polar (BC)",
+      "path": "data/content/math/misc/calc-u9-4.md",
+      "viz": null
+    },
+    "calc-u10-1": {
+      "title": "10.1 Sequences & Convergence",
+      "path": "data/content/math/misc/calc-u10-1.md",
+      "viz": null
+    },
+    "calc-u10-2": {
+      "title": "10.2 Convergence Tests Masterlist",
+      "path": "data/content/math/misc/calc-u10-2.md",
+      "viz": null
+    },
+    "calc-u10-3": {
+      "title": "10.3 Power Series & Radius",
+      "path": "data/content/math/misc/calc-u10-3.md",
+      "viz": null
+    },
+    "calc-u10-4": {
+      "title": "10.4 Taylor & Maclaurin Series",
+      "path": "data/content/math/misc/calc-u10-4.md",
+      "viz": null
+    },
+    "calc-u10-5": {
+      "title": "10.5 Lagrange Error Bound (BC)",
+      "path": "data/content/math/misc/calc-u10-5.md",
+      "viz": null
+    },
+    "calc-marathon-1": {
+      "title": "The Grand Synthesis",
+      "path": "data/content/math/misc/calc-marathon-1.md",
+      "viz": null
+    },
+    "calc-marathon-2": {
+      "title": "Theoretical Edge",
+      "path": "data/content/math/misc/calc-marathon-2.md",
+      "viz": null
+    },
+    "calc-u11-1": {
+      "title": "11.1: 2023 Official Practice",
+      "path": "data/content/math/misc/calc-u11-1.md",
+      "viz": null
+    },
+    "calc-u11-2": {
+      "title": "11.2: 2024 Released Exam (Actual)",
+      "path": "data/content/math/misc/calc-u11-2.md",
+      "viz": null
+    },
+    "calc-u11-3": {
+      "title": "11.3: 2025 Elite Prediction",
+      "path": "data/content/math/misc/calc-u11-3.md",
+      "viz": null
+    },
+    "ch0-1": {
+      "title": "0.1 Number Sense & Fractions",
+      "path": "data/content/math/foundation/ch0-1.md",
+      "viz": null
+    },
+    "ch0-2": {
+      "title": "0.2 PEMDAS: Order of Operations",
+      "path": "data/content/math/foundation/ch0-2.md",
+      "viz": null
+    },
+    "ch0-3": {
+      "title": "0.3 Variables & Basic Equations",
+      "path": "data/content/math/foundation/ch0-3.md",
+      "viz": null
+    },
+    "ch0-4": {
+      "title": "0.4 The Coordinate Plane",
+      "path": "data/content/math/foundation/ch0-4.md",
+      "viz": null
+    },
+    "ch0-rev": {
+      "title": "Chapter 0 Review Challenge",
+      "path": "data/content/math/foundation/ch0-rev.md",
+      "viz": null
+    },
+    "ch1-1": {
+      "title": "1.1 The Axioms of Algebra",
+      "path": "data/content/math/misc/ch1-1.md",
+      "viz": null
+    },
+    "ch1-2": {
+      "title": "1.2 Number Sets & Systems",
+      "path": "data/content/math/misc/ch1-2.md",
+      "viz": null
+    },
+    "ch1-3": {
+      "title": "1.3 Solving Linear Equations",
+      "path": "data/content/math/misc/ch1-3.md",
+      "viz": null
+    },
+    "ch1-4": {
+      "title": "1.4 Literal Equations & Formulas",
+      "path": "data/content/math/misc/ch1-4.md",
+      "viz": null
+    },
+    "ch1-5": {
+      "title": "1.5/1.6 Word Problems & Models",
+      "path": "data/content/math/misc/ch1-5.md",
+      "viz": null
+    },
+    "ch1-7": {
+      "title": "1.7 Absolute Value Equations",
+      "path": "data/content/math/misc/ch1-7.md",
+      "viz": null
+    },
+    "ch1-rev": {
+      "title": "Chapter 1 Review Challenge",
+      "path": "data/content/math/misc/ch1-rev.md",
+      "viz": null
+    },
+    "ch10-1": {
+      "title": "10.1 Exploring Conic Sections",
+      "path": "data/content/math/misc/ch10-1.md",
+      "viz": null
+    },
+    "ch10-2": {
+      "title": "10.2 Circles & Distance",
+      "path": "data/content/math/misc/ch10-2.md",
+      "viz": null
+    },
+    "ch10-3": {
+      "title": "10.3 Ellipses & Orbits",
+      "path": "data/content/math/misc/ch10-3.md",
+      "viz": null
+    },
+    "ch10-4": {
+      "title": "10.4 Hyperbolas & GPS",
+      "path": "data/content/math/misc/ch10-4.md",
+      "viz": null
+    },
+    "ch10-rev": {
+      "title": "Chapter 10 Review Challenge",
+      "path": "data/content/math/misc/ch10-rev.md",
+      "viz": null
+    },
+    "ch11-1": {
+      "title": "11.1 Pattern Intelligence",
+      "path": "data/content/math/misc/ch11-1.md",
+      "viz": null
+    },
+    "ch11-2": {
+      "title": "11.2 Arithmetic Progressions",
+      "path": "data/content/math/misc/ch11-2.md",
+      "viz": null
+    },
+    "ch11-3": {
+      "title": "11.3 Geometric Scaling",
+      "path": "data/content/math/misc/ch11-3.md",
+      "viz": null
+    },
+    "ch11-4": {
+      "title": "11.4 Series & Sigma Notation",
+      "path": "data/content/math/misc/ch11-4.md",
+      "viz": null
+    },
+    "ch11-5": {
+      "title": "11.5 Convergent Series",
+      "path": "data/content/math/misc/ch11-5.md",
+      "viz": null
+    },
+    "ch11-rev": {
+      "title": "Chapter 11 Review Challenge",
+      "path": "data/content/math/misc/ch11-rev.md",
+      "viz": null
+    },
+    "ch12-1": {
+      "title": "12.1 The Logic of Chance",
+      "path": "data/content/math/misc/ch12-1.md",
+      "viz": null
+    },
+    "ch12-2": {
+      "title": "12.2 Conditional Logic",
+      "path": "data/content/math/misc/ch12-2.md",
+      "viz": null
+    },
+    "ch12-3": {
+      "title": "12.3 Discrete Random Variables",
+      "path": "data/content/math/misc/ch12-3.md",
+      "viz": null
+    },
+    "ch12-4": {
+      "title": "12.4 The Bell Curve (AI)",
+      "path": "data/content/math/misc/ch12-4.md",
+      "viz": null
+    },
+    "ch12-5": {
+      "title": "12.5 Sampling & Bias",
+      "path": "data/content/math/misc/ch12-5.md",
+      "viz": null
+    },
+    "ch12-rev": {
+      "title": "Chapter 12 Review Challenge",
+      "path": "data/content/math/misc/ch12-rev.md",
+      "viz": null
+    },
+    "ch13-1": {
+      "title": "13.1 The Physics of Cycles",
+      "path": "data/content/math/misc/ch13-1.md",
+      "viz": null
+    },
+    "ch13-2": {
+      "title": "13.2 Angles & Rotation",
+      "path": "data/content/math/misc/ch13-2.md",
+      "viz": null
+    },
+    "ch13-3": {
+      "title": "13.3 Radian Mastery",
+      "path": "data/content/math/misc/ch13-3.md",
+      "viz": null
+    },
+    "ch13-4": {
+      "title": "13.4 The Sine Wave",
+      "path": "data/content/math/misc/ch13-4.md",
+      "viz": null
+    },
+    "ch13-5": {
+      "title": "13.5 The Cosine Wave",
+      "path": "data/content/math/misc/ch13-5.md",
+      "viz": null
+    },
+    "ch13-6": {
+      "title": "13.6 Tangent & Asymptotes",
+      "path": "data/content/math/misc/ch13-6.md",
+      "viz": null
+    },
+    "ch13-7": {
+      "title": "13.7 Phase Shifting",
+      "path": "data/content/math/misc/ch13-7.md",
+      "viz": null
+    },
+    "ch13-8": {
+      "title": "13.8 Reciprocal Graphs",
+      "path": "data/content/math/misc/ch13-8.md",
+      "viz": null
+    },
+    "ch13-rev": {
+      "title": "Chapter 13 Review Challenge",
+      "path": "data/content/math/misc/ch13-rev.md",
+      "viz": null
+    },
+    "ch14-1": {
+      "title": "14.1 Fundamental Identities",
+      "path": "data/content/math/misc/ch14-1.md",
+      "viz": null
+    },
+    "ch14-2": {
+      "title": "14.2 The Art of Proof",
+      "path": "data/content/math/misc/ch14-2.md",
+      "viz": null
+    },
+    "ch14-3": {
+      "title": "14.3 Sum & Double Angles",
+      "path": "data/content/math/misc/ch14-3.md",
+      "viz": null
+    },
+    "ch14-4": {
+      "title": "14.4 Solving Trig Systems",
+      "path": "data/content/math/misc/ch14-4.md",
+      "viz": null
+    },
+    "ch14-5": {
+      "title": "14.5 Law of Sines & Cosines",
+      "path": "data/content/math/misc/ch14-5.md",
+      "viz": null
+    },
+    "ch14-rev": {
+      "title": "Chapter 14 Review Challenge",
+      "path": "data/content/math/misc/ch14-rev.md",
+      "viz": null
+    },
+    "ch2-1": {
+      "title": "2.1 Relations & Functions",
+      "path": "data/content/math/misc/ch2-1.md",
+      "viz": null
+    },
+    "ch2-2": {
+      "title": "2.2 Direct Variation",
+      "path": "data/content/math/misc/ch2-2.md",
+      "viz": null
+    },
+    "ch2-3": {
+      "title": "2.3 Linear Functions & Slope",
+      "path": "data/content/math/misc/ch2-3.md",
+      "viz": null
+    },
+    "ch2-4": {
+      "title": "2.4 Designing Linear Models",
+      "path": "data/content/math/misc/ch2-4.md",
+      "viz": null
+    },
+    "ch2-5": {
+      "title": "2.5 Absolute Value Functions",
+      "path": "data/content/math/misc/ch2-5.md",
+      "viz": null
+    },
+    "ch2-pc": {
+      "title": "2.5B Piecewise Modeling",
+      "path": "data/content/math/misc/ch2-pc.md",
+      "viz": null
+    },
+    "ch2-6": {
+      "title": "2.6 & 2.7 Families of Functions",
+      "path": "data/content/math/misc/ch2-6.md",
+      "viz": null
+    },
+    "ch2-inv": {
+      "title": "2.8 Intro to Inverse Functions",
+      "path": "data/content/math/misc/ch2-inv.md",
+      "viz": null
+    },
+    "ch2-rev": {
+      "title": "2.9 Chapter 2 Review Challenge",
+      "path": "data/content/math/misc/ch2-rev.md",
+      "viz": null
+    },
+    "ch3-1": {
+      "title": "3.1 & 3.2 Solving Systems",
+      "path": "data/content/math/misc/ch3-1.md",
+      "viz": null
+    },
+    "ch3-3": {
+      "title": "3.3 Systems of Inequalities",
+      "path": "data/content/math/misc/ch3-3.md",
+      "viz": null
+    },
+    "ch3-4": {
+      "title": "3.4 Linear Programming",
+      "path": "data/content/math/misc/ch3-4.md",
+      "viz": null
+    },
+    "ch3-5": {
+      "title": "3.5 Systems with 3 Variables",
+      "path": "data/content/math/misc/ch3-5.md",
+      "viz": null
+    },
+    "ch3-rev": {
+      "title": "Chapter 3 Review Challenge",
+      "path": "data/content/math/misc/ch3-rev.md",
+      "viz": null
+    },
+    "ch4-1": {
+      "title": "4.1 Organising Data into Matrices",
+      "path": "data/content/math/misc/ch4-1.md",
+      "viz": null
+    },
+    "ch4-6": {
+      "title": "4.6 Identity & Inverse Matrices",
+      "path": "data/content/math/misc/ch4-6.md",
+      "viz": null
+    },
+    "ch4-2": {
+      "title": "4.2 Matrix Multiplication",
+      "path": "data/content/math/misc/ch4-2.md",
+      "viz": null
+    },
+    "ch4-3": {
+      "title": "4.3 Determinants & Cramer's Rule",
+      "path": "data/content/math/misc/ch4-3.md",
+      "viz": null
+    },
+    "ch4-4": {
+      "title": "4.4 Visualizing Linear Transformations",
+      "path": "data/content/math/misc/ch4-4.md",
+      "viz": null
+    },
+    "ch4-5": {
+      "title": "4.5 Inverse Matrices",
+      "path": "data/content/math/misc/ch4-5.md",
+      "viz": null
+    },
+    "ch4-7": {
+      "title": "4.7 3x3 Determinants",
+      "path": "data/content/math/misc/ch4-7.md",
+      "viz": null
+    },
+    "ch4-rev": {
+      "title": "Chapter 4 Review Challenge",
+      "path": "data/content/math/misc/ch4-rev.md",
+      "viz": null
+    },
+    "ch5-1": {
+      "title": "5.1 & 5.2 Parabolas & Vertex Form",
+      "path": "data/content/math/misc/ch5-1.md",
+      "viz": null
+    },
+    "ch5-3": {
+      "title": "5.3 Factoring Mastery",
+      "path": "data/content/math/misc/ch5-3.md",
+      "viz": null
+    },
+    "ch5-4": {
+      "title": "5.4 Complex Numbers Intro",
+      "path": "data/content/math/misc/ch5-4.md",
+      "viz": null
+    },
+    "ch5-5": {
+      "title": "5.5 Completing the Square",
+      "path": "data/content/math/misc/ch5-5.md",
+      "viz": null
+    },
+    "ch5-6": {
+      "title": "5.6 The Quadratic Formula",
+      "path": "data/content/math/misc/ch5-6.md",
+      "viz": null
+    },
+    "ch5-7": {
+      "title": "5.7 Quadratic Inequalities",
+      "path": "data/content/math/misc/ch5-7.md",
+      "viz": null
+    },
+    "ch5-8": {
+      "title": "5.8 Linear-Quadratic Systems",
+      "path": "data/content/math/misc/ch5-8.md",
+      "viz": null
+    },
+    "ch5-rev": {
+      "title": "Chapter 5 Review Challenge",
+      "path": "data/content/math/misc/ch5-rev.md",
+      "viz": null
+    },
+    "ch6-1": {
+      "title": "6.1 Polynomial Essentials",
+      "path": "data/content/math/misc/ch6-1.md",
+      "viz": null
+    },
+    "ch6-2": {
+      "title": "6.2 Polynomials & Linear Factors",
+      "path": "data/content/math/misc/ch6-2.md",
+      "viz": null
+    },
+    "ch6-3": {
+      "title": "6.3 Synthetic Division",
+      "path": "data/content/math/misc/ch6-3.md",
+      "viz": null
+    },
+    "ch6-4": {
+      "title": "6.4 Factoring Polynomials",
+      "path": "data/content/math/misc/ch6-4.md",
+      "viz": null
+    },
+    "ch6-5": {
+      "title": "6.5 Theorems About Roots",
+      "path": "data/content/math/misc/ch6-5.md",
+      "viz": null
+    },
+    "ch6-6": {
+      "title": "6.6 Rational Root Theorem",
+      "path": "data/content/math/misc/ch6-6.md",
+      "viz": null
+    },
+    "ch6-7": {
+      "title": "6.7 The Fundamental Theorem of Algebra",
+      "path": "data/content/math/misc/ch6-7.md",
+      "viz": null
+    },
+    "ch6-rev": {
+      "title": "Chapter 6 Review Challenge",
+      "path": "data/content/math/misc/ch6-rev.md",
+      "viz": null
+    },
+    "ch7-1": {
+      "title": "7.1 n-th Roots & Radicals",
+      "path": "data/content/math/misc/ch7-1.md",
+      "viz": null
+    },
+    "ch7-2": {
+      "title": "7.2 Power of the Fractional",
+      "path": "data/content/math/misc/ch7-2.md",
+      "viz": null
+    },
+    "ch7-3": {
+      "title": "7.3 Binomial Radical Expressions",
+      "path": "data/content/math/misc/ch7-3.md",
+      "viz": null
+    },
+    "ch7-4": {
+      "title": "7.4 Advanced Laws of Exponents",
+      "path": "data/content/math/misc/ch7-4.md",
+      "viz": null
+    },
+    "ch7-5": {
+      "title": "7.5 Solving Radical Equations",
+      "path": "data/content/math/misc/ch7-5.md",
+      "viz": null
+    },
+    "ch7-6": {
+      "title": "7.6 Function Operations",
+      "path": "data/content/math/misc/ch7-6.md",
+      "viz": null
+    },
+    "ch7-7": {
+      "title": "7.7 Inverse Relations & Functions",
+      "path": "data/content/math/misc/ch7-7.md",
+      "viz": null
+    },
+    "ch7-rev": {
+      "title": "Chapter 7 Review Challenge",
+      "path": "data/content/math/misc/ch7-rev.md",
+      "viz": null
+    },
+    "ch8-1": {
+      "title": "8.1 Exponential Growth & Decay",
+      "path": "data/content/math/misc/ch8-1.md",
+      "viz": null
+    },
+    "ch8-2": {
+      "title": "8.2 The Natural Base 'e'",
+      "path": "data/content/math/misc/ch8-2.md",
+      "viz": null
+    },
+    "ch8-3": {
+      "title": "8.3 Logs as Inverses",
+      "path": "data/content/math/misc/ch8-3.md",
+      "viz": null
+    },
+    "ch8-4": {
+      "title": "8.4 Properties of Logs",
+      "path": "data/content/math/misc/ch8-4.md",
+      "viz": null
+    },
+    "ch8-5": {
+      "title": "8.5 Solving Log Equations",
+      "path": "data/content/math/misc/ch8-5.md",
+      "viz": null
+    },
+    "ch8-6": {
+      "title": "8.6 Natural Logs & Change of Base",
+      "path": "data/content/math/misc/ch8-6.md",
+      "viz": null
+    },
+    "ch8-rev": {
+      "title": "Chapter 8 Review Challenge",
+      "path": "data/content/math/misc/ch8-rev.md",
+      "viz": null
+    },
+    "ch9-1": {
+      "title": "9.1 Variation Theory",
+      "path": "data/content/math/misc/ch9-1.md",
+      "viz": null
+    },
+    "ch9-2": {
+      "title": "9.2 Reciprocal Families",
+      "path": "data/content/math/misc/ch9-2.md",
+      "viz": null
+    },
+    "ch9-3": {
+      "title": "9.3 Asymptote Analysis",
+      "path": "data/content/math/misc/ch9-3.md",
+      "viz": null
+    },
+    "ch9-4": {
+      "title": "9.4 Rational Algebra",
+      "path": "data/content/math/misc/ch9-4.md",
+      "viz": null
+    },
+    "ch9-5": {
+      "title": "9.5 Complex Fractions",
+      "path": "data/content/math/misc/ch9-5.md",
+      "viz": null
+    },
+    "ch9-6": {
+      "title": "9.6 Solving Rational Systems",
+      "path": "data/content/math/misc/ch9-6.md",
+      "viz": null
+    },
+    "ch9-rev": {
+      "title": "Chapter 9 Review Challenge",
+      "path": "data/content/math/misc/ch9-rev.md",
+      "viz": null
+    },
+    "ch_adv-1": {
+      "title": "1.1 Partial Derivatives: Slopes in Multi-Dimensional Space",
+      "path": "data/content/math/advanced/ch_adv-1.md",
+      "viz": null
+    },
+    "ch_adv-2": {
+      "title": "1.2 Gradient Vectors & Directional Derivatives",
+      "path": "data/content/math/advanced/ch_adv-2.md",
+      "viz": null
+    },
+    "ch_adv-3": {
+      "title": "1.3 Multiple Integrals: Calculating Volumes",
+      "path": "data/content/math/advanced/ch_adv-3.md",
+      "viz": null
+    },
+    "ch_adv-4": {
+      "title": "2.1 The Skeleton of Space: Basis & Dimension",
+      "path": "data/content/math/advanced/ch_adv-4.md",
+      "viz": null
+    },
+    "ch_adv-5": {
+      "title": "2.2 Linear Transformations: Movement of Space",
+      "path": "data/content/math/advanced/ch_adv-5.md",
+      "viz": null
+    },
+    "ch_adv-6": {
+      "title": "2.3: The Power of Eigenvalues",
+      "path": "data/content/math/advanced/ch_adv-6.md",
+      "viz": {
+        "expressions": [
+          "f(x,y) = (1.5x, 0.5y)",
+          "v_1 = (1, 0)",
+          "v_2 = (0, 1)"
+        ],
+        "bounds": {
+          "left": -3,
+          "right": 3,
+          "bottom": -3,
+          "top": 3
+        }
+      }
+    },
+    "ch_amc-1": {
+      "title": "AMC: Prime Factorization Secrets",
+      "path": "data/content/math/misc/ch_amc-1.md",
+      "viz": null
+    },
+    "ch_amc-2": {
+      "title": "AMC: Stars and Bars Mastery",
+      "path": "data/content/math/misc/ch_amc-2.md",
+      "viz": null
+    },
+    "ch_amc-3": {
+      "title": "AMC: Vieta's Theorem & Polynomials",
+      "path": "data/content/math/misc/ch_amc-3.md",
+      "viz": null
+    },
+    "ch_amc-4": {
+      "title": "AMC: Diophantine Equations",
+      "path": "data/content/math/misc/ch_amc-4.md",
+      "viz": null
+    },
+    "ch_comp-1": {
+      "title": "1.1 The Magic of Congruence: Core Number Theory",
+      "path": "data/content/math/misc/ch_comp-1.md",
+      "viz": null
+    },
+    "ch_comp-2": {
+      "title": "1.2 Exponent Reduction: Euler's Theorem",
+      "path": "data/content/math/misc/ch_comp-2.md",
+      "viz": null
+    },
+    "ch_comp-3": {
+      "title": "2.1 Inclusion-Exclusion Principle (PIE)",
+      "path": "data/content/math/misc/ch_comp-3.md",
+      "viz": null
+    },
+    "ch_comp-4": {
+      "title": "2.2 Generating Functions: Counting with Polynomials",
+      "path": "data/content/math/misc/ch_comp-4.md",
+      "viz": null
+    },
+    "ch_comp-5": {
+      "title": "3.1: The Partition Method",
+      "path": "data/content/math/misc/ch_comp-5.md",
+      "viz": null
+    },
+    "ch_comp-6": {
+      "title": "3.2: 3-Digit Numerical Strategies",
+      "path": "data/content/math/misc/ch_comp-6.md",
+      "viz": null
+    },
+    "final-u15-1": {
+      "title": "15.1: TJ EOC Replica",
+      "path": "data/content/math/misc/final-u15-1.md",
+      "viz": null
+    },
+    "final-u15-2": {
+      "title": "15.2: Elite Modeling Archive",
+      "path": "data/content/math/misc/final-u15-2.md",
+      "viz": null
+    },
+    "final-u15-3": {
+      "title": "15.3: Competition Logic (AMC/AIME)",
+      "path": "data/content/math/misc/final-u15-3.md",
+      "viz": null
+    },
+    "final-u15-4": {
+      "title": "15.4: 2024 Mock Exam A",
+      "path": "data/content/math/misc/final-u15-4.md",
+      "viz": null
+    },
+    "final-u15-5": {
+      "title": "15.5: 2025 Predictive Test",
+      "path": "data/content/math/misc/final-u15-5.md",
+      "viz": null
+    },
+    "ch_limits-1": {
+      "title": "Calc Intro: The Paradox of Zeno",
+      "path": "data/content/math/misc/ch_limits-1.md",
+      "viz": null
+    },
+    "ch_limits-2": {
+      "title": "Calc Intro: The Tangent Problem",
+      "path": "data/content/math/misc/ch_limits-2.md",
+      "viz": null
+    },
+    "ch_limits-3": {
+      "title": "Calc Intro: Visualizing Infinity",
+      "path": "data/content/math/misc/ch_limits-3.md",
+      "viz": null
+    },
+    "precalc-u1-1": {
+      "title": "1.1: Change & Concavity (Level 4 Mastery)",
+      "path": "data/content/math/precalc/precalc-u1-1.md",
+      "viz": null
+    },
+    "precalc-u1-2": {
+      "title": "1.2: The Battle of Scale (Dominance Mastery)",
+      "path": "data/content/math/precalc/precalc-u1-2.md",
+      "viz": null
+    },
+    "precalc-u1-3": {
+      "title": "1.3: Rational Dynamics (Discontinuity Mastery)",
+      "path": "data/content/math/precalc/precalc-u1-3.md",
+      "viz": null
+    },
+    "precalc-u1-4": {
+      "title": "1.4: AP Continuity Mastery",
+      "path": "data/content/math/precalc/precalc-u1-4.md",
+      "viz": null
+    },
+    "precalc-u2-1": {
+      "title": "2.1: The Magnitude Compressor (Log Logic)",
+      "path": "data/content/math/precalc/precalc-u2-1.md",
+      "viz": null
+    },
+    "precalc-u2-2": {
+      "title": "2.2: Logistic Dynamics (Mastering the Inflection)",
+      "path": "data/content/math/precalc/precalc-u2-2.md",
+      "viz": null
+    },
+    "precalc-u2-3": {
+      "title": "2.3: Semi-Log Analysis (Mastery)",
+      "path": "data/content/math/precalc/precalc-u2-3.md",
+      "viz": null
+    },
+    "precalc-u2-4": {
+      "title": "2.4: Model Validation (Residual Mastery)",
+      "path": "data/content/math/precalc/precalc-u2-4.md",
+      "viz": null
+    },
+    "precalc-u3-1": {
+      "title": "3.1: The Rotation Generator (Mastery)",
+      "path": "data/content/math/precalc/precalc-u3-1.md",
+      "viz": null
+    },
+    "precalc-u3-2": {
+      "title": "3.2: Inverse Trig (Domain Mastery)",
+      "path": "data/content/math/precalc/precalc-u3-2.md",
+      "viz": null
+    },
+    "precalc-u3-3": {
+      "title": "3.3: Polar Dynamics (Mastery)",
+      "path": "data/content/math/precalc/precalc-u3-3.md",
+      "viz": null
+    },
+    "precalc-u3-4": {
+      "title": "3.4: Trig Identities & Harmonic Refactoring",
+      "path": "data/content/math/precalc/precalc-u3-4.md",
+      "viz": null
+    },
+    "precalc-u4-1": {
+      "title": "4.1: Parametric Mastery (Decoupling Time)",
+      "path": "data/content/math/precalc/precalc-u4-1.md",
+      "viz": null
+    },
+    "precalc-u4-2": {
+      "title": "4.2: Vector Mastery (Force & Direction)",
+      "path": "data/content/math/precalc/precalc-u4-2.md",
+      "viz": null
+    },
+    "precalc-u4-3": {
+      "title": "4.3: Matrix Mastery (Linear Warping)",
+      "path": "data/content/math/precalc/precalc-u4-3.md",
+      "viz": null
+    },
+    "precalc-u4-4": {
+      "title": "4.4: Conics in Parametric Form",
+      "path": "data/content/math/precalc/precalc-u4-4.md",
+      "viz": null
+    },
+    "precalc-u5-1": {
+      "title": "5.1: The Limit Concept",
+      "path": "data/content/math/precalc/precalc-u5-1.md",
+      "viz": null
+    },
+    "precalc-u5-2": {
+      "title": "5.2: Continuity Defined (Formal)",
+      "path": "data/content/math/precalc/precalc-u5-2.md",
+      "viz": null
+    },
+    "precalc-u5-3": {
+      "title": "5.3: Instantaneous Rate of Change (The Big Bridge)",
+      "path": "data/content/math/precalc/precalc-u5-3.md",
+      "viz": null
+    },
+    "precalc-u6-1": {
+      "title": "6.1: 2023 Official Sample (Foundry)",
+      "path": "data/content/math/precalc/precalc-u6-1.md",
+      "viz": null
+    },
+    "precalc-u6-2": {
+      "title": "6.2: 2024 Official Exam (Actual)",
+      "path": "data/content/math/precalc/precalc-u6-2.md",
+      "viz": null
+    },
+    "precalc-u6-3": {
+      "title": "6.3: 2025 Elite Prediction (Hard Mode)",
+      "path": "data/content/math/precalc/precalc-u6-3.md",
+      "viz": null
+    },
+    "proof_logic-u1-1": {
+      "title": "The First Rule: Axioms",
+      "path": "data/content/math/proof_logic/proof_logic-u1-1.md",
+      "viz": null
+    },
+    "proof_logic-u2-1": {
+      "title": "Slicing to Find Area",
+      "path": "data/content/math/proof_logic/proof_logic-u2-1.md",
+      "viz": {
+        "expressions": [
+          "x^2 + y^2 = 4",
+          "y = x*tan(pi/8) {x > 0}",
+          "y = -x*tan(pi/8) {x > 0}"
+        ],
+        "bounds": {
+          "left": -3,
+          "right": 3,
+          "bottom": -3,
+          "top": 3
+        }
+      }
+    },
+    "proof_logic-u3-1": {
+      "title": "Deriving the Quadratic Formula",
+      "path": "data/content/math/proof_logic/proof_logic-u3-1.md",
+      "viz": null
+    },
+    "proof_logic-u4-1": {
+      "title": "The Secret of the Secant",
+      "path": "data/content/math/proof_logic/proof_logic-u4-1.md",
+      "viz": {
+        "expressions": [
+          "f(x) = 0.5x^2",
+          "a = 1",
+          "h = 1",
+          "(a, f(a))",
+          "(a+h, f(a+h))",
+          "y - f(a) = ((f(a+h)-f(a))/h)*(x-a)"
+        ],
+        "bounds": {
+          "left": -1,
+          "right": 4,
+          "bottom": -1,
+          "top": 5
+        }
+      }
+    },
+    "proof_logic-u1-2": {
+      "title": "Syllogisms & Truth Tables",
+      "path": "data/content/math/proof_logic/proof_logic-u1-2.md",
+      "viz": null
+    },
+    "proof_logic-u2-2": {
+      "title": "The Square inside a Square",
+      "path": "data/content/math/proof_logic/proof_logic-u2-2.md",
+      "viz": null
+    },
+    "proof_logic-u3-2": {
+      "title": "Pascal’s Triangle Mechanics",
+      "path": "data/content/math/proof_logic/proof_logic-u3-2.md",
+      "viz": null
+    },
+    "proof_logic-u4-2": {
+      "title": "Power Rule First Principles",
+      "path": "data/content/math/proof_logic/proof_logic-u4-2.md",
+      "viz": null
+    },
+    "stats_res-u1-1": {
+      "title": "The Null Hypothesis Protocol",
+      "path": "data/content/math/stats/stats_res-u1-1.md",
+      "viz": null
+    },
+    "stats_res-u1-2": {
+      "title": "Significance Levels & Alpha",
+      "path": "data/content/math/stats/stats_res-u1-2.md",
+      "viz": {
+        "expressions": [
+          "f(x) = (1/(1*sqrt(2*pi)))*e^{-0.5((x-0)/1)^2}",
+          "a = 1.96",
+          "x = a {x > 0}",
+          "x = -a {x < 0}"
+        ],
+        "bounds": {
+          "left": -4,
+          "right": 4,
+          "bottom": -0.1,
+          "top": 0.5
+        }
+      }
+    },
+    "stats_res-u2-1": {
+      "title": "Chi-Square Intuition",
+      "path": "data/content/math/stats/stats_res-u2-1.md",
+      "viz": null
+    },
+    "stats_res-u1-3": {
+      "title": "T-Test Mechanics",
+      "path": "data/content/math/stats/stats_res-u1-3.md",
+      "viz": null
+    },
+    "stats_res-u1-4": {
+      "title": "IBET: Fish Respiration Case",
+      "path": "data/content/math/stats/stats_res-u1-4.md",
+      "viz": null
+    },
+    "stats_res-u2-2": {
+      "title": "Contingency Tables",
+      "path": "data/content/math/stats/stats_res-u2-2.md",
+      "viz": null
+    },
+    "stats_res-u2-3": {
+      "title": "Genetic Linkage Stats",
+      "path": "data/content/math/stats/stats_res-u2-3.md",
+      "viz": null
+    },
+    "stats_res-u3-1": {
+      "title": "The Correlation Scale",
+      "path": "data/content/math/stats/stats_res-u3-1.md",
+      "viz": {
+        "expressions": [
+          "y = 0.8x + 0.2",
+          " (0,0),(1,1),(2,1.5),(3,2.8),(4,3.2) "
+        ],
+        "bounds": {
+          "left": -1,
+          "right": 5,
+          "bottom": -1,
+          "top": 5
+        }
+      }
+    },
+    "stats_res-u3-2": {
+      "title": "Linear Regression Model",
+      "path": "data/content/math/stats/stats_res-u3-2.md",
+      "viz": null
+    },
+    "stats_res-u3-3": {
+      "title": "Residual Mapping",
+      "path": "data/content/math/stats/stats_res-u3-3.md",
+      "viz": {
+        "expressions": [
+          "y = 0",
+          "(1, 0.2), (2, -0.1), (3, 0.3), (4, -0.2), (5, 0.1)"
+        ],
+        "bounds": {
+          "left": -1,
+          "right": 6,
+          "bottom": -1,
+          "top": 1
+        }
+      }
+    }
+  }
+}
