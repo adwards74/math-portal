@@ -759,7 +759,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(`Lesson content for '${lessonKey}' not found.`);
             }
 
-            // Restore missing definition
+            // Calculate next lesson for navigation
+            const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
+            let allLectures = [];
+            if (subject) {
+                subject.units.forEach(u => {
+                    u.lectures.forEach(l => {
+                        allLectures.push({
+                            key: l.url.split(':').pop(),
+                            title: l.name
+                        });
+                    });
+                });
+            }
+            const currentIdx = allLectures.findIndex(l => l.key === lessonKey);
+            const nextLesson = currentIdx !== -1 && currentIdx < allLectures.length - 1 ? allLectures[currentIdx + 1] : null;
+
             const nextButtonHtml = nextLesson
                 ? `<button class="glass next-btn" onclick="window.finishLesson('${lessonKey}', '${subjectId}'); window.showLesson('${nextLesson.key}', '${subjectId}')" style="padding: 10px 20px; font-weight: 600; color: var(--accent-cyan); display: flex; align-items: center; gap: 8px;">
                  Next <i class="fas fa-arrow-right"></i>
