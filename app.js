@@ -372,6 +372,14 @@ document.addEventListener('DOMContentLoaded', () => {
             badgeName = "IBET Stats Master";
             icon = "fa-chart-bar";
             style = "border-color: #38ef7d; box-shadow: 0 0 30px rgba(56, 239, 125, 0.4);";
+        } else if (chapterTitle.includes("First Principles") || chapterTitle.includes("Axioms")) {
+            badgeName = "First Principles Architect";
+            icon = "fa-drafting-table";
+            style = "border-color: var(--accent-magenta); box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);";
+        } else if (chapterTitle.includes("Proof, Logic")) {
+            badgeName = "Logic Sovereign";
+            icon = "fa-scroll";
+            style = "border-color: #6366f1; box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);";
         }
 
         if (!badgeName) return;

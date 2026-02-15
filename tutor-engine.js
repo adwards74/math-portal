@@ -286,6 +286,10 @@ window.TutorEngine = (function () {
         "degrees-of-freedom": "Degrees of Freedom (df) is the number of values in a final calculation that are free to vary. For Chi-Square, it's usually (categories - 1).",
         "correlation": "Correlation ($r$) ranges from -1 to 1. Closer to ±1 means a stronger relationship. Remember: Correlation does NOT equal Causation!",
         "r-squared": "R-squared ($R^2$) is the 'percentage of explanation'. If $R^2 = 0.85$, then 85% of the change in $y$ is explained by your $x$ variable.",
+        // Proof & Logic (Math 6)
+        "derivation": "A derivation is a sequence of logical steps showing how a result follows from axioms or previously proven theorems. It's the 'map' of the proof.",
+        "first-principles": "Mastering First Principles means understanding the fundamental logic of a concept without relying on memorized formulas. It's the ultimate 'why'.",
+        "syllogism": "A syllogism is a logical argument: If p implies q, and q implies r, then p implies r. It's the gravity of logic.",
     };
 
     // Neo 5.1: Prerequisite Roadmap
@@ -298,6 +302,8 @@ window.TutorEngine = (function () {
         "logarithm": ["exponential"],
         "trig": ["radian", "geometry"],
         "calculus": ["limit", "function"],
+        "proof-logic": ["algebra2", "geometry"],
+        "derivation": ["proof-logic"],
         "complex": ["radical", "number-line"],
         "gradient": ["partial", "vector"],
         "partial": ["limit", "calculus"],

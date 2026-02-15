@@ -2197,6 +2197,77 @@ const MATH_DATA = {
             ]
         },
         {
+            id: "proof-logic",
+            title: "Proof, Logic & First Principles",
+            code: "MA6000",
+            description: "A rigorous exploration of the architecture of reason. From axioms to advanced derivations.",
+            color: "#6366f1",
+            icon: "fas fa-scroll",
+            insight: "Logical Sovereignty: In mathematics, a formula is a destination. A proof is the journey. To know 'Why' is to own the logic forever.",
+            units: [
+                {
+                    title: "Unit 1: The Architecture of Axioms",
+                    intuition: "Axioms are the 'atoms' of thought. We build universes from these small, undeniable truths.",
+                    topics: ["Postulational Systems", "Logic Gates of Math", "Euclidean vs Non-Euclidean"],
+                    lectures: [
+                        { name: "1.1: The First Rule: Axioms", url: "lesson:proof_logic:u1-1" },
+                        { name: "1.2: Syllogisms & Truth Tables", url: "lesson:proof_logic:u1-2" }
+                    ],
+                    quiz: {
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "What is the primary difference between an Axiom and a Theorem?",
+                                options: ["Axioms require proof", "Theorems are self-evident", "Axioms are starting points; Theorems are proven from them", "None"],
+                                answer: "Axioms are starting points; Theorems are proven from them",
+                                explanation: "Axioms are accepted without proof to serve as the foundation for further logical derivation."
+                            }
+                        ]
+                    }
+                },
+                {
+                    title: "Unit 2: Geometric Visual Proofs",
+                    intuition: "A diagram can be a complete proof. We move from 'calculated' results to 'seen' truths.",
+                    topics: ["Slicing the Circle", "Pythagorean Rearrangement", "The Square of Sums"],
+                    lectures: [
+                        { name: "2.1: Slicing to Find Area", url: "lesson:proof_logic:u2-1" },
+                        { name: "2.2: The Square inside a Square", url: "lesson:proof_logic:u2-2" }
+                    ],
+                    examples: [
+                        {
+                            title: "Visual Mastery: Pi Intuition",
+                            problem: "How does slicing a circle into infinite triangles prove the area is $A = \pi r^2$?",
+                            steps: [
+                                "Slice circle into small wedges.",
+                                "Rearrange wedges into a rectangle-like shape.",
+                                "Observe the base is half the circumference ($\pi r$) and height is $r$.",
+                                "Calculate area: $r \times \pi r = \pi r^2$."
+                            ],
+                            intuition: "Infinity is a tool for simplification. By making things smaller, we make the truth bigger."
+                        }
+                    ]
+                },
+                {
+                    title: "Unit 3: Algebraic Derivations",
+                    intuition: "Where did the formulas come from? We strip the Quadratic and Binomial markers to see the mechanical heart of Algebra.",
+                    topics: ["Completing the Square", "Binomial Theorem Geometry", "Summing Infinity"],
+                    lectures: [
+                        { name: "3.1: Deriving the Quadratic Formula", url: "lesson:proof_logic:u3-1" },
+                        { name: "3.2: Pascal’s Triangle Mechanics", url: "lesson:proof_logic:u3-2" }
+                    ]
+                },
+                {
+                    title: "Unit 4: Calculus from First Principles",
+                    intuition: "The derivative is not a formula; it is a movement. We watch the secant line become the tangent.",
+                    topics: ["The Difference Quotient", "Limits Visualized", "Accumulation of Fluxions"],
+                    lectures: [
+                        { name: "4.1: The Secret of the Secant", url: "lesson:proof_logic:u4-1" },
+                        { name: "4.2: Power Rule First Principles", url: "lesson:proof_logic:u4-2" }
+                    ]
+                }
+            ]
+        },
+        {
             id: "res-stats",
             title: "Research Statistics & Data Science",
             code: "MA5100",
