@@ -73,5 +73,49 @@ public class MathSolver {
 }
         `,
         explanation: "이차방정식의 해법은 판별식(Discriminant)의 값에 따른 다중 조건문(if-else if-else) 구조로 명확하게 시각화됩니다."
+    },
+
+    "factorial": {
+        title: "Factorial: Recursive vs Iterative",
+        logic: `
+public class MathPatterns {
+    // Iterative approach using a For-Loop
+    public long calculateFactorial(int n) {
+        long result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    // Recursive approach (Elite Logic)
+    public long factorialRecursive(int n) {
+        if (n <= 1) return 1;
+        return n * factorialRecursive(n - 1);
+    }
+}
+        `,
+        explanation: "계승(Factorial)은 반복문(For-loop)과 재귀(Recursion)라는 CS의 핵심 개념을 설명하기에 가장 완벽한 수학적 예시입니다."
+    },
+
+    "prime_numbers": {
+        title: "Prime Check: Algorithmic Efficiency",
+        logic: `
+public class NumberTheory {
+    public boolean isPrime(int n) {
+        if (n <= 1) return false;
+        
+        // Efficiency: Only check up to the square root
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false; // Found a divisor
+            }
+        }
+        return true; // No divisors found
+    }
+}
+        `,
+        explanation: "소수 판별 알고리즘은 '정수론'의 개념을 코드로 구현한 것입니다. 특히 루프의 범위를 제곱근($\\sqrt{n}$)까지로 제한하는 것은 수학적 성질을 이용한 알고리즘 최적화의 정석입니다."
     }
 };
+
