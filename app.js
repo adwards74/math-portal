@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             const lessonKey = window.currentLessonKey || "";
             const subjectId = window.currentSubjectId || "algebra2";
-            const rawMessage = window.getSocraticAdvice ? window.getSocraticAdvice(lessonKey, subjectId) : "Manual override required.";
+            const rawMessage = window.TutorEngine && window.TutorEngine.getSocraticAdvice ? window.TutorEngine.getSocraticAdvice(lessonKey, subjectId) : "Manual override required.";
 
             bubble.style.borderColor = "var(--accent-magenta)";
             if (window.typeTerminalMessage) window.typeTerminalMessage(rawMessage);
