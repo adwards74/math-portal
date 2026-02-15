@@ -691,6 +691,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    window.toggleJavaPerspective = (logicKey) => {
+        const lessonView = document.querySelector('.lesson-view');
+        const container = document.getElementById('java-logic-view');
+        const content = document.querySelector('.lesson-text-content');
+        const btn = document.getElementById('java-perspective-btn');
+
+        if (!container || !JAVA_LOGIC_DATA[logicKey]) return;
+
+        const isActive = lessonView.classList.toggle('java-perspective-active');
+
+        if (isActive) {
+            const data = JAVA_LOGIC_DATA[logicKey];
+            container.innerHTML = `
+                <div class="java-logic-container active">
+                    <div class="java-terminal-header">
+                        <div class="terminal-dot" style="background:#ff5f56;"></div>
+                        <div class="terminal-dot" style="background:#ffbd2e;"></div>
+                        <div class="terminal-dot" style="background:#27c93f;"></div>
+                        <span style="color:#666; font-size:12px; margin-left:10px;">${data.title} — Java 17 Shell</span>
+                    </div>
+                    <div class="java-code-block">${data.logic}</div>
+                    <div class="java-logic-explanation">
+                        <strong><i class="fas fa-microchip"></i> Logic Architecture:</strong><br>
+                        ${data.explanation}
+                    </div>
+                </div>
+            `;
+            btn.innerHTML = '<i class="fas fa-book"></i> Textbook View';
+            btn.style.color = 'var(--accent-blue)';
+            btn.style.background = 'rgba(0, 210, 255, 0.1)';
+        } else {
+            container.innerHTML = '';
+            btn.innerHTML = '<i class="fas fa-code"></i> Java View';
+            btn.style.color = 'var(--accent-orange)';
+            btn.style.background = 'rgba(255, 157, 0, 0.1)';
+        }
+    };
+
     async function showLesson(lessonKey, subjectId) {
         window.currentLessonKey = lessonKey;
         if (typeof lessonStartTime !== 'undefined') lessonStartTime = Date.now();
@@ -722,12 +760,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Restore missing definition
-            const nextLesson = findNextLesson(lessonKey, subjectId);
             const nextButtonHtml = nextLesson
                 ? `<button class="glass next-btn" onclick="window.finishLesson('${lessonKey}', '${subjectId}'); window.showLesson('${nextLesson.key}', '${subjectId}')" style="padding: 10px 20px; font-weight: 600; color: var(--accent-cyan); display: flex; align-items: center; gap: 8px;">
                  Next <i class="fas fa-arrow-right"></i>
                </button>`
                 : '';
+
+            // --- Elite 5.6: Java Logic Integration ---
+            const javaKey = Object.keys(window.JAVA_LOGIC_DATA || {}).find(k => lessonData.title.toLowerCase().includes(k.replace(/_/g, ' ')) || lessonKey.includes(k));
+            const javaButtonHtml = javaKey ? `
+                <button id="java-perspective-btn" class="glass perspective-toggle-btn" onclick="window.toggleJavaPerspective('${javaKey}')" style="background: rgba(255, 157, 0, 0.1); border-color: rgba(255, 157, 0, 0.3); color: var(--accent-orange);">
+                    <i class="fas fa-code"></i> Java View
+                </button>
+            ` : '';
 
             const appContainer = document.getElementById('dashboard-view');
             appContainer.innerHTML = `
@@ -741,6 +786,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h2 style="font-size:1.1rem; margin:0;">${lessonData.title}</h2>
                     </div>
                     <div class="lesson-actions" style="display:flex; gap:10px;">
+                        ${javaButtonHtml}
                         <button class="glass" onclick="window.toggleLessonTool()" style="padding:10px 15px; color:var(--accent-blue);"><i class="fas fa-calculator"></i></button>
                         ${nextButtonHtml}
                         <button class="glass complete-btn" onclick="window.finishLesson('${lessonKey}', '${subjectId}')" style="padding:10px 20px;"><i class="fas fa-check"></i> Done</button>
@@ -752,14 +798,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                 <div class="lesson-body-wrapper">
-                    <header class="lesson-header">
-                        <p class="subtitle">${lessonData.subtitle}</p>
-                    </header>
-                    <article class="lesson-content">
-                        ${lessonData.content.replace(/<neo-graph type="(.*)"><\/neo-graph>/g, (match, type) => {
+                    <div class="lesson-text-content">
+                        <header class="lesson-header">
+                            <p class="subtitle">${lessonData.subtitle}</p>
+                        </header>
+                        <article class="lesson-content">
+                            ${lessonData.content.replace(/<neo-graph type="(.*)"><\/neo-graph>/g, (match, type) => {
                 return window.UIEngine && window.UIEngine.renderDynamicGraph ? window.UIEngine.renderDynamicGraph({ type: type }) : '';
             })}
-                    </article>
+                        </article>
+                    </div>
+                    <div id="java-logic-view"></div>
                     <div class="lesson-footer" style="margin-top: 50px; text-align: right; padding-bottom: 60px;">
                         ${nextButtonHtml ?
                     `<button class="next-btn-large" onclick="window.finishLesson('${lessonKey}', '${subjectId}'); window.showLesson('${nextLesson.key}', '${subjectId}')" style="padding: 15px 35px; font-size: 1.1rem; font-weight: 800; color: #000 !important; background: #00d2ff !important; border: none; border-radius: 50px; cursor: pointer; box-shadow: 0 0 25px rgba(0,210,255,0.6); transition: all 0.2s; display: inline-flex; align-items: center; gap: 10px;">
@@ -1858,6 +1907,162 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- Elite 5.6: IBET Data Analytics Tool ---
+    window.showAnalyticsView = () => {
+        const appContainer = document.getElementById('analytics-view');
+        if (!appContainer) return;
+        appContainer.innerHTML = `
+        <div class="analytics-view fadeIn">
+            <style>
+                .analytics-header { margin-bottom: 30px; text-align: center; }
+                .glass-input { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: white; resize: none; }
+                .stats-report { animation: slideUp 0.5s ease; }
+                .bar { transition: height 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+            </style>
+            <div class="analytics-header glass" style="padding:40px; border-radius:30px; background: linear-gradient(135deg, rgba(0, 210, 255, 0.1), rgba(157, 80, 187, 0.1));">
+                <h1 class="gradient-text" style="font-size:2.5rem;"><i class="fas fa-flask"></i> IBET Scientific Data Analytics</h1>
+                <p style="opacity:0.7; font-size:1.1rem;">High-performance statistical modeling for TJHSST experimental research.</p>
+            </div>
+
+            <div class="analytics-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap:25px; margin-top:25px;">
+                <div class="data-input-section glass" style="padding:25px; border-radius:20px;">
+                    <h3 style="margin-bottom:15px;"><i class="fas fa-file-import"></i> Research Data Input</h3>
+                    <p style="font-size:0.85rem; margin-bottom:15px; opacity:0.6;">Enter numerical datasets (comma-separated).</p>
+
+                    <div class="input-group">
+                        <label style="font-size:0.8rem; font-weight:700; color:var(--accent-cyan);">CONTROL GROUP (A)</label>
+                        <textarea id="group-a-input" class="glass-input" style="width:100%; height:100px; margin-top:5px; padding:12px;" placeholder="e.g. 10.5, 12.1, 11.8, 13.0, 11.2"></textarea>
+                    </div>
+
+                    <div class="input-group" style="margin-top:20px;">
+                        <label style="font-size:0.8rem; font-weight:700; color:var(--accent-purple);">EXPERIMENTAL GROUP (B)</label>
+                        <textarea id="group-b-input" class="glass-input" style="width:100%; height:100px; margin-top:5px; padding:12px;" placeholder="e.g. 14.2, 15.1, 13.8, 16.5, 15.0"></textarea>
+                    </div>
+
+                    <div style="margin-top:25px; display:flex; gap:10px;">
+                        <button class="glass next-btn" onclick="window.runIBETAnalysis('descriptive')" style="flex:1; padding:12px;">Descriptive Stats</button>
+                        <button class="glass next-btn" onclick="window.runIBETAnalysis('ttest')" style="flex:1; padding:12px; border-color:var(--accent-purple); color:var(--accent-purple);">Independent T-Test</button>
+                    </div>
+                </div>
+
+                <div class="analysis-results-section glass" id="analytics-results" style="padding:25px; border-radius:20px; min-height:400px; display:flex; align-items:center; justify-content:center; overflow-y:auto;">
+                    <div style="text-align:center; opacity:0.4;">
+                        <i class="fas fa-chart-line fa-3x"></i>
+                        <p style="margin-top:15px;">Awaiting Data Input...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="analytics-chart-view" class="glass" style="margin-top:25px; padding:25px; border-radius:20px; display:none;">
+                <h3><i class="fas fa-chart-bar"></i> Visualization</h3>
+                <div id="ibet-chart-container" style="height:300px; display:flex; align-items:flex-end; gap:60px; justify-content:center; padding:40px; border-bottom: 2px solid #333;"></div>
+            </div>
+        </div>
+        `;
+        window.scrollTo(0, 0);
+    };
+
+    window.runIBETAnalysis = (type) => {
+        const rawA = document.getElementById('group-a-input').value;
+        const rawB = document.getElementById('group-b-input').value;
+        const resultsDiv = document.getElementById('analytics-results');
+
+        const parse = (str) => str.split(/[\s,]+/).map(s => parseFloat(s.trim())).filter(n => !isNaN(n));
+        const dataA = parse(rawA);
+        const dataB = parse(rawB);
+
+        if (dataA.length === 0) {
+            alert("Please enter numerical data for Group A.");
+            return;
+        }
+
+        const statsA = window.AnalyticsEngine.analyze(dataA);
+        const statsB = dataB.length > 0 ? window.AnalyticsEngine.analyze(dataB) : null;
+
+        if (type === 'descriptive') {
+            resultsDiv.innerHTML = `
+            < div class="stats-report" style = "width:100%;" >
+                    <h3 style="margin-bottom:20px; border-bottom:1px solid #333; padding-bottom:10px;"><i class="fas fa-microscope"></i> Descriptive Metrics</h3>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
+                        <div class="glass" style="padding:15px; border-radius:12px; background:rgba(0,210,255,0.05);">
+                            <h4 style="color:var(--accent-cyan); font-size:0.8rem; margin-bottom:10px;">GROUP A</h4>
+                            <p>Mean: <strong style="font-size:1.2rem;">${statsA.mean.toFixed(3)}</strong></p>
+                            <p>Std Dev: <strong>${statsA.sd.toFixed(3)}</strong></p>
+                            <p>Std Error: <strong>${statsA.se.toFixed(3)}</strong></p>
+                            <p>Sample Size (n): <strong>${statsA.n}</strong></p>
+                        </div>
+                        ${statsB ? `
+                        <div class="glass" style="padding:15px; border-radius:12px; background:rgba(157,80,187,0.05);">
+                            <h4 style="color:var(--accent-purple); font-size:0.8rem; margin-bottom:10px;">GROUP B</h4>
+                            <p>Mean: <strong style="font-size:1.2rem;">${statsB.mean.toFixed(3)}</strong></p>
+                            <p>Std Dev: <strong>${statsB.sd.toFixed(3)}</strong></p>
+                            <p>Std Error: <strong>${statsB.se.toFixed(3)}</strong></p>
+                            <p>Sample Size (n): <strong>${statsB.n}</strong></p>
+                        </div>
+                        ` : ''}
+                    </div>
+                </div >
+            `;
+            renderIBETChart(statsA, statsB);
+        } else if (type === 'ttest') {
+            if (!statsB) {
+                alert("T-test requires two groups (Control vs Experimental).");
+                return;
+            }
+            const test = window.AnalyticsEngine.tTest(dataA, dataB);
+            resultsDiv.innerHTML = `
+            < div class="stats-report" style = "width:100%;" >
+                    <h3 style="margin-bottom:20px; border-bottom:1px solid #333; padding-bottom:10px;"><i class="fas fa-balance-scale"></i> Difference Analysis</h3>
+                    <div class="glass" style="padding:25px; border-radius:15px; border-left: 6px solid ${test.significant ? 'var(--accent-green)' : 'var(--accent-magenta)'};">
+                        <p style="font-size:0.9rem; opacity:0.7;">P-VALUE (2-TAILED)</p>
+                        <h2 style="color:${test.significant ? 'var(--accent-green)' : 'var(--accent-magenta)'}; font-size:2.2rem; margin:5px 0;">${test.pValue}</h2>
+                        
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:15px;">
+                            <p>t-Stat: <strong>${test.tStat}</strong></p>
+                            <p>df: <strong>${test.df}</strong></p>
+                        </div>
+
+                        <div style="margin-top:20px; padding:15px; background:rgba(255,255,255,0.05); border-radius:12px; line-height:1.5;">
+                            ${test.significant ?
+                    `<i class="fas fa-check-circle" style="color:var(--accent-green);"></i> <strong>REJECT NULL HYPOTHESIS:</strong> The evidence is strong enough to conclude a statistically significant difference between the groups (p < 0.05).` :
+                    `<i class="fas fa-times-circle" style="color:var(--accent-magenta);"></i> <strong>FAIL TO REJECT NULL:</strong> The observed difference is likely due to chance (p > 0.05). No statistical significance.`}
+                        </div>
+                    </div>
+                </div >
+            `;
+            renderIBETChart(statsA, statsB);
+        }
+    };
+
+    const renderIBETChart = (statsA, statsB) => {
+        const container = document.getElementById('ibet-chart-container');
+        const chartView = document.getElementById('analytics-chart-view');
+        chartView.style.display = 'block';
+
+        const maxMean = Math.max(statsA.mean, statsB ? statsB.mean : 0);
+        const maxVal = maxMean * 1.25;
+        const hA = (statsA.mean / maxVal) * 100;
+        const hB = statsB ? (statsB.mean / maxVal) * 100 : 0;
+
+        container.innerHTML = `
+            < div class="bar-group" style = "text-align:center; display:flex; flex-direction:column; align-items:center; gap:15px; width:120px;" >
+                <div class="bar glass" style="width:60px; height:${hA}%; background:var(--accent-cyan); border-radius:8px 8px 0 0; box-shadow: 0 0 20px rgba(0,210,255,0.4); position:relative;">
+                    <div style="position:absolute; top:-25px; left:50%; transform:translateX(-50%); font-weight:700; color:var(--accent-cyan);">${statsA.mean.toFixed(2)}</div>
+                </div>
+                <span style="font-size:0.85rem; font-weight:700; letter-spacing:1px;">GROUP A</span>
+            </div >
+            ${statsB ? `
+            <div class="bar-group" style="text-align:center; display:flex; flex-direction:column; align-items:center; gap:15px; width:120px;">
+                <div class="bar glass" style="width:60px; height:${hB}%; background:var(--accent-purple); border-radius:8px 8px 0 0; box-shadow: 0 0 20px rgba(157,80,187,0.4); position:relative;">
+                    <div style="position:absolute; top:-25px; left:50%; transform:translateX(-50%); font-weight:700; color:var(--accent-purple);">${statsB.mean.toFixed(2)}</div>
+                </div>
+                <span style="font-size:0.85rem; font-weight:700; letter-spacing:1px;">GROUP B</span>
+            </div>
+            ` : ''
+            }
+        `;
+    };
 
     if (window.updateStabilityUI) window.updateStabilityUI(); // Initial draw
     showDashboard();

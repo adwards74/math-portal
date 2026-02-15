@@ -60,6 +60,10 @@
                 <a href="#" class="nav-item" data-view="resources">
                     <i class="fas fa-external-link-alt"></i> <span>Resources</span>
                 </a>
+                <a href="#" class="nav-item" data-view="analytics" style="border-left: 3px solid var(--accent-orange);">
+                    <i class="fas fa-flask"></i> <span style="color:var(--accent-orange); font-weight:700;">IBET
+                        Analytics</span>
+                </a>
                 <a href="#" class="nav-item" data-view="review">
                     <i class="fas fa-history"></i> <span>Review Hub</span>
                 </a>
@@ -108,6 +112,9 @@
             <div id="view-container">
                 <!-- Dashboard View -->
                 <section class="view active" id="dashboard-view"></section>
+                <section id="review-hub-view" style="display:none;"></section>
+                <section id="analytics-view" style="display:none;"></section>
+                <div id="subject-detail-view" style="display:none;"></div>
 
                 <!-- Subjects View -->
                 <section class="view" id="subjects-view">
@@ -317,6 +324,8 @@
     <script src="data/chapters/ch0.js"></script>
     <script src="data/chapters/stats_res.js"></script>
     <script src="data/chapters/proofs_logic.js"></script>
+    <script src="data/chapters/java_logic.js"></script>
+    <script src="analytics-engine.js"></script>
     <script src="data.js"></script>
     <script src="router.js"></script>
     <script src="ui-render.js"></script>

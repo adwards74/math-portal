@@ -1322,3 +1322,83 @@ em {
     visibility: visible;
     opacity: 1;
 }
+
+/* --- Java Logic Perspective --- */
+.java-logic-container {
+    background: #0d0d0d;
+    border-radius: 12px;
+    border: 1px solid #333;
+    padding: 20px;
+    margin: 20px 0;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: none;
+    /* Hidden by default */
+}
+
+.java-logic-container.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.java-terminal-header {
+    background: #1a1a1a;
+    padding: 8px 15px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: -20px -20px 15px -20px;
+}
+
+.terminal-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.java-code-block {
+    color: #e6e6e6;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+.java-logic-explanation {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(99, 102, 241, 0.1);
+    border-left: 4px solid var(--accent-purple);
+    border-radius: 0 8px 8px 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.perspective-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.perspective-toggle-btn i {
+    margin-right: 5px;
+}
+
+.perspective-toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
+}
+
+.java-perspective-active .lesson-text-content {
+    display: none;
+}
