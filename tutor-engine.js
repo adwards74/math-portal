@@ -12,6 +12,7 @@ window.TutorEngine = (function () {
         index: {},
         isMapped: false,
         conversationBuffer: [], // Neo 5.1: Context Buffer
+        lastQueryTopic: null,
 
         addToBuffer(query, response) {
             this.conversationBuffer.push({ query, response });
@@ -166,22 +167,47 @@ window.TutorEngine = (function () {
 
         // Neo 5.3: Neural Concept Mapping
         getConceptMatrix(topic) {
-            const normalized = topic.toLowerCase().trim();
-            const parents = PREREQUISITE_MAP[normalized] || [];
-            const children = [];
+            let normalized = topic.toLowerCase().trim();
 
-            // Find topics that list this as a prerequisite
+            // Elite 5.3: Fallback to last searched topic
+            if (normalized === "general" && this.lastQueryTopic) {
+                normalized = this.lastQueryTopic;
+            }
+
+            const neuralMatches = this.search(normalized);
+            const matrix = {
+                current: normalized,
+                parents: PREREQUISITE_MAP[normalized] || [],
+                children: []
+            };
+
+            if (neuralMatches.length > 0) {
+                const best = neuralMatches[0];
+                matrix.current = best.title || best.name || best.id || normalized;
+
+                // Parents fallback
+                if (matrix.parents.length === 0) {
+                    if (best.type === 'glossary' && best.relatedUnits) {
+                        matrix.parents = best.relatedUnits.map(u => u.unitTitle);
+                    } else if (best.type === 'lecture' && best.subjectId) {
+                        const sub = window.MATH_DATA && window.MATH_DATA.subjects.find(s => s.id === best.subjectId);
+                        if (sub) {
+                            const unit = sub.units.find(u => u.lectures.some(l => l.url.includes(normalized)));
+                            if (unit) matrix.parents = [unit.title];
+                        }
+                    }
+                }
+            }
+
+            // Find children that list this as a prerequisite
             for (const [key, prereqs] of Object.entries(PREREQUISITE_MAP)) {
                 if (prereqs.includes(normalized)) {
                     children.push(key);
                 }
             }
+            matrix.children = children;
 
-            return {
-                current: normalized,
-                parents: parents,
-                children: children
-            };
+            return matrix;
         },
 
         // Neo 5.2: Fuzzy Logic Engine (Levenshtein)
@@ -738,6 +764,7 @@ window.TutorEngine = (function () {
         getStats,
         getWeakTopics,
         triggerCelebration,
+        analyzePattern: window.analyzePattern,
         buildNeuralMap: () => KnowledgeMap.build(),
         summarizeContent: (key) => KnowledgeMap.summarize(key),
         getConceptMatrix: (topic) => KnowledgeMap.getConceptMatrix(topic),

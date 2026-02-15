@@ -79,18 +79,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Neo 5.0: Elite Summarization
     window.summarizeLesson = () => {
-        const lessonKey = window.currentLessonKey || "";
+        const bubble = document.getElementById('tutor-message');
+        if (!bubble) return;
+
+        const lessonKey = window.currentLessonKey;
         if (!lessonKey) {
             window.typeTerminalMessage("Please open a specific lesson first for neural summarization.");
             return;
         }
 
-        const summaryData = window.summarizeContent ? window.summarizeContent(lessonKey) : "Neo-Sense: Summary module not found.";
+        const summaryData = window.TutorEngine && window.TutorEngine.summarizeContent ? window.TutorEngine.summarizeContent(lessonKey) : "Neo-Sense: Summary module not found.";
 
         if (typeof summaryData === 'string') {
             window.typeTerminalMessage(summaryData);
         } else {
-            let html = `<div style="color:var(--accent-cyan); font-weight:bold; margin-bottom:10px;">📋 ELITE SUMMARY: ${summaryData.title}</div>`;
+            let html = `<div style="color:var(--accent-cyan); font-weight:bold; margin-bottom:10px;">📝 ELITE SUMMARY: ${summaryData.title}</div>`;
             if (summaryData.intuition) {
                 html += `<div style="margin-bottom:10px; font-style:italic; opacity:0.9;">"${summaryData.intuition}"</div>`;
             }
@@ -236,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         setTimeout(() => {
-            const response = window.handleChatInput ? window.handleChatInput(query) : "I'm still learning. Try asking about 'quadratic' or 'factor'!";
+            const response = window.TutorEngine && window.TutorEngine.handleChatInput ? window.TutorEngine.handleChatInput(query) : "I'm still learning. Try asking about 'quadratic' or 'factor'!";
             if (window.typeTerminalMessage) window.typeTerminalMessage(response);
         }, 500);
     };
