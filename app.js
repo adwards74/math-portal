@@ -323,6 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showBadgePopup(chapterTitle) {
         let badgeName = "";
         let icon = "";
+        let style = "";
 
         if (chapterTitle.includes("Ch 1") || chapterTitle.includes("ch1-rev")) {
             badgeName = "Master of Foundations";
@@ -363,6 +364,14 @@ document.addEventListener('DOMContentLoaded', () => {
             badgeName = "Grand Precalculator";
             icon = "fa-project-diagram";
             style = "border-color: var(--accent-blue); box-shadow: 0 0 30px rgba(0, 210, 255, 0.4);";
+        } else if (chapterTitle.includes("Hypothesis Testing") || chapterTitle.includes("Chi-Square")) {
+            badgeName = "Scientific Data Architect";
+            icon = "fa-microscope";
+            style = "border-color: var(--accent-emerald); box-shadow: 0 0 30px rgba(0, 255, 100, 0.3);";
+        } else if (chapterTitle.includes("Research Statistics")) {
+            badgeName = "IBET Stats Master";
+            icon = "fa-chart-bar";
+            style = "border-color: #38ef7d; box-shadow: 0 0 30px rgba(56, 239, 125, 0.4);";
         }
 
         if (!badgeName) return;

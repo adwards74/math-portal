@@ -279,11 +279,21 @@ window.TutorEngine = (function () {
         "derivative": "The derivative measures instantaneous rate of change. It's the slope of the tangent line at any specific point.",
         "topology": "Topology is 'rubber-sheet geometry'. We study properties that don't change through stretching or bending, only tearing.",
         "optimization": "Optimization is finding the 'Best' solution. Usually, it involves setting a derivative to zero and checking for Max/Min.",
+        // Research & Statistics (Math 5)
+        "null-hypothesis": "The Null Hypothesis ($H_0$) is the 'defense' in the courtroom of science. We assume no effect until the evidence (p-value) is overwhelming.",
+        "p-value": "The p-value is the probability that your results happened by chance. If $p < \\alpha$ (usually 0.05), your results are 'statistically significant'!",
+        "chi-square": "Chi-Square ($\\chi^2$) checks for 'Goodness of Fit'. It measures how much your observed data differs from what we expected.",
+        "degrees-of-freedom": "Degrees of Freedom (df) is the number of values in a final calculation that are free to vary. For Chi-Square, it's usually (categories - 1).",
+        "correlation": "Correlation ($r$) ranges from -1 to 1. Closer to ±1 means a stronger relationship. Remember: Correlation does NOT equal Causation!",
+        "r-squared": "R-squared ($R^2$) is the 'percentage of explanation'. If $R^2 = 0.85$, then 85% of the change in $y$ is explained by your $x$ variable.",
     };
 
     // Neo 5.1: Prerequisite Roadmap
     const PREREQUISITE_MAP = {
-        "quadratic": ["linear", "axiom"],
+        "res-stats": ["probability", "algebra2"],
+        "null-hypothesis": ["probability"],
+        "chi-square": ["probability"],
+        "quadratic": ["factoring", "complex"],
         "polynomial": ["quadratic", "factor"],
         "logarithm": ["exponential"],
         "trig": ["radian", "geometry"],

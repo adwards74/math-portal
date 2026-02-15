@@ -2197,6 +2197,117 @@ const MATH_DATA = {
             ]
         },
         {
+            id: "res-stats",
+            title: "Research Statistics & Data Science",
+            code: "MA5100",
+            description: "Advanced statistical inference and data modeling for TJHSST IBET and scientific research.",
+            color: "#38ef7d",
+            icon: "fas fa-microscope",
+            insight: "Research Intelligence: Statistics is the language of proof. In IBET, your p-value is the difference between an anecdote and a discovery.",
+            units: [
+                {
+                    title: "Unit 1: Hypothesis Testing Protocol",
+                    intuition: "Hypothesis testing is the judicial system of science. We assume the 'Null' (innocent) until evidence (p-value) proves 'Alternative' (guilty).",
+                    topics: ["Type I & II Errors", "P-Value Logic", "Z-Tests vs T-Tests", "Confidence Intervals"],
+                    lectures: [
+                        { name: "1.1: The Null Hypothesis", url: "lesson:stats_res:u1-1" },
+                        { name: "1.2: Significance Levels (Alpha)", url: "lesson:stats_res:u1-2" },
+                        { name: "1.3: T-Test Mechanics", url: "lesson:stats_res:u1-3" },
+                        { name: "1.4: IBET: Fish Respiration Case", url: "lesson:stats_res:u1-4" }
+                    ],
+                    examples: [
+                        {
+                            title: "IBET Application: P-Value Verdict",
+                            problem: "A student finds a p-value of 0.03 for their bean growth experiment with alpha = 0.05. What is the conclusion?",
+                            steps: [
+                                "Compare p-value (0.03) to alpha (0.05).",
+                                "Since 0.03 < 0.05, we reject the Null Hypothesis.",
+                                "Conclude: There is a statistically significant difference in growth."
+                            ],
+                            intuition: "The p-value tells you how likely it is that your results happened by pure luck. If it's small, it probably wasn't luck!"
+                        }
+                    ],
+                    quiz: {
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "What does the 'Null Hypothesis' ($H_0$) typically represent?",
+                                options: ["The result we want to prove", "Statement of no effect or difference", "Potential error in sampling", "The probability of success"],
+                                answer: "Statement of no effect or difference",
+                                explanation: "The null hypothesis is the baseline assumption that any observed effect is due to chance alone."
+                            }
+                        ]
+                    }
+                },
+                {
+                    title: "Unit 2: Categorical Analysis (Chi-Square)",
+                    intuition: "Chi-Square is the 'Equality Inspector'. It checks if the counts you SAVED (observed) match the counts you EXPECTED.",
+                    topics: ["Goodness-of-Fit", "Test of Independence", "Degrees of Freedom", "Observed vs Expected"],
+                    lectures: [
+                        { name: "2.1: Chi-Square Intuition", url: "lesson:stats_res:u2-1" },
+                        { name: "2.2: Contingency Tables", url: "lesson:stats_res:u2-2" },
+                        { name: "2.3: Genetic Linkage Stats", url: "lesson:stats_res:u2-3" }
+                    ],
+                    examples: [
+                        {
+                            title: "Genetic Mastery: Mendelian Ratios",
+                            problem: "In a cross with expected 9:3:3:1 ratio, calculate the Degrees of Freedom.",
+                            steps: [
+                                "Count the number of categories: 4.",
+                                "Formula: $df = n - 1$.",
+                                "Result: $4 - 1 = 3$."
+                            ],
+                            intuition: "Degrees of freedom are like 'room to move'. Once you know the total and three of the categories, the fourth is already decided."
+                        }
+                    ],
+                    quiz: {
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "When calculating Chi-Square for Genetic Linkage ($9:3:3:1$), how many Degrees of Freedom are used?",
+                                options: ["1", "2", "3", "4"],
+                                answer: "3",
+                                explanation: "Degrees of Freedom = (Categories - 1). Here, $4 - 1 = 3$."
+                            }
+                        ]
+                    }
+                },
+                {
+                    title: "Unit 3: Regression & Correlation",
+                    intuition: "Correlation measures the strength of a handshake between two variables. Regression tells you what happens next.",
+                    topics: ["Pearson Correlation (r)", "Coefficient of Determination (R²)", "Residual Analysis", "Influence points"],
+                    lectures: [
+                        { name: "3.1: The Correlation Scale", url: "lesson:stats_res:u3-1" },
+                        { name: "3.2: Linear Regression Model", url: "lesson:stats_res:u3-2" },
+                        { name: "3.3: Residual Mapping", url: "lesson:stats_res:u3-3" }
+                    ],
+                    examples: [
+                        {
+                            title: "Regression: R-Squared Logic",
+                            problem: "If R² = 0.85, what percentage of the variance is explained by the model?",
+                            steps: [
+                                "Identify R² = 0.85.",
+                                "Convert to percentage: 85%.",
+                                "Conclude: 85% of variability is explained by the independent variable."
+                            ],
+                            intuition: "R-squared is the 'Accuracy Score' of your prediction line."
+                        }
+                    ],
+                    quiz: {
+                        levels: [
+                            {
+                                title: "Level 1: Intuition",
+                                question: "Which R-value indicates a perfect negative linear correlation?",
+                                options: ["0", "1", "-1", "-0.5"],
+                                answer: "-1",
+                                explanation: "An R-value of -1 means as one variable increases, the other decreases in a perfect straight line."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
             id: "comp-math",
             title: "Competition Strategy (Elite)",
             code: "CP5000",
