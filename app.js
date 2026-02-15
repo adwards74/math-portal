@@ -1,4 +1,4 @@
-window.onerror = function (msg, url, line, col, error) {
+﻿window.onerror = function (msg, url, line, col, error) {
     alert("GLOBAL ERROR: " + msg + "\nLine: " + line);
 };
 
@@ -93,12 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (typeof summaryData === 'string') {
             window.typeTerminalMessage(summaryData);
         } else {
-            let html = `<div style="color:var(--accent-cyan); font-weight:bold; margin-bottom:10px;">📝 ELITE SUMMARY: ${summaryData.title}</div>`;
+            let html = `<div style="color:var(--accent-cyan); font-weight:bold; margin-bottom:10px;"> ELITE SUMMARY: ${summaryData.title}</div>`;
             if (summaryData.intuition) {
                 html += `<div style="margin-bottom:10px; font-style:italic; opacity:0.9;">"${summaryData.intuition}"</div>`;
             }
             if (summaryData.points && summaryData.points.length > 0) {
-                html += `<ul style="padding-left:15px; margin:0; list-style-type: '⚡ ';">`;
+                html += `<ul style="padding-left:15px; margin:0; list-style-type: '??';">`;
                 summaryData.points.forEach(p => html += `<li style="margin-bottom:5px;">${p}</li>`);
                 html += `</ul>`;
             }
@@ -1039,7 +1039,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (hovered) {
                 canvas.style.cursor = 'pointer';
                 const color = hovered.val === 180 ? 'var(--accent-green)' : '#fff';
-                const extra = hovered.val === 180 ? '<br><strong>★ MAX OPTIMAL ★</strong>' : '';
+                const extra = hovered.val === 180 ? '<br><strong>??MAX OPTIMAL ??/strong>' : '';
                 statusEl.innerHTML = `Vertex: <span style="color:${color}">${hovered.label}</span><br>Profit Z = $${hovered.val}${extra}`;
             } else {
                 canvas.style.cursor = 'crosshair';
@@ -1834,3 +1834,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.updateStabilityUI) window.updateStabilityUI(); // Initial draw
     showDashboard();
 });
+
