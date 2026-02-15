@@ -2430,6 +2430,33 @@ const MATH_DATA = {
                             }
                         ]
                     }
+                },
+                {
+                    title: "Unit 3: Advanced Heuristics (AMC/AIME)",
+                    intuition: "When the clock is ticking, elegance is faster than brute force. We master the 'AIME-style' 3-digit logic.",
+                    topics: ["Stars & Bars", "Complementary Counting", "Modular Invariants", "Symmetry in Probability"],
+                    lectures: [
+                        { name: "3.1: The Partition Method", url: "lesson:competition:ch_comp-5" },
+                        { name: "3.2: 3-Digit Numerical Strategies", url: "lesson:competition:ch_comp-6" }
+                    ],
+                    quiz: {
+                        levels: [
+                            {
+                                title: "L1: Stars & Bars",
+                                question: "How many ways can 7 identical candies be given to 3 children such that each child gets at least one?",
+                                options: ["15", "21", "10", "35"],
+                                answer: "15",
+                                explanation: "Using Stars & Bars: $(n-1)C(k-1) = (7-1)C(3-1) = 6C2 = 15$."
+                            },
+                            {
+                                title: "L3: AIME Challenge",
+                                question: "Calculate the last three digits of $7^{100}$. (Format: 001, 123, etc.)",
+                                answer: "001",
+                                options: ["001", "007", "049", "343"],
+                                explanation: "$7^4 = 2401 \equiv 1 \pmod{1000}$. Thus $7^{100} = (7^4)^{25} \equiv 1^{25} = 1$. The 3-digit format is 001."
+                            }
+                        ]
+                    }
                 }
             ]
         }

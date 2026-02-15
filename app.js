@@ -1737,7 +1737,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const generateDrillQuestion = () => {
-        const types = ['arithmetic', 'matrix', 'log'];
+        const types = ['arithmetic', 'matrix', 'log', 'competition', 'logic'];
         const type = types[Math.floor(Math.random() * types.length)];
         let qText = "";
 
@@ -1751,10 +1751,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const val = Math.floor(Math.random() * 9) + 1;
             qText = `det([[${val}, 0], [0, ${val}]])`;
             currentDrillAnswer = val * val;
-        } else {
+        } else if (type === 'log') {
             const p = Math.floor(Math.random() * 5) + 1;
             qText = `log2(${Math.pow(2, p)})`;
             currentDrillAnswer = p;
+        } else if (type === 'competition') {
+            const n = [3, 7, 9][Math.floor(Math.random() * 3)];
+            const exp = [4, 8, 12, 20][Math.floor(Math.random() * 4)];
+            qText = `${n}^${exp} mod 10`;
+            // All these exponents are multiples of 4. 3^4=81, 7^4=2401, 9^2=81.
+            // 3^4n mod 10 = 1, 7^4n mod 10 = 1, 9^2n mod 10 = 1.
+            currentDrillAnswer = 1;
+        } else if (type === 'logic') {
+            const faces = Math.floor(Math.random() * 10) + 5;
+            qText = `Handshakes in group of ${faces}?`;
+            currentDrillAnswer = (faces * (faces - 1)) / 2;
         }
 
         document.getElementById('drill-question').innerText = qText;

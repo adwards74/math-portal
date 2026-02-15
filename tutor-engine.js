@@ -290,6 +290,11 @@ window.TutorEngine = (function () {
         "derivation": "A derivation is a sequence of logical steps showing how a result follows from axioms or previously proven theorems. It's the 'map' of the proof.",
         "first-principles": "Mastering First Principles means understanding the fundamental logic of a concept without relying on memorized formulas. It's the ultimate 'why'.",
         "syllogism": "A syllogism is a logical argument: If p implies q, and q implies r, then p implies r. It's the gravity of logic.",
+        // Competition Mastery (Elite 5.5)
+        "stars-and-bars": "Stars & Bars is used to count ways to distribute identical items into distinct groups. Formula: C(n+k-1, k-1).",
+        "complementary-counting": "If it's too hard to count directly, count the 'bad' cases and subtract from the total. Total - Bad = Good.",
+        "casework": "Casework is the ultimate brute-force-of-logic. Break the problem into mutually exclusive scenarios and sum them up.",
+        "invariants": "An invariant is a property that stays the same while other things change (e.g., parity, sum of angles). It's the 'anchor' in a messy problem.",
     };
 
     // Neo 5.1: Prerequisite Roadmap
@@ -304,6 +309,9 @@ window.TutorEngine = (function () {
         "calculus": ["limit", "function"],
         "proof-logic": ["algebra2", "geometry"],
         "derivation": ["proof-logic"],
+        "stars-and-bars": ["algebra2", "probability"],
+        "complementary-counting": ["probability"],
+        "casework": ["logic"],
         "complex": ["radical", "number-line"],
         "gradient": ["partial", "vector"],
         "partial": ["limit", "calculus"],
