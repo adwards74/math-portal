@@ -2473,6 +2473,7 @@ const MATH_DATA = {
         `
     },
     external_resources: [
+        { name: "Biology Science Tools", desc: "Interactive calculators for Chi-Square, Stats, and Water Potential", url: "../biology/index.html", icon: "fas fa-flask" },
         { name: "OmegaLearn", desc: "Best AMC 10/12 Free PDF Books", url: "https://www.omegalearn.org/mastering-amc1012", icon: "fas fa-book" },
         { name: "3Blue1Brown", desc: "Intuition Building Animations", url: "https://www.youtube.com/@3blue1brown", icon: "fab fa-youtube" },
         { name: "Paul's Notes", desc: "Legendary Math Cheat Sheets", url: "https://tutorial.math.lamar.edu/", icon: "fas fa-file-pdf" },
