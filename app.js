@@ -1744,20 +1744,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             panel.innerHTML = `
-                <div style="padding:12px; color:white; text-align:center; display:flex; flex-direction:column; height:100%; box-sizing:border-box; background: rgba(0,0,0,0.4);">
-                    <div id="fallback-notice" style="margin-bottom:10px; background:rgba(255,157,0,0.1); padding:10px 15px; border-radius:10px; border:1px solid rgba(255,157,0,0.3); font-size:0.8rem; color:var(--accent-orange); display:flex; align-items:center; gap:12px; justify-content:center; flex-shrink: 0;">
-                        <i class="fas fa-shield-alt" style="font-size:1.1rem;"></i>
-                        <div style="text-align:left; line-height:1.4;">
-                            <strong style="display:block; font-size:0.85rem;">${isLocal ? 'SECURITY LIMITATION (Local File)' : 'SYNC RESTRICTION (Browser Blocked)'}</strong>
-                            <span style="opacity:0.8; font-size:0.75rem;">API initialization failed. Activating <strong>Hybrid <iframe> Mode</strong>...</span>
+                <div style="width:100% !important; height:100% !important; padding:15px !important; display:flex !important; flex-direction:column !important; align-items:stretch !important; box-sizing:border-box !important; background:rgba(0,0,0,0.5) !important;">
+                    <div id="fallback-notice" style="width:100% !important; margin-bottom:12px !important; background:rgba(255,157,0,0.1) !important; padding:12px !important; border-radius:12px !important; border:1px solid rgba(255,157,0,0.3) !important; color:var(--accent-orange) !important; display:flex !important; align-items:center !important; gap:12px !important; flex-shrink:0 !important; box-sizing:border-box !important;">
+                        <i class="fas fa-shield-alt" style="font-size:1.2rem !important; flex-shrink:0 !important;"></i>
+                        <div style="text-align:left !important; line-height:1.4 !important; flex:1 !important;">
+                            <strong style="display:block !important; font-size:0.85rem !important;">${isLocal ? 'SECURITY LIMITATION (Local File)' : 'SYNC RESTRICTION (Browser Blocked)'}</strong>
+                            <span style="opacity:0.8 !important; font-size:0.75rem !important;">API initialization failed. Activating <strong>Hybrid <iframe> Mode</strong>...</span>
                         </div>
                     </div>
-                    <div style="flex:1; width:100%; height:100%; background:white; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); position:relative;">
-                        <iframe src="${iframeUrl}" width="100%" height="100%" style="border:none; position:absolute; top:0; left:0;"></iframe>
-                    </div>
-                    <div style="margin-top:8px; font-size:0.65rem; opacity:0.4; display:flex; justify-content:center; gap:15px; flex-shrink: 0;">
-                        <span><i class="fas fa-info-circle"></i> Mode: Stability Fallback</span>
-                        ${isLocal ? '<span><i class="fas fa-server"></i> Tip: Open index.html via Live Server for Premium mode</span>' : ''}
+                    <div style="flex:1 !important; width:100% !important; background:white !important; border-radius:12px !important; overflow:hidden !important; border:1px solid rgba(255,255,255,0.1) !important; position:relative !important; min-height: 250px !important;">
+                        <iframe src="${iframeUrl}" width="100%" height="100%" style="border:none !important; width:100% !important; height:100% !important; position:absolute !important; top:0 !important; left:0 !important;"></iframe>
                     </div>
                 </div>
             `;
