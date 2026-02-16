@@ -82,6 +82,14 @@ window.CHAPTER_DATA["ch14"] = {
                         <li><strong>Pattern Matching:</strong> Look for $a^2 - b^2$ or $1 - \\sin^2 \\theta$ to substitute identities.</li>
                     </ol>
                 </div>
+
+                <!-- VIDEO CURATION: MASTER CLASS -->
+                <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-cyan); padding: 25px;">
+                    <h5 style="color: var(--accent-cyan); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Verifying Trig Identities</h5>
+                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(6,182,212,0.2);">
+                        <iframe src="https://www.youtube.com/embed/T656E_n4S6E" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         `
     },
@@ -99,6 +107,14 @@ window.CHAPTER_DATA["ch14"] = {
                     <p>$\\sin(2\\theta) = 2 \\sin \\theta \\cos \\theta$</p>
                     <p>$\\cos(2\\theta) = \\cos^2 \\theta - \\sin^2 \\theta$</p>
                 </div>
+
+                <!-- VIDEO CURATION: MASTER CLASS -->
+                <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-magenta); padding: 25px;">
+                    <h5 style="color: var(--accent-magenta); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Double Angle Formulas</h5>
+                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(236,72,153,0.2);">
+                        <iframe src="https://www.youtube.com/embed/9BvY_h_3c80" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         `
     },
@@ -114,6 +130,14 @@ window.CHAPTER_DATA["ch14"] = {
                     <h4>The Periodicity Factor</h4>
                     <p>If $\\sin x = 1/2$, the primary solutions are $x = \\pi/6$ and $x = 5\\pi/6$.</p>
                     <p style="margin-top:10px;">The <strong>General Solution</strong> adds the "loop" factor: $x = \\pi/6 + 2n\\pi$ and $5\\pi/6 + 2n\\pi$ (where $n$ is any integer).</p>
+                </div>
+
+                <!-- VIDEO CURATION: MASTER CLASS -->
+                <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-green); padding: 25px;">
+                    <h5 style="color: var(--accent-green); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Solving Trigonometric Equations</h5>
+                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(16,185,129,0.2);">
+                        <iframe src="https://www.youtube.com/embed/RkIeyp1qI48" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         `
@@ -172,6 +196,14 @@ window.CHAPTER_DATA["ch14"] = {
                             By measuring angles from two known positions ($A, B$) to a single landmark, <br>
                             the <strong>Law of Sines</strong> calculates the exact range to that object.
                         </p>
+                    </div>
+                </div>
+
+                <!-- VIDEO CURATION: MASTER CLASS -->
+                <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-blue); padding: 25px;">
+                    <h5 style="color: var(--accent-blue); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: The Laws of Sines & Cosines</h5>
+                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(59,130,246,0.2);">
+                        <iframe src="https://www.youtube.com/embed/f_rXGf7O1E4" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

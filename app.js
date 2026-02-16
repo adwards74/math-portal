@@ -1634,17 +1634,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // window.toggleLessonTool is now defined earlier to use UIEngine
 
     // --- Neo 3.0: Desmos Scripting Integration ---
-    window.plotSolution = (equation) => {
-        const iframe = document.querySelector('#lesson-tool-panel iframe');
-        if (iframe) {
-            const panel = document.getElementById('lesson-tool-panel');
-            panel.style.display = 'block';
-            // Note: Directly injecting scripts into cross-origin iframe is not possible
-            // But if we use Desmos API correctly or postMessage (if we owned it).
-            // For now, we simulate the "Instruction" by opening the panel.
-            window.typeTerminalMessage(`EXECUTING PLOT: ${equation}. Check the calculator panel.`);
-        } else {
-            window.open(`https://www.desmos.com/calculator?q=${encodeURIComponent(equation)}`, '_blank');
+    window.plotSolution = async (equationString) => {
+        const equations = equationString.split(';').map(e => e.trim());
+
+        try {
+            // Ensure Desmos Lab is initialized
+            await window.initDesmosLab();
+
+            // Wait a small bit for the calculator instance to be ready if needed
+            // In initDesmosLab, we should store the calculator instance globally
+            if (window.desmosCalculator) {
+                window.desmosCalculator.setBlank();
+                equations.forEach((eq, index) => {
+                    // Try to detect if it's a point (x,y)
+                    if (eq.startsWith('(') && eq.endsWith(')')) {
+                        window.desmosCalculator.setExpression({ id: `item${index}`, latex: eq, pointStyle: 'POINT', showLabel: true });
+                    } else {
+                        window.desmosCalculator.setExpression({ id: `item${index}`, latex: eq });
+                    }
+                });
+                window.typeTerminalMessage(`VISUALIZING SOLUTION: ${equations.join(' | ')}`);
+            }
+        } catch (err) {
+            console.error("Desmos Plot Failure:", err);
+            window.open(`https://www.desmos.com/calculator?q=${encodeURIComponent(equationString)}`, '_blank');
         }
     };
 
@@ -1653,7 +1666,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const panel = document.getElementById('lesson-tool-panel');
         if (!panel) return;
 
-        panel.style.display = 'block';
+        if (window.desmosCalculator) {
+            panel.style.display = 'block';
+            return window.desmosCalculator;
+        }
         panel.innerHTML = `
             <div id="desmos-loading" style="display:flex; align-items:center; justify-content:center; height:100%; color:var(--accent-cyan); flex-direction:column; padding: 20px; text-align: center;">
                 <i class="fas fa-spinner fa-spin" style="font-size:2.5rem; margin-bottom:15px;"></i>
@@ -1699,8 +1715,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 expressions: true,
                 settingsMenu: false,
                 zoomButtons: true,
-                expressionsTopbar: false,
-                capExpressionSize: true
+                border: false
             });
 
             if (config.expressions) {
@@ -1714,6 +1729,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             window.typeTerminalMessage("INTERACTIVE LAB ACTIVE: Mathematical visualization engine synchronized.");
+            window.desmosCalculator = calculator;
+            return calculator;
         } catch (e) {
             console.error("Desmos Load Error:", e);
             const isTimeout = e.message.includes("Timeout");
