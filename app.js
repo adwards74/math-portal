@@ -723,7 +723,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         <div class="lesson-actions" style="display:flex; gap:12px; align-items: center;">
                             ${javaButtonHtml}
-                            <button class="glass tool-btn" onclick="window.toggleLessonTool('graph')" title="Desmos Grapher" style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); border-radius: 12px;">
+                            <button class="glass tool-btn" onclick="window.toggleLessonTool('desmos')" title="Desmos Grapher" style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); border-radius: 12px;">
                                 <i class="fas fa-chart-area"></i>
                             </button>
                             <button class="glass tool-btn" onclick="window.toggleLessonTool('sci')" title="Scientific Calc" style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; color: var(--accent-purple); border-radius: 12px;">
@@ -1638,8 +1638,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const equations = equationString.split(';').map(e => e.trim());
 
         try {
-            // Ensure Desmos Lab is initialized
-            await window.initDesmosLab();
+            // Ensure Desmos Lab is initialized with the current equations
+            await window.initDesmosLab({ expressions: equations });
 
             // Wait a small bit for the calculator instance to be ready if needed
             // In initDesmosLab, we should store the calculator instance globally
