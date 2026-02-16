@@ -1733,29 +1733,30 @@ document.addEventListener('DOMContentLoaded', () => {
             window.typeTerminalMessage("INTERACTIVE LAB ACTIVE: Mathematical visualization engine synchronized.");
             window.desmosCalculator = calculator;
             return calculator;
-        } catch (e) {
-            console.error("Desmos Load Error:", e);
-            const isTimeout = e.message.includes("Timeout");
             panel.innerHTML = `
                 <div style="padding:40px; color:var(--accent-red); text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%;">
                     <i class="fas fa-bolt" style="font-size:3rem; margin-bottom:20px; color:var(--accent-orange); filter: drop-shadow(0 0 10px rgba(255,157,0,0.5));"></i>
                     <h3 style="margin-bottom:10px; letter-spacing:1px;">ENGINE SYNCHRONIZATION FAILED</h3>
                     <p style="font-size:0.9rem; opacity:0.8; max-width:400px; margin-bottom:25px;">
                         ${isTimeout ?
-                    "The Desmos API could not be reached. Local files likely blocked. Use a local server or disable ad-blockers." :
+                    "The Desmos API could not be reached. Local files (file://) often block scripts. Use a local server or disable ad-blockers." :
                     `Internal Error: ${e.message}`
                 }
                     </p>
-                    <div style="display:flex; gap:15px;">
-                        <button class="glass" onclick="location.reload()" style="padding:10px 25px; cursor:pointer; color:var(--text-primary); border-radius:10px;">
+                    <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+                        <button class="glass" onclick="location.reload()" style="padding:10px 20px; cursor:pointer; color:var(--text-primary); border-radius:10px;">
                             <i class="fas fa-redo"></i> Retry
                         </button>
-                        <button class="glass" onclick="window.open('https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer', '_blank')" style="padding:10px 25px; cursor:pointer; color:var(--accent-cyan); border-radius:10px;">
+                        <button class="glass" onclick="window.open('https://www.desmos.com/calculator', '_blank')" style="padding:10px 20px; cursor:pointer; color:var(--accent-green); border-radius:10px;">
+                            <i class="fas fa-external-link-alt"></i> Use External Desmos
+                        </button>
+                        <button class="glass" onclick="window.open('https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer', '_blank')" style="padding:10px 20px; cursor:pointer; color:var(--accent-cyan); border-radius:10px;">
                             <i class="fas fa-server"></i> Get Live Server
                         </button>
                     </div>
                 </div>
             `;
+            throw e; // Throw so calling functions can fallback
         }
     };
 
