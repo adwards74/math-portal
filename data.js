@@ -1,4 +1,4 @@
-const MATH_DATA = {
+window.MATH_DATA = {
     subjects: [
         {
             id: "foundation",

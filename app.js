@@ -620,8 +620,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Unified Detail Switcher
     window.showSubjectDetail = (subjectId, unitIdx = null) => {
         window.currentSubjectId = subjectId;
+        // Navigation first
         if (window.AppRouter) window.AppRouter.switchView('dashboard');
-        if (window.UIEngine) window.UIEngine.showSubjectDetail(subjectId);
+        else if (window.switchView) window.switchView('dashboard');
+
+        // Then render via engine
+        if (window.UIEngine && window.UIEngine.showSubjectDetail) {
+            window.UIEngine.showSubjectDetail(subjectId);
+        }
 
         // If a unit is specified, we could scroll to it here if needed
         if (unitIdx !== null) {
