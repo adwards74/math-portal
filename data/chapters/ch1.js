@@ -13,8 +13,8 @@ window.CHAPTER_DATA["ch1"] = {
                 <!-- VIDEO CURATION: MASTER CLASS -->
                 <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-blue); padding: 25px;">
                     <h5 style="color: var(--accent-blue); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: The Laws of Real Numbers</h5>
-                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(6,182,212,0.2);">
-                        <iframe src="https://www.youtube.com/embed/5V5n_7X8D1o" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(6,182,212,0.2);">
+                        <iframe src="https://www.youtube.com/embed/5V5n_7X8D1o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                     </div>
                 </div>
 
@@ -26,7 +26,7 @@ window.CHAPTER_DATA["ch1"] = {
                 </div>
 
                 <h2>I. The Foundation of Reality</h2>
-                <p>Algebra isn't just about $x$; it's about the **Axioms**?봳he immutable laws that govern how numbers interact. In formal mathematics, we don't assume anything is true unless it's an axiom or proven from one.</p>
+                <p>Algebra isn't just about $x$; it's about the **Axioms**? he immutable laws that govern how numbers interact. In formal mathematics, we don't assume anything is true unless it's an axiom or proven from one.</p>
                 
                 <div class="paradigm-shift">
                     <h4>The Axiom Table</h4>
@@ -68,7 +68,7 @@ window.CHAPTER_DATA["ch1"] = {
             <div class="lesson-section">
                 <div class="intuition-box glass">
                     <h3><i class="fas fa-microscope"></i> The Resolution of Numbers</h3>
-                    <p>Standard mathematics uses <strong>Real Numbers</strong>, which are like high-definition video?봧nfinitely smooth. Computer science uses <strong>Binary</strong>, which is like pixelated video. Understanding how we 'simplify' reality into numbers is the goal of this section.</p>
+                    <p>Standard mathematics uses <strong>Real Numbers</strong>, which are like high-definition video? nfinitely smooth. Computer science uses <strong>Binary</strong>, which is like pixelated video. Understanding how we 'simplify' reality into numbers is the goal of this section.</p>
                 </div>
 
                 <h2>I. The Hierarchy of Numbers</h2>
@@ -320,7 +320,7 @@ window.CHAPTER_DATA["ch1"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. Synthesis: The Code of Math</h2>
-                <p>You have mastered the basic syntax of the universe. In the next chapter, we move into linear dynamics?봦ow variables change together.</p>
+                <p>You have mastered the basic syntax of the universe. In the next chapter, we move into linear dynamics? ow variables change together.</p>
                 
                 <div class="summary-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px;">
                     <div class="glass-card" style="padding:15px;">

@@ -44,7 +44,7 @@ window.CHAPTER_DATA["ch10"] = {
                 
                 <div class="proof-box glass">
                     <h4>The Conversion Algorithm</h4>
-                    <p>To find the center and radius, we must <strong>Complete the Square</strong> twice?봮nce for $x$ and once for $y$. This is the same logic used in Chapter 5, but scaled for 2D space.</p>
+                    <p>To find the center and radius, we must <strong>Complete the Square</strong> twice? nce for $x$ and once for $y$. This is the same logic used in Chapter 5, but scaled for 2D space.</p>
                 </div>
             </div>
         `

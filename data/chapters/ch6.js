@@ -85,7 +85,7 @@ window.CHAPTER_DATA["ch6"] = {
             <div class="lesson-section">
                 <div class="intuition-box glass">
                     <h3><i class="fas fa-yin-yang"></i> The Conjugate Balance</h3>
-                    <p>Complex roots always come in pairs?봪ike matter and anti-matter. If $2 + 3i$ exists, $2 - 3i$ must also exist to ensure the polynomial's 'Real' structure remains stable. This is the **Law of Symmetry** in Algebra.</p>
+                    <p>Complex roots always come in pairs? ike matter and anti-matter. If $2 + 3i$ exists, $2 - 3i$ must also exist to ensure the polynomial's 'Real' structure remains stable. This is the **Law of Symmetry** in Algebra.</p>
                 </div>
 
                 <h2>I. Symmetry of the Solution Space</h2>
@@ -107,7 +107,7 @@ window.CHAPTER_DATA["ch6"] = {
                 
                 <div class="tj-edge glass" style="border-left-color: var(--accent-green);">
                     <h4><i class="fas fa-search"></i> Pruned Search Space</h4>
-                    <p>Instead of testing an infinite set of numbers, you only test $\\\\pm \\\\text{factors of constant} / \\\\text{factors of leading coeff}$. In AI, this is **Branch Pruning**?봢liminating billions of impossible paths to find the single correct leaf node quickly.</p>
+                    <p>Instead of testing an infinite set of numbers, you only test $\\\\pm \\\\text{factors of constant} / \\\\text{factors of leading coeff}$. In AI, this is **Branch Pruning**? liminating billions of impossible paths to find the single correct leaf node quickly.</p>
                 </div>
             </div>
         `

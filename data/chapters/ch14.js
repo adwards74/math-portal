@@ -13,8 +13,8 @@ window.CHAPTER_DATA["ch14"] = {
                 <!-- VIDEO CURATION: MASTER CLASS -->
                 <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-orange); padding: 25px;">
                     <h5 style="color: var(--accent-orange); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Trig Identities Intuition</h5>
-                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,157,0,0.2);">
-                        <iframe src="https://www.youtube.com/embed/9vKqVkMQHKk" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,157,0,0.2);">
+                        <iframe src="https://www.youtube.com/embed/9vKqVkMQHKk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                     </div>
                     <p style="font-size: 0.8rem; margin-top: 15px; text-align: center; opacity: 0.7;">3Blue1Brown explores why these identities are fundamental to the "Essence" of mathematics.</p>
                 </div>
@@ -86,8 +86,8 @@ window.CHAPTER_DATA["ch14"] = {
                 <!-- VIDEO CURATION: MASTER CLASS -->
                 <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-cyan); padding: 25px;">
                     <h5 style="color: var(--accent-cyan); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Verifying Trig Identities</h5>
-                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(6,182,212,0.2);">
-                        <iframe src="https://www.youtube.com/embed/T656E_n4S6E" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(6,182,212,0.2);">
+                        <iframe src="https://www.youtube.com/embed/T656E_n4S6E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                     </div>
                 </div>
             </div>
@@ -111,8 +111,8 @@ window.CHAPTER_DATA["ch14"] = {
                 <!-- VIDEO CURATION: MASTER CLASS -->
                 <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-magenta); padding: 25px;">
                     <h5 style="color: var(--accent-magenta); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Double Angle Formulas</h5>
-                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(236,72,153,0.2);">
-                        <iframe src="https://www.youtube.com/embed/9BvY_h_3c80" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(236,72,153,0.2);">
+                        <iframe src="https://www.youtube.com/embed/9BvY_h_3c80" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                     </div>
                 </div>
             </div>
@@ -135,8 +135,8 @@ window.CHAPTER_DATA["ch14"] = {
                 <!-- VIDEO CURATION: MASTER CLASS -->
                 <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-green); padding: 25px;">
                     <h5 style="color: var(--accent-green); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Solving Trigonometric Equations</h5>
-                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(16,185,129,0.2);">
-                        <iframe src="https://www.youtube.com/embed/RkIeyp1qI48" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(16,185,129,0.2);">
+                        <iframe src="https://www.youtube.com/embed/RkIeyp1qI48" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                     </div>
                 </div>
             </div>
@@ -202,8 +202,8 @@ window.CHAPTER_DATA["ch14"] = {
                 <!-- VIDEO CURATION: MASTER CLASS -->
                 <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-blue); padding: 25px;">
                     <h5 style="color: var(--accent-blue); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: The Laws of Sines & Cosines</h5>
-                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(59,130,246,0.2);">
-                        <iframe src="https://www.youtube.com/embed/f_rXGf7O1E4" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(59,130,246,0.2);">
+                        <iframe src="https://www.youtube.com/embed/f_rXGf7O1E4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                     </div>
                 </div>
             </div>

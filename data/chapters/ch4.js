@@ -120,7 +120,7 @@ for (int i = 0; i &lt; n; i++) {
                 <div class="proof-box glass">
                     <h4>The Shortcut (2x2)</h4>
                     <p>$$ \\text{If } A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}, \\text{ then } A^{-1} = \\frac{1}{ad-bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix} $$</p>
-                    <p style="margin-top:10px;">If $\\det A = 0$, you cannot divide by zero?봦ence, No Inverse exists.</p>
+                    <p style="margin-top:10px;">If $\\det A = 0$, you cannot divide by zero? ence, No Inverse exists.</p>
                 </div>
             </div>
         `

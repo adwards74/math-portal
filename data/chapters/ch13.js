@@ -188,7 +188,7 @@ window.CHAPTER_DATA["ch13"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Big Picture: Harmonic Mastery</h2>
-                <p>You have moved from static triangles to dynamic waves. Trigonometry is the math of energy?봪ight, sound, electricity, and even the vibration of atoms.</p>
+                <p>You have moved from static triangles to dynamic waves. Trigonometry is the math of energy? ight, sound, electricity, and even the vibration of atoms.</p>
                 
                 <div class="summary-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px;">
                     <div class="glass-card" style="padding:15px;">

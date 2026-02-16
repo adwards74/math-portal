@@ -25,7 +25,7 @@ window.CHAPTER_DATA["ch8"] = {
 
             <div class="tj-edge glass" style="margin-top:20px;">
                 <h4><i class="fas fa-biohazard"></i> $O(2^n)$ vs $O(n^2)$</h4>
-                <p>Exponential scale is deceptive. If you double a penny every day for 30 days, you end up with over $5 million. This "Explosion of Complexity" explains why certain encryption algorithms are unbreakable?봳he time required to crack them grows exponentially with the key length.</p>
+                <p>Exponential scale is deceptive. If you double a penny every day for 30 days, you end up with over $5 million. This "Explosion of Complexity" explains why certain encryption algorithms are unbreakable? he time required to crack them grows exponentially with the key length.</p>
             </div>
         `
     },
@@ -148,7 +148,7 @@ window.CHAPTER_DATA["ch8"] = {
                 
                 <div class="intuition-box glass">
                     <h3><i class="fas fa-ban"></i> The Negative Void</h3>
-                    <p>Logs are asymmetrically guarded. You can grow to infinity, but you can never reach zero or become negative. It is an **Algebraic Firewall**?봳rying to log a negative number is like asking 'At what time was I before I existed?'.</p>
+                    <p>Logs are asymmetrically guarded. You can grow to infinity, but you can never reach zero or become negative. It is an **Algebraic Firewall**? rying to log a negative number is like asking 'At what time was I before I existed?'.</p>
                 </div>
 
                 <div class="mastery-protocol glass">

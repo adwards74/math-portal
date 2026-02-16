@@ -14,8 +14,8 @@ window.CHAPTER_DATA["calc"] = {
                 <!-- VIDEO CURATION: MASTER CLASS -->
                 <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-cyan); padding: 25px;">
                     <h5 style="color: var(--accent-cyan); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: The Essence of Calculus</h5>
-                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(0,210,255,0.2);">
-                        <iframe src="https://www.youtube.com/embed/9vKqVkMQHKk" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(0,210,255,0.2);">
+                        <iframe src="https://www.youtube.com/embed/9vKqVkMQHKk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                     </div>
                 </div>
 
@@ -46,7 +46,7 @@ window.CHAPTER_DATA["calc"] = {
                 <h2>I. The Paradox of the Instant</h2>
                 <p>Calculus was born from a crisis in logic: How do you measure the slope of a curve at a <em>single point</em>? A point has no width ($\\Delta x = 0$), and a slope requires two points.</p>
                 <div class="glass-card elite-border" style="padding: 20px;">
-                    <p><strong>The "Leibniz" Perspective:</strong> We imagine $dx$ and $dy$ as "infinitesimals"?봭umbers so small they are practically zero but not quite. This allowed them to calculate $dy/dx$ without the universe collapsing.</p>
+                    <p><strong>The "Leibniz" Perspective:</strong> We imagine $dx$ and $dy$ as "infinitesimals"-umbers so small they are practically zero but not quite. This allowed them to calculate $dy/dx$ without the universe collapsing.</p>
                 </div>
                 <div class="tj-edge glass">
                     <h4><i class="fas fa-microchip"></i> CS Connection: Precision Bottlenecks</h4>
@@ -670,8 +670,8 @@ window.CHAPTER_DATA["calc"] = {
                 <p>Regular functions $y=f(x)$ fail if they loop. Parametric equations $x(t), y(t)$ allow us to model ANY path.</p>
                 \\[\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt}\\]
                 <div class="tj-edge glass">
-                    <h4><i class="fas fa-bezier-curve"></i> Computer Graphics: B챕zier Curves</h4>
-                    <p>Typography and vector art (SVG) use parametric equations called B챕zier Curves. Adjusting the "control points" changes the $t$ parameter flow to create smooth, scalable fonts.</p>
+                    <h4><i class="fas fa-bezier-curve"></i> Computer Graphics: B zier Curves</h4>
+                    <p>Typography and vector art (SVG) use parametric equations called B zier Curves. Adjusting the "control points" changes the $t$ parameter flow to create smooth, scalable fonts.</p>
                 </div>
             </div>
         `
@@ -887,7 +887,7 @@ window.CHAPTER_DATA["calc"] = {
         content: `
             <div class="intuition-box glass">
                 <h3><i class="fas fa-bolt" style="color:#ff5e62"></i> 2025 Hard Mode</h3>
-                <p>Expect 2025 to increase rigor in <strong>Differential Equation Justification</strong>?봲pecifically Slope Fields with Euler's Method error analysis.</p>
+                <p>Expect 2025 to increase rigor in <strong>Differential Equation Justification</strong>-pecifically Slope Fields with Euler's Method error analysis.</p>
             </div>
             <h3>Mock FRQ: Euler vs. Reality</h3>
             <p><strong>Problem:</strong> If $dy/dx = x+y$ and $y(0)=1$, use Euler's method with $\\Delta x = 0.5$ to estimate $y(1)$. Is it an over/under estimate?</p>

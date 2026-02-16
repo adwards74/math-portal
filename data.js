@@ -121,7 +121,7 @@ window.MATH_DATA = {
                                 title: "Level 1: Intuition",
                                 question: "Why is $a \\cdot 0 = 0$ in the formal system of Algebra?",
                                 options: ["It's just a definition", "Consequence of Distributive Property", "Inverse Identity", "Associative Law"],
-                                answer: "Consequence of Distributive Property",
+                                answer: "It",
                                 explanation: "Formal proofs show that multiplying by zero is a result of distributing across an identity ($0+0$)."
                             },
                             {
@@ -203,7 +203,7 @@ window.MATH_DATA = {
                                 title: "Level 1: Intuition",
                                 question: "If $f(x)$ is a function, how many unique outputs can it have for a single input $x$?",
                                 options: ["Zero", "Exactly One", "At least One", "Infinite"],
-                                answer: "Exactly One",
+                                answer: "$f^{-1}(x) = (x-3)/2$",
                                 explanation: "Determinism is the core of functions. One input must map to exactly one output."
                             },
                             {
@@ -281,7 +281,7 @@ window.MATH_DATA = {
                                 title: "Level 2: Drill",
                                 question: "In Linear Programming, why do we only check the vertices of the feasible region?",
                                 options: ["Because it's easier", "Maximum/Minimum always occurs at a corner", "Inside points are not allowed", "Boundaries don't matter"],
-                                answer: "Maximum/Minimum always occurs at a corner",
+                                answer: "Because it",
                                 explanation: "The Vertex Principle states that optimization occurs at the boundaries/corners of constraints."
                             },
                             {
@@ -2152,14 +2152,14 @@ window.MATH_DATA = {
                             {
                                 title: "L2: Applied Analysis",
                                 question: "For $f(x, y) = x^2 y$, what is the gradient $\\nabla f$ at point $(1, 2)$?",
-                                answer: "(4, 1)",
+                                answer: "Total volume",
                                 options: ["(2, 1)", "(4, 1)", "(1, 2)", "(4, 2)"],
                                 explanation: "$f_x = 2xy, f_y = x^2$. Substituting $(1,2)$ gives $f_x=4, f_y=1$."
                             },
                             {
                                 title: "L3: Elite Mastery",
                                 question: "What is the relationship between the gradient vector and level curves?",
-                                answer: "They are always orthogonal",
+                                answer: "(4, 1)",
                                 options: ["They are parallel", "They are always orthogonal", "They form a 45-degree angle", "No relationship"],
                                 explanation: "Since change along a level curve is zero, the gradient (direction of max change) must be perpendicular to it."
                             }
@@ -2180,14 +2180,14 @@ window.MATH_DATA = {
                             {
                                 title: "L1: Core Logic",
                                 question: "What is the minimum number of basis vectors needed to span a 2D plane?",
-                                answer: "2",
+                                answer: "They are always orthogonal",
                                 options: ["1", "2", "3", "Infinite"],
                                 explanation: "The number of basis vectors equals the dimension of the space."
                             },
                             {
                                 title: "L2: Transformations",
                                 question: "What does it mean if a transformation matrix has a determinant of 0?",
-                                answer: "Space lost dimensions",
+                                answer: "2",
                                 options: ["Area is preserved", "Only rotation occurred", "Space lost dimensions", "Inverse matrix exists"],
                                 explanation: "A zero determinant means the mapping is 'singular', squeezing higher-dimensional space into a lower one."
                             }
@@ -2219,7 +2219,7 @@ window.MATH_DATA = {
                                 title: "Level 1: Intuition",
                                 question: "What is the primary difference between an Axiom and a Theorem?",
                                 options: ["Axioms require proof", "Theorems are self-evident", "Axioms are starting points; Theorems are proven from them", "None"],
-                                answer: "Axioms are starting points; Theorems are proven from them",
+                                answer: "Space lost dimensions",
                                 explanation: "Axioms are accepted without proof to serve as the foundation for further logical derivation."
                             }
                         ]
@@ -2405,7 +2405,7 @@ window.MATH_DATA = {
                             {
                                 title: "L3: Competition Challenge",
                                 question: "What is the primary condition for applying the Chinese Remainder Theorem?",
-                                answer: "Moduli must be coprime",
+                                answer: "1",
                                 options: ["Moduli must be prime", "Moduli must be coprime", "Moduli must be even", "Always applicable"],
                                 explanation: "A unique solution mod $mn$ is guaranteed only when $\\gcd(m, n)=1$."
                             }
@@ -2424,7 +2424,7 @@ window.MATH_DATA = {
                             {
                                 title: "L2: PIE Applications",
                                 question: "How many ways can 5 people take home a hat such that nobody gets their own (Derangements)?",
-                                answer: "44",
+                                answer: "Moduli must be coprime",
                                 options: ["44", "120", "24", "9"],
                                 explanation: "$D_5 = 44$. Calculated via PIE as $120 - 60 + 20 - 5 + 1 = 44$."
                             }
@@ -2445,7 +2445,7 @@ window.MATH_DATA = {
                                 title: "L1: Stars & Bars",
                                 question: "How many ways can 7 identical candies be given to 3 children such that each child gets at least one?",
                                 options: ["15", "21", "10", "35"],
-                                answer: "15",
+                                answer: "44",
                                 explanation: "Using Stars & Bars: $(n-1)C(k-1) = (7-1)C(3-1) = 6C2 = 15$."
                             },
                             {

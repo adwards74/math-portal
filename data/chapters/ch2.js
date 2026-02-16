@@ -175,7 +175,7 @@ window.CHAPTER_DATA["ch2"] = {
                 
                 <div class="glass-card" style="border-left: 4px solid var(--accent-magenta);">
                     <p><strong>Example: Step Functions</strong></p>
-                    <p>Often used in shipping costs where the price jumps at specific weight thresholds. There is no 'smooth transition'?봳he output is discrete.</p>
+                    <p>Often used in shipping costs where the price jumps at specific weight thresholds. There is no 'smooth transition'? he output is discrete.</p>
                 </div>
             </div>
         `

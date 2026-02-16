@@ -23,7 +23,7 @@ window.CHAPTER_DATA["ch12"] = {
 
             <div class="tj-edge glass" style="margin-top:20px;">
                 <h4><i class="fas fa-key"></i> CS: Password Entropy</h4>
-                <p>The security of an encryption key is measured in **Bits of Entropy**. If a password has $n$ possible characters and a length of $k$, it has $n^k$ permutations. Every extra character exponentially scales the difficulty of a brute-force attack?봳his is combinatorial security.</p>
+                <p>The security of an encryption key is measured in **Bits of Entropy**. If a password has $n$ possible characters and a length of $k$, it has $n^k$ permutations. Every extra character exponentially scales the difficulty of a brute-force attack? his is combinatorial security.</p>
             </div>
         `
     },

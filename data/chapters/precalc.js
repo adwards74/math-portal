@@ -272,7 +272,7 @@ window.CHAPTER_DATA["precalc"] = {
         content: `
             <div class="intuition-box glass">
                 <h3><i class="fas fa-redo"></i> Radian Logic</h3>
-                <p>A radian is the angle where the arc length equals the radius. It is a "pure" number, unlike degrees. This is why we use it in Calculus?봳o keep our units "natural."</p>
+                <p>A radian is the angle where the arc length equals the radius. It is a "pure" number, unlike degrees. This is why we use it in Calculus? o keep our units "natural."</p>
             </div>
 
             <div class="visual-dynamics glass" style="margin:20px 0; padding:20px; text-align:center; background:radial-gradient(circle, rgba(0,210,255,0.1), rgba(0,0,0,0.5));">
@@ -348,7 +348,7 @@ window.CHAPTER_DATA["precalc"] = {
             <h3>1. The Pythagorean Trinity</h3>
             <p>The identity $\\sin^2\\theta + \\cos^2\\theta = 1$ is just the Pythagorean theorem applied to the unit circle. From this, we derive the identities for $\\sec, \\tan, \\csc, \\text{ and } \\cot$.</p>
             <h3>2. Sum & Difference Formulas</h3>
-            <p>These allow us to calculate exact values like $\\sin(15^\\circ)$ by breaking them into $(45^\\circ - 30^\\circ)$. These formulas are the "bit-shifting" equivalent of trig?봫anipulating components for precise results.</p>
+            <p>These allow us to calculate exact values like $\\sin(15^\\circ)$ by breaking them into $(45^\\circ - 30^\\circ)$. These formulas are the "bit-shifting" equivalent of trig? anipulating components for precise results.</p>
             <div class="math-block">
                 $$ \\cos(A \\pm B) = \\cos A \\cos B \\mp \\sin A \\sin B $$
             </div>

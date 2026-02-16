@@ -10,7 +10,14 @@ window.CHAPTER_DATA['stats_res'] = {
             <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-emerald); padding: 25px;">
                 <h5 style="color: var(--accent-emerald); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: The Logic of Hypothesis Testing</h5>
                 <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(0,255,150,0.2);">
-                    <iframe src="https://www.youtube.com/embed/j_H8iE9n3rU" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    <div class="glass-card link-card" onclick="window.open('https://youtu.be/j_H8iE9n3rU', '_blank')">
+    <div class="link-card-icon"><i class="fab fa-youtube"></i></div>
+    <div class="link-card-content">
+        <h4>Watch Verification Video</h4>
+        <p>High-Fidelity Playback</p>
+    </div>
+    <div class="link-card-arrow"><i class="fas fa-external-link-alt"></i></div>
+</div>
                 </div>
             </div>
 
