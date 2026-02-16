@@ -1735,7 +1735,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return calculator;
         } catch (e) {
             console.error("Desmos Load Error:", e);
-            const isTimeout = e.message.includes("Timeout");
             const isLocal = window.location.protocol === 'file:';
 
             // Build expressions for iframe URL if available
@@ -1745,19 +1744,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             panel.innerHTML = `
-                <div style="padding:20px; color:var(--accent-red); text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%;">
-                    <div id="fallback-notice" style="margin-bottom:15px; background:rgba(255,157,0,0.1); padding:10px; border-radius:8px; border:1px solid rgba(255,157,0,0.3); font-size:0.8rem; color:var(--accent-orange);">
-                        <i class="fas fa-shield-alt"></i> Security Restriction: API Blocked by Browser (file:// detected).<br>
-                        <strong>Switching to <iframe> Hybrid Mode...</strong>
+                <div style="padding:12px; color:white; text-align:center; display:flex; flex-direction:column; height:100%; box-sizing:border-box; background: rgba(0,0,0,0.4);">
+                    <div id="fallback-notice" style="margin-bottom:10px; background:rgba(255,157,0,0.1); padding:10px 15px; border-radius:10px; border:1px solid rgba(255,157,0,0.3); font-size:0.8rem; color:var(--accent-orange); display:flex; align-items:center; gap:12px; justify-content:center; flex-shrink: 0;">
+                        <i class="fas fa-shield-alt" style="font-size:1.1rem;"></i>
+                        <div style="text-align:left; line-height:1.4;">
+                            <strong style="display:block; font-size:0.85rem;">${isLocal ? 'SECURITY LIMITATION (Local File)' : 'SYNC RESTRICTION (Browser Blocked)'}</strong>
+                            <span style="opacity:0.8; font-size:0.75rem;">API initialization failed. Activating <strong>Hybrid <iframe> Mode</strong>...</span>
+                        </div>
                     </div>
-                    <iframe src="${iframeUrl}" width="100%" height="100%" style="border:none; border-radius:10px; flex:1; background: white;"></iframe>
-                    <div style="display:flex; gap:10px; margin-top:10px; font-size:0.75rem;">
-                        <span style="opacity:0.6;"><i class="fas fa-info-circle"></i> Tip: Right-click index.html -> "Open with Live Server" for premium mode.</span>
+                    <div style="flex:1; width:100%; height:100%; background:white; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); position:relative;">
+                        <iframe src="${iframeUrl}" width="100%" height="100%" style="border:none; position:absolute; top:0; left:0;"></iframe>
+                    </div>
+                    <div style="margin-top:8px; font-size:0.65rem; opacity:0.4; display:flex; justify-content:center; gap:15px; flex-shrink: 0;">
+                        <span><i class="fas fa-info-circle"></i> Mode: Stability Fallback</span>
+                        ${isLocal ? '<span><i class="fas fa-server"></i> Tip: Open index.html via Live Server for Premium mode</span>' : ''}
                     </div>
                 </div>
             `;
-            // Do not throw for plotSolution internal calls to prevent page-level redirection 
-            // if we managed to show the iframe fallback
             return null;
         }
     };
