@@ -10,6 +10,14 @@ window.CHAPTER_DATA["ch11"] = {
                     <p>A sequence is the **Memory of Math**. Recursion tells you how the current state depends on the past, while the explicit formula lets you predict any future point instantly. It is the foundation of loops and iterative logic.</p>
                 </div>
 
+                <!-- VIDEO CURATION: MASTER CLASS -->
+                <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-magenta); padding: 25px;">
+                    <h5 style="color: var(--accent-magenta); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: The Fibonacci Mystery</h5>
+                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,0,255,0.2);">
+                        <iframe src="https://www.youtube.com/embed/ahXIMUkSXX0" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    </div>
+                </div>
+
                 <h2>I. Recursive vs. Explicit Logic</h2>
                 <p>A **Recursive** definition expresses a term based on its predecessors. An **Explicit** formula allows you to jump directly to any step $n$.</p>
                 
@@ -34,6 +42,43 @@ window.CHAPTER_DATA["ch11"] = {
                 <h2>I. The Arithmetic Series Sum</h2>
                 <p>When summing an arithmetic sequence, we use the legend of young Gauss.</p>
                 
+                <div class="visual-dynamic glass" style="margin: 30px 0; padding: 25px; background: rgba(0,0,0,0.2);">
+                    <h5 style="color: var(--accent-magenta); margin-bottom: 20px; text-align: center;"><i class="fas fa-project-diagram"></i> Visual Intuition: Gauss Pairing</h5>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                        <svg width="320" height="100" viewBox="0 0 320 100">
+                            <!-- Pairs -->
+                            <path d="M 20 50 Q 160 -10 300 50" stroke="var(--accent-magenta)" fill="none" stroke-width="2" stroke-dasharray="4" style="opacity: 0.6;"/>
+                            <path d="M 60 50 Q 160 10 260 50" stroke="var(--accent-magenta)" fill="none" stroke-width="2" stroke-dasharray="4" style="opacity: 0.4;"/>
+                            <path d="M 100 50 Q 160 30 220 50" stroke="var(--accent-magenta)" fill="none" stroke-width="2" stroke-dasharray="4" style="opacity: 0.2;"/>
+                            
+                            <!-- Numbers -->
+                            <circle cx="20" cy="50" r="15" fill="rgba(255,0,255,0.1)" stroke="var(--accent-magenta)"/>
+                            <text x="20" y="55" text-anchor="middle" fill="white" font-size="12" font-weight="bold">1</text>
+                            
+                            <circle cx="60" cy="50" r="15" fill="rgba(255,0,255,0.05)" stroke="var(--accent-magenta)"/>
+                            <text x="60" y="55" text-anchor="middle" fill="white" font-size="12">2</text>
+                            
+                            <circle cx="100" cy="50" r="15" fill="rgba(255,0,255,0.02)" stroke="var(--accent-magenta)"/>
+                            <text x="100" y="55" text-anchor="middle" fill="white" font-size="12">3</text>
+                            
+                            <text x="160" y="55" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">...</text>
+                            
+                            <circle cx="220" cy="50" r="15" fill="rgba(255,0,255,0.02)" stroke="var(--accent-magenta)"/>
+                            <text x="220" y="55" text-anchor="middle" fill="white" font-size="12">n-2</text>
+                            
+                            <circle cx="260" cy="50" r="15" fill="rgba(255,0,255,0.05)" stroke="var(--accent-magenta)"/>
+                            <text x="260" y="55" text-anchor="middle" fill="white" font-size="12">n-1</text>
+                            
+                            <circle cx="300" cy="50" r="15" fill="rgba(255,0,255,0.1)" stroke="var(--accent-magenta)"/>
+                            <text x="300" y="55" text-anchor="middle" fill="white" font-size="12" font-weight="bold">n</text>
+                        </svg>
+                        <p style="font-size: 0.85rem; opacity: 0.8; text-align: center; color: var(--accent-magenta);">
+                            Every pair $(a_1 + a_n)$ sums to the same constant value. <br>
+                            There are exactly $n/2$ such pairs.
+                        </p>
+                    </div>
+                </div>
+
                 <div class="proof-box glass">
                     \\[S_n = \\frac{n(a_1 + a_n)}{2}\\]
                     <p style="margin-top:10px;">By pairing the first and last terms, then second and second-to-last, we find that every pair sums to the same value. Summing becomes simple multiplication.</p>
@@ -52,6 +97,14 @@ window.CHAPTER_DATA["ch11"] = {
                 <div class="proof-box glass">
                     \\[S_n = \\frac{a_1(1 - r^n)}{1 - r}\\]
                     <p style="margin-top:10px;">Unlike arithmetic sums, geometric sums depend on the power of the ratio. As $n$ increases, $r^n$ either vanishes (convergence) or explodes (divergence). This formula captures the total state of that growth.</p>
+                </div>
+
+                <!-- VIDEO CURATION: MASTER CLASS -->
+                <div class="visual-dynamic glass" style="margin-top: 30px; border-top: 1px solid var(--accent-blue); padding: 25px;">
+                    <h5 style="color: var(--accent-blue); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Geometric Series Intuition</h5>
+                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(6,182,212,0.2);">
+                        <iframe src="https://www.youtube.com/embed/D_v_qYf8n1Y" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         `

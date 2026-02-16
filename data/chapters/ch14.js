@@ -10,9 +10,47 @@ window.CHAPTER_DATA["ch14"] = {
                     <p>Identities are the **Logical Equivalent** of things. They allow you to swap a complex, expensive calculation for a simple, efficient one without changing the outcome. It is the ultimate optimization tool in geometry.</p>
                 </div>
 
+                <!-- VIDEO CURATION: MASTER CLASS -->
+                <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-orange); padding: 25px;">
+                    <h5 style="color: var(--accent-orange); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Trig Identities Intuition</h5>
+                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,157,0,0.2);">
+                        <iframe src="https://www.youtube.com/embed/9vKqVkMQHKk" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    </div>
+                    <p style="font-size: 0.8rem; margin-top: 15px; text-align: center; opacity: 0.7;">3Blue1Brown explores why these identities are fundamental to the "Essence" of mathematics.</p>
+                </div>
+
                 <h2>I. The Pythagorean Engine</h2>
                 <p>The unit circle identity $x^2 + y^2 = 1$ is the parent of all trigonometric identities. By dividing through, we generate the entire family of relations.</p>
                 
+                <div class="visual-dynamic glass" style="margin: 30px 0; padding: 25px; background: rgba(0,0,0,0.2);">
+                    <h5 style="color: var(--accent-orange); margin-bottom: 20px; text-align: center;"><i class="fas fa-bullseye"></i> Visual Intuition: The Unit Circle Kernel</h5>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                        <svg width="240" height="240" viewBox="0 0 240 240">
+                            <!-- Axes -->
+                            <line x1="20" y1="120" x2="220" y2="120" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+                            <line x1="120" y1="20" x2="120" y2="220" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+                            
+                            <!-- Circle -->
+                            <circle cx="120" cy="120" r="80" fill="none" stroke="rgba(255,157,0,0.2)" stroke-width="2" />
+                            
+                            <!-- Triangle -->
+                            <path d="M 120 120 L 180 120 L 180 67 Z" fill="rgba(255,157,0,0.1)" stroke="var(--accent-orange)" stroke-width="2" />
+                            
+                            <!-- Radius line to edge -->
+                            <line x1="120" y1="120" x2="180" y2="67" stroke="var(--accent-orange)" stroke-width="3" />
+                            
+                            <!-- Labels -->
+                            <text x="150" y="135" fill="var(--accent-orange)" font-size="10" font-weight="bold">cos θ</text>
+                            <text x="185" y="100" fill="var(--accent-cyan)" font-size="10" font-weight="bold">sin θ</text>
+                            <text x="140" y="90" fill="white" font-size="10" transform="rotate(-41 120 120)">r = 1</text>
+                        </svg>
+                        <p style="font-size: 0.85rem; opacity: 0.8; text-align: center;">
+                            On a circle with $r=1$, the coordinates are $(\cos \theta, \sin \theta)$.<br>
+                            Pythagoras gives us: $\mathbf{\cos^2 \theta + \sin^2 \theta = 1}$
+                        </p>
+                    </div>
+                </div>
+
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-orange);">
                     <ul class="glass-list">
                         <li><strong>Primary:</strong> $\\sin^2 \\theta + \\cos^2 \\theta = 1$</li>
@@ -103,6 +141,39 @@ window.CHAPTER_DATA["ch14"] = {
             <div class="tj-edge glass" style="margin-top:20px; border-left-color: var(--accent-cyan);">
                 <h4><i class="fas fa-satellite"></i> CS: SLAM Algorithm</h4>
                 <p>Robots use **Simultaneous Localization and Mapping (SLAM)** to navigate. By measuring the angle to a landmark from two different positions, they use the Law of Sines to calculate their exact distance to that object. Without this trig, automated vacuums and self-driving cars would be blind.</p>
+                
+                <div class="visual-dynamic glass" style="margin: 30px 0; padding: 25px; background: rgba(0,0,0,0.2);">
+                    <h5 style="color: var(--accent-cyan); margin-bottom: 20px; text-align: center;"><i class="fas fa-satellite"></i> Visual Intuition: SLAM Triangulation</h5>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                        <svg width="320" height="140" viewBox="0 0 320 140">
+                            <!-- Robot path -->
+                            <line x1="40" y1="110" x2="280" y2="110" stroke="rgba(255,255,255,0.1)" stroke-dasharray="4" />
+                            
+                            <!-- Landmark -->
+                            <polygon points="160,20 170,40 150,40" fill="var(--accent-magenta)" opacity="0.8" />
+                            <circle cx="160" cy="30" r="15" fill="none" stroke="var(--accent-magenta)" stroke-dasharray="2" opacity="0.3" />
+                            <text x="160" y="55" text-anchor="middle" fill="var(--accent-magenta)" font-size="10">Landmark</text>
+                            
+                            <!-- Triangle at Pos 1 -->
+                            <circle cx="60" cy="110" r="5" fill="var(--accent-cyan)" />
+                            <line x1="60" y1="110" x2="160" y2="35" stroke="var(--accent-cyan)" stroke-width="1.5" stroke-dasharray="3" />
+                            <text x="60" y="125" text-anchor="middle" fill="var(--accent-cyan)" font-size="9">Pos A</text>
+                            
+                            <!-- Triangle at Pos 2 -->
+                            <circle cx="200" cy="110" r="5" fill="var(--accent-blue)" />
+                            <line x1="200" y1="110" x2="160" y2="35" stroke="var(--accent-blue)" stroke-width="1.5" stroke-dasharray="3" />
+                            <text x="200" y="125" text-anchor="middle" fill="var(--accent-blue)" font-size="9">Pos B</text>
+                            
+                            <!-- Known Baseline -->
+                            <line x1="60" y1="110" x2="200" y2="110" stroke="var(--accent-cyan)" stroke-width="2" />
+                            <text x="130" y="125" text-anchor="middle" fill="white" font-size="9">Known Baseline (d)</text>
+                        </svg>
+                        <p style="font-size: 0.85rem; opacity: 0.8; text-align: center;">
+                            By measuring angles from two known positions ($A, B$) to a single landmark, <br>
+                            the <strong>Law of Sines</strong> calculates the exact range to that object.
+                        </p>
+                    </div>
+                </div>
             </div>
         `
     },

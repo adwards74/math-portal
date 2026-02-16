@@ -10,6 +10,14 @@ window.CHAPTER_DATA["ch1"] = {
                     <p>Axioms are like the Constitution. They aren't "facts" we discovered; they are the <strong>agreed-upon rules</strong> that make the entire system of logic possible.</p>
                 </div>
 
+                <!-- VIDEO CURATION: MASTER CLASS -->
+                <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-blue); padding: 25px;">
+                    <h5 style="color: var(--accent-blue); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: The Laws of Real Numbers</h5>
+                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(6,182,212,0.2);">
+                        <iframe src="https://www.youtube.com/embed/5V5n_7X8D1o" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                    </div>
+                </div>
+
                 <neo-graph type="sine"></neo-graph>
 
                 <div class="glass-card" style="margin: 20px 0; border-left: 4px solid var(--accent-blue);">
@@ -246,6 +254,39 @@ window.CHAPTER_DATA["ch1"] = {
             <div class="lesson-section">
                 <h2>I. Distance from Zero</h2>
                 <p>The absolute value of a number $|x|$ is its distance from zero on the number line. Because distance is always non-negative, the output of an absolute value is always $\\ge 0$.</p>
+
+                <div class="visual-dynamic glass" style="margin: 30px 0; padding: 25px; background: rgba(0,0,0,0.2);">
+                    <h5 style="color: var(--accent-cyan); margin-bottom: 20px; text-align: center;"><i class="fas fa-arrows-alt-h"></i> Visual Intuition: Distance on the Line</h5>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                        <svg width="320" height="80" viewBox="0 0 320 80">
+                            <!-- Number Line -->
+                            <line x1="20" y1="50" x2="300" y2="50" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+                            <line x1="160" y1="40" x2="160" y2="60" stroke="#fff" stroke-width="2" /> <!-- Zero -->
+                            <text x="160" y="75" text-anchor="middle" fill="#fff" font-size="12">0</text>
+                            
+                            <!-- Positive side -->
+                            <path d="M 160 50 L 260 50" stroke="var(--accent-cyan)" stroke-width="4" stroke-linecap="round" />
+                            <circle cx="260" cy="50" r="6" fill="var(--accent-cyan)" />
+                            <text x="260" y="75" text-anchor="middle" fill="var(--accent-cyan)" font-size="12">5</text>
+                            
+                            <!-- Negative side -->
+                            <path d="M 160 50 L 60 50" stroke="var(--accent-magenta)" stroke-width="4" stroke-linecap="round" />
+                            <circle cx="60" cy="50" r="6" fill="var(--accent-magenta)" />
+                            <text x="60" y="75" text-anchor="middle" fill="var(--accent-magenta)" font-size="12">-5</text>
+                            
+                            <!-- Measurement arcs -->
+                            <path d="M 160 35 Q 210 15 260 35" stroke="var(--accent-cyan)" fill="none" stroke-width="1.5" stroke-dasharray="3" />
+                            <text x="210" y="25" text-anchor="middle" fill="var(--accent-cyan)" font-size="10">dist = 5</text>
+                            
+                            <path d="M 160 35 Q 110 15 60 35" stroke="var(--accent-magenta)" fill="none" stroke-width="1.5" stroke-dasharray="3" />
+                            <text x="110" y="25" text-anchor="middle" fill="var(--accent-magenta)" font-size="10">dist = 5</text>
+                        </svg>
+                        <p style="font-size: 0.85rem; opacity: 0.8; text-align: center;">
+                            $|5| = 5$ &nbsp; and &nbsp; $|-5| = 5$ <br>
+                            Both have the <strong>same magnitude</strong> (distance from origin).
+                        </p>
+                    </div>
+                </div>
                 
                 <div class="glass-card elite-border">
                     <h4>Solving $|ax + b| = c$</h4>

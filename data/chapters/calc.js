@@ -11,17 +11,36 @@ window.CHAPTER_DATA["calc"] = {
                     <p>A curve looks like a straight line if you zoom in enough. Calculus is the mathematical "microscope" that calculates the slope of that line at an infinitely small scale.</p>
                 </div>
 
-                <div class="visual-dynamics glass" style="margin:20px 0; padding:20px; text-align:center; background:linear-gradient(45deg, rgba(110,69,226,0.1), rgba(0,210,255,0.1));">
-                    <h4><i class="fas fa-search-plus"></i> Visualizing the Secant-to-Tangent Transition</h4>
-                    <div style="position:relative; width:200px; height:100px; border-bottom:2px solid #fff; border-left:2px solid #fff; margin:0 auto;">
-                        <svg width="200" height="100">
-                            <path d="M 0 100 Q 100 80 200 0" stroke="var(--accent-cyan)" fill="transparent" stroke-width="2"/>
-                            <line x1="50" y1="90" x2="150" y2="40" stroke="rgba(255,255,255,0.3)" stroke-dasharray="4"/>
-                            <circle cx="100" cy="80" r="4" fill="var(--accent-magenta)"/>
-                            <line x1="50" y1="95" x2="150" y2="65" stroke="var(--accent-magenta)" stroke-width="2"/>
-                        </svg>
+                <!-- VIDEO CURATION: MASTER CLASS -->
+                <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-cyan); padding: 25px;">
+                    <h5 style="color: var(--accent-cyan); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: The Essence of Calculus</h5>
+                    <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(0,210,255,0.2);">
+                        <iframe src="https://www.youtube.com/embed/9vKqVkMQHKk" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
                     </div>
-                    <p style="font-size:0.8rem; margin-top:10px;">As the distance between points $\\to 0$, the dashed Secant line becomes the solid Tangent line.</p>
+                </div>
+
+                <div class="visual-dynamics glass" style="margin:20px 0; padding:20px; text-align:center; background:linear-gradient(45deg, rgba(0,210,255,0.05), rgba(255,0,255,0.05)); border: 1px solid rgba(0,210,255,0.2);">
+                    <h4><i class="fas fa-search-plus"></i> Visual Intuition: The Zoom Microscope</h4>
+                    <div style="display: flex; justify-content: center; gap: 40px; align-items: center; margin: 20px 0;">
+                        <!-- Normal View -->
+                        <div style="text-align: center;">
+                            <svg width="100" height="100" viewBox="0 0 100 100" style="background: rgba(0,0,0,0.3); border-radius: 8px;">
+                                <path d="M 10 90 Q 50 85 90 10" stroke="var(--accent-cyan)" fill="none" stroke-width="2" />
+                                <circle cx="50" cy="65" r="4" fill="var(--accent-magenta)" />
+                            </svg>
+                            <p style="font-size: 0.7rem; margin-top: 5px; opacity: 0.6;">Curved Aspect</p>
+                        </div>
+                        <i class="fas fa-arrow-right" style="opacity: 0.3;"></i>
+                        <!-- Zoomed View -->
+                        <div style="text-align: center;">
+                            <svg width="100" height="100" viewBox="0 0 100 100" style="background: rgba(0,0,0,0.3); border-radius: 50%; border: 2px solid var(--accent-magenta); box-shadow: 0 0 15px rgba(255,0,255,0.3);">
+                                <line x1="10" y1="90" x2="90" y2="10" stroke="var(--accent-cyan)" stroke-width="4" />
+                                <circle cx="50" cy="50" r="5" fill="var(--accent-magenta)" />
+                            </svg>
+                            <p style="font-size: 0.7rem; margin-top: 5px; color: var(--accent-magenta); font-weight: bold;">Locally Linear</p>
+                        </div>
+                    </div>
+                    <p style="font-size:0.85rem; opacity:0.8;">At an <strong>infinitesimal scale</strong>, any smooth curve is indistinguishable from its tangent line. This is the superpower of Differentiation.</p>
                 </div>
 
                 <h2>I. The Paradox of the Instant</h2>

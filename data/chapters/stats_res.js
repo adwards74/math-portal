@@ -5,9 +5,45 @@ window.CHAPTER_DATA['stats_res'] = {
         subtitle: "The Foundation of Scientific Skepticism",
         content: `
             <p>In research, we never "prove" a theory. Instead, we fail to disprove it. This is the core of the <strong>Null Hypothesis ($H_0$)</strong>.</p>
+            
+            <!-- VIDEO CURATION: MASTER CLASS -->
+            <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-emerald); padding: 25px;">
+                <h5 style="color: var(--accent-emerald); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: The Logic of Hypothesis Testing</h5>
+                <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(0,255,150,0.2);">
+                    <iframe src="https://www.youtube.com/embed/j_H8iE9n3rU" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+                </div>
+            </div>
+
             <div class="intuition-box glass">
                 <h4><i class="fas fa-brain"></i> The Courtroom Analogy</h4>
                 <p>The Null Hypothesis is like the "Presumption of Innocence". We assume there is no effect (the defendant is innocent) until the evidence (data) is so overwhelming that it would be unreasonable to maintain that assumption.</p>
+            </div>
+
+            <div class="visual-dynamic glass" style="margin: 30px 0; padding: 25px; background: rgba(0,0,0,0.2);">
+                <h5 style="color: var(--accent-emerald); margin-bottom: 20px; text-align: center;"><i class="fas fa-chart-area"></i> Visual Intuition: The Rejection Region</h5>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                    <svg width="320" height="120" viewBox="0 0 320 120">
+                        <!-- Null Curve -->
+                        <path d="M 20 110 Q 110 0 200 110" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+                        <text x="110" y="105" text-anchor="middle" fill="white" font-size="10" opacity="0.4">Null ($H_0$)</text>
+                        
+                        <!-- Alternative Curve -->
+                        <path d="M 120 110 Q 210 0 300 110" fill="rgba(0,255,150,0.1)" stroke="var(--accent-emerald)" stroke-width="2" />
+                        <text x="210" y="105" text-anchor="middle" fill="var(--accent-emerald)" font-size="10">Alt ($H_a$)</text>
+                        
+                        <!-- Decision Line -->
+                        <line x1="170" y1="20" x2="170" y2="110" stroke="#fff" stroke-width="1.5" stroke-dasharray="4" />
+                        <text x="175" y="30" fill="#fff" font-size="9">Critical Threshold (α)</text>
+                        
+                        <!-- Label -->
+                        <path d="M 170 110 L 200 110 L 200 80 Z" fill="rgba(255,0,0,0.3)" />
+                        <text x="195" y="118" text-anchor="middle" fill="var(--accent-red)" font-size="9" font-weight="bold">REJECTION ZONE</text>
+                    </svg>
+                    <p style="font-size: 0.85rem; opacity: 0.8; text-align: center;">
+                        If the <strong>test statistic</strong> falls far enough into the tail of $H_0$, <br>
+                        we reject the Null and move into the Alternative logic space.
+                    </p>
+                </div>
             </div>
             <h3>1. The Setup</h3>
             <ul>
@@ -72,6 +108,33 @@ window.CHAPTER_DATA['stats_res'] = {
 
                 <div class="math-block">
                     $$\\chi^2 = \\sum \\frac{(O - E)^2}{E}$$
+                </div>
+
+                <div class="visual-dynamic glass" style="margin: 30px 0; padding: 25px; background: rgba(0,0,0,0.2);">
+                    <h5 style="color: var(--accent-orange); margin-bottom: 20px; text-align: center;"><i class="fas fa-ruler-horizontal"></i> Visual Intuition: Reality vs. Model</h5>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                        <svg width="320" height="100" viewBox="0 0 320 100">
+                            <!-- Baseline -->
+                            <line x1="20" y1="70" x2="300" y2="70" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+                            
+                            <!-- Expected Bars -->
+                            <rect x="60" y="40" width="30" height="30" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.3)" />
+                            <text x="75" y="85" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9">Expected</text>
+                            
+                            <!-- Observed Bars -->
+                            <rect x="65" y="20" width="20" height="50" fill="rgba(255,140,0,0.2)" stroke="var(--accent-orange)" stroke-width="2" />
+                            <text x="75" y="15" text-anchor="middle" fill="var(--accent-orange)" font-size="9" font-weight="bold">Observed</text>
+                            
+                            <!-- Mismatch Indicator -->
+                            <path d="M 120 70 L 150 70" stroke="var(--accent-magenta)" stroke-width="4" stroke-linecap="round" />
+                            <circle cx="150" cy="70" r="4" fill="var(--accent-magenta)" />
+                            <text x="135" y="85" text-anchor="middle" fill="var(--accent-magenta)" font-size="9">Chi-Sq Distance</text>
+                        </svg>
+                        <p style="font-size: 0.85rem; opacity: 0.8; text-align: center;">
+                            The higher the <strong>mismatch</strong> between the Expected model and observed Reality, <br>
+                            the larger the $\chi^2$ value becomes.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="mastery-protocol glass">
