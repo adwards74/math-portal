@@ -1736,30 +1736,29 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (e) {
             console.error("Desmos Load Error:", e);
             const isTimeout = e.message.includes("Timeout");
+            const isLocal = window.location.protocol === 'file:';
+
+            // Build expressions for iframe URL if available
+            let iframeUrl = "https://www.desmos.com/calculator?lang=en";
+            if (config && config.expressions && config.expressions.length > 0) {
+                iframeUrl += `&q=${encodeURIComponent(config.expressions.join(';'))}`;
+            }
+
             panel.innerHTML = `
-                <div style="padding:40px; color:var(--accent-red); text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%;">
-                    <i class="fas fa-bolt" style="font-size:3rem; margin-bottom:20px; color:var(--accent-orange); filter: drop-shadow(0 0 10px rgba(255,157,0,0.5));"></i>
-                    <h3 style="margin-bottom:10px; letter-spacing:1px;">ENGINE SYNCHRONIZATION FAILED</h3>
-                    <p style="font-size:0.9rem; opacity:0.8; max-width:400px; margin-bottom:25px;">
-                        ${isTimeout ?
-                    "The Desmos API could not be reached. Local files (file://) often block scripts. Use a local server or disable ad-blockers." :
-                    `Internal Error: ${e.message}`
-                }
-                    </p>
-                    <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
-                        <button class="glass" onclick="location.reload()" style="padding:10px 20px; cursor:pointer; color:var(--text-primary); border-radius:10px;">
-                            <i class="fas fa-redo"></i> Retry
-                        </button>
-                        <button class="glass" onclick="window.open('https://www.desmos.com/calculator', '_blank')" style="padding:10px 20px; cursor:pointer; color:var(--accent-green); border-radius:10px;">
-                            <i class="fas fa-external-link-alt"></i> Use External Desmos
-                        </button>
-                        <button class="glass" onclick="window.open('https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer', '_blank')" style="padding:10px 20px; cursor:pointer; color:var(--accent-cyan); border-radius:10px;">
-                            <i class="fas fa-server"></i> Get Live Server
-                        </button>
+                <div style="padding:20px; color:var(--accent-red); text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%;">
+                    <div id="fallback-notice" style="margin-bottom:15px; background:rgba(255,157,0,0.1); padding:10px; border-radius:8px; border:1px solid rgba(255,157,0,0.3); font-size:0.8rem; color:var(--accent-orange);">
+                        <i class="fas fa-shield-alt"></i> Security Restriction: API Blocked by Browser (file:// detected).<br>
+                        <strong>Switching to <iframe> Hybrid Mode...</strong>
+                    </div>
+                    <iframe src="${iframeUrl}" width="100%" height="100%" style="border:none; border-radius:10px; flex:1; background: white;"></iframe>
+                    <div style="display:flex; gap:10px; margin-top:10px; font-size:0.75rem;">
+                        <span style="opacity:0.6;"><i class="fas fa-info-circle"></i> Tip: Right-click index.html -> "Open with Live Server" for premium mode.</span>
                     </div>
                 </div>
             `;
-            throw e; // Throw so calling functions can fallback
+            // Do not throw for plotSolution internal calls to prevent page-level redirection 
+            // if we managed to show the iframe fallback
+            return null;
         }
     };
 
