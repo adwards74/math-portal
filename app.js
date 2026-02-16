@@ -659,35 +659,47 @@ document.addEventListener('DOMContentLoaded', () => {
     async function showLesson(lessonKey, subjectId) {
         window.currentLessonKey = lessonKey;
         if (typeof lessonStartTime !== 'undefined') lessonStartTime = Date.now();
-        console.log("SHOW LESSON (Engine 4.0):", lessonKey, subjectId);
+        console.log("SHOW LESSON (Engine 6.0):", lessonKey, subjectId);
 
         try {
-            // New Asynchronous Content Loading
             const lessonData = await window.ContentLoader.load(lessonKey);
 
-            // Calculate next lesson for navigation
+            // --- MASTER CLASS: Top-Level Video Injection ---
+            let videoHtml = "";
+            let cleanLessonHtml = lessonData.html;
+            const videoRegex = /<iframe[^>]*src="[^"]*youtube\.com\/embed\/[^"]*"[^>]*><\/iframe>/i;
+            const match = videoRegex.exec(lessonData.html);
+
+            if (match) {
+                const videoIframe = match[0];
+                videoHtml = `
+                    <div class="video-promo-top glass fadeIn" style="margin-bottom:25px; border-radius:15px; overflow:hidden; border:1px solid rgba(255,75,43,0.3); background:rgba(0,0,0,0.5);">
+                        <div style="padding:15px 20px; background:rgba(255,75,43,0.1); border-bottom:1px solid rgba(255,75,43,0.2); display:flex; justify-content:space-between; align-items:center;">
+                            <span style="color:#ff4b2b; font-weight:800; font-size:0.75rem; letter-spacing:1px;"><i class="fab fa-youtube"></i> MASTER CLASS LECTURE</span>
+                            <span style="font-size:0.7rem; opacity:0.6; color:white;">Elite 6.0 Standard</span>
+                        </div>
+                        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                            ${videoIframe.replace(/width="[^"]*"/, 'width="100%"').replace(/height="[^"]*"/, 'height="100%"').replace('<iframe', '<iframe style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"')}
+                        </div>
+                    </div>
+                `;
+                // Remove from main content to avoid duplication
+                cleanLessonHtml = lessonData.html.replace(videoIframe, '<div class="video-extracted-notice" style="padding:10px; font-size:0.75rem; opacity:0.4; font-style:italic; border-top:1px dashed rgba(255,255,255,0.1); text-align:center;">Video lecture moved to top performance sector.</div>');
+            }
+
             const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
             let allLectures = [];
             if (subject) {
                 subject.units.forEach(u => {
                     u.lectures.forEach(l => {
                         if (l.url.startsWith('lesson:')) {
-                            allLectures.push({
-                                key: l.url.split(':').pop(),
-                                title: l.name
-                            });
+                            allLectures.push({ key: l.url.split(':').pop(), title: l.name });
                         }
                     });
                 });
             }
             const currentIdx = allLectures.findIndex(l => l.key === lessonKey);
             const nextLesson = currentIdx !== -1 && currentIdx < allLectures.length - 1 ? allLectures[currentIdx + 1] : null;
-
-            const nextButtonHtml = nextLesson
-                ? `<button class="glass next-btn" onclick="window.finishLesson('${lessonKey}', '${subjectId}'); window.showLesson('${nextLesson.key}', '${subjectId}')" style="padding: 10px 20px; font-weight: 600; color: var(--accent-cyan); display: flex; align-items: center; gap: 8px;">
-                     Next <i class="fas fa-arrow-right"></i>
-                   </button>`
-                : '';
 
             // --- Elite 5.6: Java Logic Integration ---
             let javaKey = null;
@@ -696,9 +708,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 javaKey = Object.keys(window.JAVA_LOGIC_DATA || {}).find(k => {
                     const searchStr = k.replace(/_/g, ' ');
-                    // Check lesson content title or lesson key precisely
-                    return lessonData.title.toLowerCase().includes(searchStr) ||
-                        lessonKey.includes(k);
+                    return lessonData.title.toLowerCase().includes(searchStr) || lessonKey.includes(k);
                 });
             }
 
@@ -708,6 +718,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 </button>
             ` : '';
 
+            const nextButtonHtml = nextLesson
+                ? `<button class="glass next-btn" onclick="window.finishLesson('${lessonKey}', '${subjectId}'); window.showLesson('${nextLesson.key}', '${subjectId}')" style="padding: 10px 20px; font-weight: 600; color: var(--accent-cyan); display: flex; align-items: center; gap: 8px; border-radius: 12px; border: 1px solid rgba(0, 210, 255, 0.3);">
+                     Next <i class="fas fa-arrow-right"></i>
+                   </button>`
+                : '';
+
             const appContainer = document.getElementById('dashboard-view');
             appContainer.innerHTML = `
                 <div class="lesson-view fadeIn">
@@ -715,16 +731,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         <button class="glass back-btn" onclick="window.showSubjectDetail('${subjectId}')" style="padding: 10px 18px; font-weight: 600; font-size: 0.9rem; color: var(--text-primary); display: flex; align-items: center; gap: 10px; border-radius: 12px;">
                             <i class="fas fa-arrow-left"></i> <span>Syllabus</span>
                         </button>
-                        
                         <div class="lesson-title-meta" style="text-align: center;">
                             <span class="lesson-badge" style="background: var(--accent-blue-low); color: var(--accent-blue); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px;">${lessonKey.toUpperCase()}</span>
                             <h2 style="font-size:1.1rem; margin: 5px 0 0 0; color: var(--text-primary);">${lessonData.title}</h2>
                         </div>
-
                         <div class="lesson-actions" style="display:flex; gap:12px; align-items: center;">
                             ${javaButtonHtml}
-                            <button class="glass tool-btn" onclick="window.toggleLessonTool('desmos')" title="Desmos Grapher" style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); border-radius: 12px;">
-                                <i class="fas fa-chart-area"></i>
+                            <button class="glass tool-btn" onclick="window.toggleLessonTool('desmos')" title="Quantum Graph" style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); border-radius: 12px;">
+                                <i class="fas fa-atom"></i>
                             </button>
                             <button class="glass tool-btn" onclick="window.toggleLessonTool('sci')" title="Scientific Calc" style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; color: var(--accent-purple); border-radius: 12px;">
                                 <i class="fas fa-calculator"></i>
@@ -738,16 +752,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </nav>
 
-                    <div id="lesson-tool-panel" class="glass fadeIn" style="display:none; height:450px; margin: 0 25px 20px 25px; border-radius: 15px; overflow: hidden; border: 1px solid var(--accent-blue); background: rgba(5, 7, 10, 0.8);">
-                         <div id="calculator-internal-loading" style="display:flex; align-items:center; justify-content:center; height:100%; color:var(--accent-blue);">
-                            <i class="fas fa-circle-notch fa-spin"></i>
-                        </div>
-                    </div>
+                    <div id="lesson-tool-panel" class="glass fadeIn" style="display:none; height:450px; margin: 0 25px 20px 25px; border-radius: 15px; overflow: hidden; border: 1px solid var(--accent-blue); background: rgba(5, 7, 10, 0.8);"></div>
 
                     <div class="lesson-body-wrapper" style="padding: 0 25px 40px 25px;">
+                        ${videoHtml}
                         <div class="lesson-text-content glass" style="padding: 40px; border-radius: 20px; background: rgba(255,255,255,0.02);">
                             <article class="lesson-content">
-                                ${lessonData.html}
+                                ${cleanLessonHtml}
                             </article>
                         </div>
                         <div id="java-logic-view"></div>
@@ -766,18 +777,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
 
-            // Fix: Scroll the actual content container to top
             document.querySelector('.content-area')?.scrollTo(0, 0);
-
-            // Re-trigger MathJax
-            if (window.MathJax) {
-                MathJax.typesetPromise();
-            }
-
-            // --- Elite 3.0: Interactive Graphics Lab (Desmos) ---
-            if (lessonData.vizConfig) {
-                window.initDesmosLab(lessonData.vizConfig);
-            }
+            if (window.MathJax) MathJax.typesetPromise();
+            if (lessonData.vizConfig) window.initDesmosLab(lessonData.vizConfig);
 
             // --- Legacy Triggers (Keep for compatibility) ---
             if (lessonKey === 'ch3-4') setTimeout(renderLPViz, 500);
@@ -790,7 +792,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (e) {
             console.error("FATAL LESSON ERROR:", e);
-            alert("CRITICAL ERROR:\n" + e.message + "\n\nSee console for details.");
+            alert("CRITICAL ERROR:\n" + e.message);
         }
     }
     window.finishLesson = (key, subId) => {
@@ -1671,29 +1673,24 @@ document.addEventListener('DOMContentLoaded', () => {
             return window.desmosCalculator;
         }
 
-        if (window.desmosFallbackActive) {
+        if (window.desmosFallbackActive && !config.force) {
             panel.style.display = 'block';
             panel.style.position = 'relative';
-            // Use the native Quantum Graph Engine instead of flaky iframe
+            // Use the native Interactive Quantum Graph Engine
             panel.innerHTML = window.UIEngine.renderQuantumGraph({
-                expressions: config.expressions,
-                isTangentProblem: true // In this app context, most visualizations are tangent/calculus related
+                expressions: config.expressions || ['x^2'],
+                isTangentProblem: true
             });
+            if (window.MathJax) window.MathJax.typesetPromise();
             return null;
         }
 
-        panel.style.display = 'block'; // Ensure panel is visible during initialization
+        panel.style.display = 'block';
         panel.innerHTML = `
             <div id="desmos-loading" style="display:flex; align-items:center; justify-content:center; height:100%; color:var(--accent-cyan); flex-direction:column; padding: 20px; text-align: center;">
-                <i class="fas fa-spinner fa-spin" style="font-size:2.5rem; margin-bottom:15px;"></i>
+                <i class="fas fa-circle-notch fa-spin" style="font-size:2.5rem; margin-bottom:15px;"></i>
                 <span style="font-weight:600; letter-spacing:1px;">SYNCHRONIZING VISUALIZATION ENGINE...</span>
                 <span style="font-size:0.7rem; opacity:0.6; margin-top:8px;">DESMOS CLOUD V1.10</span>
-                ${window.location.protocol === 'file:' ? `
-                    <div style="margin-top:15px; font-size:0.75rem; color:var(--accent-orange); border:1px solid rgba(255,157,0,0.2); padding:10px; border-radius:8px; background:rgba(255,157,0,0.05);">
-                        <i class="fas fa-exclamation-triangle"></i> Local File Protocol Detected.<br>
-                        Desmos API may require a local server.
-                    </div>
-                ` : ''}
             </div>
             <div id="desmos-calculator" style="width: 100%; height: 100%; min-height: 400px; display:none;"></div>
         `;
@@ -1715,46 +1712,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             await waitForDesmos();
-            document.getElementById('desmos-loading').style.display = 'none';
+            const loading = document.getElementById('desmos-loading');
+            if (loading) loading.style.display = 'none';
             const elt = document.getElementById('desmos-calculator');
-            elt.style.display = 'block';
-
-            // Ensure dimensions
-            if (elt.offsetWidth === 0) elt.style.width = "100%";
-            if (elt.offsetHeight === 0) elt.style.height = "400px";
-
-            const calculator = Desmos.GraphingCalculator(elt, {
-                keypad: false,
-                expressions: true,
-                settingsMenu: false,
-                zoomButtons: true,
-                border: false
-            });
-
-            if (config && config.expressions) {
-                config.expressions.forEach((exp, idx) => {
-                    calculator.setExpression({ id: `exp${idx}`, latex: exp });
+            if (elt) {
+                elt.style.display = 'block';
+                const calculator = Desmos.GraphingCalculator(elt, {
+                    keypad: false,
+                    expressions: true,
+                    settingsMenu: false,
+                    zoomButtons: true,
+                    border: false
                 });
-            }
 
-            if (config && config.bounds) {
-                calculator.setMathBounds(config.bounds);
+                if (config && config.expressions) {
+                    config.expressions.forEach((exp, idx) => {
+                        calculator.setExpression({ id: `exp${idx}`, latex: exp });
+                    });
+                }
+                window.desmosCalculator = calculator;
+                return calculator;
             }
-
-            window.typeTerminalMessage("INTERACTIVE LAB ACTIVE: Mathematical visualization engine synchronized.");
-            window.desmosCalculator = calculator;
-            return calculator;
         } catch (e) {
             console.error("Desmos Load Error:", e);
             window.desmosFallbackActive = true;
-
-            panel.style.display = 'block';
-            panel.style.position = 'relative';
-            // Trigger Quantum Grapher immediately
             panel.innerHTML = window.UIEngine.renderQuantumGraph({
-                expressions: config.expressions,
+                expressions: config.expressions || ['x^2'],
                 isTangentProblem: true
             });
+            if (window.MathJax) window.MathJax.typesetPromise();
             return null;
         }
     };

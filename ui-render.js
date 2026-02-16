@@ -17,33 +17,45 @@ window.UIEngine = (function () {
         // Difficulty badge helper
         const getDifficultyBadge = (diff) => {
             switch (diff) {
-                case 'basic': return '<span class="difficulty-badge neon-blue">🟢 기초</span>';
-                case 'intermediate': return '<span class="difficulty-badge" style="background:#f9d42322; color:#f9d423; padding:3px 8px; border-radius:8px; font-size:0.7rem; margin-left:8px;">🟡 중급</span>';
-                case 'advanced': return '<span class="difficulty-badge" style="background:#ff416c22; color:#ff416c; padding:3px 8px; border-radius:8px; font-size:0.7rem; margin-left:8px;">🔴 고급</span>';
+                case 'basic': return '<span class="difficulty-badge neon-blue">🟢 Basic</span>';
+                case 'intermediate': return '<span class="difficulty-badge" style="background:#f9d42322; color:#f9d423; padding:3px 8px; border-radius:8px; font-size:0.7rem; margin-left:8px;">🟡 Intermediate</span>';
+                case 'advanced': return '<span class="difficulty-badge" style="background:#ff416c22; color:#ff416c; padding:3px 8px; border-radius:8px; font-size:0.7rem; margin-left:8px;">🔴 Advanced</span>';
                 default: return '';
             }
         };
 
-        container.innerHTML = subjects.map((sub, idx) => {
+        container.innerHTML = (subjects || []).map((sub, idx) => {
+            if (!sub) return '';
             // Calculate actual progress %
             let totalLectures = 0;
             let completedLectures = 0;
-            sub.units.forEach(unit => {
-                unit.lectures.forEach(lecture => {
-                    totalLectures++;
-                    const id = lecture.url.split(':').pop();
-                    if (progress[id] && progress[id].completed) {
-                        completedLectures++;
+            let hasMasterClass = false;
+
+            if (sub.units) {
+                sub.units.forEach(unit => {
+                    if (unit.masterClass) hasMasterClass = true;
+                    if (unit.lectures) {
+                        unit.lectures.forEach(lecture => {
+                            totalLectures++;
+                            const parts = (lecture.url || "").split(':');
+                            const id = parts.length > 0 ? parts.pop() : null;
+                            if (id && progress[id] && progress[id].completed) {
+                                completedLectures++;
+                            }
+                        });
                     }
                 });
-            });
+            }
             const percent = totalLectures > 0 ? Math.round((completedLectures / totalLectures) * 100) : 0;
 
             return `
                 <div class="subject-card glass" style="animation-delay: ${idx * 0.1}s" onclick="window.showSubjectDetail('${sub.id}')">
                     <div class="card-icon" style="background: ${sub.color}20; color: ${sub.color}"><i class="${sub.icon}"></i></div>
                     <div class="card-content">
-                        <span class="code">${sub.code}${getDifficultyBadge(sub.difficulty)}</span>
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                            <span class="code">${sub.code}${getDifficultyBadge(sub.difficulty)}</span>
+                            ${hasMasterClass ? '<span style="font-size:0.6rem; background:rgba(255,0,0,0.15); color:#ff4b2b; padding:2px 6px; border-radius:4px; border:1px solid rgba(255,0,0,0.2); font-weight:bold;"><i class="fab fa-youtube"></i> MASTER</span>' : ''}
+                        </div>
                         <h3>${sub.title}</h3>
                         <p>${sub.description}</p>
                     </div>
@@ -61,7 +73,8 @@ window.UIEngine = (function () {
 
 
     function showSubjectDetail(subjectId) {
-        const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
+        const data = window.MATH_DATA || { subjects: [] };
+        const subject = data.subjects.find(s => s.id === subjectId);
         if (!subject) return;
 
         const main = document.getElementById('dashboard-view');
@@ -93,10 +106,31 @@ window.UIEngine = (function () {
     }
 
     function renderUnitCard(unit, subject, uIdx) {
+        let masterClassHtml = '';
+        if (unit.masterClass) {
+            masterClassHtml = `
+                <div class="master-class-promo glass fadeIn" style="margin-bottom:15px; padding:15px; border-radius:var(--standard-radius); border:1px solid rgba(255,75,43,0.3); background:rgba(255,75,43,0.05); cursor:pointer;" onclick="window.showLessonHandler('${unit.lectures[0].url}', '${subject.id}')">
+                    <div style="display:flex; align-items:center; gap:12px;">
+                        <div style="width:40px; height:40px; background:#ff4b2b; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; box-shadow:0 0 15px rgba(255,75,43,0.4);">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div>
+                            <div style="font-size:0.65rem; color:#ff4b2b; font-weight:bold; text-transform:uppercase; letter-spacing:1px;">Advanced Tutorial</div>
+                            <div style="font-weight:700; color:white; font-size:0.9rem;">Master Class Available</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
         return `
             <div class="unit-card glass" style="padding:30px; border-radius:var(--standard-radius);">
-                <h3 style="margin-bottom:15px; border-left:4px solid ${subject.color}; padding-left:15px;">${unit.title}</h3>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+                    <h3 style="margin:0; border-left:4px solid ${subject.color}; padding-left:15px;">${unit.title}</h3>
+                    ${unit.masterClass ? '<span class="pulse-badge-red" style="font-size:0.65rem; background:rgba(255,75,43,0.1); color:#ff4b2b; padding:4px 10px; border-radius:30px; border:1px solid #ff4b2b44; font-weight:800;">VIDEO</span>' : ''}
+                </div>
                 ${unit.intuition ? `<p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:15px;">${unit.intuition}</p>` : ''}
+                ${masterClassHtml}
                 <div class="lectures" style="display:grid; gap:10px;">
                     ${unit.lectures.map(l => renderLectureLink(l, subject)).join('')}
                 </div>
@@ -365,10 +399,11 @@ window.UIEngine = (function () {
             return;
         }
 
-        // If it's desmos and our advanced engine exists in app.js, use it
-        if (type === 'desmos' && window.initDesmosLab) {
+        // Direct routing to Quantum Engine for any graphing request
+        if (type === 'desmos' || type === 'graph') {
             panel.style.display = 'block';
-            await window.initDesmosLab();
+            panel.innerHTML = renderQuantumGraph({ expressions: ['x^2'] });
+            if (window.MathJax) window.MathJax.typesetPromise();
             return;
         }
 
@@ -394,85 +429,167 @@ window.UIEngine = (function () {
     function renderQuantumGraph(config = {}) {
         const width = config.width || 600;
         const height = config.height || 400;
-        const expressions = config.expressions || ['x*x'];
+        const expressions = config.expressions || [];
         const padding = 40;
 
-        // Coordinate system bounds (default -10 to 10)
-        const minX = -5, maxX = 5;
-        const minY = -2, maxY = 23;
+        // Coordinate system bounds
+        const minX = -10, maxX = 10;
+        const minY = -10, maxY = 10;
 
         const toX = (val) => padding + ((val - minX) / (maxX - minX)) * (width - 2 * padding);
         const toY = (val) => (height - padding) - ((val - minY) / (maxY - minY)) * (height - 2 * padding);
 
-        // Grid lines metadata
-        const gridX = []; for (let i = minX; i <= maxX; i++) gridX.push(i);
-        const gridY = []; for (let i = 0; i <= maxY; i += 5) gridY.push(i);
+        // Safe evaluation function for manual input
+        const evaluate = (expr, x) => {
+            try {
+                // Pre-process expression
+                let safeExpr = expr.toLowerCase();
+                safeExpr = safeExpr.replace(/sin/g, 'Math.sin');
+                safeExpr = safeExpr.replace(/cos/g, 'Math.cos');
+                safeExpr = safeExpr.replace(/tan/g, 'Math.tan');
+                safeExpr = safeExpr.replace(/sqrt/g, 'Math.sqrt');
+                safeExpr = safeExpr.replace(/pow/g, 'Math.pow');
+                safeExpr = safeExpr.replace(/abs/g, 'Math.abs');
+                safeExpr = safeExpr.replace(/log/g, 'Math.log');
+                safeExpr = safeExpr.replace(/exp/g, 'Math.exp');
+                safeExpr = safeExpr.replace(/pi/g, 'Math.PI');
+                safeExpr = safeExpr.replace(/\^/g, '**');
+
+                // Allow simple multiplication like 2x -> 2*x
+                safeExpr = safeExpr.replace(/(\d)(x)/g, '$1*$2');
+
+                const fn = new Function('x', `return ${safeExpr};`);
+                return fn(x);
+            } catch (e) { return NaN; }
+        };
 
         let paths = "";
+        const colors = ['var(--accent-blue)', 'var(--accent-green)', 'var(--accent-orange)', 'var(--accent-magenta)'];
 
-        // Plot Main Function (y = x^2)
-        if (expressions.includes('x*x') || expressions.includes('x^2')) {
-            let d = `M ${toX(minX)} ${toY(minX * minX)}`;
+        expressions.forEach((expr, idx) => {
+            if (!expr) return;
+            const color = colors[idx % colors.length];
+            let d = "";
+            let first = true;
+
             for (let x = minX; x <= maxX; x += 0.1) {
-                d += ` L ${toX(x)} ${toY(x * x)}`;
+                const y = evaluate(expr, x);
+                if (isNaN(y) || !isFinite(y)) {
+                    first = true;
+                    continue;
+                }
+                const screenX = toX(x);
+                const screenY = toY(y);
+
+                if (screenY < -100 || screenY > height + 100) {
+                    first = true;
+                    continue;
+                }
+
+                if (first) {
+                    d += `M ${screenX} ${screenY}`;
+                    first = false;
+                } else {
+                    d += ` L ${screenX} ${screenY}`;
+                }
             }
-            paths += `<path d="${d}" fill="none" stroke="var(--accent-blue)" stroke-width="3" filter="drop-shadow(0 0 5px var(--accent-blue))" />`;
-
-            // Special Tangent Animation State (if applicable)
-            if (config.isTangentProblem) {
-                const px = 2, py = 4; // Point P at (2, 4)
-                const qx = 2.8, qy = qx * qx; // Point Q
-                // Secant line
-                const slope = (qy - py) / (qx - px);
-                const b = py - slope * px;
-                const secantD = `M ${toX(0)} ${toY(b)} L ${toX(4.5)} ${toY(slope * 4.5 + b)}`;
-
-                // Tangent line (at x=2, y'=2x=4)
-                const tSlope = 4;
-                const tb = py - tSlope * px;
-                const tangentD = `M ${toX(0.5)} ${toY(tSlope * 0.5 + tb)} L ${toX(4.5)} ${toY(tSlope * 4.5 + tb)}`;
-
-                paths += `
-                    <path d="${secantD}" fill="none" stroke="var(--accent-orange)" stroke-width="2" stroke-dasharray="5,5" opacity="0.6" />
-                    <path d="${tangentD}" fill="none" stroke="var(--accent-green)" stroke-width="3" filter="drop-shadow(0 0 5px var(--accent-green))" />
-                    <circle cx="${toX(px)}" cy="${toY(py)}" r="6" fill="var(--accent-blue)" />
-                    <circle cx="${toX(qx)}" cy="${toY(qy)}" r="6" fill="var(--accent-orange)">
-                        <animate attributeName="cx" values="${toX(qx)};${toX(px + 0.1)};${toX(qx)}" dur="4s" repeatCount="indefinite" />
-                        <animate attributeName="cy" values="${toY(qy)};${toY((px + 0.1) ** 2)};${toY(qy)}" dur="4s" repeatCount="indefinite" />
-                    </circle>
-                    <text x="${toX(px) + 10}" y="${toY(py) - 10}" fill="white" font-size="12">P(2, 4)</text>
-                    <text x="${toX(qx) + 10}" y="${toY(qy) - 10}" fill="white" font-size="12" opacity="0.8">Q(Approaching P...)</text>
-                `;
+            if (d) {
+                paths += `<path d="${d}" fill="none" stroke="${color}" stroke-width="3" filter="drop-shadow(0 0 5px ${color})" />`;
             }
-        }
+        });
+
+        const currentExpr = expressions[0] || "";
 
         return `
-            <div class="quantum-graph glass" style="width:100%; height:100%; min-height:400px; display:flex; flex-direction:column; background:rgba(5,7,10,0.9); border-radius:15px; overflow:hidden; position:relative;">
-                <div style="padding:15px; background:rgba(0,0,0,0.3); border-bottom:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
-                    <div style="display:flex; align-items:center; gap:10px;">
+            <div class="quantum-graph glass" style="width:100%; height:100%; min-height:450px; display:flex; flex-direction:column; background:rgba(5,7,10,0.98); border-radius:15px; overflow:hidden; position:relative; border:1px solid rgba(0,210,255,0.15);">
+                <!-- Header -->
+                <div style="padding:15px 20px; background:rgba(0,0,0,0.5); border-bottom:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
+                    <div style="display:flex; align-items:center; gap:12px;">
                         <i class="fas fa-atom" style="color:var(--accent-cyan); animation: spin 4s linear infinite;"></i>
-                        <span style="font-weight:700; font-size:0.85rem; letter-spacing:1px; color:var(--accent-cyan);">QUANTUM GRAPH ENGINE 6.0</span>
+                        <span style="font-weight:800; font-size:0.9rem; letter-spacing:2px; color:var(--accent-cyan); text-shadow:0 0 10px rgba(0,210,255,0.3);">QUANTUM GRAPH ENGINE 6.0</span>
                     </div>
-                    <span style="font-size:0.65rem; opacity:0.5; color:white;">MODE: NATIVE SVG STABILITY</span>
                 </div>
-                <div style="flex:1; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; padding:20px;">
-                    <svg width="100%" height="100%" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" style="max-height:100%;">
-                        <!-- Axes & Grid -->
-                        ${gridX.map(x => `<line x1="${toX(x)}" y1="${padding}" x2="${toX(x)}" y2="${height - padding}" stroke="rgba(255,255,255,0.05)" stroke-width="1" />`).join('')}
-                        ${gridY.map(y => `<line x1="${padding}" y1="${toY(y)}" x2="${width - padding}" y2="${toY(y)}" stroke="rgba(255,255,255,0.05)" stroke-width="1" />`).join('')}
-                        <line x1="${toX(0)}" y1="${padding}" x2="${toX(0)}" y2="${height - padding}" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
-                        <line x1="${padding}" y1="${toY(0)}" x2="${width - padding}" y2="${toY(0)}" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+
+                <div style="display:flex; flex:1; overflow:hidden;">
+                    <!-- Expression Sidebar -->
+                    <div style="width:220px; background:rgba(0,0,0,0.3); border-right:1px solid rgba(255,255,255,0.05); padding:15px; display:flex; flex-direction:column; gap:15px;">
+                        <div>
+                            <div style="font-size:0.7rem; color:var(--accent-cyan); font-weight:bold; letter-spacing:1px; margin-bottom:10px;">EXPRESSIONS</div>
+                            <div class="glass" style="padding:12px; border-radius:10px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05);">
+                                <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                                    <div style="width:10px; height:10px; border-radius:50%; background:var(--accent-blue);"></div>
+                                    <span style="font-size:0.75rem; color:#888;">y₁ = f(x)</span>
+                                </div>
+                                <input type="text" id="quantum-input-0" class="glass-input" 
+                                       style="width:100%; background:transparent; border:none; color:white; font-family:'JetBrains Mono', monospace; font-size:0.9rem; outline:none;" 
+                                       placeholder="Enter formula..." value="${currentExpr}"
+                                       onkeyup="if(event.key==='Enter') window.UIEngine.updateQuantumPlot()">
+                            </div>
+                        </div>
                         
-                        <!-- Function Paths -->
-                        ${paths}
-                    </svg>
+                        <div style="margin-top:auto; display:flex; flex-direction:column; gap:10px;">
+                            <button class="glass-btn solve-btn" style="width:100%; padding:12px; background:var(--accent-blue); color:black; font-weight:bold; border-radius:8px; cursor:pointer;" onclick="window.UIEngine.updateQuantumPlot()">
+                                <i class="fas fa-sync-alt"></i> RE-PLOT
+                            </button>
+                            <button class="glass-btn" style="width:100%; padding:10px; background:rgba(255,255,255,0.05); color:#888; font-size:0.75rem; border:1px solid rgba(255,255,255,0.1); border-radius:8px; cursor:pointer; transition:all 0.3s;" 
+                                    onclick="window.UIEngine.switchToDesmos()"
+                                    onmouseover="this.style.color='white'; this.style.borderColor='var(--accent-cyan)'"
+                                    onmouseout="this.style.color='#888'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                                <i class="fas fa-external-link-alt"></i> SWITCH TO DESMOS
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- SVG Canva -->
+                    <div style="flex:1; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; padding:10px; background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);">
+                        <svg width="100%" height="100%" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet">
+                            <!-- Grid -->
+                            ${[-5, 0, 5].map(x => `<line x1="${toX(x)}" y1="${toY(minY)}" x2="${toX(x)}" y2="${toY(maxY)}" stroke="rgba(255,255,255,0.05)" stroke-width="1" />`).join('')}
+                            ${[-5, 0, 5].map(y => `<line x1="${toX(minX)}" y1="${toY(y)}" x2="${toX(maxX)}" y2="${toY(y)}" stroke="rgba(255,255,255,0.05)" stroke-width="1" />`).join('')}
+                            
+                            <!-- Axes -->
+                            <line x1="${toX(minX)}" y1="${toY(0)}" x2="${toX(maxX)}" y2="${toY(0)}" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+                            <line x1="${toX(0)}" y1="${toY(minY)}" x2="${toX(0)}" y2="${toY(maxY)}" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+                            
+                            <!-- Plot -->
+                            ${paths}
+                        </svg>
+                    </div>
                 </div>
-                <div style="padding:15px; background:rgba(0,210,255,0.05); border-top:1px solid rgba(0,210,255,0.1); font-size:0.75rem; color:var(--accent-cyan); text-align:center;">
-                    <i class="fas fa-info-circle"></i> Showing limit behavior: Point <strong>Q</strong> approaching point <strong>P</strong> ($h \\to 0$).
+
+                <div style="padding:10px 20px; background:rgba(0,0,0,0.5); border-top:1px solid rgba(255,255,255,0.1); font-size:0.75rem; color:#888; display:flex; justify-content:space-between;">
+                    <span><i class="fas fa-keyboard"></i> Use ^ for power, sqrt() for roots</span>
+                    <span style="color:var(--accent-cyan); font-weight:bold;">BYPASSING EXTERNAL DEPENDENCIES</span>
                 </div>
             </div>
         `;
     }
+
+    // Expose update helper
+    window.UIEngine = window.UIEngine || {};
+    window.UIEngine.updateQuantumPlot = function () {
+        const input = document.getElementById('quantum-input-0');
+        if (!input) return;
+        const expr = input.value;
+        const panel = document.getElementById('lesson-tool-panel');
+        if (!panel) return;
+        panel.innerHTML = renderQuantumGraph({ expressions: [expr] });
+        if (window.MathJax) window.MathJax.typesetPromise();
+    };
+
+    // --- Elite 6.1: Plan B Engine Switcher ---
+    window.UIEngine.switchToDesmos = () => {
+        const input = document.getElementById('quantum-input-0');
+        const expressions = input ? [input.value] : ['x^2'];
+
+        // Clear old instance and force Desmos
+        window.desmosCalculator = null;
+        window.desmosFallbackActive = false;
+
+        if (window.initDesmosLab) {
+            window.initDesmosLab({ expressions: expressions, force: true });
+        }
+    };
 
     return {
         renderSubjectGrid,
@@ -481,6 +598,8 @@ window.UIEngine = (function () {
         toggleCalculator,
         solveEquation,
         solveQuadratic,
-        renderQuantumGraph
+        renderQuantumGraph,
+        updateQuantumPlot: window.UIEngine.updateQuantumPlot,
+        switchToDesmos: window.UIEngine.switchToDesmos
     };
 })();
