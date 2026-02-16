@@ -391,36 +391,85 @@ window.UIEngine = (function () {
         if (window.MathJax) window.MathJax.typesetPromise();
     }
 
-    function renderDynamicGraph(config = {}) {
-        const width = config.width || 400;
-        const height = config.height || 200;
-        const type = config.type || 'sine';
+    function renderQuantumGraph(config = {}) {
+        const width = config.width || 600;
+        const height = config.height || 400;
+        const expressions = config.expressions || ['x*x'];
+        const padding = 40;
 
-        let pathData = "";
-        if (type === 'sine') {
-            pathData = "M 0 " + (height / 2);
-            for (let x = 0; x <= width; x++) {
-                const y = (height / 2) - Math.sin((x / width) * Math.PI * 4) * (height / 3);
-                pathData += ` L ${x} ${y}`;
+        // Coordinate system bounds (default -10 to 10)
+        const minX = -5, maxX = 5;
+        const minY = -2, maxY = 23;
+
+        const toX = (val) => padding + ((val - minX) / (maxX - minX)) * (width - 2 * padding);
+        const toY = (val) => (height - padding) - ((val - minY) / (maxY - minY)) * (height - 2 * padding);
+
+        // Grid lines metadata
+        const gridX = []; for (let i = minX; i <= maxX; i++) gridX.push(i);
+        const gridY = []; for (let i = 0; i <= maxY; i += 5) gridY.push(i);
+
+        let paths = "";
+
+        // Plot Main Function (y = x^2)
+        if (expressions.includes('x*x') || expressions.includes('x^2')) {
+            let d = `M ${toX(minX)} ${toY(minX * minX)}`;
+            for (let x = minX; x <= maxX; x += 0.1) {
+                d += ` L ${toX(x)} ${toY(x * x)}`;
             }
-        } else if (type === 'parabola') {
-            pathData = "M 0 " + height;
-            for (let x = 0; x <= width; x++) {
-                const normalizedX = (x / width) * 2 - 1;
-                const y = height - (normalizedX * normalizedX) * (height * 0.8);
-                pathData += ` L ${x} ${y}`;
+            paths += `<path d="${d}" fill="none" stroke="var(--accent-blue)" stroke-width="3" filter="drop-shadow(0 0 5px var(--accent-blue))" />`;
+
+            // Special Tangent Animation State (if applicable)
+            if (config.isTangentProblem) {
+                const px = 2, py = 4; // Point P at (2, 4)
+                const qx = 2.8, qy = qx * qx; // Point Q
+                // Secant line
+                const slope = (qy - py) / (qx - px);
+                const b = py - slope * px;
+                const secantD = `M ${toX(0)} ${toY(b)} L ${toX(4.5)} ${toY(slope * 4.5 + b)}`;
+
+                // Tangent line (at x=2, y'=2x=4)
+                const tSlope = 4;
+                const tb = py - tSlope * px;
+                const tangentD = `M ${toX(0.5)} ${toY(tSlope * 0.5 + tb)} L ${toX(4.5)} ${toY(tSlope * 4.5 + tb)}`;
+
+                paths += `
+                    <path d="${secantD}" fill="none" stroke="var(--accent-orange)" stroke-width="2" stroke-dasharray="5,5" opacity="0.6" />
+                    <path d="${tangentD}" fill="none" stroke="var(--accent-green)" stroke-width="3" filter="drop-shadow(0 0 5px var(--accent-green))" />
+                    <circle cx="${toX(px)}" cy="${toY(py)}" r="6" fill="var(--accent-blue)" />
+                    <circle cx="${toX(qx)}" cy="${toY(qy)}" r="6" fill="var(--accent-orange)">
+                        <animate attributeName="cx" values="${toX(qx)};${toX(px + 0.1)};${toX(qx)}" dur="4s" repeatCount="indefinite" />
+                        <animate attributeName="cy" values="${toY(qy)};${toY((px + 0.1) ** 2)};${toY(qy)}" dur="4s" repeatCount="indefinite" />
+                    </circle>
+                    <text x="${toX(px) + 10}" y="${toY(py) - 10}" fill="white" font-size="12">P(2, 4)</text>
+                    <text x="${toX(qx) + 10}" y="${toY(qy) - 10}" fill="white" font-size="12" opacity="0.8">Q(Approaching P...)</text>
+                `;
             }
         }
 
         return `
-            <div class="dynamic-graph-container glass" style="padding:20px; text-align:center; margin:20px 0;">
-                <h5 style="color:var(--accent-blue); margin-bottom:15px;">Visual Dynamics: ${type.toUpperCase()}</h5>
-                <svg width="${width}" height="${height}" style="background:rgba(0,0,0,0.3); border-radius:10px; border:1px solid var(--glass-border);">
-                    <line x1="0" y1="${height / 2}" x2="${width}" y2="${height / 2}" stroke="rgba(255,255,255,0.1)" />
-                    <line x1="${width / 2}" y1="0" x2="${width / 2}" y2="${height}" stroke="rgba(255,255,255,0.1)" />
-                    <path d="${pathData}" fill="none" stroke="var(--accent-blue)" stroke-width="3" />
-                </svg>
-                <p style="font-size:0.8rem; opacity:0.6; margin-top:10px;">Generated via Neo-Graph Engine 5.5</p>
+            <div class="quantum-graph glass" style="width:100%; height:100%; min-height:400px; display:flex; flex-direction:column; background:rgba(5,7,10,0.9); border-radius:15px; overflow:hidden; position:relative;">
+                <div style="padding:15px; background:rgba(0,0,0,0.3); border-bottom:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <i class="fas fa-atom" style="color:var(--accent-cyan); animation: spin 4s linear infinite;"></i>
+                        <span style="font-weight:700; font-size:0.85rem; letter-spacing:1px; color:var(--accent-cyan);">QUANTUM GRAPH ENGINE 6.0</span>
+                    </div>
+                    <span style="font-size:0.65rem; opacity:0.5; color:white;">MODE: NATIVE SVG STABILITY</span>
+                </div>
+                <div style="flex:1; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; padding:20px;">
+                    <svg width="100%" height="100%" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" style="max-height:100%;">
+                        <!-- Axes & Grid -->
+                        ${gridX.map(x => `<line x1="${toX(x)}" y1="${padding}" x2="${toX(x)}" y2="${height - padding}" stroke="rgba(255,255,255,0.05)" stroke-width="1" />`).join('')}
+                        ${gridY.map(y => `<line x1="${padding}" y1="${toY(y)}" x2="${width - padding}" y2="${toY(y)}" stroke="rgba(255,255,255,0.05)" stroke-width="1" />`).join('')}
+                        <line x1="${toX(0)}" y1="${padding}" x2="${toX(0)}" y2="${height - padding}" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+                        <line x1="${padding}" y1="${toY(0)}" x2="${width - padding}" y2="${toY(0)}" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+                        
+                        <!-- Function Paths -->
+                        ${paths}
+                    </svg>
+                </div>
+                <div style="padding:15px; background:rgba(0,210,255,0.05); border-top:1px solid rgba(0,210,255,0.1); font-size:0.75rem; color:var(--accent-cyan); text-align:center;">
+                    <i class="fas fa-info-circle"></i> Showing limit behavior: Point <strong>Q</strong> approaching point <strong>P</strong> ($h \\to 0$).
+                </div>
             </div>
         `;
     }
@@ -432,6 +481,6 @@ window.UIEngine = (function () {
         toggleCalculator,
         solveEquation,
         solveQuadratic,
-        renderDynamicGraph
+        renderQuantumGraph
     };
 })();
