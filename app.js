@@ -1743,17 +1743,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 iframeUrl += `&q=${encodeURIComponent(config.expressions.join(';'))}`;
             }
 
+            panel.style.position = 'relative';
             panel.innerHTML = `
-                <div style="width:100% !important; height:100% !important; padding:15px !important; display:flex !important; flex-direction:column !important; align-items:stretch !important; box-sizing:border-box !important; background:rgba(0,0,0,0.5) !important;">
-                    <div id="fallback-notice" style="width:100% !important; margin-bottom:12px !important; background:rgba(255,157,0,0.1) !important; padding:12px !important; border-radius:12px !important; border:1px solid rgba(255,157,0,0.3) !important; color:var(--accent-orange) !important; display:flex !important; align-items:center !important; gap:12px !important; flex-shrink:0 !important; box-sizing:border-box !important;">
-                        <i class="fas fa-shield-alt" style="font-size:1.2rem !important; flex-shrink:0 !important;"></i>
-                        <div style="text-align:left !important; line-height:1.4 !important; flex:1 !important;">
-                            <strong style="display:block !important; font-size:0.85rem !important;">${isLocal ? 'SECURITY LIMITATION (Local File)' : 'SYNC RESTRICTION (Browser Blocked)'}</strong>
-                            <span style="opacity:0.8 !important; font-size:0.75rem !important;">API initialization failed. Activating <strong>Hybrid <iframe> Mode</strong>...</span>
-                        </div>
-                    </div>
-                    <div style="flex:1 !important; width:100% !important; background:white !important; border-radius:12px !important; overflow:hidden !important; border:1px solid rgba(255,255,255,0.1) !important; position:relative !important; min-height: 250px !important;">
-                        <iframe src="${iframeUrl}" width="100%" height="100%" style="border:none !important; width:100% !important; height:100% !important; position:absolute !important; top:0 !important; left:0 !important;"></iframe>
+                <div style="position:absolute !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important; display:block !important; background:rgba(0,0,0,0.6) !important; z-index:100 !important; box-sizing:border-box !important;">
+                    <iframe src="${iframeUrl}" width="100%" height="100%" style="border:none !important; width:100% !important; height:100% !important; background:white !important; border-radius:inherit !important;"></iframe>
+                    <div id="fallback-notice" style="position:absolute !important; top:15px !important; left:15px !important; background:rgba(0,0,0,0.85) !important; padding:8px 15px !important; border-radius:30px !important; border:1px solid var(--accent-orange) !important; color:var(--accent-orange) !important; font-size:0.75rem !important; display:flex !important; align-items:center !important; gap:8px !important; pointer-events:none !important; box-shadow:0 4px 15px rgba(0,0,0,0.5) !important; z-index:101 !important;">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>${isLocal ? 'LOCAL FALLBACK' : 'HYBRID ENGINE'} ACTIVE</span>
                     </div>
                 </div>
             `;
