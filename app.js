@@ -1733,6 +1733,9 @@ document.addEventListener('DOMContentLoaded', () => {
             window.typeTerminalMessage("INTERACTIVE LAB ACTIVE: Mathematical visualization engine synchronized.");
             window.desmosCalculator = calculator;
             return calculator;
+        } catch (e) {
+            console.error("Desmos Load Error:", e);
+            const isTimeout = e.message.includes("Timeout");
             panel.innerHTML = `
                 <div style="padding:40px; color:var(--accent-red); text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%;">
                     <i class="fas fa-bolt" style="font-size:3rem; margin-bottom:20px; color:var(--accent-orange); filter: drop-shadow(0 0 10px rgba(255,157,0,0.5));"></i>
