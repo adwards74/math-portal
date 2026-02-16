@@ -690,12 +690,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 : '';
 
             // --- Elite 5.6: Java Logic Integration ---
-            const javaKey = Object.keys(window.JAVA_LOGIC_DATA || {}).find(k => {
-                const searchStr = k.replace(/_/g, ' ');
-                return lessonData.title.toLowerCase().includes(searchStr) ||
-                    lessonKey.includes(k) ||
-                    (subject && subject.units.some(u => u.title.toLowerCase().includes(searchStr) || (u.topics && u.topics.some(t => t.toLowerCase().includes(searchStr)))));
-            });
+            let javaKey = null;
+            if (lessonData.javaLogic) {
+                javaKey = lessonData.javaLogic;
+            } else {
+                javaKey = Object.keys(window.JAVA_LOGIC_DATA || {}).find(k => {
+                    const searchStr = k.replace(/_/g, ' ');
+                    // Check lesson content title or lesson key precisely
+                    return lessonData.title.toLowerCase().includes(searchStr) ||
+                        lessonKey.includes(k);
+                });
+            }
 
             const javaButtonHtml = javaKey ? `
                 <button id="java-perspective-btn" class="glass perspective-toggle-btn" onclick="window.toggleJavaPerspective('${javaKey}')" style="background: rgba(255, 157, 0, 0.1); border-color: rgba(255, 157, 0, 0.3); color: var(--accent-orange); border-radius: 12px; padding: 10px 18px; font-weight: 600; display: flex; align-items: center; gap: 8px;">

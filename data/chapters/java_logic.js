@@ -5,19 +5,19 @@ window.JAVA_LOGIC_DATA = {
         logic: `
 public class Photosynthesis {
     public static void main(String[] args) {
-        LightEnergy sunlight = new LightEnergy(680); // nm
-        Water h2o = new Water();
-        CO2 co2 = new CO2();
+        var sunlight = new LightEnergy(680); // nm
+        var h2o = new Water();
+        var co2 = new CO2();
 
         if (sunlight.isPresent() && h2o.isPresent()) {
             // Light-Dependent Reaction
-            ATP energy = sunlight.convert(h2o);
+            var energy = sunlight.convert(h2o);
             System.out.println("Oxygen released as byproduct.");
 
             while (co2.isPresent() && energy.amount > 0) {
                 // Calvin Cycle (Light-Independent)
-                Glucose result = energy.fixCarbon(co2);
-                System.out.println("Glucose synthesized: " + result.mass + "g");
+                var result = energy.fixCarbon(co2);
+                System.out.println("Glucose synthesized: " + result.mass() + "g");
             }
         } else {
             System.out.println("Stomata closed. System in standby.");
@@ -25,7 +25,7 @@ public class Photosynthesis {
     }
 }
         `,
-        explanation: "이 Java 로직은 광합성의 두 단계를 보여줍니다. 명반응(Light-Dependent)은 if 조건문으로, 캘빈 회로(Calvin Cycle)는 에너지와 CO2가 있을 때 반복되는 while 루프로 표현되었습니다."
+        explanation: "This Java logic demonstrates the two stages of photosynthesis. The light-dependent reaction is represented by an if-statement, and the Calvin Cycle is represented by a while-loop that iterates as long as energy and CO2 are available."
     },
 
     "natural_selection": {
@@ -33,12 +33,12 @@ public class Photosynthesis {
         logic: `
 public class EvolutionEngine {
     public void runSelection(List<Organism> population) {
-        for (Organism individual : population) {
-            double fitness = individual.calculateFitness(Environment.CURRENT);
+        for (var individual : population) {
+            var fitness = individual.calculateFitness(Environment.CURRENT);
 
             if (fitness > Environment.SURVIVAL_THRESHOLD) {
                 individual.reproduce(); // Next generation inherits traits
-                System.out.println("Trait " + individual.trait + " persisted.");
+                System.out.println("Trait " + individual.trait() + " persisted.");
             } else {
                 population.remove(individual);
                 System.out.println("Individual removed from gene pool.");
@@ -47,32 +47,91 @@ public class EvolutionEngine {
     }
 }
         `,
-        explanation: "자연선택은 집단(List)을 순회하는 for 루프로 표현됩니다. 적합도(Fitness)가 임계값을 넘는 객체만이 reproduction() 메서드를 호출하여 다음 세대로 유전자를 전달합니다."
+        explanation: "Natural selection is represented by a for-loop iterating through the population list. Only individuals with fitness scores exceeding the threshold call the reproduce() method to pass their genes to the next generation."
     },
 
     // Mathematics Concepts
-    "quadratic_formula": {
-        title: "Quadratic Formula: Implementation",
+    "axioms": {
+        title: "Axioms: The Source Code of Math",
         logic: `
-public class MathSolver {
-    public void solveQuadratic(double a, double b, double c) {
-        double discriminant = Math.pow(b, 2) - 4 * a * c;
-
-        if (discriminant > 0) {
-            double root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-            double root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-            System.out.println("Two real roots found.");
-        } else if (discriminant == 0) {
-            double root = -b / (2 * a);
-            System.out.println("One repeated root found.");
-        } else {
-            ComplexNumber root1 = new ComplexNumber(-b/(2*a), Math.sqrt(-discriminant)/(2*a));
-            System.out.println("Imaginary roots calculated.");
+public class AxiomLogic {
+    public static void main(String[] args) {
+        var a = 10.5;
+        var b = 20.2;
+        
+        // 1. Commutative Property: a + b == b + a
+        if (a + b == b + a) {
+            System.out.println("Commutative Axiom Verified: " + (a + b));
+        }
+        
+        // 2. Distributive Property: a * (b + c) == ab + ac
+        var c = 5.0;
+        if (a * (b + c) == (a * b) + (a * c)) {
+            System.out.println("Distributive Axiom Verified.");
+        }
+        
+        // 3. Additive Inverse: a + (-a) == 0
+        if (a + (-a) == 0) {
+            System.out.println("Inverse Axiom (Constitutional Law) Verified.");
         }
     }
 }
         `,
-        explanation: "이차방정식의 해법은 판별식(Discriminant)의 값에 따른 다중 조건문(if-else if-else) 구조로 명확하게 시각화됩니다."
+        explanation: "Mathematical axioms are the hard-coded rules of the logical universe. In Java, these properties are fundamental to how the JVM evaluates arithmetic expressions."
+    },
+
+    "quadratic_formula": {
+        title: "Quadratic Formula: Implementation",
+        logic: `
+public record ComplexNumber(double real, double imag) {}
+
+public class MathSolver {
+    public void solveQuadratic(double a, double b, double c) {
+        var discriminant = Math.pow(b, 2) - 4 * a * c;
+
+        if (discriminant > 0) {
+            var root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+            var root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+            System.out.println("Two real roots found: " + root1 + ", " + root2);
+        } else if (discriminant == 0) {
+            var root = -b / (2 * a);
+            System.out.println("One repeated root found: " + root);
+        } else {
+            var root1 = new ComplexNumber(-b/(2*a), Math.sqrt(-discriminant)/(2*a));
+            System.out.println("Imaginary roots calculated: " + root1);
+        }
+    }
+}
+        `,
+        explanation: "The solution to the quadratic equation is clearly visualized through a multi-conditional (if-else if-else) structure based on the value of the discriminant."
+    },
+
+    "inverse_functions": {
+        title: "Inverse Functions: Symmetric Logic",
+        logic: `
+public record MathFunction(java.util.function.DoubleFunction<Double> logic, String name) {
+    public double apply(double x) { return logic.apply(x); }
+}
+
+public class SymmetryEngine {
+    public static void main(String[] args) {
+        var f = new MathFunction(x -> 2 * x + 3, "f(x) = 2x + 3");
+        var fInv = new MathFunction(y -> (y - 3) / 2, "f^-1(y) = (y - 3) / 2");
+
+        var input = 10.0;
+        var output = f.apply(input);
+        var recovered = fInv.apply(output);
+
+        System.out.println("Original: " + input + " -> Processed: " + output);
+        System.out.println("Inverse Process: " + output + " -> Recovered: " + recovered);
+
+        if (Math.abs(input - recovered) < 1E-9) {
+            System.out.println("Conclusion: f and f^-1 are perfect inverses.");
+        }
+    }
+}
+        `,
+        explanation: "Inverse functions are the logical undoing of a process. In JDK 21, we can model this using records and Functional Interfaces, demonstrating how spatial symmetry translates to algorithmic symmetry."
     },
 
     "factorial": {
@@ -81,8 +140,8 @@ public class MathSolver {
 public class MathPatterns {
     // Iterative approach using a For-Loop
     public long calculateFactorial(int n) {
-        long result = 1;
-        for (int i = 1; i <= n; i++) {
+        var result = 1L;
+        for (var i = 1; i <= n; i++) {
             result *= i;
         }
         return result;
@@ -95,7 +154,7 @@ public class MathPatterns {
     }
 }
         `,
-        explanation: "계승(Factorial)은 반복문(For-loop)과 재귀(Recursion)라는 CS의 핵심 개념을 설명하기에 가장 완벽한 수학적 예시입니다."
+        explanation: "Factorial calculation is the perfect mathematical example to explain core CS concepts: iteration (for-loops) and recursion."
     },
 
     "prime_numbers": {
@@ -106,7 +165,7 @@ public class NumberTheory {
         if (n <= 1) return false;
         
         // Efficiency: Only check up to the square root
-        for (int i = 2; i <= Math.sqrt(n); i++) {
+        for (var i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) {
                 return false; // Found a divisor
             }
@@ -115,7 +174,7 @@ public class NumberTheory {
     }
 }
         `,
-        explanation: "소수 판별 알고리즘은 '정수론'의 개념을 코드로 구현한 것입니다. 특히 루프의 범위를 제곱근($\\sqrt{n}$)까지로 제한하는 것은 수학적 성질을 이용한 알고리즘 최적화의 정석입니다."
+        explanation: "The prime number checking algorithm implements number theory concepts in code. Limiting the loop range to the square root of n ($ \\sqrt{n} $) is a classic example of algorithmic optimization using mathematical properties."
     },
 
     "logarithms": {
@@ -138,17 +197,19 @@ public class LogRules {
     }
 }
         `,
-        explanation: "로그의 성질은 Java의 정적 메서드로 깔끔하게 추상화됩니다. 곱셈이 덧셈으로, 나눗셈이 뺄셈으로 변환되는 수학적 논리가 코드의 연산자로 직관적으로 표현됩니다."
+        explanation: "Logarithmic rules are neatly abstracted into static Java methods. The mathematical logic where multiplication becomes addition and division becomes subtraction is intuitively expressed through code operators."
     },
 
     "differentiation": {
         title: "Differentiation: The Power Rule Logic",
         logic: `
+public record Derivative(double coefficient, int power) {}
+
 public class CalculusEngine {
     public Derivative solvePowerRule(double coefficient, int power) {
         // d/dx [ax^n] = (a*n)x^(n-1)
-        double newCoeff = coefficient * power;
-        int newPower = power - 1;
+        var newCoeff = coefficient * power;
+        var newPower = power - 1;
         
         return new Derivative(newCoeff, newPower);
     }
@@ -159,12 +220,14 @@ public class CalculusEngine {
     }
 }
         `,
-        explanation: "미분 공식은 알고리즘의 단계적 절차와 같습니다. 파워 룰(Power Rule)은 계수와 지수를 조정하는 단순 연산이며, 체인 룰(Chain Rule)은 재귀적인 함수의 결합으로 코딩할 수 있습니다."
+        explanation: "Differentiation formulas are like step-by-step algorithms. The Power Rule is a simple operation adjusting coefficients and exponents, while the Chain Rule can be coded as a recursive combination of functions."
     },
 
     "water_potential": {
         title: "Water Potential: Environmental Physics",
         logic: `
+public record Cell(double psi, String id) {}
+
 public class PlantPhysiology {
     public double calculatePsi(double solutePot, double pressurePot) {
         // Total Potential = Solute + Pressure
@@ -173,30 +236,34 @@ public class PlantPhysiology {
 
     public double calculateSolutePotential(double i, double c, double r, double t) {
         // Psi_s = -iCRT
-        return -1 * i * c * r * (t + 273.15); // Pressure in bars
+        return -1 * i * c * r * (t + 273.15); // Pressure in Kelvin
     }
 
     public void determineWaterFlow(Cell a, Cell b) {
-        if (a.psi > b.psi) {
-            System.out.println("Water flows from A to B.");
+        if (a.psi() > b.psi()) {
+            System.out.println("Water flows from " + a.id() + " to " + b.id());
         } else {
-            System.out.println("Water flows from B to A.");
+            System.out.println("Water flows from " + b.id() + " to " + a.id());
         }
     }
 }
         `,
-        explanation: "생물학의 수분 퍼텐셜 개념은 물리학적 시스템의 평형을 계산하는 것과 같습니다. 수치가 높은 곳에서 낮은 곳으로 흐르는 논리는 if-else 조건문으로 완벽하게 설명됩니다."
+        explanation: "The concept of water potential in biology is equivalent to calculating equilibrium in a physical system. The logic of water flowing from high to low potential is perfectly explained through if-else conditional logic."
     },
 
     "mendelian_genetics": {
         title: "Genetics: Punnett Square Simulation",
         logic: `
+public record Genotype(char allele1, char allele2) {
+    public boolean isDominant() { return Character.isUpperCase(allele1) || Character.isUpperCase(allele2); }
+}
+
 public class GeneticsEngine {
     public List<Genotype> cross(String parent1, String parent2) {
-        List<Genotype> offspring = new ArrayList<>();
+        var offspring = new ArrayList<Genotype>();
         
-        for (char allele1 : parent1.toCharArray()) {
-            for (char allele2 : parent2.toCharArray()) {
+        for (var allele1 : parent1.toCharArray()) {
+            for (var allele2 : parent2.toCharArray()) {
                 offspring.add(new Genotype(allele1, allele2));
             }
         }
@@ -204,35 +271,34 @@ public class GeneticsEngine {
     }
     
     public String determinePhenotype(Genotype g) {
-        // If any dominant allele exists, show dominant trait
         if (g.isDominant()) return "Dominant Trait Observed";
         return "Recessive Trait Observed";
     }
 }
         `,
-        explanation: "멘델의 유전 법칙은 이중 for 루프를 통한 조합 생성 알고리즘입니다. 우성 유전자의 유무를 판별하는 논리는 boolean 체크와 조건문으로 간단히 구현됩니다."
+        explanation: "Mendelian genetics is a combination generation algorithm using nested for-loops. The logic for determining dominant traits based on the presence of dominant alleles is simply implemented with boolean checks and conditionals."
     },
 
     "enzyme_kinetics": {
         title: "Enzyme Kinetics: Inhibition States",
         logic: `
+public enum InhibitorType { COMPETITIVE, NON_COMPETITIVE }
+public record Inhibitor(InhibitorType type, double concentration, double ki) {}
+
 public class BioChemistry {
     public double calculateRate(double vMax, double s, double km, Inhibitor i) {
         if (i == null) {
             return (vMax * s) / (km + s); // Michaelis-Menten
         }
         
-        if (i.type == InhibitorType.COMPETITIVE) {
-            // Competitive: Increases Km
-            return (vMax * s) / (km * (1 + i.concentration/i.ki) + s);
-        } else {
-            // Non-Competitive: Decreases Vmax
-            return (vMax / (1 + i.concentration/i.ki) * s) / (km + s);
-        }
+        return switch (i.type()) {
+            case COMPETITIVE -> (vMax * s) / (km * (1 + i.concentration() / i.ki()) + s);
+            case NON_COMPETITIVE -> (vMax / (1 + i.concentration() / i.ki()) * s) / (km + s);
+        };
     }
 }
         `,
-        explanation: "효소 반응 속도론은 다중 조건문으로 표현됩니다. 경쟁적 저해(Competitive)는 Km 값을, 비경쟁적 저해는 Vmax 값을 변사시키는 매개변수 조작으로 모델링됩니다."
+        explanation: "Enzyme kinetics is expressed through modern switch expressions (JDK 21). Competitive inhibition is modeled by modifying the Km value, while non-competitive inhibition is modeled by varying the Vmax value."
     },
 
     "cell_transport": {
@@ -244,9 +310,9 @@ public class MembraneManager {
             // Passive Transport (Diffusion)
             m.move(Direction.WITH_GRADIENT);
             System.out.println("No ATP consumed.");
-        } else if (atp.amount >= m.energyCost) {
+        } else if (atp.amount() >= m.energyCost()) {
             // Active Transport (Pump)
-            atp.consume(m.energyCost);
+            atp.consume(m.energyCost());
             m.move(Direction.AGAINST_GRADIENT);
             System.out.println("Pumping against gradient...");
         } else {
@@ -255,7 +321,7 @@ public class MembraneManager {
     }
 }
         `,
-        explanation: "세포막 수송은 에너지(ATP) 가용성과 농도 구배(Gradient)를 체크하는 if-else 로직입니다. 확산은 조건 없이 실행되지만, 능동 수송은 반드시 ATP 소모가 동반됩니다."
+        explanation: "Cellular transport is an if-else logic check for energy (ATP) availability and concentration gradients. Diffusion occurs without conditions, but active transport always requires ATP consumption."
     },
     "eigenvalues": {
         title: "Eigenvalues & Eigenvectors: Linear Transformation Logic",
@@ -265,19 +331,18 @@ public class MatrixMaster {
         // Characteristic Equation: det(A - lambda*I) = 0
         System.out.println("Step 1: Constructing Characteristic Polynomial...");
         
-        Polynomial p = A.getCharacteristicPolynomial();
-        List<Double> eigenvalues = p.findRoots();
+        var p = A.getCharacteristicPolynomial();
+        var eigenvalues = p.findRoots();
         
-        for (Double lambda : eigenvalues) {
+        for (var lambda : eigenvalues) {
             System.out.println("Eigenvalue found: " + lambda);
             // Solve (A - lambda*I)v = 0 for Eigenvectors
-            Vector v = A.solveHomogeneousSystem(lambda);
+            var v = A.solveHomogeneousSystem(lambda);
             System.out.println("Corresponding Eigenvector: " + v.toString());
         }
     }
 }
         `,
-        explanation: "행렬의 고윳값(Eigenvalues)과 고유벡터(Eigenvectors)는 선형 변환의 핵심입니다. Java 코드로 볼 때, 이는 특성 방정식을 풀고 각 고윳값에 대응하는 연립 방정식을 풀어 벡터를 찾아내는 절차적 알고리즘으로 표현됩니다."
+        explanation: "Eigenvalues and eigenvectors are core to linear transformations. In Java code, this is expressed as a procedural algorithm that solves the characteristic equation and then finds the corresponding vectors for each eigenvalue."
     }
 };
-

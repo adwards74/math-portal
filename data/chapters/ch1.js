@@ -58,7 +58,8 @@ window.CHAPTER_DATA["ch1"] = {
                 <h4><i class="fas fa-microchip"></i> CS Connection: Operator Precedence</h4>
                 <p>In Java or Python, the <strong>Axioms</strong> are hard-coded into the compiler. The hierarchy of operations (PEMDAS/BODMAS) ensures the machine processes expressions exactly the same way every time. To a coder, axioms are the 'Source Code' of the universe.</p>
             </div>
-        `
+        `,
+        "javaLogic": "axioms"
     },
     "ch1-2": {
         title: "1.2 Number Sets & Systems",
