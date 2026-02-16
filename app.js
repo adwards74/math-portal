@@ -1662,7 +1662,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // --- Elite 3.0: Desmos Interactive Lab ---
-    window.initDesmosLab = async (config) => {
+    window.initDesmosLab = async (config = {}) => {
         const panel = document.getElementById('lesson-tool-panel');
         if (!panel) return;
 
@@ -1718,13 +1718,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 border: false
             });
 
-            if (config.expressions) {
+            if (config && config.expressions) {
                 config.expressions.forEach((exp, idx) => {
                     calculator.setExpression({ id: `exp${idx}`, latex: exp });
                 });
             }
 
-            if (config.bounds) {
+            if (config && config.bounds) {
                 calculator.setMathBounds(config.bounds);
             }
 
