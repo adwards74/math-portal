@@ -1671,6 +1671,28 @@ document.addEventListener('DOMContentLoaded', () => {
             return window.desmosCalculator;
         }
 
+        if (window.desmosFallbackActive) {
+            panel.style.display = 'block';
+            const iframe = panel.querySelector('iframe');
+            const iframeUrl = `https://www.desmos.com/calculator?lang=en${config.expressions ? `&q=${encodeURIComponent(config.expressions.join(';'))}` : ''}`;
+
+            if (iframe) {
+                iframe.src = iframeUrl;
+            } else {
+                panel.style.position = 'relative';
+                panel.innerHTML = `
+                    <div style="position:absolute !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important; display:block !important; background:rgba(0,0,0,0.6) !important; z-index:100 !important; box-sizing:border-box !important;">
+                        <iframe src="${iframeUrl}" width="100%" height="100%" style="border:none !important; width:100% !important; height:100% !important; background:white !important; border-radius:inherit !important;"></iframe>
+                        <div id="fallback-notice" style="position:absolute !important; top:15px !important; left:15px !important; background:rgba(0,0,0,0.85) !important; padding:8px 15px !important; border-radius:30px !important; border:1px solid var(--accent-orange) !important; color:var(--accent-orange) !important; font-size:0.75rem !important; display:flex !important; align-items:center !important; gap:8px !important; pointer-events:none !important; box-shadow:0 4px 15px rgba(0,0,0,0.5) !important; z-index:101 !important;">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>HYBRID ENGINE ACTIVE</span>
+                        </div>
+                    </div>
+                `;
+            }
+            return null;
+        }
+
         panel.style.display = 'block'; // Ensure panel is visible during initialization
         panel.innerHTML = `
             <div id="desmos-loading" style="display:flex; align-items:center; justify-content:center; height:100%; color:var(--accent-cyan); flex-direction:column; padding: 20px; text-align: center;">
@@ -1735,6 +1757,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return calculator;
         } catch (e) {
             console.error("Desmos Load Error:", e);
+            window.desmosFallbackActive = true; // Set flag to bypass spinner next time
             const isLocal = window.location.protocol === 'file:';
 
             // Build expressions for iframe URL if available
