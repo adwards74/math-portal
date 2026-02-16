@@ -1670,6 +1670,8 @@ document.addEventListener('DOMContentLoaded', () => {
             panel.style.display = 'block';
             return window.desmosCalculator;
         }
+
+        panel.style.display = 'block'; // Ensure panel is visible during initialization
         panel.innerHTML = `
             <div id="desmos-loading" style="display:flex; align-items:center; justify-content:center; height:100%; color:var(--accent-cyan); flex-direction:column; padding: 20px; text-align: center;">
                 <i class="fas fa-spinner fa-spin" style="font-size:2.5rem; margin-bottom:15px;"></i>
