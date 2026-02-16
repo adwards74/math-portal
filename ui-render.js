@@ -77,6 +77,10 @@ window.UIEngine = (function () {
         const subject = data.subjects.find(s => s.id === subjectId);
         if (!subject) return;
 
+        // CRITICAL: Ensure view is switched to dashboard where the detail is rendered
+        if (window.switchView) window.switchView('dashboard');
+        else if (window.AppRouter && window.AppRouter.switchView) window.AppRouter.switchView('dashboard');
+
         const main = document.getElementById('dashboard-view');
         main.innerHTML = `
             <div class="back-link" style="cursor:pointer; margin-bottom:30px; color:${subject.color}; display:flex; align-items:center; gap:8px;" onclick="window.showDashboard()">
@@ -238,7 +242,8 @@ window.UIEngine = (function () {
             </div>
             <div id="subject-cards-container" class="subject-grid"></div>
         `;
-        renderSubjectGrid(MATH_DATA.subjects, 'subject-cards-container');
+        const data = window.MATH_DATA || { subjects: [] };
+        renderSubjectGrid(data.subjects, 'subject-cards-container');
     }
 
     // Expose functions to global context
@@ -587,6 +592,14 @@ window.UIEngine = (function () {
             window.initDesmosLab({ expressions: expressions, force: true });
         }
     }
+
+    // Final Global Bindings
+    window.renderSubjectGrid = renderSubjectGrid;
+    window.showSubjectDetail = showSubjectDetail;
+    window.showDashboard = showDashboard;
+    window.switchQuizLevel = switchQuizLevel;
+    window.toggleCalculator = toggleCalculator;
+    window.renderQuantumGraph = renderQuantumGraph;
 
     return {
         renderSubjectGrid,
