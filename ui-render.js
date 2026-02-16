@@ -354,7 +354,7 @@ window.UIEngine = (function () {
         if (window.MathJax) window.MathJax.typesetPromise();
     }
 
-    function toggleCalculator(type) {
+    async function toggleCalculator(type) {
         const panel = document.getElementById('lesson-tool-panel');
         if (!panel) return;
 
@@ -362,6 +362,13 @@ window.UIEngine = (function () {
 
         if (!type && isCurrentOpen) {
             panel.style.display = 'none';
+            return;
+        }
+
+        // If it's desmos and our advanced engine exists in app.js, use it
+        if (type === 'desmos' && window.initDesmosLab) {
+            panel.style.display = 'block';
+            await window.initDesmosLab();
             return;
         }
 
