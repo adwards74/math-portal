@@ -45,8 +45,8 @@ window.CHAPTER_DATA["ch14"] = {
                             <text x="140" y="90" fill="white" font-size="10" transform="rotate(-41 120 120)">r = 1</text>
                         </svg>
                         <p style="font-size: 0.85rem; opacity: 0.8; text-align: center;">
-                            On a circle with $r=1$, the coordinates are $(\cos \theta, \sin \theta)$.<br>
-                            Pythagoras gives us: $\mathbf{\cos^2 \theta + \sin^2 \theta = 1}$
+                            On a circle with $r=1$, the coordinates are $(\\cos \\theta, \\sin \\theta)$.<br>
+                            Pythagoras gives us: $\\mathbf{\\cos^2 \\theta + \\sin^2 \\theta = 1}$
                         </p>
                     </div>
                 </div>

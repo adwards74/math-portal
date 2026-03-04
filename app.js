@@ -1007,7 +1007,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetLevel = isMultiLevel ? quiz.levels[quiz.levels.length - 1] : quiz;
 
         const feedback = document.getElementById('final-quiz-feedback');
-        const normalize = (s) => s.toString().trim().replace(/\s+/g, ' ').replace(/[\u223C\u223D\u223E\u2241\u2242\u2243\u2244\u2245\u2246\u2247\u2248\u2249\u224A\u224B\u224C\u224D\u224E\u224F\u223B\u223A\u2239\u2238\u2237\u2236]/g, '~');
+        const normalize = (s) => s.toString().trim().replace(/\\s+/g, ' ').replace(/[\u223C\u223D\u223E\u2241\u2242\u2243\u2244\u2245\u2246\u2247\u2248\u2249\u224A\u224B\u224C\u224D\u224E\u224F\u223B\u223A\u2239\u2238\u2237\u2236]/g, '~');
         const isCorrect = normalize(selected) === normalize(targetLevel.answer);
 
         saveQuizAttempt({
@@ -2066,7 +2066,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const rawB = document.getElementById('group-b-input').value;
         const resultsDiv = document.getElementById('analytics-results');
 
-        const parse = (str) => str.split(/[\s,]+/).map(s => parseFloat(s.trim())).filter(n => !isNaN(n));
+        const parse = (str) => str.split(/[\\s,]+/).map(s => parseFloat(s.trim())).filter(n => !isNaN(n));
         const dataA = parse(rawA);
         const dataB = parse(rawB);
 

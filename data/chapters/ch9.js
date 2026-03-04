@@ -31,7 +31,7 @@ window.CHAPTER_DATA["ch9"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Parent Hyperbola</h2>
-                <p>The graph of $y = \\\\frac{a}{x-h} + k$ represents a transformation of the parent $1/x$.</p>
+                <p>The graph of $y = \\frac{a}{x-h} + k$ represents a transformation of the parent $1/x$.</p>
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-blue);">
                     <ul class="glass-list">
@@ -53,7 +53,7 @@ window.CHAPTER_DATA["ch9"] = {
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-magenta);">
                     <h4>Determining the Horizontal Asymptote</h4>
-                    <p>For $f(x) = \\\\frac{P(x)}{Q(x)}$ with leading terms $ax^n$ and $bx^d$:</p>
+                    <p>For $f(x) = \\frac{P(x)}{Q(x)}$ with leading terms $ax^n$ and $bx^d$:</p>
                     <ul class="glass-list" style="margin-top:10px;">
                         <li><strong>$n < d$:</strong> The denominator "wins" the race to infinity. $y = 0$.</li>
                         <li><strong>$n = d$:</strong> The leading coefficients tie. $y = a/b$.</li>

@@ -20,7 +20,7 @@ window.CHAPTER_DATA["ch6"] = {
             {
                 level: 3,
                 question: "MASTERY CHALLENGE: If a polynomial $P(x)$ has a root at $2 + i$, what other root MUST it have (assuming real coefficients)? Explain the Fundamental Theorem of Algebra's implication on complex pairs.",
-                template: "Root 1: 2 + i \nRoot 2 must be... \nReasoning...",
+                template: "Root 1: 2 + i \\nRoot 2 must be... \\nReasoning...",
                 answer: "Root 2 must be $2 - i$. Complex roots of polynomials with real coefficients always occur in conjugate pairs.",
                 explanation: "This tests understanding of the Complex Conjugate Root Theorem, an Elite 6.0 mastery requirement."
             }
@@ -41,10 +41,10 @@ window.CHAPTER_DATA["ch6"] = {
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-blue);">
                     <ul class="glass-list">
-                        <li><strong>Even Degree ($n$ even):</strong> Both ends go to $+\\\\infty$ (if $a_n>0$) or $-\\\\infty$ (if $a_n<0$).</li>
+                        <li><strong>Even Degree ($n$ even):</strong> Both ends go to $+\\infty$ (if $a_n>0$) or $-\\infty$ (if $a_n<0$).</li>
                         <li><strong>Odd Degree ($n$ odd):</strong> Ends go in opposite directions.</li>
                     </ul>
-                    <p style="margin-top:10px; font-family: monospace;">As $x \\\\to \\\\infty, f(x) \\\\to \\\\infty$ (Notation of Calculus)</p>
+                    <p style="margin-top:10px; font-family: monospace;">As $x \\to \\infty, f(x) \\to \\infty$ (Notation of Calculus)</p>
                 </div>
             </div>
 
@@ -63,7 +63,7 @@ window.CHAPTER_DATA["ch6"] = {
                     </details>
                     <details style="margin-top:8px;">
                         <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                        <p style="margin-top:8px;">As $x \to \infty, f(x) \to \infty$ and as $x \to -\infty, f(x) \to \infty$. (Both ends up)</p>
+                        <p style="margin-top:8px;">As $x \\to \\infty, f(x) \\to \\infty$ and as $x \\to -\\infty, f(x) \\to \\infty$. (Both ends up)</p>
                     </details>
                 </div>
                 <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
@@ -74,7 +74,7 @@ window.CHAPTER_DATA["ch6"] = {
                     </details>
                     <details style="margin-top:8px;">
                         <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                        <p style="margin-top:8px;">As $x \to \infty, f(x) \to -\infty$ and as $x \to -\infty, f(x) \to \infty$.</p>
+                        <p style="margin-top:8px;">As $x \\to \\infty, f(x) \\to -\\infty$ and as $x \\to -\\infty, f(x) \\to \\infty$.</p>
                     </details>
                 </div>
             </div>
@@ -91,7 +91,7 @@ window.CHAPTER_DATA["ch6"] = {
                 <div class="proof-box glass">
                     <h4>The Algebraic Proof</h4>
                     <p>By division algorithm: $f(x) = (x - c)q(x) + r$.</p>
-                    <p>Plug in $x = c$: $f(c) = (c - c)q(c) + r = 0 \\\\cdot q(c) + r = r$.</p>
+                    <p>Plug in $x = c$: $f(c) = (c - c)q(c) + r = 0 \\cdot q(c) + r = r$.</p>
                     <p><strong>Conclusion:</strong> $f(c) = r$. This is why evaluating a function is the same as finding a remainder!</p>
                 </div>
 
@@ -142,9 +142,9 @@ window.CHAPTER_DATA["ch6"] = {
                     <ol class="glass-list">
                         <li>Root is $3$. Write coefficients: $2, -5, -1, 3$.</li>
                         <li>Bring down the first number ($2$).</li>
-                        <li>Multiply by $3$: $2 \times 3 = 6$. Add to next coeff: $-5 + 6 = 1$.</li>
-                        <li>Multiply by $3$: $1 \times 3 = 3$. Add to next coeff: $-1 + 3 = 2$.</li>
-                        <li>Multiply by $3$: $2 \times 3 = 6$. Add to next coeff: $3 + 6 = 9$.</li>
+                        <li>Multiply by $3$: $2 \\times 3 = 6$. Add to next coeff: $-5 + 6 = 1$.</li>
+                        <li>Multiply by $3$: $1 \\times 3 = 3$. Add to next coeff: $-1 + 3 = 2$.</li>
+                        <li>Multiply by $3$: $2 \\times 3 = 6$. Add to next coeff: $3 + 6 = 9$.</li>
                         <li><strong>Quotient:</strong> $2x^2 + x + 2$, <strong>Remainder:</strong> $9$</li>
                     </ol>
                 </div>
@@ -152,7 +152,7 @@ window.CHAPTER_DATA["ch6"] = {
                 <h2>III. Practice Problems</h2>
                 <div class="practice-section glass" style="margin-top:20px; padding:20px;">
                     <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
-                        <p><strong>Problem 1:</strong> Use synthetic division: $(x^3 + 4x^2 - 5x + 3) \div (x + 2)$.</p>
+                        <p><strong>Problem 1:</strong> Use synthetic division: $(x^3 + 4x^2 - 5x + 3) \\div (x + 2)$.</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
                             <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Use $-2$ as the root. Coeffs: $1, 4, -5, 3$.</p>
@@ -187,7 +187,7 @@ window.CHAPTER_DATA["ch6"] = {
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-orange);">
                     <ul class="glass-list">
-                        <li><strong>Sum/Diff of Cubes:</strong> $a^3 \\\\pm b^3 = (a \\\\pm b)(a^2 \\\\mp ab + b^2)$</li>
+                        <li><strong>Sum/Diff of Cubes:</strong> $a^3 \\pm b^3 = (a \\pm b)(a^2 \\mp ab + b^2)$</li>
                         <li><strong>Grouping:</strong> Used when four or more terms share partial commonality.</li>
                         <li><strong>Quartic Forms:</strong> Treat $x^4 + 5x^2 + 4$ as a quadratic in terms of $x^2$.</li>
                     </ul>
@@ -250,7 +250,7 @@ window.CHAPTER_DATA["ch6"] = {
                 
                 <div class="tj-edge glass" style="border-left-color: var(--accent-green);">
                     <h4><i class="fas fa-search"></i> Pruned Search Space</h4>
-                    <p>Instead of testing an infinite set of numbers, you only test $\\\\pm \\\\text{factors of constant} / \\\\text{factors of leading coeff}$. In AI, this is **Branch Pruning** — eliminating billions of impossible paths to find the single correct leaf node quickly.</p>
+                    <p>Instead of testing an infinite set of numbers, you only test $\\pm \\text{factors of constant} / \\text{factors of leading coeff}$. In AI, this is **Branch Pruning** — eliminating billions of impossible paths to find the single correct leaf node quickly.</p>
                 </div>
 
                 <h2>II. Practice Problems</h2>
@@ -259,11 +259,11 @@ window.CHAPTER_DATA["ch6"] = {
                         <p><strong>Problem 1:</strong> List all possible rational roots for $f(x) = 2x^3 + 3x^2 - 1$.</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$p$ is factors of 1: $\{\pm 1\}$. $q$ is factors of 2: $\{1, 2\}$. List all $p/q$.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$p$ is factors of 1: $\\{\\pm 1\\}$. $q$ is factors of 2: $\\{1, 2\\}$. List all $p/q$.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$\pm 1, \pm \frac{1}{2}$</p>
+                            <p style="margin-top:8px;">$\\pm 1, \\pm \\frac{1}{2}$</p>
                         </details>
                     </div>
                 </div>

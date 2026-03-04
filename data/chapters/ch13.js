@@ -153,8 +153,8 @@ window.CHAPTER_DATA["ch13"] = {
                         <!-- Points -->
                         <circle cx="100" cy="50" r="4" fill="var(--accent-cyan)"/>
                         <circle cx="100" cy="25" r="4" fill="var(--accent-red)"/>
-                        <text x="110" y="55" fill="var(--accent-cyan)" font-size="10">$\sin(x) = 1$</text>
-                        <text x="110" y="20" fill="var(--accent-red)" font-size="10">$\csc(x) = 1$</text>
+                        <text x="110" y="55" fill="var(--accent-cyan)" font-size="10">$\\sin(x) = 1$</text>
+                        <text x="110" y="20" fill="var(--accent-red)" font-size="10">$\\csc(x) = 1$</text>
                     </svg>
                     <p style="font-size: 0.85rem; opacity: 0.8; margin-top: 15px;">Where Sine has a peak (value 1), Cosecant has a valley (value 1). Where Sine hits zero, Cosecant explodes to **Infinity**.</p>
                 </div>

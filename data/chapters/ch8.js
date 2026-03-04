@@ -14,7 +14,7 @@ window.CHAPTER_DATA["ch8"] = {
                 <p>Exponential growth occurs when the rate of change is proportional to the current value. This leads to the fundamental formula:</p>
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-magenta);">
-                    <p><strong>Periodic Compounding:</strong> $A = P(1 + \\\\frac{r}{n})^{nt}$</p>
+                    <p><strong>Periodic Compounding:</strong> $A = P(1 + \\frac{r}{n})^{nt}$</p>
                     <ul class="glass-list" style="margin-top:10px;">
                         <li>$P$: Principal (Initial amount).</li>
                         <li>$r$: Annual interest rate.</li>
@@ -35,11 +35,11 @@ window.CHAPTER_DATA["ch8"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. Continuous Compounding</h2>
-                <p>What happens if we compound every second? Every nanosecond? As $n \\\\to \\\\infty$, the compounding formula $A = P(1 + r/n)^{nt}$ converges to the <strong>Continuous Model</strong>:</p>
+                <p>What happens if we compound every second? Every nanosecond? As $n \\to \\infty$, the compounding formula $A = P(1 + r/n)^{nt}$ converges to the <strong>Continuous Model</strong>:</p>
                 
                 <div class="proof-box glass">
                     \\[A = Pe^{rt}\\]
-                    <p style="margin-top:10px;">The constant $e \\\\approx 2.718$ is the unique base such that the slope of the function $f(x) = e^x$ is exactly equal to its value at every point.</p>
+                    <p style="margin-top:10px;">The constant $e \\approx 2.718$ is the unique base such that the slope of the function $f(x) = e^x$ is exactly equal to its value at every point.</p>
                 </div>
             </div>
         `
@@ -55,10 +55,10 @@ window.CHAPTER_DATA["ch8"] = {
                 </div>
 
                 <h2>I. Information Compression</h2>
-                <p>Logarithms translate Exponential growth back into Linear scale. If $y = b^x$, then $x = \\\\log_b(y)$.</p>
+                <p>Logarithms translate Exponential growth back into Linear scale. If $y = b^x$, then $x = \\log_b(y)$.</p>
                 
                 <div class="tj-edge glass" style="border-left-color: var(--accent-green);">
-                    <h4><i class="fas fa-search"></i> The $O(\\\\log n)$ Miracle</h4>
+                    <h4><i class="fas fa-search"></i> The $O(\\log n)$ Miracle</h4>
                     <p>Finding a specific record in a 2-billion row database (like Facebook's user list) takes only ~31 steps with <strong>Binary Search</strong>. Logarithms are the math of "Dividing until Conquered". They represent the ultimate tool for managing scale.</p>
                 </div>
 
@@ -68,35 +68,35 @@ window.CHAPTER_DATA["ch8"] = {
                         <p><strong>Problem 1:</strong> Convert to logarithmic form: $2^5 = 32$</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$b^x = y$ becomes $\\\\log_b(y) = x$.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$b^x = y$ becomes $\\log_b(y) = x$.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$\\\\log_2(32) = 5$</p>
+                            <p style="margin-top:8px;">$\\log_2(32) = 5$</p>
                         </details>
                     </div>
 
                     <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
-                        <p><strong>Problem 2:</strong> Evaluate $\\\\log_3(81)$</p>
+                        <p><strong>Problem 2:</strong> Evaluate $\\log_3(81)$</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
                             <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Ask: "3 to what power equals 81?" What is $3^4$?</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$\\\\log_3(81) = 4$ (since $3^4 = 81$)</p>
+                            <p style="margin-top:8px;">$\\log_3(81) = 4$ (since $3^4 = 81$)</p>
                         </details>
                     </div>
 
                     <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
-                        <p><strong>Problem 3:</strong> Expand using log properties: $\\\\log_2(8x^3)$</p>
+                        <p><strong>Problem 3:</strong> Expand using log properties: $\\log_2(8x^3)$</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Use Product Rule: $\\\\log(AB) = \\\\log A + \\\\log B$, then Power Rule.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Use Product Rule: $\\log(AB) = \\log A + \\log B$, then Power Rule.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$\\\\log_2(8) + \\\\log_2(x^3) = 3 + 3\\\\log_2(x)$</p>
+                            <p style="margin-top:8px;">$\\log_2(8) + \\log_2(x^3) = 3 + 3\\log_2(x)$</p>
                         </details>
                     </div>
 
@@ -108,7 +108,7 @@ window.CHAPTER_DATA["ch8"] = {
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$x = \\\\log_2(16) = 4$</p>
+                            <p style="margin-top:8px;">$x = \\log_2(16) = 4$</p>
                         </details>
                     </div>
                 </div>
@@ -125,9 +125,9 @@ window.CHAPTER_DATA["ch8"] = {
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-magenta);">
                     <ul class="glass-list">
-                        <li><strong>Product Rule:</strong> $\\\\log_b(MN) = \\\\log_b M + \\\\log_b N$</li>
-                        <li><strong>Quotient Rule:</strong> $\\\\log_b(M/N) = \\\\log_b M - \\\\log_b N$</li>
-                        <li><strong>Power Rule:</strong> $\\\\log_b(M^k) = k \\\\cdot \\\\log_b M$</li>
+                        <li><strong>Product Rule:</strong> $\\log_b(MN) = \\log_b M + \\log_b N$</li>
+                        <li><strong>Quotient Rule:</strong> $\\log_b(M/N) = \\log_b M - \\log_b N$</li>
+                        <li><strong>Power Rule:</strong> $\\log_b(M^k) = k \\cdot \\log_b M$</li>
                     </ul>
                 </div>
 
@@ -144,7 +144,7 @@ window.CHAPTER_DATA["ch8"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Exponentiation Protocol</h2>
-                <p>To solve $\\\\log_b(x) = c$, we convert to exponential form: $b^c = x$. But we must be careful with the <strong>Domain</strong>.</p>
+                <p>To solve $\\log_b(x) = c$, we convert to exponential form: $b^c = x$. But we must be careful with the <strong>Domain</strong>.</p>
                 
                 <div class="intuition-box glass">
                     <h3><i class="fas fa-ban"></i> The Negative Void</h3>
@@ -164,10 +164,10 @@ window.CHAPTER_DATA["ch8"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Change of Base Formula</h2>
-                <p>Calculators often only have $\\\\log_{10}$ and $\\\\ln$. To find $\\\\log_2(7)$, we use:</p>
+                <p>Calculators often only have $\\log_{10}$ and $\\ln$. To find $\\log_2(7)$, we use:</p>
                 
                 <div class="proof-box glass">
-                    \\[\\\\log_b(a) = \\\\frac{\\\\log_c(a)}{\\\\log_c(b)}\\]
+                    \\[\\log_b(a) = \\frac{\\log_c(a)}{\\log_c(b)}\\]
                     <p style="margin-top:10px;">This formula proves that all logarithms are just scaled versions of each other. Base $e$ (Natural Log) is the primary base for all Calculus and Physics.</p>
                 </div>
             </div>
@@ -188,7 +188,7 @@ window.CHAPTER_DATA["ch8"] = {
                     </div>
                     <div class="glass-card" style="padding:15px;">
                         <h5 style="color:var(--accent-green);">Search Optimization</h5>
-                        <p style="font-size:0.85rem; opacity:0.8;">Understand $O(\\\\log n)$ to write highly efficient algorithms and database queries.</p>
+                        <p style="font-size:0.85rem; opacity:0.8;">Understand $O(\\log n)$ to write highly efficient algorithms and database queries.</p>
                     </div>
                     <div class="glass-card" style="padding:15px;">
                         <h5 style="color:var(--accent-orange);">Log Properties</h5>
@@ -196,7 +196,7 @@ window.CHAPTER_DATA["ch8"] = {
                     </div>
                     <div class="glass-card" style="padding:15px;">
                         <h5 style="color:var(--accent-cyan);">The Natural Way</h5>
-                        <p style="font-size:0.85rem; opacity:0.8;">Adopt $\\\\ln$ as your default tool for modeling entropy, loss, and natural change.</p>
+                        <p style="font-size:0.85rem; opacity:0.8;">Adopt $\\ln$ as your default tool for modeling entropy, loss, and natural change.</p>
                     </div>
                 </div>
             </div>
@@ -206,7 +206,7 @@ window.CHAPTER_DATA["ch8"] = {
                 <ol style="font-size:0.9rem; line-height:1.6; margin-top:10px;">
                     <li>Why does base $e$ appear in nature even when human systems use base 10?</li>
                     <li>If multiplication is "addition in log-space", what is exponentiation in log-space?</li>
-                    <li>How does domain restriction for $\\\\log(x)$ mirror the exception handling for $\\\\sqrt{x}$?</li>
+                    <li>How does domain restriction for $\\log(x)$ mirror the exception handling for $\\sqrt{x}$?</li>
                 </ol>
             </div>
         `

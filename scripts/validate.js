@@ -61,7 +61,7 @@ coreFiles.forEach(file => {
 console.log('\\n🔬 Checking for LaTeX Escaping Issues...\\n');
 
 const latexPatterns = [
-    { pattern: /\\(?!\\)frac/g, issue: 'Single backslash in \\frac (should be \\\\frac in JS strings)' },
+    { pattern: /\\(?!\\)frac/g, issue: 'Single backslash in \\frac (should be \\frac in JS strings)' },
     { pattern: /\\(?!\\)cdot/g, issue: 'Single backslash in \\cdot' },
     { pattern: /\\(?!\\)times/g, issue: 'Single backslash in \\times' },
     { pattern: /\\(?!\\)sqrt/g, issue: 'Single backslash in \\sqrt' },

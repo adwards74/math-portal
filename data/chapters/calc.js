@@ -639,7 +639,7 @@ window.CHAPTER_DATA["calc"] = {
             <div class="lesson-section">
                 <h2>I. Non-Revolution Solids</h2>
                 <p>Not all 3D shapes are round. If we know the shape of a cross-section (Squares, Semicircles, Triangles), we integrate its <strong>Area Function</strong>.</p>
-                \\[V = \int_a^b A(x) dx\\]
+                \\[V = \\int_a^b A(x) dx\\]
                 <div class="glass-card elite-border">
                     <p><strong>Common Areas:</strong> Square ($s^2$), Semicircle ($\\frac{\\pi}{8}d^2$), Isosceles Right Triangle ($\\frac{1}{4}d^2$).</p>
                 </div>
@@ -785,7 +785,7 @@ window.CHAPTER_DATA["calc"] = {
                 </div>
 
                 <h2>I. Universal Proximity</h2>
-                \\[f(x) = f(a) + f'(a)(x-a) + \\frac{f''(a)}{2!}(x-a)^2 + \dots\\]
+                \\[f(x) = f(a) + f'(a)(x-a) + \\frac{f''(a)}{2!}(x-a)^2 + \\dots\\]
 
                 <div class="visual-dynamics glass" style="margin:20px 0; padding:20px; text-align:center;">
                     <h4><i class="fas fa-layer-group"></i> Layered Approximation</h4>

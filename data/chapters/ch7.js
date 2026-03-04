@@ -11,12 +11,12 @@ window.CHAPTER_DATA["ch7"] = {
                 </div>
 
                 <h2>I. The nth Root Operator</h2>
-                <p>The expression $\\\\sqrt[n]{b}$ is a number $a$ such that $a^n = b$. The behavior of this radical depends critically on the <strong>Index ($n$)</strong>.</p>
+                <p>The expression $\\sqrt[n]{b}$ is a number $a$ such that $a^n = b$. The behavior of this radical depends critically on the <strong>Index ($n$)</strong>.</p>
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-blue);">
                     <ul class="glass-list">
-                        <li><strong>Even Index ($n=2, 4, \\\\dots$):</strong> Radicand MUST be $\\\\ge 0$ for a real result (e.g., $\\\\sqrt{-4}$ is non-real).</li>
-                        <li><strong>Odd Index ($n=3, 5, \\\\dots$):</strong> Radicand can be any real number (e.g., $\\\\sqrt[3]{-8} = -2$).</li>
+                        <li><strong>Even Index ($n=2, 4, \\dots$):</strong> Radicand MUST be $\\ge 0$ for a real result (e.g., $\\sqrt{-4}$ is non-real).</li>
+                        <li><strong>Odd Index ($n=3, 5, \\dots$):</strong> Radicand can be any real number (e.g., $\\sqrt[3]{-8} = -2$).</li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +42,7 @@ window.CHAPTER_DATA["ch7"] = {
 
                 <div class="tj-edge glass" style="border-left-color: var(--accent-cyan); margin-top:20px;">
                     <h4><i class="fas fa-calculator"></i> Preview: The Power Rule</h4>
-                    <p>In Calculus, finding the rate of change for $\\\\sqrt{x}$ is trivial IF you rewrite it as $x^{1/2}$. Mastering rational exponents is the secret to making high-level Calculus feel like simple Algebra.</p>
+                    <p>In Calculus, finding the rate of change for $\\sqrt{x}$ is trivial IF you rewrite it as $x^{1/2}$. Mastering rational exponents is the secret to making high-level Calculus feel like simple Algebra.</p>
                 </div>
             </div>
         `
@@ -53,11 +53,11 @@ window.CHAPTER_DATA["ch7"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Power of Conjugates</h2>
-                <p>To eliminate a radical like $\\\\sqrt{2}$ from the denominator $3 + \\\\sqrt{2}$, we use the <strong>Conjugate</strong> $3 - \\\\sqrt{2}$.</p>
+                <p>To eliminate a radical like $\\sqrt{2}$ from the denominator $3 + \\sqrt{2}$, we use the <strong>Conjugate</strong> $3 - \\sqrt{2}$.</p>
                 
                 <div class="glass-card" style="border-left: 4px solid var(--accent-green); padding:20px;">
                     <h4>Difference of Squares Trick</h4>
-                    <p>$(a + \\\\sqrt{b})(a - \\\\sqrt{b}) = a^2 - b$.</p>
+                    <p>$(a + \\sqrt{b})(a - \\sqrt{b}) = a^2 - b$.</p>
                     <p style="margin-top:10px;">By multiplying both numerator and denominator by the conjugate, the radical "squares itself out" of existence in the denominator.</p>
                 </div>
             </div>
@@ -83,7 +83,7 @@ window.CHAPTER_DATA["ch7"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Squaring Protocol</h2>
-                <p>To solve $\\\\sqrt{x + 2} = x$, we must isolate the radical and raise both sides to the appropriate power. However, this process often introduces **Extraneous Solutions**.</p>
+                <p>To solve $\\sqrt{x + 2} = x$, we must isolate the radical and raise both sides to the appropriate power. However, this process often introduces **Extraneous Solutions**.</p>
                 
                 <div class="intuition-box glass">
                     <h3><i class="fas fa-mask"></i> The Ghost in the Machine</h3>
@@ -178,7 +178,7 @@ window.CHAPTER_DATA["ch7"] = {
                 
                 <div class="paradigm-shift" style="border-left-color: var(--accent-magenta);">
                     <h4>Existence Condition: The Horizontal Line Test</h4>
-                    <p>For an inverse to be a true *function*, every output must match exactly one input. We sometimes have to **restrict the domain** (e.g., $y=x^2$ only for $x \\\\ge 0$) to make an inverse possible.</p>
+                    <p>For an inverse to be a true *function*, every output must match exactly one input. We sometimes have to **restrict the domain** (e.g., $y=x^2$ only for $x \\ge 0$) to make an inverse possible.</p>
                 </div>
             </div>
         `
@@ -214,7 +214,7 @@ window.CHAPTER_DATA["ch7"] = {
             <div class="metacognition glass" style="margin-top:25px; border-left-color:var(--accent-cyan);">
                 <h4><i class="fas fa-brain"></i> Synthesis: The Radical Vision</h4>
                 <ol style="font-size:0.9rem; line-height:1.6; margin-top:10px;">
-                    <li>Why is $b^{1/2}$ sometimes more useful than $\\\\sqrt{b}$ in algebraic manipulation?</li>
+                    <li>Why is $b^{1/2}$ sometimes more useful than $\\sqrt{b}$ in algebraic manipulation?</li>
                     <li>How does squaring both sides potentially 'create' answers that aren't actually correct?</li>
                     <li>What is the physical meaning of the domain restriction when finding the inverse of $f(x) = x^2$?</li>
                 </ol>

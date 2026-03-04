@@ -560,7 +560,7 @@ window.CHAPTER_DATA["precalc"] = {
 
             <div class="example-card glass" style="margin-top:20px; padding:20px; border-left:3px solid var(--accent-magenta);">
                 <h4><i class="fas fa-pencil-alt"></i> Worked Example: Finding $k$ for Continuity</h4>
-                <p style="font-family:'JetBrains Mono', monospace; background:rgba(0,0,0,0.2); padding:10px; border-radius:8px;">$f(x) = \\begin{cases} 3x + k & x < 2 \\\\ x^2 + 1 & x \\geq 2 \\end{cases}$. Find $k$ so $f$ is continuous at $x = 2$.</p>
+                <p style="font-family:'JetBrains Mono', monospace; background:rgba(0,0,0,0.2); padding:10px; border-radius:8px;">$f(x) = \\begin{cases} 3x + k & x < 2 \\ x^2 + 1 & x \\geq 2 \\end{cases}$. Find $k$ so $f$ is continuous at $x = 2$.</p>
                 <details>
                     <summary style="font-size:0.85rem; color:var(--accent-magenta); font-weight:600; cursor:pointer;">View Step-by-Step Solution</summary>
                     <div style="margin-top:10px; padding-left:15px; border-left:1px solid rgba(255,255,255,0.1); line-height:2;">

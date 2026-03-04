@@ -139,7 +139,7 @@ window.CHAPTER_DATA['stats_res'] = {
                         </svg>
                         <p style="font-size: 0.85rem; opacity: 0.8; text-align: center;">
                             The higher the <strong>mismatch</strong> between the Expected model and observed Reality, <br>
-                            the larger the $\chi^2$ value becomes.
+                            the larger the $\\chi^2$ value becomes.
                         </p>
                     </div>
                 </div>
@@ -299,7 +299,7 @@ window.CHAPTER_DATA['stats_res'] = {
                 </div>
 
                 <div class="tj-edge glass">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Elite Rule: Correlation $\neq$ Causation</h4>
+                    <h4><i class="fas fa-exclamation-triangle"></i> Elite Rule: Correlation $\\neq$ Causation</h4>
                     <p>Even if $r = 0.99$, it doesn't mean $X$ caused $Y$. They might both be driven by a "Lurking Variable" (Neural Ghost). Statistics identifies patterns; science explains mechanisms.</p>
                 </div>
             </div>

@@ -2,7 +2,7 @@
 window.CHAPTER_DATA["ch_amc"] = {
     "ch_amc-1": {
         title: "AMC: Prime Factorization Secrets",
-        subtitle: "The DNA of Numbers \u0026 Divisor Counting",
+        subtitle: "The DNA of Numbers \\u0026 Divisor Counting",
         content: `
             <div class="lesson-section" style="border-left: 4px solid #ffd700;">
                 <h2>I. The Fundamental Theorem of Arithmetic</h2>
@@ -44,7 +44,7 @@ window.CHAPTER_DATA["ch_amc"] = {
         `
     },
     "ch_amc-3": {
-        title: "AMC: Vieta's Theorem \u0026 Polynomials",
+        title: "AMC: Vieta's Theorem \\u0026 Polynomials",
         subtitle: "Roots, Sums, and Products",
         content: `
             <div class="lesson-section">

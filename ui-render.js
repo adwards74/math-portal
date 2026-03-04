@@ -383,7 +383,7 @@ window.UIEngine = (function () {
         } else {
             const real = (-b / (2 * a)).toFixed(2);
             const imag = (Math.sqrt(-disc) / (2 * a)).toFixed(2);
-            result += `<span style="color:var(--accent-magenta)">Complex Roots:</span><br>$x = ${real} \pm ${imag}i$`;
+            result += `<span style="color:var(--accent-magenta)">Complex Roots:</span><br>$x = ${real} \\pm ${imag}i$`;
         }
 
         output.innerHTML = result;
@@ -458,7 +458,7 @@ window.UIEngine = (function () {
                 safeExpr = safeExpr.replace(/\^/g, '**');
 
                 // Allow simple multiplication like 2x -> 2*x
-                safeExpr = safeExpr.replace(/(\d)(x)/g, '$1*$2');
+                safeExpr = safeExpr.replace(/(\\d)(x)/g, '$1*$2');
 
                 const fn = new Function('x', `return ${safeExpr};`);
                 return fn(x);

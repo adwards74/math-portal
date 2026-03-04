@@ -6,7 +6,7 @@ window.CHAPTER_DATA["ch4"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. The Anatomy of a Matrix</h2>
-                <p>A <strong>Matrix</strong> $A_{m \\\\times n}$ is a grid of $m$ rows and $n$ columns. We use double-subscript notation $a_{i,j}$ to locate an element at row $i$ and column $j$.</p>
+                <p>A <strong>Matrix</strong> $A_{m \\times n}$ is a grid of $m$ rows and $n$ columns. We use double-subscript notation $a_{i,j}$ to locate an element at row $i$ and column $j$.</p>
                 
                 <div class="intuition-box glass">
                     <h3><i class="fas fa-layer-group"></i> The Unified Data Block</h3>
@@ -51,7 +51,7 @@ for (int i = 0; i &lt; n; i++) {
                 <p>Unlike addition, matrix multiplication is a complex <strong>Dot Product</strong> process. For $AB$ to exist, the number of columns in $A$ must equal the number of rows in $B$.</p>
                 
                 <div class="paradigm-shift" style="border-left-color: var(--accent-red);">
-                    <h4>Non-Commutativity ($AB \\\\neq BA$)</h4>
+                    <h4>Non-Commutativity ($AB \\neq BA$)</h4>
                     <p>In normal arithmetic, $3 \\times 5 = 5 \\times 3$. In Matrix land, <strong>Order Matters</strong>. Changing the order of multiplication usually results in a completely different matrix or is mathematically impossible.</p>
                 </div>
 
@@ -72,7 +72,7 @@ for (int i = 0; i &lt; n; i++) {
                 </div>
 
                 <h2>I. What is a Determinant?</h2>
-                <p>The <strong>Determinant</strong> ($\\\\det A$) is a scalar value that captures the scaling property of a linear transformation.</p>
+                <p>The <strong>Determinant</strong> ($\\det A$) is a scalar value that captures the scaling property of a linear transformation.</p>
                 
                 <div class="glass-card" style="border-left: 4px solid var(--accent-cyan);">
                     <h4>Geometric Significance</h4>
@@ -119,7 +119,7 @@ for (int i = 0; i &lt; n; i++) {
                 
                 <div class="proof-box glass">
                     <h4>The Shortcut (2x2)</h4>
-                    <p>$$ \\text{If } A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}, \\text{ then } A^{-1} = \\frac{1}{ad-bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix} $$</p>
+                    <p>$$ \\text{If } A = \\begin{pmatrix} a & b \\ c & d \\end{pmatrix}, \\text{ then } A^{-1} = \\frac{1}{ad-bc} \\begin{pmatrix} d & -b \\ -c & a \\end{pmatrix} $$</p>
                     <p style="margin-top:10px;">If $\\det A = 0$, you cannot divide by zero? ence, No Inverse exists.</p>
                 </div>
             </div>

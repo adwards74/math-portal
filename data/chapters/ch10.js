@@ -62,7 +62,7 @@ window.CHAPTER_DATA["ch10"] = {
                     <ul class="glass-list" style="margin-top:10px;">
                         <li>$e = 0$: Perfect Circle.</li>
                         <li>$0 < e < 1$: Ellipse.</li>
-                        <li>$e \\\\to 1$: Extremely flat, needle-like orbit.</li>
+                        <li>$e \\to 1$: Extremely flat, needle-like orbit.</li>
                     </ul>
                 </div>
 
@@ -83,7 +83,7 @@ window.CHAPTER_DATA["ch10"] = {
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-orange);">
                     <h4>Asymptote Architecture</h4>
-                    <p>Every hyperbola $\\\\frac{x^2}{a^2} - \\\\frac{y^2}{b^2} = 1$ is boxed in by two diagonal lines: $y = \\\\pm \\\\frac{b}{a}x$.</p>
+                    <p>Every hyperbola $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$ is boxed in by two diagonal lines: $y = \\pm \\frac{b}{a}x$.</p>
                     <p style="margin-top:10px;">These lines represent the 'target' velocity of a spacecraft as it escapes a planet's influence.</p>
                 </div>
 

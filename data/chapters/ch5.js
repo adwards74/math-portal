@@ -20,7 +20,7 @@ window.CHAPTER_DATA["ch5"] = {
             {
                 level: 3,
                 question: "MASTERY CHALLENGE: A parabola $y = x^2 + kx + 4$ is tangent to the x-axis. Using Vieta's formulas or the discriminant, prove that $k = 4$ or $k = -4$. Justify your reasoning.",
-                template: "Step 1: For tangency, the discriminant must be... \nStep 2: Setup the equation... \nStep 3: Solve for k...",
+                template: "Step 1: For tangency, the discriminant must be... \\nStep 2: Setup the equation... \\nStep 3: Solve for k...",
                 answer: "For tangency, $D = b^2 - 4ac = 0$. Here $a=1, b=k, c=4$. So $k^2 - 4(1)(4) = 0 \\implies k^2 = 16 \\implies k = \\pm 4$.",
                 explanation: "This covers the Elite mastery requirement for justifying tangency through algebraic invariants."
             }
@@ -44,7 +44,7 @@ window.CHAPTER_DATA["ch5"] = {
                     <ul class="glass-list">
                         <li>$(h, k)$ is the <strong>Vertex</strong> (Turning Point).</li>
                         <li>$a$ determines the width and orientation (up/down).</li>
-                        <li>The distance from Vertex to Focus is $p = \\\\frac{1}{4a}$.</li>
+                        <li>The distance from Vertex to Focus is $p = \\frac{1}{4a}$.</li>
                     </ul>
                 </div>
             </div>
@@ -81,14 +81,14 @@ window.CHAPTER_DATA["ch5"] = {
                 </div>
 
                 <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
-                    <p><strong>Problem 3:</strong> Find the distance from the vertex to the focus ($p$) for $y = \frac{1}{8}x^2$.</p>
+                    <p><strong>Problem 3:</strong> Find the distance from the vertex to the focus ($p$) for $y = \\frac{1}{8}x^2$.</p>
                     <details style="margin-top:10px;">
                         <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                        <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Use the formula $p = \frac{1}{4a}$, where $a = 1/8$.</p>
+                        <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Use the formula $p = \\frac{1}{4a}$, where $a = 1/8$.</p>
                     </details>
                     <details style="margin-top:8px;">
                         <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                        <p style="margin-top:8px;">$p = \frac{1}{4(1/8)} = \frac{1}{1/2} = 2$.</p>
+                        <p style="margin-top:8px;">$p = \\frac{1}{4(1/8)} = \\frac{1}{1/2} = 2$.</p>
                     </details>
                 </div>
 
@@ -126,7 +126,7 @@ window.CHAPTER_DATA["ch5"] = {
 
                 <div class="paradigm-shift" style="margin-top:20px;">
                     <h4>Proof Sketch</h4>
-                    <p>Expand $(x - r_1)(x - r_2) = x^2 - (r_1 + r_2)x + (r_1 \\\\cdot r_2)$. Matching this with $x^2 + \\\\frac{b}{a}x + \\\\frac{c}{a} = 0$ reveals the secret constants!</p>
+                    <p>Expand $(x - r_1)(x - r_2) = x^2 - (r_1 + r_2)x + (r_1 \\cdot r_2)$. Matching this with $x^2 + \\frac{b}{a}x + \\frac{c}{a} = 0$ reveals the secret constants!</p>
                 </div>
 
                 <h2>II. Algebra 1 Factoring Drills</h2>
@@ -224,7 +224,7 @@ window.CHAPTER_DATA["ch5"] = {
                         <p><strong>Problem 8:</strong> Factor $2x^2 + 7x + 3$</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">AC Method: Multiply $a \\\\times c = 2 \\\\times 3 = 6$. Find two numbers that multiply to 6 and add to 7.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">AC Method: Multiply $a \\times c = 2 \\times 3 = 6$. Find two numbers that multiply to 6 and add to 7.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
@@ -235,7 +235,7 @@ window.CHAPTER_DATA["ch5"] = {
                         <p><strong>Problem 9:</strong> Factor $3x^2 - 10x - 8$</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">AC = $3 \\\\times (-8) = -24$. Find two numbers that multiply to $-24$ and add to $-10$.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">AC = $3 \\times (-8) = -24$. Find two numbers that multiply to $-24$ and add to $-10$.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
@@ -253,12 +253,12 @@ window.CHAPTER_DATA["ch5"] = {
             <div class="lesson-section">
                 <div class="intuition-box glass" style="border-left-color: var(--accent-magenta);">
                     <h3><i class="fas fa-atom"></i> What is $i$?</h3>
-                    <p>When you try to solve $x^2 = -1$, there is NO real number that works. Mathematicians invented <strong>$i$</strong> (the imaginary unit) to fill this gap. It is defined as: $i = \\\\sqrt{-1}$, which means $i^2 = -1$.</p>
+                    <p>When you try to solve $x^2 = -1$, there is NO real number that works. Mathematicians invented <strong>$i$</strong> (the imaginary unit) to fill this gap. It is defined as: $i = \\sqrt{-1}$, which means $i^2 = -1$.</p>
                 </div>
 
                 <h2>I. The Definition</h2>
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-magenta);">
-                    <p><strong>Key Fact:</strong> $i = \\\\sqrt{-1}$ and $i^2 = -1$</p>
+                    <p><strong>Key Fact:</strong> $i = \\sqrt{-1}$ and $i^2 = -1$</p>
                     <p style="margin-top:10px;">A <strong>Complex Number</strong> has the form $a + bi$ where $a$ is the Real Part and $b$ is the Imaginary Part.</p>
                 </div>
 
@@ -282,7 +282,7 @@ window.CHAPTER_DATA["ch5"] = {
                         <p style="font-size:1.2rem;">$1$</p>
                     </div>
                 </div>
-                <p style="margin-top:10px; font-size:0.9rem; opacity:0.8;">To find $i^n$: Divide $n$ by 4, and use the remainder. Example: $i^{17}$: $17 \\\\div 4 = 4$ remainder $1$, so $i^{17} = i^1 = i$.</p>
+                <p style="margin-top:10px; font-size:0.9rem; opacity:0.8;">To find $i^n$: Divide $n$ by 4, and use the remainder. Example: $i^{17}$: $17 \\div 4 = 4$ remainder $1$, so $i^{17} = i^1 = i$.</p>
 
                 <h2>III. Operations with Complex Numbers</h2>
                 <div class="glass-card" style="padding:20px; border-left: 4px solid var(--accent-blue);">
@@ -303,7 +303,7 @@ window.CHAPTER_DATA["ch5"] = {
                 </div>
                 <div class="glass-card" style="padding:20px; margin-top:15px; border-left: 4px solid var(--accent-cyan);">
                     <h4>Simplify Square Roots of Negatives</h4>
-                    <p>$\\\\sqrt{-n} = i\\\\sqrt{n}$. Example: $\\\\sqrt{-36} = i\\\\sqrt{36} = 6i$</p>
+                    <p>$\\sqrt{-n} = i\\sqrt{n}$. Example: $\\sqrt{-36} = i\\sqrt{36} = 6i$</p>
                 </div>
 
                 <h2>IV. Practice Problems</h2>
@@ -328,7 +328,7 @@ window.CHAPTER_DATA["ch5"] = {
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$23 \\\\div 4 = 5$ remainder $3$. So $i^{23} = i^3 = -i$</p>
+                            <p style="margin-top:8px;">$23 \\div 4 = 5$ remainder $3$. So $i^{23} = i^3 = -i$</p>
                         </details>
                     </div>
 
@@ -357,14 +357,14 @@ window.CHAPTER_DATA["ch5"] = {
                     </div>
 
                     <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
-                        <p><strong>Problem 5:</strong> Simplify $\\\\sqrt{-49}$</p>
+                        <p><strong>Problem 5:</strong> Simplify $\\sqrt{-49}$</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$\\\\sqrt{-49} = i\\\\sqrt{49}$. What is $\\\\sqrt{49}$?</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$\\sqrt{-49} = i\\sqrt{49}$. What is $\\sqrt{49}$?</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$\\\\sqrt{-49} = 7i$</p>
+                            <p style="margin-top:8px;">$\\sqrt{-49} = 7i$</p>
                         </details>
                     </div>
 
@@ -399,7 +399,7 @@ window.CHAPTER_DATA["ch5"] = {
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-cyan);">
                     <h4><i class="fas fa-list-ol"></i> The Step-by-Step Algorithm</h4>
                     <ol class="glass-list" style="line-height:2;">
-                        <li>If $a \\\\neq 1$, factor $a$ out from the $x^2$ and $x$ terms.</li>
+                        <li>If $a \\neq 1$, factor $a$ out from the $x^2$ and $x$ terms.</li>
                         <li>Take the coefficient of $x$, <strong>divide by 2</strong>, then <strong>square it</strong>: $(b/2)^2$.</li>
                         <li><strong>Add AND subtract</strong> that value inside the expression (to keep it balanced).</li>
                         <li>Group the perfect square trinomial: $(x + b/2)^2$.</li>
@@ -456,7 +456,7 @@ window.CHAPTER_DATA["ch5"] = {
                         </tr>
                         <tr>
                             <td style="padding:8px;"><strong>Step 5:</strong></td>
-                            <td style="color:var(--accent-magenta);">$x - 2 = \\\\pm 4$ → $x = 6$ or $x = -2$</td>
+                            <td style="color:var(--accent-magenta);">$x - 2 = \\pm 4$ → $x = 6$ or $x = -2$</td>
                         </tr>
                     </table>
                 </div>
@@ -519,7 +519,7 @@ window.CHAPTER_DATA["ch5"] = {
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$(x+3)^2 = 4$ → $x+3 = \\\\pm 2$ → $x = -1$ or $x = -5$</p>
+                            <p style="margin-top:8px;">$(x+3)^2 = 4$ → $x+3 = \\pm 2$ → $x = -1$ or $x = -5$</p>
                         </details>
                     </div>
 
@@ -531,7 +531,7 @@ window.CHAPTER_DATA["ch5"] = {
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$(x-1)^2 = 9$ → $x-1 = \\\\pm 3$ → $x = 4$ or $x = -2$</p>
+                            <p style="margin-top:8px;">$(x-1)^2 = 9$ → $x-1 = \\pm 3$ → $x = 4$ or $x = -2$</p>
                         </details>
                     </div>
                 </div>
@@ -571,7 +571,7 @@ window.CHAPTER_DATA["ch5"] = {
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$D = 100 - 100 = 0$. So $x = \frac{10 \pm 0}{2} = 5$. Only one real solution.</p>
+                            <p style="margin-top:8px;">$D = 100 - 100 = 0$. So $x = \\frac{10 \\pm 0}{2} = 5$. Only one real solution.</p>
                         </details>
                     </div>
 
@@ -579,11 +579,11 @@ window.CHAPTER_DATA["ch5"] = {
                         <p><strong>Problem 2:</strong> Solve $x^2 - 4x + 13 = 0$.</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$a=1, b=-4, c=13$. $D = 16 - 52 = -36$. Remember $\sqrt{-36} = 6i$.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$a=1, b=-4, c=13$. $D = 16 - 52 = -36$. Remember $\\sqrt{-36} = 6i$.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$x = \frac{4 \pm 6i}{2} = 2 \pm 3i$.</p>
+                            <p style="margin-top:8px;">$x = \\frac{4 \\pm 6i}{2} = 2 \\pm 3i$.</p>
                         </details>
                     </div>
 
@@ -591,11 +591,11 @@ window.CHAPTER_DATA["ch5"] = {
                         <p><strong>Problem 3:</strong> Solve $3x^2 + 5x - 2 = 0$.</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$a=3, b=5, c=-2$. $D = 25 - 4(3)(-2) = 25 + 24 = 49$. $\sqrt{49} = 7$.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$a=3, b=5, c=-2$. $D = 25 - 4(3)(-2) = 25 + 24 = 49$. $\\sqrt{49} = 7$.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$x = \frac{-5 \pm 7}{6} \rightarrow x = 1/3$ or $x = -2$.</p>
+                            <p style="margin-top:8px;">$x = \\frac{-5 \\pm 7}{6} \\rightarrow x = 1/3$ or $x = -2$.</p>
                         </details>
                     </div>
 
@@ -620,7 +620,7 @@ window.CHAPTER_DATA["ch5"] = {
         content: `
             <div class="lesson-section">
                 <h2>I. Mapping the Solution Zone</h2>
-                <p>Solving $f(x) \\\\ge 0$ means finding the intervals of $x$ where the parabola is <strong>on or above</strong> the X-axis.</p>
+                <p>Solving $f(x) \\ge 0$ means finding the intervals of $x$ where the parabola is <strong>on or above</strong> the X-axis.</p>
                 
                 <div class="tj-edge glass" style="border-left-color: var(--accent-orange);">
                     <h4><i class="fas fa-microscope"></i> Boundary Logic</h4>
@@ -633,7 +633,7 @@ window.CHAPTER_DATA["ch5"] = {
                         <p><strong>Problem 1:</strong> Solve: $x^2 - 4 > 0$.</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Set $x^2 - 4 = 0$ to find the boundaries. $x = 2$ and $x = -2$. Now test values in $(-\\\\infty, -2)$, $(-2, 2)$, and $(2, \\\\infty)$.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Set $x^2 - 4 = 0$ to find the boundaries. $x = 2$ and $x = -2$. Now test values in $(-\\infty, -2)$, $(-2, 2)$, and $(2, \\infty)$.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
@@ -642,14 +642,14 @@ window.CHAPTER_DATA["ch5"] = {
                     </div>
 
                     <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
-                        <p><strong>Problem 2:</strong> Solve: $x^2 - 5x + 6 \\\\le 0$.</p>
+                        <p><strong>Problem 2:</strong> Solve: $x^2 - 5x + 6 \\le 0$.</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Factor the quadratic: $(x-2)(x-3) \\\\le 0$. The roots are 2 and 3. Since it's $\\\\le$ and the parabola opens up, the solution is between the roots.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Factor the quadratic: $(x-2)(x-3) \\le 0$. The roots are 2 and 3. Since it's $\\le$ and the parabola opens up, the solution is between the roots.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$2 \\\\le x \\\\le 3$.</p>
+                            <p style="margin-top:8px;">$2 \\le x \\le 3$.</p>
                         </details>
                     </div>
 
@@ -673,7 +673,7 @@ window.CHAPTER_DATA["ch5"] = {
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">All real numbers except $x = 2$. Or $(-\\\\infty, 2) \\\\cup (2, \\\\infty)$.</p>
+                            <p style="margin-top:8px;">All real numbers except $x = 2$. Or $(-\\infty, 2) \\cup (2, \\infty)$.</p>
                         </details>
                     </div>
                 </div>
@@ -708,7 +708,7 @@ window.CHAPTER_DATA["ch5"] = {
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$(x-2)(x+1) = 0 \rightarrow x=2, x=-1$. Points are $(2, 4)$ and $(-1, 1)$.</p>
+                            <p style="margin-top:8px;">$(x-2)(x+1) = 0 \\rightarrow x=2, x=-1$. Points are $(2, 4)$ and $(-1, 1)$.</p>
                         </details>
                     </div>
 
@@ -716,7 +716,7 @@ window.CHAPTER_DATA["ch5"] = {
                         <p><strong>Problem 2:</strong> Use the discriminant to determine if $y = 3x - 5$ intersects $y = x^2$.</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Set $x^2 = 3x - 5 \rightarrow x^2 - 3x + 5 = 0$. Calculate $D = b^2 - 4ac$.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Set $x^2 = 3x - 5 \\rightarrow x^2 - 3x + 5 = 0$. Calculate $D = b^2 - 4ac$.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
@@ -728,11 +728,11 @@ window.CHAPTER_DATA["ch5"] = {
                         <p><strong>Problem 3:</strong> For what value of $k$ is the line $y = 4x + k$ tangent to the parabola $y = x^2$?</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Set $x^2 = 4x + k \rightarrow x^2 - 4x - k = 0$. For tangency, $D$ must be $0$.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Set $x^2 = 4x + k \\rightarrow x^2 - 4x - k = 0$. For tangency, $D$ must be $0$.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$D = 16 - 4(1)(-k) = 16 + 4k$. Set $16 + 4k = 0 \rightarrow k = -4$.</p>
+                            <p style="margin-top:8px;">$D = 16 - 4(1)(-k) = 16 + 4k$. Set $16 + 4k = 0 \\rightarrow k = -4$.</p>
                         </details>
                     </div>
                 </div>

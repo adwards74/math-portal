@@ -91,7 +91,7 @@ window.CHAPTER_DATA["ch3"] = {
                     <h4>Boundary Analysis</h4>
                     <ul class="glass-list">
                         <li><strong>Dashed Line ($<$ or $>$):</strong> The boundary itself is NOT included (Exclusive).</li>
-                        <li><strong>Solid Line ($\\\\le$ or $\\\\ge$):</strong> The boundary IS included (Inclusive).</li>
+                        <li><strong>Solid Line ($\\le$ or $\\ge$):</strong> The boundary IS included (Inclusive).</li>
                     </ul>
                 </div>
 

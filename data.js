@@ -192,7 +192,7 @@ window.MATH_DATA = {
                             steps: [
                                 "Case 1 ($0 < d \\le 2$): $C(d) = 5$",
                                 "Case 2 ($d > 2$): Initial $5 + 2 \\cdot (d - 2) \\rightarrow C(d) = 2d + 1$",
-                                "Final Form: $C(d) = \\begin{cases} 5 & 0 < d \\le 2 \\\\ 2d + 1 & d > 2 \\end{cases}$"
+                                "Final Form: $C(d) = \\begin{cases} 5 & 0 < d \\le 2 \\ 2d + 1 & d > 2 \\end{cases}$"
                             ],
                             intuition: "Real-world pricing is rarely a single smooth line. Piecewise functions allow us to 'stitch' different behaviors together based on the input range."
                         }
@@ -247,7 +247,7 @@ window.MATH_DATA = {
                         },
                         {
                             title: "Example 2: Corner Point Optimization",
-                            problem: "Maximize $P = 3x + 2y$ subject to $x + y \\\\le 4$, $x \\\\ge 1$, $y \\\\ge 0$.",
+                            problem: "Maximize $P = 3x + 2y$ subject to $x + y \\le 4$, $x \\ge 1$, $y \\ge 0$.",
                             steps: [
                                 "Find Vertices of the region: (1, 0), (4, 0) is wrong! Intersection of $x+y=4$ and $x=1$ is $(1, 3)$. Corners are (1,0), (4,0), and (1,3).",
                                 "Test (1,0): $P = 3(1) + 2(0) = 3$.",
@@ -308,40 +308,40 @@ window.MATH_DATA = {
                         { name: "4.6: Identity & Inverse Matrices", url: "lesson:algebra2:ch4-6" },
                         { name: "4.7: 3x3 Determinants & Volume", url: "lesson:algebra2:ch4-7" },
                         { name: "4.8: Review Challenge", url: "lesson:algebra2:ch4-rev" },
-                        { name: "💡 Competition Tip: Cramer's Rule", url: "#", insight: "For a system $AX=B$, if $det(A) \neq 0$, the unique solution is $x_i = det(A_i)/det(A)$. It's the most efficient way to solve specific variables in high-speed competitions!" }
+                        { name: "💡 Competition Tip: Cramer's Rule", url: "#", insight: "For a system $AX=B$, if $det(A) \\neq 0$, the unique solution is $x_i = det(A_i)/det(A)$. It's the most efficient way to solve specific variables in high-speed competitions!" }
                     ],
                     examples: [
                         {
                             title: "Example 1: The Matrix Multiplier",
-                            problem: "Compute $AB$ where $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ and $B = \\begin{pmatrix} 5 & 6 \\\\ 7 & 8 \\end{pmatrix}$. Show the dot products.",
+                            problem: "Compute $AB$ where $A = \\begin{pmatrix} 1 & 2 \\ 3 & 4 \\end{pmatrix}$ and $B = \\begin{pmatrix} 5 & 6 \\ 7 & 8 \\end{pmatrix}$. Show the dot products.",
                             steps: [
                                 "Row 1 &times; Col 1: $(1)(5) + (2)(7) = 5 + 14 = 19$.",
                                 "Row 1 &times; Col 2: $(1)(6) + (2)(8) = 6 + 16 = 22$.",
                                 "Row 2 &times; Col 1: $(3)(5) + (4)(7) = 15 + 28 = 43$.",
                                 "Row 2 &times; Col 2: $(3)(6) + (4)(8) = 18 + 32 = 50$.",
-                                "Final Matrix: $\\begin{pmatrix} 19 & 22 \\\\ 43 & 50 \\end{pmatrix}$."
+                                "Final Matrix: $\\begin{pmatrix} 19 & 22 \\ 43 & 50 \\end{pmatrix}$."
                             ],
                             intuition: "Notice how Row 1 of the output depends only on Row 1 of A. Matrix multiplication is essentially a batch processing of vectors."
                         },
                         {
                             title: "Example 2: Inverting Space",
-                            problem: "Find the inverse of Matrix $M = \\begin{pmatrix} 3 & 1 \\\\ 5 & 2 \\end{pmatrix}$. Check if det $\\neq$ 0.",
+                            problem: "Find the inverse of Matrix $M = \\begin{pmatrix} 3 & 1 \\ 5 & 2 \\end{pmatrix}$. Check if det $\\neq$ 0.",
                             steps: [
                                 "Calculate Determinant: $\\det M = (3)(2) - (1)(5) = 6 - 5 = 1$. Since $det \\neq 0$, the inverse exists.",
-                                "Swap $a$ and $d$: $\\begin{pmatrix} 2 & \\dots \\\\ \\dots & 3 \\end{pmatrix}$.",
-                                "Negate $b$ and $c$: $\\begin{pmatrix} 2 & -1 \\\\ -5 & 3 \\end{pmatrix}$.",
-                                "Multiply by $1/det$: Since $det=1$, the inverse is simply $\\begin{pmatrix} 2 & -1 \\\\ -5 & 3 \\end{pmatrix}$."
+                                "Swap $a$ and $d$: $\\begin{pmatrix} 2 & \\dots \\ \\dots & 3 \\end{pmatrix}$.",
+                                "Negate $b$ and $c$: $\\begin{pmatrix} 2 & -1 \\ -5 & 3 \\end{pmatrix}$.",
+                                "Multiply by $1/det$: Since $det=1$, the inverse is simply $\\begin{pmatrix} 2 & -1 \\ -5 & 3 \\end{pmatrix}$."
                             ],
                             intuition: "The inverse matrix is the 'Negative Operator'. If $M$ encodes your data, $M^{-1}$ is the only key that can bring it back without noise."
                         },
                         {
                             title: "Example 3: Determinants as Scaling",
-                            problem: "How does the matrix $\\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}$ transform a unit square $(1 \\times 1)$?",
+                            problem: "How does the matrix $\\begin{pmatrix} 2 & 0 \\ 0 & 3 \\end{pmatrix}$ transform a unit square $(1 \\times 1)$?",
                             steps: [
                                 "Calculate Determinant: $\\det = (2)(3) - (0)(0) = 6$.",
                                 "Physical result: The square's width is doubled (2) and its height is tripled (3).",
                                 "Area change: The new area is $2 \\times 3 = 6$ square units. The determinant correctly predicted the 6-fold scaling of area.",
-                                "Final Matrix: $\\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}$."
+                                "Final Matrix: $\\begin{pmatrix} 2 & 0 \\ 0 & 3 \\end{pmatrix}$."
                             ],
                             intuition: "A matrix is a physical distortion of space. The determinant is the 'Magnification' factor of that distortion."
                         }
@@ -357,7 +357,7 @@ window.MATH_DATA = {
                             },
                             {
                                 title: "Level 2: Drill",
-                                question: "Compute the determinant of $M = \\begin{pmatrix} 3 & 2 \\\\ 1 & 4 \\end{pmatrix}$.",
+                                question: "Compute the determinant of $M = \\begin{pmatrix} 3 & 2 \\ 1 & 4 \\end{pmatrix}$.",
                                 options: ["10", "14", "12", "7"],
                                 answer: "10",
                                 explanation: "$(3)(4) - (2)(1) = 12 - 2 = 10$."
@@ -481,9 +481,9 @@ window.MATH_DATA = {
                             title: "Example 2: Rational Root Pruning",
                             problem: "List all possible rational roots for $P(x) = 3x^3 + x^2 - 12x + 10$ using the Rational Root Theorem.",
                             steps: [
-                                "Identify factors of constant ($p$): $\\\\pm 1, \\\\pm 2, \\\\pm 5, \\\\pm 10$.",
-                                "Identify factors of leading coeff ($q$): $\\\\pm 1, \\\\pm 3$.",
-                                "Form all $p/q$ combinations: $\\\\pm 1, \\\\pm 2, \\\\pm 5, \\\\pm 10, \\\\pm \\\\frac{1}{3}, \\\\pm \\\\frac{2}{3}, \\\\pm \\\\frac{5}{3}, \\\\pm \\\\frac{10}{3}$.",
+                                "Identify factors of constant ($p$): $\\pm 1, \\pm 2, \\pm 5, \\pm 10$.",
+                                "Identify factors of leading coeff ($q$): $\\pm 1, \\pm 3$.",
+                                "Form all $p/q$ combinations: $\\pm 1, \\pm 2, \\pm 5, \\pm 10, \\pm \\frac{1}{3}, \\pm \\frac{2}{3}, \\pm \\frac{5}{3}, \\pm \\frac{10}{3}$.",
                                 "Observation: This reduces the search space from 'any number' to just 16 candidates."
                             ],
                             intuition: "Even in complex automation, we first 'prune' impossible options. The Rational Root Theorem is a heuristic that makes impossible root-finding possible."
@@ -542,35 +542,35 @@ window.MATH_DATA = {
                     examples: [
                         {
                             title: "Example 1: Rational Exponent Mastery",
-                            problem: "Simplify: $\\\\frac{x^{5/2}}{x^{1/2}} \\\\cdot \\\\sqrt[3]{x^6}$",
+                            problem: "Simplify: $\\frac{x^{5/2}}{x^{1/2}} \\cdot \\sqrt[3]{x^6}$",
                             steps: [
                                 "Simplify current power: $x^{5/2 - 1/2} = x^2$.",
-                                "Convert radical to power: $\\\\sqrt[3]{x^6} = x^{6/3} = x^2$.",
-                                "Combine: $x^2 \\\\cdot x^2 = x^4$."
+                                "Convert radical to power: $\\sqrt[3]{x^6} = x^{6/3} = x^2$.",
+                                "Combine: $x^2 \\cdot x^2 = x^4$."
                             ],
                             intuition: "Rational exponents are the 'standard protocol' of algebra. By converting everything to a base power, complex radical problems become simple additions."
                         },
                         {
                             title: "Example 2: The Extraneous Root Hunt",
-                            problem: "Solve $\\\\sqrt{4x + 1} = x - 1$. Check for false positives.",
+                            problem: "Solve $\\sqrt{4x + 1} = x - 1$. Check for false positives.",
                             steps: [
-                                "Square both sides: $4x + 1 = (x - 1)^2 \\\\rightarrow 4x + 1 = x^2 - 2x + 1$.",
-                                "Rearrange: $x^2 - 6x = 0 \\\\rightarrow x(x - 6) = 0$.",
+                                "Square both sides: $4x + 1 = (x - 1)^2 \\rightarrow 4x + 1 = x^2 - 2x + 1$.",
+                                "Rearrange: $x^2 - 6x = 0 \\rightarrow x(x - 6) = 0$.",
                                 "Candidates: $x = 0, x = 6$.",
-                                "Test $x=0$: $\\\\sqrt{1} = -1$ (False! Extraneous).",
-                                "Test $x=6$: $\\\\sqrt{25} = 5$ (True!)."
+                                "Test $x=0$: $\\sqrt{1} = -1$ (False! Extraneous).",
+                                "Test $x=6$: $\\sqrt{25} = 5$ (True!)."
                             ],
                             intuition: "Squaring is a 'lossy' operation—it loses the information about the original sign. Always verify your results in the original code."
                         },
                         {
                             title: "Example 3: Function Inversion",
-                            problem: "Find the inverse of $f(x) = \\\\sqrt{x - 3} + 2$. State the domain.",
+                            problem: "Find the inverse of $f(x) = \\sqrt{x - 3} + 2$. State the domain.",
                             steps: [
-                                "Swap $x$ and $y$: $x = \\\\sqrt{y - 3} + 2$.",
-                                "Isolate radical: $x - 2 = \\\\sqrt{y - 3}$.",
+                                "Swap $x$ and $y$: $x = \\sqrt{y - 3} + 2$.",
+                                "Isolate radical: $x - 2 = \\sqrt{y - 3}$.",
                                 "Square: $(x - 2)^2 = y - 3$.",
                                 "Solve for $y$: $y = (x - 2)^2 + 3$.",
-                                "Constraint: Since the original range was $y \\\\ge 2$, the new domain is $x \\\\ge 2$."
+                                "Constraint: Since the original range was $y \\ge 2$, the new domain is $x \\ge 2$."
                             ],
                             intuition: "An inverse is a geometric mirror. But mirrors can only reflect what exists; we must carefully clip the domain to ensure a one-to-one reflection."
                         }
@@ -620,9 +620,9 @@ window.MATH_DATA = {
                             problem: "You invest $1,000 in an account with 5% annual interest compounded continuously. How much will you have after 10 years?",
                             steps: [
                                 "Use the formula $A = Pe^{rt}$.",
-                                "Substitute values: $1000 \\\\cdot e^{(0.05)(10)}$.",
-                                "Simplify exponent: $1000 \\\\cdot e^{0.5}$.",
-                                "Calculate: $1000 \\\\cdot 1.6487 \\\\approx \\\\$1,648.70$."
+                                "Substitute values: $1000 \\cdot e^{(0.05)(10)}$.",
+                                "Simplify exponent: $1000 \\cdot e^{0.5}$.",
+                                "Calculate: $1000 \\cdot 1.6487 \\approx \\$1,648.70$."
                             ],
                             intuition: "Continuous compounding is the theoretical limit of growth. It assumes interest is being added at every possible instant."
                         },
@@ -630,18 +630,18 @@ window.MATH_DATA = {
                             title: "Example 2: The Log Power Hack",
                             problem: "Solve for $x$: $3^{x+1} = 20$. Give the answer using natural logs.",
                             steps: [
-                                "Take $\\\\ln$ of both sides: $\\\\ln(3^{x+1}) = \\\\ln(20)$.",
-                                "Use Power Rule: $(x+1)\\\\ln(3) = \\\\ln(20)$.",
-                                "Divide by $\\\\ln(3)$: $x+1 = \\\\frac{\\\\ln(20)}{\\\\ln(3)}$.",
-                                "Solve for $x$: $x = \\\\frac{\\\\ln(20)}{\\\\ln(3)} - 1$."
+                                "Take $\\ln$ of both sides: $\\ln(3^{x+1}) = \\ln(20)$.",
+                                "Use Power Rule: $(x+1)\\ln(3) = \\ln(20)$.",
+                                "Divide by $\\ln(3)$: $x+1 = \\frac{\\ln(20)}{\\ln(3)}$.",
+                                "Solve for $x$: $x = \\frac{\\ln(20)}{\\ln(3)} - 1$."
                             ],
                             intuition: "Logarithms 'pull down' variables from the exponent. They are the only way to solve for a variable that is trapped in a power."
                         },
                         {
                             title: "Example 3: Magnitude & Scale",
-                            problem: "Compare the intensity of an earthquake of magnitude 8.0 vs 6.0 on the Richter scale ($M = \\\\log_{10}(I/I_0)$).",
+                            problem: "Compare the intensity of an earthquake of magnitude 8.0 vs 6.0 on the Richter scale ($M = \\log_{10}(I/I_0)$).",
                             steps: [
-                                "Set up equations: $8 = \\\\log_{10}(I_8/I_0)$ and $6 = \\\\log_{10}(I_6/I_0)$.",
+                                "Set up equations: $8 = \\log_{10}(I_8/I_0)$ and $6 = \\log_{10}(I_6/I_0)$.",
                                 "Convert to exponential: $10^8 = I_8/I_0$ and $10^6 = I_6/I_0$.",
                                 "Divide: $I_8/I_6 = 10^8/10^6 = 10^2 = 100$.",
                                 "Result: A magnitude 8 earthquake is 100 times more intense than a magnitude 6 one."
@@ -691,9 +691,9 @@ window.MATH_DATA = {
                     examples: [
                         {
                             title: "Example 1: The Asymptote Hunter",
-                            problem: "Identify the vertical and horizontal asymptotes for $f(x) = \\\\frac{3x - 6}{x + 4}$.",
+                            problem: "Identify the vertical and horizontal asymptotes for $f(x) = \\frac{3x - 6}{x + 4}$.",
                             steps: [
-                                "Vertical: Set denominator to zero: $x + 4 = 0 \\\\rightarrow x = -4$.",
+                                "Vertical: Set denominator to zero: $x + 4 = 0 \\rightarrow x = -4$.",
                                 "Horizontal: Compare degrees (n=1, d=1). They are equal.",
                                 "Ratio of leading coefficients: $y = 3/1 = 3$.",
                                 "Final Results: V.A. at $x = -4$, H.A. at $y = 3$."
@@ -702,10 +702,10 @@ window.MATH_DATA = {
                         },
                         {
                             title: "Example 2: Hole vs. Asymptote",
-                            problem: "Determine if $f(x) = \\\\frac{x^2 - 9}{x - 3}$ has a hole or an asymptote at $x = 3$.",
+                            problem: "Determine if $f(x) = \\frac{x^2 - 9}{x - 3}$ has a hole or an asymptote at $x = 3$.",
                             steps: [
                                 "Factor the numerator: $x^2 - 9 = (x - 3)(x + 3)$.",
-                                "Function becomes $f(x) = \\\\frac{(x-3)(x+3)}{x-3}$.",
+                                "Function becomes $f(x) = \\frac{(x-3)(x+3)}{x-3}$.",
                                 "Since the $(x-3)$ factor cancels out, it is a **Removable Discontinuity**.",
                                 "Result: There is a **Hole** at $x = 3$."
                             ],
@@ -713,11 +713,11 @@ window.MATH_DATA = {
                         },
                         {
                             title: "Example 3: Complex Fraction Logic",
-                            problem: "Simplify: $\\\\frac{\\\\frac{1}{x} + \\\\frac{1}{y}}{\\\\frac{1}{x} - \\\\frac{1}{y}}$",
+                            problem: "Simplify: $\\frac{\\frac{1}{x} + \\frac{1}{y}}{\\frac{1}{x} - \\frac{1}{y}}$",
                             steps: [
                                 "Find the LCD of all small fractions: $xy$.",
-                                "Multiply top and bottom by $xy$: $\\\\frac{xy(\\\\frac{1}{x} + \\\\frac{1}{y})}{xy(\\\\frac{1}{x} - \\\\frac{1}{y})}$.",
-                                "Distribute: $\\\\frac{y + x}{y - x}$."
+                                "Multiply top and bottom by $xy$: $\\frac{xy(\\frac{1}{x} + \\frac{1}{y})}{xy(\\frac{1}{x} - \\frac{1}{y})}$.",
+                                "Distribute: $\\frac{y + x}{y - x}$."
                             ],
                             intuition: "Complex fractions are just nested systems. By identifying the 'Global Denominator' (LCD), we can collapse the nested layers into a single, clean expression."
                         }
@@ -773,23 +773,23 @@ window.MATH_DATA = {
                         },
                         {
                             title: "Example 2: Ellipse Parameters",
-                            problem: "Find the vertices and foci of $\\\\frac{x^2}{25} + \\\\frac{y^2}{9} = 1$.",
+                            problem: "Find the vertices and foci of $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$.",
                             steps: [
-                                "Identify $a^2=25 \\\\to a=5$ and $b^2=9 \\\\to b=3$.",
-                                "Vertices are $(\\\\pm 5, 0)$.",
+                                "Identify $a^2=25 \\to a=5$ and $b^2=9 \\to b=3$.",
+                                "Vertices are $(\\pm 5, 0)$.",
                                 "Find focal distance $c$: $c^2 = a^2 - b^2 = 25 - 9 = 16$.",
-                                "So $c = 4$. Foci are $(\\\\pm 4, 0)$."
+                                "So $c = 4$. Foci are $(\\pm 4, 0)$."
                             ],
                             intuition: "The major axis (a) defines the reach of the ellipse, while the foci (c) are the 'gravity centers' that govern its curvature."
                         },
                         {
                             title: "Example 3: Hyperbola Asymptotes",
-                            problem: "Write the equations of the asymptotes for $\\\\frac{y^2}{16} - \\\\frac{x^2}{4} = 1$.",
+                            problem: "Write the equations of the asymptotes for $\\frac{y^2}{16} - \\frac{x^2}{4} = 1$.",
                             steps: [
-                                "Identify $a^2=16 \\\\to a=4$ (vertical axis) and $b^2=4 \\\\to b=2$ (horizontal).",
+                                "Identify $a^2=16 \\to a=4$ (vertical axis) and $b^2=4 \\to b=2$ (horizontal).",
                                 "The hyperbola is vertical (y-positive).",
                                 "Asymptote slope is rise/run: $a/b = 4/2 = 2$.",
-                                "Equations: $y = \\\\pm 2x$."
+                                "Equations: $y = \\pm 2x$."
                             ],
                             intuition: "Asymptotes are the 'Target Vectors' of a hyperbola. As you move far from the center, the curve becomes indistinguishable from these straight lines."
                         }
@@ -853,9 +853,9 @@ window.MATH_DATA = {
                             problem: "Find the 10th term of the sequence $3, 6, 12, \\dots$.",
                             steps: [
                                 "Identify common ratio $r = 6/3 = 2$.",
-                                "Use explicit formula: $a_n = a_1 \\\\cdot r^{n-1}$.",
-                                "Substitute: $a_{10} = 3 \\\\cdot 2^{10-1} = 3 \\\\cdot 2^9$.",
-                                "Calculate: $3 \\\\cdot 512 = 1,536$."
+                                "Use explicit formula: $a_n = a_1 \\cdot r^{n-1}$.",
+                                "Substitute: $a_{10} = 3 \\cdot 2^{10-1} = 3 \\cdot 2^9$.",
+                                "Calculate: $3 \\cdot 512 = 1,536$."
                             ],
                             intuition: "Geometric growth is explosive ($O(2^n)$). Each step represents a doubling of the system's state, common in data replication and infectious spread models."
                         },
@@ -865,7 +865,7 @@ window.MATH_DATA = {
                             steps: [
                                 "Identify $a_1 = 10$ and $r = 5/10 = 0.5$.",
                                 "Since $|0.5| < 1$, the series converges.",
-                                "Use $S = \\\\frac{a_1}{1 - r}$.",
+                                "Use $S = \\frac{a_1}{1 - r}$.",
                                 "Substitute: $S = \\frac{10}{1 - 0.5} = \\frac{10}{0.5} = 20$."
                             ],
                             intuition: "Even though there are an infinite number of terms, their total sum stays within a finite 'box'. This is how computers render smooth gradients using discrete pixels."
@@ -919,9 +919,9 @@ window.MATH_DATA = {
                             problem: "How many ways can you choose a 3-person leadership committee from a class of 10? What if you assign them specific roles (President, VP, Secretary)?",
                             steps: [
                                 "Identify: Order doesn't matter for a flat committee.",
-                                "Calculate Combination: $10C3 = \\\\frac{10!}{3!7!} = \\\\frac{10 \\\\cdot 9 \\\\cdot 8}{3 \\\\cdot 2 \\\\cdot 1} = 120$.",
+                                "Calculate Combination: $10C3 = \\frac{10!}{3!7!} = \\frac{10 \\cdot 9 \\cdot 8}{3 \\cdot 2 \\cdot 1} = 120$.",
                                 "Identify: Order MATTERS for defined roles.",
-                                "Calculate Permutation: $10P3 = \\\\frac{10!}{7!} = 10 \\\\cdot 9 \\\\cdot 8 = 720$."
+                                "Calculate Permutation: $10P3 = \\frac{10!}{7!} = 10 \\cdot 9 \\cdot 8 = 720$."
                             ],
                             intuition: "Order is the multiplier of possibilities. When you add rank or sequence, the number of states expands rapidly."
                         },
@@ -929,9 +929,9 @@ window.MATH_DATA = {
                             title: "Example 2: The Bayesian Spam Filter",
                             problem: "If 10% of all emails are spam ($P(S)=0.1$), and 80% of spam contains 'Free' ($P(F|S)=0.8$), while only 5% of good mail does ($P(F|G)=0.05$), what is $P(S|F)$?",
                             steps: [
-                                "Use Bayes' Rule: $P(S|F) = \\\\frac{P(F|S)P(S)}{P(F)}$.",
+                                "Use Bayes' Rule: $P(S|F) = \\frac{P(F|S)P(S)}{P(F)}$.",
                                 "Calculate Total $P(F) = (0.8)(0.1) + (0.05)(0.9) = 0.08 + 0.045 = 0.125$.",
-                                "Substitute: $P(S|F) = \\\\frac{(0.8)(0.1)}{0.125} = \\\\frac{0.08}{0.125} = 0.64$.",
+                                "Substitute: $P(S|F) = \\frac{(0.8)(0.1)}{0.125} = \\frac{0.08}{0.125} = 0.64$.",
                                 "Result: There is a 64% chance the mail is spam."
                             ],
                             intuition: "Bayesian thinking is about 'Updating' probabilities. Seeing the word 'Free' boosted the probability of spam from 10% to 64%."
@@ -940,8 +940,8 @@ window.MATH_DATA = {
                             title: "Example 3: Standardizing the Score",
                             problem: "A student scored 85 on a test where the mean was 70 and deviation was 10. What is their Z-score, and where do they rank?",
                             steps: [
-                                "Formula: $z = \\\\frac{x - \\mu}{\\sigma}$.",
-                                "Calculate: $z = \\\\frac{85 - 70}{10} = 1.5$.",
+                                "Formula: $z = \\frac{x - \\mu}{\\sigma}$.",
+                                "Calculate: $z = \\frac{85 - 70}{10} = 1.5$.",
                                 "Interpretation: The student is 1.5 standard deviations above the average.",
                                 "Lookup: This puts them in the top ~7% of the class."
                             ],
@@ -996,18 +996,18 @@ window.MATH_DATA = {
                     examples: [
                         {
                             title: "Example 1: Amplitude & Period",
-                            problem: "Find the amplitude and period of $y = 5 \\\\sin(2x)$.",
+                            problem: "Find the amplitude and period of $y = 5 \\sin(2x)$.",
                             steps: [
                                 "Identify $a=5$. The amplitude is $|a| = 5$.",
                                 "Identify $b=2$.",
-                                "Calculate Period: $P = \\\\frac{2\\\\pi}{b} = \\\\frac{2\\\\pi}{2} = \\\\pi$.",
-                                "The wave repeats every $\\\\pi$ units horizontally."
+                                "Calculate Period: $P = \\frac{2\\pi}{b} = \\frac{2\\pi}{2} = \\pi$.",
+                                "The wave repeats every $\\pi$ units horizontally."
                             ],
                             intuition: "The $b$ value is the 'Speed Multiplier'. By doubling the speed of rotation, the wave completes its cycle twice as fast, cutting the period in half."
                         },
                         {
                             title: "Example 2: Arc Length & Radians",
-                            problem: "How far does a point travel on a circle with radius 10cm if it rotates through $3\\\\pi/2$ radians?",
+                            problem: "How far does a point travel on a circle with radius 10cm if it rotates through $3\\pi/2$ radians?",
                             steps: [
                                 "Use the formula: $s = r \\theta$.",
                                 "Identify $r = 10$ and $\\theta = 3\\pi/2$.",
@@ -1207,14 +1207,14 @@ window.MATH_DATA = {
                         levels: [
                             {
                                 title: "Level 1: Intuition",
-                                question: "What does the limit $\\\\lim_{x \\\\to \\\\infty} \\\\frac{1}{x}$ equal?",
-                                options: ["1", "$\\\\infty$", "0", "Undefined"],
+                                question: "What does the limit $\\lim_{x \\to \\infty} \\frac{1}{x}$ equal?",
+                                options: ["1", "$\\infty$", "0", "Undefined"],
                                 answer: "0",
                                 explanation: "As the denominator gets infinitely large, the value of the fraction gets infinitely small, approaching 0."
                             },
                             {
                                 title: "Level 2: Drill",
-                                question: "Evaluate $\\\\lim_{h \\\\to 0} (6 + h)$.",
+                                question: "Evaluate $\\lim_{h \\to 0} (6 + h)$.",
                                 options: ["0", "6", "h", "Undefined"],
                                 answer: "6",
                                 explanation: "Direct substitution: $6 + 0 = 6$."
@@ -1279,7 +1279,7 @@ window.MATH_DATA = {
                         {
                             title: "Mock FRQ 2: Matrix Transformation Rigor",
                             problem: "A transformation $A$ maps $(1, 0)$ to $(3, 4)$ and $(0, 1)$ to $(-4, 3)$. Does $A$ preserve area?",
-                            steps: ["Construct matrix $A = \\begin{pmatrix} 3 & -4 \\\\ 4 & 3 \\end{pmatrix}$.", "Calculate determinant: $(3)(3) - (-4)(4) = 9 + 16 = 25$.", "Result: Area is scaled by 25x."],
+                            steps: ["Construct matrix $A = \\begin{pmatrix} 3 & -4 \\ 4 & 3 \\end{pmatrix}$.", "Calculate determinant: $(3)(3) - (-4)(4) = 9 + 16 = 25$.", "Result: Area is scaled by 25x."],
                             intuition: "Matrices are the 'lenses' of geometry. The determinant tells you if the lens enlarges or shrinks the view."
                         }
                     ]
@@ -2236,12 +2236,12 @@ window.MATH_DATA = {
                     examples: [
                         {
                             title: "Visual Mastery: Pi Intuition",
-                            problem: "How does slicing a circle into infinite triangles prove the area is $A = \pi r^2$?",
+                            problem: "How does slicing a circle into infinite triangles prove the area is $A = \\pi r^2$?",
                             steps: [
                                 "Slice circle into small wedges.",
                                 "Rearrange wedges into a rectangle-like shape.",
-                                "Observe the base is half the circumference ($\pi r$) and height is $r$.",
-                                "Calculate area: $r \times \pi r = \pi r^2$."
+                                "Observe the base is half the circumference ($\\pi r$) and height is $r$.",
+                                "Calculate area: $r \\times \\pi r = \\pi r^2$."
                             ],
                             intuition: "Infinity is a tool for simplification. By making things smaller, we make the truth bigger."
                         }
@@ -2453,7 +2453,7 @@ window.MATH_DATA = {
                                 question: "Calculate the last three digits of $7^{100}$. (Format: 001, 123, etc.)",
                                 answer: "001",
                                 options: ["001", "007", "049", "343"],
-                                explanation: "$7^4 = 2401 \equiv 1 \pmod{1000}$. Thus $7^{100} = (7^4)^{25} \equiv 1^{25} = 1$. The 3-digit format is 001."
+                                explanation: "$7^4 = 2401 \\equiv 1 \\pmod{1000}$. Thus $7^{100} = (7^4)^{25} \\equiv 1^{25} = 1$. The 3-digit format is 001."
                             }
                         ]
                     }
@@ -2485,14 +2485,14 @@ window.MATH_DATA = {
         "Matrix": "A rectangular array of numbers, symbols, or expressions, arranged in rows and columns.",
         "Determinant": "A scalar value that encodes properties of a linear transformation. If zero, the transformation is destructive.",
         "Logarithm": "The inverse of exponentiation. It maps multiplication to addition, powering the Richter and Decibel scales.",
-        "Partial Derivative": "A derivative where only one variable changes while others are held constant. Denoted as $\partial f / \partial x$.",
-        "Gradient": "A vector ($\nabla f$) pointing in the direction of the steepest ascent on a high-dimensional surface.",
+        "Partial Derivative": "A derivative where only one variable changes while others are held constant. Denoted as $\\partial f / \\partial x$.",
+        "Gradient": "A vector ($\\nabla f$) pointing in the direction of the steepest ascent on a high-dimensional surface.",
         "Basis": "The 'skeleton' of a vector space; a set of linearly independent vectors that span the entire space.",
         "Modular Arithmetic": "A system where numbers 'wrap around' like a clock (e.g., $15 \\equiv 3 \\pmod{12}$).",
         "Chinese Remainder Theorem": "A theorem used to determine a unique integer $x$ that satisfies multiple congruences with coprime moduli.",
         "Vieta's Formulas": "Formulas relating polynomial coefficients to the sums and products of its roots ($r_1+r_2 = -b/a$).",
         "Linear Programming": "Optimization of linear functions subject to linear constraints, governed by the Vertex Principle.",
-        "Complex Conjugate": "For $z = a + bi$, the conjugate is $\bar{z} = a - bi$. Vital for ensuring real-world coefficients in wave equations.",
+        "Complex Conjugate": "For $z = a + bi$, the conjugate is $\\bar{z} = a - bi$. Vital for ensuring real-world coefficients in wave equations.",
         "Differential": "A measure of an infinitely small change in a variable, the fundamental atom of Calculus."
     }
 };
