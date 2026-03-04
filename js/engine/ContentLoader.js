@@ -5,6 +5,24 @@
 window.ContentLoader = (function () {
 
     async function loadLessonContent(lessonKey) {
+        // --- NEW: Chapter Data Check (Elite Source) ---
+        // If content is defined in CHAPTER_DATA (from ch*.js files), prioritize it.
+        if (window.CHAPTER_DATA) {
+            for (const chKey in window.CHAPTER_DATA) {
+                if (window.CHAPTER_DATA[chKey][lessonKey]) {
+                    const lesson = window.CHAPTER_DATA[chKey][lessonKey];
+                    console.log(`ContentLoader: Using CHAPTER_DATA for ${lessonKey}`);
+                    return {
+                        title: lesson.title,
+                        raw: lesson.content,
+                        html: lesson.content, // Already HTML in JS files
+                        vizConfig: lesson.viz,
+                        javaLogic: lesson.javaLogic
+                    };
+                }
+            }
+        }
+
         const metadata = await window.RegistryManager.getLesson(lessonKey);
         if (!metadata) {
             throw new Error(`ContentLoader: No metadata found for lesson '${lessonKey}'`);

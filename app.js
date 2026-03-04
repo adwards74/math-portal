@@ -894,8 +894,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
         if (!subject) return;
         const unit = subject.units[unitIdx];
-        if (!unit || !unit.quiz) return;
-        const quiz = unit.quiz;
+        if (!unit) return;
+
+        // --- NEW: Elite Data Quiz Override ---
+        let quiz = unit.quiz;
+        const unitKey = unit.title.split(':')[0].toLowerCase().trim().replace(' ', ''); // e.g. "ch5"
+        if (window.CHAPTER_DATA && window.CHAPTER_DATA[unitKey] && window.CHAPTER_DATA[unitKey].unitQuiz) {
+            console.log("Using Elite Mastery Quiz for:", unitKey);
+            quiz = window.CHAPTER_DATA[unitKey].unitQuiz;
+        }
+
+        if (!quiz) return;
         const isMultiLevel = quiz.levels && Array.isArray(quiz.levels);
 
         // For multi-level, we use the last level (Level 3: Mastery) as the graduation challenge

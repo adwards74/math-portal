@@ -1,5 +1,31 @@
 ﻿window.CHAPTER_DATA = window.CHAPTER_DATA || {};
 window.CHAPTER_DATA["ch5"] = {
+    unitQuiz: {
+        title: "Chapter 5 Mastery: Quadratic Systems",
+        levels: [
+            {
+                level: 1,
+                question: "Which form of a quadratic equation is most useful for identifying the vertex $(h, k)$?",
+                options: ["Standard Form: $ax^2 + bx + c = 0$", "Vertex Form: $a(x-h)^2 + k$", "Intercept Form: $a(x-p)(x-q)$", "Quadratic Formula"],
+                answer: "Vertex Form: $a(x-h)^2 + k$",
+                explanation: "The Vertex Form directly gives the coordinates $(h, k)$ without calculation."
+            },
+            {
+                level: 2,
+                question: "If a quadratic equation $ax^2 + bx + c = 0$ has a discriminant $D = 0$, what does this tell you about the graph of the parabola?",
+                options: ["It intersects the x-axis at 2 distinct points", "It does not intersect the x-axis at all", "It is tangent to the x-axis at a single point", "It is a straight line"],
+                answer: "It is tangent to the x-axis at a single point",
+                explanation: "D=0 means there is one repeated real root, which geometrically corresponds to the vertex touching the x-axis (tangency)."
+            },
+            {
+                level: 3,
+                question: "MASTERY CHALLENGE: A parabola $y = x^2 + kx + 4$ is tangent to the x-axis. Using Vieta's formulas or the discriminant, prove that $k = 4$ or $k = -4$. Justify your reasoning.",
+                template: "Step 1: For tangency, the discriminant must be... \nStep 2: Setup the equation... \nStep 3: Solve for k...",
+                answer: "For tangency, $D = b^2 - 4ac = 0$. Here $a=1, b=k, c=4$. So $k^2 - 4(1)(4) = 0 \\implies k^2 = 16 \\implies k = \\pm 4$.",
+                explanation: "This covers the Elite mastery requirement for justifying tangency through algebraic invariants."
+            }
+        ]
+    },
     "ch5-1": {
         title: "5.1 & 5.2 Parabolas & Vertex Form",
         subtitle: "The Geometry of Perfection & Optics",
@@ -26,6 +52,57 @@ window.CHAPTER_DATA["ch5"] = {
             <div class="tj-edge glass" style="margin-top:20px;">
                 <h4><i class="fas fa-satellite-dish"></i> The Optical Property</h4>
                 <p>Parallel rays hitting a parabolic surface always reflect through the Focus. This is why telescope mirrors are parabolic. In gaming, parabolic arcs are used to calculate the ideal trajectory of a projectile to hit a specific target focus.</p>
+            </div>
+
+            <h2>II. Practice Problems</h2>
+            <div class="practice-section glass" style="margin-top:20px; padding:20px;">
+                <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                    <p><strong>Problem 1:</strong> Identify the vertex of $y = 3(x - 5)^2 + 7$.</p>
+                    <details style="margin-top:10px;">
+                        <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                        <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Compare with $y = a(x - h)^2 + k$. Remember the sign inside the parenthesis!</p>
+                    </details>
+                    <details style="margin-top:8px;">
+                        <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                        <p style="margin-top:8px;">Vertex: $(5, 7)$</p>
+                    </details>
+                </div>
+
+                <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                    <p><strong>Problem 2:</strong> Identify the vertex of $y = -(x + 2)^2 - 4$. Does it open up or down?</p>
+                    <details style="margin-top:10px;">
+                        <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                        <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">If $a$ is negative, it opens down. For the vertex, $(x+2)$ means $h = -2$.</p>
+                    </details>
+                    <details style="margin-top:8px;">
+                        <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                        <p style="margin-top:8px;">Vertex: $(-2, -4)$. Opens: <strong>Down</strong></p>
+                    </details>
+                </div>
+
+                <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                    <p><strong>Problem 3:</strong> Find the distance from the vertex to the focus ($p$) for $y = \frac{1}{8}x^2$.</p>
+                    <details style="margin-top:10px;">
+                        <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                        <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Use the formula $p = \frac{1}{4a}$, where $a = 1/8$.</p>
+                    </details>
+                    <details style="margin-top:8px;">
+                        <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                        <p style="margin-top:8px;">$p = \frac{1}{4(1/8)} = \frac{1}{1/2} = 2$.</p>
+                    </details>
+                </div>
+
+                <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                    <p><strong>Problem 4:</strong> Write the equation of a parabola with vertex $(3, 1)$ and $a = 2$.</p>
+                    <details style="margin-top:10px;">
+                        <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                        <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Plug $h=3, k=1, a=2$ into $y = a(x-h)^2 + k$.</p>
+                    </details>
+                    <details style="margin-top:8px;">
+                        <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                        <p style="margin-top:8px;">$y = 2(x - 3)^2 + 1$</p>
+                    </details>
+                </div>
             </div>
         `
     },
@@ -487,74 +564,50 @@ window.CHAPTER_DATA["ch5"] = {
                 <h2>II. Practice Problems</h2>
                 <div class="practice-section glass" style="margin-top:20px; padding:20px;">
                     <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
-                        <p><strong>Problem 1:</strong> Find the discriminant of $x^2 - 6x + 9 = 0$. How many solutions?</p>
+                        <p><strong>Problem 1:</strong> Solve $x^2 - 10x + 25 = 0$ using the Quadratic Formula.</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$D = b^2 - 4ac$. Identify $a=1, b=-6, c=9$.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$a=1, b=-10, c=25$. Notice $D = b^2 - 4ac$ first.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$D = 36 - 36 = 0$. <strong>One repeated root</strong> (vertex touches x-axis).</p>
+                            <p style="margin-top:8px;">$D = 100 - 100 = 0$. So $x = \frac{10 \pm 0}{2} = 5$. Only one real solution.</p>
                         </details>
                     </div>
 
                     <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
-                        <p><strong>Problem 2:</strong> Solve $x^2 + 4x - 5 = 0$ using the quadratic formula.</p>
+                        <p><strong>Problem 2:</strong> Solve $x^2 - 4x + 13 = 0$.</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$ with $a=1, b=4, c=-5$.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$a=1, b=-4, c=13$. $D = 16 - 52 = -36$. Remember $\sqrt{-36} = 6i$.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$x = \\frac{-4 \\pm \\sqrt{16+20}}{2} = \\frac{-4 \\pm 6}{2}$ → $x = 1$ or $x = -5$</p>
+                            <p style="margin-top:8px;">$x = \frac{4 \pm 6i}{2} = 2 \pm 3i$.</p>
                         </details>
                     </div>
 
                     <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
-                        <p><strong>Problem 3:</strong> Find the vertex of $y = 2(x-3)^2 + 5$</p>
+                        <p><strong>Problem 3:</strong> Solve $3x^2 + 5x - 2 = 0$.</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Vertex form is $y = a(x-h)^2 + k$. The vertex is $(h, k)$.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$a=3, b=5, c=-2$. $D = 25 - 4(3)(-2) = 25 + 24 = 49$. $\sqrt{49} = 7$.</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">Vertex: $(3, 5)$</p>
-                        </details>
-                    </div>
-
-                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
-                        <p><strong>Problem 4:</strong> Factor $x^2 - 7x + 12$</p>
-                        <details style="margin-top:10px;">
-                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Find two numbers that multiply to 12 and add to -7.</p>
-                        </details>
-                        <details style="margin-top:8px;">
-                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$(x - 3)(x - 4)$ → Roots: $x = 3, x = 4$</p>
-                        </details>
-                    </div>
-
-                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
-                        <p><strong>Problem 5:</strong> Complete the square: $x^2 + 8x + ?$</p>
-                        <details style="margin-top:10px;">
-                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">To complete the square, add $(b/2)^2 = (8/2)^2$.</p>
-                        </details>
-                        <details style="margin-top:8px;">
-                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$x^2 + 8x + 16 = (x + 4)^2$</p>
+                            <p style="margin-top:8px;">$x = \frac{-5 \pm 7}{6} \rightarrow x = 1/3$ or $x = -2$.</p>
                         </details>
                     </div>
 
                     <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
-                        <p><strong>Problem 6:</strong> Does $x^2 + 2x + 5 = 0$ have real solutions?</p>
+                        <p><strong>Problem 4:</strong> Find the nature of roots for $2x^2 + 4x + 5 = 0$ using only the discriminant.</p>
                         <details style="margin-top:10px;">
                             <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
-                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Check the discriminant. If $D < 0$, no real solutions.</p>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$D = b^2 - 4ac = 16 - 4(2)(5)$. Is it positive, zero, or negative?</p>
                         </details>
                         <details style="margin-top:8px;">
                             <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
-                            <p style="margin-top:8px;">$D = 4 - 20 = -16 < 0$. <strong>No real solutions</strong> (2 complex roots).</p>
+                            <p style="margin-top:8px;">$D = 16 - 40 = -24$. Since $D < 0$, there are <strong>2 complex (imaginary) roots</strong>.</p>
                         </details>
                     </div>
                 </div>
@@ -572,6 +625,57 @@ window.CHAPTER_DATA["ch5"] = {
                 <div class="tj-edge glass" style="border-left-color: var(--accent-orange);">
                     <h4><i class="fas fa-microscope"></i> Boundary Logic</h4>
                     <p>Always solve the equation $f(x) = 0$ first to find the <strong>Critical Points</strong>. Then, test a point in each interval to see where the inequality holds TRUE.</p>
+                </div>
+
+                <h2>II. Practice Problems</h2>
+                <div class="practice-section glass" style="margin-top:20px; padding:20px;">
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 1:</strong> Solve: $x^2 - 4 > 0$.</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Set $x^2 - 4 = 0$ to find the boundaries. $x = 2$ and $x = -2$. Now test values in $(-\\\\infty, -2)$, $(-2, 2)$, and $(2, \\\\infty)$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$x < -2$ or $x > 2$.</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 2:</strong> Solve: $x^2 - 5x + 6 \\\\le 0$.</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Factor the quadratic: $(x-2)(x-3) \\\\le 0$. The roots are 2 and 3. Since it's $\\\\le$ and the parabola opens up, the solution is between the roots.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$2 \\\\le x \\\\le 3$.</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 3:</strong> Solve: $x^2 + 2x - 8 < 0$.</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Roots are $x = 2$ and $x = -4$. Test a value like $x=0$ to see if the middle interval is true.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$-4 < x < 2$.</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 4:</strong> Solve: $x^2 - 4x + 4 > 0$.</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">This factors to $(x-2)^2 > 0$. When is a square always greater than zero?</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">All real numbers except $x = 2$. Or $(-\\\\infty, 2) \\\\cup (2, \\\\infty)$.</p>
+                        </details>
+                    </div>
                 </div>
             </div>
         `
@@ -592,6 +696,45 @@ window.CHAPTER_DATA["ch5"] = {
                 <div class="mastery-protocol glass">
                     <h4><i class="fas fa-check-double"></i> Mastery Protocol: Tangency Proof</h4>
                     <p>If $D = 0$ for a Linear-Quadratic system, the line is <strong>Tangent</strong>. This is the foundation of finding 'Instantaneous Velocity' in Calculus.</p>
+                </div>
+
+                <h2>II. Practice Problems</h2>
+                <div class="practice-section glass" style="margin-top:20px; padding:20px;">
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 1:</strong> Find the intersection points of $y = x^2$ and $y = x + 2$.</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Set them equal: $x^2 = x + 2$. Rearrange to $x^2 - x - 2 = 0$ and factor.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$(x-2)(x+1) = 0 \rightarrow x=2, x=-1$. Points are $(2, 4)$ and $(-1, 1)$.</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 2:</strong> Use the discriminant to determine if $y = 3x - 5$ intersects $y = x^2$.</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Set $x^2 = 3x - 5 \rightarrow x^2 - 3x + 5 = 0$. Calculate $D = b^2 - 4ac$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$D = 9 - 20 = -11$. Since $D < 0$, <strong>they do not intersect</strong>.</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 3:</strong> For what value of $k$ is the line $y = 4x + k$ tangent to the parabola $y = x^2$?</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Set $x^2 = 4x + k \rightarrow x^2 - 4x - k = 0$. For tangency, $D$ must be $0$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$D = 16 - 4(1)(-k) = 16 + 4k$. Set $16 + 4k = 0 \rightarrow k = -4$.</p>
+                        </details>
+                    </div>
                 </div>
             </div>
         `
