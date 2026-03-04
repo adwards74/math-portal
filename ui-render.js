@@ -109,6 +109,8 @@ window.UIEngine = (function () {
 
     function renderUnitCard(unit, subject, uIdx) {
         let masterClassHtml = '';
+        // Elite Master Class videos disabled per user request
+        /*
         if (unit.videoUrl) {
             const videoId = unit.videoUrl.split('v=')[1] || unit.videoUrl.split('/').pop();
             masterClassHtml = `
@@ -140,12 +142,13 @@ window.UIEngine = (function () {
                 </div>
             `;
         }
+        */
 
         return `
             <div class="unit-card glass" style="padding:30px; border-radius:var(--standard-radius);">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
                     <h3 style="margin:0; border-left:4px solid ${subject.color}; padding-left:15px;">${unit.title}</h3>
-                    ${unit.masterClass ? '<span class="pulse-badge-red" style="font-size:0.65rem; background:rgba(255,75,43,0.1); color:#ff4b2b; padding:4px 10px; border-radius:30px; border:1px solid #ff4b2b44; font-weight:800;">VIDEO</span>' : ''}
+                    ${/*unit.masterClass ? '<span class="pulse-badge-red" style="font-size:0.65rem; background:rgba(255,75,43,0.1); color:#ff4b2b; padding:4px 10px; border-radius:30px; border:1px solid #ff4b2b44; font-weight:800;">VIDEO</span>' : ''*/ ''}
                 </div>
                 ${unit.intuition ? `<p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:15px;">${unit.intuition}</p>` : ''}
                 ${masterClassHtml}
