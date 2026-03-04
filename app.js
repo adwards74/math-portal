@@ -857,8 +857,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (lessonKey === 'ch3-4') setTimeout(renderLPViz, 500);
             if (lessonKey === 'ch4-2' || lessonKey === 'ch4-3') setTimeout(renderMatrixViz, 500);
             if (lessonKey.includes('ch4-4')) setTimeout(renderMatrixCollapseViz, 500);
-            if (lessonKey.includes('ch5-6')) setTimeout(renderParabolaViz, 500);
-            if (lessonKey.includes('ch6-3')) setTimeout(renderSyntheticDivisionViz, 500);
             if (lessonKey.includes('ch7-7')) setTimeout(renderRootSliderViz, 500);
             if (lessonKey.includes('ch8-3')) setTimeout(renderLogChartViz, 500);
 
@@ -867,6 +865,51 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("CRITICAL ERROR:\n" + e.message);
         }
     }
+
+    // --- Elite 6.0: Master Class Video Player ---
+    window.showMasterClass = function (videoUrl, subjectId, title) {
+        console.log("SHOW MASTER CLASS:", videoUrl, subjectId);
+
+        let videoId = "";
+        if (videoUrl.includes('v=')) {
+            videoId = videoUrl.split('v=')[1].split('&')[0];
+        } else if (videoUrl.includes('embed/')) {
+            videoId = videoUrl.split('embed/')[1].split('?')[0];
+        } else {
+            videoId = videoUrl.split('/').pop();
+        }
+
+        const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+
+        const appContainer = document.getElementById('dashboard-view');
+        appContainer.innerHTML = `
+            <div class="lesson-view fadeIn">
+                <nav class="lesson-nav glass" style="display:flex; justify-content:space-between; align-items:center; padding: 12px 25px; margin-bottom: 20px;">
+                    <button class="glass back-btn" onclick="window.showSubjectDetail('${subjectId}')" style="padding: 10px 18px; font-weight: 600; font-size: 0.9rem; color: var(--text-primary); display: flex; align-items: center; gap: 10px; border-radius: 12px;">
+                        <i class="fas fa-arrow-left"></i> <span>Exit Master Class</span>
+                    </button>
+                    <div class="lesson-title-meta" style="text-align: center;">
+                        <span class="lesson-badge" style="background: rgba(255, 75, 43, 0.1); color: #ff4b2b; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px;">ELITE 6.0 MASTER CLASS</span>
+                        <h2 style="font-size:1.1rem; margin: 5px 0 0 0; color: #ff4b2b;">${title || 'Advanced Video Deep Dive'}</h2>
+                    </div>
+                    <div style="width:100px;"></div>
+                </nav>
+
+                <div class="lesson-body-wrapper" style="padding: 0 25px 40px 25px;">
+                    <div class="video-promo-top glass fadeIn" style="margin-bottom:25px; border-radius:15px; overflow:hidden; border:2px solid #ff4b2b; background:rgba(0,0,0,0.8); box-shadow:0 0 30px rgba(255,75,43,0.2);">
+                        <div style="padding:15px 20px; background:rgba(255,75,43,0.1); border-bottom:1px solid rgba(255,75,43,0.2); display:flex; justify-content:space-between; align-items:center;">
+                            <span style="color:#ff4b2b; font-weight:800; font-size:0.75rem; letter-spacing:1px;"><i class="fab fa-youtube"></i> LIVE PERFORMANCE MONITORING</span>
+                            <span style="font-size:0.7rem; opacity:0.6; color:white;">Status: Streaming Advanced Content</span>
+                        </div>
+                        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                            <iframe src="${embedUrl}" style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.querySelector('.app-container').scrollTo({ top: 0, behavior: 'smooth' });
+    };
     window.finishLesson = (key, subId) => {
         markLessonComplete(key, subId);
 

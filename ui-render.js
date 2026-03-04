@@ -112,7 +112,7 @@ window.UIEngine = (function () {
         if (unit.videoUrl) {
             const videoId = unit.videoUrl.split('v=')[1] || unit.videoUrl.split('/').pop();
             masterClassHtml = `
-                <div class="master-class-promo glass fadeIn" style="margin-bottom:15px; padding:15px; border-radius:var(--standard-radius); border:1px solid rgba(255,107,107,0.3); background:rgba(255,107,107,0.05); cursor:pointer;" onclick="window.open('${unit.videoUrl}', '_blank')">
+                <div class="master-class-promo glass fadeIn" style="margin-bottom:15px; padding:15px; border-radius:var(--standard-radius); border:1px solid rgba(255,107,107,0.3); background:rgba(255,107,107,0.05); cursor:pointer;" onclick="window.showMasterClass('${unit.videoUrl}', '${subject.id}', '${unit.title.replace(/'/g, "\\'")}')">
                     <div style="display:flex; align-items:center; gap:12px;">
                         <div style="width:40px; height:40px; background:linear-gradient(135deg, #ff416c, #ff4b2b); border-radius:12px; display:flex; align-items:center; justify-content:center; color:white; box-shadow:0 0 15px rgba(255,75,43,0.4);">
                             <i class="fab fa-youtube"></i>
