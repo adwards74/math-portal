@@ -85,7 +85,7 @@ window.CHAPTER_DATA["ch6"] = {
             <div class="lesson-section">
                 <div class="intuition-box glass">
                     <h3><i class="fas fa-yin-yang"></i> The Conjugate Balance</h3>
-                    <p>Complex roots always come in pairs? ike matter and anti-matter. If $2 + 3i$ exists, $2 - 3i$ must also exist to ensure the polynomial's 'Real' structure remains stable. This is the **Law of Symmetry** in Algebra.</p>
+                    <p>Complex roots always come in pairs? Like matter and anti-matter. If $2 + 3i$ exists, $2 - 3i$ must also exist to ensure the polynomial's 'Real' structure remains stable. This is the **Law of Symmetry** in Algebra.</p>
                 </div>
 
                 <h2>I. Symmetry of the Solution Space</h2>
@@ -107,7 +107,7 @@ window.CHAPTER_DATA["ch6"] = {
                 
                 <div class="tj-edge glass" style="border-left-color: var(--accent-green);">
                     <h4><i class="fas fa-search"></i> Pruned Search Space</h4>
-                    <p>Instead of testing an infinite set of numbers, you only test $\\\\pm \\\\text{factors of constant} / \\\\text{factors of leading coeff}$. In AI, this is **Branch Pruning**? liminating billions of impossible paths to find the single correct leaf node quickly.</p>
+                    <p>Instead of testing an infinite set of numbers, you only test $\\\\pm \\\\text{factors of constant} / \\\\text{factors of leading coeff}$. In AI, this is **Branch Pruning** — eliminating billions of impossible paths to find the single correct leaf node quickly.</p>
                 </div>
             </div>
         `
@@ -144,19 +144,19 @@ window.CHAPTER_DATA["ch6"] = {
                 <div class="summary-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px;">
                     <div class="glass-card" style="padding:15px;">
                         <h5 style="color:var(--accent-blue);">Structural Analysis</h5>
-                        <p style="font-size:0.85rem, opacity:0.8;">Identify the degree and leading coefficient to predict long-term system behavior.</p>
+                        <p style="font-size:0.85rem; opacity:0.8;">Identify the degree and leading coefficient to predict long-term system behavior.</p>
                     </div>
                     <div class="glass-card" style="padding:15px;">
                         <h5 style="color:var(--accent-orange);">Efficiency</h5>
-                        <p style="font-size:0.85rem, opacity:0.8;">Apply Synthetic Division and Horner's Method for optimal evaluation.</p>
+                        <p style="font-size:0.85rem; opacity:0.8;">Apply Synthetic Division and Horner's Method for optimal evaluation.</p>
                     </div>
                     <div class="glass-card" style="padding:15px;">
                         <h5 style="color:var(--accent-green);">Search Pruning</h5>
-                        <p style="font-size:0.85rem, opacity:0.8;">Use the Rational Root Theorem to minimize guestimation effort.</p>
+                        <p style="font-size:0.85rem; opacity:0.8;">Use the Rational Root Theorem to minimize guestimation effort.</p>
                     </div>
                     <div class="glass-card" style="padding:15px;">
                         <h5 style="color:var(--accent-magenta);">Root Dynamics</h5>
-                        <p style="font-size:0.85rem, opacity:0.8;">Understand multiplicity to predict the geometric 'touch points' of any function.</p>
+                        <p style="font-size:0.85rem; opacity:0.8;">Understand multiplicity to predict the geometric 'touch points' of any function.</p>
                     </div>
                 </div>
             </div>

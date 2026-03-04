@@ -265,6 +265,16 @@
       "path": "data/content/math/foundation/ch0-rev.md",
       "viz": null
     },
+    "ch0-5": {
+      "title": "0.5 Imaginary Numbers & Complex Arithmetic",
+      "path": "data/content/math/foundation/ch0-5.md",
+      "viz": null
+    },
+    "ch0-6": {
+      "title": "0.6 Completing the Square",
+      "path": "data/content/math/foundation/ch0-6.md",
+      "viz": null
+    },
     "ch1-1": {
       "title": "1.1 The Axioms of Algebra",
       "path": "data/content/math/misc/ch1-1.md",

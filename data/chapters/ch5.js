@@ -51,6 +51,121 @@ window.CHAPTER_DATA["ch5"] = {
                     <h4>Proof Sketch</h4>
                     <p>Expand $(x - r_1)(x - r_2) = x^2 - (r_1 + r_2)x + (r_1 \\\\cdot r_2)$. Matching this with $x^2 + \\\\frac{b}{a}x + \\\\frac{c}{a} = 0$ reveals the secret constants!</p>
                 </div>
+
+                <h2>II. Algebra 1 Factoring Drills</h2>
+                <div class="intuition-box glass" style="border-left-color: var(--accent-green);">
+                    <h3><i class="fas fa-tools"></i> Why Practice This?</h3>
+                    <p>Factoring is the <strong>most important skill</strong> from Algebra 1. If you can factor quickly, you can solve quadratics, simplify expressions, and find roots almost instantly. Master these patterns!</p>
+                </div>
+
+                <div class="practice-section glass" style="margin-top:20px; padding:20px;">
+                    <h4 style="color:var(--accent-green); margin-bottom:15px;"><i class="fas fa-dumbbell"></i> Level 1: GCF Factoring</h4>
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 1:</strong> Factor $6x^2 + 9x$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">What is the Greatest Common Factor of 6 and 9? Both terms also have at least one $x$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">GCF = $3x$. Answer: $3x(2x + 3)$</p>
+                        </details>
+                    </div>
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 2:</strong> Factor $12x^3 - 8x^2 + 4x$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">GCF of 12, 8, and 4? Lowest power of $x$ in all three terms?</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">GCF = $4x$. Answer: $4x(3x^2 - 2x + 1)$</p>
+                        </details>
+                    </div>
+
+                    <h4 style="color:var(--accent-blue); margin:25px 0 15px;"><i class="fas fa-dumbbell"></i> Level 2: Difference of Squares ($a^2 - b^2$)</h4>
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 3:</strong> Factor $x^2 - 25$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Pattern: $a^2 - b^2 = (a+b)(a-b)$. Here $a = x$ and $b = 5$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$x^2 - 5^2 = (x+5)(x-5)$</p>
+                        </details>
+                    </div>
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 4:</strong> Factor $4x^2 - 49$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$4x^2 = (2x)^2$ and $49 = 7^2$. Apply the difference of squares pattern.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$(2x)^2 - 7^2 = (2x+7)(2x-7)$</p>
+                        </details>
+                    </div>
+
+                    <h4 style="color:var(--accent-magenta); margin:25px 0 15px;"><i class="fas fa-dumbbell"></i> Level 3: Trinomial Factoring ($x^2 + bx + c$)</h4>
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 5:</strong> Factor $x^2 + 7x + 12$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Find two numbers that <strong>multiply</strong> to 12 AND <strong>add</strong> to 7.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">3 and 4 (multiply to 12, add to 7). Answer: $(x+3)(x+4)$</p>
+                        </details>
+                    </div>
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 6:</strong> Factor $x^2 - 5x + 6$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Two numbers that multiply to +6 and add to $-5$. Both must be negative!</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$-2$ and $-3$ (multiply to 6, add to $-5$). Answer: $(x-2)(x-3)$</p>
+                        </details>
+                    </div>
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 7:</strong> Factor $x^2 + 2x - 15$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Two numbers that multiply to $-15$ and add to $+2$. One positive, one negative!</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$5$ and $-3$ (multiply to $-15$, add to $2$). Answer: $(x+5)(x-3)$</p>
+                        </details>
+                    </div>
+
+                    <h4 style="color:var(--accent-orange); margin:25px 0 15px;"><i class="fas fa-dumbbell"></i> Level 4: Harder Trinomials ($ax^2 + bx + c$, AC Method)</h4>
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 8:</strong> Factor $2x^2 + 7x + 3$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">AC Method: Multiply $a \\\\times c = 2 \\\\times 3 = 6$. Find two numbers that multiply to 6 and add to 7.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">1 and 6. Rewrite: $2x^2 + 6x + x + 3 = 2x(x+3) + 1(x+3) = (2x+1)(x+3)$</p>
+                        </details>
+                    </div>
+                    <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 9:</strong> Factor $3x^2 - 10x - 8$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">AC = $3 \\\\times (-8) = -24$. Find two numbers that multiply to $-24$ and add to $-10$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$2$ and $-12$. Rewrite: $3x^2 + 2x - 12x - 8 = x(3x+2) - 4(3x+2) = (x-4)(3x+2)$</p>
+                        </details>
+                    </div>
+                </div>
             </div>
         `
     },
@@ -59,12 +174,134 @@ window.CHAPTER_DATA["ch5"] = {
         subtitle: "The Imaginary Unit i",
         content: `
             <div class="lesson-section">
-                <h2>I. The Argand Plane</h2>
-                <p>Complex numbers $a + bi$ are not "imaginary" in the sense that they don't exist; they simply represent a <strong>2D Coordinate</strong> in the Complex Plane ($x$=Real, $y$=Imaginary).</p>
-                
-                <div class="tj-edge glass" style="border-left-color: var(--accent-magenta);">
-                    <h4><i class="fas fa-sync"></i> Multiplication as Rotation</h4>
-                    <p>Multiplying a number by $i$ results in a <strong>90-degree counter-clockwise rotation</strong> in the plane. In signal processing and electrical engineering, complex numbers are the standard tool for analyzing alternating currents (AC) and wave functions.</p>
+                <div class="intuition-box glass" style="border-left-color: var(--accent-magenta);">
+                    <h3><i class="fas fa-atom"></i> What is $i$?</h3>
+                    <p>When you try to solve $x^2 = -1$, there is NO real number that works. Mathematicians invented <strong>$i$</strong> (the imaginary unit) to fill this gap. It is defined as: $i = \\\\sqrt{-1}$, which means $i^2 = -1$.</p>
+                </div>
+
+                <h2>I. The Definition</h2>
+                <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-magenta);">
+                    <p><strong>Key Fact:</strong> $i = \\\\sqrt{-1}$ and $i^2 = -1$</p>
+                    <p style="margin-top:10px;">A <strong>Complex Number</strong> has the form $a + bi$ where $a$ is the Real Part and $b$ is the Imaginary Part.</p>
+                </div>
+
+                <h2>II. Powers of $i$ (The Cycle)</h2>
+                <p>The powers of $i$ repeat every 4 steps. Memorize this cycle!</p>
+                <div class="summary-grid" style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:15px; margin-top:15px;">
+                    <div class="glass-card" style="padding:15px; text-align:center; border-top: 3px solid var(--accent-cyan);">
+                        <h5>$i^1$</h5>
+                        <p style="font-size:1.2rem;">$i$</p>
+                    </div>
+                    <div class="glass-card" style="padding:15px; text-align:center; border-top: 3px solid var(--accent-magenta);">
+                        <h5>$i^2$</h5>
+                        <p style="font-size:1.2rem;">$-1$</p>
+                    </div>
+                    <div class="glass-card" style="padding:15px; text-align:center; border-top: 3px solid var(--accent-orange);">
+                        <h5>$i^3$</h5>
+                        <p style="font-size:1.2rem;">$-i$</p>
+                    </div>
+                    <div class="glass-card" style="padding:15px; text-align:center; border-top: 3px solid var(--accent-green);">
+                        <h5>$i^4$</h5>
+                        <p style="font-size:1.2rem;">$1$</p>
+                    </div>
+                </div>
+                <p style="margin-top:10px; font-size:0.9rem; opacity:0.8;">To find $i^n$: Divide $n$ by 4, and use the remainder. Example: $i^{17}$: $17 \\\\div 4 = 4$ remainder $1$, so $i^{17} = i^1 = i$.</p>
+
+                <h2>III. Operations with Complex Numbers</h2>
+                <div class="glass-card" style="padding:20px; border-left: 4px solid var(--accent-blue);">
+                    <h4>Add/Subtract: Combine "like terms"</h4>
+                    <p>$(3 + 2i) + (5 - 4i) = (3+5) + (2-4)i = 8 - 2i$</p>
+                </div>
+                <div class="glass-card" style="padding:20px; margin-top:15px; border-left: 4px solid var(--accent-green);">
+                    <h4>Multiply: Use FOIL, then replace $i^2$ with $-1$</h4>
+                    <p>$(2 + 3i)(4 - i)$</p>
+                    <p style="margin-top:5px;">$= 8 - 2i + 12i - 3i^2$</p>
+                    <p>$= 8 + 10i - 3(-1) = 8 + 10i + 3 = 11 + 10i$</p>
+                </div>
+                <div class="glass-card" style="padding:20px; margin-top:15px; border-left: 4px solid var(--accent-orange);">
+                    <h4>Conjugate: Flip the sign of the imaginary part</h4>
+                    <p>The conjugate of $a + bi$ is $a - bi$.</p>
+                    <p style="margin-top:5px;">Example: Conjugate of $5 - 7i$ is $5 + 7i$.</p>
+                    <p style="margin-top:5px; font-size:0.9rem; opacity:0.8;">Multiplying a number by its conjugate always gives a <strong>Real</strong> number: $(a+bi)(a-bi) = a^2 + b^2$.</p>
+                </div>
+                <div class="glass-card" style="padding:20px; margin-top:15px; border-left: 4px solid var(--accent-cyan);">
+                    <h4>Simplify Square Roots of Negatives</h4>
+                    <p>$\\\\sqrt{-n} = i\\\\sqrt{n}$. Example: $\\\\sqrt{-36} = i\\\\sqrt{36} = 6i$</p>
+                </div>
+
+                <h2>IV. Practice Problems</h2>
+                <div class="practice-section glass" style="margin-top:20px; padding:20px;">
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 1:</strong> What is $i^2$?</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">This is the most fundamental definition of $i$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$i^2 = -1$ (by definition)</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 2:</strong> Simplify $i^{23}$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Divide 23 by 4. What is the remainder? Use the cycle: remainder 1→$i$, 2→$-1$, 3→$-i$, 0→$1$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$23 \\\\div 4 = 5$ remainder $3$. So $i^{23} = i^3 = -i$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 3:</strong> Add $(4 + 3i) + (2 - 7i)$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Combine real parts $(4+2)$ and imaginary parts $(3i + (-7i))$ separately.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$(4+2) + (3-7)i = 6 - 4i$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 4:</strong> Multiply $(1 + 2i)(3 - i)$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Use FOIL: First, Outer, Inner, Last. Then replace $i^2$ with $-1$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$3 - i + 6i - 2i^2 = 3 + 5i - 2(-1) = 3 + 5i + 2 = 5 + 5i$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 5:</strong> Simplify $\\\\sqrt{-49}$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">$\\\\sqrt{-49} = i\\\\sqrt{49}$. What is $\\\\sqrt{49}$?</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$\\\\sqrt{-49} = 7i$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 6:</strong> What is the conjugate of $3 - 5i$? What is $(3-5i)(3+5i)$?</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Flip the sign of the imaginary part. Then use $(a-bi)(a+bi) = a^2 + b^2$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">Conjugate: $3 + 5i$. Product: $3^2 + 5^2 = 9 + 25 = 34$ (a real number!)</p>
+                        </details>
+                    </div>
                 </div>
             </div>
         `
@@ -74,12 +311,152 @@ window.CHAPTER_DATA["ch5"] = {
         subtitle: "Forcing Symmetry",
         content: `
             <div class="lesson-section">
+                <div class="intuition-box glass" style="border-left-color: var(--accent-cyan);">
+                    <h3><i class="fas fa-puzzle-piece"></i> Why Complete the Square?</h3>
+                    <p>Completing the Square lets you rewrite ANY quadratic into <strong>Vertex Form</strong>. This reveals the vertex (highest/lowest point), helps you solve equations the quadratic formula can't simplify easily, and is the key to deriving the quadratic formula itself!</p>
+                </div>
+
                 <h2>I. The Perfect Square Algorithm</h2>
-                <p>Completing the Square is a technique to transform a general quadratic $ax^2 + bx + c$ into the vertex form $a(x-h)^2 + k$. It is the "Manual Override" for finding the vertex without a formula.</p>
-                
+                <p>Completing the Square transforms $ax^2 + bx + c$ into vertex form $a(x-h)^2 + k$.</p>
+
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-cyan);">
-                    <h4>The Identity Logic</h4>
-                    <p>To make $x^2 + bx$ a perfect square, we add $(b/2)^2$. This is based on the identity: $(x + h)^2 = x^2 + 2hx + h^2$.</p>
+                    <h4><i class="fas fa-list-ol"></i> The Step-by-Step Algorithm</h4>
+                    <ol class="glass-list" style="line-height:2;">
+                        <li>If $a \\\\neq 1$, factor $a$ out from the $x^2$ and $x$ terms.</li>
+                        <li>Take the coefficient of $x$, <strong>divide by 2</strong>, then <strong>square it</strong>: $(b/2)^2$.</li>
+                        <li><strong>Add AND subtract</strong> that value inside the expression (to keep it balanced).</li>
+                        <li>Group the perfect square trinomial: $(x + b/2)^2$.</li>
+                        <li>Simplify the remaining constant.</li>
+                    </ol>
+                </div>
+
+                <h2>II. Worked Examples</h2>
+
+                <div class="proof-box glass" style="margin-top:15px; border-left-color: var(--accent-green);">
+                    <h4 style="color:var(--accent-green);">Example 1: $y = x^2 + 6x + 2$</h4>
+                    <table style="width:100%; border-collapse:collapse;">
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+                            <td style="padding:8px;"><strong>Step 1:</strong></td>
+                            <td>$a = 1$, so no factoring needed.</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+                            <td style="padding:8px;"><strong>Step 2:</strong></td>
+                            <td>Coefficient of $x$ is $6$. Half of 6 is 3. Square it: $3^2 = 9$.</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+                            <td style="padding:8px;"><strong>Step 3:</strong></td>
+                            <td>$y = (x^2 + 6x + 9) - 9 + 2$</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+                            <td style="padding:8px;"><strong>Step 4:</strong></td>
+                            <td>$y = (x + 3)^2 - 7$</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;"><strong>Result:</strong></td>
+                            <td style="color:var(--accent-green);">Vertex = $(-3, -7)$</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="proof-box glass" style="margin-top:15px; border-left-color: var(--accent-magenta);">
+                    <h4 style="color:var(--accent-magenta);">Example 2: Solve $x^2 - 4x - 12 = 0$</h4>
+                    <table style="width:100%; border-collapse:collapse;">
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+                            <td style="padding:8px;"><strong>Step 1:</strong></td>
+                            <td>Move constant: $x^2 - 4x = 12$</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+                            <td style="padding:8px;"><strong>Step 2:</strong></td>
+                            <td>Half of $-4$ is $-2$. Square: $(-2)^2 = 4$. Add to both sides.</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+                            <td style="padding:8px;"><strong>Step 3:</strong></td>
+                            <td>$x^2 - 4x + 4 = 12 + 4$</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+                            <td style="padding:8px;"><strong>Step 4:</strong></td>
+                            <td>$(x - 2)^2 = 16$</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;"><strong>Step 5:</strong></td>
+                            <td style="color:var(--accent-magenta);">$x - 2 = \\\\pm 4$ → $x = 6$ or $x = -2$</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h2>III. Practice Problems</h2>
+                <div class="practice-section glass" style="margin-top:20px; padding:20px;">
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 1:</strong> Complete the square: $x^2 + 6x + ?$ = $(x + ?)^2$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Half of 6 is 3. Square it to get the missing number.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$? = 9$. $x^2 + 6x + 9 = (x + 3)^2$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 2:</strong> Complete the square: $x^2 - 10x + ?$ = $(x - ?)^2$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Half of $-10$ is $-5$. Square $(-5)$ to get the missing number.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$? = 25$. $x^2 - 10x + 25 = (x - 5)^2$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 3:</strong> Convert to vertex form: $y = x^2 + 4x + 1$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Half of 4 is 2. Add and subtract $2^2 = 4$: $y = (x^2 + 4x + 4) - 4 + 1$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$y = (x + 2)^2 - 3$. Vertex: $(-2, -3)$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 4:</strong> Convert to vertex form: $y = x^2 - 8x + 20$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Half of $-8$ is $-4$. Add and subtract $(-4)^2 = 16$.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$y = (x - 4)^2 + 4$. Vertex: $(4, 4)$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="margin-bottom:20px; padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 5:</strong> Solve by completing the square: $x^2 + 6x + 5 = 0$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Move 5 to the right: $x^2 + 6x = -5$. Add $(6/2)^2 = 9$ to both sides.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$(x+3)^2 = 4$ → $x+3 = \\\\pm 2$ → $x = -1$ or $x = -5$</p>
+                        </details>
+                    </div>
+
+                    <div class="practice-problem" style="padding:15px; background:rgba(0,0,0,0.2); border-radius:12px;">
+                        <p><strong>Problem 6:</strong> Solve by completing the square: $x^2 - 2x - 8 = 0$</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer;"><i class="fas fa-lightbulb"></i> Hint</summary>
+                            <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">Move $-8$ to the right: $x^2 - 2x = 8$. Add $(-2/2)^2 = 1$ to both sides.</p>
+                        </details>
+                        <details style="margin-top:8px;">
+                            <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
+                            <p style="margin-top:8px;">$(x-1)^2 = 9$ → $x-1 = \\\\pm 3$ → $x = 4$ or $x = -2$</p>
+                        </details>
+                    </div>
                 </div>
             </div>
         `
