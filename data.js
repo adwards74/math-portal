@@ -13,6 +13,7 @@ window.MATH_DATA = {
             units: [
                 {
                     title: "Ch 0: Pre-Algebra Foundations",
+                    videoUrl: "https://www.youtube.com/watch?v=R9Z2pU_v0-M",
                     insight: "Essential concepts you must master before diving into Algebra 2.",
                     topics: ["Fractions", "PEMDAS", "Basic Equations", "Coordinate Plane"],
                     lectures: [
@@ -71,6 +72,7 @@ window.MATH_DATA = {
 
                 {
                     title: "Ch 1: Tools of Algebra",
+                    videoUrl: "https://www.youtube.com/watch?v=p1uE26Xid3M",
                     insight: "Foundations: Mastery of axioms allows you to manipulate any expression without fear. Focus on the 'Why' behind the distributive rule.",
                     topics: ["1.1-1.3 Real Numbers", "1.4-1.6 Equations", "1.7 Absolute Value"],
                     lectures: [
@@ -150,6 +152,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 2: Functions & Graphs",
+                    videoUrl: "https://www.youtube.com/watch?v=By6n9_mP_fM",
                     topics: ["2.1 Relations", "2.3 Linear Functions", "2.5 Absolute Value Graphs", "2.7 Parent Functions"],
                     lectures: [
                         { name: "2.1: Relations & Functions", url: "lesson:algebra2:ch2-1" },
@@ -225,6 +228,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 3: Linear Systems",
+                    videoUrl: "https://www.youtube.com/watch?v=oKq73pXreHk",
                     topics: ["Substitution", "Elimination", "3-Variable Systems", "Linear Programming"],
                     lectures: [
                         { name: "3.1/3.2: Substitution & Elimination", url: "lesson:algebra2:ch3-1" },
@@ -296,6 +300,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 4: Matrices",
+                    videoUrl: "https://www.youtube.com/watch?v=0oG9dbVpP_s",
                     insight: "Matrices: You are manipulating whole spatial dimensions here. Visualize matrices as vectors moving around.",
                     intuition: "Matrices are the data structures of the modern world. They bridge the gap between simple variables and high-dimensional AI architecture.",
                     topics: ["4.1 Data Organization", "4.2 Matrix Operations", "4.3 Multiplication", "4.4 Geometric Transformations", "4.5 Determinants", "4.6 Inverses", "4.7 Systems Solving"],
@@ -374,6 +379,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 5: Quadratic Equations",
+                    videoUrl: "https://www.youtube.com/watch?v=ZfA6vS5O4O8",
                     intuition: "Curves govern the physical world. From gravity to growth, quadratics provide the parabolic logic for modeling motion and optimization.",
                     vizConfig: {
                         expressions: ["y = a(x - h)^2 + k", "a = 1", "h = 0", "k = 0"],
@@ -453,6 +459,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 6: Polynomials",
+                    videoUrl: "https://www.youtube.com/watch?v=q6E03_8-Ksw",
                     insight: "Polynomials: Every root $(x-r)$ is a factor. The Fundamental Theorem guarantees N roots for degree N. No exceptions!",
                     intuition: "Polynomials are the DNA of functional analysis. From the behavior of global temperatures to the trajectory of satellites, understanding roots and degree is essential for predicting complex systems.",
                     topics: ["6.1 Degree & End Behavior", "6.2 Remainder Theorem", "6.3 Synthetic Division", "6.4 Advanced Factoring", "6.6 Rational Root Theorem", "6.7 Fundamental Theorem"],
@@ -527,6 +534,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 7: Radical Functions & Rational Exponents",
+                    videoUrl: "https://www.youtube.com/watch?v=it_zV1LIP_o",
                     intuition: "Roots are the inverse of power, allowing us to reverse complex operations. From calculating the radius of a sphere to modeling the decay of particles, radicals provide the mathematical lens to look backwards into the core of a value.",
                     topics: ["7.1 n-th Roots", "7.2 Rational Exponents", "7.3 Binomial Radical Expressions", "7.4 Advanced Laws of Exponents", "7.5 Radical Equations", "7.6 Function Operations", "7.7 Inverse Relations & Functions"],
                     lectures: [
@@ -603,6 +611,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 8: Exponential & Logarithmic Functions",
+                    videoUrl: "https://www.youtube.com/watch?v=mQTWzLdCcW0",
                     intuition: "Logarithms are the language of scale and complexity. They allow us to map the infinite growth of data into manageable linear steps, powering everything from the Richter scale to the efficiency of Google's Search algorithms.",
                     topics: ["8.1 Growth & Decay", "8.2 The Natural Base 'e'", "8.3 Logarithmic Functions", "8.4 Properties of Logarithms", "8.5 Exponential & Logarithmic Equations", "8.6 Natural Logarithms"],
                     lectures: [
@@ -677,6 +686,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 9: Rational Functions",
+                    videoUrl: "https://www.youtube.com/watch?v=K8L_OlpIkdE",
                     intuition: "Rational functions are the ratios of rules, creating asymptotes and holes. They represent shared resources, inverse scaling, and the constraints of digital precision.",
                     topics: ["9.1 Inverse Variation", "9.2 Reciprocal Functions", "9.3 Rational Graphs", "9.4 Expressions", "9.5 Adding/Subtracting", "9.6 Solving Equations"],
                     lectures: [
@@ -750,6 +760,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 10: Conic Sections",
+                    videoUrl: "https://www.youtube.com/watch?v=S0vG8g1HExw",
                     intuition: "Conic sections are the shapes formed by slicing a cone. They describe the orbits of planets (Ellipses), the shape of satellite dishes (Parabolas), and the navigation of GPS signals (Hyperbolas).",
                     topics: ["10.1 Parabolas", "10.2 Circles", "10.3 Ellipses", "10.4 Hyperbolas", "10.5 Identifying Conics", "10.6 Systems of Conics"],
                     lectures: [
@@ -822,6 +833,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 11: Sequences & Series",
+                    videoUrl: "https://www.youtube.com/watch?v=asBv_X-1f7c",
                     intuition: "Nature is built on patterns. From the Fibonacci sequence to compound interest, sequences define how discrete steps build into continuous structures.",
                     vizConfig: {
                         expressions: ["y = a_1 + (x-1)d", "a_1 = 1", "d = 1", "y = a_1(r)^{(x-1)}", "r = 1.2"],
@@ -899,6 +911,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 12: Probability & Statistics",
+                    videoUrl: "https://www.youtube.com/watch?v=KzX5xshA_Gk",
                     intuition: "Probability is the logic of uncertainty. It is the engine of Artificial Intelligence, governing how machines learn from data (Bayesian Logic) and how we make decisions under risk.",
                     vizConfig: {
                         expressions: ["y = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{1}{2}(\\frac{x-\\mu}{\\sigma})^2}", "\\mu = 0", "\\sigma = 1"],
@@ -976,6 +989,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 13: Periodic Functions & Trigonometry",
+                    videoUrl: "https://www.youtube.com/watch?v=N_8p0B_xR3c",
                     intuition: "Periodic functions are the heartbeat of the universe. They model everything that repeats, from sound waves and light to the cycles of the economy and the rotation of engines.",
                     vizConfig: {
                         expressions: ["y = a \\sin(b(x - h)) + k", "a = 1", "b = 1", "h = 0", "k = 0"],
@@ -1056,6 +1070,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 14: Trigonometric Identities & Equations",
+                    videoUrl: "https://www.youtube.com/watch?v=N_8p0B_xR3c",
                     intuition: "Trigonometric identities are the 'algebra of geometry'. They allow us to simplify complex wave interactions, solve navigation problems, and optimize signal processing algorithms.",
                     topics: ["14.1 Key Identities", "14.2 Proving Identities", "14.3 Sum & Double Angles", "14.4 Solving Equations", "14.5 Triangulation Laws"],
                     lectures: [
@@ -1299,6 +1314,7 @@ window.MATH_DATA = {
             units: [
                 {
                     title: "Unit 1: Polynomial & Rational (Change & Scale)",
+                    videoUrl: "https://www.youtube.com/watch?v=K8L_OlpIkdE",
                     insight: "Numerical Analysis: AP Precalculus prioritizes tables over graphs. If the rate of change is decreasing while y is increasing, the system is Concave Down. This is the seed of Calculus acceleration.",
                     topics: ["Rate of Change & Concavity", "Asymptotic Dominance", "Rational Singularities", "3-Step Continuity Protocol"],
                     lectures: [
@@ -1350,6 +1366,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Unit 2: Exponential & Logarithmic (Mastery)",
+                    videoUrl: "https://www.youtube.com/watch?v=mQTWzLdCcW0",
                     insight: "Semi-logplots: Logs are magnitude compressors. If data looks like a curve in Cartesian but a line in Semi-log, it is exponential. Use residual plots to validate your claim.",
                     topics: ["Logistic Inflection Points", "Semi-Log Linearization", "Residual Plot Validation", "Inverse Composition"],
                     lectures: [
@@ -1399,6 +1416,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Unit 3: Trigonometric & Polar (Mastery)",
+                    videoUrl: "https://www.youtube.com/watch?v=6m89o_O0JqQ",
                     insight: "Harmonic Dynamics: Trig is not about triangles; it's about circular motion. Polar coordinates allow us to model spirals and orbits where x-y grids fail.",
                     topics: ["Radian Logic", "Harmonic Modeling", "Inverse Trig Prisons", "Polar Rate of Change"],
                     lectures: [

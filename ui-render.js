@@ -109,7 +109,23 @@ window.UIEngine = (function () {
 
     function renderUnitCard(unit, subject, uIdx) {
         let masterClassHtml = '';
-        if (unit.masterClass) {
+        if (unit.videoUrl) {
+            const videoId = unit.videoUrl.split('v=')[1] || unit.videoUrl.split('/').pop();
+            masterClassHtml = `
+                <div class="master-class-promo glass fadeIn" style="margin-bottom:15px; padding:15px; border-radius:var(--standard-radius); border:1px solid rgba(255,107,107,0.3); background:rgba(255,107,107,0.05); cursor:pointer;" onclick="window.open('${unit.videoUrl}', '_blank')">
+                    <div style="display:flex; align-items:center; gap:12px;">
+                        <div style="width:40px; height:40px; background:linear-gradient(135deg, #ff416c, #ff4b2b); border-radius:12px; display:flex; align-items:center; justify-content:center; color:white; box-shadow:0 0 15px rgba(255,75,43,0.4);">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div>
+                            <div style="font-size:0.65rem; color:#ff4b2b; font-weight:bold; text-transform:uppercase; letter-spacing:1px;">Elite Master Class</div>
+                            <div style="font-weight:700; color:white; font-size:0.9rem;">Advanced Video Deep Dive</div>
+                        </div>
+                        <i class="fas fa-external-link-alt" style="margin-left:auto; opacity:0.5; font-size:0.7rem;"></i>
+                    </div>
+                </div>
+            `;
+        } else if (unit.masterClass) {
             masterClassHtml = `
                 <div class="master-class-promo glass fadeIn" style="margin-bottom:15px; padding:15px; border-radius:var(--standard-radius); border:1px solid rgba(255,75,43,0.3); background:rgba(255,75,43,0.05); cursor:pointer;" onclick="window.showLessonHandler('${unit.lectures[0].url}', '${subject.id}')">
                     <div style="display:flex; align-items:center; gap:12px;">
