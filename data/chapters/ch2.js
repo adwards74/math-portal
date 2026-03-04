@@ -10,6 +10,10 @@ window.CHAPTER_DATA["ch2"] = {
                     <p>A function is like a **Program**. For a given input, you must get exactly one predictable output. If you get different outputs for the same input, your code (relation) is 'broken' as a function.</p>
                 </div>
 
+                <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <iframe src="https://www.youtube.com/embed/VEFdT971Tzs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+                </div>
+
                 <h2>I. The Formal Definition of a Function</h2>
                 <p>A <strong>Function</strong> $f: A \\rightarrow B$ is a relation that assigns to each element in set $A$ (the Domain) exactly one element in set $B$ (the Codomain).</p>
                 

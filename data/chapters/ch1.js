@@ -14,7 +14,7 @@ window.CHAPTER_DATA["ch1"] = {
                 <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-blue); padding: 25px;">
                     <h5 style="color: var(--accent-blue); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: The Laws of Real Numbers</h5>
                     <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(6,182,212,0.2);">
-                        <iframe src="https://www.youtube.com/embed/5V5n_7X8D1o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+                        <iframe src="https://youtu.be/yrEYPS6ruXs?si=QbmuYiuBQ6qc1qjL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                     </div>
                 </div>
 

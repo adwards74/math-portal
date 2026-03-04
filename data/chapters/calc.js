@@ -15,7 +15,7 @@ window.CHAPTER_DATA["calc"] = {
                 <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-cyan); padding: 25px;">
                     <h5 style="color: var(--accent-cyan); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: The Essence of Calculus</h5>
                     <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(0,210,255,0.2);">
-                        <iframe src="https://www.youtube.com/embed/9vKqVkMQHKk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/9vKqVkMQHKk?rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                     </div>
                 </div>
 

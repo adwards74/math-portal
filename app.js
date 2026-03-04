@@ -735,7 +735,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // --- MASTER CLASS: Top-Level Video Injection ---
             let videoHtml = "";
             let cleanLessonHtml = lessonData.html;
-            const videoRegex = /<iframe[^>]*src="[^"]*youtube\.com\/embed\/[^"]*"[^>]*><\/iframe>/i;
+            const videoRegex = /<iframe[^>]*src="[^"]*(?:youtube\.com|youtube-nocookie\.com|youtu\.be)\/(?:embed\/|)([a-zA-Z0-9_-]{11})[^"]*"[^>]*><\/iframe>/i;
             const match = videoRegex.exec(lessonData.html);
 
             if (match) {
@@ -871,15 +871,17 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("SHOW MASTER CLASS:", videoUrl, subjectId);
 
         let videoId = "";
-        if (videoUrl.includes('v=')) {
-            videoId = videoUrl.split('v=')[1].split('&')[0];
-        } else if (videoUrl.includes('embed/')) {
-            videoId = videoUrl.split('embed/')[1].split('?')[0];
+        const regex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|youtube-nocookie\.com\/embed\/)([a-zA-Z0-9_-]{11})/;
+        const match = videoUrl.match(regex);
+
+        if (match && match[1]) {
+            videoId = match[1];
         } else {
-            videoId = videoUrl.split('/').pop();
+            // Fallback
+            videoId = videoUrl.split('/').pop().split('?')[0].split('&')[0];
         }
 
-        const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
 
         const appContainer = document.getElementById('dashboard-view');
         appContainer.innerHTML = `
