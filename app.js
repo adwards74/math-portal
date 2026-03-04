@@ -757,11 +757,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
             let allLectures = [];
+            let currentUnitIdx = null;
+
             if (subject) {
-                subject.units.forEach(u => {
+                subject.units.forEach((u, uIdx) => {
                     u.lectures.forEach(l => {
                         if (l.url.startsWith('lesson:')) {
-                            allLectures.push({ key: l.url.split(':').pop(), title: l.name });
+                            const key = l.url.split(':').pop();
+                            allLectures.push({ key: key, title: l.name });
+                            if (key === lessonKey) currentUnitIdx = uIdx;
                         }
                     });
                 });
@@ -796,7 +800,7 @@ document.addEventListener('DOMContentLoaded', () => {
             appContainer.innerHTML = `
                 <div class="lesson-view fadeIn">
                     <nav class="lesson-nav glass" style="display:flex; justify-content:space-between; align-items:center; padding: 12px 25px; margin-bottom: 20px;">
-                        <button class="glass back-btn" onclick="window.showSubjectDetail('${subjectId}')" style="padding: 10px 18px; font-weight: 600; font-size: 0.9rem; color: var(--text-primary); display: flex; align-items: center; gap: 10px; border-radius: 12px;">
+                        <button class="glass back-btn" onclick="window.showSubjectDetail('${subjectId}', ${currentUnitIdx})" style="padding: 10px 18px; font-weight: 600; font-size: 0.9rem; color: var(--text-primary); display: flex; align-items: center; gap: 10px; border-radius: 12px;">
                             <i class="fas fa-arrow-left"></i> <span>Syllabus</span>
                         </button>
                         <div class="lesson-title-meta" style="text-align: center;">
@@ -886,7 +890,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        window.showSubjectDetail(subId);
+        const unitIdx = unit ? subject.units.indexOf(unit) : null;
+        window.showSubjectDetail(subId, unitIdx);
     };
 
     // --- NEW: Chapter Graduation Quiz ---
