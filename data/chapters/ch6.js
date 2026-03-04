@@ -30,7 +30,22 @@ window.CHAPTER_DATA["ch6"] = {
         title: "6.1 Polynomial Essentials",
         subtitle: "Degrees, Coefficients & End Behavior",
         content: `
-            <div class="lesson-section">
+            <div class="lesson-section fadeIn">
+                <div class="mastery-workshop glass" style="margin-bottom:25px; padding:20px; border:2px solid var(--accent-cyan); background:rgba(0,210,255,0.05); border-radius:15px;">
+                    <h3 style="color:var(--accent-cyan); margin-top:0;"><i class="fas fa-microscope"></i> ELITE MASTERY WORKSHOP: 6.1</h3>
+                    <p style="font-size:0.9rem; margin-bottom:15px;">Polynomials are the 'DNA' of functions. To master them, you must look at **Global Behavior** (End Behavior) and **Local Behavior** (Roots/Factors).</p>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+                        <div class="glass-card" style="padding:15px;">
+                            <strong style="color:var(--accent-magenta);">🔥 The Root Rule:</strong>
+                            <p style="font-size:0.8rem; opacity:0.8; margin-top:5px;">A degree $n$ polynomial has EXACTLY $n$ roots (some may be real, complex, or repeated). This is the **Fundamental Theorem of Algebra**.</p>
+                        </div>
+                        <div class="glass-card" style="padding:15px;">
+                            <strong style="color:var(--accent-orange);">🎯 Mastery Target:</strong>
+                            <p style="font-size:0.8rem; opacity:0.8; margin-top:5px;">Be able to identify the degree and end behavior of any polynomial instantly, and understand how the Rational Root Theorem limits your search space.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="intuition-box glass">
                     <h3><i class="fas fa-mountain"></i> The Horizon Rule</h3>
                     <p>End behavior is like looking at a mountain range from a distance. The smaller hills (lower-degree terms) vanish, and only the highest peak (leading term) defines the shape of the horizon. In calculus, this is why we focus on 'Growth Rates'.</p>
@@ -76,6 +91,29 @@ window.CHAPTER_DATA["ch6"] = {
                         <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
                         <p style="margin-top:8px;">As $x \\to \\infty, f(x) \\to -\\infty$ and as $x \\to -\\infty, f(x) \\to \\infty$.</p>
                     </details>
+                </div>
+
+                <!-- TJ MARATHON: High-Difficulty Challenge -->
+                <div class="tj-marathon-box glass" style="margin-top:30px; border:2px solid var(--accent-cyan); background:rgba(0,210,255,0.05); padding:20px; border-radius:15px;">
+                    <h3 style="color:var(--accent-cyan); margin-top:0;"><i class="fas fa-rocket"></i> TJ MARATHON: CHAPTER 6 ELITE CHALLENGE</h3>
+                    <p style="font-size:0.9rem; margin-bottom:15px;">Polynomial stability and end behavior are critical for AP Precalculus and TJHSST's advanced Algebra 2 track. Solve this conceptual challenge.</p>
+                    
+                    <div class="challenge-item" style="margin-bottom:15px; border-left:3px solid var(--accent-cyan); padding-left:15px;">
+                        <p style="font-weight:700; color:white;">Challenge 1: The Leading Term Search</p>
+                        <p style="font-size:0.85rem; opacity:0.8;">A polynomial $P(x)$ has the property that its graph goes to $-\infty$ as $x \to \infty$ and goes to $-\infty$ as $x \to -\infty$. It has exactly 4 stationary points. What is the **minimum possible degree** of $P(x)$ and what can you say about its leading coefficient?</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-orange); cursor:pointer; font-size:0.85rem;">View Logical Solution</summary>
+                            <div style="margin-top:10px; font-size:0.85rem; line-height:1.6;">
+                                <ol>
+                                    <li>**End Behavior Analysis:** Since both ends go to $-\infty$, the degree must be **EVEN** and the leading coefficient must be **NEGATIVE**.</li>
+                                    <li>**Stationary Point Analysis:** Stationary points occur where the derivative $P'(x) = 0$. If there are 4 stationary points, the derivative must have at least degree 4.</li>
+                                    <li>**Minimum Degree:** Since $deg(P') = deg(P) - 1$, and $deg(P') \ge 4$, then $deg(P) \ge 5$.</li>
+                                    <li>**Refining with Evenness:** We found degree must be even AND $\ge 5$. Therefore, the **minimum degree is 6**.</li>
+                                    <li>**Conclusion:** Minimum Degree: **6**, Leading Coefficient: **Negative**.</li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
                 </div>
             </div>
         `

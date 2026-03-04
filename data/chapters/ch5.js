@@ -30,7 +30,22 @@ window.CHAPTER_DATA["ch5"] = {
         title: "5.1 & 5.2 Parabolas & Vertex Form",
         subtitle: "The Geometry of Perfection & Optics",
         content: `
-            <div class="lesson-section">
+            <div class="lesson-section fadeIn">
+                <div class="mastery-workshop glass" style="margin-bottom:25px; padding:20px; border:2px solid var(--accent-orange); background:rgba(255,75,43,0.05); border-radius:15px;">
+                    <h3 style="color:var(--accent-orange); margin-top:0;"><i class="fas fa-crown"></i> ELITE MASTERY WORKSHOP: 5.1-5.2</h3>
+                    <p style="font-size:0.9rem; margin-bottom:15px;">Chapter 5 is the foundation of TJHSST Algebra 2. Your focus should be on **Vertex Precision** and **Completing the Square**—the two areas where elite students differentiate themselves.</p>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+                        <div class="glass-card" style="padding:15px;">
+                            <strong style="color:var(--accent-cyan);">🔥 Hot Tip:</strong>
+                            <p style="font-size:0.8rem; opacity:0.8; margin-top:5px;">In $y=a(x-h)^2+k$, the sign of $h$ is always **opposite** what you see in the parenthesis. $(x-3)$ means $h=3$. $(x+4)$ means $h=-4$.</p>
+                        </div>
+                        <div class="glass-card" style="padding:15px;">
+                            <strong style="color:var(--accent-magenta);">🎯 Focus Goal:</strong>
+                            <p style="font-size:0.8rem; opacity:0.8; margin-top:5px;">Master the conversion from Standard ($ax^2+bx+c$) to Vertex Form without making arithmetic errors in the 'Half-and-Square' step.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="intuition-box glass">
                     <h3><i class="fas fa-bullseye"></i> The Signal Path</h3>
                     <p>A parabola is a **Logic Mirror**. Every beam of light or radio wave hitting its surface is forced to a single, perfect point (the Focus). In calculus, this shape is the result of a constant acceleration (gravity).</p>
@@ -102,6 +117,29 @@ window.CHAPTER_DATA["ch5"] = {
                         <summary style="color:var(--accent-green); cursor:pointer;"><i class="fas fa-check"></i> Answer</summary>
                         <p style="margin-top:8px;">$y = 2(x - 3)^2 + 1$</p>
                     </details>
+                </div>
+
+                <!-- TJ MARATHON: High-Difficulty Challenge -->
+                <div class="tj-marathon-box glass" style="margin-top:30px; border:2px solid var(--accent-orange); background:rgba(255,75,43,0.05); padding:20px; border-radius:15px;">
+                    <h3 style="color:var(--accent-orange); margin-top:0;"><i class="fas fa-fire"></i> TJ MARATHON: CHAPTER 5 ELITE CHALLENGE</h3>
+                    <p style="font-size:0.9rem; margin-bottom:15px;">These problems replicate the 'Elite' standard seen in advanced TJHSST Algebra 2 curriculum. Focus on the steps, not just the answer.</p>
+                    
+                    <div class="challenge-item" style="margin-bottom:15px; border-left:3px solid var(--accent-orange); padding-left:15px;">
+                        <p style="font-weight:700; color:white;">Challenge 1: The Standard to Vertex Transition</p>
+                        <p style="font-size:0.85rem; opacity:0.8;">Convert $y = 2x^2 - 12x + 23$ into Vertex Form by **Completing the Square**. Identify the vertex and focus.</p>
+                        <details style="margin-top:10px;">
+                            <summary style="color:var(--accent-cyan); cursor:pointer; font-size:0.85rem;">View Step-by-Step Solution</summary>
+                            <div style="margin-top:10px; font-size:0.85rem; line-height:1.6;">
+                                <ol>
+                                    <li>Factor out $a=2$: $y = 2(x^2 - 6x) + 23$</li>
+                                    <li>Complete the square inside: half of -6 is -3, square it is 9. Add and subtract 9. <br> $y = 2(x^2 - 6x + 9 - 9) + 23$</li>
+                                    <li>Distribute: $y = 2(x - 3)^2 - 18 + 23$</li>
+                                    <li>Simplify: **$y = 2(x - 3)^2 + 5$**</li>
+                                    <li>Vertex is **$(3, 5)$**. Focus is $p = 1/(4 \cdot 2) = 1/8$ above vertex: **$(3, 5.125)$**.</li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
                 </div>
             </div>
         `

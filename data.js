@@ -379,7 +379,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 5: Quadratic Equations",
-                    videoUrl: "https://www.youtube.com/watch?v=ZfA6vS5O4O8",
+                    videoUrl: "https://www.youtube.com/watch?v=SDe-1lGeS00",
                     intuition: "Curves govern the physical world. From gravity to growth, quadratics provide the parabolic logic for modeling motion and optimization.",
                     vizConfig: {
                         expressions: ["y = a(x - h)^2 + k", "a = 1", "h = 0", "k = 0"],
