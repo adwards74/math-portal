@@ -45,8 +45,63 @@ document.addEventListener('DOMContentLoaded', () => {
         const history = getQuizHistory();
         history.unshift(attempt); // Add to beginning
         localStorage.setItem(QUIZ_HISTORY_KEY, JSON.stringify(history.slice(0, 100))); // Keep last 100
+        // Update Leitner box for spaced repetition
+        if (window.updateLeitnerBox) window.updateLeitnerBox(attempt);
         if (window.updateStabilityUI) window.updateStabilityUI();
     }
+
+    // --- Leitner Spaced Repetition System ---
+    // Box 1: review in 1 day, Box 2: 3 days, Box 3: 7 days, Box 4: 14 days, Box 5: 30 days
+    const LEITNER_KEY = 'sabrina_leitner_boxes';
+    const LEITNER_INTERVALS = [1, 3, 7, 14, 30]; // days per box
+
+    window.getLeitnerBoxes = () => {
+        const saved = localStorage.getItem(LEITNER_KEY);
+        return saved ? JSON.parse(saved) : {};
+    };
+
+    window.updateLeitnerBox = (attempt) => {
+        const boxes = window.getLeitnerBoxes();
+        const key = `${attempt.chapter}::${attempt.question.substring(0, 60)}`;
+        const current = boxes[key] || { box: 1, nextReview: Date.now(), attempts: 0 };
+        current.attempts++;
+
+        if (attempt.correct) {
+            // Move up a box (max 5)
+            current.box = Math.min(5, current.box + 1);
+        } else {
+            // Wrong answer -> back to box 1
+            current.box = 1;
+        }
+
+        const intervalDays = LEITNER_INTERVALS[current.box - 1];
+        current.nextReview = Date.now() + (intervalDays * 24 * 60 * 60 * 1000);
+        current.lastResult = attempt.correct ? 'correct' : 'wrong';
+
+        boxes[key] = current;
+        localStorage.setItem(LEITNER_KEY, JSON.stringify(boxes));
+    };
+
+    window.getDueReviews = () => {
+        const boxes = window.getLeitnerBoxes();
+        const now = Date.now();
+        return Object.entries(boxes)
+            .filter(([key, data]) => data.nextReview <= now)
+            .sort((a, b) => a[1].nextReview - b[1].nextReview)
+            .map(([key, data]) => {
+                const [chapter, question] = key.split('::');
+                return { chapter, question, box: data.box, attempts: data.attempts };
+            });
+    };
+
+    window.getLeitnerStats = () => {
+        const boxes = window.getLeitnerBoxes();
+        const entries = Object.values(boxes);
+        const byBox = [0, 0, 0, 0, 0];
+        entries.forEach(e => { if (e.box >= 1 && e.box <= 5) byBox[e.box - 1]++; });
+        const due = window.getDueReviews().length;
+        return { total: entries.length, byBox, due };
+    };
 
     // Kernel Initialization: Link Modules
     if (window.RegistryManager) window.RegistryManager.initialize();
