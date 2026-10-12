@@ -939,8 +939,11 @@ document.addEventListener('DOMContentLoaded', () => {
         window.showSubjectDetail(subId, unitIdx);
     };
 
-    // --- NEW: Chapter Graduation Quiz ---
-    window.showUnitQuiz = (subjectId, unitIdx) => {
+    // --- Chapter Graduation Quiz (Multi-Level Sequential) ---
+    // Tracks progress through L1 -> L2 -> L3 for true mastery progression
+    window._quizProgress = window._quizProgress || {};
+
+    window.showUnitQuiz = (subjectId, unitIdx, levelIdx = 0) => {
         const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
         if (!subject) return;
         const unit = subject.units[unitIdx];
@@ -957,16 +960,29 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!quiz) return;
         const isMultiLevel = quiz.levels && Array.isArray(quiz.levels);
 
-        // For multi-level, we use the last level (Level 3: Mastery) as the graduation challenge
-        const targetLevel = isMultiLevel ? quiz.levels[quiz.levels.length - 1] : quiz;
+        // Sequential progression: start at levelIdx, advance on correct answer
+        const targetLevel = isMultiLevel ? quiz.levels[levelIdx] : quiz;
+        const totalLevels = isMultiLevel ? quiz.levels.length : 1;
+        const progressKey = `${subjectId}_${unitIdx}`;
+        window._quizProgress[progressKey] = levelIdx;
         const appContainer = document.getElementById('dashboard-view');
+
+        const levelLabel = isMultiLevel ? `Level ${levelIdx + 1} of ${totalLevels}: ${targetLevel.title || ''}` : 'Graduation Challenge';
+        const progressPct = isMultiLevel ? Math.round(((levelIdx) / totalLevels) * 100) : 0;
 
         appContainer.innerHTML = `
             <div class="quiz-overlay fadeIn">
                 <div class="quiz-standalone-card glass animate__animated animate__zoomIn" style="max-width:600px;">
                     <span class="chapter-badge">${unit.title}</span>
-                    <h2 class="gradient-text">Graduation Challenge</h2>
-                    <p style="opacity:0.7; margin-bottom:30px;">Complete this final mastery check to finalize your chapter credits.</p>
+                    <h2 class="gradient-text">${isMultiLevel ? 'Mastery Path' : 'Graduation Challenge'}</h2>
+                    ${isMultiLevel ? `
+                    <div style="margin-bottom:20px;">
+                        <p style="opacity:0.7; font-size:0.85rem; margin-bottom:8px;">${levelLabel}</p>
+                        <div style="background:rgba(255,255,255,0.1); border-radius:10px; height:8px; overflow:hidden;">
+                            <div style="background:linear-gradient(90deg, #00d2ff, #9d50bb); height:100%; width:${progressPct}%; transition:width 0.5s;"></div>
+                        </div>
+                    </div>` : `
+                    <p style="opacity:0.7; margin-bottom:30px;">Complete this final mastery check to finalize your chapter credits.</p>`}
                     
                     <div class="question-box">
                         <p>${targetLevel.question}</p>
@@ -1030,7 +1046,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!subject) return;
         const unit = subject.units[unitIdx];
         if (!unit || !unit.quiz || !unit.quiz.levels) return;
-        const targetLevel = unit.quiz.levels[unit.quiz.levels.length - 1];
+        const progressKey = `${subjectId}_${unitIdx}`;
+        const currentLevel = (window._quizProgress && window._quizProgress[progressKey] !== undefined)
+            ? window._quizProgress[progressKey] : 0;
+        const targetLevel = unit.quiz.levels[currentLevel];
+        const totalLevels = unit.quiz.levels.length;
+        const isLastLevel = currentLevel >= totalLevels - 1;
         const input = document.getElementById('justification-input').value;
         const feedback = document.getElementById('final-quiz-feedback');
 
@@ -1049,16 +1070,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (validation.passed) {
-            feedback.innerHTML = `
-                <div class="celebration-badge animate__animated animate__tada">
-                    <h3 style="color:#ffd700;"><i class="fas fa-crown"></i> MASTERY ACHIEVED</h3>
-                    <p style="color:white; font-size:0.9rem;">Your reasoning covers the key concepts (${validation.matched}/${validation.total} keywords).</p>
-                </div>
-            `;
-            if (window.confetti) {
-                confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, colors: ['#ffd700', '#00d2ff', '#9d50bb'] });
+            if (!isLastLevel) {
+                const nextLevel = currentLevel + 1;
+                feedback.innerHTML = `
+                    <div class="celebration-badge animate__animated animate__tada">
+                        <h3 style="color:#ffd700;"><i class="fas fa-crown"></i> LEVEL ${currentLevel + 1} COMPLETE</h3>
+                        <p style="color:white; font-size:0.9rem;">Key concepts covered (${validation.matched}/${validation.total}). Advancing to Level ${nextLevel + 1}...</p>
+                    </div>
+                `;
+                if (window.confetti) {
+                    confetti({ particleCount: 60, spread: 50, origin: { y: 0.6 }, colors: ['#ffd700', '#00d2ff', '#9d50bb'] });
+                }
+                setTimeout(() => { window.showUnitQuiz(subjectId, unitIdx, nextLevel); }, 1800);
+            } else {
+                feedback.innerHTML = `
+                    <div class="celebration-badge animate__animated animate__tada">
+                        <h3 style="color:#ffd700;"><i class="fas fa-crown"></i> MASTERY ACHIEVED</h3>
+                        <p style="color:white; font-size:0.9rem;">All levels complete! Your reasoning covers the key concepts (${validation.matched}/${validation.total} keywords).</p>
+                    </div>
+                `;
+                if (window.confetti) {
+                    confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, colors: ['#ffd700', '#00d2ff', '#9d50bb'] });
+                }
+                if (window._quizProgress) delete window._quizProgress[progressKey];
+                setTimeout(() => { window.showSubjectDetail(subjectId); }, 3000);
             }
-            setTimeout(() => { window.showSubjectDetail(subjectId); }, 3000);
         } else {
             feedback.innerHTML = `
                 <div class="glass" style="padding:20px; border-left: 4px solid #ff6b6b;">
@@ -1070,14 +1106,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    window.handleFinalQuizAnswer = (subjectId, unitIdx, selected) => {
+    window.handleFinalQuizAnswer = (subjectId, unitIdx, selected, levelIdx = 0) => {
         const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
         if (!subject) return;
         const unit = subject.units[unitIdx];
         if (!unit || !unit.quiz) return;
         const quiz = unit.quiz;
         const isMultiLevel = quiz.levels && Array.isArray(quiz.levels);
-        const targetLevel = isMultiLevel ? quiz.levels[quiz.levels.length - 1] : quiz;
+        // Use tracked progress if levelIdx not explicitly passed
+        const progressKey = `${subjectId}_${unitIdx}`;
+        const currentLevel = (window._quizProgress && window._quizProgress[progressKey] !== undefined)
+            ? window._quizProgress[progressKey] : levelIdx;
+        const targetLevel = isMultiLevel ? quiz.levels[currentLevel] : quiz;
+        const totalLevels = isMultiLevel ? quiz.levels.length : 1;
+        const isLastLevel = !isMultiLevel || currentLevel >= totalLevels - 1;
 
         const feedback = document.getElementById('final-quiz-feedback');
         const normalize = (s) => s.toString().trim().replace(/\\s+/g, ' ').replace(/[\u223C\u223D\u223E\u2241\u2242\u2243\u2244\u2245\u2246\u2247\u2248\u2249\u224A\u224B\u224C\u224D\u224E\u224F\u223B\u223A\u2239\u2238\u2237\u2236]/g, '~');
@@ -1094,18 +1136,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (isCorrect) {
-            feedback.innerHTML = `
-                <div class="celebration-badge animate__animated animate__bounceIn">
-                    <h3 style="color:var(--accent-green);"><i class="fas fa-check-double"></i> MATRIX VERIFIED</h3>
-                    <p style="color:white; font-size:0.9rem;">Chapter Graduation Successful. Credits Issued.</p>
-                </div>
-            `;
-            if (window.confetti) {
-                confetti({ particleCount: 100, spread: 60, origin: { y: 0.7 } });
+            if (!isLastLevel) {
+                // Advance to next level
+                const nextLevel = currentLevel + 1;
+                feedback.innerHTML = `
+                    <div class="celebration-badge animate__animated animate__bounceIn">
+                        <h3 style="color:var(--accent-green);"><i class="fas fa-check-double"></i> LEVEL ${currentLevel + 1} COMPLETE</h3>
+                        <p style="color:white; font-size:0.9rem;">Advancing to Level ${nextLevel + 1} of ${totalLevels}...</p>
+                    </div>
+                `;
+                if (window.confetti) {
+                    confetti({ particleCount: 60, spread: 50, origin: { y: 0.7 } });
+                }
+                setTimeout(() => {
+                    window.showUnitQuiz(subjectId, unitIdx, nextLevel);
+                }, 1800);
+            } else {
+                // All levels complete - graduation!
+                feedback.innerHTML = `
+                    <div class="celebration-badge animate__animated animate__bounceIn">
+                        <h3 style="color:var(--accent-green);"><i class="fas fa-check-double"></i> MATRIX VERIFIED</h3>
+                        <p style="color:white; font-size:0.9rem;">All ${totalLevels} levels complete! Chapter Graduation Successful. Credits Issued.</p>
+                    </div>
+                `;
+                if (window.confetti) {
+                    confetti({ particleCount: 150, spread: 70, origin: { y: 0.7 } });
+                }
+                // Clear progress
+                if (window._quizProgress) delete window._quizProgress[progressKey];
+                setTimeout(() => {
+                    window.showSubjectDetail(subjectId);
+                }, 2500);
             }
-            setTimeout(() => {
-                window.showSubjectDetail(subjectId);
-            }, 2500);
         } else {
             feedback.style.color = "var(--accent-magenta)";
             feedback.innerHTML = `<i class="fas fa-times-circle"></i> Discrepancy detected. Neural link suggests reviewing the intuition box.`;
