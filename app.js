@@ -1066,6 +1066,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.getWrongAnswerHint = (question, selected, correct) => {
         const lowerQ = question.toLowerCase();
+        const lowerS = (selected || '').toLowerCase();
+        // Misconception-targeted hints
         if (lowerQ.includes('converge') || lowerQ.includes('infinite')) {
             return "Hint: For a geometric series to converge, $|r|$ must be strictly less than 1. Check your ratio.";
         }
@@ -1075,7 +1077,28 @@ document.addEventListener('DOMContentLoaded', () => {
         if (lowerQ.includes('period') || lowerQ.includes('wave')) {
             return "Hint: The period of $y = \\sin(bx)$ is $2\\pi/b$. If $b$ increases, the period must shrink.";
         }
-        return "Think about the core intuition box for this chapter. Is the growth additive or multiplicative?";
+        if (lowerQ.includes('derivative') && lowerS.includes('0')) {
+            return "Hint: A zero derivative means a horizontal tangent (local max/min), not necessarily that the function is zero.";
+        }
+        if (lowerQ.includes('limit') && (lowerS.includes('undefined') || lowerS.includes('does not exist'))) {
+            return "Hint: A limit can exist even if the function is undefined at that point. Check left and right behavior.";
+        }
+        if (lowerQ.includes('integral') && lowerQ.includes('area') && lowerS.includes('negative')) {
+            return "Hint: Definite integrals give NET signed area. Area below the x-axis counts negative.";
+        }
+        if (lowerQ.includes('log') && (lowerS.includes('0') || lowerS.includes('negative'))) {
+            return "Hint: Logarithms are only defined for positive arguments. $\\log(0)$ and $\\log(-x)$ are undefined.";
+        }
+        if (lowerQ.includes('absolute value') || lowerQ.includes('|x')) {
+            return "Hint: Absolute value measures DISTANCE from zero — it can never be negative. $|x| = -2$ has no solution.";
+        }
+        if (lowerQ.includes('inverse') || lowerQ.includes('f^{-1}')) {
+            return "Hint: To find an inverse, swap x and y then solve for y. Don't just flip the fraction!";
+        }
+        if (lowerQ.includes('determinant') && lowerS.includes('0') === false && correct === '0') {
+            return "Hint: A zero determinant means the matrix collapses dimensions — it's not invertible.";
+        }
+        return "Think about the core intuition box for this chapter. What happens at the boundary/edge cases?";
     };
 
     // Keyword-based validation for free-response justifications
