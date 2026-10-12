@@ -1373,7 +1373,11 @@ window.MATH_DATA = {
                         { name: "2.1: The Magnitude Compressor", url: "lesson:precalc:precalc-u2-1" },
                         { name: "2.2: Logistic Dynamics (L/2)", url: "lesson:precalc:precalc-u2-2" },
                         { name: "2.3: Semi-Log Analysis", url: "lesson:precalc:precalc-u2-3" },
-                        { name: "2.4: Model Validation (Residuals)", url: "lesson:precalc:precalc-u2-4" }
+                        { name: "2.4: Model Validation (Residuals)", url: "lesson:precalc:precalc-u2-4" },
+                        { name: "2.1b: Log Properties Drill (Expand & Condense)", url: "lesson:precalc:precalc-u2-1b" },
+                        { name: "2.1c: Solving Exp & Log Equations (Finish Protocol)", url: "lesson:precalc:precalc-u2-1c" },
+                        { name: "2.5: Inverses of Exponential & Log Functions", url: "lesson:precalc:precalc-u2-5" },
+                        { name: "2.6: e, Continuous Compounding & Real-World Models", url: "lesson:precalc:precalc-u2-6" }
                     ],
                     examples: [
                         {
@@ -1408,10 +1412,96 @@ window.MATH_DATA = {
                         }
                     ],
                     quiz: {
-                        question: "Level 3 Mastery: If log(y) = 2x + 1, what is the base 'b' of the original exponential model y = a*b^x?",
-                        options: ["b = 1", "b = 2", "b = 10^2", "b = e^2"],
-                        answer: "b = 10^2",
-                        explanation: "When log(y) is base 10 (common log), the slope of the linear form is log(b). So log(b) = 2 -> b = 10^2 = 100."
+                        levels: [
+                            {
+                                level: 1,
+                                title: "Semi-Log Base",
+                                question: "Level 3 Mastery: If log(y) = 2x + 1, what is the base 'b' of the original exponential model y = a*b^x?",
+                                options: ["b = 1", "b = 2", "b = 10^2", "b = e^2"],
+                                answer: "b = 10^2",
+                                explanation: "When log(y) is base 10 (common log), the slope of the linear form is log(b). So log(b) = 2 -> b = 10^2 = 100."
+                            },
+                            {
+                                level: 2,
+                                title: "S1: Expand",
+                                question: "Expand: $\\log_4\\frac{\\sqrt[3]{x}}{y^2}$",
+                                options: ["$\\frac{1}{3}\\log_4 x - 2\\log_4 y$", "$3\\log_4 x - 2\\log_4 y$", "$\\frac{\\log_4 x - \\log_4 y^2}{3}$", "$\\log_4\\sqrt[3]{x} - \\log_4 y^2$ cannot be split further"],
+                                answer: "$\\frac{1}{3}\\log_4 x - 2\\log_4 y$",
+                                explanation: "Rewrite the root first: $\\sqrt[3]{x} = x^{1/3}$. Then $\\log_4(x^{1/3}) - \\log_4(y^2) = \\frac{1}{3}\\log_4 x - 2\\log_4 y$. WRONG-ANSWER WATCH: $3\\log_4 x$ flips the fraction (the 3 belongs in the denominator, not multiplied). QUICK SELF-CHECK: every root becomes a fraction out front."
+                            },
+                            {
+                                level: 3,
+                                title: "S1: Condense",
+                                question: "Condense to a single log: $\\frac{1}{2}\\log 5 + \\frac{1}{3}\\log 8 - \\log 2$",
+                                options: ["$\\log\\sqrt{5}$", "$\\log\\frac{\\sqrt{5 \\cdot 8}}{2}$", "$\\frac{5}{6}\\log(5 + 8 - 2)$", "$\\log\\left(\\frac{5}{2} + \\frac{8}{3} - 2\\right)$"],
+                                answer: "$\\log\\sqrt{5}$",
+                                explanation: "Power property: $\\log\\sqrt{5} + \\log\\sqrt[3]{8} - \\log 2 = \\log\\frac{\\sqrt{5}\\cdot 2}{2} = \\log\\sqrt{5}$. WRONG-ANSWER WATCH: coefficients never add or subtract across terms -- $\\frac{1}{2}\\log 5 + \\frac{1}{3}\\log 8$ is NOT $\\frac{5}{6}\\log(13)$. QUICK SELF-CHECK: after condensing, count the logs -- exactly one must remain."
+                            },
+                            {
+                                level: 4,
+                                title: "S1: Legal Moves",
+                                question: "Which of the following is a LEGAL logarithm move?",
+                                options: ["$\\log_2(x+y) = \\log_2 x + \\log_2 y$", "$\\ln(ab) = \\ln a \\cdot \\ln b$", "$\\log_5\\frac{x}{y} = \\log_5 x - \\log_5 y$", "$\\log_3 x^2 = 2\\log_3 x$ for all real $x$"],
+                                answer: "$\\log_5\\frac{x}{y} = \\log_5 x - \\log_5 y$",
+                                explanation: "Only the quotient rule is legal here. WRONG-ANSWER WATCH: $\\log_3 x^2 = 2\\log_3 x$ fails for $x < 0$ (the right side is undefined there -- the true identity is $2\\log_3|x|$). QUICK SELF-CHECK: logs break products and quotients, never sums."
+                            },
+                            {
+                                level: 5,
+                                title: "S2: Extraneous Root",
+                                question: "Solve: $\\log_2 x + \\log_2(x-2) = 3$",
+                                options: ["$x = 4$", "$x = 4$ or $x = -2$", "$x = -2$", "No solution"],
+                                answer: "$x = 4$",
+                                explanation: "Condense: $\\log_2[x(x-2)] = 3$, so $x(x-2) = 8$, giving $x = 4$ or $x = -2$. But $x = -2$ makes $\\log_2 x$ undefined in the ORIGINAL equation -- reject it. WRONG-ANSWER WATCH: the condensed form $\\log_2[x(x-2)]$ hides the domain break; always check candidates in the original. QUICK SELF-CHECK: every log argument positive? If not, it is a ghost."
+                            },
+                            {
+                                level: 6,
+                                title: "S2: Two Bases",
+                                question: "Solve: $5^{2x} = 3^{x+1}$",
+                                options: ["$x = \\frac{\\ln 3}{2\\ln 5 - \\ln 3}$", "$x = \\frac{\\ln 3 + 1}{2\\ln 5}$", "$x = \\frac{\\log_5 3}{2}$", "$x = \\frac{\\ln 5}{\\ln 3}$"],
+                                answer: "$x = \\frac{\\ln 3}{2\\ln 5 - \\ln 3}$",
+                                explanation: "Take $\\ln$ of both sides: $2x\\ln 5 = (x+1)\\ln 3$. Collect $x$: $x(2\\ln 5 - \\ln 3) = \\ln 3$. WRONG-ANSWER WATCH: do not 'cancel' the bases -- $5^{2x} = 3^{x+1}$ does NOT imply $2x = x+1$. QUICK SELF-CHECK: different bases on each side always means take the log."
+                            },
+                            {
+                                level: 7,
+                                title: "S2: Base Discipline",
+                                question: "In solving $\\log 3 + \\frac{1}{4}\\ln x = 2\\log 3$, what is the FIRST legal move?",
+                                options: ["Combine into $\\log(3\\sqrt[4]{x}) = \\log 9$", "Rewrite $\\frac{1}{4}\\ln x$ as $\\ln\\sqrt[4]{x}$, then convert $\\log 3$ to $\\ln$ via change of base", "Divide both sides by $\\log 3$", "Replace $\\ln x$ with $\\log x$ directly"],
+                                answer: "Rewrite $\\frac{1}{4}\\ln x$ as $\\ln\\sqrt[4]{x}$, then convert $\\log 3$ to $\\ln$ via change of base",
+                                explanation: "$\\log$ is base 10 and $\\ln$ is base $e$ -- they may never be merged. Unify the bases FIRST (change of base), then condense. WRONG-ANSWER WATCH: $\\log 3 + \\ln\\sqrt[4]{x} = \\log 9$ silently merges two different bases -- automatic zero on that step. QUICK SELF-CHECK: one base per equation before condensing."
+                            },
+                            {
+                                level: 8,
+                                title: "S3: Inverse",
+                                question: "Find the inverse of $f(x) = 3(2)^{x-1} + 4$",
+                                options: ["$f^{-1}(x) = \\log_2\\frac{x-4}{3} + 1$", "$f^{-1}(x) = \\log_2\\frac{x-4}{3} - 1$", "$f^{-1}(x) = \\frac{\\log_2(x-4)}{3} + 1$", "$f^{-1}(x) = \\log_2(x-4) - 2$"],
+                                answer: "$f^{-1}(x) = \\log_2\\frac{x-4}{3} + 1$",
+                                explanation: "Swap: $x = 3(2)^{y-1} + 4$. Isolate the WHOLE exponential term first: $\\frac{x-4}{3} = 2^{y-1}$, then $y - 1 = \\log_2\\frac{x-4}{3}$. WRONG-ANSWER WATCH: converting to log form before dividing by 3 is impossible -- the coefficient is not inside the exponent. QUICK SELF-CHECK: algebra first, conversion second."
+                            },
+                            {
+                                level: 9,
+                                title: "S3: Verify Pair",
+                                question: "Which pair are true inverses of each other?",
+                                options: ["$f(x) = e^x + 1$, $g(x) = \\ln(x-1)$", "$f(x) = e^x + 1$, $g(x) = \\ln x - 1$", "$f(x) = e^x + 1$, $g(x) = \\ln(x+1)$", "$f(x) = e^{x+1}$, $g(x) = \\ln(x-1)$"],
+                                answer: "$f(x) = e^x + 1$, $g(x) = \\ln(x-1)$",
+                                explanation: "Compose one way: $f(g(x)) = e^{\\ln(x-1)} + 1 = (x-1) + 1 = x$. WRONG-ANSWER WATCH: $\\ln x - 1$ looks close but $e^{\\ln x - 1} + 1 = \\frac{x}{e} + 1 \\neq x$ -- the $-1$ must be INSIDE the log argument. QUICK SELF-CHECK: one composition, fully simplified, must return exactly $x$."
+                            },
+                            {
+                                level: 10,
+                                title: "S4: Compounding",
+                                question: "$8000 is invested at 6% compounded CONTINUOUSLY for 10 years. What is the value?",
+                                options: ["About $14,577", "About $14,327", "About $12,800", "$8000e^{6}$"],
+                                answer: "About $14,577",
+                                explanation: "$A = 8000e^{0.06\\cdot 10} = 8000e^{0.6} \\approx 8000(1.8221) \\approx 14577$. WRONG-ANSWER WATCH: $14,327 is annual compounding $8000(1.06)^{10}$ -- continuous compounding always beats it. QUICK SELF-CHECK: the exponent must be $rt$ as a decimal ($0.6$, not $6$)."
+                            },
+                            {
+                                level: 11,
+                                title: "S4: Half-Life",
+                                question: "A sample decays as $m(t) = 50e^{-0.08t}$ grams. What is its half-life?",
+                                options: ["About 8.7 years", "About 12.5 years", "About 6.25 years", "0.693 years"],
+                                answer: "About 8.7 years",
+                                explanation: "Set $25 = 50e^{-0.08t}$: $e^{-0.08t} = 0.5$, so $-0.08t = \\ln 0.5 = -\\ln 2$, giving $t = \\frac{\\ln 2}{0.08} \\approx 8.7$ years. WRONG-ANSWER WATCH: 0.693 years confuses $\\ln 2$ itself with the answer -- you must still divide by the decay constant. QUICK SELF-CHECK: half-life $= \\frac{\\ln 2}{k}$, always with units."
+                            }
+                        ]
                     }
                 },
                 {
