@@ -7,7 +7,7 @@ window.MATH_DATA = {
             description: "Pre-Algebra review: fractions, order of operations, basic equations, and the coordinate plane. Master these before Algebra 2!",
             color: "#38ef7d",
             icon: "fas fa-bridge",
-            intuition: "A strong foundation lets you build higher. Complete this chapter first!",
+            intuition: "Every hard Algebra 2 problem is secretly a foundation problem in disguise — a quadratic you can't solve is usually a fraction you can't add, and a 'tricky' equation is usually order-of-operations wearing a costume. Think of this chapter as pouring the concrete slab: fractions, PEMDAS, basic equations, and the coordinate plane are the load-bearing walls everything else stands on. Students who rush past Ch 0 don't fail at quadratics — they fail at the arithmetic INSIDE the quadratics. Master this first, and every later chapter gets measurably easier.",
             local_resources: [],
             difficulty: "basic",
             units: [
@@ -31,21 +31,21 @@ window.MATH_DATA = {
                                 question: "What is $\\frac{1}{2} + \\frac{1}{3}$?",
                                 options: ["$\\frac{2}{5}$", "$\\frac{5}{6}$", "$\\frac{1}{6}$", "$\\frac{2}{6}$"],
                                 answer: "$\\frac{5}{6}$",
-                                explanation: "Find common denominator: $\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}$"
+                                explanation: "The trap here is adding straight across: $\\frac{1}{2}+\\frac{1}{3} \\ne \\frac{2}{5}$. A fraction is a count of equal-sized pieces, so you can only add pieces of the same size — convert first: $\\frac{1}{2}=\\frac{3}{6}$ and $\\frac{1}{3}=\\frac{2}{6}$, giving $\\frac{3}{6}+\\frac{2}{6}=\\frac{5}{6}$. Wrong-answer watch: $\\frac{2}{5}$ comes from adding numerators and denominators separately, which silently redefines what the 'whole' is mid-problem. Quick self-check: $\\frac{5}{6} \\approx 0.83$ sits sensibly above $\\frac{1}{2}$ — any answer smaller than both inputs (like $\\frac{2}{5} = 0.4$) is an instant red flag."
                             },
                             {
                                 title: "Level 2: PEMDAS",
                                 question: "$3 + 2 \\times 4^2$ = ?",
                                 options: ["80", "35", "44", "100"],
                                 answer: "35",
-                                explanation: "Exponents first: $4^2=16$, then multiply: $2 \\times 16=32$, finally add: $3+32=35$"
+                                explanation: "The trap here is reading left to right: $(3+2)\\times 16 = 80$ treats addition as if it outranks multiplication. PEMDAS is a hierarchy, not a sequence — exponents first ($4^2 = 16$), then multiplication ($2 \\times 16 = 32$), then addition ($3 + 32 = 35$). Wrong-answer watch: $80$ comes from adding before multiplying; $44$ comes from computing $2 \\times 4^2$ as $(2 \\times 4)^2$. Quick self-check: multiplication binds tighter than addition, so the product term $2 \\times 16 = 32$ must dominate the sum — an answer like $80$, where the tiny $+3$ visibly inflated the result, should look suspicious."
                             },
                             {
                                 title: "Level 3: Equations",
                                 question: "If $2x + 5 = 13$, what is $x$?",
                                 options: ["x = 4", "x = 9", "x = 6", "x = 3"],
                                 answer: "x = 4",
-                                explanation: "$2x = 8 \\rightarrow x = 4$"
+                                explanation: "The trap here is 'undoing' in the wrong order, or on only one side. An equation is a balanced scale: whatever you do, do it to both sides. Peel the operations off in reverse — first subtract 5 from both sides ($2x = 8$), then divide both sides by 2 ($x = 4$). Wrong-answer watch: $x = 9$ comes from adding 5 instead of subtracting ($(13+5)/2$); $x = 6$ comes from dividing before the $x$-term is isolated. Quick self-check: plug back into the ORIGINAL equation — $2(4)+5 = 13$ ✓. If your candidate fails the original, the algebra went wrong somewhere, no matter how clean it looked."
                             }
                         ]
                     }
@@ -59,7 +59,7 @@ window.MATH_DATA = {
             description: "Virginia Prentice Hall Algebra 2 (TJHSST Specific). Comprehensive mastery of functions, matrices, and trigonometry.",
             color: "#9d50bb",
             icon: "fas fa-brain",
-            intuition: "Algebra 2 is the foundation for ALL future STEM courses. It's where the 'Rules of the Universe' are written in variables.",
+            intuition: "Algebra 2 is the last course where math is still 'just math' — after this, every STEM subject (physics, chemistry, precalculus, computer science) assumes you already speak this language fluently. Functions, logarithms, matrices, and trigonometry are the vocabulary; the chapters ahead teach you to read and write with them. Think of it as learning the grammar of the universe: projectile motion, compound interest, sound waves, and AI models are all sentences written in these symbols. The students who thrive in TJHSST's later courses aren't the ones who memorized the most formulas — they're the ones for whom these ideas became intuition.",
             local_resources: [
                 { name: "TJ3 Algebra 2 Syllabus", path: "curriculum/algebra2/syllabus.pdf" },
                 { name: "Chapter 1-5 Formula Sheet", path: "curriculum/algebra2/formulas.pdf" },
@@ -124,14 +124,14 @@ window.MATH_DATA = {
                                 question: "Why is $a \\cdot 0 = 0$ in the formal system of Algebra?",
                                 options: ["It's just a definition", "Consequence of Distributive Property", "Inverse Identity", "Associative Law"],
                                 answer: "Consequence of Distributive Property",
-                                explanation: "Formal proofs show that multiplying by zero is a result of distributing across an identity ($0+0$)."
+                                explanation: "The trap here is treating $a \\cdot 0 = 0$ as an unquestionable definition — in a rigorous system it is a THEOREM. Proof idea in two lines: $a \\cdot 0 = a \\cdot (0 + 0) = a\\cdot 0 + a\\cdot 0$ by distributivity; subtract $a\\cdot 0$ from both sides and $0 = a \\cdot 0$ falls out. The distributive property does all the work: zero 'absorbs' because it is the additive identity. Wrong-answer watch: 'Inverse Identity' and 'Associative Law' sound sophisticated, but neither one connects multiplication to addition — only distributivity bridges the two operations. Takeaway: whenever a fact feels 'obvious', ask which axiom it actually follows from."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "Solve for $x$: $3(x - 5) = 2x + 4$.",
                                 options: ["x = 19", "x = 9", "x = 1", "x = 11"],
                                 answer: "x = 19",
-                                explanation: "$3x - 15 = 2x + 4 \\rightarrow x = 19$."
+                                explanation: "The trap here is rushing the distribution or flipping a sign mid-move. Slow it down: distribute fully on the left — $3x - 15 = 2x + 4$ (the 3 hits BOTH terms inside the parentheses). Then collect variables on one side, constants on the other: $3x - 2x = 4 + 15$, so $x = 19$. Wrong-answer watch: $x = 11$ comes from writing $3x - 5$ (distributing to only the first term); $x = 9$ from a sign slip when moving the $-15$. Quick self-check: $3(19-5) = 3(14) = 42$ and $2(19)+4 = 42$ ✓ — always verify in the original equation, since distribution errors are invisible in the final line."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -145,7 +145,7 @@ window.MATH_DATA = {
                                 question: "What is the inverse of $f(x) = 2x + 3$?",
                                 answer: "$f^{-1}(x) = (x-3)/2$",
                                 options: ["$f^{-1}(x) = (x-3)/2$", "$f^{-1}(x) = 2x - 3$", "$f^{-1}(x) = x/2 - 3$"],
-                                explanation: "Swap $x$ and $y$: $x = 2y + 3 \\rightarrow y = (x-3)/2$."
+                                explanation: "The trap here is 'undoing' the operations in the wrong order — or just shuffling symbols. An inverse runs the machine backwards: $f$ multiplies by 2 THEN adds 3, so $f^{-1}$ must subtract 3 FIRST, then divide by 2. Formally, swap $x$ and $y$: $x = 2y + 3 \\rightarrow x - 3 = 2y \\rightarrow y = \\frac{x-3}{2}$. Wrong-answer watch: $2x - 3$ merely swaps coefficients without reversing anything; $\\frac{x}{2} - 3$ undoes the multiplication before the addition. Quick self-check: compose them — $f(f^{-1}(x)) = 2\\cdot\\frac{x-3}{2} + 3 = x$ ✓. If the composition doesn't return $x$, it isn't the inverse."
                             }
                         ]
                     }
@@ -207,14 +207,14 @@ window.MATH_DATA = {
                                 question: "If $f(x)$ is a function, how many unique outputs can it have for a single input $x$?",
                                 options: ["Zero", "Exactly One", "At least One", "Infinite"],
                                 answer: "Exactly One",
-                                explanation: "Determinism is the core of functions. One input must map to exactly one output."
+                                explanation: "The trap here is confusing 'function' with 'one-to-one'. A function only demands determinism in ONE direction: each input gets EXACTLY ONE output — but different inputs may happily share an output (in $f(x) = x^2$, both $2$ and $-2$ map to $4$, and it's still a function). The forbidden move is one input splitting into two outputs, which is why the vertical line test works: a vertical line crossing the graph twice means one $x$ produced two $y$'s. Wrong-answer watch: 'At least One' would permit ambiguity, which defeats the entire purpose — a function must give a definite answer. Takeaway: functions may forget where they came from (many-to-one), they just can't be indecisive."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "Describe the shift in $y = |x - 4| + 5$.",
                                 options: ["Left 4, Up 5", "Right 4, Up 5", "Right 4, Down 5", "Left 4, Down 5"],
                                 answer: "Right 4, Up 5",
-                                explanation: "Horizontal shifts are opposite ($x-h$), vertical shifts are direct ($+k$)."
+                                explanation: "The trap here is reading the sign literally: $(x - 4)$ looks like 'left 4', but horizontal shifts run OPPOSITE to intuition. Why: the graph of $|x|$ has its corner at $x = 0$; in $|x - 4|$, the corner occurs where $x - 4 = 0$, i.e. at $x = 4$ — the whole picture slid RIGHT by 4. The $+5$ sitting outside is direct: every $y$-value rises by 5. So: right 4, up 5. Wrong-answer watch: 'Left 4' trusts the minus sign at face value; 'Down 5' misreads the vertical shift. Quick self-check: plug in $x = 4$: $y = |0| + 5 = 5$ — the corner $(0,0)$ moved to $(4,5)$, confirming right 4 and up 5."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -279,14 +279,14 @@ window.MATH_DATA = {
                                 question: "If a system of two lines is 'Consistent and Dependent', what does this mean geometrically?",
                                 options: ["Lines are parallel", "Lines intersect at one point", "Lines are identical/overlap", "Lines are perpendicular"],
                                 answer: "Lines are identical/overlap",
-                                explanation: "Dependent systems mean the equations are redundant, representing the same line."
+                                explanation: "The trap here is mixing up 'dependent' with 'parallel'. Parallel lines never meet (no solution — inconsistent). Dependent means the two equations are secretly the SAME line — one is just a multiple of the other — so every point on the line is a solution (infinitely many). Algebraically: if you can multiply equation 1 by some constant to get equation 2, the second equation contributes zero new information. Wrong-answer watch: 'Lines are parallel' describes DISTINCT parallel lines, which is the inconsistent case, not the dependent one. Quick self-check: try eliminating — a dependent system collapses to $0 = 0$ (a truth), while an inconsistent one collapses to $0 = 5$ (a contradiction)."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "In Linear Programming, why do we only check the vertices of the feasible region?",
                                 options: ["Because it's easier", "Maximum/Minimum always occurs at a corner", "Inside points are not allowed", "Boundaries don't matter"],
                                 answer: "Maximum/Minimum always occurs at a corner",
-                                explanation: "The Vertex Principle states that optimization occurs at the boundaries/corners of constraints."
+                                explanation: "The trap here is thinking we check vertices just because it's 'easier' — it's a THEOREM, not a shortcut. The feasible region is a convex polygon and the objective (say, profit $= 3x + 2y$) is linear, so its 'slope' never changes: standing at an interior point, you can always slide a little further uphill and improve. You only stop when you hit the boundary — then keep sliding until a corner blocks you. That's why the optimum must sit at a vertex. Wrong-answer watch: 'Because it's easier' confuses justification with convenience; interior points aren't forbidden, they're just never strictly better. Takeaway: linearity plus convexity forces extremes to the corners — the same idea powers the simplex method used in real logistics."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -302,7 +302,7 @@ window.MATH_DATA = {
                     title: "Ch 4: Matrices",
                     videoUrl: "https://www.youtube.com/watch?v=3d6DsjIBzJ4",
                     insight: "Matrices: You are manipulating whole spatial dimensions here. Visualize matrices as vectors moving around.",
-                    intuition: "Matrices are the data structures of the modern world. They bridge the gap between simple variables and high-dimensional AI architecture.",
+                    intuition: "Matrices are the data structures of the modern world. They bridge the gap between simple variables and high-dimensional AI architecture. Why they matter: a single matrix equation $AX = B$ can encode an entire system of a hundred equations — it's compression for linear relationships. Visualize a matrix as a machine that stretches, rotates, and squashes space; the determinant tells you exactly how much area survives the trip. This chapter connects forward everywhere: it scales up Ch 3's elimination to industrial size, powers computer graphics (every 3D game transforms coordinates with matrices), and underlies neural networks — an AI layer IS a matrix multiplication. Learn to think of matrices as verbs (actions on space), not just grids of numbers.",
                     topics: ["4.1 Data Organization", "4.2 Matrix Operations", "4.3 Multiplication", "4.4 Geometric Transformations", "4.5 Determinants", "4.6 Inverses", "4.7 Systems Solving"],
                     lectures: [
                         { name: "4.1: Organising Data into Matrices", url: "lesson:algebra2:ch4-1", insight: "Matrix Addition: Only matrices of the SAME dimensions can be added. It's like adding arrays element-by-element in code." },
@@ -358,14 +358,14 @@ window.MATH_DATA = {
                                 question: "If the determinant of a matrix is 0, what does this tell us about its inverse?",
                                 options: ["Inverse is zero", "Determinant is irrelevant", "No unique inverse exists", "Inverse is its transpose"],
                                 answer: "No unique inverse exists",
-                                explanation: "A zero determinant means the transformation has collapsed space, making it irreversible."
+                                explanation: "The trap here is answering 'inverse is zero' — a matrix with determinant 0 has NO inverse at all, not a zero one. Think geometrically: the determinant measures how much the transformation scales area. $\\det = 0$ means the transformation crushes space flat (a whole plane collapses onto a line or a point), destroying information — two different inputs land on the same output, so the trip can't be reversed. It's exactly like multiplying by 0: from $0 \\cdot x = 0$ you can never recover $x$. Wrong-answer watch: 'Inverse is its transpose' holds only for rotations and reflections (orthogonal matrices). Quick self-check: a matrix is invertible if and only if $\\det \\ne 0$ — whenever you need an inverse, compute the determinant first."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "Compute the determinant of $M = \\begin{pmatrix} 3 & 2 \\ 1 & 4 \\end{pmatrix}$.",
                                 options: ["10", "14", "12", "7"],
                                 answer: "10",
-                                explanation: "$(3)(4) - (2)(1) = 12 - 2 = 10$."
+                                explanation: "The trap here is combining the four numbers the wrong way. For a $2\\times2$ matrix, $\\det = ad - bc$: multiply along the main diagonal and SUBTRACT the product of the off-diagonal: $(3)(4) - (2)(1) = 12 - 2 = 10$. Wrong-answer watch: $14$ comes from ADDING the cross-products ($12 + 2$); $12$ from computing only $(3)(4)$ and forgetting the subtraction; $7$ from adding the main diagonal ($3 + 4$). Quick self-check: the determinant is a signed area-scale factor — compute $ad$ and $bc$ separately ($12$ and $2$) and confirm you're subtracting, not adding."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -380,7 +380,7 @@ window.MATH_DATA = {
                 {
                     title: "Ch 5: Quadratic Equations",
                     videoUrl: "https://www.youtube.com/watch?v=WUvTyaaNkzM",
-                    intuition: "Curves govern the physical world. From gravity to growth, quadratics provide the parabolic logic for modeling motion and optimization.",
+                    intuition: "Curves govern the physical world. From gravity to growth, quadratics provide the parabolic logic for modeling motion and optimization. Why they matter: the quadratic is the simplest nonlinear function, which makes it the laboratory where you first meet the big ideas — the vertex as the optimum, the discriminant as a 'reality detector' for roots, and completing the square as the ancestor of every optimization algorithm. Visualize every quadratic as a dish (or a hill) with one special point, the vertex, where everything interesting happens: maximum height of a ball, minimum cost, maximum profit. This chapter connects forward to polynomials (Ch 6 — quadratics are degree-2 polynomials, and every technique here generalizes), to conic sections (Ch 10 — the parabola returns as a sliced cone), and to physics, where $d = \\frac{1}{2}gt^2$ rules falling objects.",
                     vizConfig: {
                         expressions: ["y = a(x - h)^2 + k", "a = 1", "h = 0", "k = 0"],
                         bounds: { left: -10, right: 10, bottom: -10, top: 10 }
@@ -438,14 +438,14 @@ window.MATH_DATA = {
                                 question: "What physical property ensures that all parallel light rays reflect through the Focus of a parabola?",
                                 options: ["Linear Reflection", "Parabolic Optical Property", "Symmetry Principle", "Inverse Square Law"],
                                 answer: "Parabolic Optical Property",
-                                explanation: "The geometry of a parabola forces all parallel incoming lines to converge at a single point, the focus."
+                                explanation: "The trap here is picking a vague answer like 'Symmetry Principle' — symmetry alone doesn't focus light. The real reason is baked into the DEFINITION of a parabola: the set of points equidistant from the focus and the directrix. That equal-distance property forces incoming parallel rays to reflect through the focus (the angles work out so each ray's path to the focus equals its distance to the directrix). Wrong-answer watch: 'Inverse Square Law' governs how intensity fades with distance, not reflection geometry. Takeaway: this isn't a physics coincidence — it's why satellite dishes and telescope mirrors are parabolic: the geometry does the focusing for free."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "If the discriminant $D = b^2 - 4ac$ is negative, what is the nature of the roots?",
                                 options: ["One Real Root", "Two Real Roots", "Two Complex Roots", "No Roots"],
                                 answer: "Two Complex Roots",
-                                explanation: "A negative discriminant means the parabola never touches the X-axis, resulting in complex solutions."
+                                explanation: "The trap here is answering 'No Roots' — the equation still HAS two roots; they're just not real numbers. When $D = b^2 - 4ac < 0$, the quadratic formula asks for $\\sqrt{D}$, the square root of a negative — which pushes the roots into the complex plane as a conjugate pair $a \\pm bi$. Graphically, the parabola floats entirely above (or below) the $x$-axis and never touches it. Wrong-answer watch: 'No Roots' confuses 'no REAL roots' with 'no roots at all' — over the complex numbers, every quadratic has exactly two roots (Fundamental Theorem of Algebra). Quick self-check: if $b^2 < 4ac$, expect complex conjugates before you even finish the formula."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -461,7 +461,7 @@ window.MATH_DATA = {
                     title: "Ch 6: Polynomials",
                     videoUrl: "https://www.youtube.com/watch?v=9vKqVkMQHKk",
                     insight: "Polynomials: Every root $(x-r)$ is a factor. The Fundamental Theorem guarantees N roots for degree N. No exceptions!",
-                    intuition: "Polynomials are the DNA of functional analysis. From the behavior of global temperatures to the trajectory of satellites, understanding roots and degree is essential for predicting complex systems.",
+                    intuition: "Polynomials are the DNA of functional analysis. From the behavior of global temperatures to the trajectory of satellites, understanding roots and degree is essential for predicting complex systems. Why they matter: polynomials are the building blocks of approximation — calculators compute $\\sin x$ and $e^x$ using polynomial (Taylor) approximations, so this chapter is secretly about how machines do 'impossible' math. Visualize a polynomial by its roots and its ends: roots are where it touches the axis, multiplicity tells you whether it crosses or bounces, and the leading term alone decides where it goes at infinity. This connects forward to rational functions (Ch 9 — ratios of polynomials) and backward to quadratics (Ch 5), which are just the degree-2 case of everything here. The Factor Theorem is the chapter's master key: roots and factors are two names for the same thing.",
                     topics: ["6.1 Degree & End Behavior", "6.2 Remainder Theorem", "6.3 Synthetic Division", "6.4 Advanced Factoring", "6.6 Rational Root Theorem", "6.7 Fundamental Theorem"],
                     lectures: [
                         { name: "6.1: Polynomial Essentials", url: "lesson:algebra2:ch6-1" },
@@ -513,14 +513,14 @@ window.MATH_DATA = {
                                 question: "As $x \\to \\infty$, which term in $f(x) = 3x^4 - 2x^3 + 10x$ determines the end behavior?",
                                 options: ["3x^4", "-2x^3", "10x", "All of them"],
                                 answer: "3x^4",
-                                explanation: "The leading term dominates as x becomes large; all other terms become insignificant in comparison."
+                                explanation: "The trap here is thinking every term gets a vote — for large $x$, only the leading term matters. Compare growth rates: $\\frac{-2x^3}{3x^4} = \\frac{-2}{3x} \\to 0$ as $x \\to \\infty$, so the $-2x^3$ and $10x$ terms become rounding errors next to $3x^4$. That's why end behavior is decided by degree and leading coefficient alone. Wrong-answer watch: $-2x^3$ or $10x$ treat all terms as equals, ignoring that $x^4$ outgrows $x^3$ without bound. Quick self-check: plug in $x = 1000$: $3x^4 = 3 \\times 10^{12}$ versus $-2x^3 = -2 \\times 10^9$ — three orders of magnitude apart, and the gap only widens."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "If $f(2) = 0$ for a polynomial $f(x)$, what does the Factor Theorem guarantee?",
                                 options: ["(x+2) is a factor", "(x-2) is a factor", "x=0 is a root", "f(x) has no real roots"],
                                 answer: "(x-2) is a factor",
-                                explanation: "If substituting $c$ results in zero, then $(x-c)$ MUST be a linear factor of the polynomial."
+                                explanation: "The trap here is the sign: $f(2) = 0$ gives the factor $(x - 2)$, NOT $(x + 2)$. Why it works: polynomial division says $f(x) = (x - c)\\cdot q(x) + f(c)$ — the remainder of dividing by $(x-c)$ is exactly $f(c)$. So $f(c) = 0$ means the remainder vanishes and $(x - c)$ divides cleanly. The factor must be zero AT $x = c$, and $(x - 2)$ is zero at $x = 2$. Wrong-answer watch: $(x + 2)$ is zero at $x = -2$ — the classic sign flip. Quick self-check: $f(x) = (x-2)\\cdot q(x)$ must satisfy $f(2) = 0 \\cdot q(2) = 0$ ✓."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -535,7 +535,7 @@ window.MATH_DATA = {
                 {
                     title: "Ch 7: Radical Functions & Rational Exponents",
                     videoUrl: "https://www.youtube.com/watch?v=riXcZT2ICjA",
-                    intuition: "Roots are the inverse of power, allowing us to reverse complex operations. From calculating the radius of a sphere to modeling the decay of particles, radicals provide the mathematical lens to look backwards into the core of a value.",
+                    intuition: "Roots are the inverse of power, allowing us to reverse complex operations. From calculating the radius of a sphere to modeling the decay of particles, radicals provide the mathematical lens to look backwards into the core of a value. Why they matter: almost every 'undo' in applied math is a root — square roots undo areas ($A = \\pi r^2 \\to r = \\sqrt{A/\\pi}$), cube roots undo volumes, $n$th roots undo compound growth. The chapter's two big ideas: rational exponents turn root-taming into plain exponent arithmetic ($x^{m/n}$), and every non-reversible step (squaring!) can smuggle in extraneous solutions — so verification isn't optional. This connects forward to exponentials and logarithms (Ch 8), where roots become fractional powers and then logarithms, completing the 'undo' toolkit: power $\\leftrightarrow$ root $\\leftrightarrow$ logarithm.",
                     topics: ["7.1 n-th Roots", "7.2 Rational Exponents", "7.3 Binomial Radical Expressions", "7.4 Advanced Laws of Exponents", "7.5 Radical Equations", "7.6 Function Operations", "7.7 Inverse Relations & Functions"],
                     lectures: [
                         { name: "7.1: n-th Roots & Radicals", url: "lesson:algebra2:ch7-1" },
@@ -590,14 +590,14 @@ window.MATH_DATA = {
                                 question: "Why must we verify solutions after squaring both sides of a radical equation?",
                                 options: ["To find more answers", "Because squaring can create false results", "To simplify the math", "It's not actually necessary"],
                                 answer: "Because squaring can create false results",
-                                explanation: "Squaring can create 'false positives' that solve the squared equation but fail the original radical's domain."
+                                explanation: "The trap here is treating verification as optional busywork — it's the actual point. Squaring is a 'lossy' operation: both $a = b$ and $a = -b$ square to $a^2 = b^2$, so squaring MERGES two different equations into one. The squared equation's solution set is therefore a superset — it can contain impostors that satisfy the squared equation but not the original. That's why you must plug every candidate back into the ORIGINAL equation (not the squared one). Wrong-answer watch: 'To find more answers' gets it backwards — verification can only REMOVE candidates, never add them. Takeaway: any non-reversible step (squaring, multiplying by a variable expression) demands a check at the end."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "Rewrite $\\sqrt[3]{x^6}$ using rational exponents.",
                                 options: ["x^2", "x^3", "x^18", "x^0.5"],
                                 answer: "x^2",
-                                explanation: "$x^{6/3} = x^2$."
+                                explanation: "The trap here is guessing the new exponent: dividing by the wrong number, or multiplying instead. The rule: $\\sqrt[n]{x^m} = x^{m/n}$ — the root becomes a FRACTIONAL exponent, and you multiply: $x^{6 \\cdot (1/3)} = x^{6/3} = x^2$. Wrong-answer watch: $x^3$ divides by 2 (confusing cube root with square root); $x^{18}$ multiplies $6 \\times 3$ (inverting the rule); $x^{0.5}$ answers a different question entirely. Quick self-check: cube your answer — $(x^2)^3 = x^6$ ✓. If cubing the candidate doesn't return the radicand, the exponent is wrong."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -612,7 +612,7 @@ window.MATH_DATA = {
                 {
                     title: "Ch 8: Exponential & Logarithmic Functions",
                     videoUrl: "https://www.youtube.com/watch?v=5yfh5cf4-0w",
-                    intuition: "Logarithms are the language of scale and complexity. They allow us to map the infinite growth of data into manageable linear steps, powering everything from the Richter scale to the efficiency of Google's Search algorithms.",
+                    intuition: "Logarithms are the language of scale and complexity. They allow us to map the infinite growth of data into manageable linear steps, powering everything from the Richter scale to the efficiency of Google's search algorithms. Why they matter: the world rarely grows linearly — populations, investments, viral posts, and algorithm runtimes are exponential, and logarithms are the only tool that makes exponential relationships readable (a straight line on a log scale). Visualize $e$ as nature's favorite growth constant: $e^x$ is the unique function that grows exactly as fast as its current size, which is why it appears in everything from radioactive decay to continuous interest. This chapter connects backward to roots (Ch 7 — logarithms complete the inverse family: $b^y = x \\iff y = \\log_b x$) and forward to sequences (Ch 11 — geometric sequences are exponentials in discrete clothing) and to all of data science.",
                     topics: ["8.1 Growth & Decay", "8.2 The Natural Base 'e'", "8.3 Logarithmic Functions", "8.4 Properties of Logarithms", "8.5 Exponential & Logarithmic Equations", "8.6 Natural Logarithms"],
                     lectures: [
                         { name: "8.1: Exponential Growth & Decay", url: "lesson:algebra2:ch8-1" },
@@ -665,14 +665,14 @@ window.MATH_DATA = {
                                 question: "What does the Natural Log (ln) have as its base?",
                                 options: ["10", "2", "e (~2.718)", "0"],
                                 answer: "e (~2.718)",
-                                explanation: "The natural logarithm, ln(x), is defined as the logarithm with base e."
+                                explanation: "The trap here is answering 10 — that's the common log ($\\log_{10}$), the engineer's log. The natural log uses $e \\approx 2.718$, and it's 'natural' for a deep reason: $e^x$ is the unique exponential that is its own derivative, which makes $\\ln x$ the unique logarithm whose derivative is the beautifully simple $\\frac{1}{x}$. That's why calculus, continuous growth models, and information theory all speak base $e$. Wrong-answer watch: base 2 belongs to computer science (bits); base 10 to slide rules and pH. Quick self-check: $\\ln(e) = 1$ by definition — the base that makes $\\ln(\\text{base}) = 1$ is the answer, and only $e$ qualifies."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "Using the Rule of 72, if an investment grows at 6% annually, how long does it take to double?",
                                 options: ["6 years", "12 years", "10 years", "72 years"],
                                 answer: "12 years",
-                                explanation: "$72 / 6 = 12$ years. This is a common heuristic for exponential growth."
+                                explanation: "The trap here is treating 72 as magic — it's an approximation with a real derivation. Exact doubling at rate $r$ takes $\\frac{\\ln 2}{\\ln(1+r)} \\approx \\frac{0.693}{r}$ years; for small $r$ this is about $\\frac{72}{100r}$, and 72 is chosen because it has many divisors (1, 2, 3, 4, 6, 8, 9, 12...), making mental math clean. Here: $72/6 = 12$ years. Wrong-answer watch: $72$ years forgets to divide by the rate; $6$ years confuses the rate with the time. Quick self-check: the exact math gives $\\ln 2 / \\ln 1.06 \\approx 11.9$ years — the rule's $12$ is within 1%, which is the whole point of a good heuristic."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -687,7 +687,7 @@ window.MATH_DATA = {
                 {
                     title: "Ch 9: Rational Functions",
                     videoUrl: "https://www.youtube.com/watch?v=S0_qX4VJhMQ",
-                    intuition: "Rational functions are the ratios of rules, creating asymptotes and holes. They represent shared resources, inverse scaling, and the constraints of digital precision.",
+                    intuition: "Rational functions are the ratios of rules, creating asymptotes and holes. They represent shared resources, inverse scaling, and the constraints of digital precision. Why they matter: whenever one quantity is divided by another that can approach zero — average cost per item, the lens formula, electrical resistance in parallel — rational functions appear, and their asymptotes mark the boundaries of what's physically possible. Visualize the graph as a landscape with fences: vertical asymptotes are walls the curve can never cross (division by zero), horizontal asymptotes are the horizon it approaches but never quite reaches, and holes are single missing planks you could fill with a finger. This chapter is where earlier skills fuse: factoring (Ch 6) finds the holes and asymptotes, and end-behavior analysis (Ch 5–6) predicts the horizon. Master this and you can 'read' a function's global behavior straight from its formula.",
                     topics: ["9.1 Inverse Variation", "9.2 Reciprocal Functions", "9.3 Rational Graphs", "9.4 Expressions", "9.5 Adding/Subtracting", "9.6 Solving Equations"],
                     lectures: [
                         { name: "9.1: Variation Theory", url: "lesson:algebra2:ch9-1" },
@@ -739,14 +739,14 @@ window.MATH_DATA = {
                                 question: "What happens to the graph of a rational function when a factor cancels out from both the numerator and denominator?",
                                 options: ["A Vertical Asymptote is created", "A Horizontal Asymptote is created", "A Hole (Removable Discontinuity) is created", "The graph becomes a straight line with no gaps"],
                                 answer: "A Hole (Removable Discontinuity) is created",
-                                explanation: "When a factor cancels out, the function is still undefined at that point, but the graph doesn't approach infinity; it simply has a missing point called a hole."
+                                explanation: "The trap here is thinking that canceling a factor erases the problem — it doesn't. If $\\frac{(x-2)(x+3)}{(x-2)(x-5)}$ simplifies to $\\frac{x+3}{x-5}$, the SIMPLIFIED form is fine at $x = 2$, but the ORIGINAL function still computes $\\frac{0}{0}$ there — undefined. So the graph follows the simplified curve everywhere EXCEPT at $x = 2$, where a single point is missing: a hole (removable discontinuity). Contrast with a vertical asymptote, where the function blows up to $\\pm\\infty$ and no simplification can fix it. Wrong-answer watch: 'Vertical asymptote' confuses a removable gap with a blowup — check whether the factor cancels (hole) or survives in the denominator (asymptote). Quick self-check: always factor FIRST and note the canceled $x$-values before simplifying."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "Find the Horizontal Asymptote of $f(x) = \\frac{4x^2 + 1}{2x^2 - 3}$.",
                                 options: ["y = 0", "y = 2", "y = 4", "None"],
                                 answer: "y = 2",
-                                explanation: "The degrees are equal; divide leading coefficients: $4/2 = 2$."
+                                explanation: "The trap here is grabbing a single coefficient ($y = 4$). The horizontal asymptote describes the tug-of-war as $x \\to \\infty$: divide top and bottom by the highest power, $x^2$: $\\frac{4 + 1/x^2}{2 - 3/x^2} \\to \\frac{4}{2} = 2$. When the degrees are EQUAL, the asymptote is the RATIO of leading coefficients. The full rule: degree(top) < degree(bottom) → $y = 0$; equal → ratio; greater → no horizontal asymptote (oblique instead). Wrong-answer watch: $y = 4$ uses only the numerator's coefficient; $y = 0$ is the rule for a SMALLER-degree numerator. Quick self-check: test $x = 1000$ — $f(1000) \\approx 2.000$ hugs $y = 2$ ✓."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -761,7 +761,7 @@ window.MATH_DATA = {
                 {
                     title: "Ch 10: Conic Sections",
                     videoUrl: "https://www.youtube.com/watch?v=rfG8ce4nNh0",
-                    intuition: "Conic sections are the shapes formed by slicing a cone. They describe the orbits of planets (Ellipses), the shape of satellite dishes (Parabolas), and the navigation of GPS signals (Hyperbolas).",
+                    intuition: "Conic sections are the shapes formed by slicing a cone. They describe the orbits of planets (ellipses), the shape of satellite dishes (parabolas), and the navigation of GPS signals (hyperbolas). Why they matter: conics are where algebra BECOMES geometry — every equation in this chapter draws a shape, and every shape has an equation, which is the central promise of analytic geometry. The unifying idea: all four conics are one family, distinguished by eccentricity $e$ — how 'stretched' the slice is ($e < 1$ ellipse, $e = 1$ parabola, $e > 1$ hyperbola). Visualize slicing an actual cone with a plane: tilt the cut slightly and the circle becomes an ellipse, then a parabola, then a hyperbola — one motion, four shapes. This connects backward to quadratics (Ch 5 — the parabola returns, now with focus and directrix) and forward to physics and astronomy, where these curves are the actual paths of planets, comets, and spacecraft.",
                     topics: ["10.1 Parabolas", "10.2 Circles", "10.3 Ellipses", "10.4 Hyperbolas", "10.5 Identifying Conics", "10.6 Systems of Conics"],
                     lectures: [
                         { name: "10.1: Exploring Conic Sections", url: "lesson:algebra2:ch10-1" },
@@ -812,14 +812,14 @@ window.MATH_DATA = {
                                 question: "In Kepler's Laws, what geometric shape do planets follow for their orbits around the Sun?",
                                 options: ["Perfect Circles", "Parabolas", "Ellipses", "Hyperbolas"],
                                 answer: "Ellipses",
-                                explanation: "Kepler's First Law states that planets move in elliptical orbits with the Sun at one of the two foci."
+                                explanation: "The trap here is 'Perfect Circles' — a circle is just an ellipse with eccentricity 0, and real orbits are (slightly) eccentric ellipses. Kepler's First Law: planets orbit in ellipses with the Sun at ONE FOCUS — not the center. The deep reason: Newton's inverse-square gravity mathematically forces bound orbits to be conic sections, and the negative-energy ones are ellipses. Wrong-answer watch: parabolas and hyperbolas are the shapes of UNBOUND trajectories (comets passing through, never to return). Takeaway: the Sun sitting off-center at a focus — not in the middle — is exactly what makes the orbit an ellipse rather than a circle."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "What type of conic is represented by $x^2 - 4y^2 + 10x = 0$?",
                                 options: ["Circle", "Ellipse", "Parabola", "Hyperbola"],
                                 answer: "Hyperbola",
-                                explanation: "The minus sign between squared terms ($A=1, C=-4$) indicates a hyperbola."
+                                explanation: "The trap here is seeing two squared terms and guessing 'ellipse' — the SIGN between them decides. Opposite signs ($+x^2$ vs $-4y^2$) mean the equation can never describe a bounded curve: it must open in two opposite directions — a hyperbola. The general test: for $Ax^2 + Bxy + Cy^2 + \\cdots = 0$, the discriminant $B^2 - 4AC$ classifies it; here $0 - 4(1)(-4) = 16 > 0$ → hyperbola. Wrong-answer watch: 'Ellipse' needs the SAME sign on both squared terms (with $A \\ne C$); 'Parabola' needs only ONE squared term. Quick self-check: complete the square — $(x+5)^2 - 4y^2 = 25$ — the minus sign between the squares is the hyperbola's fingerprint."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -834,7 +834,7 @@ window.MATH_DATA = {
                 {
                     title: "Ch 11: Sequences & Series",
                     videoUrl: "https://www.youtube.com/watch?v=3d6DsjIBzJ4",
-                    intuition: "Nature is built on patterns. From the Fibonacci sequence to compound interest, sequences define how discrete steps build into continuous structures.",
+                    intuition: "Nature is built on patterns. From the Fibonacci sequence to compound interest, sequences define how discrete steps build into continuous structures. Why they matter: sequences are functions whose domain is the counting numbers — they're how math handles anything that happens step by step: savings growing month by month, bacteria doubling hourly, algorithms looping. The chapter's two archetypes: arithmetic sequences (add the same amount — linear growth in disguise) and geometric sequences (multiply by the same ratio — exponential growth in disguise). The showpiece is the infinite geometric series: infinitely many terms collapsing into one finite number ($\\frac{a}{1-r}$) — your first real taste of infinity behaving politely, and a preview of calculus. This connects backward to exponentials (Ch 8 — geometric sequences ARE exponential functions sampled at integers) and forward to series in calculus, where infinite sums become the engine of approximation.",
                     vizConfig: {
                         expressions: ["y = a_1 + (x-1)d", "a_1 = 1", "d = 1", "y = a_1(r)^{(x-1)}", "r = 1.2"],
                         bounds: { left: 0, right: 10, bottom: 0, top: 20 }
@@ -890,14 +890,14 @@ window.MATH_DATA = {
                                 question: "Under what condition does an infinite geometric series converge to a finite number?",
                                 options: ["When r > 1", "When r = 1", "When |r| < 1", "When a1 = 0"],
                                 answer: "When |r| < 1",
-                                explanation: "An infinite geometric series converges if and only if the absolute value of the common ratio is strictly less than 1, meaning the terms get progressively smaller."
+                                explanation: "The trap here is including the endpoints: $|r| = 1$ does NOT converge. Why $|r| < 1$ works: each term shrinks by a fixed fraction, so the tail becomes negligible — formally, $S_n = a\\frac{1-r^n}{1-r}$ and $r^n \\to 0$ exactly when $|r| < 1$, leaving $\\frac{a}{1-r}$. Proof idea: subtract $rS$ from $S$ and the middle telescopes away. If $|r| \\ge 1$, the terms don't die out (for $r = 1$: $a + a + a + \\cdots$ diverges; for $r = -1$: it oscillates forever). Wrong-answer watch: '$r = 1$' gives a sum that grows without bound, not a finite number. Takeaway: convergence is about the terms DYING OUT — $|r| < 1$ is precisely the condition that kills them."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "Find the 5th term of a geometric sequence where $a_1 = 3$ and $r = -2$.",
                                 options: ["48", "-48", "96", "-32"],
                                 answer: "48",
-                                explanation: "$a_5 = 3 \\cdot (-2)^4 = 3 \\cdot 16 = 48$."
+                                explanation: "The trap here is the sign: $(-2)^4 = +16$, NOT $-16$ — an even exponent eats the negative. Then $a_5 = a_1 \\cdot r^{4} = 3 \\cdot 16 = 48$ (note the exponent is $n - 1 = 4$, because $a_1$ already accounts for zero multiplications). Wrong-answer watch: $-48$ slips a sign into the even power; $96$ uses exponent $5$ instead of $4$; $-32$ computes $-(2^5)$, mangling both the sign and the index. Quick self-check: list the terms — $3, -6, 12, -24, 48$ — alternating signs with doubling magnitude; the 5th term lands positive ✓."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -912,7 +912,7 @@ window.MATH_DATA = {
                 {
                     title: "Ch 12: Probability & Statistics",
                     videoUrl: "https://www.youtube.com/watch?v=kfF40MiS7zA",
-                    intuition: "Probability is the logic of uncertainty. It is the engine of Artificial Intelligence, governing how machines learn from data (Bayesian Logic) and how we make decisions under risk.",
+                    intuition: "Probability is the logic of uncertainty. It is the engine of Artificial Intelligence, governing how machines learn from data (Bayesian logic) and how we make decisions under risk. Why it matters: most real decisions — medical tests, investments, weather forecasts — are bets under uncertainty, and probability is the mathematics of betting WELL. The chapter builds in layers: counting (permutations and combinations measure how big the sample space is), conditional probability (how new evidence updates beliefs — Bayes' rule), and the normal distribution with z-scores (how to compare measurements from completely different worlds on one scale). Visualize probability as a fluid: total 1, poured across outcomes; evidence just re-pours it. This connects to everything: statistics is applied probability, machine learning is probability at scale, and the z-score standardization here is the same trick data scientists use before training any model.",
                     vizConfig: {
                         expressions: ["y = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{1}{2}(\\frac{x-\\mu}{\\sigma})^2}", "\\mu = 0", "\\sigma = 1"],
                         bounds: { left: -5, right: 5, bottom: 0, top: 1 }
@@ -968,14 +968,14 @@ window.MATH_DATA = {
                                 question: "What does the 'Empirical Rule' state about data within 2 standard deviations of the mean in a normal distribution?",
                                 options: ["68% of data", "95% of data", "99.7% of data", "50% of data"],
                                 answer: "95% of data",
-                                explanation: "The empirical rule (68-95-99.7) states that approximately 95% of observations in a normal distribution fall within two standard deviations of the mean."
+                                explanation: "The trap here is scrambling 68 / 95 / 99.7 with 1 / 2 / 3 standard deviations — they pair in order: 1σ→68%, 2σ→95%, 3σ→99.7%. These are areas under the normal curve: about 95% of observations fall within $\\mu \\pm 2\\sigma$, leaving roughly 2.5% in each tail. But remember the fine print: this rule describes NORMAL (bell-shaped) distributions only — skewed data plays by different rules (Chebyshev's inequality is the fallback). Wrong-answer watch: 68% is the ONE-sigma figure; 99.7% is three sigmas. Quick self-check: the percentages must INCREASE with more sigmas — 95% within 2σ, with symmetric 2.5% tails, is the one to memorize cold."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "A value has a Z-score of -1.5. If the mean is 10 and standard deviation is 2, what is the value?",
                                 options: ["8.5", "7", "11.5", "13"],
                                 answer: "7",
-                                explanation: "$x = \\mu + z\\sigma = 10 + (-1.5)(2) = 10 - 3 = 7$."
+                                explanation: "The trap here is dropping the sign or skipping the multiplication: $x = \\mu + z\\sigma$ needs BOTH. Compute carefully: $x = 10 + (-1.5)(2) = 10 - 3 = 7$. The negative $z$ means 'below the mean', and $\\sigma = 2$ stretches each $z$-unit into 2 raw units. Wrong-answer watch: $8.5$ forgets to multiply by $\\sigma$ ($10 - 1.5$); $13$ flips the sign ($10 + 3$); $11.5$ drops both errors at once ($10 + 1.5$). Quick self-check: $z = -1.5 < 0$, so the answer MUST sit below the mean of 10 — anything above 10 is immediately wrong."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -990,7 +990,7 @@ window.MATH_DATA = {
                 {
                     title: "Ch 13: Periodic Functions & Trigonometry",
                     videoUrl: "https://www.youtube.com/watch?v=riXcZT2ICjA",
-                    intuition: "Periodic functions are the heartbeat of the universe. They model everything that repeats, from sound waves and light to the cycles of the economy and the rotation of engines.",
+                    intuition: "Periodic functions are the heartbeat of the universe. They model everything that repeats, from sound waves and light to the cycles of the economy and the rotation of engines. Why they matter: sines and cosines are the atoms of repetition — any repeating signal, no matter how complicated, can be decomposed into sine waves (Fourier's idea), which is how MP3s compress music and how noise-canceling headphones work. The chapter's core moves: radians (measuring angles by distance traveled around the unit circle — the 'natural' unit that makes calculus work), the unit circle (every trig value as coordinates), and transformations (amplitude, period, phase shift as dials you can turn). Visualize a point riding the unit circle: its height IS $\\sin\\theta$, its horizontal position IS $\\cos\\theta$ — the whole chapter is that one moving point. This connects forward to identities (Ch 14 — the algebra of these waves) and to physics, where every oscillation is a sine wave in disguise.",
                     vizConfig: {
                         expressions: ["y = a \\sin(b(x - h)) + k", "a = 1", "b = 1", "h = 0", "k = 0"],
                         bounds: { left: -6.28, right: 6.28, bottom: -5, top: 5 }
@@ -1049,14 +1049,14 @@ window.MATH_DATA = {
                                 question: "If two identical sine waves are $180^{\\circ}$ ($\\pi$ radians) out of phase, what happens when they are added together?",
                                 options: ["They double in amplitude", "They cancel each other out", "The frequency doubles", "Nothing changes"],
                                 answer: "They cancel each other out",
-                                explanation: "Destructive interference occurs when two waves are 180 degrees out of phase, as the peak of one aligns with the trough of the other."
+                                explanation: "The trap here is 'they double in amplitude' — that's CONSTRUCTIVE interference (waves in phase, peaks aligned). At $180°$ ($\\pi$ radians) out of phase, the peak of one wave sits exactly on the trough of the other: $\\sin(\\theta) + \\sin(\\theta + \\pi) = \\sin\\theta - \\sin\\theta = 0$ everywhere, for all time — total cancellation. Wrong-answer watch: 'The frequency doubles' confuses superposition (adding waves) with nonlinear effects; adding same-frequency waves can never change the frequency. Takeaway: this is the physics inside noise-canceling headphones — generate the anti-wave, add it, and silence remains."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "Convert $5\\pi/6$ radians to degrees.",
                                 options: ["120°", "150°", "210°", "300°"],
                                 answer: "150°",
-                                explanation: "$(5\\pi/6) \\cdot (180/\\pi) = 150°$."
+                                explanation: "The trap here is flipping the conversion fraction. Radians → degrees means multiplying by $\\frac{180°}{\\pi}$ (the radian units cancel): $\\frac{5\\pi}{6} \\cdot \\frac{180}{\\pi} = \\frac{5 \\cdot 180}{6} = 150°$. The $\\pi$'s cancel first — that's the whole point of the factor. Wrong-answer watch: multiplying by $\\frac{\\pi}{180}$ instead (the degrees→radians factor) gives a tiny nonsense number; $120°$ and $210°$ come from arithmetic slips in $5 \\times 180 / 6$. Quick self-check: $\\frac{5\\pi}{6}$ sits just under $\\pi$ ($180°$) and well above $\\frac{\\pi}{2}$ ($90°$) — so the answer must land between 90° and 180°, ruling out 210° and 300° instantly."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -1071,7 +1071,7 @@ window.MATH_DATA = {
                 {
                     title: "Ch 14: Trigonometric Identities & Equations",
                     videoUrl: "https://www.youtube.com/watch?v=riXcZT2ICjA",
-                    intuition: "Trigonometric identities are the 'algebra of geometry'. They allow us to simplify complex wave interactions, solve navigation problems, and optimize signal processing algorithms.",
+                    intuition: "Trigonometric identities are the 'algebra of geometry'. They allow us to simplify complex wave interactions, solve navigation problems, and optimize signal processing algorithms. Why they matter: identities are the REWRITE RULES of trigonometry — they let you morph any trig expression into the form you need, which is the entire skill behind proving identities, solving trig equations, and simplifying the formulas physics and engineering throw at you. The master strategy: when stuck, convert everything to sines and cosines — it's the 'common denominator' of trig. The Pythagorean identities ($\\sin^2\\theta + \\cos^2\\theta = 1$ and its children) do 90% of the work; the sum, double-angle, and half-angle formulas handle the rest. This chapter caps the trig arc (Ch 13 → Ch 14): Ch 13 taught you what the waves ARE, Ch 14 teaches you to manipulate them fluently — the same fluency Fourier analysis and quantum mechanics demand.",
                     topics: ["14.1 Key Identities", "14.2 Proving Identities", "14.3 Sum & Double Angles", "14.4 Solving Equations", "14.5 Triangulation Laws"],
                     lectures: [
                         { name: "14.1: Fundamental Identities", url: "lesson:algebra2:ch14-1" },
@@ -1124,14 +1124,14 @@ window.MATH_DATA = {
                                 question: "Which identity is a direct consequence of dividing the primary Pythagorean identity (sin²θ + cos²θ = 1) by cos²θ?",
                                 options: ["1 + cot²θ = csc²θ", "1 + tan²θ = sec²θ", "sin(2θ) = 2sinθcosθ", "cos(2θ) = 1 - 2sin²θ"],
                                 answer: "1 + tan²θ = sec²θ",
-                                explanation: "Dividing sin²θ + cos²θ = 1 by cos²θ yields (sin²θ/cos²θ) + (cos²θ/cos²θ) = 1/cos²θ, which simplifies to tan²θ + 1 = sec²θ."
+                                explanation: "The trap here is doubting that dividing an identity is legal — it is, as long as you don't divide by zero ($\\cos\\theta \\ne 0$). Dividing every term of $\\sin^2\\theta + \\cos^2\\theta = 1$ by $\\cos^2\\theta$ gives $\\frac{\\sin^2\\theta}{\\cos^2\\theta} + \\frac{\\cos^2\\theta}{\\cos^2\\theta} = \\frac{1}{\\cos^2\\theta}$, i.e. $\\tan^2\\theta + 1 = \\sec^2\\theta$ — the same truth, rescaled. It's not a new identity; it's the Pythagorean identity wearing a different outfit. Wrong-answer watch: $1 + \\cot^2\\theta = \\csc^2\\theta$ is what you get dividing by $\\sin^2\\theta$ instead — same move, different divisor. Quick self-check: test $\\theta = \\frac{\\pi}{4}$: $1 + 1 = 2$ and $\\sec^2(\\pi/4) = (\\sqrt{2})^2 = 2$ ✓."
                             },
                             {
                                 title: "Level 2: Drill",
                                 question: "Simplify $(1 - \\cos^2 \\theta) / \\sin \\theta$.",
                                 options: ["1", "sin θ", "cos θ", "tan θ"],
                                 answer: "sin θ",
-                                explanation: "$(1 - \\cos^2 \\theta) = \\sin^2 \\theta$. So $\\sin^2 \\theta / \\sin \\theta = \\sin \\theta$."
+                                explanation: "The trap here is 'canceling' the $\\sin\\theta$ to get 1 — you can't cancel across a subtraction. The legal move is the Pythagorean identity: $1 - \\cos^2\\theta = \\sin^2\\theta$ (it's $\\sin^2\\theta + \\cos^2\\theta = 1$, rearranged). Then $\\frac{\\sin^2\\theta}{\\sin\\theta} = \\sin\\theta$ (valid for $\\sin\\theta \\ne 0$). Wrong-answer watch: $1$ comes from misreading $1 - \\cos^2\\theta$ as $1$; $\\cos\\theta$ from grabbing the wrong Pythagorean rearrangement. Quick self-check: try $\\theta = \\frac{\\pi}{2}$: $\\frac{1 - 0}{1} = 1 = \\sin(\\pi/2)$ ✓ — one test value catches most algebra slips."
                             },
                             {
                                 title: "Level 3: Mastery",
@@ -1145,7 +1145,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Special Module: The Competition Wing (AMC 10/12)",
-                    intuition: "School math teaches you to follow rules. Competition math teaches you to break them efficiently. This is the gym for your mathematical IQ.",
+                    intuition: "School math teaches you to follow rules. Competition math teaches you to break them efficiently. This is the gym for your mathematical IQ. Why it matters: AMC problems are engineered to punish rote memorization and reward STRUCTURAL thinking — noticing that a counting problem is secretly a bijection, or that a scary Diophantine equation collapses under modular arithmetic. The training transfers directly: the 'look for the invariant', 'try small cases', and 'work backwards' reflexes you build here are the same moves behind real mathematical research and clever engineering. Visualize each problem as a locked room where the intended solution is the elegant one-line key, not the battering ram — if your approach needs three pages of computation, you're missing the intended insight. This module draws on all of Algebra 2 (number theory leans on Ch 6's factor thinking, combinatorics on Ch 12's counting) and points toward proof-based math — the world beyond computation.",
                     topics: ["Number Theory", "Combinatorics", "Logic Puzzles", "Pigeonhole Principle", "Modular Arithmetic"],
                     lectures: [
                         { name: "AMC: Prime Factorization Secrets", url: "lesson:algebra2:ch_amc-1" },
@@ -1603,7 +1603,7 @@ window.MATH_DATA = {
                                 "Cancel (x-3) and evaluate x+3 at 3: 3+3=6.",
                                 "Conclude: 6."
                             ],
-                            intuition: "We are repairing a 'hole' in the graph to find where it would have been."
+                            intuition: "This matters because most interesting calculus limits are exactly the ones algebra cannot evaluate directly: the 0/0 'holes' are where the action is. Picture the graph of $\\frac{x^2-9}{x-3}$: it looks identical to the line $y = x+3$ except for a single punctured dot at $x = 3$. Factoring and canceling 'patches' that hole by revealing the simpler function hiding underneath. This connects straight to the continuity work later in this unit: the repaired value IS the value a continuous extension would take, and the same 'refactor and cancel' instinct powers L'Hôpital's Rule in Unit 4."
                         },
                         {
                             title: "Practice FRQ (Level 3): IVT Justification",
@@ -1613,14 +1613,14 @@ window.MATH_DATA = {
                                 "Protocol Step 2: Compare values. 'And since f(1)=-2 < 0 < 4=f(5)...'",
                                 "Protocol Step 3: Invoke the theorem. 'By the Intermediate Value Theorem (IVT), there must exist at least one c...'"
                             ],
-                            intuition: "You can't go from negative to positive heights without crossing the x-axis!"
+                            intuition: "This matters because the IVT is your first existence theorem: it guarantees a solution exists before you have found it, which is exactly how root-finding algorithms like bisection justify themselves. Picture a hiker walking from 200 feet below sea level to 300 feet above. Continuity (no teleporting) forces the path to cross sea level somewhere, and the theorem simply names that crossing point $c$. This uses the limit idea from earlier in Unit 1, since continuity is what makes the unbroken path possible, and the same 'guarantee without construction' pattern returns in the Mean Value Theorem in Unit 5."
                         }
                     ],
                     quiz: {
                         question: "If left-hand limit is 5 and right-hand limit is 5, but f(c) is 10, is f(x) continuous?",
                         options: ["Yes", "No", "Only if c=0", "DNE"],
                         answer: "No",
-                        explanation: "Limit must equal function value. Here, 5 equals 5 (limit exists), but it doesn't equal 10 (function value)."
+                        explanation: "The trap here is thinking 'limit exists, so we're done.' Continuity at $c$ demands a three-part handshake: (a) the limit exists, (b) $f(c)$ is defined, and (c) the two values are EQUAL, that is $\\lim_{x \\to c} f(x) = f(c)$. Here the limit exists (both sides give 5) and $f(c)=10$ is defined, but $5 \\ne 10$, so condition (c) fails. This is a removable discontinuity: a graph with a 'hole' at height 5 plus one isolated dot at $(c, 10)$. Wrong-answer watch: answering 'Yes' confuses the existence of a limit with continuity, but AP rubrics check all three conditions every time. Quick self-check: picture the graph. Your pencil would have to jump from the hole up to the dot, so no single unbroken trace exists, and the function is not continuous at $c$."
                     }
                 },
                 {
@@ -1642,7 +1642,7 @@ window.MATH_DATA = {
                                 "Apply: 5(4)x^3 - 3(2)x^1 + 0.",
                                 "Conclude: f'(x) = 20x^3 - 6x."
                             ],
-                            intuition: "Every power term 'kicks' its exponent down and loses one degree."
+                            intuition: "This matters because the Power Rule turns differentiation from a painful limit computation into pattern matching: it is the single most-used differentiation shortcut in all of calculus. Picture $y = x^3$. The exponent 3 'kicks down' to become the multiplier while the power drops one notch, giving $3x^2$. Every term's degree falls by exactly one, so differentiation visibly 'flattens' polynomials. This is the payoff of the limit definition from Unit 1: the rule is just the difference-quotient limit pre-computed once, and it becomes the engine for every rule in Units 3 and 4 (product, quotient, chain)."
                         },
                         {
                             title: "Level 2: Quotient Trap",
@@ -1652,14 +1652,14 @@ window.MATH_DATA = {
                                 "Setup: (sin x * 2x - x^2 * cos x) / (sin x)^2.",
                                 "Conclude: (2x sin x - x^2 cos x) / sin^2 x."
                             ],
-                            intuition: "Low d-High minus High d-Low, square the bottom and off you go!"
+                            intuition: "This matters because the Quotient Rule is the number-one sign-error trap on the AP exam: the subtraction order is the whole battle. Picture a fraction as a tug-of-war. The numerator's change pulls one way while the denominator's change pulls back, and the denominator squared normalizes the result: 'low d-high minus high d-low, all over low-low.' Getting the order backwards flips the sign of the entire derivative. This connects to the Product Rule from earlier in Unit 2 (a quotient is a product with $g^{-1}$), and the same 'derivative of a ratio' structure reappears in logarithmic differentiation in Unit 3."
                         }
                     ],
                     quiz: {
                         question: "If a function has a sharp 'corner', is it differentiable?",
                         options: ["Yes", "No", "Always", "Only if it's positive"],
                         answer: "No",
-                        explanation: "Differentiation requires 'smoothness'. At a sharp corner, the slope changes instantly, so the limit of the slope from the left doesn't equal the right."
+                        explanation: "The trap here is assuming continuity is enough. Differentiability is stricter: it asks whether the limit of the difference quotient $\\lim_{h \\to 0} \\frac{f(c+h)-f(c)}{h}$ exists, which is the same as asking whether the left-hand and right-hand slopes agree. At a sharp corner (picture $y=|x|$ at $x=0$), the left slope is $-1$ and the right slope is $+1$. Since $-1 \\ne +1$, the difference-quotient limit does not exist, so the function is not differentiable there, even though it is perfectly continuous. Wrong-answer watch: 'Yes' treats every continuous curve as smooth, but continuity is necessary, not sufficient, for differentiability. Quick self-check: zoom in on the corner as far as you like. The V-shape never straightens into a single line, so no unique tangent line can exist."
                     }
                 },
                 {
@@ -1682,7 +1682,7 @@ window.MATH_DATA = {
                                 "Deriv Inner: 3x^2.",
                                 "Multiply: 3x^2 * cos(x^3)."
                             ],
-                            intuition: "Differentiate the wrapper, then the candy inside."
+                            intuition: "This matters because nearly every real-world function is layered: position inside velocity inside acceleration, or in machine learning, nested activation functions. The Chain Rule is the only tool that peels layers correctly. Picture an onion. Differentiate the outer skin ($\\sin u$ becomes $\\cos u$), keep it wrapped around the inner layer, then multiply by the inner layer's own derivative ($x^3$ becomes $3x^2$): outside-in, one layer at a time. This uses the limit idea from Unit 1 in its proof (the difference quotient factors across the composition), and it becomes the backbone of implicit differentiation later in this unit and of related rates in Unit 4."
                         },
                         {
                             title: "Practice FRQ (Level 3): Implicit Justification",
@@ -1693,14 +1693,14 @@ window.MATH_DATA = {
                                 "Evaluate at (3,4): dy/dx = -3/4.",
                                 "Interpretation: The tangent line is decreasing at this point."
                             ],
-                            intuition: "y is a function of x, so every time you diff y, you must multiply by its 'shadow' dy/dx."
+                            intuition: "This matters because most curves in science (circles, ellipses, level sets) cannot be solved for $y$ cleanly, yet we still need their slopes. Implicit differentiation finds slopes without ever isolating $y$. Picture $y$ as a puppet controlled by the string $x$: whenever you differentiate a $y$-term, the Chain Rule fires automatically and attaches the 'shadow' factor $\\frac{dy}{dx}$, because the puppet cannot move unless the string moves. This is the Chain Rule from earlier in Unit 3 applied to an unknown function, and the same idea (differentiate both sides, then solve for the rate) powers every related-rates problem in Unit 4."
                         }
                     ],
                     quiz: {
                         question: "What is the derivative of e^(2x)?",
                         options: ["e^(2x)", "2e^(x)", "2e^(2x)", "e^(2)"],
                         answer: "2e^(2x)",
-                        explanation: "Derivative of e^u is e^u * u'. Here u=2x and u'=2."
+                        explanation: "The trap here is forgetting the inner multiplier: the Chain Rule fires every time the exponent is more than a bare $x$. Since $e^{2x}$ is the composition of the outer function $e^u$ with the inner function $u=2x$, differentiate outside-in: $\\frac{d}{dx}e^u = e^u \\cdot u'$, so $\\frac{d}{dx}e^{2x} = e^{2x} \\cdot 2 = 2e^{2x}$. The factor of 2 is not decoration; it is the rate at which the exponent itself is changing. Wrong-answer watch: $e^{2x}$ drops the Chain Rule entirely (that is the derivative of $e^x$, not $e^{2x}$), and $2e^x$ moves the 2 onto the wrong exponent. Quick self-check: at $x=0$ the curve passes through $(0,1)$ with slope $2e^0 = 2$, twice as steep as the chain-rule-free answer would claim."
                     }
                 },
                 {
@@ -1722,7 +1722,7 @@ window.MATH_DATA = {
                                 "Plug in: dA/dt = 2 * pi * (10) * (2) = 40pi.",
                                 "Conclude: 40pi cm^2/s."
                             ],
-                            intuition: "As the radius grows, the 'new layer' of area we add depends on the current circumference."
+                            intuition: "This matters because related rates is calculus's answer to 'how fast is THAT changing': the bread and butter of physics and engineering word problems. Picture the circle as an onion. In one instant the radius grows a tiny bit $dr$, adding a thin ring of area whose size is roughly circumference times thickness ($2\\pi r \\cdot dr$). That is exactly why $\\frac{dA}{dt} = 2\\pi r\\,\\frac{dr}{dt}$ has the circumference $2\\pi r$ in it: each new layer's area is governed by the current perimeter. This uses the Chain Rule from Unit 3 ($A$ depends on $r$, which depends on $t$), and the same differentiate-both-sides instinct drives implicit differentiation and L'Hôpital's Rule in this unit."
                         },
                         {
                             title: "Practice FRQ (Level 3): L'Hospital's Precision",
@@ -1733,14 +1733,14 @@ window.MATH_DATA = {
                                 "L'Hospital 2: lim (e^x) / 2.",
                                 "Eval: e^0 / 2 = 1/2."
                             ],
-                            intuition: "When top and bottom both vanish, we compare their 'speeds' (derivatives) to see who wins."
+                            intuition: "This matters because 0/0 limits are a race: the numerator and denominator are both sprinting to zero, and the limit is decided by who gets there faster. Picture two runners collapsing at the finish line. Differentiating top and bottom is like checking their instantaneous speeds at the line; the faster shrinker dominates. Here the first round is still 0/0 (a tie), so we race again: $\\lim_{x \\to 0}\\frac{e^x}{2} = \\frac{1}{2}$. This connects to the Squeeze Theorem intuition from Unit 1 (bounding a limit between two known behaviors) and previews Taylor series in BC: $e^x \\approx 1 + x + \\frac{x^2}{2}$ shows the $\\frac{1}{2}$ hiding in the quadratic term."
                         }
                     ],
                     quiz: {
                         question: "Can you use L'Hospital's Rule on 0/infinity?",
                         options: ["Yes", "No", "Only on Tuesdays", "Only if it's negative"],
                         answer: "No",
-                        explanation: "L'Hospital's Rule only applies to indeterminate forms 0/0 or infinity/infinity. Other forms must be refactored into these first."
+                        explanation: "The trap here is treating L'Hôpital's Rule as a universal limit solver. The rule is a theorem with hypotheses: it applies only to the two indeterminate forms $\\frac{0}{0}$ and $\\frac{\\infty}{\\infty}$. The form $\\frac{0}{\\infty}$ is not indeterminate at all: a numerator shrinking to 0 while the denominator explodes forces the fraction toward 0 directly, no rule needed. Worse, applying L'Hôpital outside its hypotheses produces nonsense. Wrong-answer watch: 'Yes' assumes the rule works on any fraction-shaped limit, but forms like $0 \\cdot \\infty$, $\\infty - \\infty$, $1^\\infty$, and $\\frac{0}{\\infty}$ must each be refactored or evaluated directly first. Quick self-check: before differentiating top and bottom, write down the form. If it is not exactly $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$, the rule is off-limits."
                     }
                 },
                 {
@@ -1762,7 +1762,7 @@ window.MATH_DATA = {
                                 "Set to 0: 3x(x - 2) = 0.",
                                 "Conclude: x = 0, x = 2."
                             ],
-                            intuition: "Critical points are where the graph 'takes a breath' before switching direction."
+                            intuition: "This matters because critical points are the candidate locations for every maximum and minimum in optimization: from maximizing profit to minimizing material cost, the answer always hides among them. Picture a roller coaster cresting a hill. At the very top the track is momentarily flat ($f' = 0$) before plunging the other way: the derivative 'takes a breath' at exactly the turnaround. This uses the derivative-as-slope idea from Unit 2, and it sets up the First and Second Derivative Tests later in this unit, which classify each breath as a peak, a valley, or a flat straightaway."
                         },
                         {
                             title: "Practice FRQ (Level 3): MVT Justification",
@@ -1772,14 +1772,14 @@ window.MATH_DATA = {
                                 "Calculate avg ROC: (10-0)/(2-0) = 5.",
                                 "Invoke MVT: 'By the Mean Value Theorem, there must exist c in (0,2) such that f'(c)=5.'"
                             ],
-                            intuition: "If your average speed for a trip was 60mph, you must have hit exactly 60mph at least once!"
+                            intuition: "This matters because the Mean Value Theorem is the theoretical bridge from average behavior to instantaneous behavior: it lets us rigorously claim a function 'must have' behaved a certain way somewhere. Picture a road trip. If you averaged 60 mph, your speedometer needle (moving continuously) had to sweep past 60 at least once; you cannot teleport from 40 to 80. Formally, differentiability on $(a, b)$ plus continuity on $[a, b]$ guarantees a $c$ with $f'(c) = \\frac{f(b)-f(a)}{b-a}$. This is the IVT's sibling from Unit 1 (both are existence theorems), and the MVT becomes the workhorse proving that functions with zero derivative are constant: the foundation of the FTC in Unit 6."
                         }
                     ],
                     quiz: {
                         question: "If f''(x) > 0, what is the 'shape' of the graph?",
                         options: ["Increasing", "Decreasing", "Concave Up (Cup)", "Concave Down (Frown)"],
                         answer: "Concave Up (Cup)",
-                        explanation: "Positive second derivative means the 'slope is increasing', creating a cup-like shape."
+                        explanation: "The trap here is confusing 'increasing function' with 'increasing slope'. The second derivative measures the rate of change of the SLOPE, not of the function value. If $f''(x) > 0$, the slope is increasing: it might climb from $-5$ to $-1$ (still falling, but flattening) or from $2$ to $8$. Either way, a slope that keeps increasing traces a cup shape $\\cup$, concave up, like the bottom of a valley. Wrong-answer watch: 'Increasing' describes $f' > 0$, a completely different test. A function can be decreasing yet concave up; picture $y = e^{-x}$, which falls while its slope climbs toward 0. Quick self-check: sketch $y = x^2$. It holds water like a cup, and its slope grows from negative to positive as you move right, exactly what $f''(x) = 2 > 0$ predicts."
                     }
                 },
                 {
@@ -1802,7 +1802,7 @@ window.MATH_DATA = {
                                 "Lower bound: 1^3 = 1.",
                                 "Subtract: 27 - 1 = 26."
                             ],
-                            intuition: "The total accumulation is simply the 'net change' in the anti-derivative."
+                            intuition: "This matters because FTC Part 2 turns the hard problem (adding up infinitely many slices) into the easy problem (evaluate an antiderivative twice and subtract). Picture a bank account. The total deposits over a month equal the final balance minus the starting balance: you do not need every transaction, just the net change $F(b) - F(a)$. The antiderivative is the 'balance function' and the integral is the net deposit. This is the mirror image of the quiz's FTC Part 1 (differentiate the accumulator to recover the rate), and together the two parts close the loop: differentiation and integration are inverse operations, a fact Unit 7's differential equations exploit constantly."
                         },
                         {
                             title: "Practice FRQ (Level 3): U-Sub Decoupling",
@@ -1813,14 +1813,14 @@ window.MATH_DATA = {
                                 "Integral: 1/2 * integral [0 to 1] e^u du = 1/2(e^1 - e^0).",
                                 "Conclude: 1/2(e - 1)."
                             ],
-                            intuition: "U-Substitution is 'reverse chain rule'—we adjust for the inner derivative's multiplier."
+                            intuition: "This matters because u-substitution is the single most-used integration technique: most integrals you will ever meet are Chain Rule derivatives in disguise. Picture running the Chain Rule film backwards. The integrand $x e^{x^2}$ has an 'extra' $x$ sitting next to $e^{x^2}$, which is exactly the inner derivative $\\frac{d}{dx}x^2 = 2x$ up to the constant 2. Set $u = x^2$ and the integral collapses to $\\frac{1}{2}\\int e^u\\,du$. The constant adjustment is the whole skill: constants can be absorbed, but a missing $x$ factor cannot. This directly reverses the Chain Rule from Unit 3, and the 'spot the inner derivative' instinct is the same one that makes implicit differentiation click."
                         }
                     ],
                     quiz: {
                         question: "What does FTC Part 1 say about d/dx [integral from a to x of f(t) dt]?",
                         options: ["F(x)", "f(x)", "f'(x)", "0"],
                         answer: "f(x)",
-                        explanation: "Diff and Int are inverse operations. Starting with f, integrating, then differentiating brings you back to f(x)."
+                        explanation: "The trap here is the dummy variable: $\\frac{d}{dx}\\int_a^x f(t)\\,dt$ differentiates with respect to the upper limit $x$, not the $t$ inside the integral. Think of the integral as an accumulator function $A(x)$, the area under $f$ up to $x$. FTC Part 1 says the rate at which area accumulates at $x$ is exactly the height of the curve there, $f(x)$, so $\\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)$. Differentiating the accumulated quantity recovers the original rate. Wrong-answer watch: $F(x)$ is an antiderivative, the answer to $\\int f(x)\\,dx$, not to this derivative. Choosing $f'(x)$ differentiates one layer too many, and $0$ confuses this with a definite integral, which is a constant. Quick self-check: test it with $f(t) = 2t$. Then $\\int_0^x 2t\\,dt = x^2$, and $\\frac{d}{dx}x^2 = 2x = f(x)$. The machinery closes the loop."
                     }
                 },
                 {
@@ -1841,14 +1841,14 @@ window.MATH_DATA = {
                                 "dy/dx = 0.",
                                 "Conclude: All slope segments are horizontal along the y-axis."
                             ],
-                            intuition: "The slope is purely determined by the x-coordinate here."
+                            intuition: "This matters because slope fields let you 'see' a differential equation's solutions without solving anything: the entire family of solution curves is already drawn in the tick marks. Picture a weather map of wind arrows. Here the arrows depend only on longitude ($x$), so every vertical column of arrows is identical, and along the y-axis ($x = 0$) every arrow lies flat because $\\frac{dy}{dx} = 0$ there. Solution curves must thread through these arrows, so just from the field you can predict they will be parabolas $y = \\frac{x^2}{2} + C$. This is the geometric face of the derivative from Unit 2, and it previews Euler's method in BC, which builds solutions by walking along these arrows step by step."
                         }
                     ],
                     quiz: {
                         question: "If dy/dx = ky, what is the general solution?",
                         options: ["y = kx + C", "y = Ce^(kx)", "y = x^k", "y = sin(kx)"],
                         answer: "y = Ce^(kx)",
-                        explanation: "This is the 'Natural Growth' equation where the rate of change is proportional to the amount present."
+                        explanation: "The trap here is confusing proportional growth with linear growth. The equation $\\frac{dy}{dx} = ky$ says the rate of change is proportional to the CURRENT amount: the more you have, the faster you grow, like compound interest or an unchecked population. Separate the variables: $\\frac{dy}{y} = k\\,dx$. Integrating gives $\\ln|y| = kx + C_1$, and exponentiating yields $y = Ce^{kx}$: exponential growth, not linear. The constant $C$ is simply the initial amount $y(0)$, fixed by the starting condition. Wrong-answer watch: $y = kx + C$ solves $\\frac{dy}{dx} = k$, a constant rate (arithmetic growth), not a rate that scales with $y$. And $y = x^k$ is power growth with the wrong structure entirely. Quick self-check: differentiate $Ce^{kx}$ to get $kCe^{kx} = ky$, which reproduces the original equation and confirms the solution."
                     }
                 },
                 {
@@ -1870,14 +1870,14 @@ window.MATH_DATA = {
                                 "Anti-deriv: x^2/2 - x^3/3.",
                                 "Eval: (1/2 - 1/3) - (0) = 1/6."
                             ],
-                            intuition: "Subtracting the lower area from the upper area leaves the 'slice' in between."
+                            intuition: "This matters because 'area between curves' is the template for every accumulation-between-two-things problem, including the volumes in the next lesson. Picture a sandwich. At each $x$, the vertical slice has height (top function minus bottom function), and integrating stacks all those slices from $x = 0$ to $x = 1$. The order matters: top minus bottom keeps every slice positive, while flipping it would compute negative area. This is Riemann-sum accumulation from Unit 6 with a fancier slice height, and the same 'integrate the slice' strategy scales up to washers and cross-sections next."
                         }
                     ],
                     quiz: {
                         question: "Which method is used for a solid of revolution with a 'hole' in the middle?",
                         options: ["Disk Method", "Was cowl Method", "Washer Method", "Riemann Method"],
                         answer: "Washer Method",
-                        explanation: "A washer is a disk with a smaller disk removed from the center, modeling the 'hole'."
+                        explanation: "The trap here is reaching for the Disk Method on autopilot. When the revolved region does not touch the axis of rotation, each cross-section is a disk with a bite taken out of it: a washer with area $\\pi R^2 - \\pi r^2 = \\pi(R^2 - r^2)$, where $R$ is the outer radius (far edge to the axis) and $r$ is the inner radius (near edge to the axis). The method models the hole directly: full disk minus missing core, slice by slice. Wrong-answer watch: the plain Disk Method only applies when the region touches the axis ($r = 0$). Using it here fills the hole with phantom volume you never had. Quick self-check: if the region did touch the axis, the washer formula collapses to the disk formula, since $r = 0$ gives $\\pi R^2$. The washer is the general case; the disk is its special case."
                     }
                 }
             ]
@@ -1911,7 +1911,7 @@ window.MATH_DATA = {
                                 "Limits: lim -x^2 = 0 and lim x^2 = 0.",
                                 "Conclude: By Squeeze Theorem, the limit is 0."
                             ],
-                            intuition: "Even if sin(1/x) oscilliates wildly, x^2 'squashes' it to zero at the origin."
+                            intuition: "This matters because the Squeeze Theorem is how calculus tames functions too wild to evaluate directly: it is the rigorous version of 'if you are trapped between two things both going to zero, you go to zero too.' Picture $\\sin(1/x)$ as a spring oscillating insanely fast near 0, trapped between the envelopes $y = x^2$ and $y = -x^2$. As $x \\to 0$ both envelopes pinch shut at the origin, squashing the wild oscillation flat, so the limit must be 0. The proof idea is pure $\\epsilon$-$\\delta$: for any $\\epsilon > 0$, the envelope bound $|x^2\\sin(1/x)| \\le x^2$ forces the function within $\\epsilon$ of 0 once $x$ is close enough. This is the Unit 1 limit machinery at full power, and the same bounding instinct returns in BC for series error bounds (Lagrange) in Unit 10."
                         },
                         {
                             title: "Practice FRQ (Level 3): Epsilon-Delta Mastery",
@@ -1922,14 +1922,14 @@ window.MATH_DATA = {
                                 "Choice: Set delta = eps/2.",
                                 "Justification: 'For every eps > 0, choosing delta = eps/2 ensures the target range.'"
                             ],
-                            intuition: "You tell me how close you want to be to 5 (eps), and I'll tell you how close x must be to 3 (delta)."
+                            intuition: "This matters because $\\epsilon$-$\\delta$ is the foundation everything in calculus stands on: limits, continuity, derivatives, and integrals are all defined in this language, and BC demands that you speak it. Picture a challenge game. Your opponent names any tolerance $\\epsilon$ around the target value 5 ('get within 0.001'), and you must produce a $\\delta$-window around $x = 3$ guaranteeing success. Here $|(2x-1) - 5| = 2|x - 3| < \\epsilon$ whenever $|x - 3| < \\epsilon/2$, so $\\delta = \\epsilon/2$ wins every round. The proof idea is working backwards from the goal: massage $|f(x) - L| < \\epsilon$ until $|x - a|$ appears, then read off $\\delta$. This formalizes the intuitive limits from AB Unit 1, and it is the same rigor the Squeeze Theorem and series convergence proofs lean on later."
                         }
                     ],
                     quiz: {
                         question: "If f(x) is continuous, does f(c) always exist for any c in the domain?",
                         options: ["Yes", "No", "Only if differentiable", "Only if positive"],
                         answer: "Yes",
-                        explanation: "By definition, a function is continuous at c only if f(c) is defined and equal to the limit."
+                        explanation: "The trap here is thinking continuity just means 'no breaks in the drawing.' The formal definition is a three-part contract at every point $c$ of the domain: (1) $f(c)$ must be defined, so the function actually has a value there; (2) $\\lim_{x \\to c} f(x)$ must exist, so the left and right behavior agree; (3) the two must match, so the value equals the limit. That means for any $c$ in the domain of a continuous function, $f(c)$ necessarily exists: continuity is impossible at a point where the function is undefined, because condition (1) cannot even be stated. Wrong-answer watch: 'Only if differentiable' reverses the logic. Differentiability IMPLIES continuity, not the other way around; a corner like $|x|$ at 0 is continuous but not differentiable. Quick self-check: try $f(x) = \\frac{1}{x}$ at $x = 0$. Since $f(0)$ is undefined, continuity there is not even a question the definition can ask."
                     }
                 },
                 {
@@ -1952,7 +1952,7 @@ window.MATH_DATA = {
                                 "Divide: 50 / 4 = 12 remainder 2.",
                                 "Conclude: Same as 2nd derivative -> -sin(x)."
                             ],
-                            intuition: "Trig derivatives are a 4-chord loop in a song!"
+                            intuition: "This matters because high-order derivatives reveal hidden structure, and in BC the $n$th-derivative pattern is literally the engine that builds Taylor series coefficients ($f^{(n)}(a)/n!$). Picture the derivatives of $\\sin x$ as a four-step dance that loops forever: $\\sin \\to \\cos \\to -\\sin \\to -\\cos \\to \\sin \\cdots$. The 50th derivative is just the 2nd one ($50 = 4 \\cdot 12 + 2$), giving $-\\sin x$. Spotting the cycle beats differentiating 50 times. This extends the basic differentiation rules from AB Unit 2, and the same 'find the period' thinking powers the ratio test and power series work in Unit 10."
                         }
                     ]
                 },
@@ -1976,7 +1976,7 @@ window.MATH_DATA = {
                                 "Multiply: y' = y(ln x + 1).",
                                 "Conclude: y' = x^x(ln x + 1)."
                             ],
-                            intuition: "When both base and exponent are moving, take a log to bring the exponent down to earth."
+                            intuition: "This matters because functions like $x^x$ defeat every standard rule: the Power Rule needs a constant exponent, the exponential rule needs a constant base, and here both are moving. Picture logarithms as a crane that lifts the exponent down from the sky. Taking logs gives $\\ln y = x\\ln x$, turning the untouchable $x^x$ into a product, which the Product Rule handles easily ($\\frac{y'}{y} = \\ln x + 1$); then multiply back by $y$. The key move is implicit differentiation of $\\ln y$, which produces $\\frac{y'}{y}$ as the Chain Rule fires on a logarithm. This fuses the Chain Rule and implicit differentiation from earlier in this unit, and the 'take logs to linearize' trick reappears in logistic growth (Unit 7) and throughout differential equations."
                         }
                     ]
                 },
@@ -2030,7 +2030,7 @@ window.MATH_DATA = {
                                 "Conclude: L = 500.",
                                 "Meaning: The population limit is 500."
                             ],
-                            intuition: "The environment has exactly 500 'seats' available."
+                            intuition: "This matters because the logistic model is the realistic version of exponential growth: it describes populations, rumor spread, and even neural-network saturation, anywhere growth hits a ceiling. Picture a concert venue with exactly 500 seats. When the crowd is small, newcomers arrive fast (near-exponential), but as seats fill, the $(1 - P/500)$ factor chokes growth toward zero, and the $P = 500$ equilibrium is where arrivals and departures balance. The 'seats' are the carrying capacity $L$, readable directly from the factored form $\\frac{dP}{dt} = kP(1 - P/L)$. This builds on the exponential model $\\frac{dP}{dt} = kP$ from AB Unit 7 (logistic is what happens when the environment pushes back), and the equilibrium analysis here previews stability ideas in differential equations."
                         },
                         {
                             title: "Practice FRQ (Level 3): Euler's Step Justification",
@@ -2040,7 +2040,7 @@ window.MATH_DATA = {
                                 "Step 2: (0.5, 1.5), slope=2. Next y = 1.5 + 2(0.5) = 2.5.",
                                 "Conclude: f(1) approx 2.5."
                             ],
-                            intuition: "We are walking along the fog, following the local compass (slope) for a short distance before re-checking."
+                            intuition: "This matters because most differential equations in science cannot be solved with formulas: Euler's method is the simplest numerical solver, the ancestor of every ODE integrator in engineering software. Picture hiking in dense fog with only a compass showing the local slope. Walk straight for a short step $h$, re-check the compass at your new position, walk again. Each step is $y_{n+1} = y_n + h\\cdot f(x_n, y_n)$, and smaller steps mean less drift, since you re-check the 'compass' more often. This is the slope-field idea from AB Unit 7 turned into an algorithm (the field IS the compass), and the local-linearization instinct is the same one behind tangent-line approximations in Unit 4."
                         }
                     ]
                 },
@@ -2075,7 +2075,7 @@ window.MATH_DATA = {
                                 "Integrate: 9/2 * integral sin^2(theta) dtheta.",
                                 "Conclude: 9pi/4."
                             ],
-                            intuition: "We are adding up infinitely many small 'pizza slices' (sectors)."
+                            intuition: "This matters because polar coordinates describe rotation-symmetric phenomena (planetary orbits, antenna patterns, spirals) where rectangles are the wrong shape and sectors are natural. Picture the curve $r = 3\\sin\\theta$ as a pizza being sliced from the origin. Each infinitesimal slice has angle $d\\theta$ and radius $r$, so its area is $\\frac{1}{2}r^2\\,d\\theta$: a sector, not a triangle (the $\\frac{1}{2}$ comes from the sector area formula $\\frac{1}{2}r^2\\theta$). Integrating stacks the slices: $\\int_0^{\\pi} \\frac{1}{2}(3\\sin\\theta)^2\\,d\\theta = \\frac{9\\pi}{4}$. This is Riemann-sum accumulation from AB Unit 6 with polar slices instead of rectangles, and the limits $0$ to $\\pi$ (not $2\\pi$) come from tracing the circle exactly once: a classic polar pitfall."
                         }
                     ]
                 },
@@ -2099,7 +2099,7 @@ window.MATH_DATA = {
                                 "Term: x - x^3/3! + x^5/5! - ...",
                                 "Conclude: Sigma (-1)^n * x^(2n+1) / (2n+1)!"
                             ],
-                            intuition: "Every function has a 'polynomial personality' if you zoom in enough at the center."
+                            intuition: "This matters because Taylor series are how computers actually compute $\\sin x$, $e^x$, and $\\ln(1+x)$: no calculator has a 'sine' circuit, just polynomial arithmetic. Picture zooming into $\\sin x$ at the origin. The curve looks increasingly like its tangent line $y = x$, then like the cubic $x - \\frac{x^3}{3!}$, then the quintic: each added term matches one more derivative at the center, so the polynomial 'personality' gets more faithful. The pattern here (alternating signs, odd powers, factorials) comes straight from the four-cycle of trig derivatives in Unit 2, since $\\sin^{(n)}(0)$ cycles through $0, 1, 0, -1$. This is the payoff of the entire BC course (limits, derivatives, and series converging), and the Lagrange error bound in the next lesson tells you exactly how faithful the personality is."
                         },
                         {
                             title: "Practice FRQ (Level 3): Radius of Convergence",
@@ -2111,7 +2111,7 @@ window.MATH_DATA = {
                                 "Test endpoints: Both fail (diverge).",
                                 "Conclude: (-1, 5)."
                             ],
-                            intuition: "Outside this 'safety zone', the series explodes to infinity."
+                            intuition: "This matters because a power series is only a faithful stand-in for its function INSIDE its interval of convergence: using it outside is like navigating with a map of the wrong city. Picture the center $x = 2$ as home base with a 'safety radius' of 3. The Ratio Test measures how fast the terms shrink and reports $|x - 2| < 3$, the open interval $(-1, 5)$, and then you must interrogate the endpoints individually (here both diverge, so the interval stays open). Outside $(-1, 5)$ the terms do not even go to zero, so the series blows up: the nth-Term Test from the Unit 11 quiz would kill it in one line. This fuses the convergence tests from earlier in Unit 10, and the endpoint-checking discipline is exactly what AP FRQs grade."
                         }
                     ]
                 },
@@ -2128,7 +2128,7 @@ window.MATH_DATA = {
                         question: "Final Mastery: Which convergence test is your 'first line of defense'?",
                         options: ["Ratio Test", "Integral Test", "nth Term Test for Divergence", "P-Series Test"],
                         answer: "nth Term Test for Divergence",
-                        explanation: "If the limit of terms is not zero, the series diverges IMMEDIATELY. Save time by checking this first!"
+                        explanation: "The trap here is reaching for the Ratio Test first on every series. It is powerful but slow. The nth-Term Test for Divergence is your bouncer at the door: if $\\lim_{n \\to \\infty} a_n \\ne 0$ (or the limit fails to exist), the series $\\sum a_n$ diverges immediately, full stop, with no further testing needed. Why? A convergent series must have terms shrinking to zero; otherwise the partial sums keep growing by non-vanishing chunks. Note it is a one-way test: passing it ($a_n \\to 0$) proves nothing, since the harmonic series $\\sum \\frac{1}{n}$ passes and still diverges. Wrong-answer watch: running the Ratio Test on $\\sum \\frac{n}{n+1}$ wastes a page of algebra where one glance ($a_n \\to 1 \\ne 0$) ends the story. The Integral Test, meanwhile, demands a positive, decreasing, continuous function: overkill for a ten-second check. Quick self-check: make the nth-term check the literal first line of scratch work on every series problem. If the terms do not vanish, you are done in one line."
                     }
                 }
             ]
@@ -2155,7 +2155,7 @@ window.MATH_DATA = {
                             title: "The Gradient Descent Intuition",
                             problem: "How does an AI minimize error in 100 dimensions?",
                             steps: ["Calculate the Gradient $\\nabla f$.", "The gradient points in the direction of steepest increase.", "Move in the OPPOSITE direction $(- \\nabla f)$.", "Repeat until reaching the local minimum."],
-                            intuition: "Gradient descent is like walking down a mountain in a thick fog; you just step in the direction where the ground falls away fastest."
+                            intuition: "This matters because gradient descent is the algorithm training virtually every neural network: it is how AI 'learns' by minimizing error across millions of parameters. Picture yourself on a foggy mountainside holding an altimeter. You cannot see the valley, but the gradient $\\nabla f$ reports the steepest uphill direction at your feet, so you step the opposite way ($-\\nabla f$), re-measure, and repeat. Each step is $\\mathbf{x}_{n+1} = \\mathbf{x}_n - \\eta\\nabla f(\\mathbf{x}_n)$, where the learning rate $\\eta$ is your step size: too big and you leap over the valley, too small and you crawl. This is the gradient from L2 and L3 of this unit made into an algorithm (steepest descent runs perpendicular to level curves), and it is the computational payoff of multivariable calculus: the same idea scales to hundred-dimensional loss landscapes."
                         }
                     ],
                     quiz: {
@@ -2165,21 +2165,21 @@ window.MATH_DATA = {
                                 question: "Geometrically, what does $f_x$ represent for a function $f(x, y)$?",
                                 answer: "Slope parallel to x-axis",
                                 options: ["Total volume", "Slope parallel to x-axis", "Slope parallel to y-axis", "Area of tangent plane"],
-                                explanation: "Partial derivative represents the rate of change in one specific dimension while others are held constant."
+                                explanation: "The trap here is reading $f_x$ as the 'total' slope of the surface. A partial derivative is a slice, not the whole picture: $f_x$ is the slope of the curve you get by freezing $y$ at a constant and walking in the $x$-direction. Geometrically, it is the tangent line parallel to the $x$-axis on the surface $z = f(x, y)$. Holding the other variables constant is what makes it 'partial': you measure the rate of change along one coordinate axis only and ignore everything else. Wrong-answer watch: 'Slope parallel to the y-axis' describes $f_y$, a different measurement. 'Total volume' and 'area of tangent plane' mix up derivatives with integrals or full two-dimensional constructions. Quick self-check: for $f(x, y) = x^2 + y^3$, we get $f_x = 2x$, which does not even contain $y$. Freeze $y$ and the surface becomes a family of parabolas, each with slope $2x$ at that height."
                             },
                             {
                                 title: "L2: Applied Analysis",
                                 question: "For $f(x, y) = x^2 y$, what is the gradient $\\nabla f$ at point $(1, 2)$?",
                                 answer: "(4, 1)",
                                 options: ["(2, 1)", "(4, 1)", "(1, 2)", "(4, 2)"],
-                                explanation: "$f_x = 2xy, f_y = x^2$. Substituting $(1,2)$ gives $f_x=4, f_y=1$."
+                                explanation: "The trap here is stopping after computing the partials and forgetting to evaluate them at the point. Step by step: differentiate partially to get $f_x = 2xy$ (treating $y$ as a constant) and $f_y = x^2$ (treating $x$ as a constant). Note that $f_y$ at $(1, 2)$ is $1^2 = 1$, not 2, because differentiating killed the $y$ factor. Now substitute $(x, y) = (1, 2)$: $f_x(1, 2) = 2(1)(2) = 4$ and $f_y(1, 2) = 1$, so $\\nabla f(1, 2) = \\langle 4, 1 \\rangle$. Wrong-answer watch: $(2, 1)$ is the gradient at $(1, 1)$; evaluating at the wrong point or half-substituting is the classic slip. And $(4, 2)$ comes from differentiating the $y$ as if it were $2y$. Quick self-check: the gradient points in the direction of steepest increase. At $(1, 2)$ the surface rises 4 units per $x$-step and 1 per $y$-step, matching the answer's proportions."
                             },
                             {
                                 title: "L3: Elite Mastery",
                                 question: "What is the relationship between the gradient vector and level curves?",
                                 answer: "They are always orthogonal",
                                 options: ["They are parallel", "They are always orthogonal", "They form a 45-degree angle", "No relationship"],
-                                explanation: "Since change along a level curve is zero, the gradient (direction of max change) must be perpendicular to it."
+                                explanation: "The trap here is memorizing 'perpendicular' without the why. A level curve $f(x, y) = c$ is the set of points where the function does not change at all, so moving along it, the directional derivative is zero. The gradient $\\nabla f$ is the direction of MAXIMUM change, and the only direction that can be 'maximum' while the tangent direction gives 'zero change' is the one at $90^\\circ$ to it. The Chain Rule says it precisely: differentiating $f(\\mathbf{r}(t)) = c$ gives $\\nabla f \\cdot \\mathbf{r}'(t) = 0$, a zero dot product, which is orthogonality. Wrong-answer watch: 'Parallel' would mean walking along the level curve changes the value fastest, but the value is constant there by definition, a contradiction. Quick self-check: look at a topographic map. Contour lines are level curves, and the steepest downhill path crosses them at right angles. Your hiking intuition already knows this theorem."
                             }
                         ]
                     }
@@ -2200,14 +2200,14 @@ window.MATH_DATA = {
                                 question: "What is the minimum number of basis vectors needed to span a 2D plane?",
                                 answer: "2",
                                 options: ["1", "2", "3", "Infinite"],
-                                explanation: "The number of basis vectors equals the dimension of the space."
+                                explanation: "The trap here is counting directions instead of INDEPENDENT directions. A basis is a minimal spanning set: enough vectors to reach every point, with none redundant. In a 2D plane you need exactly 2. One vector gives only a line (one-dimensional), and a third vector can always be written as a combination of the other two, adding nothing new. That is why the number of basis vectors always equals the dimension: dimension IS defined as the size of any basis. Wrong-answer watch: '3' or 'Infinite' confuses 'spanning' with 'being a basis.' Infinitely many sets span the plane, but only two-vector independent sets are bases. Quick self-check: test any candidate basis for independence. If $a\\mathbf{v}_1 + b\\mathbf{v}_2 = \\mathbf{0}$ forces $a = b = 0$, and the space is two-dimensional, you are done; no third vector can sneak in."
                             },
                             {
                                 title: "L2: Transformations",
                                 question: "What does it mean if a transformation matrix has a determinant of 0?",
                                 answer: "Space lost dimensions",
                                 options: ["Area is preserved", "Only rotation occurred", "Space lost dimensions", "Inverse matrix exists"],
-                                explanation: "A zero determinant means the mapping is 'singular', squeezing higher-dimensional space into a lower one."
+                                explanation: "The trap here is reading 'determinant zero' as 'nothing happens.' The determinant measures volume scaling: $|\\det A|$ is how much the transformation stretches or shrinks volumes. A determinant of 0 means volumes collapse to zero: the transformation squashes space flat, sending a 2D plane onto a line (or a point) and a 3D volume onto a plane at most. Dimension is genuinely lost: distinct inputs land on the same output, so the map cannot be undone, and no inverse matrix exists, exactly as multiplying by zero has no reciprocal. Wrong-answer watch: 'Inverse matrix exists' is the exact opposite of the truth; invertibility requires $\\det \\ne 0$. 'Area is preserved' describes $|\\det| = 1$, the case of rotations and reflections. Quick self-check: a singular matrix has linearly dependent columns. If one column is a multiple of another, the transformation is already collapsing that direction, and the determinant must be 0."
                             }
                         ]
                     }
@@ -2225,7 +2225,7 @@ window.MATH_DATA = {
             units: [
                 {
                     title: "Unit 1: The Architecture of Axioms",
-                    intuition: "Axioms are the 'atoms' of thought. We build universes from these small, undeniable truths.",
+                    intuition: "Axioms are the 'atoms' of thought: tiny, undeniable truths from which we build entire universes. Nothing proves an axiom — that is the point. Like Euclid's parallel postulate, axioms are the handful of statements we agree to accept without argument, and everything else is built upward from them: axioms feed definitions, definitions feed lemmas, lemmas feed theorems. Picture them as the Lego bricks of a logical universe — change even one brick (as non-Euclidean geometry did with the parallel postulate) and you build an entirely different world. That is why the choice of axioms matters so much: it silently decides everything your system can ever prove, and it connects directly to the proof strategies in Units 2–4, where every derivation must trace back to these starting truths.",
                     topics: ["Postulational Systems", "Logic Gates of Math", "Euclidean vs Non-Euclidean"],
                     lectures: [
                         { name: "1.1: The First Rule: Axioms", url: "lesson:proof_logic:proof_logic-u1-1" },
@@ -2238,14 +2238,14 @@ window.MATH_DATA = {
                                 question: "What is the primary difference between an Axiom and a Theorem?",
                                 options: ["Axioms require proof", "Theorems are self-evident", "Axioms are starting points; Theorems are proven from them", "None"],
                                 answer: "Axioms are starting points; Theorems are proven from them",
-                                explanation: "Axioms are accepted without proof to serve as the foundation for further logical derivation."
+                                explanation: "The trap here is thinking axioms get 'proved' by experiments or authority — nothing proves an axiom. An axiom is a starting point we agree to accept (like Euclid's parallel postulate); a theorem is the destination, a statement proven by chaining logic back down to the axioms. Proof strategy: to prove a theorem, trace its dependencies backward like a river to its spring — every step must be justified until you reach axioms or already-proven theorems. Wrong-answer watch: 'Theorems are self-evident' reverses the roles — theorems earn certainty through proof, while axioms start with certainty by agreement. Quick self-check: ask 'was this proven, or was it agreed to?' — proven means theorem, agreed means axiom."
                             }
                         ]
                     }
                 },
                 {
                     title: "Unit 2: Geometric Visual Proofs",
-                    intuition: "A diagram can be a complete proof. We move from 'calculated' results to 'seen' truths.",
+                    intuition: "A diagram can be a complete proof — moving us from 'calculated' results to 'seen' truths. Where algebra manipulates symbols, a picture lets you watch why something must be true — the Pythagorean theorem falling out of four rearranged triangles, or a sliced circle unfurling into a rectangle with area $\pi r^2$. These 'proofs without words' work because your brain's fastest, most reliable reasoning is visual. But pictures demand discipline too: a misleading diagram can fool the eye, so every visual insight here gets checked against logic. Think of the diagram as the argument's skeleton and the logic as its spine — together they make proofs you can both see and trust, a skill that carries straight into the geometric derivations of Unit 4.",
                     topics: ["Slicing the Circle", "Pythagorean Rearrangement", "The Square of Sums"],
                     lectures: [
                         { name: "2.1: Slicing to Find Area", url: "lesson:proof_logic:proof_logic-u2-1" },
@@ -2267,7 +2267,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Unit 3: Algebraic Derivations",
-                    intuition: "Where did the formulas come from? We strip the Quadratic and Binomial markers to see the mechanical heart of Algebra.",
+                    intuition: "Where did the formulas come from? We strip away the Quadratic and Binomial labels to expose the mechanical heart of Algebra. A formula is not a magic spell — it is a shortcut through a derivation someone once did by hand. Here we peel back the Quadratic Formula to watch it grow out of completing the square, and we dissect Pascal's triangle to see the Binomial Theorem counting real combinations, $\binom{n}{k}$, one row at a time. Picture a formula as a frozen river: beneath the smooth surface, a whole logical current still flows. Reconnecting with those currents is what separates memorizers from problem-solvers — and it links back to Unit 1's axioms, because every step of a derivation must be justified, or the formula inherits nothing.",
                     topics: ["Completing the Square", "Binomial Theorem Geometry", "Summing Infinity"],
                     lectures: [
                         { name: "3.1: Deriving the Quadratic Formula", url: "lesson:proof_logic:proof_logic-u3-1" },
@@ -2276,7 +2276,7 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Unit 4: Calculus from First Principles",
-                    intuition: "The derivative is not a formula; it is a movement. We watch the secant line become the tangent.",
+                    intuition: "The derivative is not a formula; it is a movement — the secant line sliding until it becomes the tangent. Imagine zooming in on a curve again and again: the secant joining two nearby points slides until it melts into the tangent line, and the slope it carries is the instantaneous rate of change. That sliding is the limit in action: not a static value, but a process arriving. Picture a car on a highway — average speed over a long stretch is the secant; the speedometer reading at one instant is the tangent. This single image fuses algebra, geometry, and physics, and it is the seed from which all of calculus grows. It also closes the loop with Unit 1: the $\epsilon$-$\delta$ definition exists precisely to turn this beautiful movement into axiom-grade certainty.",
                     topics: ["The Difference Quotient", "Limits Visualized", "Accumulation of Fluxions"],
                     lectures: [
                         { name: "4.1: The Secret of the Secant", url: "lesson:proof_logic:proof_logic-u4-1" },
@@ -2296,7 +2296,7 @@ window.MATH_DATA = {
             units: [
                 {
                     title: "Unit 1: Hypothesis Testing Protocol",
-                    intuition: "Hypothesis testing is the judicial system of science. We assume the 'Null' (innocent) until evidence (p-value) proves 'Alternative' (guilty).",
+                    intuition: "Hypothesis testing is the judicial system of science. We hold the 'Null' innocent until the evidence (a small p-value) proves the 'Alternative' guilty. This framing matters for your IBET research: a guilty verdict against the null is exactly what turns an anecdote into a discovery. But courts make mistakes, and so do tests — convicting the innocent is a Type I error (controlled by your $\alpha$), letting the guilty walk is a Type II error (controlled by sample size and power). Keep the metaphor running through this unit: the t-test, z-test, and confidence interval are just different courtrooms running the same trial, and the p-value is always the jury's verdict on how surprising your data would be if the null were telling the truth.",
                     topics: ["Type I & II Errors", "P-Value Logic", "Z-Tests vs T-Tests", "Confidence Intervals"],
                     lectures: [
                         { name: "1.1: The Null Hypothesis", url: "lesson:stats_res:stats_res-u1-1" },
@@ -2323,14 +2323,14 @@ window.MATH_DATA = {
                                 question: "What does the 'Null Hypothesis' ($H_0$) typically represent?",
                                 options: ["The result we want to prove", "Statement of no effect or difference", "Potential error in sampling", "The probability of success"],
                                 answer: "Statement of no effect or difference",
-                                explanation: "The null hypothesis is the baseline assumption that any observed effect is due to chance alone."
+                                explanation: "The trap here is picking 'the result we want to prove' — that is the alternative hypothesis ($H_a$), the exciting claim. The null ($H_0$) plays devil's advocate: it states there is no effect, no difference, nothing going on — and we try our hardest to prove it wrong. Proof strategy: contradiction — assume the null is true, compute how weird our data would be under that assumption (that weirdness score is the p-value), and if it is too weird to believe, reject the null. Wrong-answer watch: 'potential error in sampling' describes Type I and Type II errors, not the hypothesis itself — those errors are about the verdict, not the charge. Quick self-check: the null is always the boring claim — 'the drug does nothing,' 'the means are equal.' If your claim sounds exciting, it is the alternative."
                             }
                         ]
                     }
                 },
                 {
                     title: "Unit 2: Categorical Analysis (Chi-Square)",
-                    intuition: "Chi-Square is the 'Equality Inspector'. It checks if the counts you SAVED (observed) match the counts you EXPECTED.",
+                    intuition: "Chi-Square is the 'Equality Inspector'. It audits whether the counts you actually observed match the counts your model expected. The statistic $\chi^2 = \sum \frac{(O-E)^2}{E}$ is a penalty score: big mismatches inflate it fast, especially in categories you expected to be rare — dividing by a small $E$ makes discrepancies hurt more. Picture a quality-control inspector on a conveyor belt: Mendel's 9:3:3:1 ratio is the factory blueprint, and your seed counts are the actual products rolling off. This connects chi-square straight back to Unit 1's hypothesis testing — the null hypothesis here is simply 'the blueprint is right,' and the p-value of your $\chi^2$ decides whether to keep or reject it. Degrees of freedom (this unit's quiz) then tell the $\chi^2$ distribution exactly which shape to use for the verdict.",
                     topics: ["Goodness-of-Fit", "Test of Independence", "Degrees of Freedom", "Observed vs Expected"],
                     lectures: [
                         { name: "2.1: Chi-Square Intuition", url: "lesson:stats_res:stats_res-u2-1" },
@@ -2356,14 +2356,14 @@ window.MATH_DATA = {
                                 question: "When calculating Chi-Square for Genetic Linkage ($9:3:3:1$), how many Degrees of Freedom are used?",
                                 options: ["1", "2", "3", "4"],
                                 answer: "3",
-                                explanation: "Degrees of Freedom = (Categories - 1). Here, $4 - 1 = 3$."
+                                explanation: "The trap here is answering 4 — the number of categories themselves. Degrees of freedom count how many categories are free to vary: once the total is fixed and you know three of the four counts, the fourth is forced ($total - c_1 - c_2 - c_3$), so $df = 4 - 1 = 3$. Think of it as 'room to move' — three categories can roam freely, but the last one is locked in place by the total. Wrong-answer watch: 4 ignores the constraint that observed counts must sum to the sample size; that total always consumes exactly one degree of freedom. Quick self-check: if the total is 1600 peas and the first three counts are 900, 300, 300, the fourth must be 100 — only three numbers were truly free."
                             }
                         ]
                     }
                 },
                 {
                     title: "Unit 3: Regression & Correlation",
-                    intuition: "Correlation measures the strength of a handshake between two variables. Regression tells you what happens next.",
+                    intuition: "Correlation measures the strength of the handshake between two variables; regression goes further and tells you what happens next. The correlation coefficient $r$ is the handshake's firmness (from $-1$ to $+1$); squaring it gives $R^2$, the fraction of $y$'s wobble your line explains; and the residuals — what is left over — reveal whether your straight-line model was even telling the truth. Think of $r$ as a weather vane and regression as a forecast: one describes, the other predicts. But remember the classic caution — a firm handshake is not causation, and a curved relationship can hide behind a weak $r$. These tools extend Unit 1's courtroom logic into prediction: once you can reject 'no relationship,' regression lets you measure the relationship and use it.",
                     topics: ["Pearson Correlation (r)", "Coefficient of Determination (R²)", "Residual Analysis", "Influence points"],
                     lectures: [
                         { name: "3.1: The Correlation Scale", url: "lesson:stats_res:stats_res-u3-1" },
@@ -2389,7 +2389,7 @@ window.MATH_DATA = {
                                 question: "Which R-value indicates a perfect negative linear correlation?",
                                 options: ["0", "1", "-1", "-0.5"],
                                 answer: "-1",
-                                explanation: "An R-value of -1 means as one variable increases, the other decreases in a perfect straight line."
+                                explanation: "The trap here is grabbing 1 (perfect positive) or 0 (no correlation) without reading the sign. An R-value of $-1$ is perfect negative correlation: as $x$ climbs, $y$ falls in an exact straight line — every point lands on the line with zero scatter. Picture a see-saw: one side up means the other side down, locked in perfect opposition. Wrong-answer watch: $-0.5$ is only a moderate negative relationship — 'perfect' demands the extreme, $|r| = 1$, in either direction. Quick self-check: square it — $R^2 = 1$ means the line explains 100% of the variation, the hallmark of perfection."
                             }
                         ]
                     }
@@ -2418,14 +2418,14 @@ window.MATH_DATA = {
                                 question: "What is $3^{2024} \\pmod{10}$?",
                                 answer: "1",
                                 options: ["1", "3", "7", "9"],
-                                explanation: "The powers of 3 mod 10 follow the cycle (3, 9, 7, 1) with length 4. 2024 is a multiple of 4."
+                                explanation: "The trap here is trying to compute $3^{2024}$ directly — it has 968 digits, and even a calculator chokes on the modulus. Proof strategy (cycle detection): compute the first few powers mod 10 — $3^1 \equiv 3$, $3^2 \equiv 9$, $3^3 \equiv 7$, $3^4 \equiv 1$ — and the moment you hit 1, the cycle restarts with length 4. Since $2024 \div 4$ has remainder 0, $3^{2024} \equiv (3^4)^{506} \equiv 1^{506} = 1 \pmod{10}$. Wrong-answer watch: 3 is just $3^1$ — it ignores the cycle and answers as if the exponent were 1. Quick self-check: $3^{2024} = (3^4)^{506}$, and anything built from 1 stays at 1 mod 10. Speed tip: on AMC, reduce the exponent modulo the cycle length first ($2024 \bmod 4 = 0$) — never multiply out the full power."
                             },
                             {
                                 title: "L3: Competition Challenge",
                                 question: "What is the primary condition for applying the Chinese Remainder Theorem?",
                                 answer: "Moduli must be coprime",
                                 options: ["Moduli must be prime", "Moduli must be coprime", "Moduli must be even", "Always applicable"],
-                                explanation: "A unique solution mod $mn$ is guaranteed only when $\\gcd(m, n)=1$."
+                                explanation: "The trap here is 'moduli must be prime' — prime moduli work, but the real condition is weaker and more useful. The Chinese Remainder Theorem guarantees a unique solution mod $mn$ exactly when $\gcd(m,n) = 1$ (coprime). Proof strategy (counterexample): try $x \equiv 1 \pmod{6}$ with $x \equiv 2 \pmod{4}$ — since 6 and 4 share a factor of 2, no integer can satisfy both at once, and the system collapses. But $x \equiv 1 \pmod{5}$ with $x \equiv 2 \pmod{7}$ ($\gcd = 1$) stitches into one unique solution mod 35. Wrong-answer watch: 'always applicable' skips the coprime requirement entirely, and 'moduli must be even' is pure noise. Speed tip: check $\gcd$ with Euclid's algorithm — it takes seconds and decides the whole problem before you write a single congruence."
                             }
                         ]
                     }
@@ -2444,14 +2444,14 @@ window.MATH_DATA = {
                                 question: "How many ways can 5 people take home a hat such that nobody gets their own (Derangements)?",
                                 answer: "44",
                                 options: ["44", "120", "24", "9"],
-                                explanation: "$D_5 = 44$. Calculated via PIE as $120 - 60 + 20 - 5 + 1 = 44$."
+                                explanation: "The trap here is 120 ($5!$) — that counts every permutation, including the ones where someone goes home with their own hat. A derangement bans every fixed point. Proof strategy (inclusion–exclusion): start with everything, then alternately subtract and add back the arrangements that fix at least one, two, three… people: $D_5 = \binom{5}{0}5! - \binom{5}{1}4! + \binom{5}{2}3! - \binom{5}{3}2! + \binom{5}{4}1! - \binom{5}{5}0! = 120 - 120 + 60 - 20 + 5 - 1 = 44$. Wrong-answer watch: 24 is $4!$, the count for four people — a 'shift-down' mistake; 9 is $D_4$, one hat too few. Quick self-check: $44/120 \approx 0.367 \approx 1/e$ — derangements always converge to about $1/e$ of all permutations, a beautiful sanity check. Speed tip: memorize the sequence 1, 0, 1, 2, 9, 44, 265 — derangements show up constantly."
                             }
                         ]
                     }
                 },
                 {
                     title: "Unit 3: Advanced Heuristics (AMC/AIME)",
-                    intuition: "When the clock is ticking, elegance is faster than brute force. We master the 'AIME-style' 3-digit logic.",
+                    intuition: "When the clock is ticking, elegance beats brute force. Here we master 'AIME-style' 3-digit logic. Competition problems are engineered so the clever path takes a minute and the grind takes twenty — this unit trains your eye for the clever path. Stars & bars collapses distribution puzzles into a single combination; complementary counting solves 'at least one' by subtracting the one case it isn't; modular invariants prove the impossible without trying every case. Since AIME answers are always clean 0–999 integers, a messy expression is a signal to switch strategies, not to push harder. These heuristics are proof logic wearing a stopwatch — an invariant, after all, is just an axiom's cousin: a truth that survives every move of the game.",
                     topics: ["Stars & Bars", "Complementary Counting", "Modular Invariants", "Symmetry in Probability"],
                     lectures: [
                         { name: "3.1: The Partition Method", url: "lesson:competition:ch_comp-5" },
@@ -2464,14 +2464,14 @@ window.MATH_DATA = {
                                 question: "How many ways can 7 identical candies be given to 3 children such that each child gets at least one?",
                                 options: ["15", "21", "10", "35"],
                                 answer: "15",
-                                explanation: "Using Stars & Bars: $(n-1)C(k-1) = (7-1)C(3-1) = 6C2 = 15$."
+                                explanation: "The trap here is using $\binom{7+3-1}{3-1} = \binom{9}{2} = 35$ straight away — that counts distributions where a child might get zero candies, but the problem demands at least one each. The fix: hand one candy to each child first (3 gone), then distribute the remaining 4 freely among 3 children with stars & bars: $\binom{4+3-1}{3-1} = \binom{6}{2} = 15$. Equivalently, $(7-1)\text{C}(3-1) = 6\text{C}2 = 15$ — the 'give-one-first' trick bakes the constraint into the formula. Wrong-answer watch: 35 is the at-least-zero count — it answers the wrong problem; 21 ($= \binom{7}{2}$) decrements the wrong number. Quick self-check: adding a constraint must shrink the count — if your 'constrained' answer is bigger than the unconstrained one (35), back up. Speed tip: 'at least one each' → subtract first, then stars & bars on the remainder."
                             },
                             {
                                 title: "L3: AIME Challenge",
                                 question: "Calculate the last three digits of $7^{100}$. (Format: 001, 123, etc.)",
                                 answer: "001",
                                 options: ["001", "007", "049", "343"],
-                                explanation: "$7^4 = 2401 \\equiv 1 \\pmod{1000}$. Thus $7^{100} = (7^4)^{25} \\equiv 1^{25} = 1$. The 3-digit format is 001."
+                                explanation: "The trap here is computing $7^{100}$ — an 85-digit monster — or stopping at the last digit and guessing 007. Proof strategy (cycle reduction): find a power that collapses to 1 mod 1000. Since $7^4 = 2401 \equiv 1 \pmod{1000}$, the exponent factors neatly: $7^{100} = (7^4)^{25} \equiv 1^{25} = 1 \pmod{1000}$. But AIME demands three digits, so the answer is written 001 — leading zeros count! Wrong-answer watch: 343 is $7^3$, one power short of closing the cycle — the classic 'stopped too early' mistake; 007 is only the last digit. Quick self-check: $7^5 \equiv 7 \pmod{1000}$, so the cycle visibly restarts — the pattern holds together. Speed tip: for 'last three digits,' hunt for a small collapsing power like $7^4 \equiv 1$ before reaching for Euler's totient — cycles are faster under time pressure."
                             }
                         ]
                     }
