@@ -2486,13 +2486,13 @@ window.MATH_DATA = {
             "description": "Digital SAT Math prep: Algebra, Advanced Math, Problem Solving & Data Analysis, Geometry & Trigonometry.",
             "color": "#f59e0b",
             "icon": "fas fa-calculator",
-            "intuition": "SAT Math는 어려운 계산을 요구하지 않는다. 대신 '말로 된 조건을 식으로 옮기는 속도'와 '함정에 걸리지 않는 정확도'를 잰다. TJHSST 학생에게는 계산 자체보다 시간 압박 속의 실수 관리가 관건이다. 이 40문제는 College Board 실제 출제 경향을 따라, 함수 표기·지수 모델·통계 해석처럼 Digital SAT가 사랑하는 유형으로 구성했다.",
+            "intuition": "SAT Math doesn't demand heavy calculation. Instead, it measures two things: how fast you can turn worded conditions into equations, and how accurately you dodge the traps. For a TJHSST student, managing mistakes under time pressure matters more than the computation itself. These 40 questions follow real College Board trends, built around the types Digital SAT loves — function notation, exponential models, and statistical interpretation.",
             "local_resources": [],
             "difficulty": "advanced",
             "units": [
                 {
                     "title": "Unit 1: Algebra (35%)",
-                    "insight": "대수는 SAT Math의 35%로 가장 큰 영역이다. 핵심은 세 가지다. 첫째, 역연산은 순서대로 — 상수항 정리 후 계수 정리. 둘째, 연립방정식은 '무엇을 묻는가'를 먼저 읽기. 셋째, 부등식에서 음수를 곱하거나 나누면 부호를 뒤집기. 이 유닛의 함정 선택지는 전부 실제 학생 오답 패턴에서 가져왔으니, 틀린 문제는 설명의 Wrong-answer watch를 꼭 읽어라.",
+                    "insight": "Algebra is the largest SAT Math area at 35%. Three essentials. First, undo operations in order — clear the constant term, then the coefficient. Second, for systems of equations, read 'what is being asked' before you calculate. Third, flip the inequality sign when you multiply or divide by a negative. Every trap choice in this unit comes from real student wrong-answer patterns, so for any question you miss, be sure to read the Wrong-answer watch in the explanation.",
                     "topics": [
                         "Linear equations",
                         "Linear inequalities",
@@ -2515,7 +2515,7 @@ window.MATH_DATA = {
                                     "12"
                                 ],
                                 "answer": "24",
-                                "explanation": "**함정 먼저**: 계수가 분수일 때 많은 학생이 '양변에 분수를 곱한다'는 말만 기억하고 $\\frac{2}{3}$을 그대로 곱해 버린다. 곱하기 $\\frac{2}{3}$의 역연산은 나누기 $\\frac{2}{3}$, 즉 곱하기 $\\frac{3}{2}$이다. 역수의 방향을 헷갈리면 답이 16이나 8처럼 어긋난다. **풀이**: (1) 상수항부터 정리한다. 양변에 5를 더하면 $\\frac{2}{3}x = 16$. (2) 계수 $\\frac{2}{3}$의 역수 $\\frac{3}{2}$를 양변에 곱한다. $x = 16 \\times \\frac{3}{2} = 24$. (3) 검산으로 마무리한다. $\\frac{2}{3} \\times 24 - 5 = 16 - 5 = 11$로 좌변과 우변이 일치한다. **Wrong-answer watch**: 16은 역수를 곱하는 단계를 빼먹고 이항에서 멈춘 답, 8은 $\\frac{2}{3}$을 그대로 곱한 답이다. 분수 계수 문제에서 가장 흔한 두 실수다. **Quick self-check**: 답을 구했으면 원래 식에 대입해 보라. 5초면 충분하고, SAT 대수 문제에서 이 습관 하나로 부호·역수 실수를 거의 다 잡을 수 있다."
+                                "explanation": "**Trap alert**: When the coefficient is a fraction, many students only remember 'multiply both sides by the fraction' and multiply by $\\frac{2}{3}$ as is. But the inverse of multiplying by $\\frac{2}{3}$ is dividing by $\\frac{2}{3}$ — that is, multiplying by $\\frac{3}{2}$. Mix up the reciprocal's direction and your answer drifts off to 16 or 8. **Solution**: (1) Clear the constant first. Adding 5 to both sides gives $\\frac{2}{3}x = 16$. (2) Multiply both sides by the reciprocal of the coefficient $\\frac{2}{3}$, which is $\\frac{3}{2}$. $x = 16 \\times \\frac{3}{2} = 24$. (3) Finish by checking. $\\frac{2}{3} \\times 24 - 5 = 16 - 5 = 11$, so both sides match. **Wrong-answer watch**: 16 is the answer you get if you skip the multiply-by-the-reciprocal step and stop after transposing; 8 is what you get if you multiply by $\\frac{2}{3}$ as is. These are the two most common mistakes on fractional-coefficient problems. **Quick self-check**: Once you have an answer, plug it back into the original equation. It takes 5 seconds, and on SAT algebra problems this one habit catches nearly every sign and reciprocal mistake.",
                             },
                             {
                                 "title": "Level 2: Function Notation Basics",
@@ -2528,7 +2528,7 @@ window.MATH_DATA = {
                                     "21"
                                 ],
                                 "answer": "17",
-                                "explanation": "**함정 먼저**: $f(-2) = 3(-2)^2 - 2(-2) + 1$에서 $(-2)^2 = 4$인데, 많은 학생이 부호를 하나씩 흘린다. 특히 $-2 \\times (-2) = +4$를 $-4$로 계산하는 실수가 잦다. 괄호 안의 음수는 '괄호째로' 다룬다는 원칙을 지켜라. **풀이**: (1) $x$ 자리에 $-2$를 대입한다: $f(-2) = 3(-2)^2 - 2(-2) + 1$. (2) 거듭제곱부터 계산한다: $(-2)^2 = 4$이므로 $3 \\times 4 = 12$. (3) $-2 \\times (-2) = +4$. (4) 합산하면 $12 + 4 + 1 = 17$. **Wrong-answer watch**: 9는 중간 항의 부호를 반대로 계산한 답($12 - 4 + 1$)으로, 음수 대입 문제의 오답 1순위 패턴이다. 대입 직후 각 항의 부호를 따로 체크하는 습관을 들여라. **Quick self-check**: $x = -2$처럼 음수를 대입할 때는 모든 항을 괄호로 감싸고, 거듭제곱→곱셈→덧셈 순서로 한 줄씩 내려가라. 줄을 나누면 부호 실수가 눈에 보인다."
+                                "explanation": "**Trap alert**: In $f(-2) = 3(-2)^2 - 2(-2) + 1$, $(-2)^2 = 4$, but many students drop one sign along the way — especially computing $-2 \\times (-2) = +4$ as $-4$. Treat a negative inside parentheses 'as a whole parenthesis.' **Solution**: (1) Substitute $-2$ for $x$: $f(-2) = 3(-2)^2 - 2(-2) + 1$. (2) Powers first: $(-2)^2 = 4$, so $3 \\times 4 = 12$. (3) $-2 \\times (-2) = +4$. (4) Adding up: $12 + 4 + 1 = 17$. **Wrong-answer watch**: 9 comes from flipping the middle term's sign ($12 - 4 + 1$) — the #1 wrong-answer pattern for negative substitution. Get in the habit of checking each term's sign right after substituting. **Quick self-check**: When substituting a negative like $x = -2$, wrap every term in parentheses and work line by line in power → multiplication → addition order. Splitting lines makes sign mistakes visible.",
                             },
                             {
                                 "title": "Level 3: Systems of Linear Equations",
@@ -2541,7 +2541,7 @@ window.MATH_DATA = {
                                     "2"
                                 ],
                                 "answer": "3",
-                                "explanation": "**함정 먼저**: 연립방정식 문제의 절반은 계산이 아니라 '묻는 값'을 잘못 읽는 데서 틀린다. $x = 4$를 구해놓고 답지에 4를 찍는 실수가 대표적이다. 계산 전에 문제 마지막 줄을 먼저 읽어라. **풀이**: (1) 두 식을 더한다. $(2x + y) + (x - y) = 11 + 1$에서 $y$가 소거되고 $3x = 12$, 즉 $x = 4$. (2) $x = 4$를 두 번째 식에 대입하면 $4 - y = 1$이므로 $y = 3$. (3) 검산: $2(4) + 3 = 11$로 첫 번째 식도 만족한다. **Wrong-answer watch**: 4는 $x$의 값이다. '무엇을 구하라는 문제인가'를 계산 전에 밑줄 치는 것만으로 이 함정을 피할 수 있다. **Quick self-check**: 구한 순서쌍 $(4, 3)$을 두 식 모두에 대입해 확인하라. 한 식에만 대입하면 대입 과정의 실수를 잡지 못한다. Digital SAT의 연립방정식은 대입법보다 가감법이 빠른 경우가 많다. 계수를 보고 '$y$의 계수가 서로 반대 부호인가'처럼 소거 가능한 쌍을 먼저 찾으면, 30초 안에 풀리는 문제가 대부분이다."
+                                "explanation": "**Trap alert**: Half of all systems-of-equations misses come not from computation but from misreading 'what is being asked.' The classic blunder: solving $x = 4$ and then bubbling in 4. Read the last line of the question before you compute. **Solution**: (1) Add the two equations. $(2x + y) + (x - y) = 11 + 1$ eliminates $y$, giving $3x = 12$, so $x = 4$. (2) Substitute $x = 4$ into the second equation: $4 - y = 1$, so $y = 3$. (3) Check: $2(4) + 3 = 11$ satisfies the first equation too. **Wrong-answer watch**: 4 is the value of $x$. Underlining 'what the question asks for' before computing is enough to dodge this trap. **Quick self-check**: Plug the ordered pair $(4, 3)$ into both equations. Checking only one equation won't catch a substitution slip. On Digital SAT systems, elimination is often faster than substitution. Look at the coefficients first for an eliminable pair — like '$y$ coefficients with opposite signs' — and most of these problems fall in under 30 seconds.",
                             },
                             {
                                 "title": "Level 4: Solving for a Variable in Functions",
@@ -2554,7 +2554,7 @@ window.MATH_DATA = {
                                     "-4"
                                 ],
                                 "answer": "9",
-                                "explanation": "**함정 먼저**: $5 - 2t = -13$에서 $-2t = -18$까지는 잘 가다가, 마지막에 $t = -9$라고 쓰는 학생이 많다. 음수 나누기 음수는 양수다. 부호는 마지막 한 줄까지 긴장을 놓지 말아야 한다. **풀이**: (1) 함수식을 방정식으로 쓴다: $5 - 2t = -13$. (2) 양변에서 5를 빼면 $-2t = -18$. (3) 양변을 $-2$로 나누면 $t = 9$. (4) 검산: $g(9) = 5 - 18 = -13$으로 문제의 조건과 일치한다. **Wrong-answer watch**: -9는 마지막 나눗셈의 부호 실수, 4는 $-2t = -8$처럼 이항을 잘못한 경우다. 이항할 때는 '반대편으로 넘기면 부호가 바뀐다'를 소리 내어 확인하라. **Quick self-check**: 답을 함수에 다시 넣어 함수값이 문제의 값과 같은지 확인하라. 함수 표기 문제는 대입 검산이 가장 빠르다. 함수 표기 $g(t) = -13$은 '함수값이 $-13$이 되는 입력 $t$를 찾아라'는 뜻이다. 그래프로 보면 $y = 5 - 2t$ 직선과 수평선 $y = -13$의 교점의 $t$좌표를 구하는 것과 같다."
+                                "explanation": "**Trap alert**: In $5 - 2t = -13$, students cruise to $-2t = -18$ and then write $t = -9$ at the last step. Negative divided by negative is positive. Don't relax on the sign until the final line. **Solution**: (1) Write the function as an equation: $5 - 2t = -13$. (2) Subtract 5 from both sides: $-2t = -18$. (3) Divide both sides by $-2$: $t = 9$. (4) Check: $g(9) = 5 - 18 = -13$, matching the given condition. **Wrong-answer watch**: -9 is a sign slip in the final division; 4 comes from botching the transposition, as in $-2t = -8$. When transposing, say out loud, 'moving to the other side flips the sign.' **Quick self-check**: Plug your answer back into the function and confirm the output matches the given value. Back-substitution is the fastest check for function-notation problems. The notation $g(t) = -13$ means 'find the input $t$ that makes the function value $-13$.' Graphically, that's the $t$-coordinate of the intersection of the line $y = 5 - 2t$ with the horizontal line $y = -13$.",
                             },
                             {
                                 "title": "Level 5: Linear Inequalities",
@@ -2567,7 +2567,7 @@ window.MATH_DATA = {
                                     "$x > -\\frac{8}{11}$"
                                 ],
                                 "answer": "$x > 0$",
-                                "explanation": "**함정 먼저**: 부등식의 최대 함정은 '음수로 나누면 부호가 뒤집힌다'는 규칙을 아는데도 막판에 적용을 빼먹는 것이다. 이 문제는 $-11x < 0$에서 $-11$로 나누는 순간이 바로 그 지점이다. **풀이**: (1) 좌변을 전개한다: $-6x + 8 < 5x + 8$. (2) 양변에서 8을 빼면 $-6x < 5x$. (3) $x$항을 한쪽으로 모은다: $-6x - 5x < 0$, 즉 $-11x < 0$. (4) 양변을 $-11$로 나누고 부호를 뒤집는다: $x > 0$. **Wrong-answer watch**: $x < 0$은 부호 뒤집기를 빼먹은 답으로, 이 유형 오답의 1순위다. 음수로 나누는 줄에서는 펜을 멈추고 '뒤집기'를 말로 확인하라. **Quick self-check**: 답 영역의 수(예: $x = 1$)를 골라 원래 부등식에 대입해 보라. $-2(3 - 4) = 2 < 13 = 5 + 8$로 성립하면 부호 방향이 맞은 것이다. 부등식 문제는 답의 범위를 수직선에 그려보는 습관이 도움이 된다. $x > 0$을 수직선에 표시하고 1을 찍어 대입하면, 부호 방향 실수를 시각적으로 잡을 수 있다."
+                                "explanation": "**Trap alert**: The biggest inequality trap is knowing the 'flip the sign when dividing by a negative' rule and still skipping it at the last moment. This problem's danger point is exactly the step where you divide $-11x < 0$ by $-11$. **Solution**: (1) Expand the left side: $-6x + 8 < 5x + 8$. (2) Subtract 8 from both sides: $-6x < 5x$. (3) Gather the $x$ terms on one side: $-6x - 5x < 0$, i.e., $-11x < 0$. (4) Divide both sides by $-11$ and flip the sign: $x > 0$. **Wrong-answer watch**: $x < 0$ skips the flip — the #1 wrong answer for this type. At the divide-by-a-negative line, stop your pen and confirm the flip out loud. **Quick self-check**: Pick a number in your answer region (say $x = 1$) and plug it into the original inequality. $-2(3 - 4) = 2 < 13 = 5 + 8$ holds, so the sign direction is right. Sketching the answer range on a number line helps with inequalities. Mark $x > 0$, plot 1, and test it — the sign error becomes visible.",
                             },
                             {
                                 "title": "Level 6: Equations with No Solution",
@@ -2580,7 +2580,7 @@ window.MATH_DATA = {
                                     "-2"
                                 ],
                                 "answer": "3",
-                                "explanation": "**함정 먼저**: '해가 없다'는 말의 대수적 의미는 '$x$항이 소거되고 남은 등식이 거짓'이 되는 것이다. $k$를 구하라는 말에 당황하지 말고, 양변의 $x$ 계수를 같게 만들면 된다고 생각하라. **풀이**: (1) $kx + 5 = 3x - 2$에서 $x$항을 한쪽으로 모으면 $(k - 3)x = -7$. (2) 해가 없으려면 $x$의 계수가 0이어야 한다. $k - 3 = 0$이므로 $k = 3$. (3) 확인: $k = 3$이면 식은 $3x + 5 = 3x - 2$, 즉 $5 = -2$가 되어 어떤 $x$도 만족하지 않는다. **Wrong-answer watch**: -3은 계수를 비교할 때 부호를 반대로 옮긴 답이다. '$x$ 앞에 붙은 수'를 통째로 비교하라. **Quick self-check**: 구한 $k$를 대입해 실제로 모순($5 = -2$)이 나오는지 확인하라. 해가 없다는 것은 모순인 등식이 남는 것과 같다. 반대로 '해가 무수히 많다'는 것은 $0 = 0$ 같은 항등식이 남는 경우다. Digital SAT는 해의 개수(0개·1개·무수히 많음)를 조건으로 $k$를 묻는 유형을 자주 내니, 세 경우를 구분하는 연습을 해두자."
+                                "explanation": "**Trap alert**: 'No solution' means algebraically that 'the $x$ terms cancel and the leftover equation is false.' Don't freeze at 'find $k$' — just think: make the $x$ coefficients equal on both sides. **Solution**: (1) From $kx + 5 = 3x - 2$, gather the $x$ terms on one side: $(k - 3)x = -7$. (2) For no solution, the $x$ coefficient must be 0. $k - 3 = 0$, so $k = 3$. (3) Verify: with $k = 3$ the equation becomes $3x + 5 = 3x - 2$, i.e., $5 = -2$, which no $x$ satisfies. **Wrong-answer watch**: -3 comes from moving the sign the wrong way when comparing coefficients. Compare 'the whole number in front of $x$' as a unit. **Quick self-check**: Plug your $k$ back in and confirm you really get a contradiction ($5 = -2$). 'No solution' is exactly a leftover contradiction. Conversely, 'infinitely many solutions' leaves an identity like $0 = 0$. Digital SAT loves asking for $k$ given the number of solutions (none, one, infinitely many), so practice telling the three cases apart.",
                             },
                             {
                                 "title": "Level 7: Factoring Quadratics",
@@ -2593,7 +2593,7 @@ window.MATH_DATA = {
                                     "$(x+1)(x+12)$"
                                 ],
                                 "answer": "$(x+3)(x+4)$",
-                                "explanation": "**함정 먼저**: $x^2 + 7x + 12$를 인수분해할 때 '곱해서 12, 더해서 7'인 두 수를 찾는다. $(x+2)(x+6)$도 곱하면 12가 되지만 더하면 8이다. 두 조건을 동시에 만족해야 한다. **풀이**: (1) 상수항 12의 인수쌍을 나열한다: $(1, 12)$, $(2, 6)$, $(3, 4)$. (2) 합이 7인 쌍을 찾는다: $3 + 4 = 7$. (3) 따라서 $(x+3)(x+4)$. 전개 검산: $x^2 + 4x + 3x + 12 = x^2 + 7x + 12$로 원래 식과 일치한다. **Wrong-answer watch**: $(x+2)(x+6)$은 '곱해서 12'만 확인한 답, $(x-3)(x-4)$는 $x$ 계수의 부호를 반대로 본 답이다. **Quick self-check**: 인수분해가 끝나면 항상 전개해서 원래 식으로 돌아오는지 확인하라. 10초면 충분하다. 인수분해는 이차방정식 풀이의 출발점이다. $x^2 + 7x + 12 = 0$이라면 $(x+3)(x+4) = 0$에서 $x = -3$ 또는 $x = -4$가 바로 나온다. 인수분해가 빠르면 Advanced Math 전체가 빨라진다."
+                                "explanation": "**Trap alert**: Factoring $x^2 + 7x + 12$ means finding two numbers that multiply to 12 AND add to 7. $(x+2)(x+6)$ also multiplies to 12, but adds to 8. Both conditions must hold at once. **Solution**: (1) List factor pairs of the constant 12: $(1, 12)$, $(2, 6)$, $(3, 4)$. (2) Find the pair summing to 7: $3 + 4 = 7$. (3) So $(x+3)(x+4)$. Expansion check: $x^2 + 4x + 3x + 12 = x^2 + 7x + 12$ matches the original. **Wrong-answer watch**: $(x+2)(x+6)$ only checks 'multiply to 12'; $(x-3)(x-4)$ reads the $x$ coefficient's sign backwards. **Quick self-check**: After factoring, always expand back to confirm you return to the original — 10 seconds is enough. Factoring is the starting point for solving quadratics. If $x^2 + 7x + 12 = 0$, then $(x+3)(x+4) = 0$ gives $x = -3$ or $x = -4$ immediately. The faster your factoring, the faster all of Advanced Math goes.",
                             },
                             {
                                 "title": "Level 8: Difference of Squares",
@@ -2606,7 +2606,7 @@ window.MATH_DATA = {
                                     "$(9x-5)(x+5)$"
                                 ],
                                 "answer": "$(3x-5)(3x+5)$",
-                                "explanation": "**함정 먼저**: $9x^2 - 25$는 완전제곱식의 차다. $(3x-5)^2$으로 쓰면 $9x^2 - 30x + 25$가 되어 중간항이 생긴다. '차'는 합의 제곱이 아니라 합과 차의 곱이다. **풀이**: (1) $9x^2 = (3x)^2$, $25 = 5^2$임을 확인한다. (2) 공식 $a^2 - b^2 = (a-b)(a+b)$에 $a = 3x$, $b = 5$를 대입한다: $(3x-5)(3x+5)$. (3) 검산: $9x^2 + 15x - 15x - 25 = 9x^2 - 25$. **Wrong-answer watch**: $(3x-5)^2$은 공식을 헷갈린 답, $(3x+5)(3x+5)$는 부호를 통일해 버린 답이다. **Quick self-check**: 인수분해 결과가 '빼기' 형태를 포함하는지 확인하라. $a^2 - b^2$형은 반드시 $(a-b)(a+b)$다. 완전제곱식의 차는 이후 유리식 약분이나 극한 문제에서도 계속 등장한다. $9x^2 - 25 = (3x-5)(3x+5)$처럼 '제곱수 판별 → 공식 대입 → 전개 검산'의 3단계를 몸에 익혀두자."
+                                "explanation": "**Trap alert**: $9x^2 - 25$ is a difference of perfect squares. Writing it as $(3x-5)^2$ expands to $9x^2 - 30x + 25$ — a middle term appears. A 'difference' is not a squared sum; it's a product of a sum and a difference. **Solution**: (1) Confirm $9x^2 = (3x)^2$ and $25 = 5^2$. (2) Apply $a^2 - b^2 = (a-b)(a+b)$ with $a = 3x$, $b = 5$: $(3x-5)(3x+5)$. (3) Check: $9x^2 + 15x - 15x - 25 = 9x^2 - 25$. **Wrong-answer watch**: $(3x-5)^2$ mixes up the formulas; $(3x+5)(3x+5)$ unifies the signs. **Quick self-check**: Confirm your factored form contains a 'minus' shape. The $a^2 - b^2$ form is always $(a-b)(a+b)$. Differences of perfect squares keep showing up later in rational-expression simplification and limit problems. Drill the 3-step routine: 'spot the squares → plug into the formula → expand to check.'",
                             },
                             {
                                 "title": "Level 9: Linear Models in Context",
@@ -2619,7 +2619,7 @@ window.MATH_DATA = {
                                     "660"
                                 ],
                                 "answer": "300",
-                                "explanation": "**함정 먼저**: 말로 된 문제는 식을 세우기 전에 '고정비와 변동비'를 구분해야 한다. 45달러는 한 번만 내고, 0.25달러는 마일마다 붙는다. 120달러 예산에서 고정비를 먼저 빼는 것이 핵심이다. **풀이**: (1) 식을 세운다: $45 + 0.25m = 120$ (최대 마일이므로 등호로 둔다). (2) $0.25m = 120 - 45 = 75$. (3) $m = 75 \\div 0.25 = 300$. (4) 검산: $45 + 0.25 \\times 300 = 45 + 75 = 120$으로 예산과 정확히 일치한다. **Wrong-answer watch**: 480은 $120 \\div 0.25$로 고정비를 빼지 않은 답이다. '기본 요금'을 빼먹는 것이 이 유형의 대표 실수다. **Quick self-check**: 답을 식에 넣어 예산과 정확히 일치하는지 확인하라. 문장제에서는 검산이 곧 정답 확인이다. 문장제는 '무엇이 고정이고 무엇이 변하는가'를 먼저 적는 것이 반이다. 고정비 45달러, 변동비 마일당 0.25달러를 식으로 옮기는 순간, 나머지는 일차방정식 풀이와 같다."
+                                "explanation": "**Trap alert**: For word problems, separate 'fixed cost' from 'variable cost' before writing the equation. The $45 is paid once; the $0.25 attaches per mile. Subtracting the fixed cost from the $120 budget first is the key. **Solution**: (1) Set up the equation: $45 + 0.25m = 120$ (equals sign, since we want the maximum miles). (2) $0.25m = 120 - 45 = 75$. (3) $m = 75 \\div 0.25 = 300$. (4) Check: $45 + 0.25 \\times 300 = 45 + 75 = 120$, matching the budget exactly. **Wrong-answer watch**: 480 computes $120 \\div 0.25$ without subtracting the fixed cost. Forgetting the 'base fee' is this type's signature mistake. **Quick self-check**: Plug your answer back into the equation and confirm it matches the budget exactly. In word problems, the check IS the answer verification. Half of a word problem is writing down 'what is fixed and what varies' first. Once the $45 fixed cost and $0.25-per-mile variable cost are in equation form, the rest is plain linear-equation solving.",
                             },
                             {
                                 "title": "Level 10: Systems in Context",
@@ -2632,14 +2632,14 @@ window.MATH_DATA = {
                                     "75"
                                 ],
                                 "answer": "50",
-                                "explanation": "**함정 먼저**: 미지수가 두 개(성인표 $a$, 학생표 $s$)지만 식도 두 개다. '합계 100장'이라는 조건을 $s = 100 - a$로 바꿔 미지수를 하나로 줄이는 것이 정석이다. **풀이**: (1) $a + s = 100$이므로 $s = 100 - a$. (2) 수입 식에 대입: $12a + 8(100 - a) = 1000$. (3) 전개하면 $12a + 800 - 8a = 1000$, 즉 $4a = 200$이므로 $a = 50$. (4) 검산: $50 \\times 12 + 50 \\times 8 = 600 + 400 = 1000$으로 수입 조건을 만족하고, 장수 합도 $50 + 50 = 100$이다. **Wrong-answer watch**: 75는 $12a + 8a = 1000$처럼 두 표 가격을 더해 버린 답이다. 가격이 다른 두 상품은 따로 계산해야 한다. **Quick self-check**: 구한 $a = 50$에서 $s = 50$도 구해 두 조건(장수 합 100, 수입 합 1000)을 모두 확인하라."
+                                "explanation": "**Trap alert**: Two unknowns (adult tickets $a$, student tickets $s$) but also two equations. Converting '100 tickets total' into $s = 100 - a$ to reduce to one unknown is the textbook move. **Solution**: (1) $a + s = 100$, so $s = 100 - a$. (2) Substitute into the revenue equation: $12a + 8(100 - a) = 1000$. (3) Expanding: $12a + 800 - 8a = 1000$, so $4a = 200$ and $a = 50$. (4) Check: $50 \\times 12 + 50 \\times 8 = 600 + 400 = 1000$ satisfies the revenue condition, and the ticket total is $50 + 50 = 100$. **Wrong-answer watch**: 75 adds the two ticket prices, as in $12a + 8a = 1000$. Two products with different prices must be computed separately. **Quick self-check**: From $a = 50$, get $s = 50$ too, and verify both conditions (100 total tickets, $1000 total revenue).",
                             }
                         ]
                     }
                 },
                 {
                     "title": "Unit 2: Advanced Math (35%)",
-                    "insight": "Advanced Math는 대수를 한 단계 끌어올린 영역으로 전체의 35%다. 이차식의 세 얼굴(인수분해·완전제곱·근의 공식)을 자유롭게 오가고, 지수·근호·유리식은 '기본형으로 고치는' 연습이 핵심이다. 비선형 연립과 지수 모델은 Digital SAT의 단골이니, 이 10문제로 패턴을 몸에 익혀라.",
+                    "insight": "Advanced Math takes algebra one level up and covers 35% of the test. Move freely among the three faces of quadratics (factoring, completing the square, the quadratic formula), and for exponential, radical, and rational expressions, practice 'converting to the base form.' Nonlinear systems and exponential models are Digital SAT regulars, so use these 10 questions to make the patterns muscle memory.",
                     "topics": [
                         "Quadratic equations",
                         "Polynomials",
@@ -2662,7 +2662,7 @@ window.MATH_DATA = {
                                     "1"
                                 ],
                                 "answer": "5",
-                                "explanation": "**함정 먼저**: '해의 합'을 물었는데 해를 하나하나 구하다가 $x = 2$ 하나만 답으로 쓰는 실수가 잦다. 합을 물으면 두 해를 다 구하거나 근과 계수의 관계를 써라. **풀이**: (1) 인수분해한다: $x^2 - 5x + 6 = (x-2)(x-3) = 0$. (2) 해는 $x = 2$와 $x = 3$. (3) 합은 $2 + 3 = 5$. 참고로 $ax^2 + bx + c = 0$에서 해의 합은 $-b/a$이므로 $-(-5)/1 = 5$로 바로 구할 수도 있다. **Wrong-answer watch**: 6은 상수항을 합으로 착각한 답, -5는 부호를 반대로 본 답이다. 근과 계수의 관계에서 합은 '$-b/a$'임을 기억하라. **Quick self-check**: 두 해를 원래 식에 대입해 0이 되는지 빠르게 확인하라. $(2)^2 - 5(2) + 6 = 0$, $(3)^2 - 5(3) + 6 = 0$. 인수분해가 안 되는 이차식은 근의 공식 $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$을 쓴다. 합과 곱이 바로 필요하면 근과 계수의 관계(합 $-b/a$, 곱 $c/a$)가 가장 빠르다."
+                                "explanation": "**Trap alert**: Asked for the 'sum of the solutions,' students often solve and then write down just one, like $x = 2$. When the sum is asked, find both solutions or use Vieta's formulas. **Solution**: (1) Factor: $x^2 - 5x + 6 = (x-2)(x-3) = 0$. (2) The solutions are $x = 2$ and $x = 3$. (3) Their sum is $2 + 3 = 5$. For reference, in $ax^2 + bx + c = 0$ the sum of the solutions is $-b/a$, so $-(-5)/1 = 5$ gets you there directly. **Wrong-answer watch**: 6 mistakes the constant term for the sum; -5 reads the sign backwards. Remember the sum is '$-b/a$' in Vieta's formulas. **Quick self-check**: Plug both solutions into the original equation and confirm each gives 0: $(2)^2 - 5(2) + 6 = 0$, $(3)^2 - 5(3) + 6 = 0$. For quadratics that don't factor, use the quadratic formula $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$. When you need the sum or product directly, Vieta's formulas (sum $-b/a$, product $c/a$) are the fastest route.",
                             },
                             {
                                 "title": "Level 2: Multiplying Binomials",
@@ -2675,7 +2675,7 @@ window.MATH_DATA = {
                                     "$2x^2 - 5x + 12$"
                                 ],
                                 "answer": "$2x^2 - 5x - 12$",
-                                "explanation": "**함정 먼저**: $(2x+3)(x-4)$를 전개할 때 $2x \\times (-4) = -8x$와 $3 \\times x = 3x$의 부호를 각각 챙겨야 한다. 한 항의 부호만 흘려도 중간항이 $-11x$나 $+5x$로 바뀐다. **풀이**: (1) 분배한다: $2x \\cdot x = 2x^2$, $2x \\cdot (-4) = -8x$, $3 \\cdot x = 3x$, $3 \\cdot (-4) = -12$. (2) 동류항을 합친다: $-8x + 3x = -5x$. (3) 결과: $2x^2 - 5x - 12$. **Wrong-answer watch**: $-11x$는 $3x$의 부호를 양수로 못 본 답, $+5x$는 $-8x$의 부호를 흘린 답이다. 네 개의 곱을 쓸 때는 각 항의 부호를 항 앞에 붙여 쓰라. **Quick self-check**: $x = 1$을 양쪽에 대입해 보라. 왼쪽: $(2+3)(1-4) = 5 \\times (-3) = -15$, 오른쪽: $2 - 5 - 12 = -15$로 일치한다."
+                                "explanation": "**Trap alert**: Expanding $(2x+3)(x-4)$ requires tracking each sign: $2x \\times (-4) = -8x$ and $3 \\times x = 3x$. Drop one sign and the middle term becomes $-11x$ or $+5x$. **Solution**: (1) Distribute: $2x \\cdot x = 2x^2$, $2x \\cdot (-4) = -8x$, $3 \\cdot x = 3x$, $3 \\cdot (-4) = -12$. (2) Combine like terms: $-8x + 3x = -5x$. (3) Result: $2x^2 - 5x - 12$. **Wrong-answer watch**: $-11x$ fails to see $3x$ as positive; $+5x$ drops the $-8x$ sign. When writing the four products, write each term's sign right in front of it. **Quick self-check**: Plug $x = 1$ into both sides. Left: $(2+3)(1-4) = 5 \\times (-3) = -15$; right: $2 - 5 - 12 = -15$. They match.",
                             },
                             {
                                 "title": "Level 3: Exponent Rules",
@@ -2688,7 +2688,7 @@ window.MATH_DATA = {
                                     "$x^{60}$"
                                 ],
                                 "answer": "$x^4$",
-                                "explanation": "**함정 먼저**: $\\frac{x^5 \\cdot x^3}{x^4}$에서 분자의 곱은 지수를 더하고, 분수 나눗셈은 지수를 뺀다. '$x^8$을 $x^4$로 나눈다'는 흐름을 한 번에 하려다 $5 + 3 + 4$처럼 다 더해 버리는 실수가 나온다. **풀이**: (1) 분자: $x^5 \\cdot x^3 = x^{5+3} = x^8$ (밑이 같으면 지수는 덧셈). (2) 분수: $\\frac{x^8}{x^4} = x^{8-4} = x^4$ (나눗셈이면 지수는 뺄셈). **Wrong-answer watch**: $x^{11}$은 나누기에서도 지수를 더한 답, $x^{60}$은 지수를 곱해 버린 답이다. **Quick self-check**: 곱하기→더하기, 나누기→빼기, 거듭제곱의 거듭제곱→곱하기. 세 규칙 중 어느 것을 썼는지 손가락으로 짚어가며 확인하라. 지수 법칙은 $x^a \\cdot x^b = x^{a+b}$, $\\frac{x^a}{x^b} = x^{a-b}$, $(x^a)^b = x^{ab}$ 세 가지로 끝난다. 복잡해 보이면 분자와 분모를 따로 정리한 뒤 합치는 순서를 지켜라."
+                                "explanation": "**Trap alert**: In $\\frac{x^5 \\cdot x^3}{x^4}$, products in the numerator add exponents, and division in the fraction subtracts them. Trying to do '$x^8$ divided by $x^4$' all at once produces slips like $5 + 3 + 4$ — adding everything. **Solution**: (1) Numerator: $x^5 \\cdot x^3 = x^{5+3} = x^8$ (same base → add exponents). (2) Fraction: $\\frac{x^8}{x^4} = x^{8-4} = x^4$ (division → subtract exponents). **Wrong-answer watch**: $x^{11}$ adds exponents even in division; $x^{60}$ multiplies the exponents. **Quick self-check**: multiply → add, divide → subtract, power-of-a-power → multiply. Point at each rule with your finger as you confirm which one you used. The exponent laws end at three: $x^a \\cdot x^b = x^{a+b}$, $\\frac{x^a}{x^b} = x^{a-b}$, $(x^a)^b = x^{ab}$. When it looks messy, simplify numerator and denominator separately, then combine — in that order.",
                             },
                             {
                                 "title": "Level 4: Simplifying Radicals",
@@ -2701,7 +2701,7 @@ window.MATH_DATA = {
                                     "$6\\sqrt{3}$"
                                 ],
                                 "answer": "$6\\sqrt{2}$",
-                                "explanation": "**함정 먼저**: $\\sqrt{72}$를 소인수분해 없이 '72 = 36 × 2' 한 번에 보는 것이 핵심이다. $\\sqrt{36 \\times 2} = 6\\sqrt{2}$. 루트 안의 수를 무작정 나누다 보면 $8\\sqrt{3}$같은 답이 나온다. **풀이**: (1) 72를 제곱수가 포함된 곱으로 나눈다: $72 = 36 \\times 2$. (2) $\\sqrt{36 \\times 2} = \\sqrt{36} \\times \\sqrt{2} = 6\\sqrt{2}$. (3) 2는 더 이상 제곱인수로 나눠지지 않으므로 여기서 끝이다. **Wrong-answer watch**: $36\\sqrt{2}$는 루트를 씌우지 않고 36을 밖으로 꺼낸 답, $6\\sqrt{3}$은 72를 잘못 나눈 답이다. **Quick self-check**: 답을 제곱해 원래 수로 돌아오는지 확인하라. $(6\\sqrt{2})^2 = 36 \\times 2 = 72$로 정확히 일치한다. 근호 간단화의 요령은 루트 안의 수에서 가장 큰 제곱인수를 찾는 것이다. 72의 인수 중 제곱수는 36, 9, 4가 있고, 가장 큰 36을 쓰면 한 번에 끝난다."
+                                "explanation": "**Trap alert**: The key to $\\sqrt{72}$ is seeing '72 = 36 × 2' in one glance, without prime-factoring. $\\sqrt{36 \\times 2} = 6\\sqrt{2}$. Dividing the radicand blindly leads to answers like $8\\sqrt{3}$. **Solution**: (1) Split 72 into a product containing a perfect square: $72 = 36 \\times 2$. (2) $\\sqrt{36 \\times 2} = \\sqrt{36} \\times \\sqrt{2} = 6\\sqrt{2}$. (3) 2 has no square factor left, so you're done. **Wrong-answer watch**: $36\\sqrt{2}$ pulls 36 out without taking its root; $6\\sqrt{3}$ splits 72 wrong. **Quick self-check**: Square your answer and confirm you return to the original: $(6\\sqrt{2})^2 = 36 \\times 2 = 72$. Exactly. The trick to simplifying radicals is finding the largest perfect-square factor of the radicand. Among 72's factors, the squares are 36, 9, and 4 — using the largest, 36, finishes it in one step.",
                             },
                             {
                                 "title": "Level 5: Completing the Square",
@@ -2714,7 +2714,7 @@ window.MATH_DATA = {
                                     "-2"
                                 ],
                                 "answer": "7",
-                                "explanation": "**함정 먼저**: 완전제곱식 문제는 $(x+h)^2 = k$ 꼴에서 $h$와 $k$를 묻는다. $h = 3$, $k = 4$를 구해놓고 $h + k$가 아니라 $hk$를 계산하는 실수가 나온다. 마지막에 '무엇을 묻는가'를 다시 읽어라. **풀이**: (1) 상수항을 이항한다: $x^2 + 6x = -5$. (2) $x$ 계수의 절반인 3을 제곱한 9를 양변에 더한다: $x^2 + 6x + 9 = 4$. (3) $(x+3)^2 = 4$이므로 $h = 3$, $k = 4$. (4) $h + k = 3 + 4 = 7$. **Wrong-answer watch**: 1은 $k$를 4가 아니라 엉뚱한 값으로 본 답, 12는 $h \\times k$를 계산한 답이다. 묻는 식의 형태를 마지막까지 붙잡고 있어라. **Quick self-check**: $(x+3)^2 = x^2 + 6x + 9$를 전개해 원래 식과 비교하라. 상수항 쪽이 $9 - 4 = 5$로 맞는지 확인하면 된다. 완전제곱식 변형은 이차함수의 꼭짓점을 구할 때도 쓰인다. $(x+3)^2 = 4$에서 $x = -1$ 또는 $x = -5$가 해이며, 이는 포물선과 $x$축의 교점과 같다."
+                                "explanation": "**Trap alert**: Completing-the-square problems ask for $h$ and $k$ in $(x+h)^2 = k$. Students find $h = 3$, $k = 4$ and then compute $hk$ instead of $h + k$. Re-read 'what is being asked' at the end. **Solution**: (1) Move the constant: $x^2 + 6x = -5$. (2) Add the square of half the $x$ coefficient — $3^2 = 9$ — to both sides: $x^2 + 6x + 9 = 4$. (3) $(x+3)^2 = 4$, so $h = 3$, $k = 4$. (4) $h + k = 3 + 4 = 7$. **Wrong-answer watch**: 1 reads $k$ as some wrong value instead of 4; 12 computes $h \\times k$. Keep hold of the requested form until the very end. **Quick self-check**: Expand $(x+3)^2 = x^2 + 6x + 9$ and compare with the original. The constant side checks out as $9 - 4 = 5$. Completing the square is also how you find a quadratic function's vertex. From $(x+3)^2 = 4$, the solutions $x = -1$ or $x = -5$ are the parabola's $x$-intercepts.",
                             },
                             {
                                 "title": "Level 6: Rational Expressions",
@@ -2727,7 +2727,7 @@ window.MATH_DATA = {
                                     "$x - 3$"
                                 ],
                                 "answer": "$\\frac{x-3}{x+3}$",
-                                "explanation": "**함정 먼저**: 유리식을 약분할 때는 '더하기 빼기로 묶인 항'은 약분할 수 없다. 반드시 인수분해부터 하고, 공통 '인수'만 지운다. 분모가 0이 되는 $x = -3$은 정의역에서 제외된다는 점도 Digital SAT가 좋아하는 포인트다. **풀이**: (1) 분자: $x^2 - 9 = (x-3)(x+3)$. (2) 분모: $x^2 + 6x + 9 = (x+3)^2$. (3) 공통인수 $(x+3)$을 약분하면 $\\frac{x-3}{x+3}$ (단, $x \\ne -3$). **Wrong-answer watch**: $\\frac{x+3}{x-3}$은 분자·분모를 뒤집은 답, $-\\frac{1}{3}$은 항 단위로 약분하려다 망가진 답이다. **Quick self-check**: $x = 0$을 대입해 보라. 원래 식은 $\\frac{-9}{9} = -1$, 답 식도 $\\frac{-3}{3} = -1$로 일치한다. 유리식 문제에서는 약분 전에 '분모가 0이 되는 $x$'를 먼저 제외하는 습관을 들여라. $x = -3$에서는 원래 식도 답 식도 정의되지 않으므로, 정의역을 함께 적는 것이 완전한 답이다."
+                                "explanation": "**Trap alert**: When simplifying rational expressions, you cannot cancel 'terms joined by plus or minus.' Always factor first, and cancel only common factors. That $x = -3$ makes the denominator 0 — excluded from the domain — is a favorite Digital SAT point. **Solution**: (1) Numerator: $x^2 - 9 = (x-3)(x+3)$. (2) Denominator: $x^2 + 6x + 9 = (x+3)^2$. (3) Cancel the common factor $(x+3)$ to get $\\frac{x-3}{x+3}$ (with $x \\ne -3$). **Wrong-answer watch**: $\\frac{x+3}{x-3}$ flips numerator and denominator; $-\\frac{1}{3}$ comes from trying to cancel term by term and wrecking it. **Quick self-check**: Plug in $x = 0$. The original gives $\\frac{-9}{9} = -1$; the answer gives $\\frac{-3}{3} = -1$. They match. On rational-expression problems, build the habit of excluding 'the $x$ that zeroes the denominator' before canceling. At $x = -3$ neither the original nor the answer is defined, so writing the domain restriction is part of a complete answer.",
                             },
                             {
                                 "title": "Level 7: Nonlinear Systems",
@@ -2740,7 +2740,7 @@ window.MATH_DATA = {
                                     "4"
                                 ],
                                 "answer": "9",
-                                "explanation": "**함정 먼저**: 교점을 구했으면 끝이 아니다. 이 문제는 '제1사분면에 있는 교점의 $y$좌표'를 묻는다. $x = -1$일 때의 점 $(-1, 1)$은 제2사분면이므로 탈락이다. **풀이**: (1) 두 식을 연립한다: $x^2 = 2x + 3$. (2) $x^2 - 2x - 3 = 0$을 인수분해하면 $(x-3)(x+1) = 0$이므로 $x = 3$ 또는 $x = -1$. (3) 제1사분면 조건($x > 0$, $y > 0$)을 만족하는 것은 $x = 3$뿐이다. (4) $y = 3^2 = 9$. **Wrong-answer watch**: 3은 $x$좌표를 답으로 쓴 경우, 1은 $x = -1$인 점을 고른 경우다. 사분면 조건 같은 수식어는 계산 전에 동그라미 쳐라. **Quick self-check**: 구한 점 $(3, 9)$가 두 식을 모두 만족하는지 대입해 확인하라. $9 = 3^2$, $9 = 2(3) + 3$. 비선형 연립은 대입법이 기본이다. 직선과 포물선의 교점은 0개, 1개(접함), 2개가 가능하며, 이 문제처럼 이차식을 풀어 $x$값을 먼저 구한 뒤 $y$를 구하는 순서를 지켜라."
+                                "explanation": "**Trap alert**: Finding the intersection isn't the end. This question asks for the $y$-coordinate of the intersection in the first quadrant. The point $(-1, 1)$ at $x = -1$ is in the second quadrant, so it's out. **Solution**: (1) Solve the system: $x^2 = 2x + 3$. (2) $x^2 - 2x - 3 = 0$ factors as $(x-3)(x+1) = 0$, so $x = 3$ or $x = -1$. (3) Only $x = 3$ satisfies the first-quadrant condition ($x > 0$, $y > 0$). (4) $y = 3^2 = 9$. **Wrong-answer watch**: 3 uses the $x$-coordinate as the answer; 1 picks the point at $x = -1$. Circle qualifier phrases like quadrant conditions before computing. **Quick self-check**: Verify $(3, 9)$ satisfies both equations: $9 = 3^2$, $9 = 2(3) + 3$. Substitution is the default for nonlinear systems. A line and a parabola can intersect in 0, 1 (tangent), or 2 points — solve the quadratic for $x$ first, then find $y$, in that order.",
                             },
                             {
                                 "title": "Level 8: Exponential Growth Models",
@@ -2753,7 +2753,7 @@ window.MATH_DATA = {
                                     "$500(2)^t$"
                                 ],
                                 "answer": "$500(2)^{t/3}$",
-                                "explanation": "**함정 먼저**: '3시간마다 2배'는 지수가 $3t$가 아니라 $t/3$이다. 3시간이 지날 때마다 지수가 1씩 늘어나야 하므로, 시간 $t$를 주기 3으로 나눈 값이 지수가 된다. **풀이**: (1) 기본형은 $N(t) = (\\text{초기값}) \\times 2^{t/(\\text{배가 시간})}$이다. (2) 초기값 500, 배가 시간 3을 대입하면 $N(t) = 500(2)^{t/3}$. (3) 검산: $t = 3$이면 $500 \\times 2^1 = 1000$으로 정확히 2배다. **Wrong-answer watch**: $500(2)^{3t}$는 주기를 곱한 답으로, $t = 3$일 때 8배가 되어 버린다. '마다'라는 말이 나오면 주기로 나누는 방향임을 기억하라. **Quick self-check**: $t$에 주기(여기서는 3)를 넣어 정확히 2배가 되는지 확인하라. 지수 모델 문제의 만능 검산법이다. 지수 모델에서 '초기값'과 '변화율'을 구분하는 것이 핵심이다. 500은 시작점, 2는 배가, $t/3$은 '몇 주기가 지났는가'를 뜻한다. Digital SAT는 이 세 요소 중 하나를 바꿔 묻는 변형을 자주 낸다."
+                                "explanation": "**Trap alert**: 'Doubles every 3 hours' means the exponent is $t/3$, not $3t$. Every 3 hours the exponent must grow by 1, so time $t$ divided by the period 3 becomes the exponent. **Solution**: (1) The base form is $N(t) = (\\text{initial value}) \\times 2^{t/(\\text{doubling time})}$. (2) With initial value 500 and doubling time 3: $N(t) = 500(2)^{t/3}$. (3) Check: at $t = 3$, $500 \\times 2^1 = 1000$ — exactly doubled. **Wrong-answer watch**: $500(2)^{3t}$ multiplies by the period; at $t = 3$ it gives 8×. When you see 'every,' remember you divide by the period. **Quick self-check**: Plug the period (here 3) into $t$ and confirm you get exactly double — the universal check for exponential models. In exponential models, keep 'initial value' and 'growth rate' distinct. 500 is the starting point, 2 is the doubling, and $t/3$ means 'how many periods have passed.' Digital SAT loves varying one of these three elements.",
                             },
                             {
                                 "title": "Level 9: Polynomial Remainder",
@@ -2766,7 +2766,7 @@ window.MATH_DATA = {
                                     "5"
                                 ],
                                 "answer": "3",
-                                "explanation": "**함정 먼저**: 나머정리를 모르면 조립제법을 써야 하고, 조립제법에서 부호 실수가 잦다. 하지만 $x = 1$을 직접 대입하는 것이 가장 빠르다. 나머지는 $P(1)$과 같다. **풀이**: (1) 나머정리: $x^3 - 2x^2 + 4$를 $x - 1$로 나눈 나머지는 $P(1)$이다. (2) $P(1) = 1 - 2 + 4 = 3$. (3) 조립제법으로 검산해도 계수 $1, -2, 0, 4$에서 마지막 줄이 $1, -1, -1, 3$으로 나머지가 3이다. **Wrong-answer watch**: 1은 $x^3$의 계수를 답으로 착각한 경우, -1은 대입 과정에서 부호를 하나 흘린 경우다. **Quick self-check**: $x = 1$ 대입은 10초면 끝나니, 조립제법으로 풀었어도 대입으로 한 번 더 확인하라. 나머정리는 인수정리의 특수한 경우다. $P(a) = 0$이면 $x - a$가 인수라는 인수정리까지 연결하면, 고차식 인수분해 문제로 확장할 수 있다. SAT에서는 나머지가 0인지 아닌지를 묻는 형태로 변형되어 나온다."
+                                "explanation": "**Trap alert**: Without the remainder theorem you'd need synthetic division, where sign slips are common. But directly substituting $x = 1$ is fastest — the remainder equals $P(1)$. **Solution**: (1) Remainder theorem: the remainder of $x^3 - 2x^2 + 4$ divided by $x - 1$ is $P(1)$. (2) $P(1) = 1 - 2 + 4 = 3$. (3) Synthetic division confirms it too: from coefficients $1, -2, 0, 4$, the bottom row is $1, -1, -1, 3$, leaving remainder 3. **Wrong-answer watch**: 1 mistakes the $x^3$ coefficient for the answer; -1 drops one sign during substitution. **Quick self-check**: Substituting $x = 1$ takes 10 seconds, so even if you used synthetic division, verify by substitution once more. The remainder theorem is a special case of the factor theorem. If $P(a) = 0$, then $x - a$ is a factor — link the two and you can extend to higher-degree factoring problems. On the SAT it appears in variations asking whether the remainder is 0.",
                             },
                             {
                                 "title": "Level 10: Discriminant",
@@ -2779,14 +2779,14 @@ window.MATH_DATA = {
                                     "16"
                                 ],
                                 "answer": "4",
-                                "explanation": "**함정 먼저**: '실근이 정확히 하나'라는 말은 중근을 의미하고, 판별식 $D = 0$과 동치다. '$D > 0$이면 두 개, $D = 0$이면 하나, $D < 0$이면 없음'을 바로 연결해야 한다. **풀이**: (1) 판별식 $D = b^2 - 4ac = 16 - 4c$. (2) 중근 조건 $D = 0$에서 $16 - 4c = 0$. (3) $c = 4$. (4) 확인: $x^2 + 4x + 4 = (x+2)^2 = 0$이므로 $x = -2$ 중근이다. **Wrong-answer watch**: -4는 이항 과정에서 부호를 반대로 옮긴 답, 16은 $4c = 16$에서 한 단계를 빼먹은 답이다. **Quick self-check**: 구한 $c$를 넣어 완전제곱식이 되는지 확인하라. $(x+2)^2$ 꼴이 나오면 중근이 맞다. 판별식은 그래프와도 연결된다. $D > 0$이면 포물선이 $x$축과 두 점에서 만나고, $D = 0$이면 한 점에서 접하고, $D < 0$이면 만나지 않는다. 대수와 기하를 함께 떠올리면 기억에 오래 남는다."
+                                "explanation": "**Trap alert**: 'Exactly one real root' means a double root, equivalent to discriminant $D = 0$. Connect them instantly: $D > 0$ → two, $D = 0$ → one, $D < 0$ → none. **Solution**: (1) Discriminant $D = b^2 - 4ac = 16 - 4c$. (2) Double-root condition $D = 0$ gives $16 - 4c = 0$. (3) $c = 4$. (4) Verify: $x^2 + 4x + 4 = (x+2)^2 = 0$, so $x = -2$ is a double root. **Wrong-answer watch**: -4 moves the sign the wrong way while transposing; 16 skips a step from $4c = 16$. **Quick self-check**: Plug your $c$ back in and confirm a perfect square appears. The $(x+2)^2$ form confirms the double root. The discriminant connects to graphs too: $D > 0$ → the parabola crosses the $x$-axis twice, $D = 0$ → touches once, $D < 0$ → never meets it. Picturing algebra and geometry together makes it stick.",
                             }
                         ]
                     }
                 },
                 {
                     "title": "Unit 3: Problem Solving & Data Analysis (15%)",
-                    "insight": "Problem Solving & Data Analysis는 15%지만 시간 대비 효율이 가장 좋은 영역이다. 대부분 '합으로 바꾸기(평균)', '부분으로 나누기(비율)', '기준 확인하기(백분율)' 세 가지 손놀림으로 풀린다. 산점도와 표준편차는 개념을 묻는 문제이니 공식을 외우기보다 의미를 이해하라.",
+                    "insight": "Problem Solving & Data Analysis is only 15%, but it's the best points-per-minute area on the test. Most problems fall to three hand moves: 'convert to a total' (means), 'split into parts' (ratios), 'check the base' (percents). Scatterplots and standard deviation test concepts, so understand the meaning rather than memorizing formulas.",
                     "topics": [
                         "Ratios and percents",
                         "Mean and median",
@@ -2809,7 +2809,7 @@ window.MATH_DATA = {
                                     "75"
                                 ],
                                 "answer": "60",
-                                "explanation": "**함정 먼저**: '25% 할인'은 '원가의 25%를 낸다'가 아니라 '원가의 75%를 낸다'는 뜻이다. $80 \\times 0.25 = 20$은 할인액이지 판매가가 아니다. **풀이**: (1) 할인율 25%이므로 지불 비율은 $100\\% - 25\\% = 75\\%$. (2) $80 \\times 0.75 = 60$. (3) 검산: 할인액 $80 \\times 0.25 = 20$, $80 - 20 = 60$으로 일치한다. **Wrong-answer watch**: 20은 할인액을 판매가로 착각한 답이다. 이 유형의 대표 함정이니 '그래서 얼마를 내는가'를 마지막에 자문하라. **Quick self-check**: 할인액 + 판매가 = 원가가 되는지 확인하라. $20 + 60 = 80$. 백분율 문제는 '기준이 무엇인가'를 먼저 파악해야 한다. 할인율의 기준은 원가 80달러다. Digital SAT는 기준을 바꾸는 함정(예: 인상된 가격을 기준으로 추가 할인)을 자주 쓰니, '%의 대상'을 항상 확인하라."
+                                "explanation": "**Trap alert**: '25% off' means 'pay 75% of the original,' not 'pay 25% of it.' $80 \\times 0.25 = 20$ is the discount amount, not the sale price. **Solution**: (1) With a 25% discount, the payment rate is $100\\% - 25\\% = 75\\%$. (2) $80 \\times 0.75 = 60$. (3) Check: discount $80 \\times 0.25 = 20$, and $80 - 20 = 60$. They match. **Wrong-answer watch**: 20 mistakes the discount for the sale price. This type's signature trap — ask yourself at the end, 'so how much do I actually pay?' **Quick self-check**: Confirm discount + sale price = original: $20 + 60 = 80$. Percent problems start with identifying the base. The discount's base is the $80 original. Digital SAT loves base-switching traps (e.g., an extra discount on the raised price), so always confirm 'the % of what.'",
                             },
                             {
                                 "title": "Level 2: Ratios",
@@ -2822,7 +2822,7 @@ window.MATH_DATA = {
                                     "12"
                                 ],
                                 "answer": "15",
-                                "explanation": "**함정 먼저**: 비율 3:5는 '3개와 5개'가 아니라 '전체를 8등분했을 때 3부분과 5부분'이다. 40을 3과 5로 직접 나누면 안 된다. **풀이**: (1) 전체 부분 수: $3 + 5 = 8$. (2) 한 부분의 크기: $40 \\div 8 = 5$. (3) 작은 수: $3 \\times 5 = 15$, 큰 수: $5 \\times 5 = 25$. (4) 검산: $15 + 25 = 40$이고 $15:25 = 3:5$로 비율도 맞다. **Wrong-answer watch**: 24는 40을 잘못 나눈 답, 25는 '작은 수'라는 조건을 놓친 답이다. 묻는 것이 어느 쪽인지 마지막에 확인하라. **Quick self-check**: 두 수의 합이 전체와 같은지, 비율을 약분하면 주어진 비율이 되는지 확인하라. 비율 문제는 '전체를 몇 부분으로 나누는가'가 출발점이다. 3:5는 8부분, 2:3:5는 10부분이다. 부분 수를 먼저 구하고 한 부분의 크기를 구하는 2단계로 풀면 어떤 비율 문제도 같은 틀로 해결된다."
+                                "explanation": "**Trap alert**: A 3:5 ratio is not '3 and 5' — it's '3 parts and 5 parts of a whole split into 8.' Don't divide 40 directly by 3 and 5. **Solution**: (1) Total parts: $3 + 5 = 8$. (2) One part's size: $40 \\div 8 = 5$. (3) Smaller number: $3 \\times 5 = 15$; larger: $5 \\times 5 = 25$. (4) Check: $15 + 25 = 40$ and $15:25 = 3:5$. The ratio holds too. **Wrong-answer watch**: 24 divides 40 wrong; 25 misses the 'smaller number' condition. Confirm which side is being asked at the end. **Quick self-check**: Confirm the two numbers sum to the total, and that reducing the ratio returns the given one. Ratio problems start with 'how many parts is the whole split into?' 3:5 → 8 parts; 2:3:5 → 10 parts. Find the part count first, then one part's size — that 2-step frame solves any ratio problem.",
                             },
                             {
                                 "title": "Level 3: Mean with a Missing Value",
@@ -2835,7 +2835,7 @@ window.MATH_DATA = {
                                     "14"
                                 ],
                                 "answer": "12",
-                                "explanation": "**함정 먼저**: 평균이 8이라는 것은 '합이 $8 \\times 5 = 40$'이라는 뜻이다. 평균 문제의 90%는 합으로 바꿔 푸는 것이 가장 빠르다. **풀이**: (1) 자료가 5개이므로 합은 $8 \\times 5 = 40$. (2) 알려진 네 수의 합: $4 + 8 + 6 + 10 = 28$. (3) $x = 40 - 28 = 12$. (4) 검산: $(4+8+6+10+12) \\div 5 = 40 \\div 5 = 8$. **Wrong-answer watch**: 10은 알려진 네 수의 평균을 $x$로 착각한 답이다. '평균의 평균'이 아니라 '합의 차이'로 구해야 한다. **Quick self-check**: 구한 값을 포함해 평균을 다시 계산해 보라. 10초 검산으로 실수를 잡을 수 있다. 평균은 '합 ÷ 개수'이지만, 역으로 '평균 × 개수 = 합'이라는 관점이 더 자주 쓰인다. $x$를 포함한 다섯 수의 합이 40이어야 한다는 식을 세우는 순간, 문제는 뺄셈 한 번으로 끝난다."
+                                "explanation": "**Trap alert**: Mean of 8 means 'the total is $8 \\times 5 = 40$.' Converting to a total first is the fastest route for 90% of mean problems. **Solution**: (1) Five data points, so the total is $8 \\times 5 = 40$. (2) The four known numbers total $4 + 8 + 6 + 10 = 28$. (3) $x = 40 - 28 = 12$. (4) Check: $(4+8+6+10+12) \\div 5 = 40 \\div 5 = 8$. **Wrong-answer watch**: 10 mistakes the four known numbers' average for $x$. You need 'the difference of totals,' not 'the mean of means.' **Quick self-check**: Recompute the mean including your value. A 10-second recheck catches the slip. Mean is 'total ÷ count,' but the reverse view — 'mean × count = total' — gets used more often. The moment you write 'the five numbers including $x$ must total 40,' the problem ends with one subtraction.",
                             },
                             {
                                 "title": "Level 4: Median of an Even Data Set",
@@ -2848,7 +2848,7 @@ window.MATH_DATA = {
                                     "12"
                                 ],
                                 "answer": "10.5",
-                                "explanation": "**함정 먼저**: 자료가 짝수 개(6개)일 때 중앙값은 '가운데 두 수의 평균'이다. 3번째 수인 9를 그대로 답으로 쓰는 실수가 가장 많다. **풀이**: (1) 자료는 이미 오름차순이다: 3, 7, 9, 12, 15, 21. (2) 가운데 두 수는 3번째와 4번째, 즉 9와 12다. (3) 중앙값 = $(9 + 12) \\div 2 = 10.5$. **Wrong-answer watch**: 9는 '가운데 하나'를 잘못 고른 답이다. 짝수 개 자료에서는 항상 두 수의 평균임을 기억하라. **Quick self-check**: 자료 개수가 짝수인지 홀수인지 먼저 세라. 홀수면 가운데 하나, 짝수면 가운데 두 개의 평균이라는 규칙을 적용하라. 중앙값은 극단값에 흔들리지 않는 대표값이다. 평균과 중앙값이 크게 다르면 자료가 한쪽으로 치우친 것이다. SAT는 두 대표값의 차이를 이용해 자료의 치우침을 묻기도 한다. 자료를 크기 순으로 나열하는 것이 중앙값 문제의 첫 단계이니, 순서가 뒤죽박죽이면 반드시 먼저 정렬하라."
+                                "explanation": "**Trap alert**: With an even count (6 values), the median is 'the average of the middle two.' Writing down the 3rd value, 9, as the answer is the most common slip. **Solution**: (1) The data is already ascending: 3, 7, 9, 12, 15, 21. (2) The middle two are the 3rd and 4th — 9 and 12. (3) Median = $(9 + 12) \\div 2 = 10.5$. **Wrong-answer watch**: 9 wrongly picks 'the middle one.' With an even count, it's always the average of two. **Quick self-check**: Count whether the data size is even or odd first. Odd → the middle one; even → the average of the middle two. The median resists extreme values. When mean and median differ a lot, the data is skewed. The SAT also asks about skew via the mean–median gap. Sorting the data is step one for median problems — if the order is scrambled, sort first.",
                             },
                             {
                                 "title": "Level 5: Successive Percent Change",
@@ -2861,7 +2861,7 @@ window.MATH_DATA = {
                                     "260"
                                 ],
                                 "answer": "240",
-                                "explanation": "**함정 먼저**: 20% 인상 후 20% 인하는 원점으로 돌아오지 않는다. 두 번째 20%는 '인상된 가격'을 기준으로 계산되므로, 깎이는 금액이 더 크다. **풀이**: (1) 20% 인상: $250 \\times 1.2 = 300$. (2) 20% 인하: $300 \\times 0.8 = 240$. (3) 한 번에 계산하면 $250 \\times 1.2 \\times 0.8 = 250 \\times 0.96 = 240$. 즉 순수하게는 4% 인하된 셈이다. **Wrong-answer watch**: 250은 '올랐다 내렸으니 제자리'라고 착각한 답으로, 이 유형의 고전 함정이다. College Board가 가장 사랑하는 함정 중 하나다. **Quick self-check**: 연속 변화율은 곱하기로 합성하라. $1.2 \\times 0.8 = 0.96 < 1$이므로 최종가는 원가보다 낮아야 한다. 연속 백분율 변화는 곱하기로 합성된다는 점을 기억하라. $a\\%$ 인상 후 $b\\%$ 인하는 $(1 + a/100)(1 - b/100)$이다. $a = b$여도 1보다 작아지므로, 같은 비율의 인상과 인하는 항상 손해다."
+                                "explanation": "**Trap alert**: A 20% markup followed by a 20% markdown does NOT return to the start. The second 20% is computed on the raised price, so the cut is bigger. **Solution**: (1) 20% markup: $250 \\times 1.2 = 300$. (2) 20% markdown: $300 \\times 0.8 = 240$. (3) In one shot: $250 \\times 1.2 \\times 0.8 = 250 \\times 0.96 = 240$ — a net 4% markdown. **Wrong-answer watch**: 250 assumes 'up then down = back to start' — the classic trap of this type, and one of College Board's favorites. **Quick self-check**: Compose successive percent changes by multiplication. $1.2 \\times 0.8 = 0.96 < 1$, so the final price must be below the original. Remember: successive percent changes compose by multiplication. An $a\\%$ increase followed by a $b\\%$ decrease is $(1 + a/100)(1 - b/100)$. Even with $a = b$ it's below 1 — equal up-and-down always loses.",
                             },
                             {
                                 "title": "Level 6: Line of Best Fit",
@@ -2874,7 +2874,7 @@ window.MATH_DATA = {
                                     "44"
                                 ],
                                 "answer": "38",
-                                "explanation": "**함정 먼저**: 산점도의 최적직선 문제는 결국 '두 점으로 직선의 방정식을 구하는' 대수 문제다. 그래프에 현혹되지 말고 기울기부터 구하라. **풀이**: (1) 기울기: $\\frac{50-20}{10-0} = 3$. (2) $y$절편이 20이므로 직선은 $y = 3x + 20$. (3) $x = 6$일 때 $y = 3 \\times 6 + 20 = 38$. **Wrong-answer watch**: 35는 기울기를 잘못 구한 답, 44는 절편을 20이 아니라 엉뚱한 값으로 본 답이다. 두 점을 정확히 읽는 것이 출발점이다. **Quick self-check**: $x = 0$과 $x = 10$을 식에 넣어 주어진 두 점을 지나는지 확인하라. $3(0)+20 = 20$, $3(10)+20 = 50$. 최적직선은 '전체 경향을 가장 잘 나타내는 직선'이다. 기울기 3은 '$x$가 1 증가할 때 $y$는 평균적으로 3 증가한다'는 뜻이다. SAT는 기울기의 실생활 해석을 묻는 문제도 자주 낸다."
+                                "explanation": "**Trap alert**: A scatterplot line-of-best-fit problem is ultimately an algebra problem: 'find the line's equation from two points.' Don't let the graph hypnotize you — get the slope first. **Solution**: (1) Slope: $\\frac{50-20}{10-0} = 3$. (2) The $y$-intercept is 20, so the line is $y = 3x + 20$. (3) At $x = 6$: $y = 3 \\times 6 + 20 = 38$. **Wrong-answer watch**: 35 miscomputes the slope; 44 reads the intercept as something other than 20. Reading the two points exactly is the starting point. **Quick self-check**: Plug $x = 0$ and $x = 10$ into your equation and confirm it passes through the given points: $3(0)+20 = 20$, $3(10)+20 = 50$. A line of best fit is 'the line that best represents the overall trend.' Slope 3 means 'as $x$ increases by 1, $y$ increases by 3 on average.' The SAT also asks for real-world interpretations of slope.",
                             },
                             {
                                 "title": "Level 7: Probability Without Replacement",
@@ -2887,7 +2887,7 @@ window.MATH_DATA = {
                                     "$\\frac{1}{2}$"
                                 ],
                                 "answer": "$\\frac{1}{6}$",
-                                "explanation": "**함정 먼저**: '비복원'이라는 말이 핵심이다. 첫 번째 구슬을 꺼낸 뒤에는 전체 개수가 10개에서 9개로 줄어든다. 복원 추출처럼 $\\frac{3}{10} \\times \\frac{5}{10}$으로 계산하면 틀린다. **풀이**: (1) 전체 구슬: $3 + 5 + 2 = 10$. (2) 빨간색을 뽑을 확률: $\\frac{3}{10}$. (3) 빨간색 1개를 꺼낸 뒤 파란색을 뽑을 확률: $\\frac{5}{9}$. (4) 두 사건을 곱하면 $\\frac{3}{10} \\times \\frac{5}{9} = \\frac{15}{90} = \\frac{1}{6}$. **Wrong-answer watch**: $\\frac{3}{20}$은 복원 추출로 계산한 답, $\\frac{3}{10}$은 첫 번째 사건만 계산한 답이다. **Quick self-check**: '꺼낸 뒤 되돌려 놓는가'를 문제에서 찾아 밑줄 쳐라. 비복원이면 분모가 1씩 줄어든다. 연속 확률은 각 단계의 확률을 곱한다. '첫 번째는 빨강 AND 두 번째는 파랑'처럼 순서가 정해진 사건은 곱셈으로, 순서가 없는 경우는 경우를 나누어 더한다."
+                                "explanation": "**Trap alert**: 'Without replacement' is the key phrase. After drawing the first marble, the total drops from 10 to 9. Computing $\\frac{3}{10} \\times \\frac{5}{10}$ as if with replacement is wrong. **Solution**: (1) Total marbles: $3 + 5 + 2 = 10$. (2) P(red first): $\\frac{3}{10}$. (3) After removing one red, P(blue next): $\\frac{5}{9}$. (4) Multiply: $\\frac{3}{10} \\times \\frac{5}{9} = \\frac{15}{90} = \\frac{1}{6}$. **Wrong-answer watch**: $\\frac{3}{20}$ computes with replacement; $\\frac{3}{10}$ only computes the first event. **Quick self-check**: Find 'are they put back after drawing?' in the question and underline it. Without replacement, the denominator shrinks by 1 each time. Sequential probabilities multiply stage by stage. 'First red AND then blue' — ordered events multiply; unordered cases split into cases and add.",
                             },
                             {
                                 "title": "Level 8: Target Average",
@@ -2900,7 +2900,7 @@ window.MATH_DATA = {
                                     "90"
                                 ],
                                 "answer": "98",
-                                "explanation": "**함정 먼저**: 평균을 맞추는 문제는 합으로 바꿔라. '평균 86을 맞추려면'은 '네 과목 합이 $86 \\times 4 = 344$여야 한다'는 뜻이다. **풀이**: (1) 목표 합: $86 \\times 4 = 344$. (2) 현재 세 과목 합: $82 \\times 3 = 246$. (3) 필요한 네 번째 점수: $344 - 246 = 98$. (4) 검산: $(246 + 98) \\div 4 = 344 \\div 4 = 86$. **Wrong-answer watch**: 94는 $86 - 82 = 4$의 차이만큼만 더하면 된다고 착각한 답이다. 부족분은 남은 과목 수로 나누는 것이 아니라 목표 합에서 직접 구해야 한다. **Quick self-check**: 구한 점수를 포함해 평균을 다시 계산하라. 98점이 만점에 가까우니 '평균을 4점 올리려면 그만큼 높은 점수가 필요하구나'라는 감각도 맞는지 확인하라. 목표 평균 문제는 '목표 합 - 현재 합'이라는 한 줄 공식으로 정리된다. 남은 시험이 여러 개라면 부족분을 남은 횟수로 나누면 되지만, 이 문제처럼 한 번이면 부족분이 곧 필요한 점수다."
+                                "explanation": "**Trap alert**: Convert mean-target problems to totals. 'To average 86' means 'the four-subject total must be $86 \\times 4 = 344$.' **Solution**: (1) Target total: $86 \\times 4 = 344$. (2) Current three-subject total: $82 \\times 3 = 246$. (3) Needed fourth score: $344 - 246 = 98$. (4) Check: $(246 + 98) \\div 4 = 344 \\div 4 = 86$. **Wrong-answer watch**: 94 assumes adding just the $86 - 82 = 4$ gap is enough. The shortfall isn't split across remaining subjects — compute it directly from the target total. **Quick self-check**: Recompute the mean including your score. 98 is near perfect, so sanity-check the feel too: 'to lift the average by 4 points, you need a score that high.' Target-mean problems reduce to one line: 'target total − current total.' With multiple tests left, divide the shortfall by the remaining count — but with one left, the shortfall IS the needed score.",
                             },
                             {
                                 "title": "Level 9: Standard Deviation",
@@ -2913,7 +2913,7 @@ window.MATH_DATA = {
                                     "84"
                                 ],
                                 "answer": "84",
-                                "explanation": "**함정 먼저**: '2 표준편차 위'라는 말은 평균에 $2 \\times (\\text{표준편차})$를 더하라는 뜻이다. $72 + 2 \\times 5 = 82$가 기준선이고, 문제는 그 '보다 큰' 값을 묻는다. **풀이**: (1) 2 표준편차 위의 값: $72 + 2 \\times 5 = 82$. (2) 'more than'이므로 82보다 커야 한다. (3) 선택지 중 82보다 큰 것은 84뿐이다. **Wrong-answer watch**: 82는 '이상'과 '초과'를 헷갈린 답이다. more than은 strictly greater, 즉 등호를 포함하지 않는다. **Quick self-check**: 문제의 비교 표현(more than / at least / within)을 동그라미 쳐라. 등호 포함 여부가 답을 바꾼다. 표준편차는 자료의 흩어진 정도를 나타낸다. 평균 $\\pm$ 2 표준편차 범위를 벗어나는 값은 전체의 약 5%에 불과한 이례적인 값이다. SAT는 이 개념을 '정상 범위'를 묻는 형태로 출제한다."
+                                "explanation": "**Trap alert**: '2 standard deviations above' means add $2 \\times (\\text{standard deviation})$ to the mean. $72 + 2 \\times 5 = 82$ is the cutoff, and the question asks for values 'greater than' it. **Solution**: (1) The 2-SD-above value: $72 + 2 \\times 5 = 82$. (2) 'More than' means strictly greater than 82. (3) The only choice above 82 is 84. **Wrong-answer watch**: 82 confuses 'at least' with 'more than.' 'More than' is strictly greater — no equals sign. **Quick self-check**: Circle the comparison phrase (more than / at least / within). Whether the equals sign is included changes the answer. Standard deviation measures spread. Values outside mean $\\pm$ 2 SD are unusual — only about 5% of the whole. The SAT frames this concept as 'normal range' questions.",
                             },
                             {
                                 "title": "Level 10: Work Rates",
@@ -2926,14 +2926,14 @@ window.MATH_DATA = {
                                     "320"
                                 ],
                                 "answer": "480",
-                                "explanation": "**함정 먼저**: 일률 문제는 '기계 1대 × 1시간' 단위로 쪼개는 것이 정석이다. 5대 4시간을 한 덩어리로 보고 비례식을 세우면 기계 수와 시간 중 하나를 빼먹기 쉽다. **풀이**: (1) 전체 작업량 단위: $5 \\times 4 = 20$ 기계-시간에 200개. (2) 기계 1대 1시간당 생산량: $200 \\div 20 = 10$. (3) 8대 6시간: $8 \\times 6 \\times 10 = 480$. **Wrong-answer watch**: 400은 시간 변화를 반영하지 않고 기계 수로만 비례한 답, 600은 기계 수와 시간을 더해 버린 답이다. **Quick self-check**: 단위를 붙여 계산하라. '개/(대·시간)'처럼 단위가 맞으면 식도 맞을 확률이 높다. $10 \\times 8 \\times 6 = 480$. 일률·속도·농도 문제는 모두 '단위당 양'을 먼저 구하는 것이 정석이다. 기계 1대 1시간당 10개라는 단위 생산량을 구해두면, 기계 수와 시간이 바뀌는 어떤 변형에도 같은 방식으로 대응할 수 있다."
+                                "explanation": "**Trap alert**: Rate problems are best split into '1 machine × 1 hour' units. Treating 5 machines × 4 hours as one lump and setting up a proportion invites dropping either the machine count or the hours. **Solution**: (1) Total work units: $5 \\times 4 = 20$ machine-hours for 200 items. (2) Per-machine-hour output: $200 \\div 20 = 10$. (3) 8 machines × 6 hours: $8 \\times 6 \\times 10 = 480$. **Wrong-answer watch**: 400 scales by machine count only, ignoring the time change; 600 adds machine count and hours. **Quick self-check**: Carry the units. If 'items/(machine·hour)' works out, the setup is probably right: $10 \\times 8 \\times 6 = 480$. Rate, speed, and concentration problems all start with 'amount per unit.' Once you have 10 items per machine-hour, any variation in machine count or hours yields to the same method.",
                             }
                         ]
                     }
                 },
                 {
                     "title": "Unit 4: Geometry & Trigonometry (15%)",
-                    "insight": "Geometry & Trigonometry는 15%로 비중은 작지만, 아는 만큼 빨리 풀리는 영역이다. 특수삼각형 변의 비($1:1:\\sqrt{2}$, $1:\\sqrt{3}:2$), 호·부채꼴 공식, 라디안 변환을 손에 익혀두면 계산 시간을 크게 줄일 수 있다. 닮음과 원의 방정식은 부호 실수만 조심하면 된다.",
+                    "insight": "Geometry & Trigonometry is only 15%, but it's the 'know it and you're fast' area. Drill the special-triangle side ratios ($1:1:\\sqrt{2}$, $1:\\sqrt{3}:2$), arc/sector formulas, and radian conversion until they're automatic — that saves serious computation time. For similarity and circle equations, just watch the signs.",
                     "topics": [
                         "Triangles",
                         "Circles",
@@ -2956,7 +2956,7 @@ window.MATH_DATA = {
                                     "110"
                                 ],
                                 "answer": "60",
-                                "explanation": "**함정 먼저**: 삼각형 세 내각의 합은 항상 $180^\\circ$다. 너무 쉬워서 오히려 문제를 잘못 읽는 실수가 나온다. '나머지 한 각'을 묻는지, 아니면 다른 것을 묻는지 확인하라. **풀이**: (1) 알려진 두 각의 합: $50 + 70 = 120$. (2) $180 - 120 = 60$. (3) 검산: $50 + 70 + 60 = 180$으로 내각의 합 조건을 만족한다. 쉬운 문제일수록 검산을 생략하는데, 3초 검산이 실수를 막는다. **Wrong-answer watch**: 110은 $180 - 70$처럼 한 각만 뺀 답이다. '두 각을 먼저 더하라'는 순서를 지키면 피할 수 있다. **Quick self-check**: 세 각의 합이 180이 되는지 더해 보라. 이 확인 하나로 계산 실수를 잡을 수 있다. 삼각형 내각의 합 $180^\\circ$는 SAT 기하의 출발점이다. 외각 정리를 이용하면 $180 - (50 + 70) = 60$을 한 번에 구할 수도 있다. 쉬운 문제는 빠르게, 어려운 문제에 시간을 남기는 것이 고득점 전략이다."
+                                "explanation": "**Trap alert**: A triangle's three interior angles always sum to $180^\\circ$. It's so easy that misreading becomes the mistake — check whether it asks for 'the remaining angle' or something else. **Solution**: (1) Sum of the two known angles: $50 + 70 = 120$. (2) $180 - 120 = 60$. (3) Check: $50 + 70 + 60 = 180$ satisfies the angle-sum condition. Easy problems tempt you to skip the check — a 3-second verification blocks the slip. **Wrong-answer watch**: 110 subtracts only one angle, as in $180 - 70$. Follow the order: 'add the two angles first.' **Quick self-check**: Add the three angles and confirm 180. That one check catches computation slips. The $180^\\circ$ triangle angle sum is the starting point of SAT geometry. The exterior angle theorem gets you $180 - (50 + 70) = 60$ in one shot. Go fast on easy problems and save time for the hard ones — that's the high-score strategy.",
                             },
                             {
                                 "title": "Level 2: Pythagorean Theorem",
@@ -2969,7 +2969,7 @@ window.MATH_DATA = {
                                     "48"
                                 ],
                                 "answer": "10",
-                                "explanation": "**함정 먼저**: 피타고라스 정리는 빗변의 제곱이 나머지 두 변의 제곱합과 같다는 것이다. 6과 8이 '밑변과 높이'인지 '빗변과 한 변'인지를 먼저 판단해야 한다. 이 문제에서는 빗변을 묻는다. **풀이**: (1) $c^2 = 6^2 + 8^2 = 36 + 64 = 100$. (2) $c = \\sqrt{100} = 10$ (길이는 양수). (3) 참고: 6-8-10은 3-4-5의 2배인 피타고라스 수다. SAT에서는 3-4-5, 5-12-13, 8-15-17 계열이 단골이니 외워두면 시간을 번다. **Wrong-answer watch**: 14는 $6 + 8$로 더해 버린 답, 48은 $6 \\times 8$로 곱한 답이다. 정리는 '제곱의 합'임을 잊지 말라. **Quick self-check**: 빗변이 가장 긴 변인지 확인하라. $10 > 8$이므로 타당하다. 피타고라스 수 3-4-5, 5-12-13, 8-15-17과 그 배수(6-8-10, 9-12-15 등)는 SAT 단골이다. 직각삼각형의 두 변이 보이면 '혹시 피타고라스 수인가'를 먼저 의심하면 제곱 계산을 생략할 수 있다."
+                                "explanation": "**Trap alert**: The Pythagorean theorem says the hypotenuse squared equals the sum of the other two sides squared. First judge whether 6 and 8 are 'the legs' or 'the hypotenuse and a leg' — here the hypotenuse is asked for. **Solution**: (1) $c^2 = 6^2 + 8^2 = 36 + 64 = 100$. (2) $c = \\sqrt{100} = 10$ (length is positive). (3) Note: 6-8-10 is the 3-4-5 triple doubled. SAT regulars include the 3-4-5, 5-12-13, and 8-15-17 families — memorizing them buys time. **Wrong-answer watch**: 14 just adds $6 + 8$; 48 multiplies $6 \\times 8$. The theorem is about 'the sum of squares.' **Quick self-check**: Confirm the hypotenuse is the longest side: $10 > 8$, so it's plausible. The Pythagorean triples 3-4-5, 5-12-13, 8-15-17 and their multiples (6-8-10, 9-12-15, ...) are SAT regulars. When a right triangle shows two sides, first suspect 'is this a Pythagorean triple?' and you can skip the squaring.",
                             },
                             {
                                 "title": "Level 3: Circle Area",
@@ -2982,7 +2982,7 @@ window.MATH_DATA = {
                                     "$5\\pi$"
                                 ],
                                 "answer": "$25\\pi$",
-                                "explanation": "**함정 먼저**: 원의 넓이는 $\\pi r^2$이고 둘레는 $2\\pi r$이다. 반지름이 5일 때 넓이는 $25\\pi$, 둘레는 $10\\pi$다. 둘을 바꿔 쓰면 바로 함정에 빠진다. **풀이**: (1) 넓이 공식 $A = \\pi r^2$에 $r = 5$를 대입한다. (2) $A = \\pi \\times 25 = 25\\pi$. (3) 어림 검산: $\\pi \\approx 3.14$이므로 넓이는 약 $78.5$. **Wrong-answer watch**: $10\\pi$는 둘레 공식을 쓴 답, $50\\pi$는 $2\\pi r^2$처럼 공식을 섞은 답이다. 넓이를 물었는데 둘레가 선택지에 있으면 의심하라. **Quick self-check**: '$r^2$이 들어가는가'를 자문하라. 넓이는 2차원 개념이므로 반지름의 제곱이 반드시 들어간다. 원의 넓이 $\\pi r^2$와 둘레 $2\\pi r$는 단위로도 구분된다. 넓이는 제곱 단위, 둘레는 길이 단위다. 답의 단위를 생각하면 공식을 헷갈릴 때 어느 쪽이 맞는지 판단할 수 있다."
+                                "explanation": "**Trap alert**: Circle area is $\\pi r^2$; circumference is $2\\pi r$. With radius 5, area is $25\\pi$ and circumference is $10\\pi$. Swap the two and you walk straight into the trap. **Solution**: (1) Area formula $A = \\pi r^2$ with $r = 5$. (2) $A = \\pi \\times 25 = 25\\pi$. (3) Rough check: $\\pi \\approx 3.14$, so the area is about $78.5$. **Wrong-answer watch**: $10\\pi$ uses the circumference formula; $50\\pi$ blends formulas as in $2\\pi r^2$. If area is asked and a circumference value sits among the choices, be suspicious. **Quick self-check**: Ask yourself, 'does $r^2$ appear?' Area is a 2-D concept, so the radius squared must appear. $\\pi r^2$ vs $2\\pi r$ can also be told apart by units — area is square units, circumference is length units. Thinking about the answer's units tells you which formula is right when you're unsure.",
                             },
                             {
                                 "title": "Level 4: 45-45-90 Triangles",
@@ -2995,7 +2995,7 @@ window.MATH_DATA = {
                                     "$5\\sqrt{3}$"
                                 ],
                                 "answer": "$5\\sqrt{2}$",
-                                "explanation": "**함정 먼저**: 45-45-90 삼각형의 변의 비는 $1 : 1 : \\sqrt{2}$다. 빗변이 10이면 다리 길이는 $\\frac{10}{\\sqrt{2}} = 5\\sqrt{2}$다. 빗변에 $\\sqrt{2}$를 곱하는 방향 실수가 잦다. **풀이**: (1) 비를 이용해 $x : x : x\\sqrt{2} = ? : ? : 10$. (2) $x\\sqrt{2} = 10$이므로 $x = \\frac{10}{\\sqrt{2}} = \\frac{10\\sqrt{2}}{2} = 5\\sqrt{2}$. (3) 검산: $(5\\sqrt{2})^2 + (5\\sqrt{2})^2 = 50 + 50 = 100 = 10^2$로 피타고라스 정리를 만족한다. **Wrong-answer watch**: $10\\sqrt{2}$는 빗변에 $\\sqrt{2}$를 곱한 답(방향 반대), 5는 $\\sqrt{2}$를 빼먹은 답이다. **Quick self-check**: 다리 길이가 빗변보다 짧은지 확인하라. $5\\sqrt{2} \\approx 7.07 < 10$이므로 타당하다."
+                                "explanation": "**Trap alert**: A 45-45-90 triangle's side ratio is $1 : 1 : \\sqrt{2}$. If the hypotenuse is 10, each leg is $\\frac{10}{\\sqrt{2}} = 5\\sqrt{2}$. Students often err on the direction — multiplying the hypotenuse by $\\sqrt{2}$. **Solution**: (1) Use the ratio: $x : x : x\\sqrt{2} = ? : ? : 10$. (2) $x\\sqrt{2} = 10$, so $x = \\frac{10}{\\sqrt{2}} = \\frac{10\\sqrt{2}}{2} = 5\\sqrt{2}$. (3) Check: $(5\\sqrt{2})^2 + (5\\sqrt{2})^2 = 50 + 50 = 100 = 10^2$ satisfies the Pythagorean theorem. **Wrong-answer watch**: $10\\sqrt{2}$ multiplies the hypotenuse by $\\sqrt{2}$ (wrong direction); 5 drops the $\\sqrt{2}$. **Quick self-check**: Confirm each leg is shorter than the hypotenuse: $5\\sqrt{2} \\approx 7.07 < 10$, so it's plausible.",
                             },
                             {
                                 "title": "Level 5: Arc Length",
@@ -3008,7 +3008,7 @@ window.MATH_DATA = {
                                     "$12\\pi$"
                                 ],
                                 "answer": "$2\\pi$",
-                                "explanation": "**함정 먼저**: 호의 길이는 라디안을 쓰면 '반지름 × 중심각(라디안)' 한 방에 나온다. $60^\\circ$를 라디안으로 바꾸는 것을 빼먹으면 답이 엉뚱해진다. **풀이**: (1) $60^\\circ = \\frac{\\pi}{3}$ 라디안. (2) 호의 길이 $= r\\theta = 6 \\times \\frac{\\pi}{3} = 2\\pi$. (3) 검산: 전체 둘레 $12\\pi$의 $\\frac{1}{6}$이므로 $2\\pi$가 맞다 ($60/360 = 1/6$). **Wrong-answer watch**: $6\\pi$는 각도를 라디안으로 안 바꾼 답, $12\\pi$는 전체 둘레를 답으로 쓴 경우다. **Quick self-check**: 호의 길이가 전체 둘레보다 짧은지, 비율($\\theta/2\\pi$)과 맞는지 확인하라. 호의 길이 공식 $s = r\\theta$는 $\\theta$가 라디안일 때만 성립한다. 도(degree)가 주어지면 반드시 $\\pi/180$을 곱해 라디안으로 먼저 바꾸는 습관을 들여라."
+                                "explanation": "**Trap alert**: Arc length with radians is 'radius × central angle (in radians)' in one shot. Skip converting $60^\\circ$ to radians and the answer goes sideways. **Solution**: (1) $60^\\circ = \\frac{\\pi}{3}$ radians. (2) Arc length $= r\\theta = 6 \\times \\frac{\\pi}{3} = 2\\pi$. (3) Check: it's $\\frac{1}{6}$ of the full circumference $12\\pi$, so $2\\pi$ is right ($60/360 = 1/6$). **Wrong-answer watch**: $6\\pi$ never converts the angle to radians; $12\\pi$ uses the full circumference as the answer. **Quick self-check**: Confirm the arc is shorter than the full circumference and matches the $\\theta/2\\pi$ ratio. The arc formula $s = r\\theta$ holds only when $\\theta$ is in radians. When degrees are given, build the habit of multiplying by $\\pi/180$ to convert to radians first.",
                             },
                             {
                                 "title": "Level 6: Sector Area",
@@ -3021,7 +3021,7 @@ window.MATH_DATA = {
                                     "$81\\pi$"
                                 ],
                                 "answer": "$27\\pi$",
-                                "explanation": "**함정 먼저**: 부채꼴 넓이는 '원 넓이의 몇 분의 몇'이다. $120^\\circ$는 전체의 $\\frac{1}{3}$이므로 $\\frac{1}{3}\\pi(9^2) = 27\\pi$. 둘레 공식을 가져오거나 큰 부채꼴과 작은 부채꼴을 헷갈리는 실수가 나온다. **풀이**: (1) 원의 넓이: $\\pi \\times 9^2 = 81\\pi$. (2) 부채꼴 비율: $\\frac{120}{360} = \\frac{1}{3}$. (3) $81\\pi \\times \\frac{1}{3} = 27\\pi$. 라디안 풀이: $\\frac{1}{2}r^2\\theta = \\frac{1}{2} \\times 81 \\times \\frac{2\\pi}{3} = 27\\pi$. **Wrong-answer watch**: $6\\pi$는 둘레 공식 $2\\pi r$을 쓴 답, $54\\pi$는 $240^\\circ$짜리 큰 부채꼴의 넓이(대응 실수), $81\\pi$는 비율을 빼먹고 전체 원 넓이를 쓴 답이다. **Quick self-check**: 부채꼴 넓이가 전체 원 넓이보다 작은지, 각도 비율과 맞는지 확인하라."
+                                "explanation": "**Trap alert**: A sector's area is 'what fraction of the whole circle.' $120^\\circ$ is $\\frac{1}{3}$ of the circle, so $\\frac{1}{3}\\pi(9^2) = 27\\pi$. Mistakes come from grabbing the circumference formula or confusing the major and minor sectors. **Solution**: (1) Whole circle's area: $\\pi \\times 9^2 = 81\\pi$. (2) Sector fraction: $\\frac{120}{360} = \\frac{1}{3}$. (3) $81\\pi \\times \\frac{1}{3} = 27\\pi$. Radian route: $\\frac{1}{2}r^2\\theta = \\frac{1}{2} \\times 81 \\times \\frac{2\\pi}{3} = 27\\pi$. **Wrong-answer watch**: $6\\pi$ uses the circumference $2\\pi r$; $54\\pi$ is the major ($240^\\circ$) sector's area (a mix-up); $81\\pi$ skips the fraction and uses the whole circle's area. **Quick self-check**: Confirm the sector area is smaller than the whole circle's and matches the angle fraction.",
                             },
                             {
                                 "title": "Level 7: Sine and Cosine",
@@ -3034,7 +3034,7 @@ window.MATH_DATA = {
                                     "$\\frac{5}{3}$"
                                 ],
                                 "answer": "$\\frac{4}{5}$",
-                                "explanation": "**함정 먼저**: $\\sin A = \\frac{3}{5}$이면 대변:빗변 = 3:5다. 3-4-5 직각삼각형을 떠올리면 이웃변은 4, 즉 $\\cos A = \\frac{4}{5}$가 바로 나온다. $A$가 예각이라는 조건이 있어야 부호가 하나로 정해진다. **풀이**: (1) $\\sin^2 A + \\cos^2 A = 1$이므로 $\\cos^2 A = 1 - \\frac{9}{25} = \\frac{16}{25}$. (2) $A$가 예각이므로 $\\cos A > 0$, 즉 $\\cos A = \\frac{4}{5}$. (3) 삼각형으로 검산: 대변 3, 빗변 5이면 이웃변은 $\\sqrt{25-9} = 4$. **Wrong-answer watch**: $\\frac{3}{4}$는 $\\tan A$의 값이다. sin이 주어졌다고 cos이 아니라 tan부터 구하는 실수가 잦다. **Quick self-check**: $\\sin^2 + \\cos^2 = 1$에 대입해 $\\frac{9}{25} + \\frac{16}{25} = 1$인지 확인하라."
+                                "explanation": "**Trap alert**: $\\sin A = \\frac{3}{5}$ means opposite:hypotenuse = 3:5. Picture the 3-4-5 right triangle and the adjacent side is 4 — so $\\cos A = \\frac{4}{5}$ pops out. The 'A is acute' condition is what pins the sign down to one. **Solution**: (1) Since $\\sin^2 A + \\cos^2 A = 1$, $\\cos^2 A = 1 - \\frac{9}{25} = \\frac{16}{25}$. (2) $A$ is acute, so $\\cos A > 0$: $\\cos A = \\frac{4}{5}$. (3) Triangle check: opposite 3, hypotenuse 5 → adjacent $\\sqrt{25-9} = 4$. **Wrong-answer watch**: $\\frac{3}{4}$ is the value of $\\tan A$. Given sine, students often reach for tangent before cosine. **Quick self-check**: Plug into $\\sin^2 + \\cos^2 = 1$: $\\frac{9}{25} + \\frac{16}{25} = 1$.",
                             },
                             {
                                 "title": "Level 8: Degrees to Radians",
@@ -3047,7 +3047,7 @@ window.MATH_DATA = {
                                     "$\\frac{5\\pi}{3}$"
                                 ],
                                 "answer": "$\\frac{5\\pi}{6}$",
-                                "explanation": "**함정 먼저**: 도(degree)를 라디안으로 바꾸는 공식은 '$\\pi/180$을 곱한다'다. 150에 $\\frac{\\pi}{180}$을 곱하면 $\\frac{150\\pi}{180} = \\frac{5\\pi}{6}$. 분자와 분모를 반대로 곱하는 실수가 나온다. **풀이**: (1) $150^\\circ \\times \\frac{\\pi}{180^\\circ} = \\frac{150\\pi}{180}$. (2) 약분: 분자 분모를 30으로 나누면 $\\frac{5\\pi}{6}$. (3) 검산: $150^\\circ$는 $180^\\circ$의 $\\frac{5}{6}$이므로 $\\frac{5}{6} \\times \\pi$와 일치한다. **Wrong-answer watch**: $\\frac{5\\pi}{3}$은 $180/150$처럼 역수를 곱한 답, $\\frac{2\\pi}{3}$는 $120^\\circ$의 값이다. **Quick self-check**: $180^\\circ = \\pi$임을 이용해 비례식으로 검산하라. $150:180 = 5:6$이므로 $\\frac{5\\pi}{6}$."
+                                "explanation": "**Trap alert**: The degree→radian formula is 'multiply by $\\pi/180$.' $150 \\times \\frac{\\pi}{180} = \\frac{150\\pi}{180} = \\frac{5\\pi}{6}$. Students sometimes multiply by the reciprocal. **Solution**: (1) $150^\\circ \\times \\frac{\\pi}{180^\\circ} = \\frac{150\\pi}{180}$. (2) Reduce: divide top and bottom by 30 → $\\frac{5\\pi}{6}$. (3) Check: $150^\\circ$ is $\\frac{5}{6}$ of $180^\\circ$, matching $\\frac{5}{6} \\times \\pi$. **Wrong-answer watch**: $\\frac{5\\pi}{3}$ multiplies by the reciprocal, as in $180/150$; $\\frac{2\\pi}{3}$ is the value for $120^\\circ$. **Quick self-check**: Use $180^\\circ = \\pi$ in a proportion: $150:180 = 5:6$, so $\\frac{5\\pi}{6}$.",
                             },
                             {
                                 "title": "Level 9: Similar Triangles",
@@ -3060,7 +3060,7 @@ window.MATH_DATA = {
                                     "28"
                                 ],
                                 "answer": "21",
-                                "explanation": "**함정 먼저**: 닮은 삼각형 문제의 핵심은 '대응하는 변끼리' 비례식을 세우는 것이다. 기둥 높이 : 기둥 그림자 = 나무 높이 : 나무 그림자. 어느 쪽을 분자에 놓든 대응만 맞으면 된다. **풀이**: (1) 비례식: $\\frac{6}{4} = \\frac{h}{14}$. (2) 외항의 곱: $4h = 84$. (3) $h = 21$피트. (4) 검산: $\\frac{6}{4} = 1.5$, $\\frac{21}{14} = 1.5$로 비율이 일치한다. **Wrong-answer watch**: 18은 비례식을 거꾸로 세운 답이다. '높이 대 그림자'의 순서가 양쪽에서 같아야 한다. **Quick self-check**: 나무가 기둥보다 그림자가 길므로(14 > 4) 나무가 더 높아야 한다. $21 > 6$이므로 방향이 맞다. 닮음비는 길이의 비이고, 넓이의 비는 그 제곱이다. 이 문제는 길이의 비만 쓰지만, SAT는 길이 비에서 넓이 비를 묻는 식으로 한 단계 올리기도 한다. 비례식의 양쪽 순서를 같게 유지하는 것만 기억하면 된다."
+                                "explanation": "**Trap alert**: Similar-triangle problems live or die on setting the proportion 'corresponding side to corresponding side.' Pole height : pole shadow = tree height : tree shadow. Either side can go on top as long as the correspondence matches. **Solution**: (1) Proportion: $\\frac{6}{4} = \\frac{h}{14}$. (2) Cross-multiply: $4h = 84$. (3) $h = 21$ feet. (4) Check: $\\frac{6}{4} = 1.5$ and $\\frac{21}{14} = 1.5$. The ratios match. **Wrong-answer watch**: 18 sets the proportion upside down. The 'height-to-shadow' order must be the same on both sides. **Quick self-check**: The tree's shadow is longer than the pole's (14 > 4), so the tree must be taller. $21 > 6$, so the direction is right. Similarity ratios are length ratios; area ratios are their squares. This problem uses only length ratios, but the SAT sometimes steps it up by asking for an area ratio from a length ratio. Just remember to keep both sides of the proportion in the same order.",
                             },
                             {
                                 "title": "Level 10: Circle Equations",
@@ -3073,31 +3073,31 @@ window.MATH_DATA = {
                                     "$(x-2)^2 + (y+3)^2 = 4$"
                                 ],
                                 "answer": "$(x-2)^2 + (y+3)^2 = 16$",
-                                "explanation": "**함정 먼저**: 원의 방정식 $(x-h)^2 + (y-k)^2 = r^2$에서 중심이 $(2, -3)$이면 $h = 2$, $k = -3$이므로 식은 $(x-2)^2 + (y+3)^2 = 16$이다. $k$의 부호가 뒤집히는 것이 이 유형의 1순위 실수다. **풀이**: (1) 표준형에 대입: $(x-2)^2 + (y-(-3))^2 = 4^2$. (2) 정리하면 $(x-2)^2 + (y+3)^2 = 16$. (3) 검산: 점 $(6, -3)$은 중심에서 4만큼 떨어져 있으므로 원 위에 있어야 한다. $(6-2)^2 + 0 = 16$으로 성립한다. **Wrong-answer watch**: $(x+2)^2 + (y-3)^2 = 16$은 중심 좌표의 부호를 그대로 쓴 답, $= 4$로 끝낸 것은 반지름을 제곱하지 않은 답이다. **Quick self-check**: '$-h$, $-k$' 규칙을 기억하라. 중심 $(h, k)$는 식에서 $(x - h)$, $(y - k)$로 부호가 뒤집혀 들어간다."
+                                "explanation": "**Trap alert**: In the circle equation $(x-h)^2 + (y-k)^2 = r^2$, center $(2, -3)$ gives $h = 2$, $k = -3$, so the equation is $(x-2)^2 + (y+3)^2 = 16$. The flipped sign on $k$ is this type's #1 mistake. **Solution**: (1) Plug into standard form: $(x-2)^2 + (y-(-3))^2 = 4^2$. (2) Simplify: $(x-2)^2 + (y+3)^2 = 16$. (3) Check: the point $(6, -3)$ is 4 units from the center, so it must lie on the circle. $(6-2)^2 + 0 = 16$ holds. **Wrong-answer watch**: $(x+2)^2 + (y-3)^2 = 16$ copies the center's signs as-is; ending with $= 4$ forgets to square the radius. **Quick self-check**: Remember the '$-h$, $-k$' rule. Center $(h, k)$ enters the equation as $(x - h)$, $(y - k)$ — signs flipped.",
                             }
                         ]
                     }
                 },
                 {
-                    "title": "Unit 5: 기출 스타일 실전 문제 (Math)",
-                    "insight": "실제 College Board 기출에서 반복 등장하는 함정 패턴 10선을 모은 실전 세트이다. 단위 변환 누락, 무연근 검증 생략, NOT형 문제의 성급한 답 선택, 연속 백분율의 기준 착각, 부호 오독 같은 실수는 실력이 아니라 습관에서 나온다. 각 문제의 해설은 함정의 정체, 단계별 풀이, 네 보기 전부에 대한 개별 반박, 그리고 스스로 점검하는 방법으로 구성되어 있어 한 문제를 풀면 같은 유형의 함정에는 다시 걸리지 않게 된다.",
+                    "title": "Unit 5: Released-Exam Style Practice (Math)",
+                    "insight": "This is a practice set of the 10 trap patterns that recur on real College Board exams. Mistakes like skipping unit conversion, skipping extraneous-root checks, rushing NOT questions, misreading the base of successive percents, or misreading signs come from habits, not ability. Each explanation covers the trap's identity, the step-by-step solution, an individual rebuttal of all four choices, and a self-check method — work one problem and you'll never fall for that trap type again.",
                     "topics": [
                         "Mixed review",
                         "Test strategy",
-                        "함정 패턴 분석",
-                        "오답 소거법"
+                        "Trap Pattern Analysis",
+                        "Wrong-Answer Elimination",
                     ],
                     "lectures": [],
                     "examples": [],
                     "quiz": {
                         "levels": [
                             {
-                                "title": "기출 1: 단위 변환 함정 — 속력과 시간",
+                                "title": "Released Exam 1: The Unit-Conversion Trap — Speed and Time",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "자동차가 일정한 속력으로 45분 동안 60마일을 이동했다. 같은 속력으로 2시간 15분 동안 이동하면 이동 거리는 몇 마일인가?",
+                                "question": "A car traveled 60 miles in 45 minutes at a constant speed. At the same speed, how many miles would it travel in 2 hours 15 minutes?",
                                 "options": [
                                     "90",
                                     "135",
@@ -3105,31 +3105,31 @@ window.MATH_DATA = {
                                     "270"
                                 ],
                                 "answer": "180",
-                                "explanation": "이 문제가 노리는 함정은 시간 단위를 통일하지 않고 계산하는 실수이다. 45분을 1시간으로 착각하면 시속 60마일로 계산해 2.25×60=135를 고르고, 15분을 0.5시간으로 착각하면 4.5시간으로 계산해 270을 고르며, 분을 통째로 버리고 45×2=90처럼 어림잡는 실수도 흔하다. 풀이 단계는 다음과 같다. 첫째, 모든 시간을 같은 단위로 통일한다. 45분=0.75시간, 2시간 15분=2.25시간이다. 둘째, 속력을 구한다. 60마일÷0.75시간=80mph이다. 셋째, 구한 속력에 이동 시간을 곱한다. 80×2.25=180마일이다. 검산 차원에서 비율로 풀 수도 있다. 2시간 15분은 45분의 정확히 3배이므로 거리도 60마일의 3배인 180마일이다. 오답 반박: 90은 분 단위를 버리고 시간 숫자만 곱한 것으로 단위 개념 자체가 무너진 답이다. 135는 45분을 1시간으로 착각해 시속 60마일이라는 잘못된 속력을 쓴 결과이다. 270은 15분을 0.5시간으로 착각해 이동 시간을 4.5시간으로 부풀린 결과이다. Quick self-check: 답을 구한 뒤 시간 단위가 전부 통일되었는지, 속력의 단위가 mph인지 확인하라. 또한 2시간 15분이 45분의 3배이므로 답이 60의 3배 근처인지 어림셈으로 대조하라. 실전 팁: SAT의 속력·일률 문제에서는 가장 먼저 모든 수량을 같은 단위로 바꾸고, 보기 중에 단위 변환을 생략했을 때 나오는 값이 반드시 하나 이상 섞여 있다는 점을 기억하고 소거하라."
+                                "explanation": "This question's trap is computing without unifying the time units. Mistaking 45 minutes for 1 hour gives 60 mph and the choice 2.25×60=135; mistaking 15 minutes for 0.5 hours inflates the time to 4.5 hours and gives 270; dropping the minutes entirely and estimating 45×2=90 is also common. Here is the step-by-step solution. First, unify all times into the same unit. 45 minutes = 0.75 hours; 2 hours 15 minutes = 2.25 hours. Second, find the speed. 60 miles ÷ 0.75 hours = 80 mph. Third, multiply the speed by the travel time. 80 × 2.25 = 180 miles. You can also solve it by ratio as a check. 2 hours 15 minutes is exactly 3 times 45 minutes, so the distance is 3 times 60 miles = 180 miles. Wrong-answer rebuttal: 90 drops the minute units and multiplies only the hour numbers — the unit concept itself collapses. 135 mistakes 45 minutes for 1 hour, using the wrong speed of 60 mph. 270 mistakes 15 minutes for 0.5 hours, inflating the travel time to 4.5 hours. Quick self-check: after finding the answer, confirm all time units are unified and the speed is in mph. Also, since 2 hours 15 minutes is 3 times 45 minutes, rough-check that the answer is near 3 times 60. Test-day tip: in SAT speed/rate problems, first convert every quantity to the same unit, and remember that the choices always include at least one value you'd get by skipping the unit conversion — eliminate those.",
                             },
                             {
-                                "title": "기출 2: 무연근 함정 — 제곱근 방정식",
+                                "title": "Released Exam 2: The Extraneous-Root Trap — Radical Equations",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "방정식 $\\sqrt{x+5} = x - 1$의 해는?",
+                                "question": "What is the solution of the equation $\\sqrt{x+5} = x - 1$?",
                                 "options": [
                                     "-1",
                                     "4",
-                                    "-1과 4",
-                                    "해가 없다"
+                                    "-1 and 4",
+                                    "No solution",
                                 ],
                                 "answer": "4",
-                                "explanation": "이 문제가 노리는 함정은 양변을 제곱한 뒤 구한 근을 원래 식에 대입해 검증하지 않는 것이다. 제곱은 동치 변형이 아니라 필요조건만 만드는 연산이므로, 제곱 과정에서 원래 방정식을 만족하지 않는 무연근이 끼어들 수 있다. 풀이 단계는 다음과 같다. 첫째, 정의역을 확인한다. 근호 안은 0 이상이어야 하므로 x+5≥0, 즉 x≥-5이다. 또한 우변 x-1은 제곱근(0 이상)과 같아야 하므로 x-1≥0, 즉 x≥1까지 추가로 요구된다. 둘째, 양변을 제곱한다. x+5=(x-1)²=x²-2x+1이 되어 x²-3x-4=0, 즉 (x-4)(x+1)=0이므로 x=4 또는 x=-1이다. 셋째, 반드시 원래 식에 대입한다. x=4이면 √9=3이고 4-1=3이므로 성립한다. x=-1이면 √4=2이지만 -1-1=-2이므로 성립하지 않는다. 따라서 해는 4뿐이다. 오답 반박: -1은 대입 검증을 생략하고 제곱해서 얻은 두 근 중 틀린 쪽만 고른 답이다. -1과 4는 무연근을 걸러내지 못한 답으로, 이 문제의 핵심 함정에 정확히 걸린 선택이다. 해가 없다는 보기는 x=4의 성립을 확인하지 않고 포기한 답이다. Quick self-check: 제곱근·로그 방정식을 풀 때는 마지막에 반드시 원래 식 대입을 하라. 특히 우변이 음수가 될 수 있는 경우 무연근이 생기기 쉽다. 실전 팁: 보기 쌍이 -1, 4, -1과 4, 해가 없다는 식으로 구성되어 있으면 출제자가 무연근 검증을 노린다는 신호이므로, 대입 한 번으로 3개 보기를 날릴 수 있다."
+                                "explanation": "This question's trap is squaring both sides and skipping the check of each root in the original equation. Squaring is not an equivalence-preserving operation — it only creates a necessary condition — so extraneous roots that don't satisfy the original equation can sneak in. Here is the step-by-step solution. First, check the domain. The radicand must be nonnegative: x+5≥0, i.e., x≥-5. Also, the right side x-1 must equal a square root (≥0), additionally requiring x-1≥0, i.e., x≥1. Second, square both sides. x+5=(x-1)²=x²-2x+1 gives x²-3x-4=0, i.e., (x-4)(x+1)=0, so x=4 or x=-1. Third, substitute into the original equation — always. For x=4: √9=3 and 4-1=3, so it holds. For x=-1: √4=2 but -1-1=-2, so it fails. The solution is 4 alone. Wrong-answer rebuttal: -1 skips the substitution check and picks only the wrong one of the two squared roots. '-1 and 4' fails to filter the extraneous root — the choice for students caught by this problem's core trap. 'No solution' gives up without verifying that x=4 works. Quick self-check: when solving radical or log equations, always substitute back into the original at the end. Extraneous roots lurk especially when the right side can be negative. Test-day tip: when the choices are arranged as -1, 4, '-1 and 4,' 'no solution,' that's the test maker's signal that extraneous-root checking is the target — one substitution kills three choices.",
                             },
                             {
-                                "title": "기출 3: NOT형 — 직선과 포물선의 교점 개수",
+                                "title": "Released Exam 3: NOT Format — Intersections of a Line and a Parabola",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "직선 $y = 2x + k$가 포물선 $y = x^2 - 3x + 5$와 서로 다른 두 점에서 만난다. 다음 중 $k$의 값으로 가능하지 않은 것은?",
+                                "question": "The line $y = 2x + k$ meets the parabola $y = x^2 - 3x + 5$ at two distinct points. Which of the following is NOT a possible value of $k$?",
                                 "options": [
                                     "-2",
                                     "-1",
@@ -3137,15 +3137,15 @@ window.MATH_DATA = {
                                     "5"
                                 ],
                                 "answer": "-2",
-                                "explanation": "이 문제가 노리는 함정은 두 가지이다. 첫째, NOT형 질문을 읽지 않고 가능한 값을 고르는 성급함이다. 둘째, 서로 다른 두 점에서 만난다는 조건을 판별식 D>0이 아니라 D≥0으로 착각하는 것이다(여기서는 경곗값이 보기에 없지만 실전에서는 자주 나온다). 풀이 단계는 다음과 같다. 첫째, 두 식을 연립한다. x²-3x+5=2x+k이므로 x²-5x+(5-k)=0이다. 둘째, 서로 다른 두 교점은 이 이차방정식이 서로 다른 두 실근을 갖는다는 뜻이므로 판별식이 0보다 커야 한다. D=(-5)²-4×1×(5-k)=25-20+4k=5+4k>0이다. 셋째, 부등식을 풀면 4k>-5, 즉 k>-1.25이다. 따라서 -1.25보다 큰 값만 가능하다. 보기 중 -2는 -1.25보다 작으므로 가능하지 않다. 오답 반박: -1은 -1.25보다 크므로 조건을 만족해 실제로 가능한 값이다. 0 역시 -1.25보다 크므로 가능하고, 5도 마찬가지이다. 즉 -1, 0, 5는 모두 가능한 값이므로 NOT형 질문의 답이 될 수 없다. Quick self-check: NOT·EXCEPT형 문제는 질문의 마지막 단어를 밑줄 치고, 보기를 하나씩 조건에 대입해 가능 여부를 O/X로 표시하라. 부등식 방향이 바뀌는 지점에서는 경곗값을 보기에 넣고 직접 대입해 확인하는 습관이 안전하다. 실전 팁: 서로 다른 두 점, 접한다, 만나지 않는다는 서로 다른 판별식 조건(D>0, D=0, D<0)을 한 세트로 외워 두고, 문제를 읽자마자 어떤 조건인지 먼저 분류하라."
+                                "explanation": "This question's trap is twofold. First, rushing past the NOT and picking a possible value. Second, mistaking the 'two distinct intersections' condition for D≥0 instead of D>0 (the boundary value isn't among the choices here, but it shows up often on the real test). Here is the step-by-step solution. First, solve the system. x²-3x+5=2x+k gives x²-5x+(5-k)=0. Second, two distinct intersections mean this quadratic has two distinct real roots, so the discriminant must be positive. D=(-5)²-4×1×(5-k)=25-20+4k=5+4k>0. Third, solve the inequality: 4k>-5, i.e., k>-1.25. So only values greater than -1.25 are possible. Among the choices, -2 is less than -1.25, so it is not possible. Wrong-answer rebuttal: -1 is greater than -1.25, so it satisfies the condition — it IS a possible value. 0 is also greater than -1.25, and so is 5. So -1, 0, and 5 are all possible, and none can be the answer to a NOT question. Quick self-check: on NOT/EXCEPT questions, underline the last word of the question and mark each choice O/X for whether it satisfies the condition. At points where the inequality direction flips, get in the habit of plugging the boundary value into the choices directly. Test-day tip: memorize the trio — two distinct points, tangent, no intersection — as D>0, D=0, D<0. Classify which condition the problem wants the moment you read it.",
                             },
                             {
-                                "title": "기출 4: 연속 백분율 — 인상 후 할인",
+                                "title": "Released Exam 4: Successive Percents — Markup then Discount",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "어떤 상품의 가격을 원가에서 40% 인상하여 판매하다가, 그 판매 가격에서 20%를 할인하는 행사를 열었다. 행사 가격은 원가의 몇 %인가?",
+                                "question": "An item's price was marked up 40% from its cost, and then a sale took 20% off the marked price. The sale price is what percent of the cost?",
                                 "options": [
                                     "108%",
                                     "112%",
@@ -3153,31 +3153,31 @@ window.MATH_DATA = {
                                     "120%"
                                 ],
                                 "answer": "112%",
-                                "explanation": "이 문제가 노리는 함정은 백분율의 기준이 매 단계마다 바뀐다는 점을 간과하는 것이다. 40% 인상 후 20% 할인을 40-20=20으로 계산해 120%를 고르는 실수가 가장 흔하고, 인상분과 할인율을 곱한 8%를 순효과로 착각해 108%를 고르는 경우도 있다. 풀이 단계는 다음과 같다. 첫째, 원가를 100이라 둔다. 둘째, 40% 인상된 판매가는 100×1.4=140이다. 셋째, 할인율이 적용되는 기준은 원가가 아니라 판매가 140이다. 140×0.8=112이다. 따라서 행사 가격은 원가의 112%이다. 한 번에 계산하면 1.4×0.8=1.12이다. 오답 반박: 108%는 0.4×0.2=0.08을 순증가율로 착각한 답으로, 곱셈의 의미를 잘못 해석한 것이다. 116%는 중간 계산 과정에서 어림셈 오류를 낸 유형으로, 1.4×0.8을 정확히 계산하면 1.12이지 1.16이 아니다. 120%는 기준이 바뀌는 것을 무시하고 40-20을 직접 뺀 답으로, 연속 백분율 문제의 대표 함정에 걸린 것이다. Quick self-check: 인상 후 할인하면 원가보다 항상 낮아지는지(112%>100이므로 여기서는 여전히 원가보다 높음) 상식으로 대조하고, 1.4×0.8 같은 곱셈은 필산으로 한 번 더 확인하라. 실전 팁: 연속 백분율은 반드시 소수 배율(1.4, 0.8)로 바꿔 곱하라. 보기 중 단순 가감으로 나오는 값(120%)이 있으면 일단 의심하고, 곱셈 결과를 기준으로 소거하라."
+                                "explanation": "This question's trap is ignoring that the percent's base changes at each step. The most common slip is computing 40-20=20 and picking 120%; some mistake the product of the markup and discount rates (8%) for the net effect and pick 108%. Here is the step-by-step solution. First, set the cost to 100. Second, the 40%-marked-up price is 100×1.4=140. Third, the discount applies to the marked price 140, not the cost. 140×0.8=112. So the sale price is 112% of the cost. In one shot: 1.4×0.8=1.12. Wrong-answer rebuttal: 108% mistakes 0.4×0.2=0.08 for the net increase — a misread of what multiplication means. 116% is the estimation-slip type: computing 1.4×0.8 carefully gives 1.12, not 1.16. 120% ignores the changing base and subtracts 40-20 directly — the signature trap of successive-percent problems. Quick self-check: sanity-check with common sense whether markup-then-discount ends above cost (here 112%>100, still above), and re-verify multiplications like 1.4×0.8 by hand. Test-day tip: always convert successive percents to decimal multipliers (1.4, 0.8) and multiply. If a choice equals the naive add/subtract result (120%), suspect it first and eliminate against the multiplication.",
                             },
                             {
-                                "title": "기출 5: 그래프 오독 — 이차함수의 꼭짓점 (NOT형)",
+                                "title": "Released Exam 5: Graph Misread — Vertex of a Quadratic (NOT Format)",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "함수 $f(x) = -2(x-3)^2 + 5$에 대한 설명으로 옳지 않은 것은?",
+                                "question": "Which of the following statements about the function $f(x) = -2(x-3)^2 + 5$ is NOT true?",
                                 "options": [
-                                    "그래프의 꼭짓점은 (3, 5)이다.",
-                                    "x = 3에서 최댓값 5를 갖는다.",
-                                    "y절편은 -13이다.",
-                                    "x > 3인 구간에서 함수는 증가한다."
+                                    "The graph's vertex is (3, 5).",
+                                    "It has a maximum value of 5 at x = 3.",
+                                    "The y-intercept is -13.",
+                                    "The function increases on the interval x > 3.",
                                 ],
-                                "answer": "x > 3인 구간에서 함수는 증가한다.",
-                                "explanation": "이 문제가 노리는 함정은 이차항의 계수 -2의 부호를 놓치고 그래프를 위로 볼록한 포물선으로 오독하는 것이다. 부호 하나가 꼭짓점의 최대·최소, 증가·감소 구간을 전부 뒤집는다. 풀이 단계는 다음과 같다. 첫째, 표준형 f(x)=a(x-h)²+k에서 a=-2, h=3, k=5를 읽는다. 둘째, a<0이므로 그래프는 아래로 볼록하고 꼭짓점 (3, 5)에서 최댓값 5를 갖는다. 셋째, y절편은 f(0)=-2×(0-3)²+5=-2×9+5=-13이다. 넷째, 아래로 볼록한 포물선은 꼭짓점 왼쪽(x<3)에서는 증가하고 오른쪽(x>3)에서는 감소한다. 따라서 x>3에서 증가한다는 설명은 옳지 않다. 오답 반박: 꼭짓점은 (3, 5)이다는 표준형에서 직접 읽히는 참인 설명이다. x=3에서 최댓값 5를 갖는다는 a<0인 포물선의 성질상 참이다. y절편은 -13이다는 f(0)을 계산하면 확인되는 참인 설명이다. 이 셋은 모두 옳으므로 NOT형 질문의 답이 될 수 없다. Quick self-check: 이차함수 문제를 만나면 가장 먼저 a의 부호에 동그라미를 치고 볼록 방향을 화살표로 그려라. 증가·감소 구간은 꼭짓점을 기준으로 좌우가 반대임을 입으로 중얼이며 확인하라. 실전 팁: NOT형 보기는 셋이 참이고 하나만 거짓이다. 계산으로 확실히 참인 보기부터 지워 나가면 마지막에 남는 하나가 답이 되므로, 헷갈리는 보기부터 붙잡지 말고 쉬운 것부터 소거하라."
+                                "answer": "The function increases on the interval x > 3.",
+                                "explanation": "This question's trap is missing the negative sign on the quadratic coefficient -2 and misreading the graph as an upward-opening parabola. One sign flips the vertex's max/min and the increasing/decreasing intervals entirely. Here is the step-by-step solution. First, read the standard form f(x)=a(x-h)²+k: a=-2, h=3, k=5. Second, a<0 means the graph opens downward, with maximum value 5 at the vertex (3, 5). Third, the y-intercept is f(0)=-2×(0-3)²+5=-2×9+5=-13. Fourth, a downward-opening parabola increases left of the vertex (x<3) and decreases right of it (x>3). So 'increases for x>3' is NOT true. Wrong-answer rebuttal: 'The vertex is (3, 5)' reads straight out of standard form — true. 'Maximum 5 at x=3' is true for a parabola with a<0. 'The y-intercept is -13' is confirmed by computing f(0) — true. All three are true, so none can answer a NOT question. Quick self-check: on quadratic problems, first circle the sign of a and sketch the opening direction with an arrow. For increasing/decreasing intervals, mutter 'left and right of the vertex are opposite' as you confirm. Test-day tip: in NOT questions, three choices are true and one is false. Eliminate the clearly-true choices by computation first; the one left standing is the answer — don't wrestle with the confusing choice first.",
                             },
                             {
-                                "title": "기출 6: 지수 법칙 — 밑 통일 함정",
+                                "title": "Released Exam 6: Exponent Laws — The Unify-the-Base Trap",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "방정식 $3^{2x} = 81^{x-1}$을 만족하는 $x$의 값은?",
+                                "question": "What is the value of $x$ satisfying the equation $3^{2x} = 81^{x-1}$?",
                                 "options": [
                                     "1",
                                     "2",
@@ -3185,15 +3185,15 @@ window.MATH_DATA = {
                                     "4"
                                 ],
                                 "answer": "2",
-                                "explanation": "이 문제가 노리는 함정은 81을 3의 거듭제곱으로 바꿀 때 지수를 잘못 세는 것이다. 81=3⁴인데 3³=27과 헷갈려 3으로 착각하면 2x=3(x-1)에서 x=3이라는 깔끔한 오답이 나온다. 출제자는 이 오답이 그럴듯해 보이도록 보기에 3을 넣어 둔다. 풀이 단계는 다음과 같다. 첫째, 양변의 밑을 3으로 통일한다. 81=3⁴이므로 우변은 (3⁴)^(x-1)=3^(4(x-1))이다. 둘째, 밑이 같으므로 지수끼리 비교한다. 2x=4(x-1)이다. 셋째, 2x=4x-4에서 2x=4, 즉 x=2이다. 검산하면 좌변은 3⁴=81, 우변은 81¹=81로 일치한다. 오답 반박: 1을 대입하면 좌변은 3²=9, 우변은 81⁰=1이므로 성립하지 않는다. 3은 81을 3³으로 착각했을 때 나오는 값으로, 이 문제의 핵심 함정에 걸린 답이다. 4를 대입하면 좌변은 3⁸=6561, 우변은 81³으로 성립하지 않으며, 지수 전개 과정에서 (x-1) 분배를 잘못한 경우에 나오는 값이다. Quick self-check: 81, 64, 32 같은 수는 3⁴=81, 2⁶=64, 2⁵=32처럼 거듭제곱 표를 머릿속에서 한 번 더 세어라. 답을 구한 뒤에는 원래 식에 대입해 양변이 같은지 반드시 확인하라. 실전 팁: 지수방정식에서는 밑 통일이 1순위이다. 81=3⁴, 27=3³, 16=2⁴ 같은 변환을 손이 기억하도록 평소에 외워 두면 시험장에서 시간을 벌 수 있다."
+                                "explanation": "This question's trap is miscounting the exponent when rewriting 81 as a power of 3. 81=3⁴, but confusing it with 3³=27 gives the clean-looking wrong answer from 2x=3(x-1): x=3. The test maker plants 3 among the choices to make that wrong answer look plausible. Here is the step-by-step solution. First, unify both sides to base 3. 81=3⁴, so the right side is (3⁴)^(x-1)=3^(4(x-1)). Second, with equal bases, compare exponents: 2x=4(x-1). Third, 2x=4x-4 gives 2x=4, so x=2. Checking: left side is 3⁴=81, right side is 81¹=81. They match. Wrong-answer rebuttal: plugging in 1 gives 3²=9 on the left and 81⁰=1 on the right — not equal. 3 is the value from mistaking 81 for 3³ — the answer for students caught by this problem's core trap. Plugging in 4 gives 3⁸=6561 on the left versus 81³ on the right — not equal; it's the value from mishandling the (x-1) distribution during exponent expansion. Quick self-check: recount powers like 81, 64, 32 in your head — 3⁴=81, 2⁶=64, 2⁵=32. After solving, always substitute back into the original equation and confirm both sides agree. Test-day tip: in exponential equations, unifying the base is priority one. Keep conversions like 81=3⁴, 27=3³, 16=2⁴ in your fingers so you save time on test day.",
                             },
                             {
-                                "title": "기출 7: 부등식 — 음수로 나눌 때 부등호 반전",
+                                "title": "Released Exam 7: Inequalities — Flipping the Sign When Dividing by a Negative",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "부등식 $-5x + 3 > 28$을 만족하는 $x$의 범위는?",
+                                "question": "What is the range of $x$ satisfying the inequality $-5x + 3 > 28$?",
                                 "options": [
                                     "x > -5",
                                     "x < -5",
@@ -3201,15 +3201,15 @@ window.MATH_DATA = {
                                     "x < 5"
                                 ],
                                 "answer": "x < -5",
-                                "explanation": "이 문제가 노리는 함정은 음수로 나누거나 곱할 때 부등호의 방향을 바꾸지 않는 것이다. 등식처럼 기계적으로 풀면 x>-5라는 보기가 나오는데, 출제자는 이 오답을 첫 번째 보기에 배치해 성급한 선택을 유도한다. 풀이 단계는 다음과 같다. 첫째, 상수항을 이항한다. -5x>28-3, 즉 -5x>25이다. 둘째, 양변을 -5로 나눈다. 음수로 나누므로 부등호의 방향이 바뀌어 x<-5가 된다. 셋째, 검산한다. x=-6을 대입하면 -5×(-6)+3=33>28로 성립하고, x=-4를 대입하면 20+3=23>28이 거짓이므로 경계 -5를 기준으로 왼쪽이 맞다. 오답 반박: x>-5는 부등호 반전을 빠뜨린 답으로 이 문제의 대표 함정이다. x>5는 이항 과정에서 부호를 잘못 처리한 답이다. x<5는 상수 계산(28-3=25)과 부호 처리를 동시에 틀린 경우에 나오는 값이다. Quick self-check: 부등식을 풀 때는 음수로 나누는 순간 부등호에 표시를 하고, 답을 구한 뒤 경계 양쪽의 수를 하나씩 대입해 어느 쪽이 성립하는지 확인하라. 실전 팁: 보기 4개가 부등호 방향과 경계 부호의 조합으로만 이루어진 문제는 출제자가 부호 실수를 노린다는 뜻이다. 천천히 한 줄씩 쓰면서 풀고, 마지막에 대입 검산으로 확정하라."
+                                "explanation": "This question's trap is forgetting to reverse the inequality when dividing or multiplying by a negative. Solving mechanically like an equation produces the choice x>-5 — which the test maker places first to lure the hasty. Here is the step-by-step solution. First, transpose the constant: -5x>28-3, i.e., -5x>25. Second, divide both sides by -5. Dividing by a negative flips the inequality: x<-5. Third, verify. Plugging x=-6 gives -5×(-6)+3=33>28, which holds; x=-4 gives 20+3=23>28, which is false — so left of the boundary -5 is correct. Wrong-answer rebuttal: x>-5 skips the flip — this problem's signature trap. x>5 mishandles the sign during transposition. x<5 botches both the constant arithmetic (28-3=25) and the sign handling. Quick self-check: when solving inequalities, mark the inequality the moment you divide by a negative, then test one number on each side of the boundary after solving. Test-day tip: when the four choices are just combinations of inequality direction and boundary sign, the test maker is hunting sign slips. Work slowly, one line at a time, and lock it in with a substitution check at the end.",
                             },
                             {
-                                "title": "기출 8: 통계 — 평균과 중앙값의 차이",
+                                "title": "Released Exam 8: Statistics — Mean vs. Median",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "다섯 개의 수 4, 6, 9, 11, 30에 대하여 (평균) − (중앙값)의 값은?",
+                                "question": "For the five numbers 4, 6, 9, 11, 30, what is (mean) − (median)?",
                                 "options": [
                                     "3",
                                     "6",
@@ -3217,15 +3217,15 @@ window.MATH_DATA = {
                                     "21"
                                 ],
                                 "answer": "3",
-                                "explanation": "이 문제가 노리는 함정은 두 가지이다. 첫째, 이상값 30에 끌려 평균 대신 최댓값을 쓰는 실수이다. 둘째, 평균을 구하는 나눗셈을 생략하고 합계를 그대로 쓰는 실수이다. 풀이 단계는 다음과 같다. 첫째, 평균을 구한다. 합은 4+6+9+11+30=60이고 자료가 5개이므로 평균은 60÷5=12이다. 둘째, 중앙값을 구한다. 자료가 이미 크기 순으로 정렬되어 있으므로 가운데인 세 번째 값 9가 중앙값이다. 셋째, 차이를 구한다. 12-9=3이다. 참고로 30 같은 큰 이상값이 있으면 평균이 중앙값보다 커지는 경향이 있는데, 여기서는 그 차이가 3으로 나타났다. 오답 반박: 6은 평균 계산 과정에서 나눗셈을 잘못했거나 중앙값을 6으로 잘못 읽은 경우에 나오는 값이다. 12는 평균 자체를 답으로 쓴 것으로, 마지막에 중앙값을 빼는 단계를 생략한 실수이다. 21은 30-9로 최댓값에서 중앙값을 뺀 것으로, 평균 대신 최댓값을 쓴 대표 함정에 걸린 답이다. Quick self-check: 평균은 합계를 자료 수로 나누었는지, 중앙값은 정렬된 자료의 가운데 값인지 각각 따로 확인하라. 이상값이 있으면 평균이 중앙값 쪽으로 끌려간다는 방향성도 어림셈에 활용하라. 실전 팁: 통계 문제의 보기는 평균·중앙값·최댓값·합계를 뒤섞어 만든 경우가 많다. 무엇을 구했는지 문제의 마지막 줄을 다시 읽고, 구한 값이 평균인지 합계인지 한 번 더 물어보라."
+                                "explanation": "This question's trap is twofold. First, being pulled by the outlier 30 and using the maximum instead of the mean. Second, skipping the division when computing the mean and using the total as-is. Here is the step-by-step solution. First, find the mean. The total is 4+6+9+11+30=60, with 5 data points, so the mean is 60÷5=12. Second, find the median. The data is already sorted, so the middle — third — value 9 is the median. Third, the difference: 12-9=3. Note the tendency: a large outlier like 30 pulls the mean above the median — here the gap is 3. Wrong-answer rebuttal: 6 comes from botching the division in the mean computation or misreading the median as 6. 12 uses the mean itself as the answer — the slip of skipping the final median subtraction. 21 is 30-9, subtracting the median from the maximum — the choice for students caught by the use-the-maximum-instead-of-the-mean trap. Quick self-check: separately verify that you divided the total by the count for the mean, and that the median is the middle of sorted data. Also use direction sense for estimation: an outlier drags the mean toward itself. Test-day tip: statistics choices often shuffle mean, median, maximum, and total. Re-read the question's last line to check what you computed, and ask once more whether your value is a mean or a total.",
                             },
                             {
-                                "title": "기출 9: 원의 방정식 — 완전제곱식 변형",
+                                "title": "Released Exam 9: Circle Equations — Completing the Square",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "원 $x^2 + y^2 - 10x + 4y + 20 = 0$의 반지름의 길이는?",
+                                "question": "What is the radius of the circle $x^2 + y^2 - 10x + 4y + 20 = 0$?",
                                 "options": [
                                     "3",
                                     "6",
@@ -3233,15 +3233,15 @@ window.MATH_DATA = {
                                     "20"
                                 ],
                                 "answer": "3",
-                                "explanation": "이 문제가 노리는 함정은 반지름의 제곱인 9를 그대로 답으로 고르는 것이다. 완전제곱식으로 변형한 뒤 우변에 남는 수가 r²임을 잊고 r로 착각하면 9를 고르게 되는데, 출제자는 이 오답을 보기에 반드시 넣어 둔다. 풀이 단계는 다음과 같다. 첫째, x항과 y항을 각각 묶는다. (x²-10x)+(y²+4y)+20=0이다. 둘째, 완전제곱식을 만든다. x²-10x=(x-5)²-25, y²+4y=(y+2)²-4이다. 셋째, 대입해 정리한다. (x-5)²-25+(y+2)²-4+20=0이므로 (x-5)²+(y+2)²=9이다. 넷째, 표준형 (x-a)²+(y-b)²=r²와 비교하면 r²=9이므로 r=3이다(반지름은 양수). 오답 반박: 9는 r²를 r로 착각한 답으로 이 문제의 핵심 함정이다. 6은 반지름 대신 지름을 구한 답으로, 원 문제에서 자주 나오는 혼동이다. 20은 상수항을 반지름과 연결 지은 답으로, 완전제곱식 변형을 시도하지 않고 눈에 보이는 숫자를 고른 것이다. Quick self-check: 변형이 끝나면 중심 (5, -2)가 원래 식의 x, y 계수 부호와 반대인지, 우변의 수가 제곱근을 씌워야 하는지 확인하라. r²=9에서 r=±3이 나오지만 길이는 양수이므로 3이다. 실전 팁: 원의 방정식 문제는 완전제곱식 변형이 끝나면 중심과 반지름을 따로 적어 두라. 보기에는 r², 지름, 상수항이 섞여 있으므로 무엇을 물었는지 마지막에 다시 확인하라."
+                                "explanation": "This question's trap is picking 9 — the square of the radius — as the answer. After completing the square, the number left on the right side is r²; forget that and mistake it for r, and you'll pick 9 — which the test maker always includes. Here is the step-by-step solution. First, group the x and y terms: (x²-10x)+(y²+4y)+20=0. Second, complete the squares: x²-10x=(x-5)²-25, y²+4y=(y+2)²-4. Third, substitute and simplify: (x-5)²-25+(y+2)²-4+20=0, so (x-5)²+(y+2)²=9. Fourth, compare with standard form (x-a)²+(y-b)²=r²: r²=9, so r=3 (radius is positive). Wrong-answer rebuttal: 9 mistakes r² for r — this problem's core trap. 6 computes the diameter instead of the radius, a common circle confusion. 20 links the constant term to the radius — the choice for students who grab a visible number without completing the square. Quick self-check: after the transformation, check that the center (5, -2) has signs opposite the original x, y coefficients, and that the right-side number needs a square root. From r²=9, r=±3, but length is positive, so 3. Test-day tip: on circle-equation problems, write the center and radius separately once the square is complete. The choices mix r², diameter, and the constant term — re-check what was asked at the end.",
                             },
                             {
-                                "title": "기출 10: 다단계 — 합과 곱으로 두 수 구하기",
+                                "title": "Released Exam 10: Multi-Step — Finding Two Numbers from Sum and Product",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "합이 18이고 곱이 72인 두 수에 대하여, 큰 수에서 작은 수를 뺀 값은?",
+                                "question": "Two numbers have sum 18 and product 72. What is the larger number minus the smaller?",
                                 "options": [
                                     "3",
                                     "6",
@@ -3249,7 +3249,7 @@ window.MATH_DATA = {
                                     "12"
                                 ],
                                 "answer": "6",
-                                "explanation": "이 문제가 노리는 함정은 두 수를 구하는 데서 멈추고 마지막 뺄셈 단계를 생략하는 것이다. 두 수 12와 6을 구한 뒤 큰 수 12를 그대로 답으로 고르는 실수가 가장 흔하며, 출제자는 12를 보기에 넣어 둔다. 풀이 단계는 다음과 같다. 첫째, 두 수를 a, b라 하면 a+b=18, ab=72이다. 둘째, a, b는 이차방정식 t²-18t+72=0의 두 근이다(근과 계수의 관계). 셋째, 인수분해한다. t²-18t+72=(t-12)(t-6)=0이므로 두 수는 12와 6이다. 넷째, 문제에서 요구한 큰 수에서 작은 수를 뺀 값은 12-6=6이다. 검산하면 합은 18, 곱은 72로 조건과 일치한다. 오답 반박: 3은 인수분해 과정에서 계수를 잘못 다룬 경우에 나오는 값으로, (t-12)(t-6)의 전개가 t²-18t+72인지 확인하면 배제된다. 9는 두 수의 평균(18÷2)으로, 뺄셈이 아니라 나눗셈을 한 답이다. 12는 두 수 중 큰 수 자체로, 마지막 뺄셈 단계를 생략한 대표 함정에 걸린 답이다. Quick self-check: 다단계 문제는 무엇을 구했는지가 아니라 무엇을 물었는지를 마지막에 다시 읽어라. 구한 두 수를 원래 조건(합과 곱)에 대입해 검산하는 습관이 오답을 막는다. 실전 팁: 합과 곱이 주어지면 이차방정식 t²-(합)t+(곱)=0을 세우는 것이 가장 빠른 길이다. 인수분해가 안 되면 근의 공식을 쓰되, 그래도 안 되면 두 수의 차이를 d라 두고 연립하는 방법도 있다."
+                                "explanation": "This question's trap is stopping after finding the two numbers and skipping the final subtraction. Finding 12 and 6 and then picking 12 itself is the most common slip — and the test maker includes 12. Here is the step-by-step solution. First, call the numbers a and b: a+b=18, ab=72. Second, a and b are the two roots of t²-18t+72=0 (Vieta's formulas). Third, factor: t²-18t+72=(t-12)(t-6)=0, so the numbers are 12 and 6. Fourth, the required larger-minus-smaller is 12-6=6. Checking: the sum is 18 and the product is 72, matching the conditions. Wrong-answer rebuttal: 3 comes from mishandling coefficients during factoring — verify by expanding (t-12)(t-6) to t²-18t+72 and it's ruled out. 9 is the numbers' average (18÷2) — the division-instead-of-subtraction answer. 12 is the larger number itself — the choice for students caught by the skip-the-final-subtraction trap. Quick self-check: on multi-step problems, re-read what was asked at the end — not what you found. Plugging your two numbers into the original conditions (sum and product) blocks wrong answers. Test-day tip: given sum and product, setting up t²-(sum)t+(product)=0 is the fastest route. If it doesn't factor, use the quadratic formula; if that still fails, call the difference d and solve the system.",
                             }
                         ]
                     }
@@ -3855,25 +3855,25 @@ window.MATH_DATA = {
                     }
                 },
                 {
-                    "title": "Unit 6: 기출 스타일 실전 문제 (Reading & Writing)",
-                    "insight": "실제 College Board 기출의 지문 스타일을 재현한 실전 세트이다. 어휘 문제는 문맥 속 논리 관계(부정·대조)를, 독해 문제는 지문이 실제로 뒷받침하는 범위를, 문법 문제는 수식어에 가려진 진짜 주어를 노린다. 각 해설은 함정의 정체, 단계별 풀이, 네 보기 전부에 대한 개별 반박, 그리고 스스로 점검하는 방법으로 구성되어 있어 같은 유형의 함정에 다시 걸리지 않게 된다.",
+                    "title": "Unit 6: Released-Exam Style Practice (Reading & Writing)",
+                    "insight": "This is a practice set reproducing the passage style of real College Board exams. Vocabulary questions target logical relationships in context (negation, contrast), reading questions target the range the passage actually supports, and grammar questions target the true subject hiding behind modifiers. Each explanation covers the trap's identity, the step-by-step solution, an individual rebuttal of all four choices, and a self-check method — so you'll never fall for the same trap type again.",
                     "topics": [
                         "Mixed review",
                         "Test strategy",
-                        "지문 독해",
-                        "문법·수사"
+                        "Passage Reading",
+                        "Grammar & Rhetoric",
                     ],
                     "lectures": [],
                     "examples": [],
                     "quiz": {
                         "levels": [
                             {
-                                "title": "기출 1: 문맥 속 어휘 — 논리 관계 파악",
+                                "title": "Released Exam 1: Vocabulary in Context — Spotting the Logic",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "The committee's final report was far from ___: its recommendations were so vague and heavily qualified that officials could justify almost any course of action by citing it.<br><br>빈칸에 들어갈 가장 적절한 단어는?",
+                                "question": "The committee's final report was far from ___: its recommendations were so vague and heavily qualified that officials could justify almost any course of action by citing it.<br><br>Which word best fits the blank?",
                                 "options": [
                                     "ambiguous",
                                     "concise",
@@ -3881,79 +3881,79 @@ window.MATH_DATA = {
                                     "provocative"
                                 ],
                                 "answer": "decisive",
-                                "explanation": "이 문제가 노리는 함정은 콜론 뒤의 설명을 읽지 않고 빈칸 앞의 far from만 보고 어림잡는 것이다. far from은 부정의 논리이므로, 빈칸에는 콜론 뒤에서 묘사된 성질(vague, heavily qualified)과 반대되는 단어가 들어가야 한다. 풀이 단계는 다음과 같다. 첫째, 문장의 논리 구조를 파악한다. far from ___ 다음에 콜론이 오므로, 콜론 뒤는 빈칸의 단어에 대한 설명 또는 그 반대에 대한 설명이다. 둘째, 콜론 뒤를 읽는다. 권고안이 모호하고 단서가 많아 어떤 행동이든 정당화할 수 있었다고 했으므로, 보고서는 결단력 있는 것과는 거리가 멀었다는 뜻이다. 셋째, vague의 반대 의미를 가진 단어를 고른다. decisive(결단력 있는, 명확한)가 적절하다. 오답 반박: ambiguous(모호한)는 콜론 뒤의 vague와 같은 의미이므로 far from과 결합하면 문장 전체가 모순된다. 이 보기는 논리 관계를 무시하고 유사어에 끌린 함정이다. concise(간결한)는 권고안이 장황했다는 언급이 없으므로 문맥상 근거가 없다. provocative(도발적인)는 지문 어디에도 도발성에 대한 언급이 없어 근거 없는 보기이다. Quick self-check: 어휘 문제에서는 빈칸 앞뒤의 논리 연결어(far from, but, however, colon)를 먼저 표시하고, 콜론·대시 뒤의 설명이 빈칸과 같은 방향인지 반대 방향인지 정한 뒤 보기를 대입하라. 실전 팁: 보기 중에 지문의 단어와 유사한 것(ambiguous≈vague)이 있으면 일단 의심하라. SAT 어휘 문제는 동의어가 아니라 논리 관계를 묻는다."
+                                "explanation": "This question's trap is eyeballing the blank from 'far from' alone without reading the explanation after the colon. 'Far from' sets up a negation, so the blank must take the opposite of the quality described after the colon (vague, heavily qualified). Here is the step-by-step solution. First, map the sentence's logic. 'Far from ___' is followed by a colon, so what follows explains the blank word — or its opposite. Second, read past the colon. The recommendations were vague and so heavily qualified that any action could be justified — meaning the report was far from being decisive. Third, pick the word opposite in meaning to vague: decisive (resolute, clear) fits. Wrong-answer rebuttal: ambiguous (vague) means the same as the post-colon's 'vague,' so combined with 'far from' the whole sentence contradicts itself. This choice is the trap for students pulled by a near-synonym while ignoring the logic. Concise has no textual support — nothing says the recommendations were wordy. Provocative has no mention of provocativeness anywhere in the passage — an unsupported choice. Quick self-check: on vocabulary questions, first mark the logic connectors around the blank (far from, but, however, colon), decide whether the post-colon/dash explanation points the same way as the blank or the opposite way, then plug in the choices. Test-day tip: if a choice resembles a passage word (ambiguous≈vague), suspect it first. SAT vocabulary questions test logic, not synonyms.",
                             },
                             {
-                                "title": "기출 2: 문학 지문 — 중심 생각 파악",
+                                "title": "Released Exam 2: Literary Passage — Finding the Central Idea",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "When Mara returned to the coastal town where she had grown up, she expected the familiar streets to feel like home. Instead, the bakery on the corner had become a cafe she did not recognize, and neighbors she once knew greeted her as a stranger. She felt, oddly, like a tourist in her own memory — welcomed by the sea air, yet shut out of the life that continued without her.<br><br>이 지문에서 Mara의 경험에 대한 중심 생각으로 가장 적절한 것은?",
+                                "question": "When Mara returned to the coastal town where she had grown up, she expected the familiar streets to feel like home. Instead, the bakery on the corner had become a cafe she did not recognize, and neighbors she once knew greeted her as a stranger. She felt, oddly, like a tourist in her own memory — welcomed by the sea air, yet shut out of the life that continued without her.<br><br>Which of the following best states the central idea of Mara's experience in the passage?",
                                 "options": [
-                                    "고향에 대한 향수가 그녀를 실망시켰다.",
-                                    "익숙한 장소도 시간이 지나면 낯설게 느껴질 수 있다.",
-                                    "그녀는 고향을 영원히 떠나기로 결심했다.",
-                                    "이웃들은 그녀를 따뜻하게 환영했다."
+                                    "Nostalgia for her hometown left her disappointed.",
+                                    "Even familiar places can feel unfamiliar over time.",
+                                    "She decided to leave her hometown forever.",
+                                    "The neighbors welcomed her warmly.",
                                 ],
-                                "answer": "익숙한 장소도 시간이 지나면 낯설게 느껴질 수 있다.",
-                                "explanation": "이 문제가 노리는 함정은 지문의 감정(실망, 향수)에만 반응해 세부 감정을 답으로 고르는 것이다. 중심 생각은 주인공의 감정이 아니라 그 감정을 통해 드러나는 일반적 통찰이다. 풀이 단계는 다음과 같다. 첫째, 기대와 현실의 대조를 찾는다. 익숙할 것이라 기대했지만 빵집은 모르는 카페가 되었고 이웃은 낯선 사람처럼 대했다. 둘째, 핵심 비유를 읽는다. like a tourist in her own memory는 자신의 기억 속 장소가 낯설게 느껴진다는 뜻이다. 셋째, 이를 일반화한다. 익숙했던 장소도 시간이 흐르면 낯설게 느껴질 수 있다는 것이 중심 생각이다. 오답 반박: 고향에 대한 향수가 그녀를 실망시켰다는 감정 묘사에만 머문 보기로, 지문의 통찰(낯설음의 원인인 시간의 흐름)을 담지 못한다. 그녀는 고향을 영원히 떠나기로 결심했다는 지문에 전혀 없는 결심을 지어낸 보기로, 텍스트 근거가 없다. 이웃들은 그녀를 따뜻하게 환영했다는 greeted her as a stranger와 정반대로 읽은 보기로, 세부 사실을 오독한 함정이다. Quick self-check: 중심 생각 보기에서는 too specific(세부 감정·사건만), too broad(지문 범위 초과), opposite(정반대), invented(근거 없음)의 네 유형을 각각 의심하라. 정답은 지문 전체를 포괄하면서도 지문을 벗어나지 않는 보기이다. 실전 팁: like a tourist in her own memory 같은 핵심 비유 문장은 밑줄 치고, 보기와 비유를 직접 대조하라."
+                                "answer": "Even familiar places can feel unfamiliar over time.",
+                                "explanation": "This question's trap is reacting only to the passage's emotions (disappointment, nostalgia) and picking a choice about the feeling. The central idea isn't the character's emotion — it's the general insight revealed through it. Here is the step-by-step solution. First, find the expectation-vs-reality contrast. She expected familiarity, but the bakery had become an unrecognized cafe and neighbors treated her like a stranger. Second, read the key metaphor: 'like a tourist in her own memory' means a place from her own memories felt unfamiliar. Third, generalize: even once-familiar places can come to feel unfamiliar with time — that's the central idea. Wrong-answer rebuttal: 'Nostalgia for her hometown left her disappointed' stays at the level of emotion and misses the passage's insight (time's passage causing the unfamiliarity). 'She decided to leave her hometown forever' invents a decision the text never mentions — no textual basis. 'The neighbors welcomed her warmly' misreads the detail in the exact opposite way ('greeted her as a stranger') — the misread-detail trap. Quick self-check: for central-idea choices, suspect each of the four types — too specific (only a feeling or event), too broad (beyond the passage), opposite, invented (no basis). The right answer covers the whole passage without leaving it. Test-day tip: underline key-metaphor sentences like 'like a tourist in her own memory' and compare the choices directly against the metaphor.",
                             },
                             {
-                                "title": "기출 3: 데이터 기반 추론 — 연구 결과 해석",
+                                "title": "Released Exam 3: Data-Based Inference — Interpreting Results",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "Researchers grew three groups of seedlings under identical conditions except for light color: red, blue, and white light. After four weeks, the average heights were 12.4 cm under red light, 8.1 cm under blue light, and 10.6 cm under white light. The researchers concluded that light color affects growth rate.<br><br>위 자료가 뒷받침하는 진술은?",
+                                "question": "Researchers grew three groups of seedlings under identical conditions except for light color: red, blue, and white light. After four weeks, the average heights were 12.4 cm under red light, 8.1 cm under blue light, and 10.6 cm under white light. The researchers concluded that light color affects growth rate.<br><br>Which statement is best supported by the data above?",
                                 "options": [
-                                    "빨간빛은 파란빛보다 묘목의 성장을 촉진한다.",
-                                    "흰빛은 모든 색의 빛보다 성장을 촉진한다.",
-                                    "빛의 색은 묘목의 성장에 영향을 주지 않는다.",
-                                    "파란빛은 빨간빛보다 묘목을 4.3cm 더 크게 자라게 한다."
+                                    "Red light promotes seedling growth more than blue light.",
+                                    "White light promotes growth more than every other color of light.",
+                                    "Light color has no effect on seedling growth.",
+                                    "Blue light makes seedlings grow 4.3 cm taller than red light.",
                                 ],
-                                "answer": "빨간빛은 파란빛보다 묘목의 성장을 촉진한다.",
-                                "explanation": "이 문제가 노리는 함정은 자료에 없는 비교를 지어내거나 수치를 뒤바꿔 읽는 것이다. 데이터 문제는 지문이 말한 범위 안에서만 답을 고르는 것이 핵심이다. 풀이 단계는 다음과 같다. 첫째, 조건을 확인한다. 빛의 색을 제외한 모든 조건이 동일하므로 높이 차이는 빛의 색 때문으로 볼 수 있다. 둘째, 수치를 비교한다. 빨강 12.4cm > 흰색 10.6cm > 파랑 8.1cm이다. 셋째, 각 보기를 수치와 대조한다. 빨간빛이 파란빛보다 성장을 촉진한다는 12.4>8.1로 뒷받침된다. 오답 반박: 흰빛은 모든 색의 빛보다 성장을 촉진한다는 빨강 12.4cm가 흰색 10.6cm보다 크므로 수치와 정면으로 모순된다. 빛의 색은 묘목의 성장에 영향을 주지 않는다는 연구자의 결론(빛의 색이 성장 속도에 영향을 준다)과 정반대이며, 세 집단의 높이 차이 자체를 부정하는 보기이다. 파란빛은 빨간빛보다 묘목을 4.3cm 더 크게 자라게 한다는 4.3cm라는 차이는 맞지만(12.4-8.1=4.3) 방향이 뒤바뀐 것으로, 수치는 맞고 해석이 틀린 교묘한 함정이다. Quick self-check: 데이터 문제에서는 각 보기의 주어·비교 대상·수치·방향을 자료와 한 항목씩 대조하라. 특히 차이의 방향(누가 더 큰지)이 뒤바뀐 보기를 조심하라. 실전 팁: 지문에 없는 집단 간 비교나 인과(왜 그런지)에 대한 설명이 들어간 보기는 일단 의심하고, 자료가 직접 보여주는 것만 남겨라."
+                                "answer": "Red light promotes seedling growth more than blue light.",
+                                "explanation": "This question's trap is inventing comparisons the data never makes, or reading the numbers swapped. Data questions demand answers strictly within what the text states. Here is the step-by-step solution. First, check the conditions. All conditions except light color were identical, so height differences can be attributed to light color. Second, compare the numbers: red 12.4 cm > white 10.6 cm > blue 8.1 cm. Third, check each choice against the numbers. 'Red light promotes growth more than blue light' is supported by 12.4>8.1. Wrong-answer rebuttal: 'White light promotes growth more than every other color' flatly contradicts the numbers, since red's 12.4 cm exceeds white's 10.6 cm. 'Light color has no effect on seedling growth' is the exact opposite of the researchers' conclusion (that light color affects growth rate) and denies the height differences themselves. 'Blue light makes seedlings grow 4.3 cm taller than red light' gets the 4.3 cm difference right (12.4-8.1=4.3) but flips the direction — the numbers are right and the interpretation is wrong, a sly trap. Quick self-check: on data questions, check each choice's subject, comparison target, number, and direction against the data one item at a time. Watch especially for choices with the direction of the difference flipped. Test-day tip: suspect any choice with group comparisons or causal explanations ('why') not in the passage, and keep only what the data directly shows.",
                             },
                             {
-                                "title": "기출 4: 과학 연구 요약 — 시사점 파악",
+                                "title": "Released Exam 4: Research Summary — Reading the Implication",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "A team of neuroscientists asked 60 adults to learn a list of word pairs, then tested their recall either after a full night of sleep or after staying awake. The sleep group recalled 72% of the pairs on average, while the awake group recalled 54%. The researchers noted that the advantage persisted even when total study time was identical, suggesting that sleep itself — not extra practice — consolidates memory.<br><br>이 연구가 시사하는 바로 가장 적절한 것은?",
+                                "question": "A team of neuroscientists asked 60 adults to learn a list of word pairs, then tested their recall either after a full night of sleep or after staying awake. The sleep group recalled 72% of the pairs on average, while the awake group recalled 54%. The researchers noted that the advantage persisted even when total study time was identical, suggesting that sleep itself — not extra practice — consolidates memory.<br><br>Which of the following is most strongly suggested by this study?",
                                 "options": [
-                                    "수면은 추가 학습 없이도 기억 공고화에 기여한다.",
-                                    "학습 시간의 총량이 기억력을 결정한다.",
-                                    "수면은 단어 쌍 학습에 해롭다.",
-                                    "54%의 회상률은 우연 수준이다."
+                                    "Sleep contributes to memory consolidation even without extra studying.",
+                                    "Total study time determines memory performance.",
+                                    "Sleep harms word-pair learning.",
+                                    "A 54% recall rate is at chance level.",
                                 ],
-                                "answer": "수면은 추가 학습 없이도 기억 공고화에 기여한다.",
-                                "explanation": "이 문제가 노리는 함정은 연구의 통제 조건(학습 시간 동일)을 무시하고 상관관계만 보고 성급히 결론내리는 것이다. 핵심 문장은 마지막 문장으로, sleep itself — not extra practice가 연구의 시사점을 직접 말한다. 풀이 단계는 다음과 같다. 첫째, 실험 설계를 파악한다. 수면 집단과 각성 집단, 학습 시간은 동일하게 통제되었다. 둘째, 결과를 확인한다. 수면 집단 72% 대 각성 집단 54%로 차이가 있다. 셋째, 연구자의 해석을 읽는다. 학습 시간이 동일해도 우위가 유지되었으므로, 수면 자체가 기억을 공고화한다는 것이다. 오답 반박: 학습 시간의 총량이 기억력을 결정한다는 통제된 변수(학습 시간 동일)를 정면으로 거스르는 보기로, 지문이 명시적으로 배제한 해석이다. 수면은 단어 쌍 학습에 해롭다는 72%>54%라는 결과와 정반대인 보기로, 집단 라벨을 뒤바꿔 읽은 함정이다. 54%의 회상률은 우연 수준이라는 지문에 전혀 언급되지 않은 기준을 끌어온 보기로, 텍스트 근거가 없는 보기이다. Quick self-check: 연구 지문에서는 마지막 1~2문장에 연구자의 해석(suggesting, indicating, concluded)이 나오므로 그 문장을 먼저 찾아라. 보기가 그 해석과 같은 방향인지 확인하라. 실전 팁: even when, not extra practice 같은 통제·배제 표현은 밑줄 치고, 보기가 통제된 변수를 원인으로 지목하면 즉시 소거하라."
+                                "answer": "Sleep contributes to memory consolidation even without extra studying.",
+                                "explanation": "This question's trap is ignoring the study's controlled condition (identical study time) and jumping to conclusions from the correlation alone. The key sentence is the last one: 'sleep itself — not extra practice' states the study's implication directly. Here is the step-by-step solution. First, grasp the design: a sleep group and a wake group, with study time controlled to be identical. Second, check the results: 72% for the sleep group versus 54% for the wake group. Third, read the researchers' interpretation: since the advantage held even with identical study time, sleep itself consolidates memory. Wrong-answer rebuttal: 'Total study time determines memory performance' runs head-on into the controlled variable (identical study time) — an interpretation the passage explicitly rules out. 'Sleep harms word-pair learning' is the opposite of the 72%>54% result — the trap of swapped group labels. 'A 54% recall rate is at chance level' imports a benchmark the passage never mentions — a choice with no textual basis. Quick self-check: in research passages, find the researchers' interpretation (suggesting, indicating, concluded) in the last sentence or two first, then check that the choice points the same way. Test-day tip: underline control/exclusion phrases like 'even when' and 'not extra practice,' and immediately eliminate any choice naming a controlled variable as the cause.",
                             },
                             {
-                                "title": "기출 5: 역사 문서 — 저자의 목적 파악",
+                                "title": "Released Exam 5: Historical Document — Reading the Author's Purpose",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "다음은 18세기 정치 문서의 발췌이다. 'We hold that a government derives its just powers from the consent of the governed, and that whenever any form of government becomes destructive of these ends, it is the right of the people to alter or to abolish it.'<br><br>저자가 이 주장을 펼치는 주된 목적은?",
+                                "question": "The following is an excerpt from an 18th-century political document. 'We hold that a government derives its just powers from the consent of the governed, and that whenever any form of government becomes destructive of these ends, it is the right of the people to alter or to abolish it.'<br><br>What is the author's primary purpose in making this argument?",
                                 "options": [
-                                    "현 정부에 대한 저항의 정당성을 확립하려는 것이다.",
-                                    "정부의 경제적 역할을 설명하려는 것이다.",
-                                    "군주의 권위를 강화하려는 것이다.",
-                                    "외국과의 군사 동맹을 촉구하려는 것이다."
+                                    "To establish the legitimacy of resistance against the current government.",
+                                    "To explain the government's economic role.",
+                                    "To strengthen the monarch's authority.",
+                                    "To urge a military alliance with foreign powers.",
                                 ],
-                                "answer": "현 정부에 대한 저항의 정당성을 확립하려는 것이다.",
-                                "explanation": "이 문제가 노리는 함정은 문서의 문체(격식 있는 선언문)에 압도되어 구체적 주장(right to alter or abolish)을 놓치는 것이다. 목적 문제는 무엇을 말했는지가 아니라 왜 말했는지를 묻는다. 풀이 단계는 다음과 같다. 첫째, 핵심 주장을 추출한다. 정부의 정당한 권력은 피지배자의 동의에서 나오고, 정부가 목적을 파괴하면 인민은 그것을 변경하거나 폐지할 권리가 있다. 둘째, 이 주장이 쓰이는 맥락을 생각한다. 현 체제에 대한 저항을 정당화하는 논리이다. 셋째, 보기와 대조한다. 현 정부에 대한 저항의 정당성을 확립하려는 것이 직접 대응된다. 오답 반박: 정부의 경제적 역할을 설명하려는 것은 지문에 경제에 대한 언급이 전혀 없으므로 근거 없는 보기이다. 군주의 권위를 강화하려는 것은 인민의 변경·폐지 권리와 정반대 방향의 보기로, 주장의 방향을 뒤집은 함정이다. 외국과의 군사 동맹을 촉구하려는 것은 지문의 국내 정치적 주장과 무관한 외부 주제를 끌어온 보기이다. Quick self-check: 목적 문제에서는 주장의 방향(누구의 권리를 세우는가)을 화살표로 그리고, 보기 중 그 화살표와 같은 방향인 것만 남겨라. 지문에 없는 주제(경제, 외교)가 들어간 보기는 즉시 소거하라. 실전 팁: 역사 문서 지문에서는 it is the right of the people 같은 규범적 선언이 목적의 단서이다. 선언의 수혜자가 누구인지 물으면 답이 보인다."
+                                "answer": "To establish the legitimacy of resistance against the current government.",
+                                "explanation": "This question's trap is being overwhelmed by the document's formal, declarative style and missing the concrete claim ('the right to alter or abolish'). Purpose questions ask not what was said but why it was said. Here is the step-by-step solution. First, extract the core claim: a government's just powers come from the consent of the governed, and when government destroys those ends, the people have the right to alter or abolish it. Second, consider the context of the claim: it's the logic justifying resistance against the current regime. Third, match the choices: 'to establish the legitimacy of resistance against the current government' corresponds directly. Wrong-answer rebuttal: 'To explain the government's economic role' has no mention of economics in the passage — a baseless choice. 'To strengthen the monarch's authority' points the opposite way from the people's right to alter or abolish — the direction-flipped trap. 'To urge a military alliance with foreign powers' drags in an external topic unrelated to the passage's domestic political claim. Quick self-check: on purpose questions, draw the claim's direction as an arrow (whose rights are being established?) and keep only choices pointing the same way. Immediately eliminate choices with topics absent from the passage (economics, diplomacy). Test-day tip: in historical documents, normative declarations like 'it is the right of the people' are purpose clues. Ask who benefits from the declaration and the answer appears.",
                             },
                             {
-                                "title": "기출 6: 문법 — 수식어에 가려진 진짜 주어",
+                                "title": "Released Exam 6: Grammar — The True Subject Behind the Modifiers",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "The collection of rare manuscripts, which includes letters dating back to the 1700s, ___ housed in the university's special archive.<br><br>빈칸에 들어갈 가장 적절한 것은?",
+                                "question": "The collection of rare manuscripts, which includes letters dating back to the 1700s, ___ housed in the university's special archive.<br><br>Which choice best completes the sentence?",
                                 "options": [
                                     "is",
                                     "are",
@@ -3961,15 +3961,15 @@ window.MATH_DATA = {
                                     "have been"
                                 ],
                                 "answer": "is",
-                                "explanation": "이 문제가 노리는 함정은 동사 바로 앞에 있는 복수 명사(manuscripts)에 끌려 are를 고르는 것이다. 관계절 which includes...는 삽입된 수식어일 뿐이며, 진짜 주어는 문장 맨 앞의 The collection(단수)이다. 풀이 단계는 다음과 같다. 첫째, 수식어를 걷어낸다. of rare manuscripts는 전치사구, which includes letters dating back to the 1700s는 관계절이므로 둘 다 주어가 아니다. 둘째, 남은 뼈대는 The collection ___ housed이다. 셋째, 주어 collection은 단수이므로 단수 동사 is가 온다. 시제도 현재 일반 진술이므로 is가 적절하다. 오답 반박: are는 manuscripts라는 복수 명사에 끌린 답으로, 전치사구의 목적어를 주어로 착각한 대표 함정이다. were는 dating back to the 1700s라는 과거 시점 표현에 끌린 답이지만, 소장 상태는 현재 사실이므로 과거형이 어울리지 않는다. have been은 주어-동사 수 일치 이전에 문장 구조상 수동태(be housed)가 필요한 자리이므로 형태 자체가 맞지 않는 보기이다. Quick self-check: 빈칸 앞뒤로 of, which, who, that이 보이면 수식어를 괄호 쳐서 지우고 남은 주어와 동사만 대조하라. 진짜 주어는 수식어를 걷어낸 뒤 문장 맨 앞에 남는 명사구이다. 실전 팁: SAT 문법에서 동사 바로 앞 명사가 주어가 아닐 확률이 높다. 전치사구+관계절 이중 수식어는 함정의 단골 패턴이므로, 보기를 보기 전에 주어를 먼저 확정하는 습관을 들여라."
+                                "explanation": "This question's trap is being pulled by the plural noun right before the verb (manuscripts) and picking 'are.' The relative clause 'which includes...' is just an inserted modifier; the true subject is 'The collection' (singular) at the sentence's start. Here is the step-by-step solution. First, strip the modifiers. 'Of rare manuscripts' is a prepositional phrase and 'which includes letters dating back to the 1700s' is a relative clause — neither contains the subject. Second, the remaining skeleton is 'The collection ___ housed.' Third, the subject 'collection' is singular, so the singular verb 'is' fits, and the tense is a general present statement, so 'is' works. Wrong-answer rebuttal: 'are' is pulled by the plural noun 'manuscripts' — the signature trap of mistaking a prepositional phrase's object for the subject. 'Were' is pulled by the past-time phrase 'dating back to the 1700s,' but the housing is a present fact, so past tense doesn't fit. 'Have been' fails before subject-verb agreement even matters: the slot needs a passive ('be housed'), so the form itself is wrong. Quick self-check: when you see 'of,' 'which,' 'who,' or 'that' around the blank, bracket out the modifiers and compare only the remaining subject and verb. The true subject is the noun phrase left at the sentence's start after the modifiers are stripped. Test-day tip: on SAT grammar, the noun right before the verb is probably NOT the subject. Prepositional-phrase-plus-relative-clause double modifiers are a favorite trap pattern — lock in the subject before looking at the choices.",
                             },
                             {
-                                "title": "기출 7: 전이 어구 — 문장 간 논리 관계",
+                                "title": "Released Exam 7: Transitions — Logic Between Sentences",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "City officials promised that the new transit line would reduce commute times by twenty minutes. ___ a follow-up study found that average commute times actually increased by five minutes after the line opened.<br><br>빈칸에 들어갈 가장 적절한 전이 어구는?",
+                                "question": "City officials promised that the new transit line would reduce commute times by twenty minutes. ___ a follow-up study found that average commute times actually increased by five minutes after the line opened.<br><br>Which transition best fits the blank?",
                                 "options": [
                                     "Therefore",
                                     "However",
@@ -3977,15 +3977,15 @@ window.MATH_DATA = {
                                     "Moreover"
                                 ],
                                 "answer": "However",
-                                "explanation": "이 문제가 노리는 함정은 두 문장이 같은 주제(통근 시간)를 다룬다는 점에 안심하고 순접·첨가 관계의 전이 어구를 고르는 것이다. 주제가 같아도 논리 방향이 반대이면 역접을 써야 한다. 풀이 단계는 다음과 같다. 첫째, 앞 문장의 방향을 정한다. 통근 시간이 20분 줄어들 것이라는 긍정적 약속이다. 둘째, 뒷문장의 방향을 정한다. 실제로는 5분 늘어났다는 부정적 결과이다. actually가 방향 반전의 신호이다. 셋째, 약속과 결과는 대조 관계이므로 역접의 However가 적절하다. 오답 반박: Therefore는 앞 문장이 원인이 되어 뒷문장이 결과로 이어질 때 쓰는 것으로, 약속이 결과의 원인이 아니므로 논리가 맞지 않는다. For example은 뒷문장이 앞문장의 예시일 때 쓰는 것인데, 후속 연구 결과는 약속의 예시가 아니라 반박이므로 맞지 않는다. Moreover는 같은 방향의 내용을 덧붙일 때 쓰는 것으로, 방향이 반대인 두 문장 사이에는 쓸 수 없다. Quick self-check: 전이 어구 문제에서는 빈칸 앞뒤 문장의 방향(긍정/부정, 주장/반박)을 각각 화살표로 표시하고, 방향이 같으면 순접·첨가, 다르면 역접을 고르라. actually, in fact, yet 같은 반전 신호어에 밑줄을 쳐라. 실전 팁: 보기를 문장에 직접 넣어 읽어 보는 대입법이 가장 확실하다. However를 넣으면 약속-현실의 대조가 매끄럽게 읽히지만, Therefore를 넣으면 약속이 통근 시간 증가의 원인이라는 어색한 문장이 된다."
+                                "explanation": "This question's trap is relaxing because the two sentences share a topic (commute times) and picking an addition/continuation transition. Same topic with opposite logical directions still needs a contrast word. Here is the step-by-step solution. First, fix the first sentence's direction: a positive promise that commute times would drop by 20 minutes. Second, fix the second sentence's direction: the negative result that times actually rose by 5 minutes. 'Actually' is the reversal signal. Third, promise versus result is a contrast, so the contrast transition 'However' fits. Wrong-answer rebuttal: 'Therefore' is for when the first sentence causes the second — but a promise doesn't cause the result, so the logic fails. 'For example' is for when the second sentence exemplifies the first — but the follow-up result rebuts the promise rather than exemplifying it. 'Moreover' adds same-direction content — unusable between two opposite-direction sentences. Quick self-check: on transition questions, mark each side of the blank with a direction arrow (positive/negative, claim/rebuttal): same direction → continuation/addition, different → contrast. Underline reversal signals like 'actually,' 'in fact,' 'yet.' Test-day tip: plugging each choice into the sentence and reading it (the substitution test) is the surest method. 'However' reads the promise-reality contrast smoothly, while 'Therefore' makes the awkward sentence where a promise caused longer commutes.",
                             },
                             {
-                                "title": "기출 8: 구두점 — 목록 앞의 콜론",
+                                "title": "Released Exam 8: Punctuation — The Colon Before a List",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "다음 문장 중 구두점이 올바르게 사용된 것은?",
+                                "question": "Which of the following sentences uses punctuation correctly?",
                                 "options": [
                                     "The survey identified three main concerns among residents: traffic congestion, rising housing costs, and limited parking.",
                                     "The survey identified three main concerns among residents; traffic congestion, rising housing costs, and limited parking.",
@@ -3993,15 +3993,15 @@ window.MATH_DATA = {
                                     "The survey identified three main concerns among residents: traffic congestion; rising housing costs; and limited parking."
                                 ],
                                 "answer": "The survey identified three main concerns among residents: traffic congestion, rising housing costs, and limited parking.",
-                                "explanation": "이 문제가 노리는 함정은 콜론과 세미콜론의 역할을 뒤섞는 것이다. 목록 앞에는 콜론이 오고, 세미콜론은 독립된 절을 연결할 때 쓴다는 원칙을 정확히 알아야 한다. 풀이 단계는 다음과 같다. 첫째, 콜론 앞을 확인한다. The survey identified three main concerns among residents는 완전한 문장(주어+동사+목적어)이다. 둘째, 콜론 뒤를 확인한다. traffic congestion, rising housing costs, and limited parking은 앞에서 예고한 three main concerns의 목록이다. 완전한 문장 뒤에 목록이 오므로 콜론이 올바르다. 셋째, 목록 내부의 구분은 쉼표로 충분하고, 항목 자체가 길거나 내부에 쉼표가 있을 때만 세미콜론을 쓴다. 오답 반박: 세미콜론을 쓴 두 번째 보기는 세미콜론 뒤가 완전한 절이 아니라 목록이므로 용법에 맞지 않는다. 세미콜론은 독립 절과 독립 절을 연결하는 자리이다. 쉼표만 쓴 세 번째 보기는 완전한 문장 뒤에 목록이 바로 붙어 문장 경계가 무너진 경우로, 콜론이 필요한 자리에 쉼표를 쓴 오류이다. 네 번째 보기는 목록 항목 사이에 세미콜론을 쓴 것으로, 항목이 짧고 내부에 쉼표가 없으므로 과도한 구두점이다. Quick self-check: 콜론 앞이 완전한 문장인지 손가락으로 짚으며 읽어라. 완전하지 않으면(예: The concerns are: 처럼 동사 없이 끝나면) 콜론을 쓸 수 없다. 목록 항목 안에 쉼표가 없을 때 세미콜론이 보이면 일단 의심하라. 실전 팁: SAT 구두점 문제는 원칙이 단순하다. 콜론=완전한 문장+설명·목록, 세미콜론=독립 절+독립 절. 이 두 공식만 정확히 적용하면 4개 보기 중 3개는 기계적으로 소거된다."
+                                "explanation": "This question's trap is mixing up the roles of the colon and the semicolon. A colon goes before a list; a semicolon joins independent clauses — know the rule cold. Here is the step-by-step solution. First, check before the colon. 'The survey identified three main concerns among residents' is a complete sentence (subject + verb + object). Second, check after the colon. 'Traffic congestion, rising housing costs, and limited parking' is the list of the announced 'three main concerns.' A complete sentence followed by a list takes a colon. Third, commas suffice inside the list; semicolons are used only when the items themselves are long or contain commas. Wrong-answer rebuttal: the second choice's semicolon is followed by a list, not a complete clause — wrong usage. A semicolon joins independent clause to independent clause. The third choice's comma-only version collapses the sentence boundary, sticking a list right after a complete sentence — the error of using a comma where a colon belongs. The fourth choice's semicolons between list items are overkill: the items are short with no internal commas. Quick self-check: read with your finger to confirm the pre-colon part is a complete sentence. If it's incomplete (e.g., ending without a verb, like 'The concerns are:'), no colon allowed. If you see semicolons with no commas inside the items, suspect them. Test-day tip: SAT punctuation rules are simple. Colon = complete sentence + explanation/list; semicolon = independent clause + independent clause. Apply those two formulas exactly and three of the four choices eliminate themselves mechanically.",
                             },
                             {
-                                "title": "기출 9: 근거 찾기 — 주장을 직접 뒷받침하는 문장",
+                                "title": "Released Exam 9: Finding Evidence — The Sentence That Directly Supports the Claim",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "Dr. Lena Ortiz spent a decade cataloging deep-sea sponges off the Pacific coast. Her team discovered that certain sponges produce compounds that slow the growth of harmful bacteria. 'These organisms have survived for 500 million years,' Ortiz said. 'Their chemistry is a library we have barely begun to read.' Pharmaceutical researchers are now studying the compounds for potential new antibiotics.<br><br>'심해 해면의 화학적 특성이 의학적 가치가 있을 수 있다'는 주장에 대한 가장 직접적인 근거는?",
+                                "question": "Dr. Lena Ortiz spent a decade cataloging deep-sea sponges off the Pacific coast. Her team discovered that certain sponges produce compounds that slow the growth of harmful bacteria. 'These organisms have survived for 500 million years,' Ortiz said. 'Their chemistry is a library we have barely begun to read.' Pharmaceutical researchers are now studying the compounds for potential new antibiotics.<br><br>What is the most direct evidence for the claim that the chemical properties of deep-sea sponges may have medical value?",
                                 "options": [
                                     "'These organisms have survived for 500 million years,'",
                                     "'Their chemistry is a library we have barely begun to read.'",
@@ -4009,15 +4009,15 @@ window.MATH_DATA = {
                                     "Dr. Lena Ortiz spent a decade cataloging deep-sea sponges off the Pacific coast."
                                 ],
                                 "answer": "Her team discovered that certain sponges produce compounds that slow the growth of harmful bacteria.",
-                                "explanation": "이 문제가 노리는 함정은 인용문의 문학적 매력에 끌려 은유적 표현을 근거로 고르는 것이다. Their chemistry is a library라는 표현은 멋있지만, 의학적 가치에 대한 직접 근거는 해면의 화합물이 해로운 박테리아의 성장을 늦춘다는 발견 자체이다. 풀이 단계는 다음과 같다. 첫째, 주장을 정확히 잡는다. 화학적 특성이 의학적 가치가 있을 수 있다는 것으로, 화학 물질과 의학(박테리아·항생제)의 연결이 핵심이다. 둘째, 각 보기가 그 연결을 직접 보여주는지 대조한다. 셋째, 해면이 해로운 박테리아의 성장을 늦추는 화합물을 만든다는 발견이 화학-의학 연결을 직접 증명하므로 정답이다. 오답 반박: These organisms have survived for 500 million years는 생존 기간에 대한 진술로, 화학 물질의 의학적 효과와 직접 연결되지 않는다. Their chemistry is a library we have barely begun to read는 은유적 표현으로 연구의 가능성을 시사할 뿐, 의학적 가치의 직접 근거가 아니다. 이 보기는 인용문이라는 형식에 끌리는 함정이다. Dr. Lena Ortiz spent a decade cataloging...은 연구 배경에 대한 진술로, 주장의 근거가 아니라 맥락 정보이다. Quick self-check: 근거 문제에서는 주장의 핵심어(여기서는 화학적 특성, 의학적 가치)를 뽑아 각 보기에 그 두 요소가 모두 직접 등장하는지 확인하라. 멋있는 인용문일수록 한 번 더 의심하라. 실전 팁: 직접적(directly support)이라는 말이 있으면 인과·효과를 직접 진술한 문장을 고르고, 배경·기간·은유는 소거하라. 정답은 대개 가장 건조하고 사실적인 문장이다."
+                                "explanation": "This question's trap is being charmed by the quotation's literary appeal and picking a metaphorical line as evidence. 'Their chemistry is a library' is elegant, but the direct evidence of medical value is the discovery itself: sponge compounds slow the growth of harmful bacteria. Here is the step-by-step solution. First, pin down the claim: chemical properties may have medical value — the chemistry-to-medicine (bacteria, antibiotics) link is the core. Second, check whether each choice shows that link directly. Third, the discovery that sponges produce compounds slowing harmful bacteria directly proves the chemistry–medicine link — that's the answer. Wrong-answer rebuttal: 'These organisms have survived for 500 million years' is about survival duration, not directly linked to the medical effect of the chemicals. 'Their chemistry is a library we have barely begun to read' is metaphorical — it hints at research potential but isn't direct evidence of medical value. It's the trap for students drawn to the quotation's form. 'Dr. Lena Ortiz spent a decade cataloging...' is background about the research — context, not evidence for the claim. Quick self-check: on evidence questions, pull the claim's keywords (here: chemical properties, medical value) and check that both appear directly in each choice. The prettier the quotation, the more suspicious you should be. Test-day tip: when you see 'directly support,' pick the sentence that directly states cause or effect, and eliminate background, time spans, and metaphors. The answer is usually the driest, most factual sentence.",
                             },
                             {
-                                "title": "기출 10: 간결성 — 군더더기 없는 문장 선택",
+                                "title": "Released Exam 10: Concision — Choosing the Cleanest Sentence",
                                 "difficulty": "hard",
                                 "tags": [
-                                    "기출"
+                                    "Released Exam",
                                 ],
-                                "question": "밑줄 친 부분을 가장 간결하면서도 문법적으로 올바르게 고친 것은?<br><br>Due to the fact that the experiment was conducted in a laboratory setting, the results may not be applicable to real-world conditions.",
+                                "question": "Which choice most concisely and grammatically correctly revises the underlined portion?<br><br>Due to the fact that the experiment was conducted in a laboratory setting, the results may not be applicable to real-world conditions.",
                                 "options": [
                                     "Due to the fact that the experiment was conducted in a laboratory setting, the results may not be applicable to real-world conditions.",
                                     "Because the experiment was conducted in a laboratory setting, the results may not be applicable to real-world conditions.",
@@ -4025,7 +4025,7 @@ window.MATH_DATA = {
                                     "Being conducted in a laboratory setting, the results may not be applicable to real-world conditions."
                                 ],
                                 "answer": "Because the experiment was conducted in a laboratory setting, the results may not be applicable to real-world conditions.",
-                                "explanation": "이 문제가 노리는 함정은 두 가지이다. 첫째, 원문을 그대로 두는 안전 선택이다. Due to the fact that는 because 한 단어로 바꿀 수 있는 전형적인 군더더기이다. 둘째, 간결해 보이는 보기가 문법 오류(콤마 스플라이스, 댕글링 수식어)를 숨기고 있는 경우이다. 풀이 단계는 다음과 같다. 첫째, 원문의 군더더기를 찾는다. Due to the fact that은 because로 줄일 수 있다. 둘째, 각 보기의 문법을 검사한다. Because로 시작하는 종속절+주절 구조는 완전하고 올바르다. 셋째, 간결성과 문법을 동시에 만족하는 보기를 고른다. Because 버전이 정답이다. 오답 반박: 원문 그대로인 첫 번째 보기는 문법적으로 틀리지 않았지만 SAT 간결성 원칙상 because로 줄일 수 있는 표현을 그대로 둔 감점 보기이다. 세 번째 보기는 두 개의 독립 절을 쉼표 하나로 연결한 콤마 스플라이스로, 간결해 보이지만 문법 오류이다. 네 번째 보기는 Being conducted...의 주어가 the results가 되어 실험이 아니라 결과가 수행된 것처럼 읽히는 댕글링 수식어 오류이다. Quick self-check: 간결성 문제에서는 먼저 각 보기의 문법 오류(콤마 스플라이스, 댕글링, 수일치)를 검사해 탈락시키고, 남은 보기 중 가장 짧은 것을 고르라. Due to the fact that, in order to, in spite of the fact that 같은 덩어리 표현은 항상 의심하라. 실전 팁: 가장 짧은 보기가 답일 확률이 높지만, 짧다는 이유만으로 고르지 말고 문법 검사를 먼저 하라. SAT는 간결함과 정확성을 동시에 요구한다."
+                                "explanation": "This question's trap is twofold. First, the safe pick of leaving the original as is. 'Due to the fact that' is classic wordiness replaceable by the single word 'because.' Second, the concise-looking choice hiding a grammar error (comma splice, dangling modifier). Here is the step-by-step solution. First, find the original's wordiness: 'due to the fact that' shortens to 'because.' Second, check each choice's grammar. The 'Because'-led dependent-clause-plus-main-clause structure is complete and correct. Third, pick the choice satisfying both concision and grammar: the 'Because' version. Wrong-answer rebuttal: the unchanged original isn't grammatically wrong, but under SAT concision rules it's the penalized choice for keeping a reducible phrase. The third choice joins two independent clauses with a single comma — a comma splice: concise-looking but grammatically wrong. The fourth choice's 'Being conducted...' makes 'the results' its subject, reading as if the results were conducted rather than the experiment — a dangling-modifier error. Quick self-check: on concision questions, first screen each choice for grammar errors (comma splice, dangling, agreement) to eliminate, then pick the shortest survivor. Always suspect chunky phrases like 'due to the fact that,' 'in order to,' 'in spite of the fact that.' Test-day tip: the shortest choice is likely the answer, but don't pick it for shortness alone — check grammar first. The SAT demands concision and correctness together.",
                             }
                         ]
                     }
@@ -4034,213 +4034,213 @@ window.MATH_DATA = {
         },
         {
             "id": "sat-trends",
-            "title": "SAT 트렌드 & 개념 총정리 (2020-2026)",
+            "title": "SAT Trends & Concept Review (2020-2026)",
             "code": "SAT-T",
-            "description": "2020년 paper SAT부터 2024년 디지털 전환 이후까지, 년도별 출제 경향과 핵심 개념을 정리한 섹션. College Board 공개 기출·공식 연습문제 분석 기반의 경향 서술로, 정확한 통계가 아닌 출제 흐름 파악에 초점을 둔다.",
+            "description": "A section organizing test trends and core concepts by year, from the 2020 paper SAT through the post-2024 digital transition. Based on analysis of College Board released exams and official practice questions, it describes trend direction rather than exact statistics, focusing on grasping the flow of what's tested.",
             "color": "#10b981",
             "icon": "fas fa-chart-line",
-            "intuition": "SAT는 형식이 바뀌어도 출제되는 개념의 뼈대는 크게 흔들리지 않는다. 년도별 트렌드를 알면 무엇이 매 시험 나오는 필수 개념이고 무엇이 고득점 변별용인지 구분할 수 있다. 트렌드를 아는 학생은 공부 순서를 정할 수 있고, 모르는 학생은 그냥 다 외운다.",
+            "intuition": "Even when the SAT's format changes, the skeleton of tested concepts barely shifts. Knowing the yearly trends tells you which concepts appear on every test and which ones separate high scorers. Students who know the trends can sequence their studying; students who don't just memorize everything.",
             "local_resources": [],
             "difficulty": "advanced",
             "units": [
                 {
-                    "title": "2020: COVID와 paper SAT의 마지막 전성기",
-                    "insight": "2020년은 COVID-19로 봄 시험이 대거 취소되며 test-optional 물결이 본격화된 해다. 형식은 paper SAT 그대로였다. Reading 52문항/65분, Writing and Language 44문항/35분, Math 58문항/80분(계산기 금지 20문항/25분 포함), 총 3시간 체제였다. Essay(50분)는 아직 선택 응시로 살아 있었다. Math 출제 경향은 대수(Heart of Algebra) 비중이 높았고, 계산기 금지 섹션에서 인수분해·무리식·복소수 기초가 꾸준히 출제되는 경향이 있었다. R&W는 500~750단어 긴 지문 기반의 evidence pair와 어휘 in context가 핵심이었다.",
+                    "title": "2020: COVID and the Last Golden Age of the Paper SAT",
+                    "insight": "2020 was the year COVID-19 canceled spring tests en masse and the test-optional wave took off. The format was still the paper SAT: Reading 52 questions/65 minutes, Writing and Language 44 questions/35 minutes, Math 58 questions/80 minutes (including a 20-question/25-minute No Calculator section), 3 hours total. The Essay (50 minutes) was still alive as an optional add-on. Math trends leaned heavily on algebra (Heart of Algebra), with factoring, radical expressions, and basic complex numbers appearing steadily in the No Calculator section. R&W centered on 500–750-word long-passage evidence pairs and vocabulary in context.",
                     "topics": [
-                        "Paper SAT 형식 이해: R 52/65 · W 44/35 · M 58/80 (계산기 금지 섹션 포함)",
-                        "Math TOP: 일차방정식·연립방정식, 이차함수, 지수 모델, 계산기 금지 대수 연산",
-                        "R&W TOP: 긴 지문 evidence pair, 어휘 in context, 표준 영어 문법",
-                        "로드맵 1단계: paper 시절 필수 개념 = 지금도 필수인 경우가 많다"
+                        "Understanding the Paper SAT format: R 52/65 · W 44/35 · M 58/80 (includes the No Calculator section)",
+                        "Math TOP: linear equations & systems, quadratic functions, exponential models, No Calculator algebra",
+                        "R&W TOP: long-passage evidence pairs, words in context, standard English grammar",
+                        "Roadmap step 1: paper-era must-know concepts are often still must-know today",
                     ],
                     "lectures": [],
                     "examples": [
                         {
-                            "title": "[Math] 일차방정식·부등식 응용",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Linear Equations & Inequalities in Context",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 실생활 맥락(요금·속도·예산) 속 미지수 설정 후 식 세우기",
-                                "핵심 포인트: 부등호 방향 전환(음수 나누기), 답이 맥락에 맞는지 검산"
+                                "Signature types: setting up variables and equations in real-world contexts (fees, speed, budgets)",
+                                "Key points: flipping the inequality sign (dividing by a negative), checking that the answer fits the context",
                             ],
-                            "intuition": "SAT 대수의 출발점이자 paper·digital 공통 최다 출제 영역이다."
+                            "intuition": "The starting point of SAT algebra, and the most-tested area on both paper and digital.",
                         },
                         {
-                            "title": "[Math] 연립방정식",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Systems of Equations",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 해의 개수 판별(기울기·절편 비교), 대입·가감법",
-                                "핵심 포인트: 해가 없음·무수히 많음 조건, 그래프 해석 연결"
+                                "Signature types: determining the number of solutions (comparing slopes and intercepts), substitution and elimination",
+                                "Key points: no-solution and infinitely-many-solutions conditions, connecting to graph interpretation",
                             ],
-                            "intuition": "대입보다 소거가 빠른 경우가 많고, 해의 개수 문제는 기울기만 보면 끝난다."
+                            "intuition": "Elimination is often faster than substitution, and number-of-solutions questions end at the slopes.",
                         },
                         {
-                            "title": "[Math] 이차방정식·이차함수",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Quadratic Equations & Functions",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 인수분해·근의 공식·완전제곱식, 꼭짓점·근의 위치",
-                                "핵심 포인트: 판별식으로 근의 개수, 꼭짓점 형태 y=a(x-h)^2+k 변환"
+                                "Signature types: factoring, the quadratic formula, completing the square; vertex and root locations",
+                                "Key points: using the discriminant for the number of roots, converting to vertex form y=a(x-h)^2+k",
                             ],
-                            "intuition": "paper 시절 계산기 금지 섹션의 단골이자 digital에서도 Advanced Math 핵심이다."
+                            "intuition": "A No Calculator section regular in the paper era, and still the heart of Advanced Math on digital.",
                         },
                         {
-                            "title": "[Math] 지수함수·지수 모델",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Exponential Functions & Models",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 인구 증가·방사성 붕괴·복리 같은 실생활 지수 모델",
-                                "핵심 포인트: y=ab^x에서 b>1 증가·0<b<1 감소, 초기값 a 읽기"
+                                "Signature types: real-world exponential models like population growth, radioactive decay, compound interest",
+                                "Key points: in y=ab^x, b>1 grows and 0<b<1 decays; reading the initial value a",
                             ],
-                            "intuition": "문장이 길지만 식은 단순하다. 모델의 각 문자가 무엇을 뜻하는지만 물어본다."
+                            "intuition": "Long sentences, simple equations. They only ask what each letter of the model means.",
                         },
                         {
-                            "title": "[Math] 계산기 금지 대수 연산",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] No Calculator Algebra",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 다항식 곱셈·나눗셈, 유리식 간단화, 무리식·지수법칙",
-                                "핵심 포인트: paper 시절 No Calculator 섹션의 핵심, digital에서는 전 문항 계산기 허용으로 부담 감소"
+                                "Signature types: polynomial multiplication and division, rational-expression simplification, radical and exponent laws",
+                                "Key points: the paper-era No Calculator section's core; on digital every question allows a calculator, so the burden is lighter",
                             ],
-                            "intuition": "2020년의 이 고통은 2024년 디지털 전환으로 사라졌다. 손계산 훈련은 개념 이해용으로만."
+                            "intuition": "The pain of 2020 vanished with the 2024 digital transition. Train hand computation only for concept understanding.",
                         },
                         {
-                            "title": "[Math] 비율·백분율·비례식",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[Math] Ratios, Percents & Proportions",
+                            "problem": "Frequency: ★★★★☆ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 퍼센트 증감, 단위 환산, 비례·반비례",
-                                "핵심 포인트: 증가율 p%면 곱하기 (1+p/100), 기준량 헷갈림 주의"
+                                "Signature types: percent increase/decrease, unit conversion, direct and inverse proportion",
+                                "Key points: a p% increase means multiplying by (1+p/100); watch out for base confusion",
                             ],
-                            "intuition": "Problem Solving and Data Analysis의 기본기. 쉬워 보이지만 함정이 많다."
+                            "intuition": "The basics of Problem Solving and Data Analysis. Looks easy, but the traps are many.",
                         },
                         {
-                            "title": "[Math] 통계 기초·자료 해석",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Statistics Basics & Data Interpretation",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 평균·중앙값·최빈값, 산점도·히스토그램 읽기",
-                                "핵심 포인트: 이상값이 평균에 미치는 영향, 표본→모집단 추론의 한계"
+                                "Signature types: mean, median, mode; reading scatterplots and histograms",
+                                "Key points: how outliers move the mean, limits of sample-to-population inference",
                             ],
-                            "intuition": "계산보다 해석이 중요하다. 그래프가 말하는 이야기를 읽는 문제다."
+                            "intuition": "Interpretation matters more than computation. Read the story the graph is telling.",
                         },
                         {
-                            "title": "[Math] 기하: 삼각형·원",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Geometry: Triangles & Circles",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 피타고라스, 특수삼각형(30-60-90, 45-45-90), 원의 둘레·넓이",
-                                "핵심 포인트: 보조선 긋기, 닮음비의 제곱=넓이비"
+                                "Signature types: Pythagoras, special triangles (30-60-90, 45-45-90), circle circumference and area",
+                                "Key points: drawing auxiliary lines; similarity ratio squared = area ratio",
                             ],
-                            "intuition": "paper 시절 비중은 중간. 도형 문제는 그림을 직접 그려야 풀린다."
+                            "intuition": "Mid-weight in the paper era. Geometry problems demand that you draw the figure yourself.",
                         },
                         {
-                            "title": "[Math] 복소수 기초",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Math] Complex Number Basics",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: i의 거듭제곱 순환, 복소수 사칙연산",
-                                "핵심 포인트: i^2=-1, 켤레복소수로 분모 실수화"
+                                "Signature types: the powers-of-i cycle, the four operations on complex numbers",
+                                "Key points: i^2=-1, rationalizing denominators with the complex conjugate",
                             ],
-                            "intuition": "출제는 드물지만 나오면 쉬운 점수. i^4=1 순환만 알면 된다."
+                            "intuition": "Rarely tested, but easy points when it appears. The i^4=1 cycle is all you need.",
                         },
                         {
-                            "title": "[Math] 함수 개념·그래프 해석",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[Math] Function Concepts & Graph Reading",
+                            "problem": "Frequency: ★★★★☆ | Importance: Essential",
                             "steps": [
-                                "대표 유형: f(x) 값 구하기, 그래프에서 정의역·치역·증감 읽기",
-                                "핵심 포인트: 함숫값은 대입, 그래프 평행이동은 안/밖 부호 반대"
+                                "Signature types: evaluating f(x), reading domain, range, and increase/decrease from graphs",
+                                "Key points: function values by substitution; horizontal/vertical shifts flip inside/outside signs oppositely",
                             ],
-                            "intuition": "모든 대수 문제의 언어다. 함수 표기법에 익숙해지는 것이 2020년 이후 공통 과제다."
+                            "intuition": "The language of every algebra problem. Getting fluent in function notation is the shared task since 2020.",
                         },
                         {
-                            "title": "[R&W] Evidence Pair (근거 쌍)",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Evidence Pair",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 앞 문항 주장의 근거가 되는 지문 구절 고르기",
-                                "핵심 포인트: 앞 문항을 먼저 확정하고, 근거 문항은 앞 답을 뒷받침하는지만 본다"
+                                "Signature types: choosing the passage lines that support the previous question's claim",
+                                "Key points: lock in the previous question first; the evidence question only asks whether it supports that answer",
                             ],
-                            "intuition": "paper 시절 R&W의 상징. digital에서는 Command of Evidence(텍스트 근거)로 계승됐다."
+                            "intuition": "The signature of paper-era R&W. Carried into digital as Command of Evidence (textual).",
                         },
                         {
-                            "title": "[R&W] Main Idea / 중심 주장",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Main Idea",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 지문 전체의 요지·저자의 중심 주장 고르기",
-                                "핵심 포인트: 너무 좁거나 너무 넓은 선지 제거, 반복되는 키워드 추적"
+                                "Signature types: choosing the gist of the whole passage or the author's central claim",
+                                "Key points: eliminate choices that are too narrow or too broad; track repeated keywords",
                             ],
-                            "intuition": "긴 지문이든 단문이든 가장 먼저 물어보는 질문. 주제는 지문 곳곳에 흩어져 있다."
+                            "intuition": "The first question asked whether the passage is long or short. The topic is scattered throughout the passage.",
                         },
                         {
-                            "title": "[R&W] Words in Context (문맥 어휘)",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Words in Context",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 밑줄 친 단어와 문맥상 가장 가까운 뜻 고르기",
-                                "핵심 포인트: 평소 뜻이 아닌 문장 속 역할로 판단, 앞뒤 단서 찾기"
+                                "Signature types: choosing the meaning closest to the underlined word in context",
+                                "Key points: judge by the word's role in the sentence, not its usual meaning; find clues before and after",
                             ],
-                            "intuition": "어휘력보다 문맥 독해력을 잰다. 어려운 단어라도 문장이 힌트를 준다."
+                            "intuition": "Tests context reading more than vocabulary. Even hard words come with sentence hints.",
                         },
                         {
-                            "title": "[R&W] 추론 (Inference)",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Inference",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 지문에서 논리적으로 도출되는 결론 고르기",
-                                "핵심 포인트: 지문에 없는 정보 추가 금지, 가장 약한 주장(가장 안전한 선지) 선택"
+                                "Signature types: choosing the conclusion that logically follows from the passage",
+                                "Key points: no adding information beyond the passage; pick the weakest claim (the safest choice)",
                             ],
-                            "intuition": "추론은 상상이 아니라 논리다. 지문이 허락한 만큼만 나아간다."
+                            "intuition": "Inference is logic, not imagination. Go only as far as the passage allows.",
                         },
                         {
-                            "title": "[R&W] 저자의 목적·관점",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Author's Purpose & Perspective",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 특정 단락의 기능, 저자의 태도·목적 파악",
-                                "핵심 포인트: 서술어 동사(주장하다·반박하다·예시하다)에 주목"
+                                "Signature types: a paragraph's function, identifying the author's attitude and purpose",
+                                "Key points: watch the predicate verbs (claims, rebuts, exemplifies)",
                             ],
-                            "intuition": "왜 이 문단이 여기 있는가를 묻는다. 글의 설계도를 읽는 문제다."
+                            "intuition": "Asks why this paragraph is here. Read the passage's blueprint.",
                         },
                         {
-                            "title": "[R&W] 문장 구조·구두점",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[R&W] Sentence Structure & Punctuation",
+                            "problem": "Frequency: ★★★★☆ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 콤마·세미콜론·콜론·대시 용법, 문장 경계(run-on/fragment)",
-                                "핵심 포인트: 세미콜론=완전한 문장+완전한 문장, 콜론=설명·나열 예고"
+                                "Signature types: comma, semicolon, colon, and dash usage; sentence boundaries (run-on/fragment)",
+                                "Key points: semicolon = complete sentence + complete sentence; colon = previews an explanation or list",
                             ],
-                            "intuition": "Writing 섹션의 배점 큰 영역. 규칙이 명확해서 맞히면 확실히 맞는 파트다."
+                            "intuition": "The heavyweight Writing area. The rules are clear, so a hit here is a sure hit.",
                         },
                         {
-                            "title": "[R&W] 주어-동사 일치·수식어",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[R&W] Subject-Verb Agreement & Modifiers",
+                            "problem": "Frequency: ★★★★☆ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 주어와 동사의 수 일치, 대명사 선행사, 수식어 위치",
-                                "핵심 포인트: 전치사구 건너뛰고 진짜 주어 찾기, 단수·복수 함정"
+                                "Signature types: subject-verb number agreement, pronoun antecedents, modifier placement",
+                                "Key points: skip the prepositional phrase to find the true subject; singular/plural traps",
                             ],
-                            "intuition": "문법 문제의 절반은 주어 찾기 게임이다. 길게 늘어진 수식어를 걷어내면 보인다."
+                            "intuition": "Half of grammar questions are a find-the-subject game. Strip the long modifiers and it shows.",
                         },
                         {
-                            "title": "[R&W] 문장 연결·전환어",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[R&W] Sentence Connections & Transitions",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 문단 사이·문장 사이 논리 관계에 맞는 전환어 선택",
-                                "핵심 포인트: 대조(however)·인과(therefore)·추가(furthermore) 관계 먼저 판단"
+                                "Signature types: choosing the transition that fits the logical relation between or within paragraphs",
+                                "Key points: judge the relation first — contrast (however), cause (therefore), addition (furthermore)",
                             ],
-                            "intuition": "전환어는 논리의 방향표지판이다. 앞뒤 문장의 관계를 먼저 말로 설명해보자."
+                            "intuition": "Transitions are logic's signposts. First explain the two sentences' relation in words.",
                         },
                         {
-                            "title": "[R&W] 간결성·문체 일관성",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[R&W] Concision & Style Consistency",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 중복 표현 제거, 문체·어조에 맞는 표현 선택",
-                                "핵심 포인트: 같은 뜻이면 짧은 선지, 지문 전체 어조와 어울리는지 확인"
+                                "Signature types: cutting redundancy, choosing expressions that fit the tone",
+                                "Key points: when meanings match, pick the shorter choice; check it fits the passage's overall tone",
                             ],
-                            "intuition": "digital의 Expression of Ideas로 이어지는 영역. 짧고 정확한 것이 답이다."
+                            "intuition": "The area that continues into digital's Expression of Ideas. Short and precise wins.",
                         },
                         {
-                            "title": "[R&W] 도표·그래프 연계 독해",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[R&W] Chart & Graph Paired Reading",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: 지문 주장과 그래프 데이터의 일치 여부 판단",
-                                "핵심 포인트: 그래프 축·단위 먼저 확인, 지문 주장을 데이터로 검증"
+                                "Signature types: judging whether passage claims match graph data",
+                                "Key points: check the graph's axes and units first; verify passage claims against the data",
                             ],
-                            "intuition": "2020년 paper 시절에도 있었고 digital에서 Command of Evidence(Quantitative)로 확대됐다."
+                            "intuition": "It existed in the 2020 paper era too, and expanded on digital as Command of Evidence (Quantitative).",
                         }
                     ],
                     "quiz": {
                         "levels": [
                             {
-                                "title": "자가체크 1: 계산기 금지 대수",
+                                "title": "Self-Check 1: No Calculator Algebra",
                                 "difficulty": "easy",
-                                "question": "2020년 paper SAT의 No Calculator 섹션 스타일이다. 식 (x + 3)(x - 5)를 전개하면?",
+                                "question": "In the style of the 2020 paper SAT's No Calculator section: expanding (x + 3)(x - 5) gives?",
                                 "options": [
                                     "x^2 - 2x - 15",
                                     "x^2 + 2x - 15",
@@ -4248,25 +4248,25 @@ window.MATH_DATA = {
                                     "x^2 - 2x + 15"
                                 ],
                                 "answer": "x^2 - 2x - 15",
-                                "explanation": "분배법칙으로 전개하면 x*x = x^2, x*(-5) = -5x, 3*x = 3x, 3*(-5) = -15이다. 동류항을 정리하면 -5x + 3x = -2x가 되므로 답은 x^2 - 2x - 15이다. paper 시절 No Calculator 섹션은 이런 기본 전개·인수분해를 손으로 빠르고 정확하게 하는 능력을 측정했고, digital 전환 후에도 대수 연산의 정확성은 Advanced Math 영역의 전제 조건으로 남았다. 부호 실수가 가장 흔한 오답 원인이므로 전개 후에는 x=0 같은 쉬운 값을 대입해 검산하는 습관이 고득점의 기본이다."
+                                "explanation": "Distributing gives x*x = x^2, x*(-5) = -5x, 3*x = 3x, 3*(-5) = -15. Combining like terms, -5x + 3x = -2x, so the answer is x^2 - 2x - 15. The paper-era No Calculator section measured the ability to do basic expansion and factoring quickly and accurately by hand, and even after the digital transition, accuracy in algebraic manipulation remains the prerequisite for the Advanced Math area. Sign slips are the most common wrong-answer cause, so after expanding, the habit of checking with an easy value like x=0 is the foundation of a high score.",
                             },
                             {
-                                "title": "자가체크 2: Evidence Pair 논리",
+                                "title": "Self-Check 2: Evidence Pair Logic",
                                 "difficulty": "medium",
-                                "question": "paper SAT Reading의 evidence pair 문항에 대한 설명으로 가장 적절한 것은?",
+                                "question": "Which of the following best describes an evidence-pair question on paper SAT Reading?",
                                 "options": [
-                                    "앞 문항의 답을 뒷받침하는 지문 구절을 고르는 문항이다",
-                                    "지문과 무관한 배경지식을 묻는 문항이다",
-                                    "밑줄 친 단어의 사전적 정의만 묻는 문항이다",
-                                    "그래프의 수치만 읽으면 풀리는 문항이다"
+                                    "It is a question type that asks you to choose the passage excerpt supporting your answer to the previous question",
+                                    "It is a question type that asks about background knowledge unrelated to the passage",
+                                    "It is a question type that asks only for the dictionary definition of an underlined word",
+                                    "It is a question type that can be solved just by reading numbers off a graph",
                                 ],
-                                "answer": "앞 문항의 답을 뒷받침하는 지문 구절을 고르는 문항이다",
-                                "explanation": "Evidence pair는 두 문항이 한 쌍으로 출제되는 paper SAT Reading의 대표 유형이었다. 첫 문항에서 지문의 주장·추론에 답하면, 다음 문항에서 그 답의 직접적 근거가 되는 지문 구절(보통 줄 번호 인용)을 고르게 했다. 전략은 앞 문항을 먼저 확정하는 것이다. 앞 답이 흔들리면 근거 문항도 함께 틀리기 때문이다. 이 유형은 digital SAT에서 Command of Evidence(텍스트 근거) 문항으로 계승되었는데, 지문이 25~150단어 단문으로 바뀌면서 근거 찾기의 범위는 오히려 좁아졌다. 긴 지문에서 근거를 찾던 훈련은 단문에서도 그대로 유효하다."
+                                "answer": "It is a question type that asks you to choose the passage excerpt supporting your answer to the previous question",
+                                "explanation": "The evidence pair was the signature question type of paper SAT Reading, asked as a two-question set. After answering the passage's claim or inference in the first question, the next question asked you to choose the passage lines (usually cited by line numbers) that directly support that answer. The strategy is to lock in the first question first — if the first answer wobbles, the evidence question falls with it. This type was carried into digital SAT as Command of Evidence (textual) questions, and with passages shortened to 25–150 words, the evidence-hunting range actually narrowed. Training on long passages transfers directly to short ones.",
                             },
                             {
-                                "title": "자가체크 3: 문장 경계와 구두점",
+                                "title": "Self-Check 3: Sentence Boundaries & Punctuation",
                                 "difficulty": "medium",
-                                "question": "다음 중 완전한 두 문장을 올바르게 연결한 것은? (A: The experiment failed. The data was useful.를 한 문장으로)",
+                                "question": "Which of the following correctly joins two complete sentences into one? (Combine: The experiment failed. The data was useful.)",
                                 "options": [
                                     "The experiment failed; the data was useful.",
                                     "The experiment failed, the data was useful.",
@@ -4274,209 +4274,209 @@ window.MATH_DATA = {
                                     "The experiment failed: the data was useful, however."
                                 ],
                                 "answer": "The experiment failed; the data was useful.",
-                                "explanation": "세미콜론은 완전한 독립절 두 개를 연결하는 구두점이다. The experiment failed와 the data was useful는 각각 주어와 동사를 갖춘 완전한 문장이므로 세미콜론으로 연결하는 것이 문법적으로 올바르다. 두 번째 선지는 콤마만으로 독립절을 연결한 comma splice 오류이고, 세 번째는 구두점이 전혀 없는 fused sentence 오류이다. 네 번째 선지는 콜론 뒤에 however를 붙여 어색하고 문장 구조도 어긋난다. paper 시절 Writing 섹션에서 문장 경계 문제는 고빈도 출제 영역이었고, digital의 Boundaries(문장 경계) 문항으로 그대로 이어졌다. 규칙이 명확하므로 한 번 정리하면 안정적인 득점원이 된다."
+                                "explanation": "The semicolon is the punctuation that joins two complete independent clauses. 'The experiment failed' and 'the data was useful' are each complete sentences with subject and verb, so joining them with a semicolon is grammatically correct. The second choice joins independent clauses with only a comma — a comma splice error; the third has no punctuation at all — a fused sentence error. The fourth choice tacks 'however' after a colon, which is awkward and structurally off. In the paper era, sentence-boundary questions were a high-frequency Writing area, carried straight into digital's Boundaries questions. The rule is clear, so once you organize it, it's a steady source of points.",
                             }
                         ]
                     }
                 },
                 {
-                    "title": "2021: Essay 폐지 & paper SAT 마지막 안정기",
-                    "insight": "2021년 6월 College Board가 SAT Essay를 공식 폐지했다. 이후 SAT는 Essay 없는 3시간 paper 시험으로 안정화됐다. Test-optional 정책을 유지하는 대학이 1,800곳을 넘어서며 응시 전략이 중요해졌다. 출제 경향 자체는 2020년과 큰 차이가 없었다. Math에서는 이차함수·지수 모델·통계 추론이 꾸준히 출제되는 경향이 이어졌고, R&W에서는 Command of Evidence·Words in Context·표준 문법의 비중이 안정적이었다. 이 시기의 공식 기출은 지금도 paper 기반 개념 훈련용으로 유효하다.",
+                    "title": "2021: Essay Retired & the Paper SAT's Last Stable Era",
+                    "insight": "In June 2021, the College Board officially retired the SAT Essay. The SAT stabilized as a 3-hour, essay-free paper test. With over 1,800 colleges keeping test-optional policies, test-taking strategy mattered. The tested trends themselves barely differed from 2020. In Math, quadratic functions, exponential models, and statistical inference kept appearing steadily, and in R&W, Command of Evidence, Words in Context, and standard grammar held stable shares. This era's official released exams remain useful for paper-based concept training today.",
                     "topics": [
-                        "2021년 6월 Essay 폐지: 이후 R&W는 Reading+Writing 통합 독해·문법 체제",
-                        "Math TOP: 이차함수 그래프, 지수 성장·감소, 표본 추론, 삼각비 기초",
-                        "R&W TOP: 근거 기반 독해, 문맥 어휘, 문장 경계·일치 문법",
-                        "학습 포인트: 이 시기 기출은 개념별로 쪼개어 digital 대비 훈련에 재활용 가능"
+                        "Essay retired June 2021: R&W moved to an integrated Reading+Writing comprehension-and-grammar system",
+                        "Math TOP: quadratic function graphs, exponential growth and decay, sample inference, basic trig ratios",
+                        "R&W TOP: evidence-based reading, words in context, sentence-boundary and agreement grammar",
+                        "Study point: this era's released exams can be split by concept and recycled for digital prep",
                     ],
                     "lectures": [],
                     "examples": [
                         {
-                            "title": "[Math] 이차함수 그래프 해석",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Quadratic Function Graphs",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 꼭짓점·대칭축·근 구하기, 그래프에서 식 복원",
-                                "핵심 포인트: 꼭짓점 형태 완성, a의 부호로 위/아래 볼록 판별"
+                                "Signature types: finding the vertex, axis of symmetry, and roots; recovering the equation from a graph",
+                                "Key points: completing vertex form; judging upward/downward opening by the sign of a",
                             ],
-                            "intuition": "식이 주어지면 그래프를, 그래프가 주어지면 식을. 양방향 변환이 핵심이다."
+                            "intuition": "Given the equation, draw the graph; given the graph, recover the equation. Two-way conversion is the key.",
                         },
                         {
-                            "title": "[Math] 지수 성장·감소 모델",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Exponential Growth & Decay Models",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: y=ab^(t/k) 형태의 실생활 모델 해석",
-                                "핵심 포인트: 밑이 1보다 크면 성장, 작으면 감소. 배가 시간·반감기 읽기"
+                                "Signature types: interpreting real-world models of the form y=ab^(t/k)",
+                                "Key points: base above 1 grows, below 1 decays. Reading doubling time and half-life",
                             ],
-                            "intuition": "지수 모델 문제는 식의 각 부분이 현실의 무엇인지 묻는다. 번역 문제다."
+                            "intuition": "Exponential-model questions ask what each part of the equation means in reality. They're translation problems.",
                         },
                         {
-                            "title": "[Math] 일차함수: 기울기와 절편",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Linear Functions: Slope and Intercept",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 두 점으로 기울기, y=mx+b에서 m·b의 의미",
-                                "핵심 포인트: 기울기=변화율, 절편=초기값. 실생활 맥락 해석 빈출"
+                                "Signature types: slope from two points; the meaning of m and b in y=mx+b",
+                                "Key points: slope = rate of change, intercept = initial value. Real-world interpretation is frequent",
                             ],
-                            "intuition": "SAT 대수에서 가장 많이 나오는 한 줄. 기울기는 곧 변화율이다."
+                            "intuition": "The most-seen single line in SAT algebra. Slope is rate of change.",
                         },
                         {
-                            "title": "[Math] 다항식 연산·인수분해",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Polynomial Operations & Factoring",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 공통인수·완전제곱·합차 공식, 다항식 나눗셈",
-                                "핵심 포인트: (a+b)^2, (a-b)(a+b) 패턴 암기 수준으로 익히기"
+                                "Signature types: common factors, perfect squares, sum-difference formulas, polynomial division",
+                                "Key point: Learn the (a+b)^2 and (a-b)(a+b) patterns cold — to the point of memorization",
                             ],
-                            "intuition": "인수분해는 이차방정식·유리식의 열쇠. 패턴 인식 속도가 점수다."
+                            "intuition": "Factoring is the key to quadratics and rational expressions. Your score depends on how fast you recognize the patterns.",
                         },
                         {
-                            "title": "[Math] 유리식·무리식",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Rational & Radical Expressions",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 유리식 간단화, 분모 유리화, 무리방정식",
-                                "핵심 포인트: 무리방정식은 제곱 후 반드시 원래 식에 대입 검산(무연근 주의)"
+                                "Typical types: Simplifying rational expressions, rationalizing denominators, radical equations",
+                                "Key point: For radical equations, always plug back into the original equation after squaring (watch out for extraneous roots)",
                             ],
-                            "intuition": "무연근이 함정의 전부다. 검산을 빼먹으면 틀리라고 낸 문제다."
+                            "intuition": "Extraneous roots are the entire trap. If you skip the check, the problem was designed to catch you.",
                         },
                         {
-                            "title": "[Math] 통계: 표본과 추론",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Statistics: Sampling and Inference",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 표본조사 결과의 일반화 가능 조건, 신뢰구간 직관",
-                                "핵심 포인트: 무작위 표본+충분한 크기일 때만 모집단 추론 가능"
+                                "Typical types: Conditions for generalizing survey results; intuition for confidence intervals",
+                                "Key point: You can infer about a population only with a random sample of sufficient size",
                             ],
-                            "intuition": "계산이 아니라 판단 문제. 누가·어떻게 뽑았는지가 답을 정한다."
+                            "intuition": "This is a judgment call, not a calculation. Who was sampled — and how — determines the answer.",
                         },
                         {
-                            "title": "[Math] 확률 기초",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Probability Basics",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 단순 확률, 여사건, 표에서 조건부 확률 읽기",
-                                "핵심 포인트: 2원 분할표(투표·설문 표) 문제에서 분모가 무엇인지 확인"
+                                "Typical types: Simple probability, complementary events, reading conditional probability from tables",
+                                "Key point: In two-way table (poll/survey table) problems, check what the denominator is",
                             ],
-                            "intuition": "SAT 확률은 어렵지 않다. 표에서 분수를 읽는 문제에 가깝다."
+                            "intuition": "SAT probability isn't hard. It's closer to reading fractions off a table.",
                         },
                         {
-                            "title": "[Math] 삼각비 기초",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Trigonometric Ratios Basics",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 직각삼각형에서 sin·cos·tan, 여각 관계",
-                                "핵심 포인트: SOH-CAH-TOA, sin(90°-θ)=cos θ"
+                                "Typical types: sin, cos, tan in right triangles; cofunction relationships",
+                                "Key point: SOH-CAH-TOA, sin(90°-θ)=cos θ",
                             ],
-                            "intuition": "직각삼각형 하나면 풀린다. 각도에 이름을 붙이고 변을 표시하자."
+                            "intuition": "One right triangle is all you need. Name the angle and label the sides.",
                         },
                         {
-                            "title": "[Math] 원의 방정식",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Math] Equations of Circles",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: (x-h)^2+(y-k)^2=r^2에서 중심·반지름, completing the square",
-                                "핵심 포인트: 일반형이 주어지면 완전제곱식으로 변형"
+                                "Typical types: Finding the center and radius from (x-h)^2+(y-k)^2=r^2; completing the square",
+                                "Key point: If given the general form, rewrite it by completing the square",
                             ],
-                            "intuition": "출제 빈도는 낮지만 패턴이 고정돼 있다. 변형 연습 한 번이면 끝난다."
+                            "intuition": "Rarely tested, but the pattern never changes. One round of rewriting practice and you're done.",
                         },
                         {
-                            "title": "[Math] 등차·등비수열",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Math] Arithmetic & Geometric Sequences",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: 일반항·합 공식, 실생활 맥락(저축·감소) 수열",
-                                "핵심 포인트: 등차는 일차식, 등비는 지수식이라는 연결 이해"
+                                "Typical types: nth-term and sum formulas; sequences in real-world contexts (savings, decay)",
+                                "Key point: Understand the connection — arithmetic sequences are linear, geometric sequences are exponential",
                             ],
-                            "intuition": "수열은 함수의 특수한 경우다. 그렇게 보면 공식이 외울 게 줄어든다."
+                            "intuition": "A sequence is just a special kind of function. Seeing it that way means fewer formulas to memorize.",
                         },
                         {
                             "title": "[R&W] Command of Evidence",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 주장을 뒷받침하는 텍스트·데이터 근거 선택",
-                                "핵심 포인트: 주장을 한 문장으로 압축한 뒤, 그것을 직접 뒷받침하는 선지만 고른다"
+                                "Typical types: Choosing the text or data evidence that best supports a claim",
+                                "Key point: Compress the claim into one sentence, then pick the choice that directly supports it",
                             ],
-                            "intuition": "paper의 evidence pair가 진화한 형태. digital R&W의 간판 유형이다."
+                            "intuition": "The paper-era evidence pair, evolved. The signature question type of digital R&W.",
                         },
                         {
-                            "title": "[R&W] 추론과 함의",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Inferences and Implications",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 지문 정보로 논리적으로 도출되는 결론",
-                                "핵심 포인트: 과한 일반화 선지 제거, 지문 범위 안에서 가장 안전한 답"
+                                "Typical types: Conclusions that logically follow from the passage",
+                                "Key point: Eliminate overgeneralizing choices; pick the safest answer within the passage's scope",
                             ],
-                            "intuition": "지문이 준 재료로만 요리한다. 재료를 새로 사 오면 안 된다."
+                            "intuition": "Cook only with the ingredients the passage gives you. Don't go buy new ones.",
                         },
                         {
-                            "title": "[R&W] 어휘 in context 심화",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Words in Context — Advanced",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 학술·과학 지문의 추상 어휘, 다의어",
-                                "핵심 포인트: 빈칸 앞뒤 논리(대조·인과) 파악 후 후보 단어 대입"
+                                "Typical types: Abstract academic/scientific vocabulary; words with multiple meanings",
+                                "Key point: Identify the logic around the blank (contrast, cause-effect), then plug in candidate words",
                             ],
-                            "intuition": "단어를 외우는 게 아니라 문장의 논리를 읽는 문제다."
+                            "intuition": "This isn't about memorizing words — it's about reading the sentence's logic.",
                         },
                         {
-                            "title": "[R&W] 텍스트 구조·기능",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Text Structure & Function",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 특정 문장·단락이 전체에서 하는 역할",
-                                "핵심 포인트: 예시·반박·전환·요약 중 하나로 분류해보기"
+                                "Typical types: The role a specific sentence or paragraph plays in the whole text",
+                                "Key point: Try classifying it as an example, a rebuttal, a transition, or a summary",
                             ],
-                            "intuition": "부분을 보면 전체가 보인다. 이 문장이 빠지면 글이 어떻게 망가지는지 상상하자."
+                            "intuition": "The part reveals the whole. Imagine how the text would break if this sentence were removed.",
                         },
                         {
-                            "title": "[R&W] 저자의 관점·어조",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[R&W] Author's Perspective & Tone",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 중립적·비판적·옹호적 태도 판별",
-                                "핵심 포인트: 형용사·부사 같은 평가 어휘 수집"
+                                "Typical types: Identifying neutral, critical, or supportive attitudes",
+                                "Key point: Collect evaluative words like adjectives and adverbs",
                             ],
-                            "intuition": "어조는 단어에 숨어 있다. 평가 어휘를 형광펜 치듯 모으면 태도가 보인다."
+                            "intuition": "Tone hides in word choice. Gather the evaluative words as if highlighting them, and the attitude shows itself.",
                         },
                         {
-                            "title": "[R&W] 주어-동사·대명사 일치",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[R&W] Subject-Verb & Pronoun Agreement",
+                            "problem": "Frequency: ★★★★☆ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 긴 주어구 속 진짜 주어 찾기, 대명사 선행사 모호성",
-                                "핵심 포인트: which·that 절과 전치사구를 괄호 치고 주어 노출시키기"
+                                "Typical types: Finding the real subject in a long subject phrase; ambiguous pronoun antecedents",
+                                "Key point: Put which/that clauses and prepositional phrases in parentheses to expose the subject",
                             ],
-                            "intuition": "문법 문제의 정석. 수식어를 걷어내는 순간 답이 보인다."
+                            "intuition": "The classic grammar question. The moment you strip the modifiers, the answer appears.",
                         },
                         {
-                            "title": "[R&W] 시제·법의 일관성",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[R&W] Tense & Mood Consistency",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 문단 내 시제 통일, 조건문·가정법",
-                                "핵심 포인트: 시간 부사(yesterday·since)와 동사 시제 짝 맞추기"
+                                "Typical types: Consistent tense within a paragraph; conditionals and the subjunctive",
+                                "Key point: Match time adverbs (yesterday, since) with verb tenses",
                             ],
-                            "intuition": "시제는 문단의 시간표를 맞추는 일이다. 부사가 힌트다."
+                            "intuition": "Tense is about syncing the paragraph's timetable. Adverbs are the hints.",
                         },
                         {
-                            "title": "[R&W] 병렬 구조",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[R&W] Parallel Structure",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: and·or·but으로 연결된 요소들의 형태 통일",
-                                "핵심 포인트: 연결된 첫 요소의 품사·형태를 기준으로 나머지를 맞춘다"
+                                "Typical types: Making elements joined by and/or/but match in form",
+                                "Key point: Use the first joined element's part of speech and form as the standard for the rest",
                             ],
-                            "intuition": "리스트는 모양이 같아야 한다. 동사면 동사, 명사면 명사로."
+                            "intuition": "Lists must match in form. Verbs with verbs, nouns with nouns.",
                         },
                         {
-                            "title": "[R&W] 불필요한 문장 삭제 판단",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[R&W] Deciding Whether to Delete a Sentence",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 문단 주제와 무관한 문장 삭제 여부",
-                                "핵심 포인트: 문단의 중심 주제 한 줄 요약 후 관련성 판단"
+                                "Typical types: Whether to delete a sentence unrelated to the paragraph's topic",
+                                "Key point: Summarize the paragraph's main point in one line, then judge relevance",
                             ],
-                            "intuition": "좋은 문장도 주제와 무관하면 삭제 대상이다. 관련성이 기준이다."
+                            "intuition": "Even a good sentence gets deleted if it's off-topic. Relevance is the standard.",
                         },
                         {
-                            "title": "[R&W] 수량·데이터 근거 독해",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[R&W] Reading Quantitative & Data Evidence",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: 표·그래프 수치로 지문 주장 검증",
-                                "핵심 포인트: 단위·축 눈금 확인, 주장의 수치와 데이터 대조"
+                                "Typical types: Verifying passage claims with values from tables and graphs",
+                                "Key point: Check units and axis scales; compare the claim's numbers against the data",
                             ],
-                            "intuition": "숫자는 거짓말하지 않지만 축은 속일 수 있다. 단위부터 확인하자."
+                            "intuition": "Numbers don't lie, but axes can deceive. Check the units first.",
                         }
                     ],
                     "quiz": {
                         "levels": [
                             {
-                                "title": "자가체크 1: 이차함수 꼭짓점",
+                                "title": "Self-Check 1: Vertex of a Quadratic Function",
                                 "difficulty": "easy",
-                                "question": "이차함수 y = x^2 - 6x + 5의 꼭짓점 좌표는?",
+                                "question": "What are the coordinates of the vertex of the quadratic function y = x^2 - 6x + 5?",
                                 "options": [
                                     "(3, -4)",
                                     "(-3, 32)",
@@ -4484,25 +4484,25 @@ window.MATH_DATA = {
                                     "(-3, -4)"
                                 ],
                                 "answer": "(3, -4)",
-                                "explanation": "꼭짓점의 x좌표는 -b/2a = 6/2 = 3이다. 이를 식에 대입하면 y = 9 - 18 + 5 = -4이므로 꼭짓점은 (3, -4)이다. 완전제곱식으로 변형해도 같은 결과를 얻을 수 있다. y = (x-3)^2 - 9 + 5 = (x-3)^2 - 4이므로 꼭짓점 (3, -4)이 바로 보인다. 이차함수 꼭짓점은 paper 시절부터 digital까지 꾸준히 출제되는 필수 개념이다. -b/2a 공식 암기보다 완전제곱식 변형을 이해하면 근의 위치·최댓값·최솟값 문제까지 한 번에 해결된다. 부호 실수에 주의하고, 구한 꼭짓점을 원래 식에 대입해 검산하는 습관을 들이자."
+                                "explanation": "The x-coordinate of the vertex is -b/2a = 6/2 = 3. Plugging it into the equation gives y = 9 - 18 + 5 = -4, so the vertex is (3, -4). Completing the square gives the same result: y = (x-3)^2 - 9 + 5 = (x-3)^2 - 4, which shows the vertex (3, -4) directly. The quadratic vertex is an essential concept tested steadily from the paper era through digital. Understanding the completed-square form — rather than just memorizing -b/2a — lets you solve root-location and max/min problems all at once. Watch out for sign errors, and build the habit of plugging the vertex back into the original equation to check.",
                             },
                             {
-                                "title": "자가체크 2: 표본 추론의 조건",
+                                "title": "Self-Check 2: Conditions for Sample Inference",
                                 "difficulty": "medium",
-                                "question": "어느 고등학교 학생 200명을 무작위로 뽑아 조사했더니 60%가 아침 식사를 거른다고 답했다. 이 결과에 대한 올바른 해석은?",
+                                "question": "A random sample of 200 students at a high school found that 60% skip breakfast. Which is the correct interpretation of this result?",
                                 "options": [
-                                    "이 학교 전체 학생에 대해 아침 식사를 거르는 비율을 추정할 수 있다",
-                                    "전국 모든 고등학생의 식습관을 확정할 수 있다",
-                                    "조사 대상 200명의 식습관도 알 수 없다",
-                                    "아침 식사와 성적의 인과관계를 증명했다"
+                                    "The percentage of students who skip breakfast can be estimated for this school's entire student body",
+                                    "The eating habits of all high school students nationwide can be established",
+                                    "We cannot even know the eating habits of the 200 surveyed students",
+                                    "It proves a causal relationship between breakfast and grades",
                                 ],
-                                "answer": "이 학교 전체 학생에 대해 아침 식사를 거르는 비율을 추정할 수 있다",
-                                "explanation": "무작위 표본은 표본이 추출된 모집단(이 학교 학생)에 대해서만 일반화할 수 있다. 전국 고등학생으로 확대하려면 전국 단위의 무작위 표본이 필요하므로 두 번째 선지는 과한 일반화이다. 세 번째 선지는 틀렸다. 조사 대상 200명의 응답은 직접 측정된 사실이므로 알 수 있다. 네 번째 선지는 인과관계의 오류이다. 이 조사는 상관관계(식사 여부와 응답)만 보여줄 뿐, 아침 식사가 성적에 미치는 인과를 증명한 것이 아니다. SAT 통계 문항은 계산보다 이런 추론의 한계를 묻는 경향이 강하다. 누가·어떻게 뽑았는지, 어디까지 일반화할 수 있는지를 따지는 것이 핵심이다."
+                                "answer": "The percentage of students who skip breakfast can be estimated for this school's entire student body",
+                                "explanation": "A random sample can only be generalized to the population it was drawn from — this school's students. Extending it to all high school students nationwide would require a nationwide random sample, so the second choice is an overgeneralization. The third choice is wrong: the 200 respondents' answers were directly measured, so we do know them. The fourth choice is a causation error. This survey only shows an association (meal-skipping and responses), not proof that breakfast causes changes in grades. SAT statistics questions tend to probe these limits of inference rather than calculation. The key is asking who was sampled, how, and how far you can generalize.",
                             },
                             {
-                                "title": "자가체크 3: 문맥 어휘",
+                                "title": "Self-Check 3: Words in Context",
                                 "difficulty": "medium",
-                                "question": "과학 지문: 'The results _____ the hypothesis that the compound inhibits cell growth.' 빈칸에 가장 적절한 단어는? (앞 문장: 실험에서 세포 성장이 40% 감소했다)",
+                                "question": "Science passage: 'The results _____ the hypothesis that the compound inhibits cell growth.' Which word best fits the blank? (Previous sentence: the experiment showed a 40% decrease in cell growth)",
                                 "options": [
                                     "support",
                                     "undermine",
@@ -4510,235 +4510,235 @@ window.MATH_DATA = {
                                     "complicate"
                                 ],
                                 "answer": "support",
-                                "explanation": "앞 문장에서 세포 성장이 40% 감소했다는 실험 결과가 제시되었고, 가설은 그 화합물이 세포 성장을 억제한다는 내용이다. 실험 결과가 가설과 같은 방향이므로 결과를 설명하는 동사는 긍정적 지지가 되어야 한다. support(뒷받침하다)가 문맥상 가장 적절하다. undermine(약화시키다)은 반대 방향, qualify(제한하다)·complicate(복잡하게 하다)는 문맥상 근거가 없다. Words in Context 문항은 단어의 사전적 정의가 아니라 문장 속 논리 관계를 묻는다. 빈칸 앞뒤의 인과·대조 관계를 먼저 파악하고 후보 단어를 대입해보는 것이 정석 풀이이다."
+                                "explanation": "The previous sentence reported a 40% decrease in cell growth, and the hypothesis is that the compound inhibits cell growth. Since the results point in the same direction as the hypothesis, the verb should express positive support — support is the best fit. undermine goes the opposite direction, and there is no basis in context for qualify (limiting) or complicate. Words in Context questions test the logic in the sentence, not dictionary definitions. First identify the cause-effect or contrast relationship around the blank, then plug in candidates — that's the standard approach.",
                             }
                         ]
                     }
                 },
                 {
-                    "title": "2022: 디지털 SAT 발표 & 파일럿의 해",
-                    "insight": "2022년 1월 College Board가 디지털 SAT 전환을 공식 발표했다. 국제는 2023년, 미국은 2024년 전환 예정이었다. 2022년 가을에는 국제 파일럿 시험이 시행되며 새 형식의 실체가 드러나기 시작했다. 예고된 변화는 지문 단문화(25~150단어), 문항당 1지문 독립형, 2단계 적응형 모듈, 전 문항 계산기 허용(Desmos 내장), 시험 시간 2시간 14분이었다. Paper 시험 자체의 출제 경향은 2020~2021년과 유사하게 유지됐다. 이 해의 의미는 형식 예고이지 내용 변화가 아니었다.",
+                    "title": "2022: The Year of the Digital SAT Announcement & Pilot",
+                    "insight": "In January 2022, the College Board officially announced the transition to the Digital SAT. International testing would switch in 2023, the U.S. in 2024. That fall, international pilot tests revealed what the new format would actually look like. The announced changes: short passages (25–150 words), one independent passage per question, two-stage adaptive modules, calculators allowed on all questions (built-in Desmos), and a 2-hour-14-minute test. The paper test itself kept trends similar to 2020–2021. This year's significance was the format announcement — not a content change.",
                     "topics": [
-                        "2022년 1월 디지털 전환 발표: 국제 2023·미국 2024 전환 로드맵",
-                        "예고된 형식 변화 5가지: 단문 지문·적응형·계산기 전면 허용·단축·Bluebook",
-                        "Math TOP: paper 마지막 해의 대수·함수·통계 완성",
-                        "R&W TOP: 긴 지문 독해 지구력 + 문법 정확도 (digital에서도 유효한 기초 체력)"
+                        "January 2022 digital transition announcement: International 2023 and U.S. 2024 transition roadmap",
+                        "5 announced format changes: short passages, adaptive, all-questions calculator, shorter test, Bluebook",
+                        "Math TOP: the final paper year's polished algebra, functions, and statistics",
+                        "R&W TOP: long-passage reading stamina + grammar accuracy (foundational skills that still matter for digital)",
                     ],
                     "lectures": [],
                     "examples": [
                         {
-                            "title": "[Math] 연립방정식 해의 개수",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Number of Solutions to a System of Equations",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 두 직선의 기울기·절편 비교로 해의 개수 판별",
-                                "핵심 포인트: 기울기 다르면 한 개, 같고 절편 다르면 0개, 같으면 무수히 많음"
+                                "Typical types: Determining the number of solutions by comparing the slopes and intercepts of two lines",
+                                "Key point: Different slopes → one solution; same slope but different intercepts → no solution; everything the same → infinitely many solutions",
                             ],
-                            "intuition": "그래프를 그리지 않고도 판별할 수 있다. 기울기가 모든 것을 말한다."
+                            "intuition": "You can tell without graphing. The slope says everything.",
                         },
                         {
-                            "title": "[Math] 이차방정식의 근",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Roots of Quadratic Equations",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 인수분해·근의 공식·판별식, 근과 계수 관계",
-                                "핵심 포인트: 판별식 부호로 실근 개수, 인수분해가 안 되면 근의 공식"
+                                "Typical types: Factoring, the quadratic formula, the discriminant, and relationships between roots and coefficients",
+                                "Key point: Use the discriminant's sign for the number of real roots; if factoring fails, use the quadratic formula",
                             ],
-                            "intuition": "이차방정식은 푸는 방법이 세 가지다. 상황에 맞는 도구를 고르는 게 실력이다."
+                            "intuition": "There are three ways to solve a quadratic. Picking the right tool for the situation is the real skill.",
                         },
                         {
-                            "title": "[Math] 함수값과 합성함수",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Function Values & Composite Functions",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: f(g(x)) 계산, 표·그래프에서 함숫값 읽기",
-                                "핵심 포인트: 안쪽부터 차례로 대입, 표 문제는 행·열 헷갈림 주의"
+                                "Typical types: Computing f(g(x)); reading function values from tables and graphs",
+                                "Key point: Substitute from the inside out; in table problems, don't mix up rows and columns",
                             ],
-                            "intuition": "합성함수는 양파 까기다. 가장 안쪽부터 벗겨낸다."
+                            "intuition": "Composite functions are like peeling an onion. Start from the innermost layer.",
                         },
                         {
-                            "title": "[Math] 지수법칙·근호 연산",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Exponent Rules & Radical Operations",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: a^m·a^n, (a^m)^n, 음지수·분수지수",
-                                "핵심 포인트: 밑이 같으면 지수끼리 더하고 빼고 곱한다"
+                                "Typical types: a^m·a^n, (a^m)^n, negative and fractional exponents",
+                                "Key point: With the same base, add, subtract, or multiply the exponents",
                             ],
-                            "intuition": "지수법칙은 외우는 게 아니라 패턴이다. 밑 통일→지수 계산의 2단계다."
+                            "intuition": "Exponent rules are a pattern, not a memorization list. Two steps: unify the base, then work the exponents.",
                         },
                         {
-                            "title": "[Math] 백분율 증감 복합",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[Math] Combined Percent Increases & Decreases",
+                            "problem": "Frequency: ★★★★☆ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 연속 할인·인상, 원가 역산",
-                                "핵심 포인트: 20% 할인 후 20% 인상은 원가가 아니다. 곱셈으로 계산"
+                                "Typical types: Successive discounts and markups; working back to the original price",
+                                "Key point: A 20% discount followed by a 20% markup is NOT the original price. Multiply — don't add.",
                             ],
-                            "intuition": "퍼센트는 덧셈이 아니라 곱셈이다. 이 한 줄이 함정의 전부다."
+                            "intuition": "Percents are multiplication, not addition. That one line is the entire trap.",
                         },
                         {
-                            "title": "[Math] 산점도·추세선",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Scatterplots & Lines of Best Fit",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 추세선으로 값 예측, 상관관계 방향·강도",
-                                "핵심 포인트: 추세선 위의 점이 예측값, 실제값과의 차이가 잔차"
+                                "Typical types: Predicting values with a trend line; direction and strength of correlation",
+                                "Key point: Points on the trend line are predicted values; their difference from actual values is the residual",
                             ],
-                            "intuition": "산점도는 데이터의 이야기다. 점들의 전체 흐름을 읽는다."
+                            "intuition": "A scatterplot tells the data's story. Read the overall flow of the points.",
                         },
                         {
-                            "title": "[Math] 닮음과 비례",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Similarity & Proportions",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 닮은 도형의 대응변·넓이·부피 비",
-                                "핵심 포인트: 길이비 k → 넓이비 k^2 → 부피비 k^3"
+                                "Typical types: Ratios of corresponding sides, areas, and volumes of similar figures",
+                                "Key point: Length ratio k → area ratio k^2 → volume ratio k^3",
                             ],
-                            "intuition": "차원이 올라가면 지수도 올라간다. 길이·넓이·부피를 구분하자."
+                            "intuition": "Higher dimensions mean higher exponents. Keep length, area, and volume straight.",
                         },
                         {
-                            "title": "[Math] 각도와 평행선",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Angles & Parallel Lines",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 평행선과 횡단선의 동위각·엇각·동측내각",
-                                "핵심 포인트: 평행이면 엇각·동위각이 같다. 지그재그(Z)를 찾아라"
+                                "Typical types: Corresponding, alternate interior, and same-side interior angles with parallel lines and a transversal",
+                                "Key point: If the lines are parallel, alternate interior and corresponding angles are equal. Find the zigzag (Z).",
                             ],
-                            "intuition": "각도 문제는 평행 조건 하나면 풀린다. Z 모양을 찾는 게 시작이다."
+                            "intuition": "One parallel condition solves an angle problem. Start by finding the Z shape.",
                         },
                         {
-                            "title": "[Math] 절댓값 방정식",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Math] Absolute Value Equations",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: |x-a|=b, 절댓값 부등식",
-                                "핵심 포인트: 경우 나누기, 그래프로는 V자 꺾임 이해"
+                                "Typical types: |x-a|=b; absolute value inequalities",
+                                "Key point: Split into cases; graphically, understand the V-shaped bend",
                             ],
-                            "intuition": "절댓값은 거리다. |x-3|=5는 3에서 거리가 5인 점이다."
+                            "intuition": "Absolute value is distance. |x-3|=5 means the points at distance 5 from 3.",
                         },
                         {
-                            "title": "[Math] 이차 부등식",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Math] Quadratic Inequalities",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: ax^2+bx+c>0 해집합",
-                                "핵심 포인트: 그래프를 그려 x축 위·아래 구간 판단"
+                                "Typical types: Solution sets of ax^2+bx+c>0",
+                                "Key point: Graph it and judge which intervals are above or below the x-axis",
                             ],
-                            "intuition": "부등식은 그래프 문제다. 포물선을 그리면 답이 보인다."
+                            "intuition": "Inequalities are graphing problems. Sketch the parabola and the answer shows itself.",
                         },
                         {
-                            "title": "[R&W] 중심 주장과 세부 근거",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Central Claims & Supporting Details",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 지문 주장 + 그것을 뒷받침하는 세부 사항 연결",
-                                "핵심 포인트: 주장 한 줄 요약 → 각 단락이 주장의 어떤 부분을 맡는지 매칭"
+                                "Typical types: Connecting a passage's claim to the details that support it",
+                                "Key point: Summarize the claim in one line, then match each paragraph to the part of the claim it handles",
                             ],
-                            "intuition": "글은 주장과 근거의 건축물이다. 기둥(주장)과 벽돌(근거)을 구분하자."
+                            "intuition": "A text is a building of claims and evidence. Separate the pillars (claims) from the bricks (evidence).",
                         },
                         {
-                            "title": "[R&W] 어휘 뉘앙스 구분",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Distinguishing Word Nuances",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 유사한 뜻의 단어 중 문맥 뉘앙스에 맞는 선택",
-                                "핵심 포인트: 긍정·중립·부정의 어감, 강도(weak→strong) 스펙트럼"
+                                "Typical types: Choosing among similar-meaning words the one that fits the context's nuance",
+                                "Key point: Positive/neutral/negative connotations and the strength spectrum (weak→strong)",
                             ],
-                            "intuition": "동의어는 뉘앙스가 다르다. 문장의 온도에 맞는 단어를 고른다."
+                            "intuition": "Synonyms differ in nuance. Pick the word that matches the sentence's temperature.",
                         },
                         {
-                            "title": "[R&W] 비교·대조 구조",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Compare & Contrast Structure",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 두 이론·현상의 공통점·차이점 파악",
-                                "핵심 포인트: 대조 신호어(however·while·in contrast) 표시, 표로 정리"
+                                "Typical types: Identifying similarities and differences between two theories or phenomena",
+                                "Key point: Mark contrast signal words (however, while, in contrast) and organize in a table",
                             ],
-                            "intuition": "비교 지문은 표로 바꾸면 끝난다. 공통점 한 줄, 차이점 한 줄이다."
+                            "intuition": "Turn a comparison passage into a table and you're done. One line for similarities, one line for differences.",
                         },
                         {
-                            "title": "[R&W] 인과관계 추적",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Tracing Cause and Effect",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 원인→결과 사슬 파악, 역인과·제3변수 함정",
-                                "핵심 포인트: because·lead to·result in 신호어, 상관관계와 인과 구분"
+                                "Typical types: Mapping cause→effect chains; reverse-causation and third-variable traps",
+                                "Key point: Signal words like because, lead to, and result in; distinguish correlation from causation",
                             ],
-                            "intuition": "함께 일어난다고 원인이 아니다. 인과를 주장하려면 메커니즘이 있어야 한다."
+                            "intuition": "Happening together doesn't make it a cause. Claiming causation requires a mechanism.",
                         },
                         {
-                            "title": "[R&W] 삽입·삭제 문장 판단",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[R&W] Judging Sentence Additions & Deletions",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 특정 위치에 문장 추가 시 효과, 삭제 시 손실",
-                                "핵심 포인트: 앞뒤 문장과의 논리 연결이 매끄러운지, 주제 일탈 여부"
+                                "Typical types: The effect of adding a sentence at a specific spot; what is lost by deleting one",
+                                "Key point: Check whether the logical connection to neighboring sentences is smooth and whether the topic drifts",
                             ],
-                            "intuition": "문장은 이웃과 어울려야 한다. 앞뒤 문장과 악수하는지 확인하자."
+                            "intuition": "A sentence has to get along with its neighbors. Check that it shakes hands with the sentences before and after.",
                         },
                         {
-                            "title": "[R&W] 콜론·대시 용법",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[R&W] Colon & Dash Usage",
+                            "problem": "Frequency: ★★★★☆ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 콜론 뒤 설명·나열, 대시의 강조·삽입",
-                                "핵심 포인트: 콜론 앞은 완전한 문장, 대시 쌍은 콤마 쌍처럼 삽입구 처리"
+                                "Typical types: Explanations or lists after a colon; emphasis or insertion with dashes",
+                                "Key point: A complete sentence comes before the colon; treat paired dashes like paired commas — an inserted phrase",
                             ],
-                            "intuition": "콜론은 예고편이다. 뒤에 중요한 설명이 온다는 신호다."
+                            "intuition": "A colon is a trailer. It signals that an important explanation is coming.",
                         },
                         {
-                            "title": "[R&W] 분사·부정사 수식",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[R&W] Participle & Infinitive Modifiers",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 현수분사(dangling modifier), to부정사 용법",
-                                "핵심 포인트: 분사구 바로 뒤에 수식 대상이 오는지 확인"
+                                "Typical types: Dangling modifiers; to-infinitive usage",
+                                "Key point: Check that the thing being modified comes right after the participial phrase",
                             ],
-                            "intuition": "수식어는 주인 바로 옆에 있어야 한다. 떨어져 있으면 의미가 무너진다."
+                            "intuition": "A modifier must sit right next to its owner. If it's far away, the meaning collapses.",
                         },
                         {
-                            "title": "[R&W] 문단 재배열·논리 흐름",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[R&W] Reordering Paragraphs & Logical Flow",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 가장 논리적인 문장 순서, 문단 위치",
-                                "핵심 포인트: 지시어(this·such)·시간 순서·일반→구체 흐름 추적"
+                                "Typical types: The most logical sentence order; paragraph placement",
+                                "Key point: Track demonstratives (this, such), chronological order, and the general→specific flow",
                             ],
-                            "intuition": "글에는 순서의 이유가 있다. 지시어가 앞 문장을 가리키는지 보자."
+                            "intuition": "There's a reason for every text's order. Check whether demonstratives point back to the previous sentence.",
                         },
                         {
-                            "title": "[R&W] 그래프+지문 통합",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[R&W] Integrating Graphs & Passages",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: 그래프 데이터로 지문 주장의 타당성 평가",
-                                "핵심 포인트: 그래프가 보여주는 것과 보여주지 않는 것 구분"
+                                "Typical types: Evaluating passage claims against graph data",
+                                "Key point: Distinguish what the graph shows from what it doesn't show",
                             ],
-                            "intuition": "데이터는 주장의 심판이다. 주장이 데이터를 정확히 반영하는지 대조한다."
+                            "intuition": "Data is the judge of claims. Check whether the claim accurately reflects the data.",
                         },
                         {
-                            "title": "[R&W] 반어·수사적 표현",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[R&W] Irony & Rhetorical Expression",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: 아이러니·역설 표현의 실제 의미 파악",
-                                "핵심 포인트: 문자 그대로가 아닌 맥락상 의도, 전체 어조와 대조"
+                                "Typical types: Grasping the real meaning of ironic or paradoxical expressions",
+                                "Key point: The intended meaning in context — not the literal one — contrasted with the overall tone",
                             ],
-                            "intuition": "겉말과 속뜻이 다를 때가 있다. 전체 어조가 반어의 열쇠다."
+                            "intuition": "Sometimes the surface meaning differs from the real one. The overall tone is the key to irony.",
                         }
                     ],
                     "quiz": {
                         "levels": [
                             {
-                                "title": "자가체크 1: 연립방정식 해의 개수",
+                                "title": "Self-Check 1: Number of Solutions to a System of Equations",
                                 "difficulty": "easy",
-                                "question": "연립방정식 2x + 3y = 7, 4x + 6y = 10의 해의 개수는?",
+                                "question": "How many solutions does the system 2x + 3y = 7, 4x + 6y = 10 have?",
                                 "options": [
-                                    "0개 (해가 없음)",
-                                    "1개",
-                                    "2개",
-                                    "무수히 많음"
+                                    "0 (no solution)",
+                                    "1",
+                                    "2",
+                                    "Infinitely many",
                                 ],
-                                "answer": "0개 (해가 없음)",
-                                "explanation": "두 번째 식을 2로 나누면 2x + 3y = 5가 된다. 첫 번째 식 2x + 3y = 7과 비교하면 좌변은 같은데 우변이 다르다. 기울기로 보면 두 직선은 2x + 3y = 7 즉 y = -(2/3)x + 7/3과 y = -(2/3)x + 5/3으로 기울기가 같고 y절편이 다르므로 평행한 두 직선이다. 평행한 직선은 만나지 않으므로 해가 없다. 해의 개수 판별은 그래프를 그리지 않고도 기울기와 절편 비교만으로 해결되는 paper·digital 공통 필수 유형이다. 계수가 비례하는데 상수항만 다르면 해 없음, 식 전체가 비례하면 무수히 많음, 기울기가 다르면 해 1개라는 패턴을 기억하자."
+                                "answer": "0 (no solution)",
+                                "explanation": "Divide the second equation by 2 to get 2x + 3y = 5. Compared with the first equation 2x + 3y = 7, the left sides are the same but the right sides differ. In slope form, the two lines are y = -(2/3)x + 7/3 and y = -(2/3)x + 5/3 — same slope, different y-intercepts, so they are parallel. Parallel lines never meet, so there is no solution. Determining the number of solutions by comparing slopes and intercepts (without graphing) is an essential question type common to both paper and digital. Remember the pattern: proportional coefficients but different constants → no solution; the entire equations proportional → infinitely many; different slopes → one solution.",
                             },
                             {
-                                "title": "자가체크 2: 디지털 전환 예고 내용",
+                                "title": "Self-Check 2: Announced Digital Transition Changes",
                                 "difficulty": "medium",
-                                "question": "2022년 발표된 디지털 SAT의 예고된 변화로 옳지 않은 것은?",
+                                "question": "Which of the following was NOT an announced change to the Digital SAT in 2022?",
                                 "options": [
-                                    "전 문항 계산기 허용(Desmos 내장)이 예고됐다",
-                                    "지문이 25~150단어 단문화될 것이 예고됐다",
-                                    "Essay가 부활할 것이 예고됐다",
-                                    "2단계 적응형 모듈이 예고됐다"
+                                    "It was announced that calculators would be allowed on all questions (with built-in Desmos)",
+                                    "It was announced that passages would become shorter (25–150 words)",
+                                    "It was announced that the Essay would be revived",
+                                    "It was announced that there would be two-stage adaptive modules",
                                 ],
-                                "answer": "Essay가 부활할 것이 예고됐다",
-                                "explanation": "2022년 1월 College Board의 디지털 SAT 발표에서 예고된 핵심 변화는 네 가지였다. 첫째, 지문이 25~150단어의 짧은 단문으로 바뀌고 문항당 하나의 지문이 독립 출제된다. 둘째, 2단계 적응형으로 모듈 1의 성적에 따라 모듈 2의 난이도가 조정된다. 셋째, 계산기 금지 섹션이 폐지되고 전 문항 계산기 사용이 허용되며 Desmos 그래핑 계산기가 내장된다. 넷째, 시험 시간이 3시간에서 2시간 14분으로 단축된다. Essay는 2021년 6월에 폐지되었고 부활 계획은 발표된 바 없으므로 세 번째 선지가 옳지 않은 것이다. 형식 변화를 정확히 아는 것은 학습 전략 수립의 출발점이다."
+                                "answer": "It was announced that the Essay would be revived",
+                                "explanation": "The College Board's January 2022 announcement of the Digital SAT previewed four key changes. First, passages would become short (25–150 words), with one independent passage per question. Second, a two-stage adaptive design: Module 2's difficulty would adjust based on Module 1 performance. Third, the no-calculator section would be eliminated — calculators allowed on all questions, with the Desmos graphing calculator built in. Fourth, test time would shrink from 3 hours to 2 hours 14 minutes. The Essay was discontinued in June 2021 and no revival was ever announced, so the third choice is the incorrect one. Knowing the format changes precisely is the starting point for building a study strategy.",
                             },
                             {
-                                "title": "자가체크 3: 콜론 용법",
+                                "title": "Self-Check 3: Colon Usage",
                                 "difficulty": "medium",
-                                "question": "콜론 사용이 올바른 문장은?",
+                                "question": "Which sentence uses the colon correctly?",
                                 "options": [
                                     "She bought three things: apples, bread, and cheese.",
                                     "She bought: apples, bread, and cheese.",
@@ -4746,471 +4746,471 @@ window.MATH_DATA = {
                                     "Apples, bread, and cheese: she bought."
                                 ],
                                 "answer": "She bought three things: apples, bread, and cheese.",
-                                "explanation": "콜론의 핵심 규칙은 콜론 앞이 완전한 독립절이어야 한다는 것이다. 첫 번째 선지에서 She bought three things는 주어와 동사를 갖춘 완전한 문장이고, 콜론 뒤에 그 three things의 구체적 나열이 오므로 올바른 용법이다. 두 번째 선지는 bought 뒤에 목적어 없이 콜론이 와서 앞부분이 완전하지 않다. 세 번째 선지는 The reason is 뒤에 콜론이 불필요하게 들어갔고(동사 is 뒤 직접 연결이 자연스럽다), 네 번째 선지는 어순이 어색하고 콜론 앞이 완전한 문장이 아니다. 콜론은 설명·나열·강조의 예고편 역할을 하며, digital SAT의 Boundaries 문항에서도 꾸준히 출제되는 경향이 있다."
+                                "explanation": "The key rule for colons: a complete independent clause must come before the colon. In the first choice, 'She bought three things' is a complete sentence with a subject and verb, followed by a list specifying those three things — correct usage. In the second choice, the colon comes right after 'bought' with no object, so the part before the colon isn't complete. In the third, the colon after 'The reason is' is unnecessary (a direct connection after the verb 'is' is more natural). In the fourth, the word order is awkward and the part before the colon isn't a complete sentence. A colon acts as a trailer for an explanation, a list, or emphasis — and it keeps showing up in digital SAT Boundaries questions.",
                             }
                         ]
                     }
                 },
                 {
-                    "title": "2023: 국제 디지털 원년 · 미국 paper 마지막 해",
-                    "insight": "2023년 3월 국제 SAT가 먼저 디지털로 전환됐다. 미국은 12월까지 paper 시험이 유지된 과도기였다. 디지털 형식의 실체가 확정됐다. Reading and Writing 54문항/64분, Math 44문항/70분, 총 2시간 14분이다. R&W와 Math 모두 2개 모듈씩, 모듈 2의 난이도가 모듈 1 성적에 따라 조정되는 2단계 적응형이다. 지문은 25~150단어 단문, 문항당 1지문 독립형으로 바뀌었다. Math는 전 문항 계산기 허용, Desmos 그래핑 계산기가 시험 화면에 내장됐다. 국제 응시 경험담에서는 시간 압박은 줄었지만 고난이도 모듈 2에서 변별이 걸린다는 분석이 나왔다.",
+                    "title": "2023: The First Year of International Digital & America's Final Paper Year",
+                    "insight": "In March 2023, the international SAT switched to digital first. The U.S. kept the paper test through December — a transition year. The digital format's details were now confirmed: Reading and Writing 54 questions/64 minutes, Math 44 questions/70 minutes, 2 hours 14 minutes total. Both R&W and Math have two modules each, with Module 2's difficulty adjusting to Module 1 performance — two-stage adaptive. Passages became short (25–150 words), one independent passage per question. Math allowed calculators on all questions, with the Desmos graphing calculator built into the test screen. According to international test-taker reports, time pressure eased but the high-difficulty Module 2 is where scores got separated.",
                     "topics": [
-                        "국제 디지털 SAT 시작(2023년 3월): 미국은 paper 유지, 과도기",
-                        "확정된 디지털 형식: R&W 54/64 · Math 44/70 · 2시간 14분 · 2단계 적응형",
-                        "Math TOP: 전 문항 계산기 허용 시대의 대수·함수·데이터 해석",
-                        "R&W TOP: 단문 1지문 1문항 체제, 정보·아이디어와 문법의 균형"
+                        "International Digital SAT begins (March 2023): U.S. keeps paper — transition period",
+                        "Confirmed digital format: R&W 54/64 · Math 44/70 · 2 hours 14 minutes · two-stage adaptive",
+                        "Math TOP: algebra, functions, and data interpretation in the all-questions-calculator era",
+                        "R&W TOP: one-short-passage-one-question system; balancing Information & Ideas with grammar",
                     ],
                     "lectures": [],
                     "examples": [
                         {
-                            "title": "[Math] 일차방정식 실생활 응용",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Linear Equations in Real-World Contexts",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 요금제·예산·속도 맥락에서 식 세우기",
-                                "핵심 포인트: 구하는 값을 x로, 단위를 맞춰 식을 세운다"
+                                "Typical types: Setting up equations in contexts like pricing plans, budgets, and speed",
+                                "Key point: Let the unknown be x, and set up the equation with matching units",
                             ],
-                            "intuition": "디지털에서도 변함없는 최다 출제 영역. 번역 능력이 곧 수학 실력이다."
+                            "intuition": "Still the most-tested area in digital too. The ability to 'translate' words into math IS math skill.",
                         },
                         {
-                            "title": "[Math] 이차함수 최댓값·최솟값",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Maximum & Minimum Values of Quadratic Functions",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 포물선 꼭짓값, 실생활 최적화(넓이·수익)",
-                                "핵심 포인트: 꼭짓점의 y값이 최대·최소, a 부호로 방향 판단"
+                                "Typical types: Vertex values of parabolas; real-world optimization (area, revenue)",
+                                "Key point: The vertex's y-value is the max or min; use the sign of a to determine the direction",
                             ],
-                            "intuition": "최적화 문제는 꼭짓점 문제다. Desmos로 그래프를 그려 확인하는 습관."
+                            "intuition": "An optimization problem is a vertex problem. Build the habit of graphing it in Desmos to confirm.",
                         },
                         {
-                            "title": "[Math] 지수함수 그래프와 식",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Exponential Function Graphs & Equations",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 그래프에서 초기값·성장률 읽기, 식 쓰기",
-                                "핵심 포인트: y절편이 초기값, 증가·감소로 밑의 범위 판단"
+                                "Typical types: Reading the initial value and growth rate from a graph; writing the equation",
+                                "Key point: The y-intercept is the initial value; use increase/decrease to judge the base's range",
                             ],
-                            "intuition": "Desmos 시대에는 그래프 해석 능력이 계산 능력보다 중요해졌다."
+                            "intuition": "In the Desmos era, graph-reading skill matters more than computation skill.",
                         },
                         {
-                            "title": "[Math] 연립부등식",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Systems of Inequalities",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 그래프 영역, 정수 해 개수",
-                                "핵심 포인트: 경계선 포함 여부(실선·점선), 교차 영역 확인"
+                                "Typical types: Graph regions; number of integer solutions",
+                                "Key point: Whether the boundary is included (solid vs. dashed line); check the overlapping region",
                             ],
-                            "intuition": "부등식은 영역 문제다. 그래프를 그려 겹치는 부분을 찾는다."
+                            "intuition": "Inequalities are region problems. Graph them and find the overlap.",
                         },
                         {
-                            "title": "[Math] 데이터 해석: 평균·표준편차",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Data Interpretation: Mean & Standard Deviation",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 분포의 중심·퍼짐 비교, 이상값 영향",
-                                "핵심 포인트: 표준편차는 퍼짐의 척도, 이상값은 평균을 끌어당긴다"
+                                "Typical types: Comparing centers and spreads of distributions; effects of outliers",
+                                "Key point: Standard deviation measures spread; outliers pull the mean",
                             ],
-                            "intuition": "숫자를 계산하기보다 분포의 모양을 읽는다. 그림이 답이다."
+                            "intuition": "Read the shape of the distribution rather than crunching numbers. The picture is the answer.",
                         },
                         {
-                            "title": "[Math] 백분율·비율 실전",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[Math] Percents & Ratios in Practice",
+                            "problem": "Frequency: ★★★★☆ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 증감률, 농도·혼합, 단위당 가격",
-                                "핵심 포인트: 기준량 파악, Desmos 계산기로 검산"
+                                "Typical types: Percent change, concentration/mixture, unit price",
+                                "Key point: Identify the base amount; verify with the Desmos calculator",
                             ],
-                            "intuition": "계산기 허용이어도 개념이 틀리면 답이 안 나온다. 기준량이 핵심이다."
+                            "intuition": "Even with a calculator allowed, a wrong concept gives a wrong answer. The base amount is the key.",
                         },
                         {
-                            "title": "[Math] 직각삼각형·피타고라스",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Right Triangles & the Pythagorean Theorem",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 빗변·높이 구하기, 좌표평면 거리",
-                                "핵심 포인트: 좌표 거리 공식은 피타고라스의 변형"
+                                "Typical types: Finding hypotenuses and heights; distance on the coordinate plane",
+                                "Key point: The coordinate distance formula is the Pythagorean theorem in disguise",
                             ],
-                            "intuition": "좌표평면의 두 점은 항상 직각삼각형을 숨기고 있다."
+                            "intuition": "Two points on the coordinate plane always hide a right triangle.",
                         },
                         {
-                            "title": "[Math] 원의 둘레·넓이·부채꼴",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Circles: Circumference, Area & Sectors",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 중심각과 호·부채꼴 넓이 비례",
-                                "핵심 포인트: 360도 중 몇 도인지 비율로 계산"
+                                "Typical types: Proportions of central angles to arc length and sector area",
+                                "Key point: Calculate with the ratio — how many degrees out of 360",
                             ],
-                            "intuition": "원은 비율의 도형이다. 각도 비율=호 비율=넓이 비율이다."
+                            "intuition": "A circle is a figure of ratios: angle ratio = arc ratio = area ratio.",
                         },
                         {
-                            "title": "[Math] 삼각함수 기본",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Math] Trigonometry Basics",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: 단위원·특수각 sin·cos 값, 그래프 주기",
-                                "핵심 포인트: 30°·45°·60° 값, 주기성 이해"
+                                "Typical types: sin/cos values on the unit circle and for special angles; graph periods",
+                                "Key point: The 30°-45°-60° values; understand periodicity",
                             ],
-                            "intuition": "SAT 삼각함수는 기초 수준. 특수각 표 하나면 충분하다."
+                            "intuition": "SAT trig is basic level. One special-angle table is enough.",
                         },
                         {
-                            "title": "[Math] 다항식 나눗셈·나머지",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Math] Polynomial Division & Remainders",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: 조립제법, 나머지 정리",
-                                "핵심 포인트: f(a)=0이면 (x-a)가 인수"
+                                "Typical types: Synthetic division; the remainder theorem",
+                                "Key point: If f(a)=0, then (x-a) is a factor",
                             ],
-                            "intuition": "나머지 정리는 인수분해의 지름길이다."
+                            "intuition": "The remainder theorem is a shortcut to factoring.",
                         },
                         {
-                            "title": "[R&W] Information and Ideas: 중심 내용",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Information and Ideas: Central Content",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 25~150단어 지문의 요지·주장 파악",
-                                "핵심 포인트: 짧아진 만큼 함정도 직접적. 주제문·결론문 찾기"
+                                "Typical types: Grasping the main point or claim of a 25–150 word passage",
+                                "Key point: Shorter means more direct traps. Find the topic sentence and the concluding sentence.",
                             ],
-                            "intuition": "지문이 짧아졌다고 쉬워진 게 아니다. 한 문장도 허투루 읽으면 안 된다."
+                            "intuition": "Shorter passages aren't easier. You can't afford to skim even a single sentence.",
                         },
                         {
-                            "title": "[R&W] Textual Evidence (텍스트 근거)",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Textual Evidence",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 주장을 가장 잘 뒷받침하는 인용 선택",
-                                "핵심 포인트: 주장과 인용의 직접적 연결, 부분 일치가 아닌 전체 지지"
+                                "Typical types: Choosing the quotation that best supports a claim",
+                                "Key point: A direct link between the claim and the quote — whole-claim support, not a partial match",
                             ],
-                            "intuition": "paper의 evidence pair가 단문화된 형태. 주장을 압축하고 대조한다."
+                            "intuition": "The paper-era evidence pair in short-passage form. Compress the claim and compare.",
                         },
                         {
-                            "title": "[R&W] Quantitative Evidence (데이터 근거)",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Quantitative Evidence",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 표·그래프에서 주장을 뒷받침하는 수치 선택",
-                                "핵심 포인트: 주장의 핵심 수치와 데이터 일치 확인"
+                                "Typical types: Choosing the numbers from a table or graph that support a claim",
+                                "Key point: Check that the claim's key numbers match the data",
                             ],
-                            "intuition": "숫자로 말하는 근거 찾기. 축과 단위를 먼저 읽는다."
+                            "intuition": "Find the evidence that speaks in numbers. Read the axes and units first.",
                         },
                         {
-                            "title": "[R&W] 추론 (단문)",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Inferences (Short Passages)",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 짧은 지문에서 논리적 결론 도출",
-                                "핵심 포인트: 지문 밖 지식 금지, 가장 약한(안전한) 주장 선택"
+                                "Typical types: Drawing logical conclusions from short passages",
+                                "Key point: No outside knowledge; choose the weakest (safest) claim",
                             ],
-                            "intuition": "단문 추론은 논리의 단거리 달리기다. 짧지만 정확해야 한다."
+                            "intuition": "Short-passage inference is a sprint of logic. Short — but it has to be exact.",
                         },
                         {
-                            "title": "[R&W] 어휘 in context (디지털)",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Words in Context (Digital)",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 학술 어휘의 문맥상 의미",
-                                "핵심 포인트: 앞뒤 논리 관계 파악 후 대입 검증"
+                                "Typical types: The in-context meaning of academic vocabulary",
+                                "Key point: Identify the logic relationship around the blank, then verify by substitution",
                             ],
-                            "intuition": "디지털에서 체감 비중이 커진 영역. 문맥 독해가 어휘력을 이긴다."
+                            "intuition": "An area that feels bigger in digital. Context reading beats vocabulary size.",
                         },
                         {
-                            "title": "[R&W] 텍스트의 목적·기능",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Text Purpose & Function",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 밑줄 문장의 전체 글에서의 역할",
-                                "핵심 포인트: 예시·반박·배경·전환 중 기능 분류"
+                                "Typical types: The role of an underlined sentence in the whole text",
+                                "Key point: Classify its function — example, rebuttal, background, or transition",
                             ],
-                            "intuition": "부분의 역할은 전체의 설계에서 보인다."
+                            "intuition": "A part's role shows in the whole design.",
                         },
                         {
                             "title": "[R&W] Cross-Text Connections",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 두 짧은 텍스트의 관계(동의·반박·보완)",
-                                "핵심 포인트: 각 텍스트 주장 한 줄 요약 후 관계 판별"
+                                "Typical types: The relationship between two short texts (agreement, rebuttal, elaboration)",
+                                "Key point: Summarize each text's claim in one line, then determine the relationship"
                             ],
-                            "intuition": "디지털 신유형. 두 글을 각각 요약하면 관계가 보인다."
+                            "intuition": "A new digital-era question type. Summarize each passage and the relationship reveals itself."
                         },
                         {
-                            "title": "[R&W] Boundaries (문장 경계)",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Boundaries (Sentence Boundaries)",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 콤마 스플라이스·run-on 수정, 세미콜론·콜론",
-                                "핵심 포인트: 독립절 판별이 전부. 주어+동사 찾기"
+                                "Typical type: Fixing comma splices and run-ons; semicolons and colons",
+                                "Key point: Identifying independent clauses is everything. Find the subject + verb."
                             ],
-                            "intuition": "디지털 문법의 간판. 규칙이 명확해 안정적 득점원이다."
+                            "intuition": "The flagship of digital grammar. Its clear rules make it a reliable source of points."
                         },
                         {
-                            "title": "[R&W] Form, Structure, and Sense (형태·일치)",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[R&W] Form, Structure, and Sense (Agreement & Form)",
+                            "problem": "Frequency: ★★★★☆ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 주어-동사 일치, 시제, 대명사",
-                                "핵심 포인트: 수식어 걷어내고 주어 노출"
+                                "Typical type: Subject-verb agreement, verb tense, pronouns",
+                                "Key point: Strip away the modifiers to expose the subject"
                             ],
-                            "intuition": "길어진 수식어가 함정. 괄호 치고 본질을 보자."
+                            "intuition": "Long modifiers are the trap. Parenthesize them and look at the core."
                         },
                         {
-                            "title": "[R&W] Transitions (전환어)",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Transitions",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 빈칸에 논리 관계 맞는 전환어",
-                                "핵심 포인트: 앞뒤 문장 관계를 말로 설명한 뒤 전환어 매칭"
+                                "Typical type: Choosing the transition word that fits the logical relationship in the blank",
+                                "Key point: Explain the relationship between the sentences in your own words, then match a transition word"
                             ],
-                            "intuition": "논리를 말로 풀면 전환어는 저절로 보인다."
+                            "intuition": "Once you talk through the logic, the transition word shows itself."
                         }
                     ],
                     "quiz": {
                         "levels": [
                             {
-                                "title": "자가체크 1: 디지털 형식 이해",
+                                "title": "Self-Check 1: Understanding the Digital Format",
                                 "difficulty": "easy",
-                                "question": "디지털 SAT의 형식으로 올바른 것은?",
+                                "question": "Which of the following correctly describes the digital SAT format?",
                                 "options": [
-                                    "R&W 54문항/64분, Math 44문항/70분, 총 2시간 14분",
-                                    "R 52문항/65분, W 44문항/35분, M 58문항/80분",
-                                    "R&W 44문항/70분, Math 54문항/64분",
-                                    "전 섹션 합쳐 3시간, Essay 필수"
+                                    "R&W: 54 questions / 64 minutes, Math: 44 questions / 70 minutes, 2 hours 14 minutes total",
+                                    "R: 52 questions / 65 minutes, W: 44 questions / 35 minutes, M: 58 questions / 80 minutes",
+                                    "R&W: 44 questions / 70 minutes, Math: 54 questions / 64 minutes",
+                                    "3 hours total across all sections, with a required Essay"
                                 ],
-                                "answer": "R&W 54문항/64분, Math 44문항/70분, 총 2시간 14분",
-                                "explanation": "디지털 SAT는 Reading and Writing 54문항 64분, Math 44문항 70분으로 구성되며 총 시험 시간은 2시간 14분이다. 두 번째 선지는 paper SAT의 구성(Reading 52/65, Writing 44/35, Math 58/80, 총 3시간)이다. 세 번째 선지는 문항 수와 시간을 뒤바꾼 오답이고, 네 번째 선지는 Essay가 2021년 6월에 폐지되었으므로 틀렸다. 디지털 전환의 핵심 수치(R&W 54/64, Math 44/70)는 학습 계획의 기준이 된다. 섹션별 시간 배분 전략을 세울 때 이 수치를 정확히 알아야 하며, 특히 Math는 문항당 약 1분 35초, R&W는 문항당 약 1분 11초의 계산이 나온다."
+                                "answer": "R&W: 54 questions / 64 minutes, Math: 44 questions / 70 minutes, 2 hours 14 minutes total",
+                                "explanation": "The digital SAT consists of Reading and Writing (54 questions, 64 minutes) and Math (44 questions, 70 minutes), for a total testing time of 2 hours 14 minutes. The second choice describes the paper SAT (Reading 52/65, Writing 44/35, Math 58/80, 3 hours total). The third choice swaps the question counts and times, and the fourth is wrong because the Essay was discontinued in June 2021. These core numbers of the digital switch — R&W 54/64, Math 44/70 — are the foundation of your study plan. Know them cold when planning your per-section pacing: that works out to about 1 minute 35 seconds per Math question and about 1 minute 11 seconds per R&W question."
                             },
                             {
-                                "title": "자가체크 2: 적응형 모듈 전략",
+                                "title": "Self-Check 2: Adaptive Module Strategy",
                                 "difficulty": "medium",
-                                "question": "디지털 SAT의 2단계 적응형 구조에서 고득점을 위한 가장 중요한 전략은?",
+                                "question": "In the digital SAT's two-stage adaptive structure, what is the most important strategy for a top score?",
                                 "options": [
-                                    "모듈 1의 정확도를 최대한 확보하는 것이다",
-                                    "모듈 1을 빨리 풀고 모듈 2에 시간을 몰아주는 것이다",
-                                    "어려운 문제는 모두 찍고 쉬운 문제만 푸는 것이다",
-                                    "모듈 2에서만 고난도 문제를 푸는 것이다"
+                                    "Maximize your accuracy on Module 1",
+                                    "Finish Module 1 quickly and devote the saved time to Module 2",
+                                    "Guess on all the hard questions and solve only the easy ones",
+                                    "Only attempt high-difficulty questions in Module 2"
                                 ],
-                                "answer": "모듈 1의 정확도를 최대한 확보하는 것이다",
-                                "explanation": "디지털 SAT는 섹션 내 2단계 적응형이다. 모듈 1의 성적에 따라 모듈 2의 난이도(상위·하위)가 결정되고, 상위 난이도 모듈에서 좋은 성적을 받아야 고득점이 가능하다. 따라서 모듈 1에서 실수로 쉬운 문제를 틀리면 하위 난이도 모듈로 배정되어 만점에 가까운 점수가 구조적으로 어려워진다. 모듈 1을 빨리 풀어 시간을 아끼는 전략은 정확도를 희생하므로 역효과이다. 어려운 문제를 찍는 것은 적응형에서 치명적이다. 정답은 모듈 1의 정확도 확보이며, 이는 쉬운 문제의 실수를 없애는 훈련(검산 습관, 문제 꼼꼼히 읽기)이 고득점의 첫걸음임을 의미한다."
+                                "answer": "Maximize your accuracy on Module 1",
+                                "explanation": "The digital SAT is two-stage adaptive within each section. Your Module 1 performance determines the difficulty level (upper or lower) of Module 2, and you need a strong performance on the higher-difficulty module to earn a top score. So if careless mistakes on easy Module 1 questions route you into the lower-difficulty module, a near-perfect score becomes structurally impossible. Finishing Module 1 early to bank time sacrifices accuracy — a counterproductive trade. Guessing on hard questions is fatal in an adaptive test. The answer is maximizing Module 1 accuracy: eliminating careless errors on easy questions (through double-checking habits and careful reading) is the first step to a top score."
                             },
                             {
-                                "title": "자가체크 3: Quantitative Evidence",
+                                "title": "Self-Check 3: Quantitative Evidence",
                                 "difficulty": "medium",
-                                "question": "표: 세 도시의 연간 강수량 (A: 800mm, B: 1200mm, C: 400mm). 주장: 'B의 강수량은 A의 1.5배이며 C의 3배다.' 이 주장을 뒷받침하는 근거로 가장 적절한 것은?",
+                                "question": "Table: annual rainfall for three cities (A: 800mm, B: 1200mm, C: 400mm). Claim: 'B receives 1.5 times as much rainfall as A and 3 times as much as C.' Which evidence best supports this claim?",
                                 "options": [
-                                    "1200은 800의 1.5배이고 400의 3배이다",
-                                    "세 도시의 강수량 합은 2400mm이다",
-                                    "A의 강수량이 가장 평균에 가깝다",
-                                    "C의 강수량이 가장 적다"
+                                    "1200 is 1.5 times 800 and 3 times 400",
+                                    "The three cities' total rainfall is 2400mm",
+                                    "A's rainfall is closest to the average",
+                                    "C has the least rainfall"
                                 ],
-                                "answer": "1200은 800의 1.5배이고 400의 3배이다",
-                                "explanation": "Quantitative Evidence 문항은 표·그래프의 수치로 지문의 주장을 직접 뒷받침하는 선지를 고르는 유형이다. 주장은 두 개의 수치 관계(1.5배, 3배)를 포함하므로, 근거 선지도 두 관계를 모두 확인해야 한다. 1200/800 = 1.5, 1200/400 = 3이므로 첫 번째 선지가 주장 전체를 뒷받침한다. 두 번째 선지는 합계라는 새로운 정보이고 주장과 무관하다. 세 번째·네 번째 선지는 사실일 수 있으나 주장의 수치 관계를 뒷받침하지 않는다. 데이터 근거 문항의 요령은 주장의 핵심 수치를 먼저 뽑아낸 뒤, 각 선지가 그 수치를 직접 확인해주는지 대조하는 것이다."
+                                "answer": "1200 is 1.5 times 800 and 3 times 400",
+                                "explanation": "Quantitative Evidence questions ask you to choose the option that directly supports the passage's claim with numbers from a table or graph. This claim contains two numerical relationships (1.5× and 3×), so the evidence must confirm both. Since 1200/800 = 1.5 and 1200/400 = 3, the first choice supports the entire claim. The second choice introduces new information (a total) that is unrelated to the claim. The third and fourth choices may be true, but they don't support the claim's numerical relationships. The technique for data-evidence questions: first extract the claim's key numbers, then check whether each choice directly confirms them."
                             }
                         ]
                     }
                 },
                 {
-                    "title": "2024: 미국 디지털 SAT 원년",
-                    "insight": "2024년 3월 9일 미국에서도 디지털 SAT가 시행됐다. Bluebook 앱 기반, 내장 Desmos 그래핑 계산기, 참고 공식 시트 제공이 표준이 됐다. Math 4개 도메인(Algebra·Advanced Math·Problem Solving and Data Analysis·Geometry and Trigonometry)과 R&W 4개 도메인(Information and Ideas·Craft and Structure·Expression of Ideas·Standard English Conventions)의 출제 비중이 공개 연습문제를 통해 드러나기 시작했다. 출제 경향으로는 짧은 지문+독립 문항으로 지구력 부담이 줄었고, 어휘 in context와 데이터 근거 문항의 체감 비중이 커졌다는 분석이 나왔다. 공식 연습 세트가 Bluebook에 탑재되며 준비 환경도 디지털로 일원화됐다.",
+                    "title": "2024: The First Year of the Digital SAT in the U.S.",
+                    "insight": "On March 9, 2024, the digital SAT launched in the U.S. as well. The Bluebook app, the built-in Desmos graphing calculator, and the on-screen reference formula sheet became standard. The test blueprint began to emerge through released practice questions: 4 Math domains (Algebra, Advanced Math, Problem Solving and Data Analysis, Geometry and Trigonometry) and 4 R&W domains (Information and Ideas, Craft and Structure, Expression of Ideas, Standard English Conventions). Trend analysis: short passages plus standalone questions reduced the stamina burden, while vocabulary-in-context and data-evidence questions felt more prominent. With official practice sets loaded into Bluebook, test prep moved fully digital too.",
                     "topics": [
-                        "2024년 3월 미국 디지털 전환: Bluebook·Desmos 내장·공식 시트 표준화",
-                        "Math 4도메인 / R&W 4도메인 출제 구조 파악",
-                        "Math TOP: 일차·이차·지수 함수, 통계 추론, 기하 기초",
-                        "R&W TOP: 근거·어휘·문장 경계·전환어 (단문 체제 적응)"
+                        "March 2024 U.S. digital switch: Bluebook, built-in Desmos, and a standardized formula sheet",
+                        "Mastering the 4-Math / 4-R&W domain structure",
+                        "Math focus: linear, quadratic, and exponential functions; statistical inference; geometry basics",
+                        "R&W focus: evidence, vocabulary, sentence boundaries, transitions (adapting to the short-passage format)"
                     ],
                     "lectures": [],
                     "examples": [
                         {
-                            "title": "[Math] Algebra: 일차식·부등식",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Algebra: Linear Expressions & Inequalities",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 실생활 맥락 식 세우기, 부등식 해집합",
-                                "핵심 포인트: digital Algebra 도메인의 핵심, 약 35% 비중 경향"
+                                "Typical type: Writing expressions from real-world contexts; inequality solution sets",
+                                "Key point: The core of the digital Algebra domain — roughly 35% of Math"
                             ],
-                            "intuition": "대수는 디지털 Math의 3분의 1이다. 여기서 무너지면 전체가 흔들린다."
+                            "intuition": "Algebra is a third of digital Math. If you stumble here, everything wobbles."
                         },
                         {
-                            "title": "[Math] Advanced Math: 이차·지수·다항식",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Advanced Math: Quadratics, Exponentials & Polynomials",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 이차함수 그래프, 지수 모델, 다항식 연산",
-                                "핵심 포인트: Advanced Math도 약 35% 경향. 고난도 모듈 2의 변별 구간"
+                                "Typical type: Quadratic graphs, exponential models, polynomial operations",
+                                "Key point: Advanced Math is also about 35% — the score-separating zone of the harder Module 2"
                             ],
-                            "intuition": "고득점의 갈림길. 모듈 2 고난이도의 주인공이다."
+                            "intuition": "The crossroads of a top score. The star of the harder Module 2."
                         },
                         {
-                            "title": "[Math] PSDA: 비율·통계·확률",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] PSDA: Ratios, Statistics & Probability",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 백분율, 표본 추론, 확률, 산점도",
-                                "핵심 포인트: 계산보다 해석. 약 15% 비중 경향"
+                                "Typical type: Percents, sample inference, probability, scatterplots",
+                                "Key point: Interpretation over calculation — about 15% of Math"
                             ],
-                            "intuition": "읽고 판단하는 수학. 국어 실력이 수학 점수를 좌우하는 영역이다."
+                            "intuition": "Math that rewards reading and judgment — this is where your reading skills shape your math score."
                         },
                         {
-                            "title": "[Math] Geometry & Trig: 도형·삼각비",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Geometry & Trig: Figures & Trig Ratios",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 삼각형·원, 삼각비, 라디안 기초",
-                                "핵심 포인트: 약 15% 비중 경향. 공식 시트 활용"
+                                "Typical type: Triangles and circles, trig ratios, radian basics",
+                                "Key point: About 15%. Put the formula sheet to work."
                             ],
-                            "intuition": "공식은 시트에 있다. 언제 어떤 공식을 꺼내는지가 실력이다."
+                            "intuition": "The formulas are on the sheet. Knowing which one to pull out, and when — that's the skill."
                         },
                         {
-                            "title": "[Math] Desmos 활용 그래프 해석",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Reading Graphs with Desmos",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 함수 그래프 그려 교점·근·최댓값 확인",
-                                "핵심 포인트: 식을 입력하고 그래프로 검증하는 습관"
+                                "Typical type: Graph a function to check intersections, roots, and maxima",
+                                "Key point: Build the habit of entering the equation and verifying with the graph"
                             ],
-                            "intuition": "2024년의 가장 큰 무기. 손으로 그릴 것을 Desmos로 확인한다."
+                            "intuition": "The biggest weapon of 2024. Check with Desmos what you'd otherwise sketch by hand."
                         },
                         {
-                            "title": "[Math] 연립방정식 실생활",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[Math] Systems of Equations in Real Life",
+                            "problem": "Frequency: ★★★★☆ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 두 조건을 식으로, 해의 의미 해석",
-                                "핵심 포인트: 해가 현실에서 무엇을 뜻하는지 묻는 변형 주의"
+                                "Typical type: Turn two conditions into equations; interpret what the solution means",
+                                "Key point: Watch for twists that ask what the solution means in the real world"
                             ],
-                            "intuition": "해를 구하고 끝이 아니다. 그 숫자가 현실에서 뭔지 답해야 한다."
+                            "intuition": "Finding the solution isn't the finish line. You have to say what that number means in reality."
                         },
                         {
-                            "title": "[Math] 지수 성장 실생활 모델",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Exponential Growth Models in Real Life",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: y=ab^x 모델의 각 요소 의미",
-                                "핵심 포인트: a는 초기값, b는 성장·감소율"
+                                "Typical type: What each part of the y=ab^x model means",
+                                "Key point: a is the initial value; b is the growth/decay rate"
                             ],
-                            "intuition": "모델 문제는 번역 문제. 수학 기호를 현실 언어로 푼다."
+                            "intuition": "Model problems are translation problems: turn math symbols into real-world language."
                         },
                         {
-                            "title": "[Math] 통계: 중앙값·이상값",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Statistics: Median & Outliers",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 이상값 추가·제거 시 평균·중앙값 변화",
-                                "핵심 포인트: 중앙값은 이상값에 강하다"
+                                "Typical type: How adding or removing an outlier changes the mean and median",
+                                "Key point: The median resists outliers"
                             ],
-                            "intuition": "평균은 흔들리고 중앙값은 버틴다. 이 대비가 출제 포인트다."
+                            "intuition": "The mean wobbles; the median holds. That contrast is the test point."
                         },
                         {
-                            "title": "[Math] 원주각·접선 기초",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Math] Inscribed Angles & Tangent Basics",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: 중심각과 원주각 관계",
-                                "핵심 포인트: 원주각은 중심각의 절반"
+                                "Typical type: The relationship between central and inscribed angles",
+                                "Key point: An inscribed angle is half its central angle"
                             ],
-                            "intuition": "빈도는 낮지만 나오면 공식 하나로 끝난다."
+                            "intuition": "Rare, but when it shows up, one formula finishes it."
                         },
                         {
-                            "title": "[Math] 복소수·무리식 심화",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Math] Complex Numbers & Radical Equations (Advanced)",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: i의 순환, 무리방정식 무연근",
-                                "핵심 포인트: 고난도 모듈의 대수 변별 문항"
+                                "Typical type: Powers of i; extraneous roots in radical equations",
+                                "Key point: Score-separating algebra items in the harder module"
                             ],
-                            "intuition": "고득점 변별용. 기본기가 탄탄하면 bonus 점수다."
+                            "intuition": "Built to separate top scorers. With solid fundamentals, it's bonus points."
                         },
                         {
-                            "title": "[R&W] Information and Ideas: 세부 정보",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Information and Ideas: Details",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 지문 세부 내용 일치, 약 26% 비중 경향",
-                                "핵심 포인트: 선지의 각 단어가 지문과 일치하는지 검증"
+                                "Typical type: Matching passage details — about 26% of R&W",
+                                "Key point: Verify that every word in the choice matches the passage"
                             ],
-                            "intuition": "R&W의 4분의 1. 꼼꼼한 대조가 전부다."
+                            "intuition": "A quarter of R&W. Careful cross-checking is everything."
                         },
                         {
-                            "title": "[R&W] Craft and Structure: 어휘·구조",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Craft and Structure: Vocabulary & Structure",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 문맥 어휘, 텍스트 구조·목적, 약 28% 비중 경향",
-                                "핵심 포인트: 디지털에서 가장 큰 도메인"
+                                "Typical type: Words in context, text structure and purpose — about 28%",
+                                "Key point: The largest domain on the digital test"
                             ],
-                            "intuition": "어휘와 구조가 R&W의 핵심이 됐다. 단어를 문맥에서 읽는다."
+                            "intuition": "Vocabulary and structure are now the heart of R&W. Read words in context."
                         },
                         {
-                            "title": "[R&W] Expression of Ideas: 전환·요약",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Expression of Ideas: Transitions & Summaries",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 전환어, 노트 종합 요약, 약 20% 비중 경향",
-                                "핵심 포인트: 노트에서 목표에 맞는 정보만 선별"
+                                "Typical type: Transitions and synthesizing notes into summaries — about 20%",
+                                "Key point: Select only the notes that fit the goal"
                             ],
-                            "intuition": "정보 선별 능력. 목표(claim)를 먼저 읽고 노트를 본다."
+                            "intuition": "It's about filtering information. Read the goal (claim) first, then the notes."
                         },
                         {
-                            "title": "[R&W] Standard English Conventions: 문법",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Standard English Conventions: Grammar",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 문장 경계·일치·시제, 약 26% 비중 경향",
-                                "핵심 포인트: 규칙 암기형이라 안정적 득점원"
+                                "Typical type: Sentence boundaries, agreement, tense — about 26%",
+                                "Key point: Rule-based, so it's a reliable source of points"
                             ],
-                            "intuition": "문법은 규칙 게임. 정리한 자가 가져간다."
+                            "intuition": "Grammar is a rules game. Whoever masters the rules takes the points."
                         },
                         {
-                            "title": "[R&W] Main Idea (단문)",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Main Idea (Short Passages)",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 25~150단어 지문의 요지",
-                                "핵심 포인트: 첫문장·마지막 문장, 반복 키워드"
+                                "Typical type: The gist of a 25–150 word passage",
+                                "Key point: First and last sentences; repeated keywords"
                             ],
-                            "intuition": "짧은 글의 요지는 더 선명하다. 주제문을 놓치지 말자."
+                            "intuition": "A short passage's main idea is even sharper. Don't miss the topic sentence."
                         },
                         {
-                            "title": "[R&W] Cross-Text: 주장 비교",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Cross-Text: Comparing Claims",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: Text 1과 Text 2의 관계, 반박·동의 지점",
-                                "핵심 포인트: 각 텍스트 주장 요약 후 관계 판별"
+                                "Typical type: The relationship between Text 1 and Text 2; points of rebuttal or agreement",
+                                "Key point: Summarize each text's claim, then determine the relationship"
                             ],
-                            "intuition": "두 글을 한 줄씩 요약하면 관계는 자명해진다."
+                            "intuition": "Summarize both passages in one line each and the relationship becomes obvious."
                         },
                         {
-                            "title": "[R&W] Boundaries 심화",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[R&W] Boundaries (Advanced)",
+                            "problem": "Frequency: ★★★★☆ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 콜론·대시·세미콜론 복합",
-                                "핵심 포인트: 독립절 판별 + 구두점별 용법"
+                                "Typical type: Colons, dashes, and semicolons combined",
+                                "Key point: Identify independent clauses + know each punctuation mark's job"
                             ],
-                            "intuition": "구두점은 문장의 교통정리. 규칙대로만 하면 된다."
+                            "intuition": "Punctuation is traffic control for sentences. Just follow the rules."
                         },
                         {
-                            "title": "[R&W] 소유격·아포스트로피",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[R&W] Possessives & Apostrophes",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: its/it's, their/they're, 복수 소유격",
-                                "핵심 포인트: 아포스트로피는 생략 또는 소유 표시"
+                                "Typical type: its/it's, their/they're, plural possessives",
+                                "Key point: An apostrophe marks omission or possession"
                             ],
-                            "intuition": "its와 it's 구분은 기본 중의 기본. 여기서 틀리면 안 된다."
+                            "intuition": "Telling its from it's is the most basic of basics. Don't miss it here."
                         },
                         {
-                            "title": "[R&W] 수사학적 종합",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[R&W] Rhetorical Synthesis",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 노트를 목표 주장에 맞게 종합",
-                                "핵심 포인트: 목표 문장 그대로 베끼지 말고 관련 정보로 뒷받침"
+                                "Typical type: Synthesize notes to support the target claim",
+                                "Key point: Don't just copy the goal sentence — support it with relevant information"
                             ],
-                            "intuition": "요약이 아니라 선별이다. 목표에 필요한 것만 고른다."
+                            "intuition": "It's selection, not summary. Pick only what the goal needs."
                         },
                         {
-                            "title": "[R&W] 고난도 어휘 추론",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[R&W] High-Difficulty Vocabulary in Context",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: 추상 학술 어휘의 미묘한 뉘앙스",
-                                "핵심 포인트: 논리 구조로 의미 좁히기"
+                                "Typical type: Subtle nuances of abstract academic vocabulary",
+                                "Key point: Narrow the meaning using the sentence's logic"
                             ],
-                            "intuition": "모르는 단어도 문장의 논리로 뜻을 좁힐 수 있다."
+                            "intuition": "Even an unknown word's meaning can be narrowed down by the sentence's logic."
                         }
                     ],
                     "quiz": {
                         "levels": [
                             {
-                                "title": "자가체크 1: Bluebook과 Desmos",
+                                "title": "Self-Check 1: Bluebook and Desmos",
                                 "difficulty": "easy",
-                                "question": "2024년 미국 디지털 SAT에 대한 설명으로 올바른 것은?",
+                                "question": "Which of the following correctly describes the 2024 U.S. digital SAT?",
                                 "options": [
-                                    "Bluebook 앱으로 응시하며 Desmos 그래핑 계산기가 내장되어 있다",
-                                    "종이 시험지로 응시하며 계산기 사용이 전면 금지된다",
-                                    "Essay 작성이 필수로 부활했다",
-                                    "시험 시간은 3시간으로 paper와 동일하다"
+                                    "It's taken in the Bluebook app, with a built-in Desmos graphing calculator",
+                                    "It's taken on paper, with calculators banned entirely",
+                                    "The Essay has been brought back as a requirement",
+                                    "Testing time is 3 hours, the same as the paper test"
                                 ],
-                                "answer": "Bluebook 앱으로 응시하며 Desmos 그래핑 계산기가 내장되어 있다",
-                                "explanation": "2024년 3월부터 미국 SAT는 Bluebook 앱 기반 디지털 시험으로 전환되었다. 시험 화면에는 Desmos 그래핑 계산기가 내장되어 있고, Math 전 문항에서 계산기 사용이 허용된다. 참고 공식 시트도 화면에서 제공된다. 종이 시험지·계산기 금지·Essay 부활·3시간 유지는 모두 paper 시절의 이야기이거나 사실이 아니다. 디지털 환경의 의미를 정확히 아는 것이 중요하다. Desmos는 단순 계산을 넘어 함수 그래프를 그려 교점·근·최댓값을 시각적으로 확인할 수 있는 강력한 도구이므로, 평소 연습부터 Desmos 활용을 병행해야 실전에서 무기가 된다."
+                                "answer": "It's taken in the Bluebook app, with a built-in Desmos graphing calculator",
+                                "explanation": "Since March 2024, the U.S. SAT has been a Bluebook-based digital test. A Desmos graphing calculator is built into the test screen, and calculator use is allowed on every Math question. A reference formula sheet is also provided on screen. Paper test booklets, calculator bans, the Essay's return, and a 3-hour test are all stories from the paper era — none of them is true. Knowing exactly what the digital environment means matters. Desmos is more than a calculator: you can graph functions to visually check intersections, roots, and maxima, so practicing with Desmos from the start turns it into a real weapon on test day."
                             },
                             {
-                                "title": "자가체크 2: 지수 모델 해석",
+                                "title": "Self-Check 2: Interpreting an Exponential Model",
                                 "difficulty": "medium",
-                                "question": "박테리아 개체수 모델 P = 500(1.2)^t (t는 시간 단위) 에서 1.2가 의미하는 것은?",
+                                "question": "In the bacteria population model P = 500(1.2)^t (t = time units), what does 1.2 represent?",
                                 "options": [
-                                    "단위 시간당 20% 증가율",
-                                    "초기 개체수 120마리",
-                                    "20시간 후 개체수",
-                                    "시간당 120마리씩 증가"
+                                    "A 20% growth rate per unit of time",
+                                    "An initial population of 120",
+                                    "The population after 20 hours",
+                                    "An increase of 120 per hour"
                                 ],
-                                "answer": "단위 시간당 20% 증가율",
-                                "explanation": "지수 모델 y = ab^x에서 a는 초기값, b는 단위 구간당 변화 배율이다. P = 500(1.2)^t에서 a = 500이 초기 개체수이고, b = 1.2는 매 단위 시간마다 개체수가 1.2배가 됨을 뜻한다. 1.2배는 곧 20% 증가와 같다. 두 번째 선지는 초기값 500을 잘못 읽은 것이고, 세 번째 선지는 t = 20을 대입한 값에 대한 설명이 아니다. 네 번째 선지는 지수 증가를 선형 증가(매시간 120마리씩)로 오해한 것으로, 지수와 선형의 구분이 안 되면 틀리는 대표 함정이다. 디지털 SAT의 지수 모델 문항은 식의 각 요소가 현실에서 무엇을 뜻하는지 묻는 경향이 강하다."
+                                "answer": "A 20% growth rate per unit of time",
+                                "explanation": "In the exponential model y = ab^x, a is the initial value and b is the per-interval growth factor. In P = 500(1.2)^t, a = 500 is the initial population, and b = 1.2 means the population multiplies by 1.2 each unit of time — a 20% increase. The second choice misreads the initial value 500; the third is not what t = 20 gives you. The fourth mistakes exponential growth for linear growth (120 more per hour) — the classic trap when exponential and linear get confused. Digital SAT exponential-model questions tend to ask what each part of the equation means in the real world."
                             },
                             {
-                                "title": "자가체크 3: 전환어 선택",
+                                "title": "Self-Check 3: Choosing a Transition",
                                 "difficulty": "medium",
-                                "question": "빈칸: 'The new policy reduced costs. _____, it improved employee satisfaction.' 가장 적절한 전환어는?",
+                                "question": "Fill in the blank: 'The new policy reduced costs. _____, it improved employee satisfaction.' Which transition is most appropriate?",
                                 "options": [
                                     "Moreover",
                                     "However",
@@ -5218,235 +5218,235 @@ window.MATH_DATA = {
                                     "Instead"
                                 ],
                                 "answer": "Moreover",
-                                "explanation": "앞 문장은 비용 절감이라는 긍정적 결과, 뒷문장은 직원 만족도 향상이라는 또 다른 긍정적 결과이다. 두 문장은 대조가 아니라 추가·나열 관계이므로 Moreover(게다가)가 가장 적절하다. However·Nevertheless·Instead는 모두 대조·반전의 전환어로, 앞뒤 내용이 반대 방향일 때 쓴다. 전환어 문항의 정석 풀이는 앞뒤 문장의 논리 관계를 먼저 말로 설명해보는 것이다. 여기서는 '좋은 점 하나 더'라는 추가 관계이므로 Moreover, Furthermore, In addition 같은 추가형 전환어가 답이 된다. 디지털 R&W의 Expression of Ideas 도메인에서 전환어는 꾸준히 출제되는 경향이 있다."
+                                "explanation": "The first sentence gives a positive result (reduced costs); the second gives another positive result (better employee satisfaction). The two sentences are in an addition/list relationship, not contrast, so Moreover is the best fit. However, Nevertheless, and Instead all signal contrast or reversal — they're used when the sentences pull in opposite directions. The textbook approach to transition questions: first explain the sentences' logical relationship in your own words. Here it's 'one more good thing,' an addition relationship, so additive transitions like Moreover, Furthermore, or In addition are the answer. Transitions are a steady feature of the digital R&W Expression of Ideas domain."
                             }
                         ]
                     }
                 },
                 {
-                    "title": "2025: 디지털 정착기 · 적응형 공략의 해",
-                    "insight": "2025년은 디지털 SAT가 완전히 정착된 해다. Bluebook 공식 연습 세트가 확충되고, 적응형 모듈 패턴에 대한 응시 경험과 분석이 축적됐다. 출제 경향은 안정화 단계에 들어섰다. Math에서는 일차·이차·지수 함수 응용, 통계 추론, 삼각비 기본형이 꾸준히 출제되는 경향이 확인됐다. R&W에서는 Main Idea·Inference, Boundaries(구두점), Transitions가 고빈도 영역으로 자리 잡았다. 고득점 변별은 모듈 2 고난이도의 다단계 대수와 함정 선지에서 걸리는 양상이다. 이 해의 교훈은 명확하다. 모듈 1의 정확도가 곧 점수 상한을 정한다.",
+                    "title": "2025: The Digital Test Settles In — The Year of Adaptive Strategy",
+                    "insight": "2025 was the year the digital SAT fully settled in. Official Bluebook practice sets expanded, and test-taker experience plus analysis of adaptive module patterns accumulated. Question trends entered a stabilization phase. In Math, applied linear/quadratic/exponential functions, statistical inference, and basic trig ratios kept appearing consistently. In R&W, Main Idea/Inference, Boundaries (punctuation), and Transitions locked in as high-frequency zones. Score separation at the top came down to multi-step algebra and trap choices in the harder Module 2. This year's lesson is crystal clear: Module 1 accuracy sets your score ceiling.",
                     "topics": [
-                        "디지털 정착: Bluebook 연습 확충, 적응형 패턴 분석 축적",
-                        "Math TOP: 함수 3형제(일차·이차·지수), 통계 추론, Desmos 검증 습관",
-                        "R&W TOP: Main Idea·Inference·Boundaries·Transitions 고빈도 굳히기",
-                        "전략 포인트: 모듈 1 정확도 = 점수 상한, 고난도 모듈 2 대비 다단계 대수"
+                        "The digital test settles in: expanded Bluebook practice, growing analysis of adaptive patterns",
+                        "Math focus: the three function siblings (linear, quadratic, exponential), statistical inference, and the Desmos verification habit",
+                        "R&W focus: Main Idea, Inference, Boundaries, and Transitions cemented as high-frequency",
+                        "Strategy point: Module 1 accuracy = score ceiling; multi-step algebra for the harder Module 2"
                     ],
                     "lectures": [],
                     "examples": [
                         {
-                            "title": "[Math] 일차함수 맥락 해석",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Linear Functions in Context",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: y=mx+b에서 m(변화율)·b(초기값)의 현실 의미",
-                                "핵심 포인트: 단위를 붙여 읽으면 함정이 보인다"
+                                "Typical type: In y=mx+b, what m (rate of change) and b (initial value) mean in reality",
+                                "Key point: Attach units when you read and the traps become visible"
                             ],
-                            "intuition": "기울기에 단위를 붙이는 순간 문제가 쉬워진다."
+                            "intuition": "The moment you attach units to the slope, the problem gets easy."
                         },
                         {
-                            "title": "[Math] 이차식 인수분해 고속화",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Speed Factoring of Quadratics",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: ax^2+bx+c 인수분해, 공통인수 먼저",
-                                "핵심 포인트: 곱해서 c, 더해서 b 되는 두 수 찾기"
+                                "Typical type: Factoring ax^2+bx+c — factor out the common factor first",
+                                "Key point: Find two numbers that multiply to c and add to b"
                             ],
-                            "intuition": "인수분해 속도가 대수 전체의 속도를 정한다."
+                            "intuition": "Your factoring speed sets the pace of all your algebra."
                         },
                         {
-                            "title": "[Math] 지수 vs 선형 구분",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Exponential vs. Linear",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 일정량씩 증가(선형) vs 일정 비율씩 증가(지수)",
-                                "핵심 포인트: 표에서 차분 일정→선형, 비율 일정→지수"
+                                "Typical type: Growing by a fixed amount (linear) vs. by a fixed ratio (exponential)",
+                                "Key point: In a table, constant differences → linear, constant ratios → exponential"
                             ],
-                            "intuition": "표의 숫자 패턴이 모델을 정한다. 차분인가 비율인가."
+                            "intuition": "The table's number pattern decides the model: differences or ratios?"
                         },
                         {
-                            "title": "[Math] 연립방정식 해법 선택",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[Math] Choosing a Systems-of-Equations Strategy",
+                            "problem": "Frequency: ★★★★☆ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 대입·가감·그래프 중 빠른 방법",
-                                "핵심 포인트: 계수가 간단한 문자부터 공략"
+                                "Typical type: The fastest of substitution, elimination, or graphing",
+                                "Key point: Attack the variable with the simplest coefficients first"
                             ],
-                            "intuition": "푸는 방법이 세 가지면 가장 짧은 것을 고른다."
+                            "intuition": "If there are three ways to solve it, pick the shortest."
                         },
                         {
-                            "title": "[Math] 통계 추론 심화",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Statistical Inference (Advanced)",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 신뢰구간 직관, 표본 크기 효과",
-                                "핵심 포인트: 표본이 클수록 추정이 안정적"
+                                "Typical type: Confidence-interval intuition; the effect of sample size",
+                                "Key point: Larger samples give more stable estimates"
                             ],
-                            "intuition": "표본이 크면 운이 개입할 여지가 줄어든다."
+                            "intuition": "A bigger sample leaves less room for luck."
                         },
                         {
-                            "title": "[Math] 확률: 표 읽기",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Probability: Reading Tables",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 2원 분할표 조건부 확률",
-                                "핵심 포인트: 분모는 조건에 해당하는 행·열 전체"
+                                "Typical type: Conditional probability from a two-way table",
+                                "Key point: The denominator is the whole row or column matching the condition"
                             ],
-                            "intuition": "조건부 확률의 분모는 '조건을 만족하는 전체'다."
+                            "intuition": "In conditional probability, the denominator is 'everyone who meets the condition.'"
                         },
                         {
-                            "title": "[Math] 삼각비 실생활",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Trig Ratios in Real Life",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 앙각·부각, 그림자·높이",
-                                "핵심 포인트: 직각삼각형 그리고 변에 이름 붙이기"
+                                "Typical type: Angles of elevation and depression; shadows and heights",
+                                "Key point: Draw the right triangle and label each side"
                             ],
-                            "intuition": "그림을 그리는 순간 문제의 절반이 풀린다."
+                            "intuition": "The moment you draw the picture, half the problem is solved."
                         },
                         {
-                            "title": "[Math] 다단계 대수 (고난도)",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 심화",
+                            "title": "[Math] Multi-Step Algebra (High Difficulty)",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: 치환·정리 후 이차방정식으로 귀결",
-                                "핵심 포인트: 복잡한 식에서 반복 패턴을 찾아 치환"
+                                "Typical type: Substitute and simplify, reducing to a quadratic equation",
+                                "Key point: Spot the repeated pattern in a messy expression and substitute"
                             ],
-                            "intuition": "어려운 대수는 패턴 찾기와 치환의 게임이다."
+                            "intuition": "Hard algebra is a game of pattern-finding and substitution."
                         },
                         {
-                            "title": "[Math] 함수 변환",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Function Transformations",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 평행이동·대칭이동 후 식",
-                                "핵심 포인트: x에 더하면 왼쪽, y에 더하면 위쪽"
+                                "Typical type: The equation after a translation or reflection",
+                                "Key point: Add to x → shift left; add to y → shift up"
                             ],
-                            "intuition": "그래프 이동은 부호가 반대로 느껴진다. 직접 대입해 확인하자."
+                            "intuition": "Graph shifts feel backwards in sign. Plug in and check for yourself."
                         },
                         {
-                            "title": "[Math] 유리함수 점근선 기초",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Math] Rational Functions: Asymptote Basics",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: 정의역 제외점, 점근선 직관",
-                                "핵심 포인트: 분모가 0이 되는 x는 정의역 제외"
+                                "Typical type: Excluded domain points; asymptote intuition",
+                                "Key point: x-values that make the denominator zero are excluded from the domain"
                             ],
-                            "intuition": "분모가 0이면 안 된다. 이 한 줄이 전부다."
+                            "intuition": "The denominator can't be zero. That's the whole story in one line."
                         },
                         {
-                            "title": "[R&W] Main Idea 굳히기",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Main Idea, Locked In",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 단문 지문의 중심 주장",
-                                "핵심 포인트: 지나치게 좁거나 넓은 선지 제거"
+                                "Typical type: The central claim of a short passage",
+                                "Key point: Eliminate choices that are too narrow or too broad"
                             ],
-                            "intuition": "요지는 지문의 무게중심이다. 치우친 선지는 버린다."
+                            "intuition": "The main idea is the passage's center of gravity. Toss the lopsided choices."
                         },
                         {
-                            "title": "[R&W] Inference 함정 회피",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Inference: Dodging Traps",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 논리적 귀결, 과한 주장 선지",
-                                "핵심 포인트: 가장 약한 주장=가장 안전한 답"
+                                "Typical type: Logical conclusions; overstated choices",
+                                "Key point: The weakest claim = the safest answer"
                             ],
-                            "intuition": "추론 문제에서 강한 주장은 대개 함정이다."
+                            "intuition": "In inference questions, a strong claim is usually a trap."
                         },
                         {
-                            "title": "[R&W] 어휘: 학술어 뉘앙스",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Vocabulary: Academic Nuance",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 빈칸·밑줄 어휘의 문맥 의미",
-                                "핵심 포인트: 대조·인과 신호어로 의미 범위 좁히기"
+                                "Typical type: The in-context meaning of a blanked or underlined word",
+                                "Key point: Use contrast and cause-effect signal words to narrow the meaning"
                             ],
-                            "intuition": "신호어가 뜻을 정한다. however 뒤를 주목하자."
+                            "intuition": "Signal words decide the meaning. Watch what comes after however."
                         },
                         {
-                            "title": "[R&W] 구조: 전체 설계 파악",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Structure: Grasping the Overall Design",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 글의 전개 방식(문제-해결, 주장-반박)",
-                                "핵심 포인트: 각 부분의 기능을 한 단어로"
+                                "Typical type: How the text unfolds (problem-solution, claim-rebuttal)",
+                                "Key point: Name each part's job in one word"
                             ],
-                            "intuition": "글의 설계도를 그리면 문제가 쉬워진다."
+                            "intuition": "Sketch the text's blueprint and the question gets easy."
                         },
                         {
-                            "title": "[R&W] 목적: 왜 이 문장인가",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Purpose: Why This Sentence?",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 특정 문장의 수사적 기능",
-                                "핵심 포인트: 예시·양보·반박·강조 중 선택"
+                                "Typical type: The rhetorical function of a specific sentence",
+                                "Key point: Choose among example, concession, rebuttal, or emphasis"
                             ],
-                            "intuition": "문장에게 역할을 물어보자. 이 문장의 직업은 무엇인가."
+                            "intuition": "Ask the sentence its job. What does this sentence do for a living?"
                         },
                         {
-                            "title": "[R&W] Boundaries: 복합 구두점",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Boundaries: Combined Punctuation",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 세미콜론·콜론·대시 종합",
-                                "핵심 포인트: 독립절 경계 먼저 긋기"
+                                "Typical type: Semicolons, colons, and dashes combined",
+                                "Key point: Mark the independent-clause boundary first"
                             ],
-                            "intuition": "경계를 그으면 구두점은 저절로 정해진다."
+                            "intuition": "Once the boundary is drawn, the punctuation decides itself."
                         },
                         {
-                            "title": "[R&W] 일치: 수식어 걷어내기",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[R&W] Agreement: Stripping Modifiers",
+                            "problem": "Frequency: ★★★★☆ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 주어-동사·대명사 일치",
-                                "핵심 포인트: 전치사구·관계절 괄호 처리"
+                                "Typical type: Subject-verb and pronoun agreement",
+                                "Key point: Parenthesize prepositional phrases and relative clauses"
                             ],
-                            "intuition": "진짜 주어는 수식어 뒤에 숨어 있다."
+                            "intuition": "The real subject hides behind the modifiers."
                         },
                         {
-                            "title": "[R&W] Transitions: 논리 관계",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Transitions: Logical Relationships",
+                            "problem": "Frequency: ★★★★☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 빈칸 전환어, 문장 순서",
-                                "핵심 포인트: 관계를 말로 풀고 전환어 매칭"
+                                "Typical type: Transition for a blank; sentence order",
+                                "Key point: Put the relationship into words, then match a transition"
                             ],
-                            "intuition": "논리를 말로 설명할 수 있으면 답은 보인다."
+                            "intuition": "If you can explain the logic in words, the answer shows itself."
                         },
                         {
-                            "title": "[R&W] 노트 종합 (Rhetorical Synthesis)",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[R&W] Synthesizing Notes (Rhetorical Synthesis)",
+                            "problem": "Frequency: ★★★☆☆ | Importance: Recommended",
                             "steps": [
-                                "대표 유형: 불릿 노트로 목표 주장 뒷받침",
-                                "핵심 포인트: 목표에 직접 관련된 노트만 선별"
+                                "Typical type: Support the target claim with bullet notes",
+                                "Key point: Select only notes directly related to the goal"
                             ],
-                            "intuition": "목표가 필터다. 관련 없는 노트는 버린다."
+                            "intuition": "The goal is your filter. Dump the irrelevant notes."
                         },
                         {
-                            "title": "[R&W] 이중 지문 미묘한 차이",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[R&W] Paired Passages: Subtle Differences",
+                            "problem": "Frequency: ★★☆☆☆ | Importance: Advanced",
                             "steps": [
-                                "대표 유형: 두 텍스트의 입장 차이·공통 전제",
-                                "핵심 포인트: 공통점과 차이점을 분리해 기술"
+                                "Typical type: Differences in stance between two texts; shared assumptions",
+                                "Key point: Describe similarities and differences separately"
                             ],
-                            "intuition": "두 글의 공통 전제를 찾으면 차이가 선명해진다."
+                            "intuition": "Find the two texts' shared assumption and the differences come into focus."
                         }
                     ],
                     "quiz": {
                         "levels": [
                             {
-                                "title": "자가체크 1: 선형 vs 지수",
+                                "title": "Self-Check 1: Linear vs. Exponential",
                                 "difficulty": "medium",
-                                "question": "표: x=0→y=3, x=1→y=6, x=2→y=12, x=3→y=24. 이 관계를 가장 잘 설명하는 모델은?",
+                                "question": "Table: x=0→y=3, x=1→y=6, x=2→y=12, x=3→y=24. Which model best describes this relationship?",
                                 "options": [
-                                    "지수 모델 (매번 2배)",
-                                    "선형 모델 (매번 +3)",
-                                    "이차 모델",
-                                    "반비례 모델"
+                                    "Exponential model (doubles each time)",
+                                    "Linear model (+3 each time)",
+                                    "Quadratic model",
+                                    "Inverse-variation model"
                                 ],
-                                "answer": "지수 모델 (매번 2배)",
-                                "explanation": "y값의 변화를 보면 3→6→12→24로 매번 2배씩 곱해진다. 일정한 양이 더해지는 것이 아니라 일정한 비율이 곱해지므로 지수 모델이다. 선형 모델이라면 차분이 일정해야 하는데 차분은 3, 6, 12로 일정하지 않다. 표에서 차분이 일정하면 선형(일차함수), 비율이 일정하면 지수라는 판별법은 디지털 SAT 함수 유형의 핵심 스킬이다. 지수 모델의 식은 y = 3(2)^x가 된다. 실생활 맥락에서는 일정 금액씩 증가하면 선형, 일정 퍼센트씩 증가하면 지수로 연결된다. Desmos에 표의 점을 찍어보면 곡선 형태가 지수임을 시각적으로도 확인할 수 있어 검산에 유용하다."
+                                "answer": "Exponential model (doubles each time)",
+                                "explanation": "Looking at the y-values — 3→6→12→24 — each is multiplied by 2. A constant ratio is multiplied, not a constant amount added, so this is exponential. If it were linear, the differences would be constant, but here they're 3, 6, 12 — not constant. The test: constant differences in a table → linear; constant ratios → exponential. That's a core SAT function skill. The equation is y = 3(2)^x. In real-life terms, growing by a fixed amount means linear; growing by a fixed percent means exponential. Plotting the table's points in Desmos shows the exponential curve visually — handy for double-checking."
                             },
                             {
-                                "title": "자가체크 2: 모듈 1 전략",
+                                "title": "Self-Check 2: Module 1 Strategy",
                                 "difficulty": "easy",
-                                "question": "적응형 SAT에서 모듈 1을 풀 때 가장 중요한 것은?",
+                                "question": "When working through Module 1 on the adaptive SAT, what matters most?",
                                 "options": [
-                                    "쉬운 문제의 실수를 없애 정확도를 확보하는 것",
-                                    "어려운 문제에 시간을 많이 쓰는 것",
-                                    "모듈 1을 최대한 빨리 끝내는 것",
-                                    "모듈 2 문제를 미리 예상하는 것"
+                                    "Eliminating careless mistakes on easy questions to lock in accuracy",
+                                    "Spending lots of time on hard questions",
+                                    "Finishing Module 1 as fast as possible",
+                                    "Trying to predict the Module 2 questions"
                                 ],
-                                "answer": "쉬운 문제의 실수를 없애 정확도를 확보하는 것",
-                                "explanation": "2단계 적응형에서 모듈 2의 난이도는 모듈 1의 성적에 따라 정해진다. 모듈 1에서 쉬운 문제를 실수로 틀리면 하위 난이도 모듈로 배정되어 고득점이 구조적으로 어려워진다. 따라서 모듈 1의 최우선 목표는 정확도이다. 어려운 문제에 시간을 쏟다가 쉬운 문제를 틀리는 것은 최악의 시나리오이고, 빨리 끝내는 것은 정확도를 희생한다. 모듈 2를 미리 예상할 수는 없다. 실전 전략은 모듈 1의 모든 문제를 침착하게 풀고, 남는 시간으로 검산하는 것이다. 정확도가 곧 점수 상한을 정한다. 쉬운 문제 한 개의 실수가 고난도 모듈 2행 티켓을 날릴 수 있다는 점을 항상 기억하자."
+                                "answer": "Eliminating careless mistakes on easy questions to lock in accuracy",
+                                "explanation": "In the two-stage adaptive format, Module 2's difficulty is set by your Module 1 performance. Miss easy Module 1 questions through carelessness and you'll be routed to the lower-difficulty module, making a top score structurally out of reach. So accuracy is the top priority for Module 1. Burning time on hard questions while missing easy ones is the worst-case scenario; finishing early sacrifices accuracy. And there's no way to predict Module 2. The test-day play: work through every Module 1 question calmly, then use leftover time to double-check. Accuracy sets your score ceiling. Remember: one careless miss on an easy question can cost you your ticket to the harder Module 2."
                             },
                             {
-                                "title": "자가체크 3: 대명사 일치",
+                                "title": "Self-Check 3: Pronoun Agreement",
                                 "difficulty": "medium",
-                                "question": "빈칸: 'Each of the students submitted _____ assignment on time.'",
+                                "question": "Fill in the blank: 'Each of the students submitted _____ assignment on time.'",
                                 "options": [
                                     "his or her",
                                     "their",
@@ -5454,235 +5454,235 @@ window.MATH_DATA = {
                                     "there"
                                 ],
                                 "answer": "his or her",
-                                "explanation": "주어는 Each로 단수이다. of the students는 전치사구로 주어의 수를 바꾸지 않는다. 따라서 단수 대명사가 필요하고, 성별이 특정되지 않았으므로 his or her가 정답이다. their는 복수 대명사로 단수 주어와 일치하지 않는다. SAT는 전통적으로 each·every·either·neither 같은 단수 주어를 복수 대명사와 짝지은 선지를 함정으로 낸다. its는 사물·동물용, there는 장소 부사로 문법적으로 맞지 않다. 주어-동사·대명사 일치는 Standard English Conventions의 핵심으로, 수식어를 걷어내고 진짜 주어를 찾는 훈련이 필수이다."
+                                "explanation": "The subject is Each, which is singular. Of the students is a prepositional phrase and doesn't change the subject's number. So you need a singular pronoun, and since no gender is specified, his or her is correct. Their is plural and can't pair with a singular subject. The SAT loves this trap: matching singular subjects like each, every, either, and neither with plural pronouns. Its is for things or animals; there is a place adverb — neither fits grammatically. Subject-verb and pronoun agreement is the heart of Standard English Conventions, and the essential drill is stripping modifiers to find the true subject."
                             }
                         ]
                     }
                 },
                 {
-                    "title": "2026: 최신 트렌드 · 실전 완성",
-                    "insight": "2026년 현재 디지털 SAT는 3년차에 접어들며 문항 은행이 확대되고 출제 경향이 안정됐다. 최신 트렌드로는 실생활·과학·사회과학 소재의 맥락 문제 지속, Desmos 활용형 그래프 해석 문항, R&W의 cross-text connections와 데이터 근거 문항이 꼽힌다. College Board는 문제 은행 순환과 부정행위 방지를 강화하는 추세다. 학습 포인트는 개념 이해와 풀이 속도의 병행, 그리고 적응형 대비 모듈 1 정확도 확보다. 이 섹션의 2020~2025년 흐름을 관통하는 결론은 하나다. 형식이 바뀌어도 필수 개념의 명단은 거의 바뀌지 않았다.",
+                    "title": "2026: Latest Trends — Test-Day Ready",
+                    "insight": "As of 2026, the digital SAT is in its third year: the question bank has grown and trends have stabilized. The latest trends: context problems drawn from real life, science, and social science continue; graph-reading questions that leverage Desmos; and cross-text connections plus data-evidence questions in R&W. College Board keeps tightening question-bank rotation and anti-cheating measures. Study takeaways: pair conceptual understanding with solving speed, and lock in Module 1 accuracy for the adaptive format. One conclusion runs through this section's 2020–2025 arc: even as the format changes, the must-know concept list barely budges.",
                     "topics": [
-                        "2026년 현재: 문항 은행 확대, 출제 경향 안정화, 부정행위 방지 강화",
-                        "Math TOP: 함수 응용·데이터 해석·Desmos 검증의 삼각 완성",
-                        "R&W TOP: 근거·어휘·문법 3축 + 이중 지문·노트 종합 대비",
-                        "최종 전략: 필수 개념 무실수 + 모듈 1 정확도 + 시간 배분"
+                        "2026 today: bigger question bank, stabilized trends, stronger anti-cheating",
+                        "Math focus: the triangle of function applications, data interpretation, and Desmos verification",
+                        "R&W focus: the three pillars of evidence, vocabulary, and grammar — plus paired passages and note synthesis",
+                        "Final strategy: zero mistakes on essentials + Module 1 accuracy + pacing"
                     ],
                     "lectures": [],
                     "examples": [
                         {
-                            "title": "[Math] 함수 응용 종합",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Function Applications: Putting It Together",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 일차·이차·지수 함수의 실생활 문제",
-                                "핵심 포인트: 모델 식 세우기→값 구하기→의미 해석의 3단계"
+                                "Typical type: Real-world problems with linear, quadratic, and exponential functions",
+                                "Key point: Three steps — write the model, compute the value, interpret the meaning"
                             ],
-                            "intuition": "함수 문제는 3단계 프로세스다. 식, 계산, 해석."
+                            "intuition": "Function problems are a 3-step process: equation, calculation, interpretation."
                         },
                         {
-                            "title": "[Math] 이차방정식 실전",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[Math] Quadratic Equations in Action",
+                            "problem": "Frequency: ★★★★★ | Importance: Essential",
                             "steps": [
-                                "대표 유형: 근 구하기·판별식·그래프 연결",
-                                "핵심 포인트: 인수분해→근의 공식→Desmos 검증"
+                                "Typical type: Finding roots, the discriminant, and connecting to graphs",
+                                "Key point: Factor → quadratic formula → verify with Desmos"
                             ],
-                            "intuition": "이차방정식은 도구 상자다. 상황에 맞는 도구를 꺼낸다."
+                            "intuition": "Quadratic equations are a toolbox. Pull out the right tool for the situation."
                         },
                         {
-                            "title": "[Math] 데이터 해석 실전",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Data Interpretation in Action",
+                            "problem": "Test frequency: ★★★★☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 표·그래프에서 결론 도출",
-                                "핵심 포인트: 묻는 것만 답하기, 과잉 해석 금지"
+                                "Representative types: Drawing conclusions from tables and graphs",
+                                "Key point: Answer only what is asked — no over-interpretation"
                             ],
-                            "intuition": "데이터 문제는 묻는 것만 본다. 나머지는 노이즈다."
+                            "intuition": "On data questions, look only at what is asked. The rest is noise."
                         },
                         {
-                            "title": "[Math] 비율·퍼센트 함정 회피",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[Math] Avoiding Ratio and Percent Traps",
+                            "problem": "Test frequency: ★★★★☆ | Priority: Essential",
                             "steps": [
-                                "대표 유형: 연속 증감, 기준량 전환",
-                                "핵심 포인트: 기준량이 바뀌는 순간을 포착"
+                                "Representative types: Repeated percent changes, switching the base amount",
+                                "Key point: Catch the moment the base amount changes"
                             ],
-                            "intuition": "퍼센트 함정의 정체는 바뀌는 기준량이다."
+                            "intuition": "The true identity of a percent trap is the shifting base."
                         },
                         {
-                            "title": "[Math] 기하: 공식 시트 활용",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Geometry: Using the Formula Sheet",
+                            "problem": "Test frequency: ★★★★☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 원·삼각형·부피, 라디안",
-                                "핵심 포인트: 공식은 시트에서, 적용 판단이 실력"
+                                "Representative types: Circles, triangles, volume, radians",
+                                "Key point: Formulas come from the sheet — knowing when to apply them is the skill"
                             ],
-                            "intuition": "외울 것과 꺼내 쓸 것을 구분하자."
+                            "intuition": "Separate what to memorize from what to look up."
                         },
                         {
-                            "title": "[Math] 삼각비·특수각",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Trig Ratios and Special Angles",
+                            "problem": "Test frequency: ★★★☆☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 직각삼각형 변·각, 여각 관계",
-                                "핵심 포인트: SOH-CAH-TOA + 30°·45°·60°"
+                                "Representative types: Sides and angles of right triangles, cofunction relationships",
+                                "Key point: SOH-CAH-TOA + 30°·45°·60°"
                             ],
-                            "intuition": "삼각비는 직각삼각형 그리기부터 시작이다."
+                            "intuition": "Trig ratios start with drawing the right triangle."
                         },
                         {
-                            "title": "[Math] 통계: 분포 읽기",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Math] Statistics: Reading Distributions",
+                            "problem": "Test frequency: ★★★☆☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 히스토그램·박스플롯 해석",
-                                "핵심 포인트: 중심·퍼짐·치우침 3요소"
+                                "Representative types: Interpreting histograms and box plots",
+                                "Key point: The three essentials — center, spread, skew"
                             ],
-                            "intuition": "분포 그래프는 3가지만 읽는다. 중심, 퍼짐, 치우침."
+                            "intuition": "A distribution graph needs just three reads: center, spread, and skew."
                         },
                         {
-                            "title": "[Math] 고난도 대수 변별",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 심화",
+                            "title": "[Math] Challenging Algebra (Differentiators)",
+                            "problem": "Test frequency: ★★★☆☆ | Priority: Advanced",
                             "steps": [
-                                "대표 유형: 치환·정리·무연근, 다단계 식",
-                                "핵심 포인트: 모듈 2 고난이도 대비, 침착한 단계 분해"
+                                "Representative types: Substitution, simplification, extraneous roots, multi-step expressions",
+                                "Key point: Prep for Module 2 hard questions — break them down calmly"
                             ],
-                            "intuition": "어려운 문제는 쉬운 단계들의 연결이다."
+                            "intuition": "A hard problem is a chain of easy steps."
                         },
                         {
-                            "title": "[Math] 수열·패턴",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Math] Sequences and Patterns",
+                            "problem": "Test frequency: ★★☆☆☆ | Priority: Advanced",
                             "steps": [
-                                "대표 유형: 등차·등비 일반항, 패턴 추론",
-                                "핵심 포인트: 함수 관점으로 보기"
+                                "Representative types: nth-term formulas for arithmetic and geometric sequences, pattern reasoning",
+                                "Key point: View them as functions"
                             ],
-                            "intuition": "수열은 이산 함수다. 같은 눈으로 본다."
+                            "intuition": "A sequence is a discrete function. Look at it with the same eyes."
                         },
                         {
-                            "title": "[Math] Desmos 검증 루틴",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Math] Desmos Checking Routine",
+                            "problem": "Test frequency: ★★★★☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 모든 함수·방정식 문제의 검산",
-                                "핵심 포인트: 식 입력→그래프→교점·근 확인"
+                                "Representative types: Checking work on every function and equation problem",
+                                "Key point: Enter the expression → graph it → verify intercepts and roots"
                             ],
-                            "intuition": "Desmos는 두 번째 풀이자다. 검산 도구로 쓰자."
+                            "intuition": "Desmos is your second solver. Use it as a checking tool."
                         },
                         {
-                            "title": "[R&W] 근거 선택 실전",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Evidence Selection in Action",
+                            "problem": "Test frequency: ★★★★★ | Priority: Essential",
                             "steps": [
-                                "대표 유형: 텍스트·데이터 근거",
-                                "핵심 포인트: 주장 압축→직접 지지 선지"
+                                "Representative types: Textual and data-based evidence",
+                                "Key point: Condense the claim, then pick the choice that directly supports it"
                             ],
-                            "intuition": "근거는 주장의 그림자다. 딱 붙어 있어야 한다."
+                            "intuition": "Evidence is the shadow of the claim — it must stay attached."
                         },
                         {
-                            "title": "[R&W] 어휘 실전",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Vocabulary in Action",
+                            "problem": "Test frequency: ★★★★★ | Priority: Essential",
                             "steps": [
-                                "대표 유형: 문맥 어휘, 빈칸",
-                                "핵심 포인트: 논리 신호어→의미 범위→대입"
+                                "Representative types: Words in context, fill-in-the-blank",
+                                "Key point: Logic signal words → meaning range → plug in"
                             ],
-                            "intuition": "어휘 문제는 논리 문제다."
+                            "intuition": "Vocabulary questions are logic questions."
                         },
                         {
-                            "title": "[R&W] 추론 실전",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Inference in Action",
+                            "problem": "Test frequency: ★★★★☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 논리적 귀결",
-                                "핵심 포인트: 약한 주장 선택, 지문 밖 금지"
+                                "Representative types: Logical conclusions",
+                                "Key point: Choose the weakest claim; nothing outside the passage"
                             ],
-                            "intuition": "겸손한 답이 정답이다."
+                            "intuition": "The humble answer is the right one."
                         },
                         {
-                            "title": "[R&W] 구조·목적 실전",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Structure and Purpose in Action",
+                            "problem": "Test frequency: ★★★★☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 문장 기능, 글의 전개",
-                                "핵심 포인트: 전체 설계 속 부분의 역할"
+                                "Representative types: Sentence functions, how a text unfolds",
+                                "Key point: Each part's role within the whole design"
                             ],
-                            "intuition": "부분은 전체를 위해 존재한다."
+                            "intuition": "The parts exist for the sake of the whole."
                         },
                         {
-                            "title": "[R&W] 이중 지문 실전",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Paired Passages in Action",
+                            "problem": "Test frequency: ★★★★☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 관계·반박 지점",
-                                "핵심 포인트: 각 주장 요약→관계 판별"
+                                "Representative types: Relationships and points of disagreement",
+                                "Key point: Summarize each claim, then determine the relationship"
                             ],
-                            "intuition": "요약이 먼저, 관계는 그 다음이다."
+                            "intuition": "Summarize first — the relationship comes next."
                         },
                         {
-                            "title": "[R&W] 문장 경계 실전",
-                            "problem": "출제 빈도: ★★★★★ | 중요도: 필수",
+                            "title": "[R&W] Sentence Boundaries in Action",
+                            "problem": "Test frequency: ★★★★★ | Priority: Essential",
                             "steps": [
-                                "대표 유형: 구두점 종합",
-                                "핵심 포인트: 독립절 판별이 90%"
+                                "Representative types: Punctuation across the board",
+                                "Key point: Identifying independent clauses is 90% of it"
                             ],
-                            "intuition": "경계만 그으면 답은 정해져 있다."
+                            "intuition": "Draw the boundary right, and the answer is decided."
                         },
                         {
-                            "title": "[R&W] 일치·시제 실전",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 필수",
+                            "title": "[R&W] Agreement and Tense in Action",
+                            "problem": "Test frequency: ★★★★☆ | Priority: Essential",
                             "steps": [
-                                "대표 유형: 주어-동사·대명사·시제",
-                                "핵심 포인트: 수식어 제거→본질 노출"
+                                "Representative types: Subject–verb, pronoun, and tense agreement",
+                                "Key point: Strip the modifiers to expose the core"
                             ],
-                            "intuition": "문법은 걷어내기의 기술이다."
+                            "intuition": "Grammar is the art of stripping away."
                         },
                         {
-                            "title": "[R&W] 전환어 실전",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[R&W] Transitions in Action",
+                            "problem": "Test frequency: ★★★★☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 빈칸·순서",
-                                "핵심 포인트: 관계 말하기→전환어 매칭"
+                                "Representative types: Blanks and ordering",
+                                "Key point: Say the relationship out loud, then match the transition word"
                             ],
-                            "intuition": "말로 풀리면 글로도 풀린다."
+                            "intuition": "If you can say it, you can write it."
                         },
                         {
-                            "title": "[R&W] 노트 종합 실전",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[R&W] Notes Synthesis in Action",
+                            "problem": "Test frequency: ★★★☆☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 목표 주장 뒷받침",
-                                "핵심 포인트: 목표 필터→관련 노트 선별"
+                                "Representative types: Supporting a target claim",
+                                "Key point: Filter by the goal, then select the relevant notes"
                             ],
-                            "intuition": "목표가 기준이다. 나머지는 버린다."
+                            "intuition": "The goal is the standard. Discard the rest."
                         },
                         {
-                            "title": "[R&W] 고난도 지문 변별",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[R&W] Challenging Passages (Differentiators)",
+                            "problem": "Test frequency: ★★☆☆☆ | Priority: Advanced",
                             "steps": [
-                                "대표 유형: 추상 학술 지문의 미묘한 논증",
-                                "핵심 포인트: 논증 구조도 그리기"
+                                "Representative types: Subtle arguments in abstract academic passages",
+                                "Key point: Draw an argument map"
                             ],
-                            "intuition": "어려운 지문은 구조도로 이긴다."
+                            "intuition": "Beat hard passages with a structure map."
                         }
                     ],
                     "quiz": {
                         "levels": [
                             {
-                                "title": "자가체크 1: 이차함수 최댓값",
+                                "title": "Self-Check 1: Maximum of a Quadratic Function",
                                 "difficulty": "medium",
-                                "question": "수익 모델 R = -2x^2 + 40x - 100 (x는 판매량)에서 최대 수익과 그때의 판매량은?",
+                                "question": "For the revenue model R = -2x^2 + 40x - 100 (x = quantity sold), what are the maximum revenue and the corresponding quantity sold?",
                                 "options": [
-                                    "최대 100, x=10",
-                                    "최대 200, x=20",
-                                    "최대 100, x=20",
-                                    "최대 300, x=10"
+                                    "Max 100, x=10",
+                                    "Max 200, x=20",
+                                    "Max 100, x=20",
+                                    "Max 300, x=10"
                                 ],
-                                "answer": "최대 100, x=10",
-                                "explanation": "이차함수 R = -2x^2 + 40x - 100에서 a = -2 < 0이므로 아래로 볼록한 포물선이고 최댓값은 꼭짓점에서 나온다. 꼭짓점의 x좌표는 -b/2a = -40/(2·-2) = 10이다. x = 10을 대입하면 R = -2(100) + 400 - 100 = -200 + 400 - 100 = 100이다. 따라서 판매량 10에서 최대 수익 100이다. Desmos에 식을 입력하면 꼭짓점 (10, 100)이 바로 확인된다. 이차함수 최적화는 실생활 맥락(수익·넓이·궤적)의 단골 유형으로, a의 부호로 최대·최소를 먼저 판단하고 꼭짓점을 구하는 것이 정석이다."
+                                "answer": "Max 100, x=10",
+                                "explanation": "For the quadratic function R = -2x^2 + 40x - 100, a = -2 < 0, so the parabola opens downward and the maximum occurs at the vertex. The x-coordinate of the vertex is -b/2a = -40/(2·-2) = 10. Plugging in x = 10 gives R = -2(100) + 400 - 100 = -200 + 400 - 100 = 100, so the maximum revenue is 100 at a quantity sold of 10. Typing the equation into Desmos immediately confirms the vertex (10, 100). Quadratic optimization is a classic real-life context (revenue, area, trajectory): first use the sign of a to decide maximum vs. minimum, then find the vertex."
                             },
                             {
-                                "title": "자가체크 2: 데이터 근거와 함정",
+                                "title": "Self-Check 2: Data Evidence and Traps",
                                 "difficulty": "medium",
-                                "question": "그래프: 2020~2025년 전기차 판매량 막대그래프 (매년 증가, 2024→2025 증가폭이 가장 큼). 주장: '전기차 판매량은 매년 증가했으며, 2025년의 증가폭이 가장 컸다.' 주장을 뒷받침하지 못하는 선지는?",
+                                "question": "Graph: bar chart of EV sales from 2020 to 2025 (rising every year, with the largest jump from 2024 to 2025). Claim: 'EV sales increased every year, and the increase was largest in 2025.' Which choice does NOT support the claim?",
                                 "options": [
-                                    "2023년 판매량이 2022년보다 감소했다",
-                                    "2025년 막대가 2024년 막대보다 가장 많이 길어졌다",
-                                    "모든 연도의 막대가 전년보다 높다",
-                                    "2024→2025 구간 증가량이 최대이다"
+                                    "Sales in 2023 decreased from 2022",
+                                    "The 2025 bar grew the most compared to the 2024 bar",
+                                    "Every year's bar is higher than the previous year's",
+                                    "The increase over the 2024–2025 period is the largest"
                                 ],
-                                "answer": "2023년 판매량이 2022년보다 감소했다",
-                                "explanation": "주장은 두 가지(매년 증가, 2025년 증가폭 최대)를 포함한다. 첫 번째 선지는 2023년 판매량이 감소했다고 말하므로 '매년 증가'와 직접 모순되어 주장을 뒷받침하지 못한다. 나머지 선지들은 주장의 각 부분을 지지한다. Quantitative Evidence 문항에서는 주장을 뒷받침하는 선지를 고르기도 하고, 뒷받침하지 못하는 선지를 고르기도 하므로 질문의 방향(지지 vs 반박)을 정확히 읽어야 한다. 그래프 문제를 풀 때는 축·단위·구간을 먼저 확인하고, 주장의 수치적 내용과 데이터를 하나씩 대조하는 습관이 함정을 피하는 길이다."
+                                "answer": "Sales in 2023 decreased from 2022",
+                                "explanation": "The claim has two parts (an increase every year, and the largest increase in 2025). The first choice says sales decreased in 2023, which directly contradicts 'an increase every year' and therefore does not support the claim. The remaining choices each support part of the claim. On Quantitative Evidence questions you may be asked to pick the choice that supports the claim or the one that does not — so read the question's direction (support vs. undermine) carefully. On graph questions, first check the axes, units, and intervals, and build the habit of matching each numerical part of the claim against the data one by one. That is how you dodge the traps."
                             },
                             {
-                                "title": "자가체크 3: 고난도 어휘 추론",
+                                "title": "Self-Check 3: Challenging Vocabulary Inference",
                                 "difficulty": "hard",
-                                "question": "지문: 'The theory was initially dismissed as _____, but subsequent experiments confirmed its predictions.' 빈칸에 가장 적절한 것은?",
+                                "question": "Passage: 'The theory was initially dismissed as _____, but subsequent experiments confirmed its predictions.' Which word best fills the blank?",
                                 "options": [
                                     "implausible",
                                     "innovative",
@@ -5690,369 +5690,369 @@ window.MATH_DATA = {
                                     "complex"
                                 ],
                                 "answer": "implausible",
-                                "explanation": "but 뒤에 후속 실험이 그 이론의 예측을 확인했다고 나오므로, 빈칸에는 처음에 이론이 받았던 부정적 평가가 들어가야 한다. implausible(그럴듯하지 않은)은 이론이 처음에 무시·기각된 이유를 정확히 설명한다. innovative(혁신적인)는 긍정적이라 but의 대조와 맞지 않고, controversial(논란의)은 중립적이라 dismissed와 어울리지 않으며, complex(복잡한)는 기각의 이유가 되기 어렵다. 고난도 어휘 문항은 but·however 같은 대조 신호어가 답의 방향을 정해준다. 신호어 뒤의 긍정·부정을 먼저 파악하고, 그 반대 방향의 어휘를 고르는 것이 정석이다."
+                                "explanation": "The part after but says that subsequent experiments confirmed the theory's predictions, so the blank needs the negative judgment the theory initially received. implausible explains exactly why the theory was first ignored and dismissed. innovative is positive and clashes with but, controversial is neutral and sits poorly with dismissed, and complex is a weak reason for dismissal. On high-level vocabulary questions, contrast signal words like but and however set the answer's direction. First determine whether the signal word points positive or negative, then choose the word heading the opposite way — that is the standard approach."
                             }
                         ]
                     }
                 },
                 {
-                    "title": "디지털 전환 전후 비교 & 우선순위 학습 가이드",
-                    "insight": "paper(2020~2023)와 digital(2024~2026)을 가르는 핵심 변화는 다섯 가지다. 첫째, 시험 시간이 3시간에서 2시간 14분으로 단축됐다. 둘째, 500~750단어 긴 지문이 25~150단어 단문으로 바뀌고 문항당 1지문 독립형이 됐다. 셋째, 계산기 금지 섹션이 폐지되고 전 문항 계산기가 허용되며 Desmos가 내장됐다. 넷째, 고정형에서 2단계 적응형으로 바뀌어 모듈 1의 정확도가 점수 상한을 정한다. 다섯째, Essay가 2021년 6월 폐지되며 R&W가 독해·문법 통합형으로 정리됐다. 그러나 개념의 뼈대는 그대로다. 아래 필수 리스트가 2020년에도, 2026년에도 통하는 이유다.",
+                    "title": "Paper-to-Digital Comparison & Priority Study Guide",
+                    "insight": "Five key changes separate paper (2020–2023) from digital (2024–2026). First, testing time shrank from 3 hours to 2 hours 14 minutes. Second, 500–750-word passages became 25–150-word short passages, with one independent passage per question. Third, the no-calculator section was eliminated: calculators are now allowed on every question, and Desmos is built in. Fourth, the fixed format became two-stage adaptive testing, where Module 1 accuracy sets your score ceiling. Fifth, the Essay was discontinued in June 2021, leaving R&W as an integrated reading-and-writing section. But the conceptual backbone is unchanged. That is why the essential list below held in 2020 and still holds in 2026.",
                     "topics": [
-                        "1단계(기초 체력): 필수 Math 10 + 필수 R&W 10 — 무실수 목표",
-                        "2단계(안정권): 권장 Math 4 + 권장 R&W 4 — 자주 출제 영역 커버",
-                        "3단계(고득점): 심화 Math 3 + 심화 R&W 3 — 모듈 2 고난이도 대비",
-                        "4단계(실전): Bluebook 모의고사 + Desmos 검증 루틴 + 모듈 1 정확도 훈련"
+                        "Stage 1 (foundations): 10 Essential Math + 10 Essential R&W — zero-mistake goal",
+                        "Stage 2 (comfort zone): 4 Recommended Math + 4 Recommended R&W — cover frequently tested areas",
+                        "Stage 3 (high scores): 3 Advanced Math + 3 Advanced R&W — prep for Module 2 hard questions",
+                        "Stage 4 (test day): Bluebook practice tests + Desmos checking routine + Module 1 accuracy drills"
                     ],
                     "lectures": [],
                     "examples": [
                         {
-                            "title": "[필수 Math 1] 일차방정식·부등식과 실생활 응용",
-                            "problem": "우선순위: 1위 | 중요도: 필수",
+                            "title": "[Essential Math 1] Linear Equations & Inequalities in Real Life",
+                            "problem": "Priority rank: #1 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 맥락 속 식 세우기, 부등호 방향",
-                                "핵심 포인트: 매 시험 출제되는 대수의 기본기"
+                                "Representative types: Building equations in context, inequality direction",
+                                "Key point: The algebraic fundamentals tested on every exam"
                             ],
-                            "intuition": "SAT 수학의 알파벳. 여기서 틀리면 뒤가 다 흔들린다."
+                            "intuition": "The alphabet of SAT Math. Miss here and everything after wobbles."
                         },
                         {
-                            "title": "[필수 Math 2] 연립방정식과 해의 개수",
-                            "problem": "우선순위: 2위 | 중요도: 필수",
+                            "title": "[Essential Math 2] Systems of Equations & Number of Solutions",
+                            "problem": "Priority rank: #2 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 해법 선택, 기울기·절편으로 해의 개수 판별",
-                                "핵심 포인트: 대입·가감·그래프 중 최단 경로"
+                                "Representative types: Choosing a solution method; using slope and intercept to determine the number of solutions",
+                                "Key point: The shortest path among substitution, elimination, and graphing"
                             ],
-                            "intuition": "기울기가 말해준다. 그래프 없이도 판별 가능하다."
+                            "intuition": "The slope tells you. You can determine it without a graph."
                         },
                         {
-                            "title": "[필수 Math 3] 일차함수 기울기·절편의 의미",
-                            "problem": "우선순위: 3위 | 중요도: 필수",
+                            "title": "[Essential Math 3] Slope & Intercept in Linear Functions: What They Mean",
+                            "problem": "Priority rank: #3 | Priority: Essential",
                             "steps": [
-                                "대표 유형: y=mx+b의 m·b가 현실에서 뜻하는 것",
-                                "핵심 포인트: 기울기=변화율, 절편=초기값, 단위 붙여 읽기"
+                                "Representative types: What m and b in y=mx+b mean in the real world",
+                                "Key point: Slope = rate of change, intercept = starting value; read with units attached"
                             ],
-                            "intuition": "단위를 붙이는 순간 함정이 보인다."
+                            "intuition": "The moment you attach units, the trap reveals itself."
                         },
                         {
-                            "title": "[필수 Math 4] 이차방정식·이차함수",
-                            "problem": "우선순위: 4위 | 중요도: 필수",
+                            "title": "[Essential Math 4] Quadratic Equations & Functions",
+                            "problem": "Priority rank: #4 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 인수분해·근의 공식·판별식, 꼭짓점·최댓값",
-                                "핵심 포인트: Advanced Math의 중심, 고난도 모듈 변별 구간"
+                                "Representative types: Factoring, the quadratic formula, the discriminant, vertex, maximum",
+                                "Key point: The heart of Advanced Math; the differentiator zone of the hard module"
                             ],
-                            "intuition": "푸는 법이 세 가지. 상황에 맞는 도구를 고르자."
+                            "intuition": "Three ways to solve. Pick the right tool for the situation."
                         },
                         {
-                            "title": "[필수 Math 5] 지수함수와 지수 모델",
-                            "problem": "우선순위: 5위 | 중요도: 필수",
+                            "title": "[Essential Math 5] Exponential Functions & Models",
+                            "problem": "Priority rank: #5 | Priority: Essential",
                             "steps": [
-                                "대표 유형: y=ab^x 모델 해석, 선형과 구분",
-                                "핵심 포인트: a는 초기값, b는 변화 배율"
+                                "Representative types: Interpreting the y=ab^x model, distinguishing it from linear",
+                                "Key point: a is the starting value, b is the growth factor"
                             ],
-                            "intuition": "모델 문제는 번역 문제. 기호를 현실 언어로 푼다."
+                            "intuition": "Model problems are translation problems — decode the symbols into plain language."
                         },
                         {
-                            "title": "[필수 Math 6] 비율·백분율·비례식",
-                            "problem": "우선순위: 6위 | 중요도: 필수",
+                            "title": "[Essential Math 6] Ratios, Percents & Proportions",
+                            "problem": "Priority rank: #6 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 증감률, 연속 할인, 기준량 전환 함정",
-                                "핵심 포인트: 퍼센트는 곱셈, 기준량 변화를 포착"
+                                "Representative types: Percent change, successive discounts, base-switching traps",
+                                "Key point: Percents are multiplication; catch the base change"
                             ],
-                            "intuition": "기준량이 바뀌는 순간이 함정의 정체다."
+                            "intuition": "The trap's true identity is the moment the base changes."
                         },
                         {
-                            "title": "[필수 Math 7] 다항식 연산·인수분해",
-                            "problem": "우선순위: 7위 | 중요도: 필수",
+                            "title": "[Essential Math 7] Polynomial Operations & Factoring",
+                            "problem": "Priority rank: #7 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 전개·인수분해 패턴, 공통인수",
-                                "핵심 포인트: 속도가 대수 전체의 속도를 정한다"
+                                "Representative types: Expansion and factoring patterns, common factors",
+                                "Key point: Speed here sets the speed of all your algebra"
                             ],
-                            "intuition": "인수분해는 모든 이차 문제의 열쇠다."
+                            "intuition": "Factoring is the key to every quadratic problem."
                         },
                         {
-                            "title": "[필수 Math 8] 함수 표기·그래프 해석",
-                            "problem": "우선순위: 8위 | 중요도: 필수",
+                            "title": "[Essential Math 8] Function Notation & Graph Reading",
+                            "problem": "Priority rank: #8 | Priority: Essential",
                             "steps": [
-                                "대표 유형: f(x) 값, 정의역·치역, 평행이동",
-                                "핵심 포인트: 대수 문제의 공통 언어"
+                                "Representative types: f(x) values, domain and range, translations",
+                                "Key point: The common language of algebra problems"
                             ],
-                            "intuition": "함수 표기법에 익숙해지는 것이 모든 대수의 출발점이다."
+                            "intuition": "Getting comfortable with function notation is the starting point of all algebra."
                         },
                         {
-                            "title": "[필수 Math 9] 통계 기초: 중심·퍼짐",
-                            "problem": "우선순위: 9위 | 중요도: 필수",
+                            "title": "[Essential Math 9] Statistics Basics: Center & Spread",
+                            "problem": "Priority rank: #9 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 평균·중앙값·이상값 영향, 분포 읽기",
-                                "핵심 포인트: 계산보다 해석, 이상값은 평균을 끌어당긴다"
+                                "Representative types: Mean, median, outlier effects, reading distributions",
+                                "Key point: Interpretation over calculation — outliers pull the mean"
                             ],
-                            "intuition": "평균은 흔들리고 중앙값은 버틴다."
+                            "intuition": "The mean shakes; the median holds firm."
                         },
                         {
-                            "title": "[필수 Math 10] 기하 기초: 삼각형·원",
-                            "problem": "우선순위: 10위 | 중요도: 필수",
+                            "title": "[Essential Math 10] Geometry Basics: Triangles & Circles",
+                            "problem": "Priority rank: #10 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 피타고라스, 특수삼각형, 원의 둘레·넓이",
-                                "핵심 포인트: 공식 시트 활용, 보조선과 그림"
+                                "Representative types: The Pythagorean theorem, special triangles, circle circumference and area",
+                                "Key point: Use the formula sheet; auxiliary lines and diagrams"
                             ],
-                            "intuition": "그림을 그리는 순간 절반이 풀린다."
+                            "intuition": "The moment you draw a picture, half the problem is solved."
                         },
                         {
-                            "title": "[필수 R&W 1] Main Idea · 중심 주장",
-                            "problem": "우선순위: 1위 | 중요도: 필수",
+                            "title": "[Essential R&W 1] Main Idea",
+                            "problem": "Priority rank: #1 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 단문 지문의 요지·주장",
-                                "핵심 포인트: 너무 좁거나 넓은 선지 제거"
+                                "Representative types: The gist and claims of short passages",
+                                "Key point: Eliminate choices that are too narrow or too broad"
                             ],
-                            "intuition": "요지는 지문의 무게중심이다."
+                            "intuition": "The main idea is the passage's center of gravity."
                         },
                         {
-                            "title": "[필수 R&W 2] Textual Evidence · 텍스트 근거",
-                            "problem": "우선순위: 2위 | 중요도: 필수",
+                            "title": "[Essential R&W 2] Textual Evidence",
+                            "problem": "Priority rank: #2 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 주장을 뒷받침하는 인용 선택",
-                                "핵심 포인트: 주장 압축 후 직접 지지 선지 대조"
+                                "Representative types: Choosing the quote that supports the claim",
+                                "Key point: Condense the claim, then compare it against choices that directly support it"
                             ],
-                            "intuition": "근거는 주장의 그림자다."
+                            "intuition": "Evidence is the shadow of the claim."
                         },
                         {
-                            "title": "[필수 R&W 3] Words in Context · 문맥 어휘",
-                            "problem": "우선순위: 3위 | 중요도: 필수",
+                            "title": "[Essential R&W 3] Words in Context",
+                            "problem": "Priority rank: #3 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 밑줄·빈칸 어휘의 문맥 의미",
-                                "핵심 포인트: 논리 신호어로 의미 범위 좁히기"
+                                "Representative types: The contextual meaning of underlined or blanked words",
+                                "Key point: Narrow the meaning range with logic signal words"
                             ],
-                            "intuition": "어휘 문제는 논리 문제다."
+                            "intuition": "Vocabulary questions are logic questions."
                         },
                         {
-                            "title": "[필수 R&W 4] Inference · 추론",
-                            "problem": "우선순위: 4위 | 중요도: 필수",
+                            "title": "[Essential R&W 4] Inference",
+                            "problem": "Priority rank: #4 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 논리적 귀결",
-                                "핵심 포인트: 가장 약한(안전한) 주장, 지문 밖 금지"
+                                "Representative types: Logical conclusions",
+                                "Key point: The weakest (safest) claim; nothing outside the passage"
                             ],
-                            "intuition": "겸손한 답이 정답이다."
+                            "intuition": "The humble answer is the right one."
                         },
                         {
-                            "title": "[필수 R&W 5] Boundaries · 문장 경계",
-                            "problem": "우선순위: 5위 | 중요도: 필수",
+                            "title": "[Essential R&W 5] Boundaries",
+                            "problem": "Priority rank: #5 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 콤마 스플라이스, 세미콜론·콜론·대시",
-                                "핵심 포인트: 독립절 판별이 90%"
+                                "Representative types: Comma splices, semicolons, colons, dashes",
+                                "Key point: Identifying independent clauses is 90% of it"
                             ],
-                            "intuition": "경계만 그으면 구두점은 정해져 있다."
+                            "intuition": "Draw the boundary right, and the punctuation is decided."
                         },
                         {
-                            "title": "[필수 R&W 6] Form, Structure, and Sense · 일치",
-                            "problem": "우선순위: 6위 | 중요도: 필수",
+                            "title": "[Essential R&W 6] Form, Structure, and Sense",
+                            "problem": "Priority rank: #6 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 주어-동사·대명사·시제 일치",
-                                "핵심 포인트: 수식어 걷어내고 진짜 주어 노출"
+                                "Representative types: Subject–verb, pronoun, and tense agreement",
+                                "Key point: Strip the modifiers to expose the real subject"
                             ],
-                            "intuition": "문법은 걷어내기의 기술이다."
+                            "intuition": "Grammar is the art of stripping away."
                         },
                         {
-                            "title": "[필수 R&W 7] 텍스트 구조·목적",
-                            "problem": "우선순위: 7위 | 중요도: 필수",
+                            "title": "[Essential R&W 7] Text Structure & Purpose",
+                            "problem": "Priority rank: #7 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 문장·단락의 기능, 글의 전개 방식",
-                                "핵심 포인트: 전체 설계 속 부분의 역할"
+                                "Representative types: Sentence and paragraph functions, how a text unfolds",
+                                "Key point: Each part's role within the whole design"
                             ],
-                            "intuition": "부분은 전체를 위해 존재한다."
+                            "intuition": "The parts exist for the sake of the whole."
                         },
                         {
-                            "title": "[필수 R&W 8] Quantitative Evidence · 데이터 근거",
-                            "problem": "우선순위: 8위 | 중요도: 필수",
+                            "title": "[Essential R&W 8] Quantitative Evidence",
+                            "problem": "Priority rank: #8 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 표·그래프 수치로 주장 검증",
-                                "핵심 포인트: 축·단위 확인 후 수치 대조"
+                                "Representative types: Verifying claims with table and graph data",
+                                "Key point: Check the axes and units, then compare the numbers"
                             ],
-                            "intuition": "숫자는 거짓말하지 않지만 축은 속일 수 있다."
+                            "intuition": "Numbers don't lie, but axes can deceive."
                         },
                         {
-                            "title": "[필수 R&W 9] Transitions · 전환어",
-                            "problem": "우선순위: 9위 | 중요도: 필수",
+                            "title": "[Essential R&W 9] Transitions",
+                            "problem": "Priority rank: #9 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 빈칸 전환어, 논리 관계",
-                                "핵심 포인트: 관계를 말로 풀고 전환어 매칭"
+                                "Representative types: Blank transition words, logical relationships",
+                                "Key point: Say the relationship out loud, then match the transition word"
                             ],
-                            "intuition": "말로 풀리면 글로도 풀린다."
+                            "intuition": "If you can say it, you can write it."
                         },
                         {
-                            "title": "[필수 R&W 10] Cross-Text Connections · 이중 지문",
-                            "problem": "우선순위: 10위 | 중요도: 필수",
+                            "title": "[Essential R&W 10] Cross-Text Connections",
+                            "problem": "Priority rank: #10 | Priority: Essential",
                             "steps": [
-                                "대표 유형: 두 텍스트의 관계·반박 지점",
-                                "핵심 포인트: 각 주장 요약 후 관계 판별"
+                                "Representative types: Relationships and points of disagreement between two texts",
+                                "Key point: Summarize each claim, then determine the relationship"
                             ],
-                            "intuition": "요약이 먼저, 관계는 그 다음이다."
+                            "intuition": "Summarize first — the relationship comes next."
                         },
                         {
-                            "title": "[권장 Math 1] 확률: 표 읽기와 조건부",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Recommended Math 1] Probability: Reading Tables & Conditional",
+                            "problem": "Test frequency: ★★★☆☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 2원 분할표, 여사건",
-                                "핵심 포인트: 분모는 조건을 만족하는 전체"
+                                "Representative types: Two-way tables, complements",
+                                "Key point: The denominator is the total that satisfies the condition"
                             ],
-                            "intuition": "SAT 확률은 표 읽기 문제에 가깝다."
+                            "intuition": "SAT probability is close to a table-reading problem."
                         },
                         {
-                            "title": "[권장 Math 2] 삼각비와 실생활",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Recommended Math 2] Trig Ratios in Real Life",
+                            "problem": "Test frequency: ★★★☆☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 앙각·부각, 직각삼각형 변·각",
-                                "핵심 포인트: SOH-CAH-TOA, 그림 그리기"
+                                "Representative types: Angles of elevation and depression, right-triangle sides and angles",
+                                "Key point: SOH-CAH-TOA — and draw the picture"
                             ],
-                            "intuition": "직각삼각형 하나면 풀린다."
+                            "intuition": "One right triangle solves it."
                         },
                         {
-                            "title": "[권장 Math 3] 산점도·추세선 해석",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Recommended Math 3] Scatterplots & Lines of Best Fit",
+                            "problem": "Test frequency: ★★★☆☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 추세선 예측, 상관 방향·강도",
-                                "핵심 포인트: 전체 흐름 읽기"
+                                "Representative types: Trend-line predictions, correlation direction and strength",
+                                "Key point: Read the overall flow"
                             ],
-                            "intuition": "점들의 이야기에 귀 기울이자."
+                            "intuition": "Listen to the story the points tell."
                         },
                         {
-                            "title": "[권장 Math 4] Desmos 검증 루틴",
-                            "problem": "출제 빈도: ★★★★☆ | 중요도: 권장",
+                            "title": "[Recommended Math 4] Desmos Checking Routine",
+                            "problem": "Test frequency: ★★★★☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 함수·방정식 문제의 그래프 검산",
-                                "핵심 포인트: 식 입력→교점·근·최댓값 확인"
+                                "Representative types: Checking function and equation problems with graphs",
+                                "Key point: Enter the expression → verify intercepts, roots, maxima"
                             ],
-                            "intuition": "Desmos는 두 번째 풀이자다."
+                            "intuition": "Desmos is your second solver."
                         },
                         {
-                            "title": "[권장 R&W 1] Rhetorical Synthesis · 노트 종합",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Recommended R&W 1] Rhetorical Synthesis",
+                            "problem": "Test frequency: ★★★☆☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 불릿 노트로 목표 주장 뒷받침",
-                                "핵심 포인트: 목표 필터로 관련 정보만 선별"
+                                "Representative types: Supporting a target claim with bulleted notes",
+                                "Key point: Use the goal as a filter to select only relevant information"
                             ],
-                            "intuition": "목표가 기준이다. 나머지는 버린다."
+                            "intuition": "The goal is the standard. Discard the rest."
                         },
                         {
-                            "title": "[권장 R&W 2] 저자의 관점·어조",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Recommended R&W 2] Author's Perspective & Tone",
+                            "problem": "Test frequency: ★★★☆☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 중립·비판·옹호 태도 판별",
-                                "핵심 포인트: 평가 어휘 수집"
+                                "Representative types: Identifying neutral, critical, or supportive stances",
+                                "Key point: Collect the evaluative words"
                             ],
-                            "intuition": "어조는 단어에 숨어 있다."
+                            "intuition": "Tone hides in the words."
                         },
                         {
-                            "title": "[권장 R&W 3] 병렬 구조·간결성",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Recommended R&W 3] Parallel Structure & Concision",
+                            "problem": "Test frequency: ★★★☆☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: and·or 연결 요소 형태 통일, 중복 제거",
-                                "핵심 포인트: 리스트는 모양이 같아야 한다"
+                                "Representative types: Matching the form of and/or-linked items, removing redundancy",
+                                "Key point: Items in a list must share the same shape"
                             ],
-                            "intuition": "같은 뜻이면 짧은 것이 답이다."
+                            "intuition": "When the meaning is the same, the shorter one is the answer."
                         },
                         {
-                            "title": "[권장 R&W 4] 인과관계 추적",
-                            "problem": "출제 빈도: ★★★☆☆ | 중요도: 권장",
+                            "title": "[Recommended R&W 4] Tracing Cause & Effect",
+                            "problem": "Test frequency: ★★★☆☆ | Priority: Recommended",
                             "steps": [
-                                "대표 유형: 원인→결과 사슬, 상관과 인과 구분",
-                                "핵심 포인트: 메커니즘 확인"
+                                "Representative types: Cause→effect chains, correlation vs. causation",
+                                "Key point: Verify the mechanism"
                             ],
-                            "intuition": "함께 일어난다고 원인이 아니다."
+                            "intuition": "Happening together doesn't mean one caused the other."
                         },
                         {
-                            "title": "[심화 Math 1] 다단계 대수·치환",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Advanced Math 1] Multi-Step Algebra & Substitution",
+                            "problem": "Test frequency: ★★☆☆☆ | Priority: Advanced",
                             "steps": [
-                                "대표 유형: 복잡한 식의 패턴 치환, 무연근 검산",
-                                "핵심 포인트: 모듈 2 고난이도 변별 대비"
+                                "Representative types: Pattern substitution in complex expressions, checking for extraneous roots",
+                                "Key point: Prep for Module 2 hard-question differentiation"
                             ],
-                            "intuition": "어려운 문제는 쉬운 단계들의 연결이다."
+                            "intuition": "A hard problem is a chain of easy steps."
                         },
                         {
-                            "title": "[심화 Math 2] 원의 방정식·원주각",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Advanced Math 2] Circle Equations & Inscribed Angles",
+                            "problem": "Test frequency: ★★☆☆☆ | Priority: Advanced",
                             "steps": [
-                                "대표 유형: 완전제곱식 변형, 중심각과 원주각",
-                                "핵심 포인트: 패턴이 고정된 bonus 영역"
+                                "Representative types: Completing the square, central vs. inscribed angles",
+                                "Key point: A bonus area with fixed patterns"
                             ],
-                            "intuition": "빈도는 낮지만 나오면 공식 하나로 끝난다."
+                            "intuition": "Low frequency, but one formula finishes it when it appears."
                         },
                         {
-                            "title": "[심화 Math 3] 복소수·무리식",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Advanced Math 3] Complex Numbers & Radicals",
+                            "problem": "Test frequency: ★★☆☆☆ | Priority: Advanced",
                             "steps": [
-                                "대표 유형: i의 순환, 켤레복소수, 무리방정식",
-                                "핵심 포인트: 고득점 변별용, 기본기 위에서 bonus"
+                                "Representative types: Powers of i, complex conjugates, radical equations",
+                                "Key point: A high-score differentiator — bonus on top of fundamentals"
                             ],
-                            "intuition": "i^4=1 순환만 알면 되는 영역도 있다."
+                            "intuition": "Some topics need only the i^4=1 cycle."
                         },
                         {
-                            "title": "[심화 R&W 1] 고난도 학술 지문 논증",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Advanced R&W 1] Argumentation in Challenging Academic Passages",
+                            "problem": "Test frequency: ★★☆☆☆ | Priority: Advanced",
                             "steps": [
-                                "대표 유형: 추상 지문의 미묘한 논증 구조",
-                                "핵심 포인트: 논증 구조도 그리기"
+                                "Representative types: Subtle argument structures in abstract passages",
+                                "Key point: Draw an argument map"
                             ],
-                            "intuition": "어려운 지문은 구조도로 이긴다."
+                            "intuition": "Beat hard passages with a structure map."
                         },
                         {
-                            "title": "[심화 R&W 2] 미묘한 어휘 뉘앙스",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Advanced R&W 2] Subtle Word Nuances",
+                            "problem": "Test frequency: ★★☆☆☆ | Priority: Advanced",
                             "steps": [
-                                "대표 유형: 유사 어휘의 뉘앙스·강도 구분",
-                                "핵심 포인트: 긍정·중립·부정 스펙트럼"
+                                "Representative types: Distinguishing nuance and strength among similar words",
+                                "Key point: The positive–neutral–negative spectrum"
                             ],
-                            "intuition": "동의어는 온도가 다르다."
+                            "intuition": "Synonyms run at different temperatures."
                         },
                         {
-                            "title": "[심화 R&W 3] 이중 지문의 공통 전제",
-                            "problem": "출제 빈도: ★★☆☆☆ | 중요도: 심화",
+                            "title": "[Advanced R&W 3] Shared Premises in Paired Passages",
+                            "problem": "Test frequency: ★★☆☆☆ | Priority: Advanced",
                             "steps": [
-                                "대표 유형: 두 텍스트가 공유하는 전제와 입장 차이",
-                                "핵심 포인트: 공통점 분리 후 차이 기술"
+                                "Representative types: Shared premises and stance differences between two texts",
+                                "Key point: Separate the common ground, then describe the differences"
                             ],
-                            "intuition": "공통 전제를 찾으면 차이가 선명해진다."
+                            "intuition": "Find the shared premise, and the differences come into focus."
                         }
                     ],
                     "quiz": {
                         "levels": [
                             {
-                                "title": "자가체크 1: 전환 전후 핵심 변화",
+                                "title": "Self-Check 1: Key Changes Before and After the Transition",
                                 "difficulty": "easy",
-                                "question": "디지털 전환 전후 비교로 올바른 것은?",
+                                "question": "Which of the following is correct about the paper-to-digital transition?",
                                 "options": [
-                                    "시험 시간이 3시간에서 2시간 14분으로 단축됐다",
-                                    "지문이 25단어에서 750단어로 길어졌다",
-                                    "계산기 사용이 전면 금지됐다",
-                                    "Essay가 부활해 필수화됐다"
+                                    "Testing time was shortened from 3 hours to 2 hours 14 minutes",
+                                    "Passages got longer, from 25 words to 750 words",
+                                    "Calculator use was banned entirely",
+                                    "The Essay was revived and made mandatory"
                                 ],
-                                "answer": "시험 시간이 3시간에서 2시간 14분으로 단축됐다",
-                                "explanation": "디지털 SAT의 핵심 변화 다섯 가지는 다음과 같다. 첫째, 시험 시간이 3시간에서 2시간 14분으로 단축됐다. 둘째, 500~750단어의 긴 지문이 25~150단어 단문으로 바뀌고 문항당 1지문 독립형이 됐다. 셋째, 계산기 금지 섹션이 폐지되고 Math 전 문항 계산기 사용이 허용되며 Desmos가 내장됐다. 넷째, 고정형에서 2단계 적응형으로 바뀌었다. 다섯째, Essay는 2021년 6월에 폐지됐다. 따라서 지문이 길어졌다·계산기 금지·Essay 부활은 모두 틀린 설명이다. 형식 변화를 정확히 아는 것은 학습 전략의 출발점이다."
+                                "answer": "Testing time was shortened from 3 hours to 2 hours 14 minutes",
+                                "explanation": "The five key changes of the digital SAT are as follows. First, testing time was shortened from 3 hours to 2 hours 14 minutes. Second, 500–750-word passages became 25–150-word short passages, with one independent passage per question. Third, the no-calculator section was eliminated: calculators are allowed on all Math questions, and Desmos is built in. Fourth, the fixed format became two-stage adaptive testing. Fifth, the Essay was discontinued in June 2021. So 'longer passages,' 'calculator ban,' and 'Essay revival' are all incorrect. Knowing the format changes precisely is the starting point of your study strategy."
                             },
                             {
-                                "title": "자가체크 2: 우선순위 학습 순서",
+                                "title": "Self-Check 2: Priority Study Order",
                                 "difficulty": "medium",
-                                "question": "이 가이드의 학습 로드맵에 따르면 가장 먼저 완성해야 할 것은?",
+                                "question": "According to this guide's study roadmap, what should be completed first?",
                                 "options": [
-                                    "필수 등급 20개 개념의 무실수",
-                                    "심화 등급의 고난도 대수",
-                                    "paper 시절 기출 전량 풀이",
-                                    "어휘집 5000단어 암기"
+                                    "Zero mistakes on the 20 Essential-tier concepts",
+                                    "Advanced-tier challenging algebra",
+                                    "Working through all paper-era released questions",
+                                    "Memorizing a 5000-word vocabulary list"
                                 ],
-                                "answer": "필수 등급 20개 개념의 무실수",
-                                "explanation": "로드맵 1단계는 필수 Math 10개 + 필수 R&W 10개 개념의 무실수 완성이다. 필수 등급은 매 시험 출제되는 개념들이므로 여기서 점수를 잃으면 고득점이 구조적으로 불가능하다. 심화 등급은 모듈 2 고난이도 대비용으로 3단계에서 다룬다. paper 시절 기출은 개념별 훈련 재료로 유용하지만 전량 풀이가 목표는 아니다. 어휘집 암기보다 문맥 독해 훈련이 디지털 R&W에서 효율적이다. 학습 순서는 빈도와 중요도에 따라 정해야 하며, 필수를 먼저 탄탄히 한 뒤 권장·심화로 넓혀가는 것이 점수 대비 효율이 가장 높다. 필수 20개가 무실수 수준이 되면 모의고사로 실전 감각을 붙이는 4단계로 넘어가자."
+                                "answer": "Zero mistakes on the 20 Essential-tier concepts",
+                                "explanation": "Stage 1 of the roadmap is mastering the 10 Essential Math and 10 Essential R&W concepts with zero mistakes. Essential-tier concepts appear on every test, so losing points here makes a high score structurally impossible. Advanced-tier material is covered in Stage 3 as prep for Module 2's hard questions. Paper-era released questions are useful as per-concept training material, but working through all of them is not the goal. Context-based reading practice is more efficient than memorizing a vocabulary list for digital R&W. Study order should follow frequency and importance: solidify the Essentials first, then broaden into Recommended and Advanced — that delivers the most points per hour. Once the 20 Essentials are at zero-mistake level, move to Stage 4: building test-day feel with practice tests."
                             },
                             {
-                                "title": "자가체크 3: 적응형 실전 판단",
+                                "title": "Self-Check 3: Adaptive-Test Judgment",
                                 "difficulty": "hard",
-                                "question": "모듈 1 Math를 풀던 중 15번 문제(다단계 대수)가 3분째 안 풀린다. 남은 시간은 10분, 남은 문제는 7개다. 최선의 판단은?",
+                                "question": "While working through Math Module 1, you get stuck on question 15 (multi-step algebra) for 3 minutes. You have 10 minutes left and 7 questions remaining. What is the best call?",
                                 "options": [
-                                    "표시해두고 남은 7개를 먼저 정확히 푼 뒤 돌아온다",
-                                    "풀릴 때까지 15번에 매달린다",
-                                    "15번을 찍고 나머지도 빠르게 찍는다",
-                                    "15번을 건너뛰고 다시 돌아오지 않는다"
+                                    "Mark it, solve the remaining 7 accurately first, then come back",
+                                    "Stay on 15 until you crack it",
+                                    "Guess on 15 and guess quickly on the rest too",
+                                    "Skip 15 and never return to it"
                                 ],
-                                "answer": "표시해두고 남은 7개를 먼저 정확히 푼 뒤 돌아온다",
-                                "explanation": "적응형에서 모듈 1의 정확도가 점수 상한을 정하므로, 풀 수 있는 문제의 실수를 없애는 것이 최우선이다. 어려운 한 문제에 매달리다 쉬운 문제들을 시간 부족으로 틀리거나 찍으면 모듈 1 성적이 떨어져 하위 난이도 모듈로 배정될 수 있다. 정석은 표시(mark) 기능을 활용해 일단 넘어가고, 남은 문제들을 정확히 푼 뒤 남는 시간에 돌아오는 것이다. 건너뛰고 돌아오지 않는 것은 고난도 모듈 2에서 나올 수 있는 점수를 버리는 선택이다. 시간 배분의 원칙은 쉬운 문제의 정확도 확보가 먼저, 어려운 문제는 나중에이다. 표시(mark) 기능을 적극 활용해 일단 넘어갔다가 돌아오는 습관이 적응형 시험의 핵심 스킬이다."
+                                "answer": "Mark it, solve the remaining 7 accurately first, then come back",
+                                "explanation": "In adaptive testing, Module 1 accuracy sets your score ceiling, so eliminating careless errors on solvable questions is the top priority. If you cling to one hard question and end up rushing or guessing on easy ones, a low Module 1 score can route you to the lower-difficulty Module 2. The standard play is to use the mark feature, move on, solve the remaining questions accurately, and return with whatever time is left. Skipping and never returning throws away points you could have earned in the harder Module 2. The time-management principle: secure accuracy on easy questions first, hard questions later. The habit of marking, moving on, and returning is a core skill for adaptive tests."
                             }
                         ]
                     }
