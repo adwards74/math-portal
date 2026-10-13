@@ -126,6 +126,7 @@ window.TutorEngine = (function () {
             if (results.length === 0 || results[0].score < 10) {
                 for (const [chId, lessons] of Object.entries(window.CHAPTER_DATA || {})) {
                     for (const [lessonId, lesson] of Object.entries(lessons)) {
+                        if (!lesson.content) continue;
                         const plainContent = lesson.content.replace(/<[^>]*>/g, ' ').toLowerCase();
                         if (plainContent.includes(lowerQuery)) {
                             results.push({
