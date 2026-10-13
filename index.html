@@ -254,8 +254,13 @@
                     onkeypress="if(event.key==='Enter')window.submitTutorChat()">
                 <button class="glass" onclick="window.startVoiceInput()"
                     style="padding:10px 15px; border-radius:12px; color:var(--accent-magenta); cursor:pointer;"
-                    id="voice-btn">
+                    id="voice-btn" title="Voice input">
                     <i class="fas fa-microphone"></i>
+                </button>
+                <button class="glass" onclick="var r=window.toggleTutorVoice?window.toggleTutorVoice():'';if(r&&window.typeTerminalMessage)window.typeTerminalMessage(r);"
+                    style="padding:10px 15px; border-radius:12px; color:var(--accent-magenta); cursor:pointer;"
+                    id="tts-btn" title="Toggle voice responses">
+                    <i class="fas fa-volume-mute"></i>
                 </button>
                 <button class="glass" onclick="window.submitTutorChat()"
                     style="padding:10px 15px; border-radius:12px; color:var(--accent-cyan); cursor:pointer;">

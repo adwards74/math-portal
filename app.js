@@ -186,6 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
         recognition.onresult = (event) => {
             const transcript = event.results[0][0].transcript;
             input.value = transcript;
+            // Neo 6.0 Phase 2 (F7): mark this query as voice-originated so the
+            // tutor speaks its answer back once, even if TTS toggle is off
+            window._voiceQuery = true;
             window.submitTutorChat();
         };
 
