@@ -5,6 +5,11 @@
                 <p>A rational function has three possible end behaviors, decided by one comparison: <strong>degree of numerator ($n$) vs. degree of denominator ($d$)</strong>. If $n = d$, the graph levels off at a horizontal asymptote. If $n < d$, it crushes down to $y = 0$. But if $n = d + 1$ — the numerator is <em>exactly one degree taller</em> — the graph follows a <strong>slant (oblique) asymptote</strong>: a tilted line the curve approaches but never quite touches.</p>
             </div>
 
+            <div class="example-card glass" style="margin-top:15px; border-left:3px solid var(--accent-orange);">
+                <h4><i class="fas fa-link"></i> Factor First: Holes Are Not Asymptotes</h4>
+                <p>Before hunting asymptotes, <strong>factor everything</strong>: any canceled factor is a <strong>hole</strong> (removable discontinuity), not an asymptote. Only the surviving denominator factors create vertical asymptotes. See Lesson 1.3 (Rational Dynamics) for the full hole protocol.</p>
+            </div>
+
             <h3>1. The 3-Case Leading-Term Test</h3>
             <div class="math-block">
                 $$ \text{Let } f(x) = \frac{a_n x^n + \cdots}{b_d x^d + \cdots} $$
@@ -45,7 +50,19 @@
                 <p>Result: $g(x) = x + \frac{-3x+1}{x^2+1}$ → slant asymptote $\mathbf{y = x}$.</p>
             </div>
 
+            <div class="example-card glass" style="margin-top:15px;">
+                <h4><i class="fas fa-crosshairs"></i> Mini-Example: Where the Graph Crosses Its Slant Asymptote</h4>
+                <p>To find where the graph crosses its slant asymptote, solve $f(x) = mx + b$. Any solution with $x$ in the domain is a genuine crossing point.</p>
+                <p>Example: $f(x) = \frac{6x^2 + 7x + 6}{2x + 1}$ has slant asymptote $y = 3x + 2$. Set $\frac{6x^2 + 7x + 6}{2x + 1} = 3x + 2$ → $6x^2 + 7x + 6 = (3x+2)(2x+1) = 6x^2 + 7x + 2$ → $6 = 2$, impossible. This graph <strong>never</strong> crosses its slant asymptote — but others can. Always check algebraically.</p>
+            </div>
+
+            <div class="mastery-box glass" style="margin:20px 0; border:1px solid var(--accent-cyan); padding:15px;">
+                <h4 style="color:var(--accent-cyan);"><i class="fas fa-check-double"></i> Crossing Rule: Which Asymptotes Can Be Crossed?</h4>
+                <p><strong>Vertical asymptotes: NEVER crossed.</strong> They mark $x$-values outside the domain — the function does not exist there.</p>
+                <p><strong>Slant and horizontal asymptotes: CAN be crossed</strong> in the middle of the graph. They govern <em>end behavior only</em> ($x \to \pm\infty$), not the middle. Crossing is found by solving $f(x) = \text{asymptote}$.</p>
+            </div>
+
             <div class="tj-edge glass" style="margin-top:20px;">
                 <h4><i class="fas fa-skull-crossbones"></i> AP Trap: The Remainder Is Not Zero — It Just Vanishes</h4>
-                <p>Students sometimes write the asymptote as $y = \text{quotient} + \text{remainder}$. Wrong. The remainder term $\frac{r(x)}{g(x)}$ is a <em>fraction whose denominator outgrows its numerator</em> — it shrinks to 0 at the ends. The asymptote is the quotient <strong>alone</strong>. Also: a slant asymptote can be <em>crossed</em> in the middle of the graph — asymptotes only govern end behavior.</p>
+                <p>Students sometimes write the asymptote as $y = \text{quotient} + \text{remainder}$. Wrong. The remainder term $\frac{r(x)}{g(x)}$ is a <em>fraction whose denominator outgrows its numerator</em> — it shrinks to 0 at the ends. The asymptote is the quotient <strong>alone</strong>.</p>
             </div>

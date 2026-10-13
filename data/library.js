@@ -15,7 +15,7 @@ window.MATH_LIBRARY = {
                     type: "video",
                     title: "The Essence of Calculus",
                     author: "3Blue1Brown",
-                    id: "WUvTyaaN26w",
+                    id: "WUvTyaaNkzM",
                     views: "10M+",
                     relevance: 5,
                     description: "The gold standard for visual intuition. Covers the fundamental theorem and derivatives."
@@ -49,7 +49,7 @@ window.MATH_LIBRARY = {
                     type: "video",
                     title: "Calculus 1 Full Course (Lecture 1.1)",
                     author: "Professor Leonard",
-                    id: "WUvTyaaN26w",
+                    id: "fYyARMqiaag",
                     views: "3.5M+",
                     relevance: 5,
                     description: "Full-length lecture series. Unparalleled depth for AP Calculus BC prep."
@@ -64,9 +64,9 @@ window.MATH_LIBRARY = {
                 },
                 {
                     type: "video",
-                    title: "BlackPenRedPen Calculus Mix",
+                    title: "BlackPenRedPen: 100 Integrals",
                     author: "BlackPenRedPen",
-                    id: "A7-SnyX47hA",
+                    id: "dgm4-3-Iv3s",
                     views: "1.5M+",
                     relevance: 4,
                     description: "Fast-paced problem solving for integration and optimization challenges."
@@ -96,9 +96,9 @@ window.MATH_LIBRARY = {
                 },
                 {
                     type: "video",
-                    title: "Michael Penn: Olympiad Math",
+                    title: "Michael Penn: Number Theory",
                     author: "Michael Penn",
-                    id: "m4SExD7H2_s",
+                    id: "E_mU_fCmcxc",
                     views: "500K+",
                     relevance: 4,
                     description: "High-level proof-based mathematics and number theory explorations."

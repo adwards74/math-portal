@@ -38,6 +38,12 @@
                 <p><strong>Step 5 — sanity-check the assumption:</strong> is 60 mph inside the data's domain? If the data only covered 20–50 mph, say so — extrapolation needs a disclaimer.</p>
             </div>
 
+            <div class="mastery-box glass" style="margin:20px 0; border:1px solid var(--accent-cyan); padding:15px;">
+                <h4 style="color:var(--accent-cyan);"><i class="fas fa-check-double"></i> Residual Check: Is Your Model the Right Family?</h4>
+                <p>After fitting a model, check the <strong>residuals</strong> (actual − predicted). A good model leaves residuals <strong>scattered randomly around zero with no pattern</strong>. A <em>curved</em> residual pattern means you picked the wrong model family — try the next one up the decision tree.</p>
+                <p>Example: a linear fit whose residuals form a U-shape is begging for a quadratic. The residual plot is the model's report card.</p>
+            </div>
+
             <div class="example-card glass" style="margin-top:15px;">
                 <h4><i class="fas fa-tachometer-alt"></i> AROC with Units — The Sentence Frame</h4>
                 <p>Average rate of change on $[a, b]$ is $\frac{f(b) - f(a)}{b - a}$ — but the <strong>units</strong> carry the meaning: $\frac{\text{output unit}}{\text{input unit}}$.</p>

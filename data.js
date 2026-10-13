@@ -13,7 +13,6 @@ window.MATH_DATA = {
             units: [
                 {
                     title: "Ch 0: Pre-Algebra Foundations",
-                    videoUrl: "https://www.youtube.com/watch?v=WUvTyaaNkzM",
                     insight: "Essential concepts you must master before diving into Algebra 2.",
                     topics: ["Fractions", "PEMDAS", "Basic Equations", "Coordinate Plane"],
                     lectures: [
@@ -72,7 +71,6 @@ window.MATH_DATA = {
 
                 {
                     title: "Ch 1: Tools of Algebra",
-                    videoUrl: "https://www.youtube.com/watch?v=9vKqVkMQHKk",
                     insight: "Foundations: Mastery of axioms allows you to manipulate any expression without fear. Focus on the 'Why' behind the distributive rule.",
                     topics: ["1.1-1.3 Real Numbers", "1.4-1.6 Equations", "1.7 Absolute Value"],
                     lectures: [
@@ -152,7 +150,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 2: Functions & Graphs",
-                    videoUrl: "https://www.youtube.com/watch?v=S0_qX4VJhMQ",
                     topics: ["2.1 Relations", "2.3 Linear Functions", "2.5 Absolute Value Graphs", "2.7 Parent Functions"],
                     lectures: [
                         { name: "2.1: Relations & Functions", url: "lesson:algebra2:ch2-1" },
@@ -228,7 +225,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 3: Linear Systems",
-                    videoUrl: "https://www.youtube.com/watch?v=rfG8ce4nNh0",
                     topics: ["Substitution", "Elimination", "3-Variable Systems", "Linear Programming"],
                     lectures: [
                         { name: "3.1/3.2: Substitution & Elimination", url: "lesson:algebra2:ch3-1" },
@@ -300,7 +296,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 4: Matrices",
-                    videoUrl: "https://www.youtube.com/watch?v=3d6DsjIBzJ4",
                     insight: "Matrices: You are manipulating whole spatial dimensions here. Visualize matrices as vectors moving around.",
                     intuition: "Matrices are the data structures of the modern world. They bridge the gap between simple variables and high-dimensional AI architecture. Why they matter: a single matrix equation $AX = B$ can encode an entire system of a hundred equations — it's compression for linear relationships. Visualize a matrix as a machine that stretches, rotates, and squashes space; the determinant tells you exactly how much area survives the trip. This chapter connects forward everywhere: it scales up Ch 3's elimination to industrial size, powers computer graphics (every 3D game transforms coordinates with matrices), and underlies neural networks — an AI layer IS a matrix multiplication. Learn to think of matrices as verbs (actions on space), not just grids of numbers.",
                     topics: ["4.1 Data Organization", "4.2 Matrix Operations", "4.3 Multiplication", "4.4 Geometric Transformations", "4.5 Determinants", "4.6 Inverses", "4.7 Systems Solving"],
@@ -379,7 +374,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 5: Quadratic Equations",
-                    videoUrl: "https://www.youtube.com/watch?v=WUvTyaaNkzM",
                     intuition: "Curves govern the physical world. From gravity to growth, quadratics provide the parabolic logic for modeling motion and optimization. Why they matter: the quadratic is the simplest nonlinear function, which makes it the laboratory where you first meet the big ideas — the vertex as the optimum, the discriminant as a 'reality detector' for roots, and completing the square as the ancestor of every optimization algorithm. Visualize every quadratic as a dish (or a hill) with one special point, the vertex, where everything interesting happens: maximum height of a ball, minimum cost, maximum profit. This chapter connects forward to polynomials (Ch 6 — quadratics are degree-2 polynomials, and every technique here generalizes), to conic sections (Ch 10 — the parabola returns as a sliced cone), and to physics, where $d = \\frac{1}{2}gt^2$ rules falling objects.",
                     vizConfig: {
                         expressions: ["y = a(x - h)^2 + k", "a = 1", "h = 0", "k = 0"],
@@ -459,7 +453,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 6: Polynomials",
-                    videoUrl: "https://www.youtube.com/watch?v=9vKqVkMQHKk",
                     insight: "Polynomials: Every root $(x-r)$ is a factor. The Fundamental Theorem guarantees N roots for degree N. No exceptions!",
                     intuition: "Polynomials are the DNA of functional analysis. From the behavior of global temperatures to the trajectory of satellites, understanding roots and degree is essential for predicting complex systems. Why they matter: polynomials are the building blocks of approximation — calculators compute $\\sin x$ and $e^x$ using polynomial (Taylor) approximations, so this chapter is secretly about how machines do 'impossible' math. Visualize a polynomial by its roots and its ends: roots are where it touches the axis, multiplicity tells you whether it crosses or bounces, and the leading term alone decides where it goes at infinity. This connects forward to rational functions (Ch 9 — ratios of polynomials) and backward to quadratics (Ch 5), which are just the degree-2 case of everything here. The Factor Theorem is the chapter's master key: roots and factors are two names for the same thing.",
                     topics: ["6.1 Degree & End Behavior", "6.2 Remainder Theorem", "6.3 Synthetic Division", "6.4 Advanced Factoring", "6.6 Rational Root Theorem", "6.7 Fundamental Theorem"],
@@ -534,7 +527,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 7: Radical Functions & Rational Exponents",
-                    videoUrl: "https://www.youtube.com/watch?v=riXcZT2ICjA",
                     intuition: "Roots are the inverse of power, allowing us to reverse complex operations. From calculating the radius of a sphere to modeling the decay of particles, radicals provide the mathematical lens to look backwards into the core of a value. Why they matter: almost every 'undo' in applied math is a root — square roots undo areas ($A = \\pi r^2 \\to r = \\sqrt{A/\\pi}$), cube roots undo volumes, $n$th roots undo compound growth. The chapter's two big ideas: rational exponents turn root-taming into plain exponent arithmetic ($x^{m/n}$), and every non-reversible step (squaring!) can smuggle in extraneous solutions — so verification isn't optional. This connects forward to exponentials and logarithms (Ch 8), where roots become fractional powers and then logarithms, completing the 'undo' toolkit: power $\\leftrightarrow$ root $\\leftrightarrow$ logarithm.",
                     topics: ["7.1 n-th Roots", "7.2 Rational Exponents", "7.3 Binomial Radical Expressions", "7.4 Advanced Laws of Exponents", "7.5 Radical Equations", "7.6 Function Operations", "7.7 Inverse Relations & Functions"],
                     lectures: [
@@ -611,7 +603,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 8: Exponential & Logarithmic Functions",
-                    videoUrl: "https://www.youtube.com/watch?v=5yfh5cf4-0w",
                     intuition: "Logarithms are the language of scale and complexity. They allow us to map the infinite growth of data into manageable linear steps, powering everything from the Richter scale to the efficiency of Google's search algorithms. Why they matter: the world rarely grows linearly — populations, investments, viral posts, and algorithm runtimes are exponential, and logarithms are the only tool that makes exponential relationships readable (a straight line on a log scale). Visualize $e$ as nature's favorite growth constant: $e^x$ is the unique function that grows exactly as fast as its current size, which is why it appears in everything from radioactive decay to continuous interest. This chapter connects backward to roots (Ch 7 — logarithms complete the inverse family: $b^y = x \\iff y = \\log_b x$) and forward to sequences (Ch 11 — geometric sequences are exponentials in discrete clothing) and to all of data science.",
                     topics: ["8.1 Growth & Decay", "8.2 The Natural Base 'e'", "8.3 Logarithmic Functions", "8.4 Properties of Logarithms", "8.5 Exponential & Logarithmic Equations", "8.6 Natural Logarithms"],
                     lectures: [
@@ -686,7 +677,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 9: Rational Functions",
-                    videoUrl: "https://www.youtube.com/watch?v=S0_qX4VJhMQ",
                     intuition: "Rational functions are the ratios of rules, creating asymptotes and holes. They represent shared resources, inverse scaling, and the constraints of digital precision. Why they matter: whenever one quantity is divided by another that can approach zero — average cost per item, the lens formula, electrical resistance in parallel — rational functions appear, and their asymptotes mark the boundaries of what's physically possible. Visualize the graph as a landscape with fences: vertical asymptotes are walls the curve can never cross (division by zero), horizontal asymptotes are the horizon it approaches but never quite reaches, and holes are single missing planks you could fill with a finger. This chapter is where earlier skills fuse: factoring (Ch 6) finds the holes and asymptotes, and end-behavior analysis (Ch 5–6) predicts the horizon. Master this and you can 'read' a function's global behavior straight from its formula.",
                     topics: ["9.1 Inverse Variation", "9.2 Reciprocal Functions", "9.3 Rational Graphs", "9.4 Expressions", "9.5 Adding/Subtracting", "9.6 Solving Equations"],
                     lectures: [
@@ -760,7 +750,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 10: Conic Sections",
-                    videoUrl: "https://www.youtube.com/watch?v=rfG8ce4nNh0",
                     intuition: "Conic sections are the shapes formed by slicing a cone. They describe the orbits of planets (ellipses), the shape of satellite dishes (parabolas), and the navigation of GPS signals (hyperbolas). Why they matter: conics are where algebra BECOMES geometry — every equation in this chapter draws a shape, and every shape has an equation, which is the central promise of analytic geometry. The unifying idea: all four conics are one family, distinguished by eccentricity $e$ — how 'stretched' the slice is ($e < 1$ ellipse, $e = 1$ parabola, $e > 1$ hyperbola). Visualize slicing an actual cone with a plane: tilt the cut slightly and the circle becomes an ellipse, then a parabola, then a hyperbola — one motion, four shapes. This connects backward to quadratics (Ch 5 — the parabola returns, now with focus and directrix) and forward to physics and astronomy, where these curves are the actual paths of planets, comets, and spacecraft.",
                     topics: ["10.1 Parabolas", "10.2 Circles", "10.3 Ellipses", "10.4 Hyperbolas", "10.5 Identifying Conics", "10.6 Systems of Conics"],
                     lectures: [
@@ -833,7 +822,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 11: Sequences & Series",
-                    videoUrl: "https://www.youtube.com/watch?v=3d6DsjIBzJ4",
                     intuition: "Nature is built on patterns. From the Fibonacci sequence to compound interest, sequences define how discrete steps build into continuous structures. Why they matter: sequences are functions whose domain is the counting numbers — they're how math handles anything that happens step by step: savings growing month by month, bacteria doubling hourly, algorithms looping. The chapter's two archetypes: arithmetic sequences (add the same amount — linear growth in disguise) and geometric sequences (multiply by the same ratio — exponential growth in disguise). The showpiece is the infinite geometric series: infinitely many terms collapsing into one finite number ($\\frac{a}{1-r}$) — your first real taste of infinity behaving politely, and a preview of calculus. This connects backward to exponentials (Ch 8 — geometric sequences ARE exponential functions sampled at integers) and forward to series in calculus, where infinite sums become the engine of approximation.",
                     vizConfig: {
                         expressions: ["y = a_1 + (x-1)d", "a_1 = 1", "d = 1", "y = a_1(r)^{(x-1)}", "r = 1.2"],
@@ -911,7 +899,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 12: Probability & Statistics",
-                    videoUrl: "https://www.youtube.com/watch?v=kfF40MiS7zA",
                     intuition: "Probability is the logic of uncertainty. It is the engine of Artificial Intelligence, governing how machines learn from data (Bayesian logic) and how we make decisions under risk. Why it matters: most real decisions — medical tests, investments, weather forecasts — are bets under uncertainty, and probability is the mathematics of betting WELL. The chapter builds in layers: counting (permutations and combinations measure how big the sample space is), conditional probability (how new evidence updates beliefs — Bayes' rule), and the normal distribution with z-scores (how to compare measurements from completely different worlds on one scale). Visualize probability as a fluid: total 1, poured across outcomes; evidence just re-pours it. This connects to everything: statistics is applied probability, machine learning is probability at scale, and the z-score standardization here is the same trick data scientists use before training any model.",
                     vizConfig: {
                         expressions: ["y = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{1}{2}(\\frac{x-\\mu}{\\sigma})^2}", "\\mu = 0", "\\sigma = 1"],
@@ -989,7 +976,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 13: Periodic Functions & Trigonometry",
-                    videoUrl: "https://www.youtube.com/watch?v=riXcZT2ICjA",
                     intuition: "Periodic functions are the heartbeat of the universe. They model everything that repeats, from sound waves and light to the cycles of the economy and the rotation of engines. Why they matter: sines and cosines are the atoms of repetition — any repeating signal, no matter how complicated, can be decomposed into sine waves (Fourier's idea), which is how MP3s compress music and how noise-canceling headphones work. The chapter's core moves: radians (measuring angles by distance traveled around the unit circle — the 'natural' unit that makes calculus work), the unit circle (every trig value as coordinates), and transformations (amplitude, period, phase shift as dials you can turn). Visualize a point riding the unit circle: its height IS $\\sin\\theta$, its horizontal position IS $\\cos\\theta$ — the whole chapter is that one moving point. This connects forward to identities (Ch 14 — the algebra of these waves) and to physics, where every oscillation is a sine wave in disguise.",
                     vizConfig: {
                         expressions: ["y = a \\sin(b(x - h)) + k", "a = 1", "b = 1", "h = 0", "k = 0"],
@@ -1070,7 +1056,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Ch 14: Trigonometric Identities & Equations",
-                    videoUrl: "https://www.youtube.com/watch?v=riXcZT2ICjA",
                     intuition: "Trigonometric identities are the 'algebra of geometry'. They allow us to simplify complex wave interactions, solve navigation problems, and optimize signal processing algorithms. Why they matter: identities are the REWRITE RULES of trigonometry — they let you morph any trig expression into the form you need, which is the entire skill behind proving identities, solving trig equations, and simplifying the formulas physics and engineering throw at you. The master strategy: when stuck, convert everything to sines and cosines — it's the 'common denominator' of trig. The Pythagorean identities ($\\sin^2\\theta + \\cos^2\\theta = 1$ and its children) do 90% of the work; the sum, double-angle, and half-angle formulas handle the rest. This chapter caps the trig arc (Ch 13 → Ch 14): Ch 13 taught you what the waves ARE, Ch 14 teaches you to manipulate them fluently — the same fluency Fourier analysis and quantum mechanics demand.",
                     topics: ["14.1 Key Identities", "14.2 Proving Identities", "14.3 Sum & Double Angles", "14.4 Solving Equations", "14.5 Triangulation Laws"],
                     lectures: [
@@ -1314,7 +1299,6 @@ window.MATH_DATA = {
             units: [
                 {
                     title: "Unit 1: Polynomial & Rational (Change & Scale)",
-                    videoUrl: "https://www.youtube.com/watch?v=S0_qX4VJhMQ",
                     insight: "Numerical Analysis: AP Precalculus prioritizes tables over graphs. If the rate of change is decreasing while y is increasing, the system is Concave Down. This is the seed of Calculus acceleration.",
                     topics: ["Rate of Change & Concavity", "Asymptotic Dominance", "Rational Singularities", "3-Step Continuity Protocol"],
                     lectures: [
@@ -1371,7 +1355,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Unit 2: Exponential & Logarithmic (Mastery)",
-                    videoUrl: "https://www.youtube.com/watch?v=5yfh5cf4-0w",
                     insight: "Semi-logplots: Logs are magnitude compressors. If data looks like a curve in Cartesian but a line in Semi-log, it is exponential. Use residual plots to validate your claim.",
                     topics: ["Logistic Inflection Points", "Semi-Log Linearization", "Residual Plot Validation", "Inverse Composition"],
                     lectures: [
@@ -1511,7 +1494,6 @@ window.MATH_DATA = {
                 },
                 {
                     title: "Unit 3: Trigonometric & Polar (Mastery)",
-                    videoUrl: "https://www.youtube.com/watch?v=5yfh5cf4-0w",
                     insight: "Harmonic Dynamics: Trig is not about triangles; it's about circular motion. Polar coordinates allow us to model spirals and orbits where x-y grids fail.",
                     topics: ["Radian Logic", "Harmonic Modeling", "Inverse Trig Prisons", "Polar Rate of Change"],
                     lectures: [

@@ -44,6 +44,11 @@
                 <p>The endpoint rule still applies: intercepts are candidates for inclusion; asymptotes never are.</p>
             </div>
 
+            <div class="intuition-box glass" style="margin-top:15px;">
+                <h4><i class="fas fa-lightbulb"></i> Why Does the Sign Chart Work?</h4>
+                <p>A continuous expression can only change sign where it <strong>hits zero</strong> or <strong>breaks</strong> (becomes undefined). The critical values are the <em>only</em> places a sign flip can hide — so testing one point per interval tells the whole story. No hidden flips are possible anywhere else.</p>
+            </div>
+
             <div class="tj-edge glass" style="margin-top:20px;">
                 <h4><i class="fas fa-skull-crossbones"></i> AP Trap: Multiplying Away the Denominator</h4>
                 <p>The #1 fatal move: multiplying both sides by $(x+2)$ to "clear the fraction." If $(x+2)$ is negative, the inequality <em>flips</em> — and you don't know its sign until you've solved the problem. The sign chart exists precisely to avoid this trap. Never clear a denominator that contains $x$ in an inequality.</p>
