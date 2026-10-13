@@ -1319,9 +1319,14 @@ window.MATH_DATA = {
                     topics: ["Rate of Change & Concavity", "Asymptotic Dominance", "Rational Singularities", "3-Step Continuity Protocol"],
                     lectures: [
                         { name: "1.1: Change & Concavity (Numerical)", url: "lesson:precalc:precalc-u1-1" },
+                        { name: "1.1b: MP3 Justification Sentence Frames", url: "lesson:precalc:precalc-u1-1b" },
                         { name: "1.2: The Battle of Scale (Big-O)", url: "lesson:precalc:precalc-u1-2" },
+                        { name: "1.2b: Complex Zeros & Conjugate Pairs", url: "lesson:precalc:precalc-u1-2b" },
                         { name: "1.3: Rational Dynamics (Holes)", url: "lesson:precalc:precalc-u1-3" },
-                        { name: "1.4: AP Continuity Mastery", url: "lesson:precalc:precalc-u1-4" }
+                        { name: "1.3b: Slant Asymptotes & Polynomial Long Division", url: "lesson:precalc:precalc-u1-3b" },
+                        { name: "1.3c: Rational Inequalities & Sign Charts", url: "lesson:precalc:precalc-u1-3c" },
+                        { name: "1.4: AP Continuity Mastery", url: "lesson:precalc:precalc-u1-4" },
+                        { name: "1.5: Function Models (Selection, Assumptions & Regression)", url: "lesson:precalc:precalc-u1-5" }
                     ],
                     examples: [
                         {
