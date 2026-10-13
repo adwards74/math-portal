@@ -202,10 +202,9 @@ window.TutorEngine = (function () {
             // Find children that list this as a prerequisite
             for (const [key, prereqs] of Object.entries(PREREQUISITE_MAP)) {
                 if (prereqs.includes(normalized)) {
-                    children.push(key);
+                    matrix.children.push(key);
                 }
             }
-            matrix.children = children;
 
             return matrix;
         },
@@ -269,11 +268,11 @@ window.TutorEngine = (function () {
         "test": "Standardized tests aren't just about math; they're about 'Mental Endurance'. Practice with a timer and always audit your mistakes in the Review Hub!",
         "version": "I am Neo Tutor 5.3 Elite. My current upgrades include Neural Logic Map Visualization, Fuzzy Neural Search, Voice Input Integration, and Contextual Intelligence. I am running on the local deterministic logic kernel v5.3.",
         // 2028 Elite Expansion: Math
-        "partial": "      ' '               .                .",
-        "gradient": " (∇f)             . AI   (Gradient Descent)               .",
-        "basis": "                       .   ' '     .",
-        "modular": "    ' '     .                  .",
-        "pie": " -                   . '   '     .",
+        "partial": "Partial derivatives measure the rate of change of a multivariable function with respect to one variable, holding others constant. Look for ∂f/∂x notation!",
+        "gradient": "The gradient (∇f) points in the direction of steepest increase. In machine learning, gradient descent follows the negative gradient to minimize loss!",
+        "basis": "A basis is a set of linearly independent vectors that spans a vector space. Every vector can be written as a unique combination of basis vectors.",
+        "modular": "Modular arithmetic works with remainders: a ≡ b (mod n) means a and b have the same remainder when divided by n. Clocks are mod 12!",
+        "pie": "The digits of π are infinite and non-repeating. For calculations, 3.14159 is usually enough precision!",
         "differential": "The differential represents an infinitely small change in a quantity. It's the building block of Calculus!",
         "integral": "Integration is the 'accumulation' process. Area under a curve, volume of solids, or total change over time—it all comes down to the Integral.",
         "derivative": "The derivative measures instantaneous rate of change. It's the slope of the tangent line at any specific point.",
@@ -420,9 +419,9 @@ window.TutorEngine = (function () {
 
             // Layer 1: Intuition
             if (bestMatch.insight) {
-                response += `💡 **Intuition:** ${bestMatch.insight}\\n\\n`;
+                response += `💡 **Intuition:** ${bestMatch.insight}\n\n`;
             } else if (bestMatch.type === 'glossary') {
-                response += `📖 **Definition:** ${bestMatch.definition}\\n\\n`;
+                response += `📖 **Definition:** ${bestMatch.definition}\n\n`;
             } else if (HINT_DATABASE[lowerQuery]) {
                 response += `💡 **Intuition:** ${HINT_DATABASE[lowerQuery]}\n\n`;
             }
@@ -442,7 +441,7 @@ window.TutorEngine = (function () {
             // Neo 5.1: Prerequisite Intelligence
             const prereqs = PREREQUISITE_MAP[lowerQuery] || [];
             if (prereqs.length > 0) {
-                response += `\\n\\n🛡️ **Foundation Check:** To master this, ensure you are comfortable with *${prereqs.join(' and ')}*. Would you like a quick review?`;
+                response += `\n\n🛡️ **Foundation Check:** To master this, ensure you are comfortable with *${prereqs.join(' and ')}*. Would you like a quick review?`;
             }
 
             // Layer 3: Socratic Inquiry
@@ -641,7 +640,7 @@ window.TutorEngine = (function () {
             "How would you explain this to someone who only knows Algebra 1?"
         ];
 
-        let response = `${insight}\\n\\n**Neo's Inquiry:** ${inquiries[Math.floor(Math.random() * inquiries.length)]}`;
+        let response = `${insight}\n\n**Neo's Inquiry:** ${inquiries[Math.floor(Math.random() * inquiries.length)]}`;
 
         if (contextHint) {
             response += `\n\n💡 **Quick Tip:** ${contextHint}`;
