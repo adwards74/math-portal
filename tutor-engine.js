@@ -289,6 +289,16 @@ window.TutorEngine = (function () {
         "derivation": "A derivation is a sequence of logical steps showing how a result follows from axioms or previously proven theorems. It's the 'map' of the proof.",
         "first-principles": "Mastering First Principles means understanding the fundamental logic of a concept without relying on memorized formulas. It's the ultimate 'why'.",
         "syllogism": "A syllogism is a logical argument: If p implies q, and q implies r, then p implies r. It's the gravity of logic.",
+        // S5-S9 Supplements (Neo 6.0) — Ruri's school test error patterns
+        "slant": "Slant (oblique) asymptotes occur when the numerator's degree is exactly one more than the denominator's. Do polynomial long division — the quotient (ignore the remainder) is your slant asymptote!",
+        "oblique": "Oblique asymptote = slant asymptote. Divide numerator by denominator; the quotient gives the line, the remainder tells you how the curve approaches it.",
+        "long division": "Polynomial long division: divide leading terms, multiply back, subtract, bring down. Repeat until the remainder's degree is less than the divisor's.",
+        "rational inequality": "Rational inequalities: 1) Find critical points (zeros AND undefined points), 2) Plot on a sign chart, 3) Test each interval, 4) Undefined points are NEVER included. Use open/closed dots carefully!",
+        "sign chart": "Sign charts: mark critical values on a number line, pick a test value in each interval, record the sign. The solution is where the sign matches the inequality.",
+        "function model": "Function models: 1) Identify variables, 2) Choose type (linear/exponential/logarithmic/logistic), 3) Fit and check residuals, 4) State assumptions. R-squared = % of variation explained.",
+        "complex zeros": "Complex zeros come in conjugate pairs! If 2+3i is a zero, so is 2-3i. For polynomials with real coefficients, multiply (x - (a+bi))(x - (a-bi)) to get a real quadratic factor.",
+        "conjugate": "Conjugate pairs: (a+bi) and (a-bi). Their product is a^2 + b^2 (always real). Use this to clear complex factors fast.",
+        "justification": "MP3 Justification protocol: Claim (one precise sentence) + Evidence (specific values, no vagueness) + Reasoning (connect to the concept). Never write 'I think' — state it.",
         // Competition Mastery (Elite 5.5)
         "stars-and-bars": "Stars & Bars is used to count ways to distribute identical items into distinct groups. Formula: C(n+k-1, k-1).",
         "complementary-counting": "If it's too hard to count directly, count the 'bad' cases and subtract from the total. Total - Bad = Good.",
@@ -315,7 +325,17 @@ window.TutorEngine = (function () {
         "gradient": ["partial", "vector"],
         "partial": ["limit", "calculus"],
         "basis": ["vector", "matrix"],
-        "modular": ["axiom", "integer"]
+        "modular": ["axiom", "integer"],
+        // S5-S9 Supplements (Neo 6.0)
+        "slant": ["polynomial", "rational"],
+        "oblique": ["slant", "polynomial"],
+        "long division": ["polynomial", "factor"],
+        "rational inequality": ["rational", "quadratic"],
+        "sign chart": ["rational inequality", "factor"],
+        "function model": ["exponential", "logarithm"],
+        "complex zeros": ["complex", "polynomial"],
+        "conjugate": ["complex"],
+        "justification": ["proof-logic", "first-principles"]
     };
 
     // ========================================
@@ -403,6 +423,14 @@ window.TutorEngine = (function () {
 
         const lowerQuery = query.toLowerCase().trim();
         const context = KnowledgeMap.getBufferContext ? KnowledgeMap.getBufferContext() : "";
+
+        // Neo 6.0: Friday session bridge (check before general search)
+        const fridayResponse = handleFridayFlow(lowerQuery);
+        if (fridayResponse) return fridayResponse;
+
+        // Neo 6.0: Wrong Answer Journal (check before general search)
+        const journalResponse = handleWrongAnswerFlow(lowerQuery, query);
+        if (journalResponse) return journalResponse;
 
         // Neo 5.1 Contextual follow-up check
         let followUpQuery = lowerQuery;
@@ -727,6 +755,195 @@ window.TutorEngine = (function () {
     setInterval(updateStabilityUI, 100);
 
     // ========================================
+    // NEO 6.0: WRONG ANSWER JOURNAL
+    // ========================================
+    // Auto-records topics the student struggles with. Stored in localStorage
+    // (no server needed). "review" pulls a random unresolved item for quiz.
+    const WRONG_KEY = 'neo_wrong_answers';
+    const WRONG_MAX = 50;
+
+    function getWrongAnswers() {
+        try {
+            const saved = localStorage.getItem(WRONG_KEY);
+            return saved ? JSON.parse(saved) : [];
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function saveWrongAnswers(list) {
+        try {
+            localStorage.setItem(WRONG_KEY, JSON.stringify(list));
+        } catch (e) { /* storage unavailable — silent */ }
+    }
+
+    function recordWrongAnswer(topic, question) {
+        const list = getWrongAnswers();
+        // Avoid exact duplicates of unresolved items
+        const dup = list.some(w => !w.resolved &&
+            w.topic.toLowerCase() === (topic || 'general').toLowerCase());
+        if (!dup) {
+            list.push({
+                topic: topic || 'general',
+                question: question || '',
+                timestamp: Date.now(),
+                resolved: false
+            });
+            if (list.length > WRONG_MAX) list.splice(0, list.length - WRONG_MAX);
+            saveWrongAnswers(list);
+        }
+        return getUnresolvedCount();
+    }
+
+    function getUnresolvedCount() {
+        return getWrongAnswers().filter(w => !w.resolved).length;
+    }
+
+    function getUnresolvedList() {
+        return getWrongAnswers().filter(w => !w.resolved);
+    }
+
+    function markWrongResolved(topic) {
+        const list = getWrongAnswers();
+        const lower = (topic || '').toLowerCase().trim();
+        let count = 0;
+        list.forEach(w => {
+            if (!w.resolved && (lower === '' ||
+                w.topic.toLowerCase().includes(lower) ||
+                lower.includes(w.topic.toLowerCase()))) {
+                w.resolved = true;
+                count++;
+            }
+        });
+        saveWrongAnswers(list);
+        return count;
+    }
+
+    function pickReviewItem() {
+        const unresolved = getUnresolvedList();
+        if (unresolved.length === 0) return null;
+        return unresolved[Math.floor(Math.random() * unresolved.length)];
+    }
+
+    // Neo 6.0 trigger phrases (English only — Ruri)
+    const WRONG_TRIGGERS = [
+        "i don't understand", "i dont understand", "don't get it",
+        "dont get it", "i'm confused", "im confused", "i got it wrong",
+        "this is wrong", "i made a mistake", "still confused"
+    ];
+    const REVIEW_TRIGGERS = ["review", "quiz me", "test me", "practice"];
+    const RESOLVED_TRIGGERS = ["got it now", "understand now", "i get it now", "resolved", "makes sense now"];
+    const FRIDAY_PREP_TRIGGERS = ["prepare friday", "friday prep", "prepare for friday", "friday preview"];
+    const FRIDAY_REVIEW_TRIGGERS = ["review friday", "friday review", "friday recap"];
+
+    function stripTriggerWords(query, triggers) {
+        let cleaned = query.toLowerCase();
+        triggers.forEach(t => { cleaned = cleaned.split(t).join(' '); });
+        return cleaned.replace(/\s+/g, ' ').trim();
+    }
+
+    function handleWrongAnswerFlow(lowerQuery, originalQuery) {
+        // Returns a response string if a journal trigger matched, else null
+        if (WRONG_TRIGGERS.some(t => lowerQuery.includes(t))) {
+            const topicGuess = stripTriggerWords(lowerQuery, WRONG_TRIGGERS) ||
+                (KnowledgeMap.lastQueryTopic || 'general');
+            const count = recordWrongAnswer(topicGuess, originalQuery);
+            // Still give a helpful answer on the topic itself
+            const topicMatches = KnowledgeMap.search ? KnowledgeMap.search(topicGuess) : [];
+            let help = "";
+            if (topicMatches.length > 0 && HINT_DATABASE[topicGuess]) {
+                help = `\n\n💡 **Quick help on "${topicGuess}":** ${HINT_DATABASE[topicGuess]}`;
+            } else if (topicMatches.length > 0) {
+                const best = topicMatches[0];
+                help = `\n\n💡 **Quick help:** ${best.insight || best.definition || best.title || ''}`;
+            }
+            if (KnowledgeMap.addToBuffer) KnowledgeMap.addToBuffer(lowerQuery, 'wrong-journal');
+            return `📝 **Saved to your Wrong Answer Journal** ("${topicGuess}"). ` +
+                `You have ${count} unresolved item${count === 1 ? '' : 's'}. ` +
+                `Type "review" anytime to quiz yourself on them.${help}`;
+        }
+        if (REVIEW_TRIGGERS.some(t => lowerQuery === t || lowerQuery.startsWith(t + ' '))) {
+            const item = pickReviewItem();
+            if (!item) {
+                return "🎉 **Wrong Answer Journal is clear!** No unresolved items. " +
+                    "When something confuses you, tell me and I'll save it here for review.";
+            }
+            const hint = HINT_DATABASE[item.topic.toLowerCase()] || '';
+            return `📝 **Review Quiz** (${getUnresolvedCount()} unresolved):\n\n` +
+                `**Topic:** ${item.topic}\n` +
+                `**You asked:** "${item.question}"\n\n` +
+                (hint ? `💡 **Hint:** ${hint}\n\n` : '') +
+                `Explain this concept back to me in your own words. ` +
+                `When you've got it, say "got it now" and I'll mark it resolved.`;
+        }
+        if (RESOLVED_TRIGGERS.some(t => lowerQuery.includes(t))) {
+            const topicGuess = stripTriggerWords(lowerQuery, RESOLVED_TRIGGERS);
+            const n = markWrongResolved(topicGuess);
+            if (n > 0) {
+                return `✅ **Marked ${n} item${n === 1 ? '' : 's'} resolved!** ` +
+                    `${getUnresolvedCount()} still in your journal. Keep going!`;
+            }
+            return "✅ Noted! If you were working through a journal item, it's now marked resolved.";
+        }
+        return null;
+    }
+
+    // ========================================
+    // NEO 6.0: ZOOM SESSION BRIDGE
+    // Friday tutoring (starts 2026-10-16): pre-session prep + post-session review
+    // ========================================
+    const FRIDAY_CORE_TOPICS = [
+        "slant asymptotes",
+        "rational inequalities",
+        "function models",
+        "complex zeros",
+        "justification"
+    ];
+
+    function handleFridayFlow(lowerQuery) {
+        if (FRIDAY_PREP_TRIGGERS.some(t => lowerQuery.includes(t))) {
+            // Prep: 3 core concepts — prefer weak topics, fall back to S5-S9 core
+            const weak = getWeakTopics().slice(0, 3).map(w => w.topic);
+            const topics = weak.length >= 3 ? weak :
+                [...weak, ...FRIDAY_CORE_TOPICS.filter(t => !weak.includes(t))].slice(0, 3);
+            let out = "🎯 **Friday Session Prep** — 3 key concepts to review before your Zoom:\n\n";
+            topics.forEach((t, i) => {
+                const hint = HINT_DATABASE[t.toLowerCase()] || '';
+                const matrix = KnowledgeMap.getConceptMatrix ?
+                    KnowledgeMap.getConceptMatrix(t) : { parents: [] };
+                out += `**${i + 1}. ${t}**\n`;
+                if (hint) out += `   ${hint}\n`;
+                if (matrix.parents && matrix.parents.length > 0) {
+                    out += `   🛡️ Prereqs: ${matrix.parents.join(', ')}\n`;
+                }
+                out += "\n";
+            });
+            out += "Skim these, note what confuses you, and bring questions to your tutor!";
+            if (KnowledgeMap.addToBuffer) KnowledgeMap.addToBuffer(lowerQuery, 'friday-prep');
+            return out;
+        }
+        if (FRIDAY_REVIEW_TRIGGERS.some(t => lowerQuery.includes(t))) {
+            const unresolved = getUnresolvedList();
+            let out = "🔄 **Friday Session Review**\n\n";
+            if (unresolved.length > 0) {
+                out += `📝 **Wrong Answer Journal:** ${unresolved.length} unresolved\n`;
+                unresolved.slice(0, 5).forEach(w => { out += `   • ${w.topic}\n`; });
+                out += "\nType \"review\" to quiz yourself on one.\n\n";
+            } else {
+                out += "📝 **Wrong Answer Journal:** all clear! Nice work.\n\n";
+            }
+            const weak = getWeakTopics().slice(0, 3);
+            if (weak.length > 0) {
+                out += "📊 **Weakest topics this week:**\n";
+                weak.forEach(w => { out += `   • ${w.topic} (${w.accuracy}% accuracy)\n`; });
+            }
+            if (KnowledgeMap.addToBuffer) KnowledgeMap.addToBuffer(lowerQuery, 'friday-review');
+            return out;
+        }
+        return null;
+    }
+
+    // ========================================
     // EXPOSE PUBLIC API
     // ========================================
     window.getSocraticAdvice = getSocraticAdvice;
@@ -742,6 +959,12 @@ window.TutorEngine = (function () {
     window.buildNeuralMap = () => KnowledgeMap.build();
     window.summarizeContent = (key) => KnowledgeMap.summarize(key);
     window.getConceptMatrix = (topic) => KnowledgeMap.getConceptMatrix(topic);
+
+    // Neo 6.0: Wrong Answer Journal + Friday Bridge
+    window.getWrongAnswers = getWrongAnswers;
+    window.getUnresolvedCount = getUnresolvedCount;
+    window.markWrongResolved = markWrongResolved;
+    window.pickReviewItem = pickReviewItem;
 
     // Neo 5.4: Pattern Analysis & Logic Maps
     window.analyzePattern = (userInput) => {
@@ -791,6 +1014,11 @@ window.TutorEngine = (function () {
         buildNeuralMap: () => KnowledgeMap.build(),
         summarizeContent: (key) => KnowledgeMap.summarize(key),
         getConceptMatrix: (topic) => KnowledgeMap.getConceptMatrix(topic),
-        fuzzyMatch: (s1, s2) => KnowledgeMap.getLevenshtein(s1, s2)
+        fuzzyMatch: (s1, s2) => KnowledgeMap.getLevenshtein(s1, s2),
+        // Neo 6.0
+        getWrongAnswers,
+        getUnresolvedCount,
+        markWrongResolved,
+        pickReviewItem
     };
 })();
