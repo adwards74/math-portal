@@ -57,7 +57,19 @@ window.CHAPTER_DATA["calc"] = {
                     <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-1-introduction-to-derivatives/" target="_blank" class="resource-link">MIT 18.01SC: Session 1 - The Big Picture</a>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u1-2": {
         title: "1.2 Formal $\\epsilon-\\delta$ Definition",
@@ -94,7 +106,19 @@ window.CHAPTER_DATA["calc"] = {
                     <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-8-continuity-and-the-intermediate-value-theorem/" target="_blank" class="resource-link">MIT 18.01SC: Session 8 - Rigorous Limits</a>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u1-3": {
         title: "1.3 Limit Laws & Manipulations",
@@ -113,7 +137,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>For $\\lim_{x \\to 0} \\frac{\\sqrt{x+4}-2}{x}$, multiply by $\\frac{\\sqrt{x+4}+2}{\\sqrt{x+4}+2}$. This transforms the radical problem into a simple polynomial cancellation.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u1-4": {
         title: "1.4 Infinite Limits & Asymptotes",
@@ -127,7 +163,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>In Computer Science, we care about $\\lim_{x \\to \\infty} \\frac{f(x)}{g(x)}$. If $g(x)$ grows faster, the limit is 0. This is the exact logic behind <strong>Asymptotic Analysis</strong> of algorithms!</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u1-5": {
         title: "1.5 Continuity & IVT Logic",
@@ -160,7 +208,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p style="font-size:0.8rem;">The "unbroken path" must cross the horizontal gate at least once.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
 
     "calc-u2-1": {
@@ -189,7 +249,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>If $s(t)$ is your position, $s'(t)$ is precisely what your speedometer shows at that exact nanosecond. It is the "Best Linear Approximation" of the motion.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u2-2": {
         title: "2.2 Differentiability & Smoothness",
@@ -225,7 +297,19 @@ window.CHAPTER_DATA["calc"] = {
                     <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-2-definition-of-the-derivative/" target="_blank" class="resource-link">MIT 18.01SC: Session 2 - Differentiability</a>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u2-3": {
         title: "2.3 Basic Rules & Power Law",
@@ -238,7 +322,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p><strong>Elite Insight:</strong> This rule works for negative and fractional exponents too. $\\frac{d}{dx}[\\frac{1}{x}] = -x^{-2}$ and $\\frac{d}{dx}[\\sqrt{x}] = \\frac{1}{2\\sqrt{x}}$. Master these patterns to save time during the AP exam.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u2-4": {
         title: "2.4 Product & Quotient Rules",
@@ -252,7 +348,19 @@ window.CHAPTER_DATA["calc"] = {
                     <li><strong>Quotient:</strong> $(f/g)' = \\frac{f'g - fg'}{g^2}$ ("Low d-High minus High d-Low, Square the Low")</li>
                 </ul>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u2-5": {
         title: "2.5 Trig Derivatives",
@@ -267,7 +375,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>In electronic music synth (FM Synthesis), we modulate the frequency of one wave with another. The math of how these waves "interference" is entirely governed by these trig derivative rules.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
 
     // UNIT 3: Implicit & Inverse
@@ -287,7 +407,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>In deep learning, "Backpropagation" is essentially the Chain Rule applied to millions of nested weights to minimize error. Calculus is the architect of modern AI.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u3-2": {
         title: "3.2 Implicit Differentiation",
@@ -301,7 +433,19 @@ window.CHAPTER_DATA["calc"] = {
                 </div>
                 <p>Example for a circle: $2x + 2y\\frac{dy}{dx} = 0 \\implies \\frac{dy}{dx} = -\\frac{x}{y}$.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u3-3": {
         title: "3.3 Derivatives of Inverses",
@@ -316,7 +460,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>If you know $f(2)=5$ and $f'(2)=3$, then $f^{-1}(5)=2$ and $(f^{-1})'(5)$ is immediately $1/3$. No complicated algebra needed!</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u3-4": {
         title: "3.4 Inverse Trig Masterclass",
@@ -333,7 +489,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p><strong>Integration Preview:</strong> Memorize these now! Half of the challenge in Unit 6 (Integration) is recognizing these patterns in reverse.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
 
     "calc-u4-1": {
@@ -366,7 +534,19 @@ window.CHAPTER_DATA["calc"] = {
                     <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/unit-2-applications-of-differentiation/part-b-optimization-related-rates-and-newtons-method/session-30-related-rates/" target="_blank" class="resource-link">MIT 18.01SC: Session 30</a>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u4-2": {
         title: "4.2 Linearization & Differentials",
@@ -381,7 +561,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>Engineers often use $\\sin(\\theta) \\approx \\theta$ for small angles. This isn't laziness; it's using the first term of a Taylor Series (Linearization) to simplify complex oscillation models.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u4-3": {
         title: "4.3 L'Hospital's Rule & Indeterminants",
@@ -395,7 +587,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p><strong>Warning:</strong> ALWAYS check for $0/0$ or $\\infty/\\infty$ before applying L'Hospital's. Using it on a defined ratio will lead to incorrect results!</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     // UNIT 5: Analytical Apps
     "calc-u5-1": {
@@ -410,7 +614,19 @@ window.CHAPTER_DATA["calc"] = {
                     <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/unit-2-applications-of-differentiation/" target="_blank" class="resource-link">MIT 18.01SC: Unit 2 Applications</a>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u5-2": {
         title: "5.2 Mean Value Theorem",
@@ -424,7 +640,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>If you cross two EZ-Pass toll booths 60 miles apart in 45 minutes, your average speed was 80mph. MVT mathematically proves you were speeding at some point, even if you never saw a cop!</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u5-3": {
         title: "5.3 Concavity & Second Deriv Test",
@@ -437,7 +665,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p><strong>Inflection Points:</strong> Where concavity CHANGES. This marks a fundamental shift in the <em>acceleration</em> of the data.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u5-4": {
         title: "5.4 Optimization Problems",
@@ -447,7 +687,19 @@ window.CHAPTER_DATA["calc"] = {
                 <h2>I. The Architect's Tool</h2>
                 <p>Optimization is modeling a constraint and finding the absolute peak of the objective function. It's used in everything from structural load balancing to pricing strategies in economics.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     // UNIT 6: Integration
     "calc-u6-1": {
@@ -478,7 +730,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>When you record sound, the computer "samples" air pressure at discrete intervals. Riemann Sums are the mathematical foundation of how we reconstruct the continuous "sound" from these digital slices.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u6-2": {
         title: "6.2 Definite Integrals & FTC",
@@ -503,7 +767,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p style="font-size:0.8rem;">This is the most common use of FTC on the AP exam.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u6-3": {
         title: "6.3 Integration by Substitution",
@@ -513,7 +789,19 @@ window.CHAPTER_DATA["calc"] = {
                 <h2>I. The $u$-Sub Protocol</h2>
                 <p>Look for a function ($u$) and its derivative ($du$) inside the integral. This simplifies the expression back to a basic power form.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u6-4": {
         title: "6.4 Integration by Parts (BC)",
@@ -526,7 +814,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p><strong>LIPET Rule:</strong> Choose $u$ based on priority: <strong>L</strong>og, <strong>I</strong>nverse Trig, <strong>P</strong>olynomial, <strong>E</strong>xponential, <strong>T</strong>rig.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u6-5": {
         title: "6.5 Partial Fractions (BC)",
@@ -536,7 +836,19 @@ window.CHAPTER_DATA["calc"] = {
                 <h2>I. Rational Refactoring</h2>
                 <p>Break up complex fractions like $\\frac{1}{x^2-1}$ into $\\frac{A}{x-1} + \\frac{B}{x+1}$. This makes "un-integrable" fractions easy for $\\ln$ rules.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     // UNIT 7: Diff Eqs
     "calc-u7-1": {
@@ -547,7 +859,19 @@ window.CHAPTER_DATA["calc"] = {
                 <h2>I. Directional Flows</h2>
                 <p>A slope field displays $dy/dx$ at every point on a grid. Any solution to the differential equation must "follow the current" of these lines.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u7-2": {
         title: "7.2 Euler's Method (BC)",
@@ -577,7 +901,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p style="font-size:0.8rem;">The magenta segments (Euler) "drift" from the true curve as steps increase.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u7-3": {
         title: "7.3 Separation of Variables",
@@ -587,7 +923,19 @@ window.CHAPTER_DATA["calc"] = {
                 <h2>I. Algebraic Independence</h2>
                 <p>Move all $y$'s to one side and $x$'s to the other. Integrate both sides separately to find the particular solution.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u7-4": {
         title: "7.4 Logistic Growth Models (BC)",
@@ -602,7 +950,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>Viral transmission models (SIR models) are complex extensions of this logistic equation, predicting when a pandemic will reach "Herd Immunity" based on limiting factors.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
 
     // UNIT 8: Applications of Integration (Mapped to integration/part-c)
@@ -615,7 +975,19 @@ window.CHAPTER_DATA["calc"] = {
                 <p>To find the area between two curves $f(x)$ and $g(x)$, we integrate the height of the vertical slices: $|f(x) - g(x)|$.</p>
                 \\[A = \\int_a^b (Top - Bottom) dx\\]
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u8-2": {
         title: "8.2 Volumes of Revolution",
@@ -630,7 +1002,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>Medical CT scans work by taking many 2D X-ray slices of your body and using integration algorithms to reconstruct a 3D model of your organs!</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u8-3": {
         title: "8.3 Known Cross-Sections",
@@ -644,7 +1028,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p><strong>Common Areas:</strong> Square ($s^2$), Semicircle ($\\frac{\\pi}{8}d^2$), Isosceles Right Triangle ($\\frac{1}{4}d^2$).</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u8-4": {
         title: "8.4 Arc Length & Surface Area (BC)",
@@ -657,7 +1053,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p><strong>Elite Trick:</strong> In BC, we often use the version for parametric curves: $\\int_a^b \\sqrt{(x')^2 + (y')^2} dt$. This is just the integral of the <em>speed</em> vector's magnitude!</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
 
     // UNIT 9: Parametric & Polar (Mapped to integration/part-c)
@@ -674,7 +1082,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>Typography and vector art (SVG) use parametric equations called B zier Curves. Adjusting the "control points" changes the $t$ parameter flow to create smooth, scalable fonts.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u9-2": {
         title: "9.2 Vectors in the Plane",
@@ -684,7 +1104,19 @@ window.CHAPTER_DATA["calc"] = {
                 <h2>I. Velocity & Acceleration Vectors</h2>
                 <p>In BC, motion is a vector $\\vec{r}(t) = \\langle x(t), y(t) \\rangle$. The <strong>Speed</strong> is the magnitude of the velocity vector $|\\vec{v}(t)| = \\sqrt{(x')^2 + (y')^2}$.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u9-3": {
         title: "9.3 Polar Coordinates & Graphs",
@@ -698,7 +1130,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>Radar screens are naturally Polar! They measure distance ($r$) and angle ($\\theta$) to detect aircraft. Your math class is teaching you how to read a radar screen.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u9-4": {
         title: "9.4 Area & Arc Length in Polar (BC)",
@@ -721,7 +1165,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p style="font-size:0.8rem; margin-top:5px;">Area is the "swept" region $\\int \\frac{1}{2}r^2 d\\theta$.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
 
     // UNIT 10: Series (Mapped to infinite-series)
@@ -733,7 +1189,19 @@ window.CHAPTER_DATA["calc"] = {
                 <h2>I. The Limit of a Sequence</h2>
                 <p>A sequence $\\\{a_n\\\}$ converges to $L$ if $\\lim_{n \\to \\infty} a_n = L$. In BC, we distinguish between a sequence (the numbers) and a series (the sum).</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u10-2": {
         title: "10.2 Convergence Tests Masterlist",
@@ -752,7 +1220,19 @@ window.CHAPTER_DATA["calc"] = {
                     <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/unit-5-exploring-the-infinite/part-b-taylor-series/session-94-infinite-series/" target="_blank" class="resource-link">MIT 18.01SC: Session 94</a>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u10-3": {
         title: "10.3 Power Series & Radius",
@@ -772,7 +1252,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>The Ratio Test <em>cannot</em> tell you what happens at the exact edges ($x=a \\pm R$). You MUST plug those $x$-values back into the original series and use basic convergence tests (harmonic, alternate harmonic, etc.).</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u10-4": {
         title: "10.4 Taylor & Maclaurin Series",
@@ -799,7 +1291,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p style="font-size:0.8rem; margin-top:10px;">Blue (Linear) $\\to$ Cyan (Quadratic) $\\to$ White (Actual Function). More terms = Better "Cling".</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u10-5": {
         title: "10.5 Lagrange Error Bound (BC)",
@@ -820,7 +1324,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p>When NASA calculates a trajectory, they don't use infinite series. They use Taylor polynomials and ensure the Lagrange Bound is below a critical threshold (e.g., $10^{-12}$) to guarantee safety.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-marathon-1": {
         title: "The Grand Synthesis",
@@ -833,7 +1349,19 @@ window.CHAPTER_DATA["calc"] = {
                     <p><i class="fas fa-crown"></i> <strong>Goal:</strong> Synthesize the discrete (Euler, Riemann) and the infinite (Taylor, Limits) into one coherent architectural vision.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-marathon-2": {
         title: "Theoretical Edge",
@@ -847,7 +1375,19 @@ window.CHAPTER_DATA["calc"] = {
                     <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/" target="_blank" class="resource-link">MIT OCW: 18.01SC Home</a>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     // ==========================================================
     // UNIT 11: BC EXAM ARCHIVES (2023-2025)
@@ -863,7 +1403,19 @@ window.CHAPTER_DATA["calc"] = {
             <h3>Simulation: The Convergence Boundary</h3>
             <p><strong>Problem:</strong> Find the interval of convergence for $\\sum \\frac{(x-2)^n}{n \\cdot 3^n}$.</p>
             <p><strong>Decoding Strategy:</strong> Ratio test gives $|x-2| < 3 \\to -1 < x < 5$. You MUST test $x=-1$ and $x=5$ separately. At $x=-1$, it's an alternating harmonic (Converges). At $x=5$, it's harmonic (Diverges). Interval: $[-1, 5)$.</p>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u11-2": {
         title: "11.2: 2024 Released Exam (Actual)",
@@ -879,7 +1431,19 @@ window.CHAPTER_DATA["calc"] = {
             
             <h3>Simulation: 2024 FRQ 6 (The Series Boss)</h3>
             <p><strong>Context:</strong> Using the Alternating Series Estimation Theorem to show the error in $P_3(1)$ is less than $1/1000$.</p>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "calc-u11-3": {
         title: "11.3: 2025 Elite Prediction",
@@ -892,7 +1456,19 @@ window.CHAPTER_DATA["calc"] = {
             <h3>Mock FRQ: Euler vs. Reality</h3>
             <p><strong>Problem:</strong> If $dy/dx = x+y$ and $y(0)=1$, use Euler's method with $\\Delta x = 0.5$ to estimate $y(1)$. Is it an over/under estimate?</p>
             <p><strong>The 'Elite' Answer:</strong> Calculate $y'' = 1 + dy/dx = 1 + x + y$. Since $x, y > 0$, $y'' > 0$ (Concave Up). Therefore, the Euler tangent line approximation is an <strong>Underestimate</strong>.</p>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     }
 };
 

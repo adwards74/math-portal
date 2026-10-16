@@ -49,7 +49,19 @@ window.CHAPTER_DATA["precalc"] = {
                 </table>
                 <p><strong>Analysis:</strong> As $x$ increases by 2, the changes in $f(x)$ are $5 \\to 3 \\to 2$. Since the rate of increase is dropping, the acceleration is negative $\\implies$ <strong>Concave Down</strong>.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u1-2": {
         title: "1.2: The Battle of Scale (Dominance Mastery)",
@@ -82,7 +94,19 @@ window.CHAPTER_DATA["precalc"] = {
                 <li><strong>Even Degree ($n$), Positive $a$:</strong> $\\lim_{x \\to \\pm\\infty} f(x) = \\infty$ (Touchdown arms)</li>
                 <li><strong>Odd Degree ($n$), Positive $a$:</strong> Same as $y=x$ (Dancing style)</li>
             </ul>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u1-3": {
         title: "1.3: Rational Dynamics (Discontinuity Mastery)",
@@ -112,7 +136,19 @@ window.CHAPTER_DATA["precalc"] = {
                 <h4><i class="fas fa-bolt"></i> AP Mastery Trap</h4>
                 <p>A function can have a Horizontal Asymptote at $y=L$, but it CAN still cross that line in the middle. <strong>A Horizontal Asymptote only dictates the "End Behavior", not the middle behavior.</strong></p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u1-4": {
         title: "1.4: AP Continuity Mastery",
@@ -163,7 +199,19 @@ window.CHAPTER_DATA["precalc"] = {
                 <h4><i class="fas fa-exclamation-triangle"></i> The Piecewise Trap</h4>
                 <p>On the AP exam, they will give you a piecewise function and ask for the value of '$k$' to make it continuous. <strong>Always set the Left limit equal to the Right limit and solve.</strong></p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
 
     // ==========================================================
@@ -193,7 +241,19 @@ window.CHAPTER_DATA["precalc"] = {
                 $$ \\log_b(m \\cdot n) = \\log_b(m) + \\log_b(n) $$
             </div>
             <p>This property allows us to "linearize" products. In AP Precalc, you must be able to use logs to solve for time ($t$) in exponential growth models.</p>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u2-2": {
         title: "2.2: Logistic Dynamics (Mastering the Inflection)",
@@ -218,7 +278,19 @@ window.CHAPTER_DATA["precalc"] = {
             <div class="logic-box" style="font-style:italic; background:rgba(0,0,0,0.3); padding:10px; border-radius:8px;">
                 "The rate of growth is increasing while $0 < y < L/2$ (concave up) and decreasing after $y > L/2$ (concave down)."
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u2-3": {
         title: "2.3: Semi-Log Analysis (Mastery)",
@@ -236,7 +308,19 @@ window.CHAPTER_DATA["precalc"] = {
             <li>Intercept ($1.2$) $= \\ln(a) \\implies a = e^{1.2}$</li>
         </ul>
     </div>
-`
+
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u2-4": {
         title: "2.4: Model Validation (Residual Mastery)",
@@ -261,7 +345,19 @@ window.CHAPTER_DATA["precalc"] = {
                 <h4 style="color:var(--accent-magenta);"><i class="fas fa-edit"></i> FRQ Justification</h4>
                 <p>"Since the residual plot shows a <strong>random scatter</strong> of points with no clear pattern, the linear model is an appropriate fit for the transformed data."</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
 
     // ==========================================================
@@ -294,7 +390,19 @@ window.CHAPTER_DATA["precalc"] = {
                     <li>$period$: $2\\pi/|b|$.</li>
                 </ul>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u3-2": {
         title: "3.2: Inverse Trig (Domain Mastery)",
@@ -313,7 +421,19 @@ window.CHAPTER_DATA["precalc"] = {
                 <h4><i class="fas fa-exclamation-triangle"></i> AP Mastery Trap</h4>
                 <p>The equation $\\sin(x) = 0.5$ has INFINITE solutions. However, $\\arcsin(0.5)$ has only ONE: $\\pi/6$. <strong>Never provide multiple answers for an inverse trig function.</strong></p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u3-3": {
         title: "3.3: Polar Dynamics (Mastery)",
@@ -340,7 +460,19 @@ window.CHAPTER_DATA["precalc"] = {
                 </svg>
                 <p style="font-size:0.8rem;">Polar Path: The distance $r$ is a function of rotation.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u3-4": {
         title: "3.4: Trig Identities & Harmonic Refactoring",
@@ -352,7 +484,19 @@ window.CHAPTER_DATA["precalc"] = {
             <div class="math-block">
                 $$ \\cos(A \\pm B) = \\cos A \\cos B \\mp \\sin A \\sin B $$
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
 
     // ==========================================================
@@ -380,7 +524,19 @@ window.CHAPTER_DATA["precalc"] = {
             <div class="logic-box" style="font-style:italic; background:rgba(0,0,0,0.3); padding:10px; border-radius:8px;">
                 "Equation for $x$ gives you the 'search' for time. Substituting into $y$ gives you the height at that exact moment."
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u4-2": {
         title: "4.2: Vector Mastery (Force & Direction)",
@@ -399,7 +555,19 @@ window.CHAPTER_DATA["precalc"] = {
                 <h4><i class="fas fa-bolt"></i> Physics Link</h4>
                 <p>Work is the dot product of Force and Displacement. If you push a wall but it doesn't move, the dot product (Work) is zero!</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u4-3": {
         title: "4.3: Matrix Mastery (Linear Warping)",
@@ -420,7 +588,19 @@ window.CHAPTER_DATA["precalc"] = {
 
             <h3>1. The Determinant Verdict</h3>
             <p>If $\\det(A) = 0$, the matrix squashes the entire space into a lower dimension (a line or a point). This means the transformation is <strong>not invertible</strong> (you can't "un-squash" it).</p>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u4-4": {
         title: "4.4: Conics in Parametric Form",
@@ -435,7 +615,19 @@ window.CHAPTER_DATA["precalc"] = {
                 <h4><i class="fas fa-satellite"></i> SpaceX Sync</h4>
                 <p>Orbital mechanics uses these parametric definitions to calculate precisely when a satellite will be over a certain coordinate. The angle $\\theta$ changes slowly or quickly depending on the altitude (Kepler's Laws).</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
 
     // ==========================================================
@@ -502,7 +694,19 @@ window.CHAPTER_DATA["precalc"] = {
                 <h4><i class="fas fa-bolt"></i> Calculus Preview</h4>
                 <p>The derivative is defined as a limit: $f'(x) = \\lim_{h \\to 0} \\frac{f(x+h)-f(x)}{h}$. Every single derivative you ever compute in Calculus is just this limit evaluation technique applied to a rate formula.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u5-2": {
         title: "5.2: Continuity Defined (Formal)",
@@ -578,7 +782,19 @@ window.CHAPTER_DATA["precalc"] = {
                     "The function $f$ is continuous at $x=c$ because: (1) $f(c)$ is defined as [value], (2) $\\lim_{x \\to c^-} f(x) = \\lim_{x \\to c^+} f(x) = $ [value], and (3) the limit equals the function value."
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u5-3": {
         title: "5.3: Instantaneous Rate of Change (The Big Bridge)",
@@ -654,7 +870,19 @@ window.CHAPTER_DATA["precalc"] = {
                 <h4><i class="fas fa-rocket"></i> The Big Bridge to Calculus</h4>
                 <p>Everything in Calculus AB/BC builds on this one idea. Derivatives, integrals, differential equations — they all start from this limit. <strong>If you master this concept, you have already learned the hardest part of Calculus.</strong></p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
 
     // ==========================================================
@@ -729,7 +957,19 @@ window.CHAPTER_DATA["precalc"] = {
                     <li><strong>Contradictions:</strong> If you write two conflicting answers, graders use the incorrect one.</li>
                 </ul>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u6-2": {
         title: "6.2: 2024 Official Exam (Actual)",
@@ -790,7 +1030,19 @@ window.CHAPTER_DATA["precalc"] = {
                     <li><strong>No proofs</strong> — AP Precalc is about <em>application</em> and <em>justification</em>, not formal proof.</li>
                 </ul>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     },
     "precalc-u6-3": {
         title: "6.3: 2025 Elite Prediction (Hard Mode)",
@@ -861,7 +1113,19 @@ window.CHAPTER_DATA["precalc"] = {
                     <li><strong>Circle your final answer.</strong> Graders scan quickly — make it obvious.</li>
                 </ol>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Master the concept:</strong> Understand the underlying principle, not just the procedure.</li>
+                    <li><strong>Practice with purpose:</strong> Work through examples, checking each step.</li>
+                    <li><strong>Connect to prior knowledge:</strong> Link this to concepts you've already learned.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Review the examples above and try a similar problem on your own.</span>
+                </div>
+            </div>`
     }
 };
 

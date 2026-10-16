@@ -20,7 +20,17 @@ window.CHAPTER_DATA["ch_amc"] = {
                 <h4>AMC Challenge: Product of Divisors</h4>
                 <p>The product of all divisors of $n$ is simply $n^{\\tau(n)/2}$. Visualize this as pairing divisors: $d$ and $n/d$. Each pair multiplies to $n$.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Fundamental theorem:</strong> Every integer > 1 has unique prime factorization.</li><li><strong>Count divisors:</strong> If $n = p_1^{e_1}...p_k^{e_k}$, divisors $= (e_1+1)...(e_k+1)$.</li><li><strong>Find GCD/LCM:</strong> Use prime factorizations.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> How many divisors does 72 have?</span>
+                </div>
+            </div>`
     },
     "ch_amc-2": {
         title: "AMC: Stars and Bars Mastery",
@@ -41,7 +51,17 @@ window.CHAPTER_DATA["ch_amc"] = {
                 <h4>Constraint Variation</h4>
                 <p>If every child MUST receive at least one cookie ($x_i \\ge 1$): <br>Ways = $\\dbinom{n - 1}{k - 1}$</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Stars and bars:</strong> Distribute $n$ identical items into $k$ bins: $C(n+k-1, k-1)$.</li><li><strong>Non-negative:</strong> Standard formula. For positive, subtract 1 from each.</li><li><strong>Visualize:</strong> Stars = items, bars = dividers.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> How many ways to distribute 10 identical candies to 3 kids?</span>
+                </div>
+            </div>`
     },
     "ch_amc-3": {
         title: "AMC: Vieta's Theorem \\u0026 Polynomials",
@@ -63,7 +83,17 @@ window.CHAPTER_DATA["ch_amc"] = {
             </div>
             
             <p style="margin-top:15px; opacity:0.8;">Notice the sign pattern: $(-), (+), (-), \\dots$ It always alternates!</p>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Vieta's formulas:</strong> For $ax^2+bx+c=0$, sum $= -b/a$, product $= c/a$.</li><li><strong>Higher degree:</strong> Generalizes to $n$th degree polynomials.</li><li><strong>Use symmetry:</strong> Avoid solving, use relationships.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> If roots are 2 and 3, what is the quadratic?</span>
+                </div>
+            </div>`
     },
     "ch_amc-4": {
         title: "AMC: Diophantine Equations",
@@ -79,7 +109,17 @@ window.CHAPTER_DATA["ch_amc"] = {
                 <p>Used to solve $xy + ax + by + c = 0$.</p>
                 <p><strong>Protocol:</strong> $xy + ax + by + ab = (x+b)(y+a)$. <br>Just add $ab-c$ to both sides to force a factorization.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Diophantine:</strong> Integer solutions to equations.</li><li><strong>Linear:</strong> $ax + by = c$ has solutions iff $\\gcd(a,b)$ divides $c$.</li><li><strong>Modular arithmetic:</strong> Often the key to proving no solutions.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find integer solutions to $3x + 5y = 1$.</span>
+                </div>
+            </div>`
     }
 };
 

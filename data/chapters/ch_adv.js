@@ -66,7 +66,17 @@ window.CHAPTER_DATA["ch_adv"] = {
                     <p>Neural networks optimize thousands of weights ($w$) by calculating the <strong>partial derivative</strong> of the error function with respect to each weight. Deep learning is essentially a massive collection of synchronized partial derivatives.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Partial derivative:</strong> Differentiate with respect to one variable, treat others as constants.</li><li><strong>Notation:</strong> $\\partial f/\\partial x$. Curly $\\partial$, not $d$.</li><li><strong>Geometric meaning:</strong> Slope in the x-direction (or y-direction).</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find $\\partial/\\partial x$ of $f(x,y) = x^2y + 3xy^2$.</span>
+                </div>
+            </div>`
     },
     "ch_adv-2": {
         title: "1.2 Gradient Vectors & Directional Derivatives",
@@ -111,7 +121,17 @@ window.CHAPTER_DATA["ch_adv"] = {
                     <p>When is $D_{\\vec{u}} f$ maximized? When $\\cos \\theta = 1$, meaning $\\vec{u}$ aligns with the gradient direction.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Gradient:</strong> $\\nabla f = \\langle f_x, f_y \\rangle$. Points in direction of steepest ascent.</li><li><strong>Directional derivative:</strong> Rate of change in direction $\\mathbf{u}$.</li><li><strong>Maximum rate:</strong> Magnitude of gradient. Direction is normalized gradient.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find the gradient of $f(x,y) = x^2 + y^2$ at (1,1).</span>
+                </div>
+            </div>`
     },
     "ch_adv-3": {
         title: "1.3 Multiple Integrals: Calculating Volumes",
@@ -150,7 +170,17 @@ window.CHAPTER_DATA["ch_adv"] = {
                     <p style="font-size:0.9rem;"><i class="fas fa-redo"></i> **Elite Insight:** Sometimes $dy dx$ is 10x easier than $dx dy$. Always analyze the boundaries before rushing into calculation.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Double integral:</strong> $\\iint_R f(x,y) dA$. Volume under surface.</li><li><strong>Order matters:</strong> $dx\\,dy$ vs $dy\\,dx$. Choose easier order.</li><li><strong>Limits:</strong> Describe the region R carefully.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Set up $\\iint_R x\\,dA$ where R is $[0,1] \\times [0,2]$.</span>
+                </div>
+            </div>`
     },
     "ch_adv-4": {
         title: "2.1 The Skeleton of Space: Basis & Dimension",
@@ -185,7 +215,17 @@ window.CHAPTER_DATA["ch_adv"] = {
                     <p>Principal Component Analysis (PCA) finds the most important 'basis' in high-dimensional data, allowing us to compress it while stripping away noise.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Basis:</strong> Linearly independent set that spans the space.</li><li><strong>Dimension:</strong> Number of vectors in a basis.</li><li><strong>Coordinates:</strong> Unique representation in terms of basis vectors.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Is ${(1,0), (0,1)}$ a basis for $\\mathbb{R}^2$?</span>
+                </div>
+            </div>`
     },
     "ch_adv-5": {
         title: "2.2 Linear Transformations: Movement of Space",
@@ -233,7 +273,17 @@ window.CHAPTER_DATA["ch_adv"] = {
                     </details>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Linear transformation:</strong> $T(au + bv) = aT(u) + bT(v)$.</li><li><strong>Matrix representation:</strong> $T(x) = Ax$. Columns are images of basis vectors.</li><li><strong>Kernel and image:</strong> Null space and column space.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> What does $\\begin{bmatrix}0 & -1 \\\\ 1 & 0\\end{bmatrix}$ do geometrically?</span>
+                </div>
+            </div>`
     },
     "ch_adv-6": {
         title: "2.3: The Power of Eigenvalues",
@@ -261,6 +311,16 @@ window.CHAPTER_DATA["ch_adv"] = {
                 <li><strong>Structural Engineering</strong>: Analyzing resonance and stability.</li>
                 <li><strong>Google PageRank</strong>: Your search results are literally the eigenvector of the web's link matrix.</li>
             </ul>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Eigenvalue:</strong> $Av = \\lambda v$. Vector $v$ only scales, doesn't rotate.</li><li><strong>Characteristic equation:</strong> $\\det(A - \\lambda I) = 0$.</li><li><strong>Eigenvectors:</strong> Special directions preserved by the transformation.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find eigenvalues of $\\begin{bmatrix}2 & 0 \\\\ 0 & 3\\end{bmatrix}$.</span>
+                </div>
+            </div>`
     }
 };

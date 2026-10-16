@@ -18,7 +18,17 @@ window.CHAPTER_DATA["ch_limits"] = {
                     } // Returns 0 in limit space
                 </p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Zeno's paradox:</strong> Infinite steps, finite distance. How?</li><li><strong>Resolution:</strong> Infinite geometric series converges!</li><li><strong>Key insight:</strong> $1/2 + 1/4 + 1/8 + ... = 1$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Does the sum $1 + 1/2 + 1/4 + ...$ converge?</span>
+                </div>
+            </div>`
     },
     "ch_limits-2": {
         title: "Calc Intro: The Tangent Problem",
@@ -36,7 +46,17 @@ window.CHAPTER_DATA["ch_limits"] = {
                     <i class="fas fa-eye"></i> Visualizing the Tangent ($y=x^2$)
                 </button>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Tangent problem:</strong> Slope of curve at a point.</li><li><strong>Secant lines:</strong> Approximate, then take limit.</li><li><strong>Derivative:</strong> Limit of difference quotient.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> What is the slope of $y=x^2$ at $x=1$?</span>
+                </div>
+            </div>`
     },
     "ch_limits-3": {
         title: "Calc Intro: Visualizing Infinity",
@@ -51,7 +71,17 @@ window.CHAPTER_DATA["ch_limits"] = {
                 <h4 style="color: var(--accent-blue);"><i class="fas fa-infinity"></i> Elite Bridge: Algebra 2 to Calc</h4>
                 <p>In Algebra 2, you learned "End Behavior". In Calculus, we formalize this as limits at infinity. They are the same thing, just with a more precise "API".</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Infinity:</strong> Not a number, but a concept of unboundedness.</li><li><strong>Limits at infinity:</strong> End behavior of functions.</li><li><strong>Vertical asymptotes:</strong> Function goes to ±∞.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find $\\lim_{x\\to\\infty} \\frac{2x+1}{x-3}$.</span>
+                </div>
+            </div>`
     }
 };
 

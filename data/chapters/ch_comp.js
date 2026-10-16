@@ -68,7 +68,17 @@ window.CHAPTER_DATA["ch_comp"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Congruence:</strong> $a \\equiv b \\pmod{m}$ means $m$ divides $a-b$.</li><li><strong>Properties:</strong> Add, subtract, multiply congruences.</li><li><strong>Modular inverse:</strong> $a^{-1}$ exists iff $\\gcd(a,m) = 1$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find $7^{100} \\pmod{5}$.</span>
+                </div>
+            </div>`
     },
     "ch_comp-2": {
         title: "1.2 Exponent Reduction: Euler's Theorem",
@@ -87,7 +97,17 @@ window.CHAPTER_DATA["ch_comp"] = {
                     <p>Theorem: $a^{\\phi(n)} \\equiv 1 \\pmod n$ (where $\\gcd(a, n)=1$).</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Euler's theorem:</strong> $a^{\\phi(n)} \\equiv 1 \\pmod{n}$ if $\\gcd(a,n)=1$.</li><li><strong>Totient:</strong> $\\phi(n)$ counts numbers < n coprime to n.</li><li><strong>Reduce exponents:</strong> Use mod $\\phi(n)$ for large powers.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Compute $3^{100} \\pmod{7}$ using Euler.</span>
+                </div>
+            </div>`
     },
     "ch_comp-3": {
         title: "2.1 Inclusion-Exclusion Principle (PIE)",
@@ -116,7 +136,17 @@ window.CHAPTER_DATA["ch_comp"] = {
                     $$D_n = n! \\sum_{k=0}^n \\frac{(-1)^k}{k!}$$
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>PIE:</strong> $|A \\cup B| = |A| + |B| - |A \\cap B|$.</li><li><strong>Three sets:</strong> Add singles, subtract pairs, add triple.</li><li><strong>Use for:</strong> Counting with overlapping conditions.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> How many numbers ≤ 100 are divisible by 2 or 3?</span>
+                </div>
+            </div>`
     },
     "ch_comp-4": {
         title: "2.2 Generating Functions: Counting with Polynomials",
@@ -166,7 +196,17 @@ window.CHAPTER_DATA["ch_comp"] = {
                     <p>Generating functions are the mathematical twins of **Knapsack DP**. Modeling with polynomials provides the same logical structure as building a DP table.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Generating functions:</strong> Encode sequences as polynomials.</li><li><strong>Coefficient extraction:</strong> $[x^n]$ gives the $n$th term.</li><li><strong>Operations:</strong> Addition = combine, multiplication = convolution.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> What sequence does $1/(1-x)$ generate?</span>
+                </div>
+            </div>`
     },
     "ch_comp-5": {
         title: "3.1: The Partition Method",
@@ -177,7 +217,17 @@ window.CHAPTER_DATA["ch_comp"] = {
                 <h4><i class="fas fa-shapes"></i> The Separator Trick</h4>
                 <p>Instead of counting apple distributions, count the number of ways to arrange 10 stars (apples) and 2 bars (dividers). Result: $\\binom{n+k-1}{k-1} = \\binom{12}{2} = 66$.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Partitions:</strong> Ways to write $n$ as sum of positive integers.</li><li><strong>Order doesn't matter:</strong> $3+2$ same as $2+3$.</li><li><strong>Generating function:</strong> $\\prod_{k≥1} 1/(1-x^k)$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> How many partitions of 4?</span>
+                </div>
+            </div>`
     },
     "ch_comp-6": {
         title: "3.2: 3-Digit Numerical Strategies",
@@ -188,6 +238,16 @@ window.CHAPTER_DATA["ch_comp"] = {
                 <h4><i class="fas fa-bolt"></i> The (100+x) Frame</h4>
                 <p>To multiply $104 \\times 107$: $(100+4)(100+7) = 11128$.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Digit problems:</strong> Consider place value and constraints.</li><li><strong>Casework:</strong> Break into cases based on leading digit.</li><li><strong>Complementary counting:</strong> Total minus invalid.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> How many 3-digit numbers have digit sum 10?</span>
+                </div>
+            </div>`
     }
 };
