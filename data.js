@@ -1057,7 +1057,7 @@ window.MATH_DATA = {
                 {
                     title: "Ch 14: Trigonometric Identities & Equations",
                     intuition: "Trigonometric identities are the 'algebra of geometry'. They allow us to simplify complex wave interactions, solve navigation problems, and optimize signal processing algorithms. Why they matter: identities are the REWRITE RULES of trigonometry — they let you morph any trig expression into the form you need, which is the entire skill behind proving identities, solving trig equations, and simplifying the formulas physics and engineering throw at you. The master strategy: when stuck, convert everything to sines and cosines — it's the 'common denominator' of trig. The Pythagorean identities ($\\sin^2\\theta + \\cos^2\\theta = 1$ and its children) do 90% of the work; the sum, double-angle, and half-angle formulas handle the rest. This chapter caps the trig arc (Ch 13 → Ch 14): Ch 13 taught you what the waves ARE, Ch 14 teaches you to manipulate them fluently — the same fluency Fourier analysis and quantum mechanics demand.",
-                    topics: ["14.1 Key Identities", "14.2 Proving Identities", "14.3 Sum & Double Angles", "14.4 Solving Equations", "14.5 Triangulation Laws"],
+                    topics: ["14.1 Fundamental Identities", "14.2 The Art of Proof", "14.3 Sum & Double Angles", "14.4 Solving Trig Systems", "14.5 Triangulation Laws"],
                     lectures: [
                         { name: "14.1: Fundamental Identities", url: "lesson:algebra2:ch14-1" },
                         { name: "14.2: The Art of Proof", url: "lesson:algebra2:ch14-2" },
