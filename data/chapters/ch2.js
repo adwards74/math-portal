@@ -11,7 +11,7 @@ window.CHAPTER_DATA["ch2"] = {
                 </div>
 
                 <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                    <iframe src="https://www.youtube.com/embed/VEFdT971Tzs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+                    <iframe src="https://www.youtube.com/embed/DKbaCUs7v8c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                 </div>
 
                 <h2>I. The Formal Definition of a Function</h2>
