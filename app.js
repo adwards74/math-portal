@@ -811,8 +811,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                 `;
-                // Remove from main content to avoid duplication
-                cleanLessonHtml = lessonData.html.replace(videoIframe, '');
+                // Remove the entire video container (not just iframe) to avoid empty box
+                // The iframe is inside .visual-dynamic > div > iframe, remove the whole .visual-dynamic block
+                const containerRegex = /<div class="visual-dynamic glass"[^>]*>[\s\S]*?<iframe[^>]*src="[^"]*(?:youtube\.com|youtube-nocookie\.com|youtu\.be)\/(?:embed\/|)([a-zA-Z0-9_-]{11})[^"]*"[^>]*><\/iframe>[\s\S]*?<\/div>\s*<\/div>/i;
+                const containerMatch = containerRegex.exec(lessonData.html);
+                if (containerMatch) {
+                    cleanLessonHtml = lessonData.html.replace(containerMatch[0], '');
+                } else {
+                    // Fallback: just remove the iframe if container pattern doesn't match
+                    cleanLessonHtml = lessonData.html.replace(videoIframe, '');
+                }
             }
 
             const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
