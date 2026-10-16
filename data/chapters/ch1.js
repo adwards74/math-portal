@@ -40,7 +40,7 @@ window.CHAPTER_DATA["ch1"] = {
                 </div>
 
                 <div class="proof-box glass" style="border: 1px solid var(--accent-blue); padding: 25px;">
-                    <h4 style="color:var(--accent-blue); margin-bottom:15px;"><i class="fas fa-scroll"></i> Deep Dive: Proving $a \\cdot 0 = 0$</h4>
+                    <h4 style="color:var(--accent-blue); margin-bottom:15px;"><i class="fas fa-scroll"></i> Deep Dive: Proving $a \\\\cdot 0 = 0$</h4>
                     <p>Why is anything times zero always zero? It's not just a 'rule'; it's a consequence of the <strong>Distributive Property</strong>.</p>
                     <ol style="margin-top:10px; line-height:1.8;">
                         <li>$a \\cdot 0 = a(0 + 0)$ <span style="opacity:0.6;">(Additive Identity: $0+0=0$)</span></li>
@@ -64,11 +64,11 @@ window.CHAPTER_DATA["ch1"] = {
                 <ul style="line-height: 2; margin: 0; padding-left: 20px;">
                     <li><strong>Axioms are the agreed-upon rules</strong> — like a Constitution for numbers. Everything in math is either an axiom or proven from one.</li>
                     <li><strong>Four axioms × two operations:</strong> Commutative, Associative, Identity (0 for +, 1 for ×), Inverse — each applies to both addition and multiplication.</li>
-                    <li><strong>Distributive property is the bridge</strong> — the only axiom connecting + and ×. That's why $a \cdot 0 = 0$ is a provable theorem, not just a rule.</li>
+                    <li><strong>Distributive property is the bridge</strong> — the only axiom connecting + and ×. That's why $a \\cdot 0 = 0$ is a provable theorem, not just a rule.</li>
                 </ul>
                 <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
                     <strong style="color: var(--accent-yellow);">Quick Check:</strong>
-                    <span style="opacity: 0.9;"> Can you prove $a \cdot 0 = 0$ using only the axioms? (Hint: start with $0 = 0 + 0$)</span>
+                    <span style="opacity: 0.9;"> Can you prove $a \\cdot 0 = 0$ using only the axioms? (Hint: start with $0 = 0 + 0$)</span>
                 </div>
             </div>
         `,
