@@ -27,7 +27,17 @@ window.CHAPTER_DATA["ch8"] = {
                 <h4><i class="fas fa-biohazard"></i> $O(2^n)$ vs $O(n^2)$</h4>
                 <p>Exponential scale is deceptive. If you double a penny every day for 30 days, you end up with over $5 million. This "Explosion of Complexity" explains why certain encryption algorithms are unbreakable? he time required to crack them grows exponentially with the key length.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Exponential form:</strong> $y = ab^x$. $a$ is initial value, $b$ is growth factor.</li><li><strong>Growth vs decay:</strong> $b > 1$ grows, $0 < b < 1$ decays.</li><li><strong>Graph shape:</strong> Always positive, horizontal asymptote at $y=0$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Is $y = 3(0.5)^x$ growth or decay?</span>
+                </div>
+            </div>`
     },
     "ch8-2": {
         title: "8.2 The Natural Base 'e'",
@@ -42,7 +52,17 @@ window.CHAPTER_DATA["ch8"] = {
                     <p style="margin-top:10px;">The constant $e \\approx 2.718$ is the unique base such that the slope of the function $f(x) = e^x$ is exactly equal to its value at every point.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Logarithm definition:</strong> $\\log_b(x) = y$ means $b^y = x$.</li><li><strong>Common log:</strong> Base 10. $\\log(100) = 2$.</li><li><strong>Natural log:</strong> Base $e$. $\\ln(e^3) = 3$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Evaluate $\\log_3(81)$.</span>
+                </div>
+            </div>`
     },
     "ch8-3": {
         title: "8.3 Logs as Inverses",
@@ -113,7 +133,17 @@ window.CHAPTER_DATA["ch8"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Product rule:</strong> $\\log_b(xy) = \\log_b(x) + \\log_b(y)$.</li><li><strong>Quotient rule:</strong> $\\log_b(x/y) = \\log_b(x) - \\log_b(y)$.</li><li><strong>Power rule:</strong> $\\log_b(x^n) = n\\log_b(x)$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Expand $\\log_2(8x^3)$.</span>
+                </div>
+            </div>`
     },
     "ch8-4": {
         title: "8.4 Properties of Logs",
@@ -136,7 +166,17 @@ window.CHAPTER_DATA["ch8"] = {
                     <p>Multiplying two massive numbers is computationally expensive. Adding their logarithms is fast. This property allowed NASA scientists to calculate Moon landings using **Slide Rules** before computers existed!</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Solve exponentials:</strong> Take log of both sides.</li><li><strong>Solve logs:</strong> Exponentiate both sides.</li><li><strong>Check domain:</strong> Log arguments must be positive.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Solve $2^x = 32$.</span>
+                </div>
+            </div>`
     },
     "ch8-5": {
         title: "8.5 Solving Log Equations",
@@ -156,7 +196,17 @@ window.CHAPTER_DATA["ch8"] = {
                     <p>Always solve the inner argument inequality ($Argument > 0$) BEFORE solving the equation. This defines your **Valid State Space**.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Compound interest:</strong> $A = P(1 + r/n)^{nt}$.</li><li><strong>Continuous:</strong> $A = Pe^{rt}$.</li><li><strong>Half-life:</strong> $A = A_0(1/2)^{t/h}$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> How long to double at 5% compounded annually?</span>
+                </div>
+            </div>`
     },
     "ch8-6": {
         title: "8.6 Natural Logs & Change of Base",

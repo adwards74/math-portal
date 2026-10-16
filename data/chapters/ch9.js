@@ -23,7 +23,17 @@ window.CHAPTER_DATA["ch9"] = {
                 <h4><i class="fas fa-network-wired"></i> CS: Load Balancing & Throughput</h4>
                 <p>The time to process a 1GB file is inversely proportional to the **Bandwidth** of your network. If you double the speed ($x$), the time ($y$) is cut in half. Designing systems that scale inversely is the heart of cloud performance optimization.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>SOH CAH TOA:</strong> $\\sin = opp/hyp$, $\\cos = adj/hyp$, $\\tan = opp/adj$.</li><li><strong>Right triangles only:</strong> For non-right, use Law of Sines/Cosines.</li><li><strong>Special angles:</strong> Memorize 30-60-90 and 45-45-90 ratios.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find $\\sin(30°)$.</span>
+                </div>
+            </div>`
     },
     "ch9-2": {
         title: "9.2 Reciprocal Families",
@@ -41,7 +51,17 @@ window.CHAPTER_DATA["ch9"] = {
                     </ul>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Unit circle:</strong> Radius 1. $(\\cos θ, \\sin θ)$ is the point.</li><li><strong>Radians:</strong> $π$ radians = 180°. Convert by multiplying.</li><li><strong>Reference angles:</strong> Find the acute angle to the x-axis.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Convert 90° to radians.</span>
+                </div>
+            </div>`
     },
     "ch9-3": {
         title: "9.3 Asymptote Analysis",
@@ -61,7 +81,17 @@ window.CHAPTER_DATA["ch9"] = {
                     </ul>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Sine wave:</strong> $y = A\\sin(Bx - C) + D$.</li><li><strong>Amplitude:</strong> $|A|$. Vertical stretch.</li><li><strong>Period:</strong> $2π/B$. Horizontal stretch.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find amplitude and period of $y = 3\\sin(2x)$.</span>
+                </div>
+            </div>`
     },
     "ch9-4": {
         title: "9.4 Rational Algebra",
@@ -103,7 +133,17 @@ window.CHAPTER_DATA["ch9"] = {
                     <p>In programming, a "Dangling Pointer" is like a hole in a function. The memory address (factor) exists in the code, but if the underlying data (denominator) is cleared while the reference (numerator) remains, the system crashes if you try to access that exact point. Functional "Sanitization" is the act of identifying these holes before they cause a crash.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Inverse trig:</strong> $\\sin^{-1}(x)$ gives the angle.</li><li><strong>Restricted domain:</strong> $[-π/2, π/2]$ for sine.</li><li><strong>Calculator mode:</strong> Check degrees vs radians!</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Evaluate $\\sin^{-1}(1/2)$.</span>
+                </div>
+            </div>`
     },
     "ch9-5": {
         title: "9.5 Complex Fractions",
@@ -118,7 +158,17 @@ window.CHAPTER_DATA["ch9"] = {
                     <p>In compiler design, simplifying nested expressions (like $1 / (1 + 1/x)$) uses a recursive algorithm similar to finding the LCD. Reducing depth is the key to faster execution.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Law of Sines:</strong> $a/\\sin A = b/\\sin B = c/\\sin C$.</li><li><strong>Use when:</strong> AAS, ASA, or SSA (ambiguous case).</li><li><strong>Ambiguous case:</strong> SSA can have 0, 1, or 2 solutions.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> When do you use Law of Sines vs Cosines?</span>
+                </div>
+            </div>`
     },
     "ch9-6": {
         title: "9.6 Solving Rational Systems",
@@ -176,7 +226,17 @@ window.CHAPTER_DATA["ch9"] = {
                     <li>Why is 'Clearing the Denominator' a potentially dangerous operation if not followed by verification?</li>
                 </ol>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Law of Cosines:</strong> $c^2 = a^2 + b^2 - 2ab\\cos C$.</li><li><strong>Use when:</strong> SAS or SSS.</li><li><strong>Find angles:</strong> Rearrange to solve for $\\cos C$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find the third side when two sides and included angle are known.</span>
+                </div>
+            </div>`
     }
 };
 
