@@ -45,7 +45,19 @@ window.CHAPTER_DATA["ch2"] = {
                 <h4><i class="fas fa-code"></i> Developer's Perspective: Determinism</h4>
                 <p>In Software Engineering, a <strong>Pure Function</strong> is a mathematical function: for the same input, it returns the same output without side effects. If a function depended on a global variable, it would be a <em>Relation</em>, not a <em>Function</em> in the mathematical sense.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Function = one output per input:</strong> Each $x$ maps to exactly one $y$. Use the vertical line test.</li>
+                    <li><strong>Domain and Range:</strong> Domain is all valid $x$ values. Range is all possible $y$ values.</li>
+                    <li><strong>Function notation:</strong> $f(x)$ means 'the output of $f$ at $x$', not $f$ times $x$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Is $x^2 + y^2 = 25$ a function? (Hint: vertical line test!)</span>
+                </div>
+            </div>`
     },
     "ch2-2": {
         title: "2.2 Direct Variation",
@@ -60,7 +72,19 @@ window.CHAPTER_DATA["ch2"] = {
                     <p>In the equation $y = kx$, if $x = 0$, then $y$ MUST be $0$. This means direct variation ALWAYS passes through the <strong>Origin $(0,0)$</strong>. If a line has a non-zero y-intercept, it is linear but NOT a direct variation.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Linear functions:</strong> $f(x) = mx + b$. $m$ is slope, $b$ is y-intercept.</li>
+                    <li><strong>Slope formula:</strong> $m = \\frac{y_2 - y_1}{x_2 - x_1}$. Rise over run.</li>
+                    <li><strong>Parallel vs perpendicular:</strong> Parallel have equal slopes. Perpendicular have slopes that multiply to $-1$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find the slope between $(2, 3)$ and $(5, 9)$.</span>
+                </div>
+            </div>`
     },
     "ch2-3": {
         title: "2.3 Linear Functions & Slope",
@@ -136,7 +160,19 @@ window.CHAPTER_DATA["ch2"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Quadratic vertex form:</strong> $y = a(x - h)^2 + k$. Vertex at $(h, k)$.</li>
+                    <li><strong>Parabola direction:</strong> If $a > 0$, opens up. If $a < 0$, opens down.</li>
+                    <li><strong>Axis of symmetry:</strong> $x = h$. The parabola mirrors across this line.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find the vertex of $y = 2(x - 3)^2 + 5$.</span>
+                </div>
+            </div>`
     },
     "ch2-4": {
         title: "2.4 Designing Linear Models",
@@ -152,7 +188,19 @@ window.CHAPTER_DATA["ch2"] = {
                     <p>Math: Finding the equation of the line passing through (1, 20) and (3, 45).</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Exponential growth:</strong> $y = ab^x$. $b > 1$ means growth, $0 < b < 1$ means decay.</li>
+                    <li><strong>Half-life and doubling:</strong> Real-world applications of exponential functions.</li>
+                    <li><strong>Logarithms undo exponentials:</strong> $\\log_b(x)$ asks 'what power of $b$ gives $x$?'</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Simplify $\\log_2(32)$. (Hint: $2^? = 32$)</span>
+                </div>
+            </div>`
     },
     "ch2-5": {
         title: "2.5 Absolute Value Functions",
@@ -182,7 +230,19 @@ window.CHAPTER_DATA["ch2"] = {
                     <p>Often used in shipping costs where the price jumps at specific weight thresholds. There is no 'smooth transition'? he output is discrete.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Composite functions:</strong> $(f \\circ g)(x) = f(g(x))$. Work from inside out.</li>
+                    <li><strong>Inverse functions:</strong> Undo each other. $f(f^{-1}(x)) = x$.</li>
+                    <li><strong>Horizontal line test:</strong> A function has an inverse only if it passes this test.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find the inverse of $f(x) = 2x + 3$.</span>
+                </div>
+            </div>`
     },
     "ch2-6": {
         title: "2.6 & 2.7 Families of Functions",
@@ -261,7 +321,19 @@ window.CHAPTER_DATA["ch2"] = {
                     <li>How does the point-slope form simplify the process of modeling real-world data?</li>
                 </ol>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Transformations:</strong> $f(x) + k$ shifts up/down. $f(x + h)$ shifts left/right.</li>
+                    <li><strong>Reflections:</strong> $-f(x)$ flips over x-axis. $f(-x)$ flips over y-axis.</li>
+                    <li><strong>Stretches:</strong> $af(x)$ stretches vertically. $f(bx)$ compresses horizontally.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Describe the transformation: $y = -2(x - 3)^2 + 5$.</span>
+                </div>
+            </div>`
     }
 };
 
