@@ -116,7 +116,19 @@ window.CHAPTER_DATA["ch6"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Polynomial:</strong> Sum of terms with non-negative integer exponents.</li>
+                    <li><strong>Degree:</strong> Highest exponent. Determines end behavior.</li>
+                    <li><strong>Standard form:</strong> Write in descending order of exponents.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> What is the degree of $3x^4 - 2x^2 + 5x - 1$?</span>
+                </div>
+            </div>`
     },
     "ch6-2": {
         title: "6.2 Polynomials & Linear Factors",
@@ -159,7 +171,19 @@ window.CHAPTER_DATA["ch6"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Add/subtract:</strong> Combine like terms (same variable and exponent).</li>
+                    <li><strong>Multiply:</strong> Distribute each term. Use FOIL for binomials.</li>
+                    <li><strong>Degree adds:</strong> When multiplying, add the exponents.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Multiply $(x + 3)(x - 2)$.</span>
+                </div>
+            </div>`
     },
     "ch6-3": {
         title: "6.3 Synthetic Division",
@@ -213,7 +237,19 @@ window.CHAPTER_DATA["ch6"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Factor by GCF:</strong> Pull out the greatest common factor first.</li>
+                    <li><strong>Difference of squares:</strong> $a^2 - b^2 = (a+b)(a-b)$.</li>
+                    <li><strong>Trinomials:</strong> Find factors of $ac$ that add to $b$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Factor $x^2 - 9$.</span>
+                </div>
+            </div>`
     },
     "ch6-4": {
         title: "6.4 Factoring Polynomials",
@@ -257,7 +293,19 @@ window.CHAPTER_DATA["ch6"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Long division:</strong> Divide polynomials like numbers.</li>
+                    <li><strong>Synthetic division:</strong> Shortcut for dividing by $(x - c)$.</li>
+                    <li><strong>Remainder theorem:</strong> $f(c)$ is the remainder when dividing by $(x-c)$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Divide $x^3 - 2x^2 + 3$ by $(x - 1)$.</span>
+                </div>
+            </div>`
     },
     "ch6-5": {
         title: "6.5 Theorems About Roots",
@@ -276,7 +324,19 @@ window.CHAPTER_DATA["ch6"] = {
                     <p>This symmetry arises because complex roots represent "missing" intersections with the real X-axis. They exist in pairs to maintain the real-valued nature of the coefficients.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Factor theorem:</strong> If $f(c) = 0$, then $(x-c)$ is a factor.</li>
+                    <li><strong>Rational root theorem:</strong> Possible roots are factors of $p/q$.</li>
+                    <li><strong>Find all zeros:</strong> Factor completely, set each to zero.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find all zeros of $x^3 - 3x^2 - 4x + 12$.</span>
+                </div>
+            </div>`
     },
     "ch6-6": {
         title: "6.6 Rational Root Theorem",
@@ -306,7 +366,19 @@ window.CHAPTER_DATA["ch6"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Graphing:</strong> Find zeros, y-intercept, end behavior.</li>
+                    <li><strong>Multiplicity:</strong> Even = bounce, odd = cross at x-intercept.</li>
+                    <li><strong>Turning points:</strong> At most degree-1 turning points.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> How many turning points can a degree-4 polynomial have?</span>
+                </div>
+            </div>`
     },
     "ch6-7": {
         title: "6.7 The Fundamental Theorem of Algebra",
@@ -391,7 +463,19 @@ window.CHAPTER_DATA["ch6"] = {
                     <li>Why does even multiplicity cause a 'touch and turn' behavior rather than a cross?</li>
                 </ol>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Inequalities:</strong> Find zeros, test intervals on number line.</li>
+                    <li><strong>Sign chart:</strong> Mark + and - for each interval.</li>
+                    <li><strong>Solution:</strong> Where the inequality is satisfied.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Solve $x^2 - 4 > 0$.</span>
+                </div>
+            </div>`
     }
 };
 

@@ -25,7 +25,19 @@ window.CHAPTER_DATA["ch7"] = {
                 <h4><i class="fas fa-exclamation-triangle"></i> Domain Guarding</h4>
                 <p>In programming, taking the square root of a negative variable without a <code>try-catch</code> or a conditional guard like <code>if (x < 0)</code> will result in a <code>NaN</code> error. Understanding indices is the key to writing robust math algorithms that don't crash.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Rational function:</strong> Ratio of two polynomials. $f(x) = p(x)/q(x)$.</li>
+                    <li><strong>Domain:</strong> All $x$ except where denominator = 0.</li>
+                    <li><strong>Simplify first:</strong> Cancel common factors, but note restrictions.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> What is the domain of $f(x) = \\frac{x+1}{x-2}$?</span>
+                </div>
+            </div>`
     },
     "ch7-2": {
         title: "7.2 Power of the Fractional",
@@ -45,7 +57,19 @@ window.CHAPTER_DATA["ch7"] = {
                     <p>In Calculus, finding the rate of change for $\\sqrt{x}$ is trivial IF you rewrite it as $x^{1/2}$. Mastering rational exponents is the secret to making high-level Calculus feel like simple Algebra.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Multiply/divide:</strong> Factor, cancel, then multiply.</li>
+                    <li><strong>Add/subtract:</strong> Find common denominator first.</li>
+                    <li><strong>Complex fractions:</strong> Multiply top and bottom by LCD.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Simplify $\\frac{x^2-4}{x+2}$.</span>
+                </div>
+            </div>`
     },
     "ch7-3": {
         title: "7.3 Binomial Radical Expressions",
@@ -61,7 +85,19 @@ window.CHAPTER_DATA["ch7"] = {
                     <p style="margin-top:10px;">By multiplying both numerator and denominator by the conjugate, the radical "squares itself out" of existence in the denominator.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Vertical asymptotes:</strong> Where denominator = 0 (after simplifying).</li>
+                    <li><strong>Holes:</strong> Where both numerator and denominator = 0.</li>
+                    <li><strong>Behavior:</strong> Function goes to ±∞ near vertical asymptotes.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find vertical asymptotes of $f(x) = \\frac{1}{x-3}$.</span>
+                </div>
+            </div>`
     },
     "ch7-4": {
         title: "7.4 Advanced Laws of Exponents",
@@ -75,7 +111,19 @@ window.CHAPTER_DATA["ch7"] = {
                     <p>In data compression (like G.711 for phone calls), we use <strong>Companding</strong> (Compressing-Expanding). Power laws $y = x^{\\gamma}$ are used to prioritize precision in small signals while allowing large range? ptimizing the bit-rate of the signal!</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Horizontal asymptotes:</strong> Compare degrees of numerator and denominator.</li>
+                    <li><strong>deg top < deg bottom:</strong> $y = 0$.</li>
+                    <li><strong>deg top = deg bottom:</strong> $y =$ ratio of leading coefficients.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find horizontal asymptote of $f(x) = \\frac{2x^2+1}{x^2-4}$.</span>
+                </div>
+            </div>`
     },
     "ch7-5": {
         title: "7.5 Solving Radical Equations",
@@ -151,7 +199,19 @@ window.CHAPTER_DATA["ch7"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Graphing steps:</strong> Find intercepts, asymptotes, holes.</li>
+                    <li><strong>Test intervals:</strong> Pick x-values to determine shape.</li>
+                    <li><strong>End behavior:</strong> Follow horizontal/slant asymptotes.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> How many vertical asymptotes can a rational function have?</span>
+                </div>
+            </div>`
     },
     "ch7-6": {
         title: "7.6 Function Operations",
@@ -166,7 +226,19 @@ window.CHAPTER_DATA["ch7"] = {
                     <p>Think of this as a data pipeline. If $g(x)$ is "encrypt data" and $f(x)$ is "send to server", then $f(g(x))$ is the complete secure transmission process. Breaking complex tasks into simple, composable functions is the hallmark of high-quality code.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Solve rational equations:</strong> Multiply by LCD to clear denominators.</li>
+                    <li><strong>Check for extraneous:</strong> Solutions that make denominator zero are invalid.</li>
+                    <li><strong>Always verify:</strong> Plug back into original equation.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Solve $\\frac{1}{x} + \\frac{1}{2} = \\frac{3}{4}$.</span>
+                </div>
+            </div>`
     },
     "ch7-7": {
         title: "7.7 Inverse Relations & Functions",
@@ -219,7 +291,19 @@ window.CHAPTER_DATA["ch7"] = {
                     <li>What is the physical meaning of the domain restriction when finding the inverse of $f(x) = x^2$?</li>
                 </ol>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Variation:</strong> Direct ($y=kx$), inverse ($y=k/x$), joint ($y=kxz$).</li>
+                    <li><strong>Find k first:</strong> Use given values to solve for the constant.</li>
+                    <li><strong>Then solve:</strong> Plug k back in to find the unknown.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> If $y$ varies inversely with $x$ and $y=6$ when $x=4$, find $y$ when $x=3$.</span>
+                </div>
+            </div>`
     }
 };
 
