@@ -6,7 +6,7 @@ window.CHAPTER_DATA["ch14"] = {
         content: `
             <!-- VIDEO CURATION: MASTER CLASS -->
             <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-orange); padding: 25px;">
-                <h5 style="color: var(--accent-orange); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Trig Identities Intuition</h5>
+                <h5 style="color: var(--accent-orange); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Fundamental Identities</h5>
                 <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                     <iframe src="https://www.youtube.com/embed/OmJ5fxyXrfg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                 </div>
@@ -48,7 +48,7 @@ window.CHAPTER_DATA["ch14"] = {
         content: `
             <!-- VIDEO CURATION: MASTER CLASS -->
             <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-cyan); padding: 25px;">
-                <h5 style="color: var(--accent-cyan); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Verifying Trig Identities</h5>
+                <h5 style="color: var(--accent-cyan); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: The Art of Proof</h5>
                 <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                     <iframe src="https://www.youtube.com/embed/4ypV1CFuERs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                 </div>
@@ -85,7 +85,7 @@ window.CHAPTER_DATA["ch14"] = {
         content: `
             <!-- VIDEO CURATION: MASTER CLASS -->
             <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-magenta); padding: 25px;">
-                <h5 style="color: var(--accent-magenta); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Double Angle Formulas</h5>
+                <h5 style="color: var(--accent-magenta); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Sum & Double Angles</h5>
                 <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                     <iframe src="https://www.youtube.com/embed/ILg10YL-AJI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                 </div>
@@ -110,7 +110,7 @@ window.CHAPTER_DATA["ch14"] = {
         content: `
             <!-- VIDEO CURATION: MASTER CLASS -->
             <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-green); padding: 25px;">
-                <h5 style="color: var(--accent-green); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Solving Trigonometric Equations</h5>
+                <h5 style="color: var(--accent-green); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Solving Trig Systems</h5>
                 <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                     <iframe src="https://www.youtube.com/embed/KWyWG_iCiPA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                 </div>
