@@ -4,6 +4,14 @@ window.CHAPTER_DATA["ch14"] = {
         title: "14.1 Fundamental Identities",
         subtitle: "The Basic Units of Oscillation",
         content: `
+            <!-- VIDEO CURATION: MASTER CLASS -->
+            <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-orange); padding: 25px;">
+                <h5 style="color: var(--accent-orange); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Trig Identities Intuition</h5>
+                <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    <iframe src="https://www.youtube.com/embed/sGmmAmDrD2Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+                </div>
+            </div>
+
             <div class="lesson-section">
                 <div class="intuition-box glass">
                     <h3><i class="fas fa-tools"></i> The Refactoring Toolkit</h3>
@@ -38,6 +46,14 @@ window.CHAPTER_DATA["ch14"] = {
         title: "14.2 The Art of Proof",
         subtitle: "Verifying Identities",
         content: `
+            <!-- VIDEO CURATION: MASTER CLASS -->
+            <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-cyan); padding: 25px;">
+                <h5 style="color: var(--accent-cyan); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Verifying Trig Identities</h5>
+                <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    <iframe src="https://www.youtube.com/embed/4ypV1CFuERs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+                </div>
+            </div>
+
             <div class="lesson-section">
                 <h2>I. Proof Strategy Architecture</h2>
                 <p>Proving an identity is an exercise in **Refactoring**. Your goal is to simplify a complex expression until it matches a target "Base Case".</p>
@@ -67,6 +83,14 @@ window.CHAPTER_DATA["ch14"] = {
         title: "14.3 Sum & Double Angles",
         subtitle: "Decompressing Complex Rotations",
         content: `
+            <!-- VIDEO CURATION: MASTER CLASS -->
+            <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-magenta); padding: 25px;">
+                <h5 style="color: var(--accent-magenta); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Double Angle Formulas</h5>
+                <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    <iframe src="https://www.youtube.com/embed/ILg10YL-AJI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+                </div>
+            </div>
+
             <div class="lesson-section">
                 <h2>I. Sum & Difference Architecture</h2>
                 \\[\\sin(A \\pm B) = \\sin A \\cos B \\pm \\cos A \\sin B\\]
@@ -84,6 +108,14 @@ window.CHAPTER_DATA["ch14"] = {
         title: "14.4 Solving Trig Systems",
         subtitle: "Finding the Angle",
         content: `
+            <!-- VIDEO CURATION: MASTER CLASS -->
+            <div class="visual-dynamic glass" style="margin: 30px 0; border-top: 1px solid var(--accent-green); padding: 25px;">
+                <h5 style="color: var(--accent-green); margin-bottom: 20px; text-align: center;"><i class="fab fa-youtube"></i> Master Class: Solving Trigonometric Equations</h5>
+                <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    <iframe src="https://www.youtube.com/embed/KWyWG_iCiPA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+                </div>
+            </div>
+
             <div class="lesson-section">
                 <h2>I. The Infinite Solution Space</h2>
                 <p>Because trig functions are periodic, one equation usually has infinite solutions. We must distinguish between solutions in a **Specific Interval** ($[0, 2\\pi)$) and the **General Solution**.</p>
