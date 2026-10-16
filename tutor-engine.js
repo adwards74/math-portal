@@ -504,11 +504,27 @@ window.TutorEngine = (function () {
             }
         }
 
-        // Fallback responses
+        // Greeting detection
+        const greetings = ['hello', 'hi', 'hey', '안녕', '하이', '헬로'];
+        if (greetings.includes(lowerQuery)) {
+            const greetingResponses = [
+                "Hi! What math concept are you working on today?",
+                "Hello! Ask me about any topic — fractions, equations, functions, anything!",
+                "Hey! Ready to tackle some math? What's on your mind?"
+            ];
+            return greetingResponses[Math.floor(Math.random() * greetingResponses.length)];
+        }
+
+        // Thank you detection
+        if (lowerQuery.includes('thank') || lowerQuery.includes('감사')) {
+            return "You're welcome! Keep up the good work! 🎉";
+        }
+
+        // Fallback responses (for actual math questions we can't answer)
         const fallbacks = [
-            `I don't have specific data on "${query}" yet, but try breaking it down into simpler concepts!`,
-            `Hmm, "${query}" is interesting. Can you be more specific about what concept you're working with?`,
-            `Let me think... For "${query}", try reviewing the related chapter lesson first!`
+            `I don't have specific material on "${query}" yet. Try asking about a concept from the chapters — like fractions, equations, or functions!`,
+            `Hmm, I'm not sure about "${query}". Can you rephrase it as a math question? For example: "How do I solve..." or "What is..."`,
+            `Let me think... For "${query}", try checking the chapter lessons first, then ask me something specific!`
         ];
 
         return fallbacks[Math.floor(Math.random() * fallbacks.length)];
