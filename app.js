@@ -676,7 +676,9 @@ document.addEventListener('DOMContentLoaded', () => {
             s.title.toLowerCase().includes(term) ||
             s.description.toLowerCase().includes(term) ||
             s.code.toLowerCase().includes(term) ||
-            s.units.some(u => u.title.toLowerCase().includes(term) || u.topics?.some(t => t.toLowerCase().includes(term)))
+            s.units.some(u => u.title.toLowerCase().includes(term) ||
+                u.topics?.some(t => t.toLowerCase().includes(term)) ||
+                u.lectures?.some(l => l.name.toLowerCase().includes(term)))
         );
 
         // Alpha-Fuzzy: If no results, try fuzzy matching
