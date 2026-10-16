@@ -2563,7 +2563,7 @@ window.MATH_DATA = {
             "description": "Digital SAT Math prep: Algebra, Advanced Math, Problem Solving & Data Analysis, Geometry & Trigonometry.",
             "color": "#f59e0b",
             "icon": "fas fa-calculator",
-            "intuition": "SAT Math doesn't demand heavy calculation. Instead, it measures two things: how fast you can turn worded conditions into equations, and how accurately you dodge the traps. For a TJHSST student, managing mistakes under time pressure matters more than the computation itself. These 40 questions follow real College Board trends, built around the types Digital SAT loves — function notation, exponential models, and statistical interpretation.",
+            "intuition": "SAT Math doesn't demand heavy calculation. Instead, it measures two things: how fast you can turn worded conditions into equations, and how accurately you dodge the traps. For a TJHSST student, managing mistakes under time pressure matters more than the computation itself. These 88 questions follow real College Board trends, built around the types Digital SAT loves — function notation, exponential models, and statistical interpretation.",
             "local_resources": [],
             "difficulty": "advanced",
             "units": [
