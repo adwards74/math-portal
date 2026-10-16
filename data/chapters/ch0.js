@@ -104,7 +104,17 @@ window.CHAPTER_DATA["ch0"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Order of operations:</strong> PEMDAS. Parentheses, Exponents, Multiply/Divide, Add/Subtract.</li><li><strong>Left to right:</strong> For same precedence, go left to right.</li><li><strong>Fraction bars:</strong> Act like parentheses.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Evaluate $3 + 2 \\times 4^2$.</span>
+                </div>
+            </div>`
     },
     "ch0-2": {
         title: "0.2 PEMDAS: Order of Operations",

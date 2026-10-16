@@ -64,7 +64,17 @@ window.CHAPTER_DATA["ch14"] = {
                 <h4><i class="fas fa-microchip"></i> CS: Computational Reduction</h4>
                 <p>In low-level graphics code, calculating two trig functions is twice as slow as one. Using these identities, we can compute $\\cos \\theta$ using only the stored value of $\\sin \\theta$ through a simple square root and subtraction. This <strong>Algebraic Bypass</strong> is a staple of efficient engine design.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Limit:</strong> What $f(x)$ approaches as $x$ approaches $c$.</li><li><strong>Not the value:</strong> $f(c)$ might not equal the limit!</li><li><strong>Three cases:</strong> Left, right, and two-sided must agree.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find $\\lim_{x\\to 2} (3x + 1)$.</span>
+                </div>
+            </div>`
     },
     "ch14-2": {
         title: "14.2 The Art of Proof",
@@ -91,7 +101,17 @@ window.CHAPTER_DATA["ch14"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Continuity:</strong> Limit = function value. No jumps or holes.</li><li><strong>Three conditions:</strong> $f(c)$ exists, limit exists, they're equal.</li><li><strong>Types of discontinuity:</strong> Removable, jump, infinite.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Is $f(x) = 1/x$ continuous at $x=0$?</span>
+                </div>
+            </div>`
     },
     "ch14-3": {
         title: "14.3 Sum & Double Angles",

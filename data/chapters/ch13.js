@@ -21,7 +21,17 @@ window.CHAPTER_DATA["ch13"] = {
                     </ul>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Mean:</strong> Average. Sum divided by count.</li><li><strong>Median:</strong> Middle value when sorted.</li><li><strong>Mode:</strong> Most frequent value.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find mean, median, mode of: 2, 3, 3, 5, 7.</span>
+                </div>
+            </div>`
     },
     "ch13-2": {
         title: "13.2 Angles & Rotation",
@@ -35,7 +45,17 @@ window.CHAPTER_DATA["ch13"] = {
                     <p>$\\theta_{coterminal} = \\theta \\pm 360^{\\circ} \\cdot n$ (where $n$ is an integer).</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Standard deviation:</strong> Spread of data. Larger = more spread.</li><li><strong>Variance:</strong> Square of standard deviation.</li><li><strong>68-95-99.7 rule:</strong> For normal distributions.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> What does a large standard deviation tell you?</span>
+                </div>
+            </div>`
     },
     "ch13-3": {
         title: "13.3 Radian Mastery",
@@ -54,7 +74,17 @@ window.CHAPTER_DATA["ch13"] = {
                 <h4><i class="fas fa-code"></i> CS: Performance Optimization</h4>
                 <p>In high-performance gaming engines, computing $\\sin(\\theta)$ is expensive. Developers often replace the function with a **Polynomial Approximation** (Taylor Series) that only works if $\\theta$ is in radians. This optimization is why modern VR can run at 120Hz!</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Correlation:</strong> $r$ between -1 and 1. Strength of linear relationship.</li><li><strong>Not causation:</strong> Correlation ≠ cause!</li><li><strong>Regression line:</strong> Best fit line. Minimizes squared errors.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> If $r = 0.9$, what does that mean?</span>
+                </div>
+            </div>`
     },
     "ch13-4": {
         title: "13.4 The Sine Wave",
