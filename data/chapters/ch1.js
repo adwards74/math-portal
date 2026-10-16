@@ -116,6 +116,19 @@ window.CHAPTER_DATA["ch1"] = {
                     <p>Floating-point errors in programming (like 0.1 + 0.2 != 0.3) happen because computers try to represent a 'dense' infinite system ($\\mathbb{R}$) using a 'discrete' finite system (Binary Bits). Algebra is where we learn to handle the pure, infinite versions.</p>
                 </div>
             </div>
+
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Number sets nest like boxes:</strong> $\\mathbb{N} \\subset \\mathbb{W} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$. Each set adds new capabilities.</li>
+                    <li><strong>Rational vs Irrational:</strong> Rationals are fractions (repeating/terminating decimals). Irrationals like $\\pi$ and $\\sqrt{2}$ never repeat and never terminate.</li>
+                    <li><strong>Computers can't do reals:</strong> Floating-point errors (0.1 + 0.2 ≠ 0.3) happen because binary can't perfectly represent the dense real number line.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Is $\\sqrt{4}$ rational or irrational? (Hint: simplify first!)</span>
+                </div>
+            </div>
         `
     },
     "ch1-3": {
@@ -230,7 +243,19 @@ window.CHAPTER_DATA["ch1"] = {
                 <h4><i class="fas fa-terminal"></i> CS Analogy: Refactoring</h4>
                 <p>Rewriting a formula is exactly like <strong>Refactoring Code</strong>. You aren't changing the relationship between variables (the logic); you are just changing which variable is the primary "Return Value" (the isolated variable).</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Isolate the target variable:</strong> Use the same inverse operations as with numbers.</li>
+                    <li><strong>Treat other letters as numbers:</strong> They move across the equals sign the same way.</li>
+                    <li><strong>Formulas are flexible:</strong> $d = rt$ can solve for $d$, $r$, or $t$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Solve $A = \\frac{1}{2}bh$ for $h$.</span>
+                </div>
+            </div>`
     },
     "ch1-5": {
         title: "1.5/1.6 Word Problems & Models",
@@ -259,7 +284,19 @@ window.CHAPTER_DATA["ch1"] = {
                     <p style="margin-top:5px; opacity:0.8; font-size:0.9rem;">Solving this "Balance of Concentrations" allows us to predict the final chemical state exactly.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Flip the sign with negatives:</strong> Multiplying/dividing by a negative reverses the inequality.</li>
+                    <li><strong>Open vs closed circles:</strong> &lt; &gt; use open circles. ≤ ≥ use closed circles.</li>
+                    <li><strong>Test your solution:</strong> Pick a value and check if it satisfies the original.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Solve $-3x + 5 < 14$. Don't forget to flip!</span>
+                </div>
+            </div>`
     },
     "ch1-7": {
         title: "1.7 Absolute Value Equations",
