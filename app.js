@@ -812,7 +812,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
                 // Remove from main content to avoid duplication
-                cleanLessonHtml = lessonData.html.replace(videoIframe, '<div class="video-extracted-notice" style="padding:10px; font-size:0.75rem; opacity:0.4; font-style:italic; border-top:1px dashed rgba(255,255,255,0.1); text-align:center;">Video lecture moved to top performance sector.</div>');
+                cleanLessonHtml = lessonData.html.replace(videoIframe, '');
             }
 
             const subject = MATH_DATA.subjects.find(s => s.id === subjectId);
