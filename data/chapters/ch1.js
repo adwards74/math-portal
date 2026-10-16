@@ -58,6 +58,19 @@ window.CHAPTER_DATA["ch1"] = {
                 <h4><i class="fas fa-microchip"></i> CS Connection: Operator Precedence</h4>
                 <p>In Java or Python, the <strong>Axioms</strong> are hard-coded into the compiler. The hierarchy of operations (PEMDAS/BODMAS) ensures the machine processes expressions exactly the same way every time. To a coder, axioms are the 'Source Code' of the universe.</p>
             </div>
+
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Axioms are the agreed-upon rules</strong> — like a Constitution for numbers. Everything in math is either an axiom or proven from one.</li>
+                    <li><strong>Four axioms × two operations:</strong> Commutative, Associative, Identity (0 for +, 1 for ×), Inverse — each applies to both addition and multiplication.</li>
+                    <li><strong>Distributive property is the bridge</strong> — the only axiom connecting + and ×. That's why $a \cdot 0 = 0$ is a provable theorem, not just a rule.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Can you prove $a \cdot 0 = 0$ using only the axioms? (Hint: start with $0 = 0 + 0$)</span>
+                </div>
+            </div>
         `,
         "javaLogic": "axioms"
     },
