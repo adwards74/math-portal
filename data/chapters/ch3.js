@@ -77,7 +77,19 @@ window.CHAPTER_DATA["ch3"] = {
                     </details>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Substitution:</strong> Solve one equation for a variable, then plug into the other.</li>
+                    <li><strong>Elimination:</strong> Add/subtract equations to cancel a variable. Multiply first if needed.</li>
+                    <li><strong>Check the solution:</strong> The ordered pair must satisfy BOTH original equations.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Solve: $2x + y = 7$ and $x - y = 2$.</span>
+                </div>
+            </div>`
     },
     "ch3-3": {
         title: "3.3 Systems of Inequalities",
@@ -100,7 +112,19 @@ window.CHAPTER_DATA["ch3"] = {
                     <p>In mobile apps, when you tap a button, the OS runs a 3.3 inequality system check: Is <code>user_x > button_left</code> AND <code>user_x < button_right</code>? If all inequalities are TRUE, the 'Feasible Region' (the button) is triggered.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Graph each inequality:</strong> Dashed line for &lt; &gt;, solid for ≤ ≥.</li>
+                    <li><strong>Shade the correct side:</strong> Test (0,0) to see which side satisfies.</li>
+                    <li><strong>Feasible region:</strong> Where all shadings overlap. That's the solution.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Graph $y > 2x - 1$ and $y ≤ -x + 4$. Where do they overlap?</span>
+                </div>
+            </div>`
     },
     "ch3-4": {
         title: "3.4 Linear Programming",
@@ -130,7 +154,19 @@ window.CHAPTER_DATA["ch3"] = {
                     </ol>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Systems with 3 variables:</strong> Use elimination twice to reduce to 2 variables.</li>
+                    <li><strong>Organize your work:</strong> Label equations (1), (2), (3). Track which variables you eliminate.</li>
+                    <li><strong>Inconsistent systems:</strong> If you get $0 = 5$, there's no solution.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> How many solutions if two planes are parallel?</span>
+                </div>
+            </div>`
     },
     "ch3-5": {
         title: "3.5 Systems with 3 Variables",
@@ -189,7 +225,19 @@ window.CHAPTER_DATA["ch3"] = {
                     <li>How does the 'Elimination' method naturally lead to Matrix algebra?</li>
                 </ol>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Linear programming:</strong> Optimize an objective function within constraints.</li>
+                    <li><strong>Corner principle:</strong> Maximum/minimum occurs at a vertex of the feasible region.</li>
+                    <li><strong>Steps:</strong> Graph constraints → find vertices → test each in the objective function.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Maximize $P = 3x + 2y$ with $x + y ≤ 4$, $x ≥ 0$, $y ≥ 0$.</span>
+                </div>
+            </div>`
     }
 };
 
