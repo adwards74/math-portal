@@ -142,7 +142,19 @@ window.CHAPTER_DATA["ch5"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Standard form:</strong> $y = ax^2 + bx + c$. Parabola shape.</li>
+                    <li><strong>Vertex formula:</strong> $x = -b/(2a)$. Plug back to find $y$.</li>
+                    <li><strong>Discriminant:</strong> $b^2 - 4ac$ tells you how many x-intercepts.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find the vertex of $y = x^2 - 4x + 3$.</span>
+                </div>
+            </div>`
     },
     "ch5-3": {
         title: "5.3 Factoring Mastery",
@@ -282,7 +294,19 @@ window.CHAPTER_DATA["ch5"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Quadratic formula:</strong> $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$. Works always!</li>
+                    <li><strong>Discriminant:</strong> Positive = 2 solutions, zero = 1, negative = 0 real.</li>
+                    <li><strong>Simplify radicals:</strong> $\\sqrt{12} = 2\\sqrt{3}$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Solve $x^2 + 2x - 8 = 0$ using the formula.</span>
+                </div>
+            </div>`
     },
     "ch5-4": {
         title: "5.4 Complex Numbers Intro",
@@ -419,7 +443,19 @@ window.CHAPTER_DATA["ch5"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Completing the square:</strong> Add $(b/2)^2$ to both sides.</li>
+                    <li><strong>Vertex form:</strong> $y = a(x-h)^2 + k$ reveals the vertex $(h,k)$.</li>
+                    <li><strong>Why it works:</strong> Creates a perfect square trinomial.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Complete the square: $x^2 + 6x + 5$.</span>
+                </div>
+            </div>`
     },
     "ch5-5": {
         title: "5.5 Completing the Square",
@@ -574,7 +610,19 @@ window.CHAPTER_DATA["ch5"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Graphing:</strong> Find vertex, y-intercept, x-intercepts, then sketch.</li>
+                    <li><strong>Axis of symmetry:</strong> Vertical line through the vertex.</li>
+                    <li><strong>End behavior:</strong> Both ends go up if $a > 0$, down if $a < 0$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Sketch $y = -x^2 + 4$. Where is the vertex?</span>
+                </div>
+            </div>`
     },
     "ch5-6": {
         title: "5.6 The Quadratic Formula",
@@ -650,7 +698,19 @@ window.CHAPTER_DATA["ch5"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Word problems:</strong> Define variables, write equations, solve.</li>
+                    <li><strong>Projectile motion:</strong> $h(t) = -16t^2 + v_0t + h_0$.</li>
+                    <li><strong>Max/min:</strong> Vertex gives the optimum value.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> A ball is thrown up at 32 ft/s from 5 ft. When does it hit the ground?</span>
+                </div>
+            </div>`
     },
     "ch5-7": {
         title: "5.7 Quadratic Inequalities",
@@ -716,7 +776,19 @@ window.CHAPTER_DATA["ch5"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Complex numbers:</strong> $i = \\sqrt{-1}$. $i^2 = -1$.</li>
+                    <li><strong>Operations:</strong> Add/subtract like terms. Multiply using FOIL.</li>
+                    <li><strong>Conjugate:</strong> $a+bi$ and $a-bi$. Multiply to get real number.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Simplify $(3 + 2i) + (1 - 4i)$.</span>
+                </div>
+            </div>`
     },
     "ch5-8": {
         title: "5.8 Linear-Quadratic Systems",
