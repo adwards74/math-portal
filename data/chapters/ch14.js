@@ -9,11 +9,7 @@ window.CHAPTER_DATA["ch14"] = {
                     <h3><i class="fas fa-tools"></i> The Refactoring Toolkit</h3>
                     <p>Identities are the **Logical Equivalent** of things. They allow you to swap a complex, expensive calculation for a simple, efficient one without changing the outcome. It is the ultimate optimization tool in geometry.</p>
                 </div>
-
-                <!-- VIDEO CURATION: MASTER CLASS -->
-                
-
-                <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-orange);">
+<div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-orange);">
                     <ul class="glass-list">
                         <li><strong>Primary:</strong> $\\sin^2 \\theta + \\cos^2 \\theta = 1$</li>
                         <li><strong>Tangent-Secant:</strong> $1 + \\tan^2 \\theta = \\sec^2 \\theta$</li>
@@ -54,10 +50,7 @@ window.CHAPTER_DATA["ch14"] = {
                         <li><strong>Pattern Matching:</strong> Look for $a^2 - b^2$ or $1 - \\sin^2 \\theta$ to substitute identities.</li>
                     </ol>
                 </div>
-
-                <!-- VIDEO CURATION: MASTER CLASS -->
-                
-            </div>
+</div>
         
             <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
                 <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
@@ -84,10 +77,7 @@ window.CHAPTER_DATA["ch14"] = {
                     <p>$\\sin(2\\theta) = 2 \\sin \\theta \\cos \\theta$</p>
                     <p>$\\cos(2\\theta) = \\cos^2 \\theta - \\sin^2 \\theta$</p>
                 </div>
-
-                <!-- VIDEO CURATION: MASTER CLASS -->
-                
-            </div>
+</div>
         `
     },
     "ch14-4": {
@@ -103,10 +93,7 @@ window.CHAPTER_DATA["ch14"] = {
                     <p>If $\\sin x = 1/2$, the primary solutions are $x = \\pi/6$ and $x = 5\\pi/6$.</p>
                     <p style="margin-top:10px;">The <strong>General Solution</strong> adds the "loop" factor: $x = \\pi/6 + 2n\\pi$ and $5\\pi/6 + 2n\\pi$ (where $n$ is any integer).</p>
                 </div>
-
-                <!-- VIDEO CURATION: MASTER CLASS -->
-                
-            </div>
+</div>
         `
     },
     "ch14-5": {

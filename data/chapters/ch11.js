@@ -9,11 +9,7 @@ window.CHAPTER_DATA["ch11"] = {
                     <h3><i class="fas fa-link"></i> The Link Chain</h3>
                     <p>A sequence is the **Memory of Math**. Recursion tells you how the current state depends on the past, while the explicit formula lets you predict any future point instantly. It is the foundation of loops and iterative logic.</p>
                 </div>
-
-                <!-- VIDEO CURATION: MASTER CLASS -->
-                
-
-                <h2>I. Recursive vs. Explicit Logic</h2>
+<h2>I. Recursive vs. Explicit Logic</h2>
                 <p>A **Recursive** definition expresses a term based on its predecessors. An **Explicit** formula allows you to jump directly to any step $n$.</p>
                 
                 <div class="glass-card" style="padding: 20px; border-left: 4px solid var(--accent-magenta);">

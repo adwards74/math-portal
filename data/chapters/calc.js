@@ -10,11 +10,7 @@ window.CHAPTER_DATA["calc"] = {
                     <h3><i class="fas fa-microscope"></i> The Zoom Logic</h3>
                     <p>A curve looks like a straight line if you zoom in enough. Calculus is the mathematical "microscope" that calculates the slope of that line at an infinitely small scale.</p>
                 </div>
-
-                <!-- VIDEO CURATION: MASTER CLASS -->
-                
-
-                <div class="visual-dynamics glass" style="margin:20px 0; padding:20px; text-align:center; background:linear-gradient(45deg, rgba(0,210,255,0.05), rgba(255,0,255,0.05)); border: 1px solid rgba(0,210,255,0.2);">
+<div class="visual-dynamics glass" style="margin:20px 0; padding:20px; text-align:center; background:linear-gradient(45deg, rgba(0,210,255,0.05), rgba(255,0,255,0.05)); border: 1px solid rgba(0,210,255,0.2);">
                     <h4><i class="fas fa-search-plus"></i> Visual Intuition: The Zoom Microscope</h4>
                     <div style="display: flex; justify-content: center; gap: 40px; align-items: center; margin: 20px 0;">
                         <!-- Normal View -->
