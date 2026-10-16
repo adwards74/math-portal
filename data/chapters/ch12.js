@@ -25,7 +25,17 @@ window.CHAPTER_DATA["ch12"] = {
                 <h4><i class="fas fa-key"></i> CS: Password Entropy</h4>
                 <p>The security of an encryption key is measured in **Bits of Entropy**. If a password has $n$ possible characters and a length of $k$, it has $n^k$ permutations. Every extra character exponentially scales the difficulty of a brute-force attack? his is combinatorial security.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Probability:</strong> Favorable outcomes / total outcomes.</li><li><strong>Range:</strong> Always between 0 and 1.</li><li><strong>Complement:</strong> $P(\\text{not A}) = 1 - P(A)$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> What's the probability of rolling a 3 on a die?</span>
+                </div>
+            </div>`
     },
     "ch12-2": {
         title: "12.2 Conditional Logic",
@@ -40,7 +50,17 @@ window.CHAPTER_DATA["ch12"] = {
                     <p style="margin-top:10px;">In AI, $P(A)$ is our **Prior Belief**, and $P(A|B)$ is our **Posterior Belief** after seeing evidence $B$.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Independent:</strong> $P(A \\text{ and } B) = P(A) \\times P(B)$.</li><li><strong>Dependent:</strong> $P(A \\text{ and } B) = P(A) \\times P(B|A)$.</li><li><strong>Mutually exclusive:</strong> $P(A \\text{ or } B) = P(A) + P(B)$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Draw two cards without replacement. P(both aces)?</span>
+                </div>
+            </div>`
     },
     "ch12-3": {
         title: "12.3 Discrete Random Variables",
@@ -55,7 +75,17 @@ window.CHAPTER_DATA["ch12"] = {
                     <p>Casinos don't rely on luck; they rely on Expected Value. If $E[X]$ is negative for the player (-0.05), it means the house is guaranteed to make 5% profit in the long run, even if a few people hit the jackpot.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Permutations:</strong> Order matters. $P(n,r) = n!/(n-r)!$.</li><li><strong>Combinations:</strong> Order doesn't matter. $C(n,r) = n!/(r!(n-r)!)$.</li><li><strong>Key question:</strong> Does rearranging change the outcome?</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> How many ways to choose 3 from 10?</span>
+                </div>
+            </div>`
     },
     "ch12-4": {
         title: "12.4 The Bell Curve (AI)",

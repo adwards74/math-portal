@@ -32,7 +32,17 @@ window.CHAPTER_DATA["ch11"] = {
                 <h4><i class="fas fa-microchip"></i> CS: Tail Call Optimization</h4>
                 <p>Deeply recursive sequences can cause a "Stack Overflow" error. Modern compilers use <strong>Tail Call Optimization</strong> to turn these recursive patterns into flat efficiency. Mastering sequences is the first step toward writing bulletproof algorithms.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Arithmetic:</strong> Add common difference $d$. $a_n = a_1 + (n-1)d$.</li><li><strong>Geometric:</strong> Multiply by common ratio $r$. $a_n = a_1 r^{n-1}$.</li><li><strong>Find the pattern:</strong> Check differences, then ratios.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find the 10th term of 3, 7, 11, 15, ...</span>
+                </div>
+            </div>`
     },
     "ch11-2": {
         title: "11.2 Arithmetic Progressions",
@@ -84,7 +94,17 @@ window.CHAPTER_DATA["ch11"] = {
                     <p style="margin-top:10px;">By pairing the first and last terms, then second and second-to-last, we find that every pair sums to the same value. Summing becomes simple multiplication.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Arithmetic sum:</strong> $S_n = \\frac{n}{2}(a_1 + a_n)$.</li><li><strong>Geometric sum:</strong> $S_n = a_1\\frac{1-r^n}{1-r}$.</li><li><strong>Sigma notation:</strong> $\\sum_{i=1}^n a_i$ means add them up.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find sum of first 20 terms: 2 + 5 + 8 + ...</span>
+                </div>
+            </div>`
     },
     "ch11-3": {
         title: "11.3 Geometric Scaling",
@@ -107,7 +127,17 @@ window.CHAPTER_DATA["ch11"] = {
                     </div>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Infinite geometric:</strong> Converges if $|r| < 1$. Sum $= a_1/(1-r)$.</li><li><strong>Diverges:</strong> If $|r| ≥ 1$, sum is infinite.</li><li><strong>Repeating decimals:</strong> Use infinite geometric series!</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find sum: $1 + 1/2 + 1/4 + 1/8 + ...$</span>
+                </div>
+            </div>`
     },
     "ch11-4": {
         title: "11.4 Series & Sigma Notation",

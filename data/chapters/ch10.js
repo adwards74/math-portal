@@ -27,7 +27,17 @@ window.CHAPTER_DATA["ch10"] = {
                 <h4><i class="fas fa-cube"></i> Image Processing</h4>
                 <p>Computer vision algorithms use these discriminants to detect objects. When a camera sees a circular coin from an angle, it becomes an **Ellipse**. The math of conics allows the software to 'un-warp' the image and calculate the original shape.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Parabola:</strong> $y = a(x-h)^2 + k$. Vertex $(h,k)$.</li><li><strong>Focus and directrix:</strong> Set of points equidistant from both.</li><li><strong>$p$ value:</strong> Distance from vertex to focus. $4p(y-k) = (x-h)^2$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find focus of $y = \\frac{1}{8}(x-2)^2 + 1$.</span>
+                </div>
+            </div>`
     },
     "ch10-2": {
         title: "10.2 Circles & Distance",
@@ -47,7 +57,17 @@ window.CHAPTER_DATA["ch10"] = {
                     <p>To find the center and radius, we must <strong>Complete the Square</strong> twice? nce for $x$ and once for $y$. This is the same logic used in Chapter 5, but scaled for 2D space.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Circle:</strong> $(x-h)^2 + (y-k)^2 = r^2$. Center $(h,k)$, radius $r$.</li><li><strong>Complete the square:</strong> To find center and radius.</li><li><strong>Distance formula:</strong> Derived from Pythagorean theorem.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find center and radius of $x^2 + y^2 - 4x + 6y = 12$.</span>
+                </div>
+            </div>`
     },
     "ch10-3": {
         title: "10.3 Ellipses & Orbits",
@@ -71,7 +91,17 @@ window.CHAPTER_DATA["ch10"] = {
                     <p>Changing orbits in space (like going from Earth to Mars) involves moving along an **Elliptical Transfer Orbit**. By calculating the exact eccentricity, engineers ensure the spacecraft meets the planet at the perfect tangent point.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Ellipse:</strong> $\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1$.</li><li><strong>Major vs minor:</strong> Larger denominator = major axis.</li><li><strong>Foci:</strong> $c^2 = a^2 - b^2$. Inside the ellipse.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find foci of $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$.</span>
+                </div>
+            </div>`
     },
     "ch10-4": {
         title: "10.4 Hyperbolas & GPS",
@@ -130,7 +160,17 @@ window.CHAPTER_DATA["ch10"] = {
                     <li>If a planet's eccentricity $e$ were to reach 1.0, what would happen to its orbit around the sun?</li>
                 </ol>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Hyperbola:</strong> $\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1$.</li><li><strong>Asymptotes:</strong> $y - k = \\pm \\frac{b}{a}(x - h)$.</li><li><strong>Transverse axis:</strong> Connects the two vertices.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find asymptotes of $\\frac{x^2}{16} - \\frac{y^2}{9} = 1$.</span>
+                </div>
+            </div>`
     }
 };
 
