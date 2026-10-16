@@ -23,7 +23,19 @@ window.CHAPTER_DATA["ch4"] = {
                 <h4><i class="fas fa-database"></i> Database Indexing</h4>
                 <p>In SQL databases or Spreadsheet software, a 'Table' is essentially a matrix. Rows are Records, and Columns are Fields. Understanding matrix indexing is the key to writing efficient database queries.</p>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Matrix = grid of numbers:</strong> Rows × columns. A 2×3 matrix has 2 rows, 3 columns.</li>
+                    <li><strong>Matrix addition:</strong> Add corresponding entries. Matrices must have the same dimensions.</li>
+                    <li><strong>Scalar multiplication:</strong> Multiply every entry by the scalar.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Add: $\\begin{bmatrix}1 & 2 \\\\ 3 & 4\\end{bmatrix} + \\begin{bmatrix}5 & 6 \\\\ 7 & 8\\end{bmatrix}$.</span>
+                </div>
+            </div>`
     },
     // ... Ch 4.2 to 4.7
     "ch4-6": {
@@ -40,7 +52,19 @@ for (int i = 0; i &lt; n; i++) {
     }
 }</code></pre>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Identity matrix:</strong> $I$ has 1s on diagonal, 0s elsewhere. $AI = A$.</li>
+                    <li><strong>Inverse properties:</strong> $(AB)^{-1} = B^{-1}A^{-1}$. Reverse the order!</li>
+                    <li><strong>Solving systems:</strong> $AX = B$ becomes $X = A^{-1}B$.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> What is $I_3$? (3×3 identity matrix)</span>
+                </div>
+            </div>`
     },
     "ch4-2": {
         title: "4.2 Matrix Multiplication",
@@ -59,7 +83,19 @@ for (int i = 0; i &lt; n; i++) {
                     <p>Row $i$ of Matrix $A$ &times; Column $j$ of Matrix $B$ = Element $c_{i,j}$ of the product.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Matrix multiplication:</strong> (m×n) × (n×p) = (m×p). Inner dimensions must match.</li>
+                    <li><strong>Not commutative:</strong> $AB ≠ BA$ in general. Order matters!</li>
+                    <li><strong>Dot product:</strong> Row × column. Multiply pairs and sum.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Can you multiply a 2×3 by a 3×4 matrix? What size is the result?</span>
+                </div>
+            </div>`
     },
     "ch4-3": {
         title: "4.3 Determinants & Cramer's Rule",
@@ -84,7 +120,19 @@ for (int i = 0; i &lt; n; i++) {
                     </ul>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Determinant (2×2):</strong> $\\det = ad - bc$ for $\\begin{bmatrix}a & b \\\\ c & d\\end{bmatrix}$.</li>
+                    <li><strong>Cramer's Rule:</strong> Solve systems using determinants. $x = D_x / D$.</li>
+                    <li><strong>Zero determinant:</strong> Means no unique solution (parallel lines or same line).</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find the determinant of $\\begin{bmatrix}3 & 2 \\\\ 1 & 4\\end{bmatrix}$.</span>
+                </div>
+            </div>`
     },
     "ch4-4": {
         title: "4.4 Visualizing Linear Transformations",
@@ -107,7 +155,19 @@ for (int i = 0; i &lt; n; i++) {
                     <p>Modern GPUs are designed to do matrix-vector multiplication in parallel. This is why a $4 \\times 4$ transformation matrix is the "core atom" of 3D gaming and VR.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Linear transformations:</strong> Matrices transform vectors (rotate, scale, shear).</li>
+                    <li><strong>Visualize:</strong> Watch how the unit square changes under the transformation.</li>
+                    <li><strong>Composition:</strong> Multiplying matrices composes transformations.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> What does $\\begin{bmatrix}2 & 0 \\\\ 0 & 2\\end{bmatrix}$ do to a shape?</span>
+                </div>
+            </div>`
     },
     "ch4-5": {
         title: "4.5 Inverse Matrices",
@@ -123,7 +183,19 @@ for (int i = 0; i &lt; n; i++) {
                     <p style="margin-top:10px;">If $\\det A = 0$, you cannot divide by zero? ence, No Inverse exists.</p>
                 </div>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>Inverse undoes:</strong> $A^{-1}A = I$. Like reciprocal for matrices.</li>
+                    <li><strong>2×2 inverse:</strong> Swap $a,d$, negate $b,c$, divide by determinant.</li>
+                    <li><strong>Only square matrices:</strong> Must be n×n with non-zero determinant.</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> Find the inverse of $\\begin{bmatrix}2 & 0 \\\\ 0 & 2\\end{bmatrix}$.</span>
+                </div>
+            </div>`
     },
     "ch4-7": {
         title: "4.7 3x3 Determinants",
@@ -176,7 +248,19 @@ for (int i = 0; i &lt; n; i++) {
                     <li>How does a GPU use matrix algebra to render a shadow on a 3D surface?</li>
                 </ol>
             </div>
-        `
+        
+            <div class="key-takeaways glass" style="margin: 30px 0; padding: 25px; border-left: 4px solid var(--accent-green);">
+                <h4 style="color: var(--accent-green); margin-bottom: 15px;"><i class="fas fa-key"></i> Key Takeaways</h4>
+                <ul style="line-height: 2; margin: 0; padding-left: 20px;">
+                    <li><strong>3×3 determinant:</strong> Use cofactor expansion along any row/column.</li>
+                    <li><strong>Sign pattern:</strong> $+ - +$ / $- + -$ / $+ - +$. Alternating signs.</li>
+                    <li><strong>Sarrus rule:</strong> Shortcut for 3×3 only. Not for larger!</li>
+                </ul>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong style="color: var(--accent-yellow);">Quick Check:</strong>
+                    <span style="opacity: 0.9;"> When is a 3×3 matrix invertible?</span>
+                </div>
+            </div>`
     }
 };
 
