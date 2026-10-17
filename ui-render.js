@@ -225,9 +225,9 @@ window.UIEngine = (function () {
                 <div class="quiz-content" id="quiz-content-${unitIdx}">
                     <p style="margin-bottom:15px; font-size:0.95rem;">${currentLevel.question}</p>
                     <div class="quiz-options" style="display:grid; gap:8px;">
-                        ${currentLevel.options ? currentLevel.options.map(opt => `
+                        ${currentLevel.options ? currentLevel.options.map((opt, oi) => `
                             <button class="glass quiz-opt" style="text-align:left; padding:10px 15px; font-size:0.9rem;" 
-                                    onclick="window.checkQuizAnswer(${unitIdx}, '${opt.replace(/'/g, "\\'")}', '${currentLevel.answer.replace(/'/g, "\\'")}', '${currentLevel.explanation.replace(/'/g, "\\'")}', '${unitTitle.replace(/'/g, "\\'")}', '${currentLevel.question.replace(/'/g, "\\'")}')">
+                                    onclick="window.checkQuizAnswer('${subject.id}', ${unitIdx}, 0, ${oi})">
                                 ${opt}
                             </button>
                         `).join('') : `
@@ -288,9 +288,9 @@ window.UIEngine = (function () {
         container.innerHTML = `
             <p style="margin-bottom:15px; font-size:0.95rem;">${level.question}</p>
             <div class="quiz-options" style="display:grid; gap:8px;">
-                ${level.options ? level.options.map(opt => `
+                ${level.options ? level.options.map((opt, oi) => `
                     <button class="glass quiz-opt" style="text-align:left; padding:10px 15px; font-size:0.9rem;" 
-                            onclick="window.checkQuizAnswer(${unitIdx}, '${opt.replace(/'/g, "\\'")}', '${level.answer.replace(/'/g, "\\'")}', '${level.explanation.replace(/'/g, "\\'")}', '${unit.title.replace(/'/g, "\\'")}', '${level.question.replace(/'/g, "\\'")}')">
+                            onclick="window.checkQuizAnswer('${subjectId}', ${unitIdx}, ${levelIdx}, ${oi})">
                         ${opt}
                     </button>
                 `).join('') : `

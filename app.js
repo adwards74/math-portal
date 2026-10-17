@@ -1486,10 +1486,24 @@ document.addEventListener('DOMContentLoaded', () => {
         draw();
     }
 
-    window.checkQuizAnswer = (uIdx, sel, corr, expl, chapterTitle, questionText) => {
+    // All quiz content is resolved from MATH_DATA by index, so LaTeX backslashes
+    // are never mangled by passing raw strings through onclick literals
+    // (e.g. '\f' in "$\frac" would become a form-feed control character).
+    window.checkQuizAnswer = (subjectId, unitIdx, levelIdx, oi) => {
+        const data = window.MATH_DATA || { subjects: [] };
+        const subject = data.subjects.find(s => s.id === subjectId) || {};
+        const unit = (subject.units || [])[unitIdx] || {};
+        const quiz = unit.quiz || {};
+        const level = (quiz.levels && quiz.levels[levelIdx]) || quiz.levels?.[0] || quiz;
+        const sel = (level.options || [])[oi];
+        const corr = level.answer;
+        const expl = level.explanation;
+        const chapterTitle = unit.title;
+        const questionText = level.question;
+        const f = document.getElementById(`feedback-${unitIdx}`);
+        if (!f || sel === undefined || !corr) return;
         const normalize = (s) => s.toString().trim().replace(/\\s+/g, ' ').replace(/[\\u223C\\u223D\\u223E\\u2241\\u2242\\u2243\\u2244\\u2245\\u2246\\u2247\\u2248\\u2249\\u224A\\u224B\\u224C\\u224D\\u224E\\u224F\\u223B\\u223A\\u2239\\u2238\\u2237\\u2236]/g, '~');
         const isCorrect = normalize(sel) === normalize(corr);
-        const f = document.getElementById(`feedback-${uIdx}`);
         f.style.display = 'block';
 
         // Enhanced feedback with hints for wrong answers
