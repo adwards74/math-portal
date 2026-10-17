@@ -1507,11 +1507,13 @@ document.addEventListener('DOMContentLoaded', () => {
         f.style.display = 'block';
 
         // Enhanced feedback with hints for wrong answers
+        // DEBUG (temporary): show resolved values
+        const dbg = `<div style="font-size:0.7rem;opacity:0.6;margin-top:8px;">[debug] oi=${oi} sel=${JSON.stringify(sel)} corr=${JSON.stringify(corr)}</div>`;
         if (isCorrect) {
-            f.innerHTML = `<p style="color:var(--accent-green)"><i class="fas fa-check-circle"></i> Correct! ${expl}</p>`;
+            f.innerHTML = `<p style="color:var(--accent-green)"><i class="fas fa-check-circle"></i> Correct! ${expl}</p>${dbg}`;
         } else {
             const hint = window.getWrongAnswerHint ? window.getWrongAnswerHint(questionText, sel, corr) : '';
-            f.innerHTML = `<p style="color:var(--accent-orange)"><i class="fas fa-times-circle"></i> Incorrect. ${expl}</p>
+            f.innerHTML = `<p style="color:var(--accent-orange)"><i class="fas fa-times-circle"></i> Incorrect. ${expl}</p>${dbg}
                 ${hint ? `<div style="margin-top:10px; padding:10px; background:rgba(0,210,255,0.1); border-radius:8px; font-size:0.85rem;">${hint}</div>` : ''}`;
         }
 
