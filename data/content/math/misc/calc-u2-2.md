@@ -29,7 +29,7 @@
             </div>
     <div class="resources-box glass" style="margin-top:20px;">
                     <h5><i class="fas fa-external-link-alt"></i> MIT Deep Dive</h5>
-                    <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-2-definition-of-the-derivative/" target="_blank" class="resource-link">MIT 18.01SC: Session 2 - Differentiability</a>
+                    <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/" target="_blank" class="resource-link">MIT 18.01SC: Session 2 - Differentiability</a>
                 </div>
             </div>
         

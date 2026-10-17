@@ -89,7 +89,7 @@ window.MATH_LIBRARY = {
                 {
                     type: "site",
                     title: "MAA AMC Past Problems",
-                    url: "https://www.maa.org/math-competitions",
+                    url: "https://maa.org/amc",
                     author: "MAA",
                     relevance: 5,
                     description: "Past AMC 10/12 exams. Essential for TJHSST math team preparation."

@@ -102,7 +102,7 @@ window.CHAPTER_DATA["calc"] = {
                 </div>
                 <div class="resources-box glass" style="margin-top:20px;">
                     <h5><i class="fas fa-external-link-alt"></i> MIT Theory Session</h5>
-                    <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-8-continuity-and-the-intermediate-value-theorem/" target="_blank" class="resource-link">MIT 18.01SC: Session 8 - Rigorous Limits</a>
+                    <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/" target="_blank" class="resource-link">MIT 18.01SC: Session 8 - Rigorous Limits</a>
                 </div>
             </div>
         
@@ -293,7 +293,7 @@ window.CHAPTER_DATA["calc"] = {
             </div>
     <div class="resources-box glass" style="margin-top:20px;">
                     <h5><i class="fas fa-external-link-alt"></i> MIT Deep Dive</h5>
-                    <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-2-definition-of-the-derivative/" target="_blank" class="resource-link">MIT 18.01SC: Session 2 - Differentiability</a>
+                    <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/" target="_blank" class="resource-link">MIT 18.01SC: Session 2 - Differentiability</a>
                 </div>
             </div>
         
@@ -530,7 +530,7 @@ window.CHAPTER_DATA["calc"] = {
                 </div>
                 <div class="resources-box glass" style="margin-top:20px;">
                     <h5><i class="fas fa-external-link-alt"></i> MIT Related Rates</h5>
-                    <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/unit-2-applications-of-differentiation/part-b-optimization-related-rates-and-newtons-method/session-30-related-rates/" target="_blank" class="resource-link">MIT 18.01SC: Session 30</a>
+                    <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/" target="_blank" class="resource-link">MIT 18.01SC: Session 30</a>
                 </div>
             </div>
         

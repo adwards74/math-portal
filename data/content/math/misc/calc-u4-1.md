@@ -25,7 +25,7 @@
                 </div>
                 <div class="resources-box glass" style="margin-top:20px;">
                     <h5><i class="fas fa-external-link-alt"></i> MIT Related Rates</h5>
-                    <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/unit-2-applications-of-differentiation/part-b-optimization-related-rates-and-newtons-method/session-30-related-rates/" target="_blank" class="resource-link">MIT 18.01SC: Session 30</a>
+                    <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/" target="_blank" class="resource-link">MIT 18.01SC: Session 30</a>
                 </div>
             </div>
         
