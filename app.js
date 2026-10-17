@@ -1057,8 +1057,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     
                     <div class="options-grid">
-                        ${targetLevel.options ? targetLevel.options.map(opt => `
-                            <button class="glass quiz-btn" onclick="window.handleFinalQuizAnswer('${subjectId}', ${unitIdx}, '${opt.replace(/'/g, "\\'")}')">
+                        ${targetLevel.options ? targetLevel.options.map((opt, oi) => `
+                            <button class="glass quiz-btn" onclick="window.handleFinalQuizAnswer('${subjectId}', ${unitIdx}, ${oi})">
                                 ${opt}
                             </button>
                         `).join('') : `
@@ -1213,13 +1213,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const isLastLevel = !isMultiLevel || currentLevel >= totalLevels - 1;
 
         const feedback = document.getElementById('final-quiz-feedback');
+        // selected arrives as the option index (avoids LaTeX backslash mangling
+        // through onclick string literals); fall back to raw string for safety.
+        const selectedText = (targetLevel.options && typeof selected === 'number')
+            ? targetLevel.options[selected]
+            : selected;
         const normalize = (s) => s.toString().trim().replace(/\\s+/g, ' ').replace(/[\u223C\u223D\u223E\u2241\u2242\u2243\u2244\u2245\u2246\u2247\u2248\u2249\u224A\u224B\u224C\u224D\u224E\u224F\u223B\u223A\u2239\u2238\u2237\u2236]/g, '~');
-        const isCorrect = normalize(selected) === normalize(targetLevel.answer);
+        const isCorrect = normalize(selectedText) === normalize(targetLevel.answer);
 
         saveQuizAttempt({
             chapter: unit.title,
             question: targetLevel.question,
-            userAnswer: selected,
+            userAnswer: selectedText,
             correctAnswer: targetLevel.answer,
             correct: isCorrect,
             explanation: targetLevel.explanation || targetLevel.answer,
