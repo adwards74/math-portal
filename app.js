@@ -1489,6 +1489,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // All quiz content is resolved from MATH_DATA by index, so LaTeX backslashes
     // are never mangled by passing raw strings through onclick literals
     // (e.g. '\f' in "$\frac" would become a form-feed control character).
+    // Minimal markdown: **bold** -> <strong> (single * left alone: math like a*b^x)
+    const mdBold = (s) => (s || '').replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
     window.checkQuizAnswer = (subjectId, unitIdx, levelIdx, oi) => {
         const data = window.MATH_DATA || { subjects: [] };
         const subject = data.subjects.find(s => s.id === subjectId) || {};
@@ -1497,7 +1499,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const level = (quiz.levels && quiz.levels[levelIdx]) || quiz.levels?.[0] || quiz;
         const sel = (level.options || [])[oi];
         const corr = level.answer;
-        const expl = level.explanation;
+        const expl = mdBold(level.explanation);
         const chapterTitle = unit.title;
         const questionText = level.question;
         const f = document.getElementById(`feedback-${unitIdx}`);
