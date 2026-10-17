@@ -1218,7 +1218,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedText = (targetLevel.options && typeof selected === 'number')
             ? targetLevel.options[selected]
             : selected;
-        const normalize = (s) => s.toString().trim().replace(/\\s+/g, ' ').replace(/[\u223C\u223D\u223E\u2241\u2242\u2243\u2244\u2245\u2246\u2247\u2248\u2249\u224A\u224B\u224C\u224D\u224E\u224F\u223B\u223A\u2239\u2238\u2237\u2236]/g, '~');
+        const normalize = (s) => s.toString().trim().replace(/\s+/g, ' ').replace(/[\u223C\u223D\u223E\u2241\u2242\u2243\u2244\u2245\u2246\u2247\u2248\u2249\u224A\u224B\u224C\u224D\u224E\u224F\u223B\u223A\u2239\u2238\u2237\u2236]/g, '~');
         const isCorrect = normalize(selectedText) === normalize(targetLevel.answer);
 
         saveQuizAttempt({
@@ -1502,18 +1502,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const questionText = level.question;
         const f = document.getElementById(`feedback-${unitIdx}`);
         if (!f || sel === undefined || !corr) return;
-        const normalize = (s) => s.toString().trim().replace(/\\s+/g, ' ').replace(/[\\u223C\\u223D\\u223E\\u2241\\u2242\\u2243\\u2244\\u2245\\u2246\\u2247\\u2248\\u2249\\u224A\\u224B\\u224C\\u224D\\u224E\\u224F\\u223B\\u223A\\u2239\\u2238\\u2237\\u2236]/g, '~');
+        const normalize = (s) => s.toString().trim().replace(/\s+/g, ' ').replace(/[\u223C\u223D\u223E\u2241\u2242\u2243\u2244\u2245\u2246\u2247\u2248\u2249\u224A\u224B\u224C\u224D\u224E\u224F\u223B\u223A\u2239\u2238\u2237\u2236]/g, '~');
         const isCorrect = normalize(sel) === normalize(corr);
         f.style.display = 'block';
 
         // Enhanced feedback with hints for wrong answers
-        // DEBUG (temporary): show resolved values
-        const dbg = `<div style="font-size:0.7rem;opacity:0.6;margin-top:8px;">[debug] oi=${oi} sel=${JSON.stringify(sel)} corr=${JSON.stringify(corr)}</div>`;
         if (isCorrect) {
-            f.innerHTML = `<p style="color:var(--accent-green)"><i class="fas fa-check-circle"></i> Correct! ${expl}</p>${dbg}`;
+            f.innerHTML = `<p style="color:var(--accent-green)"><i class="fas fa-check-circle"></i> Correct! ${expl}</p>`;
         } else {
             const hint = window.getWrongAnswerHint ? window.getWrongAnswerHint(questionText, sel, corr) : '';
-            f.innerHTML = `<p style="color:var(--accent-orange)"><i class="fas fa-times-circle"></i> Incorrect. ${expl}</p>${dbg}
+            f.innerHTML = `<p style="color:var(--accent-orange)"><i class="fas fa-times-circle"></i> Incorrect. ${expl}</p>
                 ${hint ? `<div style="margin-top:10px; padding:10px; background:rgba(0,210,255,0.1); border-radius:8px; font-size:0.85rem;">${hint}</div>` : ''}`;
         }
 
